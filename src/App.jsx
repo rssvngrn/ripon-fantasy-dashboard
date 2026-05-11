@@ -1086,8 +1086,8 @@ const DATA = {
     "Seattle Seahawks":      {"abbr":"SEA","color":"#002244","secondary":"#69BE28","reason":"","scores":[],"mean":0,"stdev":0,"min":0,"max":0,"count":0},
   },
   mgrNFLTwin: {
-    "Greg Cady": "New England Patriots",
-    "James Lazette": "San Francisco 49ers",
+    "Greg Cady": "New York Giants",
+    "James Lazette": "Seattle Seahawks",
     "Greg Mulder": "Pittsburgh Steelers",
     "Eric Graef": "Green Bay Packers",
     "Trey Hugen": "Kansas City Chiefs",
@@ -1106,6 +1106,28 @@ const DATA = {
     "Tim Hoekstra": "Tampa Bay Buccaneers",
     "Tommy Van Groningen": "Cleveland Browns",
     "Jon Vander Molen": "Cincinnati Bengals",
+  },
+  mgrNFLTwinReason: {
+    "Greg Cady": "Three titles, a .514 all-time W%, and a track record of winning championships without being the most dominant regular-season team. The Giants won Super Bowls in 2007 (10-6 regular season, upset the undefeated Patriots) and 2011 (9-7, the lowest seed ever to win a Super Bowl). Neither were the consensus best team. They were clutch at the right moment. Cady's three titles follow the same pattern — winning when it counted in specific windows, fading badly between them (3-10 and 4-10 in 2020-2021). A franchise defined by championship moments rather than sustained excellence.",
+    "James Lazette": "Seattle from 2012–2019 was one of the most consistently elite franchises in the NFL — one Super Bowl, one gut-punch loss (the goal-line interception in 2014 that should have been a handoff), multiple deep runs, then a gradual fade. Lazette won his title in 2020, was runner-up in 2022, and has posted back-to-back 6-8 finishes in 2024 and 2025. A .563 career W% and 109.8 average that should have produced more hardware. The Seahawks comparison is accurate: a sustained window of genuine excellence, one ring that feels smaller than the résumé deserved, and a recent decline that doesn't match the earlier peak.",
+    "Greg Mulder": "Two titles in 11 seasons — 2017 and 2023 — spread six years apart. That is not a dynasty; it is a career with two peaks separated by long stretches of near-misses. His career luck of -3.49 is among the worst in the league, meaning he has consistently won fewer games than his scoring warranted. He should have more rings. A .534 W% understates his actual performance level. The Steelers comparison holds on 'always dangerous, never dominant for long.' It doesn't hold on six Super Bowls.",
+    "Eric Graef": "The highest career W% of any manager who has played ten or more seasons (.574), nine playoff appearances in eleven years, and one championship — earned in 2015 when he went 6-7 in the regular season. That is the Rodgers-era Packers to a fault: consistently the best team available, one ring to show for it. His 11-3 regular season in 2021 as the top seed ended with a 5th-place playoff finish. His 2025 fell off the map entirely (5-9). The Packers comparison is accurate in both the sustained excellence and the championship drought that followed it.",
+    "Trey Hugen": "The highest career scoring average in league history at 110.3 points per week — that part of the Chiefs comparison is earned without argument. But the modern Kansas City Chiefs have four Super Bowls. Trey has one, from 2018, and hasn't won since. This is the pre-Mahomes version of that assignment: elite talent, electric ceiling, one championship from a dominant stretch, and a long window since where the results haven't matched the performance level. His career luck of +0.12 is essentially neutral — every win was earned. The dynasty label requires more rings. The scoring comparison needs no defense.",
+    "Tyler Goslinga": "The highest career luck score in the league at +4.78, meaning Tyler's wins have consistently exceeded what his point totals typically produce. He went 11-3 as the #1 seed in 2022 and didn't win. He went 5-9 in both 2023 and 2024. Then won the championship in 2025 as a #2 seed. Super Bowl LII — a moderate-seeded Eagles team getting hot at the right moment against a superior opponent — is the most accurate comparison point. One title, one dominant season that didn't convert, two bad years in between, then a championship run nobody fully predicted.",
+    "Joshua Van Groningen": "Two titles, both back-to-back (2021-2022). The Ravens have two Super Bowls, but twelve years apart — in 2000 and 2012. Josh's consecutive championships are closer to Patriots 2003-2004 than the Ravens' actual timeline. His .506 career W% is pulled down by a 4-9 rookie season in 2020; since 2021 he has been competitive in every year. The two-ring comparison holds. The back-to-back aspect outpaces the Ravens' actual history and might argue for a different franchise entirely.",
+    "Ross Van Groningen": "The most accurate franchise twin assignment in the league. Eleven seasons, zero championships, a .547 career W% that keeps him in every conversation without ever closing one. Career luck of +5.9 is the highest among active managers — he has won more games than his raw scoring totals would predict, and still no ring. Finished runner-up in 2023 after a 10-4 regular season. The Vikings have lost four Super Bowls. Ross has zero rings. Both are perennial 'maybe this is the year' franchises. Both are still waiting.",
+    "Steve Vander Molen": "Career .500 in eleven seasons with a -4.01 luck score, meaning he has lost more games than his scoring output deserved. He posted back-to-back 4-10 seasons in 2021 and 2022, then went 13-1 in 2025 — the best single-season record in league history — and finished third. The Lions went 15-2 in the 2023 NFL season and lost in the playoffs. No manager in this league has produced a more dominant individual season without converting it into a title. The comparison is uncomfortable to say out loud, but it fits.",
+    "Matthew Van Groningen": "A losing record across ten seasons (.467) despite a +3.2 career luck score — the schedule has been kinder than deserved and the results still aren't good. His one undeniable season was 2020: 11-2 as the #1 seed. He finished third. Then 4-10 in 2022, 2-12 in 2024, 4-10 in 2025. The Bears' 1985 championship is their lone shining moment surrounded by decades of mediocrity; Matthew's 2020 is his 1985 — a season where the talent was obvious and the title still didn't come. Below-average career scoring. Volatile arc. Chicago fits.",
+    "Vance Sipma": "Seven of ten seasons at or below .500. Career luck of -2.47. Then 2024: 11-3 regular season as the #1 seed, made the championship game, finished second. The Chargers have never won a Super Bowl despite consistently putting talented rosters on the field. Vance finally assembled everything in 2024 and still came up short in the finals. Then back to 5-9 in 2025. Losing record all-time despite above-average scoring in his better seasons. This is what Charger football looks like translated to fantasy.",
+    "Aaron Fay": "A 10-4 regular season in 2021 remains the one season that suggested a ceiling — he finished third that year with a legitimate shot at the title. Since then: 6-8, 3-11, 6-8, 7-7. The Titans with Derrick Henry were exactly this: 9-10 wins per season in the regular season, early playoff exits, a peak that showed the potential without delivering the ring. Aaron's 2021 was his Titans-in-the-Henry-era season. Below-.500 career overall (.446), consistent effort, that one near-miss that is now starting to look like the ceiling.",
+    "Zac Dewey": "Four seasons. Three losing. The one near-miss was 2019: 7-6 regular season and a runner-up finish — Zac's version of the Panthers going 15-1 in 2015 and losing the Super Bowl. Career luck of -2.54 means even those results understated the bad breaks. Then two more losing seasons before the geographic eligibility rule ended his run. Short window, one meaningful performance, mostly a losing record. The Panthers comparison is accurate in every meaningful dimension.",
+    "Ben de Ruiter": "A 13-game losing streak in his final season (2021: 1-13) is the defining number. The New York Jets' longest losing streak is 13 consecutive games, set in 1996. The symmetry is not coincidental. His one competitive season was 2017 (7-6 regular season, finals appearance), followed by 2-11 the next year, then gradual collapse. Career luck of -3.04. .342 all-time W%. Below-average scorer at 96.0 per week. Ben de Ruiter is the Jets. Specifically.",
+    "Spencer Hower": "The best two-season W% in league history at .654 — dominant in both 2016 and 2017, made the playoffs both years, never won a championship. The Rams under McVay went 11-5 in 2017 and 13-3 in 2018, made the Super Bowl in 2018 and lost. Spencer's two seasons have the same shape: dominant regular season performance, playoff ceiling not reached, ended before the story could finish. His volatility (stdev 26.1) matches the Rams' boom-or-bust offensive profile. Short tenure, high floor, no ring.",
+    "Casey Rhoda": "One season in 2015. A 6-7 record. Eighth place. Below-average scoring for that year's league norms. Never returned. The Cardinals have existed since 1920 and have one championship from 1947. Casey produced one year of middling results and disappeared. There is no dynasty comparison available here, no arc, no narrative. Both the Cardinals franchise and Casey Rhoda's tenure in this league are defined by showing up without making a lasting impression.",
+    "Jonathon Israel": "The lowest career scoring average of any multi-season manager in league history — 85.7 points per week against a league average around 105. Two seasons, both losing, scoring consistently at the bottom of the field. His 2016 output of 996 total points was the lowest team total of that season. The Texans have never won a Super Bowl and have spent most of their existence as a below-average AFC team. Two seasons of below-average production with no clear ceiling and no return engagement. Houston Texans.",
+    "Tim Hoekstra": "The lowest career scoring average in league history at 78.3 points per week — and the highest single-season variance (stdev 29.6 in 2015). Either very high or extremely low with nothing in between. He posted the 2015 league's worst scoring total, went 4-9, and never came back. Pre-Brady Tampa Bay was defined by volatility and consistently bad results: either an explosive offense or a disaster, finishing below .500 nearly every season. Tim matched that profile exactly in his one year. One season. One bad result. Gone.",
+    "Tommy Van Groningen": "Zero wins. Thirteen losses. The lowest scoring average in league history at 67.7 points per week. No other manager in this league has gone winless across a full season. The Cleveland Browns went 0-16 in 2017. Tommy went 0-13 in 2015. The comparison is not a narrative judgment — it is a mathematical reality. There is no softer way to frame it.",
+    "Jon Vander Molen": "One season, 4-9, last place — but with the most consistent scoring distribution in the league that year (stdev 12.9, the tightest of any manager). Jon scored between 93 and 124 every week without exception, never collapsing, never exploding, and still went 4-9 because consistency without wins is still losing. Career luck of -2.45 means he was unlucky on top of it. The Bengals in their lean years showed up every week, competed, and went nowhere. Consistent, unrewarded, one season.",
   },
   rivalries: [
     {a:"Greg Mulder",b:"Ross Van Groningen",aW:8,aL:9,total:17,score:2.7203},
@@ -42719,8 +42741,8 @@ const DATA = {
 };
 // Colors based on each manager's NFL Franchise Twin (see DATA.mgrNFLTwin)
 const MANAGER_COLORS = {
-  "Greg Cady":              "#C60C30", // New England Patriots — Patriots red
-  "James Lazette":          "#B3995D", // San Francisco 49ers  — 49ers gold
+  "Greg Cady":              "#A71930", // New York Giants      — Giants red
+  "James Lazette":          "#69BE28", // Seattle Seahawks     — Seahawks green
   "Greg Mulder":            "#FFB612", // Pittsburgh Steelers  — Steelers gold
   "Eric Graef":             "#4DAA42", // Green Bay Packers    — Packers green
   "Trey Hugen":             "#E31837", // Kansas City Chiefs   — Chiefs red
@@ -42743,8 +42765,8 @@ const MANAGER_COLORS = {
 const getColor = (manager) => MANAGER_COLORS[manager] || "#aaa";
 
 const MANAGER_NFL_TEAM = {
-  "Greg Cady":             "New England Patriots",
-  "James Lazette":         "San Francisco 49ers",
+  "Greg Cady":             "New York Giants",
+  "James Lazette":         "Seattle Seahawks",
   "Greg Mulder":           "Pittsburgh Steelers",
   "Eric Graef":            "Green Bay Packers",
   "Trey Hugen":            "Kansas City Chiefs",
@@ -42798,6 +42820,1566 @@ function ManagerLogo({ name, size = 24 }) {
     </span>
   );
 }
+const NFL_PLAYOFF_SCORES = {
+  2022: {
+    winners: [
+      {round:1,label:"Round 1",t1:"Eric Graef",t1pts:95.34,t2:"James Lazette",t2pts:130.66,winner:"James Lazette",margin:35.32},
+      {round:1,label:"Round 1",t1:"Ross Van Groningen",t1pts:100.8,t2:"Joshua Van Groningen",t2pts:105.88,winner:"Joshua Van Groningen",margin:5.08},
+      {round:2,label:"Semifinal",t1:"Tyler Goslinga",t1pts:87.22,t2:"James Lazette",t2pts:106.38,winner:"James Lazette",margin:19.16},
+      {round:2,label:"Semifinal",t1:"Eric Graef",t1pts:88.46,t2:"Ross Van Groningen",t2pts:110.8,winner:"Ross Van Groningen",margin:22.34},
+      {round:2,label:"Semifinal",t1:"Greg Mulder",t1pts:82.66,t2:"Joshua Van Groningen",t2pts:103.94,winner:"Joshua Van Groningen",margin:21.28},
+      {round:3,label:"Championship",t1:"James Lazette",t1pts:77.82,t2:"Joshua Van Groningen",t2pts:117.08,winner:"Joshua Van Groningen",margin:39.26},
+      {round:3,label:"3rd Place",t1:"Tyler Goslinga",t1pts:93.86,t2:"Greg Mulder",t2pts:124.58,winner:"Greg Mulder",margin:30.72},
+    ],
+    losers: [
+      {round:1,label:"Round 1",t1:"Greg Cady",t1pts:111.52,t2:"Matthew Van Groningen",t2pts:122.3,winner:"Greg Cady",margin:10.78},
+      {round:1,label:"Round 1",t1:"Aaron Fay",t1pts:80.32,t2:"Trey Hugen",t2pts:114.54,winner:"Aaron Fay",margin:34.22},
+      {round:2,label:"Semifinal",t1:"Trey Hugen",t1pts:83.26,t2:"Matthew Van Groningen",t2pts:130.66,winner:"Trey Hugen",margin:47.4},
+      {round:2,label:"Semifinal",t1:"Vance Sipma",t1pts:108.4,t2:"Greg Cady",t2pts:102.06,winner:"Greg Cady",margin:6.34},
+      {round:2,label:"Semifinal",t1:"Steve Vander Molen",t1pts:106.96,t2:"Aaron Fay",t2pts:101.5,winner:"Aaron Fay",margin:5.46},
+      {round:3,label:"3rd Place",t1:"Steve Vander Molen",t1pts:125.8,t2:"Vance Sipma",t2pts:74.76,winner:"Vance Sipma",margin:51.04},
+      {round:3,label:"Toilet Bowl",t1:"Aaron Fay",t1pts:93.98,t2:"Greg Cady",t2pts:113.08,winner:"Aaron Fay",margin:19.1},
+    ],
+  },
+  2023: {
+    winners: [
+      {round:1,label:"Round 1",t1:"Eric Graef",t1pts:122.4,t2:"Vance Sipma",t2pts:86.66,winner:"Eric Graef",margin:35.74},
+      {round:1,label:"Round 1",t1:"Greg Mulder",t1pts:142.94,t2:"Matthew Van Groningen",t2pts:82.88,winner:"Greg Mulder",margin:60.06},
+      {round:2,label:"Semifinal",t1:"James Lazette",t1pts:132.96,t2:"Greg Mulder",t2pts:136.7,winner:"Greg Mulder",margin:3.74},
+      {round:2,label:"5th Place",t1:"Vance Sipma",t1pts:81.04,t2:"Matthew Van Groningen",t2pts:127.22,winner:"Matthew Van Groningen",margin:46.18},
+      {round:2,label:"Semifinal",t1:"Ross Van Groningen",t1pts:111.48,t2:"Eric Graef",t2pts:101.48,winner:"Ross Van Groningen",margin:10.0},
+      {round:3,label:"3rd Place",t1:"Eric Graef",t1pts:80.14,t2:"James Lazette",t2pts:130.46,winner:"James Lazette",margin:50.32},
+      {round:3,label:"Championship",t1:"Ross Van Groningen",t1pts:105.26,t2:"Greg Mulder",t2pts:146.54,winner:"Greg Mulder",margin:41.28},
+    ],
+    losers: [
+      {round:1,label:"Round 1",t1:"Trey Hugen",t1pts:156.46,t2:"Joshua Van Groningen",t2pts:80.36,winner:"Joshua Van Groningen",margin:76.1},
+      {round:1,label:"Round 1",t1:"Greg Cady",t1pts:173.62,t2:"Steve Vander Molen",t2pts:79.28,winner:"Steve Vander Molen",margin:94.34},
+      {round:2,label:"8th Place",t1:"Greg Cady",t1pts:147.44,t2:"Trey Hugen",t2pts:85.06,winner:"Trey Hugen",margin:62.38},
+      {round:2,label:"Semifinal",t1:"Tyler Goslinga",t1pts:87.6,t2:"Joshua Van Groningen",t2pts:119.72,winner:"Tyler Goslinga",margin:32.12},
+      {round:2,label:"Semifinal",t1:"Aaron Fay",t1pts:101.12,t2:"Steve Vander Molen",t2pts:83.34,winner:"Steve Vander Molen",margin:17.78},
+      {round:3,label:"Toilet Bowl",t1:"Steve Vander Molen",t1pts:106.86,t2:"Tyler Goslinga",t2pts:112.9,winner:"Steve Vander Molen",margin:6.04},
+      {round:3,label:"10th Place",t1:"Aaron Fay",t1pts:118.8,t2:"Joshua Van Groningen",t2pts:109.96,winner:"Joshua Van Groningen",margin:8.84},
+    ],
+  },
+  2024: {
+    winners: [
+      {round:1,label:"Round 1",t1:"Greg Cady",t1pts:135.76,t2:"Trey Hugen",t2pts:103.04,winner:"Greg Cady",margin:32.72},
+      {round:1,label:"Round 1",t1:"Ross Van Groningen",t1pts:137.6,t2:"Joshua Van Groningen",t2pts:145.06,winner:"Joshua Van Groningen",margin:7.46},
+      {round:2,label:"Semifinal",t1:"Vance Sipma",t1pts:114.66,t2:"Joshua Van Groningen",t2pts:112.28,winner:"Vance Sipma",margin:2.38},
+      {round:2,label:"Semifinal",t1:"Eric Graef",t1pts:93.88,t2:"Greg Cady",t2pts:146.78,winner:"Greg Cady",margin:52.9},
+      {round:2,label:"5th Place",t1:"Ross Van Groningen",t1pts:119.18,t2:"Trey Hugen",t2pts:105.98,winner:"Ross Van Groningen",margin:13.2},
+      {round:3,label:"3rd Place",t1:"Joshua Van Groningen",t1pts:133.44,t2:"Eric Graef",t2pts:117.52,winner:"Joshua Van Groningen",margin:15.92},
+      {round:3,label:"Championship",t1:"Vance Sipma",t1pts:122.68,t2:"Greg Cady",t2pts:126.4,winner:"Greg Cady",margin:3.72},
+    ],
+    losers: [
+      {round:1,label:"Round 1",t1:"Greg Mulder",t1pts:84.3,t2:"James Lazette",t2pts:122.72,winner:"Greg Mulder",margin:38.42},
+      {round:1,label:"Round 1",t1:"Aaron Fay",t1pts:125.14,t2:"Steve Vander Molen",t2pts:71.88,winner:"Steve Vander Molen",margin:53.26},
+      {round:2,label:"Semifinal",t1:"Tyler Goslinga",t1pts:122.2,t2:"Greg Mulder",t2pts:135.84,winner:"Tyler Goslinga",margin:13.64},
+      {round:2,label:"Semifinal",t1:"Matthew Van Groningen",t1pts:149.72,t2:"Steve Vander Molen",t2pts:88.72,winner:"Steve Vander Molen",margin:61.0},
+      {round:2,label:"8th Place",t1:"Aaron Fay",t1pts:146.14,t2:"James Lazette",t2pts:83.12,winner:"James Lazette",margin:63.02},
+      {round:3,label:"10th Place",t1:"Matthew Van Groningen",t1pts:106.68,t2:"Greg Mulder",t2pts:87.16,winner:"Greg Mulder",margin:19.52},
+      {round:3,label:"Toilet Bowl",t1:"Steve Vander Molen",t1pts:133.78,t2:"Tyler Goslinga",t2pts:150.4,winner:"Steve Vander Molen",margin:16.62},
+    ],
+  },
+  2025: {
+    winners: [
+      {round:1,label:"Round 1",t1:"Joshua Van Groningen",t1pts:139.94,t2:"Ross Van Groningen",t2pts:123.26,winner:"Joshua Van Groningen",margin:16.68},
+      {round:1,label:"Round 1",t1:"Greg Mulder",t1pts:140.7,t2:"Greg Cady",t2pts:110.78,winner:"Greg Mulder",margin:29.92},
+      {round:2,label:"5th Place",t1:"Greg Cady",t1pts:163.6,t2:"Ross Van Groningen",t2pts:129.26,winner:"Greg Cady",margin:34.34},
+      {round:2,label:"Semifinal",t1:"Tyler Goslinga",t1pts:147.46,t2:"Joshua Van Groningen",t2pts:119.38,winner:"Tyler Goslinga",margin:28.08},
+      {round:2,label:"Semifinal",t1:"Steve Vander Molen",t1pts:96.62,t2:"Greg Mulder",t2pts:101.1,winner:"Greg Mulder",margin:4.48},
+      {round:3,label:"Championship",t1:"Greg Mulder",t1pts:81.0,t2:"Tyler Goslinga",t2pts:120.28,winner:"Tyler Goslinga",margin:39.28},
+      {round:3,label:"3rd Place",t1:"Steve Vander Molen",t1pts:113.6,t2:"Joshua Van Groningen",t2pts:84.18,winner:"Steve Vander Molen",margin:29.42},
+    ],
+    losers: [
+      {round:1,label:"Round 1",t1:"Trey Hugen",t1pts:77.34,t2:"James Lazette",t2pts:111.78,winner:"Trey Hugen",margin:34.44},
+      {round:1,label:"Round 1",t1:"Aaron Fay",t1pts:110.46,t2:"Vance Sipma",t2pts:142.22,winner:"Aaron Fay",margin:31.76},
+      {round:2,label:"8th Place",t1:"James Lazette",t1pts:115.2,t2:"Vance Sipma",t2pts:57.6,winner:"Vance Sipma",margin:57.6},
+      {round:2,label:"Semifinal",t1:"Eric Graef",t1pts:113.04,t2:"Aaron Fay",t2pts:104.6,winner:"Aaron Fay",margin:8.44},
+      {round:2,label:"Semifinal",t1:"Matthew Van Groningen",t1pts:111.2,t2:"Trey Hugen",t2pts:111.0,winner:"Trey Hugen",margin:0.2},
+      {round:3,label:"Toilet Bowl",t1:"Trey Hugen",t1pts:94.58,t2:"Aaron Fay",t2pts:82.06,winner:"Aaron Fay",margin:12.52},
+      {round:3,label:"10th Place",t1:"Matthew Van Groningen",t1pts:109.72,t2:"Eric Graef",t2pts:112.16,winner:"Matthew Van Groningen",margin:2.44},
+    ],
+  },
+};
+
+const NFL_TRANSACTIONS = {
+  2022: [
+    {week:1,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Robbie Gould",to:"Joshua Van Groningen"}],drops:[{player:"Nick Folk",from:"Joshua Van Groningen"}],picks:[]},
+    {week:1,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Julio Jones",to:"Tyler Goslinga"}],drops:[{player:"Justin Fields",from:"Tyler Goslinga"}],picks:[]},
+    {week:1,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Cleveland Browns",to:"Tyler Goslinga"}],drops:[{player:"Tennessee Titans",from:"Tyler Goslinga"}],picks:[]},
+    {week:1,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Jeff Wilson",to:"Ross Van Groningen"}],drops:[{player:"Mike Gesicki",from:"Ross Van Groningen"}],picks:[]},
+    {week:1,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Taysom Hill",to:"Aaron Fay"}],drops:[{player:"Hunter Henry",from:"Aaron Fay"}],picks:[]},
+    {week:1,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Gerald Everett",to:"Matthew Van Groningen"}],drops:[{player:"D'Onta Foreman",from:"Matthew Van Groningen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Robert Tonyan",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:1,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Albert Okwuegbunam",to:"Steve Vander Molen"}],drops:[],picks:[]},
+    {week:1,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Tyler Lockett",to:"Greg Mulder"}],drops:[{player:"Tyler Allgeier",from:"Greg Mulder"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Cincinnati Bengals",to:"Joshua Van Groningen"}],drops:[{player:"Tyler Lockett",from:"Joshua Van Groningen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Jake Elliott",to:"Steve Vander Molen"}],drops:[{player:"Julio Jones",from:"Steve Vander Molen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Raheem Mostert",to:"Steve Vander Molen"}],drops:[{player:"Jerick McKinnon",from:"Steve Vander Molen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Denver Broncos",to:"Steve Vander Molen"}],drops:[{player:"Marquez Valdes-Scantling",from:"Steve Vander Molen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Nick Folk",to:"Joshua Van Groningen"}],drops:[{player:"Raheem Mostert",from:"Joshua Van Groningen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Tennessee Titans",to:"Tyler Goslinga"}],drops:[{player:"New England Patriots",from:"Tyler Goslinga"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Dustin Hopkins",to:"Greg Cady"}],drops:[{player:"Younghoe Koo",from:"Greg Cady"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Mike Davis",to:"Tyler Goslinga"}],drops:[],picks:[]},
+    {week:1,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Jameis Winston",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:2,type:"waiver",managers:["Greg Cady"],adds:[{player:"Darrel Williams",to:"Greg Cady"}],drops:[{player:"DJ Chark",from:"Greg Cady"}],picks:[]},
+    {week:2,type:"waiver",managers:["Eric Graef"],adds:[{player:"Tyler Higbee",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:2,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Carson Wentz",to:"Trey Hugen"}],drops:[{player:"Trey Lance",from:"Trey Hugen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Corey Davis",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:2,type:"waiver",managers:["James Lazette"],adds:[{player:"Devin Duvernay",to:"James Lazette"}],drops:[],picks:[]},
+    {week:2,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Harrison Butker",to:"Greg Mulder"}],drops:[{player:"Matt Prater",from:"Greg Mulder"}],picks:[]},
+    {week:2,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Los Angeles Chargers",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:2,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Philadelphia Eagles",to:"Matthew Van Groningen"}],drops:[{player:"Green Bay Packers",from:"Matthew Van Groningen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Sterling Shepard",to:"Aaron Fay"}],drops:[],picks:[]},
+    {week:2,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Jordan Mason",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:2,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Jerick McKinnon",to:"Aaron Fay"}],drops:[{player:"Isaiah Spiller",from:"Aaron Fay"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Justin Fields",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:2,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Parris Campbell",to:"Tyler Goslinga"}],drops:[],picks:[]},
+    {week:2,type:"free_agent",managers:["Greg Cady"],adds:[{player:"New England Patriots",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:2,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Jameis Winston",from:"Greg Cady"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Robbie Chosen",to:"Tyler Goslinga"}],drops:[{player:"Justin Fields",from:"Tyler Goslinga"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Greg Cady"],adds:[{player:"DJ Chark",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:2,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Curtis Samuel",to:"Eric Graef"}],drops:[{player:"Romeo Doubs",from:"Eric Graef"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Younghoe Koo",to:"Eric Graef"}],drops:[{player:"Harrison Butker",from:"Eric Graef"}],picks:[]},
+    {week:2,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Justin Fields",to:"Tyler Goslinga"}],drops:[{player:"Mike Davis",from:"Tyler Goslinga"}],picks:[]},
+    {week:3,type:"waiver",managers:["Greg Cady"],adds:[{player:"Zay Jones",to:"Greg Cady"}],drops:[{player:"Logan Thomas",from:"Greg Cady"}],picks:[]},
+    {week:3,type:"waiver",managers:["Greg Cady"],adds:[{player:"Green Bay Packers",to:"Greg Cady"}],drops:[{player:"Chicago Bears",from:"Greg Cady"}],picks:[]},
+    {week:3,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Tyler Conklin",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:3,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Tyler Allgeier",to:"Greg Mulder"}],drops:[{player:"Greg Joseph",from:"Greg Mulder"}],picks:[]},
+    {week:3,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Samaje Perine",to:"Aaron Fay"}],drops:[{player:"Jerick McKinnon",from:"Aaron Fay"}],picks:[]},
+    {week:3,type:"waiver",managers:["Aaron Fay"],adds:[{player:"David Njoku",to:"Aaron Fay"}],drops:[{player:"Taysom Hill",from:"Aaron Fay"}],picks:[]},
+    {week:3,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Romeo Doubs",to:"Matthew Van Groningen"}],drops:[{player:"Jordan Mason",from:"Matthew Van Groningen"}],picks:[]},
+    {week:3,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Melvin Gordon",to:"Greg Mulder"}],drops:[{player:"Kenneth Gainwell",from:"Greg Mulder"}],picks:[]},
+    {week:3,type:"free_agent",managers:["James Lazette"],adds:[{player:"Joshua Palmer",to:"James Lazette"}],drops:[{player:"Melvin Gordon",from:"James Lazette"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Zamir White",to:"Trey Hugen"}],drops:[{player:"Justin Fields",from:"Trey Hugen"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Greg Joseph",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:3,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Irv Smith",to:"Trey Hugen"}],drops:[{player:"Robert Tonyan",from:"Trey Hugen"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Russell Gage",to:"Steve Vander Molen"}],drops:[],picks:[]},
+    {week:3,type:"free_agent",managers:["Ross Van Groningen"],adds:[],drops:[{player:"Jarvis Landry",from:"Ross Van Groningen"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Greg Dortch",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:3,type:"trade",managers:["Joshua Van Groningen","Ross Van Groningen"],adds:[{player:"Ezekiel Elliott",to:"Joshua Van Groningen"},{player:"Joe Mixon",to:"Joshua Van Groningen"},{player:"Miles Sanders",to:"Ross Van Groningen"},{player:"Gabe Davis",to:"Ross Van Groningen"},{player:"Javonte Williams",to:"Ross Van Groningen"}],drops:[{player:"Ezekiel Elliott",from:"Ross Van Groningen"},{player:"Joe Mixon",from:"Ross Van Groningen"},{player:"Miles Sanders",from:"Joshua Van Groningen"},{player:"Gabe Davis",from:"Joshua Van Groningen"},{player:"Javonte Williams",from:"Joshua Van Groningen"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Jakobi Meyers",to:"Ross Van Groningen"}],drops:[],picks:[]},
+    {week:3,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Logan Thomas",to:"Greg Cady"}],drops:[{player:"Cole Kmet",from:"Greg Cady"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Chicago Bears",to:"Greg Cady"}],drops:[{player:"Indianapolis Colts",from:"Greg Cady"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"New England Patriots",from:"Greg Cady"}],picks:[]},
+    {week:4,type:"waiver",managers:["Greg Cady"],adds:[{player:"Mike Boone",to:"Greg Cady"}],drops:[{player:"Chuba Hubbard",from:"Greg Cady"}],picks:[]},
+    {week:4,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Nick Folk",to:"Joshua Van Groningen"}],drops:[{player:"Robbie Gould",from:"Joshua Van Groningen"}],picks:[]},
+    {week:4,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Cameron Brate",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:4,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Greg Dortch",from:"Joshua Van Groningen"}],picks:[]},
+    {week:4,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Josh Reynolds",to:"Aaron Fay"}],drops:[],picks:[]},
+    {week:4,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Robert Tonyan",to:"Ross Van Groningen"}],drops:[],picks:[]},
+    {week:4,type:"waiver",managers:["James Lazette"],adds:[{player:"Tennessee Titans",to:"James Lazette"}],drops:[{player:"New York Giants",from:"James Lazette"}],picks:[]},
+    {week:4,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Jacksonville Jaguars",to:"Tyler Goslinga"}],drops:[{player:"Cleveland Browns",from:"Tyler Goslinga"}],picks:[]},
+    {week:4,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Jared Goff",to:"Aaron Fay"}],drops:[{player:"Tua Tagovailoa",from:"Aaron Fay"}],picks:[]},
+    {week:4,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Latavius Murray",to:"Aaron Fay"}],drops:[{player:"Samaje Perine",from:"Aaron Fay"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Jameson Williams",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:4,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Noah Brown",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:4,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Darnell Mooney",to:"Tyler Goslinga"}],drops:[{player:"Parris Campbell",from:"Tyler Goslinga"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Jason Sanders",to:"Greg Mulder"}],drops:[{player:"Harrison Butker",from:"Greg Mulder"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Greg Mulder"],adds:[],drops:[{player:"New Orleans Saints",from:"Greg Mulder"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Chuba Hubbard",to:"Greg Cady"}],drops:[{player:"Jerick McKinnon",from:"Greg Cady"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"D'Onta Foreman",to:"Trey Hugen"}],drops:[{player:"Carson Wentz",from:"Trey Hugen"}],picks:[]},
+    {week:4,type:"trade",managers:["Trey Hugen","Ross Van Groningen"],adds:[{player:"Allen Lazard",to:"Ross Van Groningen"},{player:"Aaron Rodgers",to:"Trey Hugen"}],drops:[{player:"Allen Lazard",from:"Trey Hugen"},{player:"Aaron Rodgers",from:"Ross Van Groningen"}],picks:[]},
+    {week:4,type:"waiver",managers:["Greg Cady"],adds:[{player:"Jerick McKinnon",to:"Greg Cady"}],drops:[{player:"Darrel Williams",from:"Greg Cady"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Mack Hollins",to:"Joshua Van Groningen"}],drops:[{player:"Cincinnati Bengals",from:"Joshua Van Groningen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Minnesota Vikings",to:"Trey Hugen"}],drops:[{player:"Zamir White",from:"Trey Hugen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Isaiah McKenzie",to:"Aaron Fay"}],drops:[{player:"Sterling Shepard",from:"Aaron Fay"}],picks:[]},
+    {week:4,type:"free_agent",managers:["James Lazette"],adds:[{player:"New York Giants",to:"James Lazette"}],drops:[{player:"Deshaun Watson",from:"James Lazette"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Pittsburgh Steelers",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:4,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Darnell Mooney",from:"Joshua Van Groningen"}],picks:[]},
+    {week:5,type:"waiver",managers:["Greg Cady"],adds:[{player:"Eno Benjamin",to:"Greg Cady"}],drops:[{player:"Caleb Huntley",from:"Greg Cady"}],picks:[]},
+    {week:5,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Alec Pierce",to:"Trey Hugen"}],drops:[{player:"Elijah Moore",from:"Trey Hugen"}],picks:[]},
+    {week:5,type:"waiver",managers:["Aaron Fay"],adds:[{player:"DeeJay Dallas",to:"Aaron Fay"}],drops:[{player:"Latavius Murray",from:"Aaron Fay"}],picks:[]},
+    {week:5,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Taysom Hill",to:"Joshua Van Groningen"}],drops:[{player:"Cade Otton",from:"Joshua Van Groningen"}],picks:[]},
+    {week:5,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Los Angeles Chargers",to:"Joshua Van Groningen"}],drops:[{player:"Miami Dolphins",from:"Joshua Van Groningen"}],picks:[]},
+    {week:5,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Hayden Hurst",to:"Vance Sipma"}],drops:[{player:"Tyler Conklin",from:"Vance Sipma"}],picks:[]},
+    {week:5,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Tevin Coleman",to:"Tyler Goslinga"}],drops:[{player:"Julio Jones",from:"Tyler Goslinga"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Cameron Dicker",to:"Steve Vander Molen"}],drops:[{player:"Jake Elliott",from:"Steve Vander Molen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Tyler Goslinga"],adds:[],drops:[{player:"Robbie Chosen",from:"Tyler Goslinga"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Cade Otton",to:"Joshua Van Groningen"}],drops:[{player:"Cameron Brate",from:"Joshua Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Graham Gano",to:"Greg Mulder"}],drops:[{player:"Jason Sanders",from:"Greg Mulder"}],picks:[]},
+    {week:5,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Minnesota Vikings",to:"Greg Mulder"}],drops:[{player:"Los Angeles Chargers",from:"Greg Mulder"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Cleveland Browns",to:"Trey Hugen"}],drops:[{player:"Minnesota Vikings",from:"Trey Hugen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Gus Edwards",to:"Trey Hugen"}],drops:[{player:"D'Onta Foreman",from:"Trey Hugen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Geno Smith",to:"Matthew Van Groningen"}],drops:[{player:"Skyy Moore",from:"Matthew Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Greg Joseph",to:"Greg Cady"}],drops:[{player:"Dustin Hopkins",from:"Greg Cady"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Miami Dolphins",to:"Joshua Van Groningen"}],drops:[{player:"Pittsburgh Steelers",from:"Joshua Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Noah Brown",from:"Joshua Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Deon Jackson",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:5,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Caleb Huntley",to:"Greg Cady"}],drops:[{player:"Treylon Burks",from:"Greg Cady"}],picks:[]},
+    {week:6,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Tua Tagovailoa",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:6,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Robbie Chosen",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:6,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Miami Dolphins",to:"Joshua Van Groningen"}],drops:[{player:"Los Angeles Chargers",from:"Joshua Van Groningen"}],picks:[]},
+    {week:6,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Greg Zuerlein",to:"Aaron Fay"}],drops:[{player:"Matt Gay",from:"Aaron Fay"}],picks:[]},
+    {week:6,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Seattle Seahawks",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:6,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"New York Jets",to:"Ross Van Groningen"}],drops:[{player:"Jason Myers",from:"Ross Van Groningen"}],picks:[]},
+    {week:6,type:"waiver",managers:["James Lazette"],adds:[{player:"Brett Maher",to:"James Lazette"}],drops:[],picks:[]},
+    {week:6,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Tyler Bass",from:"James Lazette"}],picks:[]},
+    {week:6,type:"waiver",managers:["James Lazette"],adds:[{player:"Daniel Jones",to:"James Lazette"}],drops:[],picks:[]},
+    {week:6,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Alexander Mattison",from:"James Lazette"}],picks:[]},
+    {week:6,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Kenyan Drake",to:"Aaron Fay"}],drops:[{player:"DeeJay Dallas",from:"Aaron Fay"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Latavius Murray",to:"Greg Mulder"}],drops:[{player:"Tyler Conklin",from:"Greg Mulder"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Harrison Butker",to:"Greg Cady"}],drops:[{player:"Brett Maher",from:"Greg Cady"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Joshua Kelley",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Irv Smith",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:6,type:"trade",managers:["Joshua Van Groningen","Ross Van Groningen"],adds:[{player:"Michael Thomas",to:"Ross Van Groningen"},{player:"Marquise Brown",to:"Joshua Van Groningen"}],drops:[{player:"Michael Thomas",from:"Joshua Van Groningen"},{player:"Marquise Brown",from:"Ross Van Groningen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Wil Lutz",to:"Steve Vander Molen"}],drops:[{player:"Cameron Dicker",from:"Steve Vander Molen"}],picks:[]},
+    {week:6,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Tyler Conklin",to:"Greg Mulder"}],drops:[{player:"Jahan Dotson",from:"Greg Mulder"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Evan Engram",to:"Trey Hugen"}],drops:[{player:"Irv Smith",from:"Trey Hugen"}],picks:[]},
+    {week:6,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Minnesota Vikings",to:"Trey Hugen"}],drops:[{player:"Cleveland Browns",from:"Trey Hugen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Allen Robinson",from:"Vance Sipma"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Mack Hollins",from:"Joshua Van Groningen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"New England Patriots",to:"Greg Mulder"}],drops:[{player:"Minnesota Vikings",from:"Greg Mulder"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Jimmy Garoppolo",to:"Greg Cady"}],drops:[{player:"Zay Jones",from:"Greg Cady"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Brett Maher",to:"Greg Cady"}],drops:[{player:"Greg Joseph",from:"Greg Cady"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Rondale Moore",to:"Trey Hugen"}],drops:[{player:"Rashaad Penny",from:"Trey Hugen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Jason Myers",to:"Ross Van Groningen"}],drops:[{player:"Javonte Williams",from:"Ross Van Groningen"}],picks:[]},
+    {week:7,type:"waiver",managers:["Greg Cady"],adds:[{player:"Jason Myers",to:"Greg Cady"}],drops:[{player:"Jimmy Garoppolo",from:"Greg Cady"}],picks:[]},
+    {week:7,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Alexander Mattison",to:"Trey Hugen"}],drops:[{player:"Cincinnati Bengals",from:"Trey Hugen"}],picks:[]},
+    {week:7,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Allen Robinson",to:"Greg Mulder"}],drops:[{player:"Hunter Henry",from:"Greg Mulder"}],picks:[]},
+    {week:7,type:"trade",managers:["Matthew Van Groningen","Joshua Van Groningen"],adds:[{player:"Gerald Everett",to:"Joshua Van Groningen"},{player:"D'Onta Foreman",to:"Matthew Van Groningen"},{player:"Taysom Hill",to:"Matthew Van Groningen"},{player:"Diontae Johnson",to:"Matthew Van Groningen"},{player:"Tee Higgins",to:"Joshua Van Groningen"}],drops:[{player:"Gerald Everett",from:"Matthew Van Groningen"},{player:"D'Onta Foreman",from:"Joshua Van Groningen"},{player:"Taysom Hill",from:"Joshua Van Groningen"},{player:"Diontae Johnson",from:"Joshua Van Groningen"},{player:"Tee Higgins",from:"Matthew Van Groningen"}],picks:[]},
+    {week:7,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Tyler Bass",to:"Greg Mulder"}],drops:[{player:"Graham Gano",from:"Greg Mulder"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"New York Giants",from:"Matthew Van Groningen"}],picks:[]},
+    {week:7,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Parris Campbell",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:7,type:"waiver",managers:["Eric Graef"],adds:[{player:"Aaron Rodgers",to:"Eric Graef"}],drops:[{player:"Curtis Samuel",from:"Eric Graef"}],picks:[]},
+    {week:7,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Indianapolis Colts",to:"Tyler Goslinga"}],drops:[{player:"Marcus Mariota",from:"Tyler Goslinga"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Deon Jackson",from:"Vance Sipma"}],picks:[]},
+    {week:7,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Marquise Goodwin",to:"Aaron Fay"}],drops:[{player:"Las Vegas Raiders",from:"Aaron Fay"}],picks:[]},
+    {week:7,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Antonio Gibson",to:"Matthew Van Groningen"}],drops:[{player:"Mike Boone",from:"Matthew Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Hunter Henry",to:"Greg Mulder"}],drops:[{player:"Jameson Williams",from:"Greg Mulder"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Irv Smith",to:"Tyler Goslinga"}],drops:[{player:"J.D. McKissic",from:"Tyler Goslinga"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Isiah Pacheco",to:"Trey Hugen"}],drops:[{player:"Antonio Gibson",from:"Trey Hugen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Aaron Rodgers",from:"Trey Hugen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Chuba Hubbard",to:"Ross Van Groningen"}],drops:[{player:"Isiah Pacheco",from:"Ross Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"D'Onta Foreman",to:"Joshua Van Groningen"}],drops:[{player:"Corey Davis",from:"Joshua Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Marquez Valdes-Scantling",to:"Greg Cady"}],drops:[{player:"Jaylen Warren",from:"Greg Cady"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Jaylen Warren",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:7,type:"free_agent",managers:["James Lazette"],adds:[{player:"Odell Beckham",to:"James Lazette"}],drops:[{player:"Joshua Palmer",from:"James Lazette"}],picks:[]},
+    {week:7,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Mike Boone",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:7,type:"waiver",managers:["Greg Cady"],adds:[{player:"Cam Akers",to:"Greg Cady"}],drops:[{player:"Mike Boone",from:"Greg Cady"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Sony Michel",to:"Steve Vander Molen"}],drops:[{player:"Russell Gage",from:"Steve Vander Molen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Matt Ryan",to:"Steve Vander Molen"}],drops:[{player:"Albert Okwuegbunam",from:"Steve Vander Molen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Russell Wilson",from:"Matthew Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Cam Akers",from:"Matthew Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"New York Giants",to:"Matthew Van Groningen"}],drops:[{player:"Seattle Seahawks",from:"Matthew Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Cincinnati Bengals",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:7,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Minnesota Vikings",from:"Trey Hugen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Marcus Mariota",to:"Tyler Goslinga"}],drops:[{player:"Tevin Coleman",from:"Tyler Goslinga"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Las Vegas Raiders",to:"Aaron Fay"}],drops:[{player:"Isaiah McKenzie",from:"Aaron Fay"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Irv Smith",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"waiver",managers:["Greg Cady"],adds:[{player:"Marcus Mariota",to:"Greg Cady"}],drops:[{player:"Cam Akers",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"waiver",managers:["Greg Cady"],adds:[{player:"Isaiah Likely",to:"Greg Cady"}],drops:[{player:"Van Jefferson",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Jaylen Warren",to:"Joshua Van Groningen"}],drops:[{player:"Mark Ingram",from:"Joshua Van Groningen"}],picks:[]},
+    {week:8,type:"waiver",managers:["Eric Graef"],adds:[{player:"Kansas City Chiefs",to:"Eric Graef"}],drops:[{player:"Atlanta Falcons",from:"Eric Graef"}],picks:[]},
+    {week:8,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Justin Fields",to:"Trey Hugen"}],drops:[{player:"Isiah Pacheco",from:"Trey Hugen"}],picks:[]},
+    {week:8,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Isaiah McKenzie",to:"Tyler Goslinga"}],drops:[],picks:[]},
+    {week:8,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Jake Elliott",to:"Joshua Van Groningen"}],drops:[{player:"Graham Gano",from:"Joshua Van Groningen"}],picks:[]},
+    {week:8,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Minnesota Vikings",to:"Vance Sipma"}],drops:[{player:"Parris Campbell",from:"Vance Sipma"}],picks:[]},
+    {week:8,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Tennessee Titans",from:"James Lazette"}],picks:[]},
+    {week:8,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Daniel Jones",from:"James Lazette"}],picks:[]},
+    {week:8,type:"waiver",managers:["James Lazette"],adds:[{player:"Matt Prater",to:"James Lazette"}],drops:[{player:"Brett Maher",from:"James Lazette"}],picks:[]},
+    {week:8,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Cincinnati Bengals",to:"Steve Vander Molen"}],drops:[{player:"Denver Broncos",from:"Steve Vander Molen"}],picks:[]},
+    {week:8,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Logan Thomas",to:"Steve Vander Molen"}],drops:[{player:"Matt Ryan",from:"Steve Vander Molen"}],picks:[]},
+    {week:8,type:"waiver",managers:["Greg Cady"],adds:[{player:"Joshua Palmer",to:"Greg Cady"}],drops:[{player:"Jason Myers",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Mark Ingram",to:"Joshua Van Groningen"}],drops:[{player:"Joshua Kelley",from:"Joshua Van Groningen"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Ronnie Rivers",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:8,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Van Jefferson",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:8,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Samaje Perine",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:8,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Carolina Panthers",to:"Joshua Van Groningen"}],drops:[{player:"Miami Dolphins",from:"Joshua Van Groningen"}],picks:[]},
+    {week:8,type:"waiver",managers:["Greg Mulder"],adds:[{player:"AJ Dillon",to:"Greg Mulder"}],drops:[{player:"Latavius Murray",from:"Greg Mulder"}],picks:[]},
+    {week:8,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Curtis Samuel",to:"Matthew Van Groningen"}],drops:[{player:"AJ Dillon",from:"Matthew Van Groningen"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Seattle Seahawks",to:"Greg Cady"}],drops:[{player:"Green Bay Packers",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Marquez Valdes-Scantling",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Romeo Doubs",to:"Greg Mulder"}],drops:[{player:"Allen Robinson",from:"Greg Mulder"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Atlanta Falcons",to:"Eric Graef"}],drops:[{player:"Tampa Bay Buccaneers",from:"Eric Graef"}],picks:[]},
+    {week:8,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Graham Gano",to:"Joshua Van Groningen"}],drops:[{player:"Nick Folk",from:"Joshua Van Groningen"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Romeo Doubs",from:"Matthew Van Groningen"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Mecole Hardman",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:9,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Cole Kmet",to:"Trey Hugen"}],drops:[{player:"Evan Engram",from:"Trey Hugen"}],picks:[]},
+    {week:9,type:"waiver",managers:["James Lazette"],adds:[{player:"New York Giants",to:"James Lazette"}],drops:[],picks:[]},
+    {week:9,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Greg Dulcich",to:"Ross Van Groningen"}],drops:[{player:"Robert Tonyan",from:"Ross Van Groningen"}],picks:[]},
+    {week:9,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Jimmy Garoppolo",to:"Ross Van Groningen"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Ross Van Groningen"],adds:[],drops:[{player:"Green Bay Packers",from:"Ross Van Groningen"}],picks:[]},
+    {week:9,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Graham Gano",to:"Joshua Van Groningen"}],drops:[{player:"Jake Elliott",from:"Joshua Van Groningen"}],picks:[]},
+    {week:9,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Tennessee Titans",to:"Joshua Van Groningen"}],drops:[{player:"Tampa Bay Buccaneers",from:"Joshua Van Groningen"}],picks:[]},
+    {week:9,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Denver Broncos",to:"Greg Mulder"}],drops:[{player:"Romeo Doubs",from:"Greg Mulder"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Cam Akers",to:"Ross Van Groningen"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Ross Van Groningen"],adds:[],drops:[{player:"Michael Thomas",from:"Ross Van Groningen"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Miami Dolphins",to:"Tyler Goslinga"}],drops:[{player:"Indianapolis Colts",from:"Tyler Goslinga"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Mack Hollins",to:"Aaron Fay"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Aaron Fay"],adds:[],drops:[{player:"Marquise Goodwin",from:"Aaron Fay"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"DeAndre Carter",to:"Vance Sipma"}],drops:[{player:"James Cook",from:"Vance Sipma"}],picks:[]},
+    {week:9,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Aaron Rodgers",to:"Greg Mulder"}],drops:[{player:"Derek Carr",from:"Greg Mulder"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Chris Moore",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Marquez Valdes-Scantling",to:"Eric Graef"}],drops:[{player:"Aaron Rodgers",from:"Eric Graef"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Green Bay Packers",to:"Ross Van Groningen"}],drops:[{player:"New York Jets",from:"Ross Van Groningen"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Demarcus Robinson",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Rashod Bateman",from:"Matthew Van Groningen"}],picks:[]},
+    {week:9,type:"free_agent",managers:["James Lazette"],adds:[{player:"Dontrell Hilliard",to:"James Lazette"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Nick Folk",to:"Tyler Goslinga"}],drops:[{player:"Jacksonville Jaguars",from:"Tyler Goslinga"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Kyren Williams",to:"Joshua Van Groningen"}],drops:[{player:"Jaylen Warren",from:"Joshua Van Groningen"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Deon Jackson",to:"Greg Cady"}],drops:[{player:"Chase Edmonds",from:"Greg Cady"}],picks:[]},
+    {week:9,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Jason Myers",to:"Matthew Van Groningen"}],drops:[{player:"Evan McPherson",from:"Matthew Van Groningen"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Allen Robinson",to:"Joshua Van Groningen"}],drops:[{player:"Robbie Chosen",from:"Joshua Van Groningen"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Tampa Bay Buccaneers",to:"Joshua Van Groningen"}],drops:[{player:"Carolina Panthers",from:"Joshua Van Groningen"}],picks:[]},
+    {week:10,type:"waiver",managers:["Greg Cady"],adds:[{player:"New York Jets",to:"Greg Cady"}],drops:[{player:"Seattle Seahawks",from:"Greg Cady"}],picks:[]},
+    {week:10,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Isiah Pacheco",to:"Ross Van Groningen"}],drops:[{player:"Jimmy Garoppolo",from:"Ross Van Groningen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Eno Benjamin",from:"Greg Cady"}],picks:[]},
+    {week:10,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Christian Watson",to:"Tyler Goslinga"}],drops:[{player:"K.J. Osborn",from:"Tyler Goslinga"}],picks:[]},
+    {week:10,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Nick Folk",to:"Matthew Van Groningen"}],drops:[{player:"Jason Myers",from:"Matthew Van Groningen"}],picks:[]},
+    {week:10,type:"waiver",managers:["James Lazette"],adds:[{player:"Deshaun Watson",to:"James Lazette"}],drops:[{player:"New York Giants",from:"James Lazette"}],picks:[]},
+    {week:10,type:"waiver",managers:["James Lazette"],adds:[{player:"Foster Moreau",to:"James Lazette"}],drops:[],picks:[]},
+    {week:10,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Cincinnati Bengals",to:"Tyler Goslinga"}],drops:[{player:"Chase Edmonds",from:"Tyler Goslinga"}],picks:[]},
+    {week:10,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Russell Wilson",to:"Joshua Van Groningen"}],drops:[{player:"Samaje Perine",from:"Joshua Van Groningen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Hunter Renfrow",from:"Eric Graef"}],picks:[]},
+    {week:10,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Parris Campbell",to:"Aaron Fay"}],drops:[{player:"Mack Hollins",from:"Aaron Fay"}],picks:[]},
+    {week:10,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Van Jefferson",to:"Aaron Fay"}],drops:[{player:"Josh Reynolds",from:"Aaron Fay"}],picks:[]},
+    {week:10,type:"free_agent",managers:["James Lazette"],adds:[{player:"Jake Elliott",to:"James Lazette"}],drops:[{player:"Matt Prater",from:"James Lazette"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Las Vegas Raiders",to:"Steve Vander Molen"}],drops:[{player:"Sony Michel",from:"Steve Vander Molen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Derek Carr",to:"Steve Vander Molen"}],drops:[{player:"Cincinnati Bengals",from:"Steve Vander Molen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Daniel Jones",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:10,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Arizona Cardinals",to:"Trey Hugen"}],drops:[{player:"Alec Pierce",from:"Trey Hugen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Brett Maher",to:"Trey Hugen"}],drops:[{player:"Ronnie Rivers",from:"Trey Hugen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Jaylen Warren",to:"Greg Cady"}],drops:[{player:"Deon Jackson",from:"Greg Cady"}],picks:[]},
+    {week:10,type:"free_agent",managers:["James Lazette"],adds:[{player:"Donovan Peoples-Jones",to:"James Lazette"}],drops:[{player:"Robert Woods",from:"James Lazette"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Chase Edmonds",to:"Tyler Goslinga"}],drops:[{player:"Nick Folk",from:"Tyler Goslinga"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Chris Moore",from:"Eric Graef"}],picks:[]},
+    {week:10,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Tampa Bay Buccaneers",to:"Greg Mulder"}],drops:[{player:"Denver Broncos",from:"Greg Mulder"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Matt Gay",to:"Aaron Fay"}],drops:[{player:"Greg Zuerlein",from:"Aaron Fay"}],picks:[]},
+    {week:11,type:"waiver",managers:["Vance Sipma"],adds:[{player:"James Cook",to:"Vance Sipma"}],drops:[{player:"Nyheim Miller-Hines",from:"Vance Sipma"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Cameron Dicker",from:"Vance Sipma"}],picks:[]},
+    {week:11,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Indianapolis Colts",to:"Aaron Fay"}],drops:[{player:"Los Angeles Rams",from:"Aaron Fay"}],picks:[]},
+    {week:11,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Greg Dortch",to:"Aaron Fay"}],drops:[{player:"Van Jefferson",from:"Aaron Fay"}],picks:[]},
+    {week:11,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Jameson Williams",to:"Greg Mulder"}],drops:[{player:"Nico Collins",from:"Greg Mulder"}],picks:[]},
+    {week:11,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Jason Myers",to:"Joshua Van Groningen"}],drops:[{player:"Graham Gano",from:"Joshua Van Groningen"}],picks:[]},
+    {week:11,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Evan Engram",to:"Greg Mulder"}],drops:[{player:"Robert Tonyan",from:"Greg Mulder"}],picks:[]},
+    {week:11,type:"waiver",managers:["James Lazette"],adds:[{player:"Latavius Murray",to:"James Lazette"}],drops:[{player:"Jerick McKinnon",from:"James Lazette"}],picks:[]},
+    {week:11,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Samaje Perine",to:"Joshua Van Groningen"}],drops:[{player:"Russell Wilson",from:"Joshua Van Groningen"}],picks:[]},
+    {week:11,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Washington Commanders",to:"Joshua Van Groningen"}],drops:[{player:"Tennessee Titans",from:"Joshua Van Groningen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Cameron Dicker",to:"Vance Sipma"}],drops:[{player:"DeAndre Carter",from:"Vance Sipma"}],picks:[]},
+    {week:11,type:"waiver",managers:["Eric Graef"],adds:[{player:"Tampa Bay Buccaneers",to:"Eric Graef"}],drops:[{player:"Daniel Jones",from:"Eric Graef"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"New Orleans Saints",to:"Steve Vander Molen"}],drops:[{player:"Las Vegas Raiders",from:"Steve Vander Molen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Steve Vander Molen"],adds:[],drops:[{player:"Logan Thomas",from:"Steve Vander Molen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Nico Collins",to:"Greg Mulder"}],drops:[{player:"Tampa Bay Buccaneers",from:"Greg Mulder"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Daniel Jones",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:11,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Robert Tonyan",to:"Greg Mulder"}],drops:[{player:"Tyler Allgeier",from:"Greg Mulder"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Trestan Ebner",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:11,type:"free_agent",managers:["James Lazette"],adds:[{player:"Jerick McKinnon",to:"James Lazette"}],drops:[],picks:[]},
+    {week:11,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Darius Slayton",to:"Eric Graef"}],drops:[{player:"Daniel Jones",from:"Eric Graef"}],picks:[]},
+    {week:11,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Dontrell Hilliard",from:"James Lazette"}],picks:[]},
+    {week:12,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Seattle Seahawks",to:"Greg Mulder"}],drops:[{player:"Aaron Rodgers",from:"Greg Mulder"}],picks:[]},
+    {week:12,type:"waiver",managers:["Greg Cady"],adds:[{player:"Benny Snell",to:"Greg Cady"}],drops:[{player:"Isaiah Likely",from:"Greg Cady"}],picks:[]},
+    {week:12,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Zonovan Knight",to:"Aaron Fay"}],drops:[{player:"Kenyan Drake",from:"Aaron Fay"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Tyler Goslinga"],adds:[],drops:[{player:"Darnell Mooney",from:"Tyler Goslinga"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Tyler Goslinga"],adds:[],drops:[{player:"Irv Smith",from:"Tyler Goslinga"}],picks:[]},
+    {week:12,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Zay Jones",to:"Joshua Van Groningen"}],drops:[{player:"Allen Robinson",from:"Joshua Van Groningen"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Mack Hollins",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:12,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Taylor Heinicke",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:12,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Evan McPherson",to:"Aaron Fay"}],drops:[{player:"Matt Gay",from:"Aaron Fay"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Denver Broncos",to:"Steve Vander Molen"}],drops:[{player:"New Orleans Saints",from:"Steve Vander Molen"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Tennessee Titans",to:"Greg Mulder"}],drops:[{player:"Melvin Gordon",from:"Greg Mulder"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Marlon Mack",to:"Greg Cady"}],drops:[{player:"Jaylen Warren",from:"Greg Cady"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Jimmy Garoppolo",to:"Greg Cady"}],drops:[{player:"Marcus Mariota",from:"Greg Cady"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"DeAndre Carter",to:"Aaron Fay"}],drops:[{player:"Greg Dortch",from:"Aaron Fay"}],picks:[]},
+    {week:12,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Jerick McKinnon",to:"Tyler Goslinga"}],drops:[{player:"Isaiah McKenzie",from:"Tyler Goslinga"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Clyde Edwards-Helaire",from:"Eric Graef"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Treylon Burks",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:12,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Arizona Cardinals",from:"Trey Hugen"}],picks:[]},
+    {week:13,type:"waiver",managers:["Greg Cady"],adds:[{player:"Daniel Jones",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:13,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Las Vegas Raiders",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:13,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Greg Dulcich",to:"Ross Van Groningen"}],drops:[{player:"Harrison Bryant",from:"Ross Van Groningen"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Jimmy Garoppolo",from:"Greg Cady"}],picks:[]},
+    {week:13,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Pittsburgh Steelers",to:"Tyler Goslinga"}],drops:[{player:"Tyler Allgeier",from:"Tyler Goslinga"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Jameson Williams",to:"Greg Mulder"}],drops:[{player:"Jaylen Warren",from:"Greg Mulder"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Kyle Pitts",from:"Joshua Van Groningen"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Nico Collins",to:"Greg Cady"}],drops:[{player:"Benny Snell",from:"Greg Cady"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Harrison Bryant",to:"Ross Van Groningen"}],drops:[{player:"Juwan Johnson",from:"Ross Van Groningen"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Marquez Valdes-Scantling",from:"Eric Graef"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Tyrion Davis-Price",to:"Greg Cady"}],drops:[{player:"Marlon Mack",from:"Greg Cady"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Ty Johnson",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Jaylen Warren",to:"Greg Mulder"}],drops:[{player:"Jameson Williams",from:"Greg Mulder"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"JaMycal Hasty",to:"Matthew Van Groningen"}],drops:[{player:"Trestan Ebner",from:"Matthew Van Groningen"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Juwan Johnson",to:"Ross Van Groningen"}],drops:[{player:"Greg Dulcich",from:"Ross Van Groningen"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Tyler Allgeier",to:"Tyler Goslinga"}],drops:[],picks:[]},
+    {week:13,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Green Bay Packers",to:"Tyler Goslinga"}],drops:[{player:"Cincinnati Bengals",from:"Tyler Goslinga"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Cleveland Browns",to:"Aaron Fay"}],drops:[{player:"Indianapolis Colts",from:"Aaron Fay"}],picks:[]},
+    {week:14,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Denver Broncos",to:"Joshua Van Groningen"}],drops:[{player:"Las Vegas Raiders",from:"Joshua Van Groningen"}],picks:[]},
+    {week:14,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Cole Kmet",to:"Ross Van Groningen"}],drops:[{player:"Greg Dulcich",from:"Ross Van Groningen"}],picks:[]},
+    {week:14,type:"waiver",managers:["Eric Graef"],adds:[{player:"DJ Chark",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:14,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Rex Burkhead",to:"Ross Van Groningen"}],drops:[{player:"Jakobi Meyers",from:"Ross Van Groningen"}],picks:[]},
+    {week:14,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Brock Purdy",to:"Vance Sipma"}],drops:[{player:"Kyler Murray",from:"Vance Sipma"}],picks:[]},
+    {week:14,type:"waiver",managers:["James Lazette"],adds:[{player:"New Orleans Saints",to:"James Lazette"}],drops:[{player:"Baltimore Ravens",from:"James Lazette"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Tyler Huntley",from:"Greg Cady"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Carolina Panthers",to:"Steve Vander Molen"}],drops:[{player:"Denver Broncos",from:"Steve Vander Molen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Jason Sanders",to:"Steve Vander Molen"}],drops:[{player:"Wil Lutz",from:"Steve Vander Molen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Marquez Valdes-Scantling",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:14,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Travis Homer",to:"Greg Cady"}],drops:[{player:"Nico Collins",from:"Greg Cady"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Tyler Conklin",to:"Trey Hugen"}],drops:[{player:"Cole Kmet",from:"Trey Hugen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Taylor Heinicke",from:"Trey Hugen"}],picks:[]},
+    {week:14,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Daniel Jones",to:"Greg Mulder"}],drops:[{player:"Jameson Williams",from:"Greg Mulder"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Zay Jones",from:"Joshua Van Groningen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["James Lazette"],adds:[{player:"Cameron Dicker",to:"James Lazette"}],drops:[{player:"Jake Elliott",from:"James Lazette"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Cincinnati Bengals",to:"Greg Cady"}],drops:[{player:"Ty Johnson",from:"Greg Cady"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Tyler Huntley",to:"Greg Cady"}],drops:[{player:"Daniel Jones",from:"Greg Cady"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Tyrion Davis-Price",from:"Greg Cady"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Michael Badgley",to:"Eric Graef"}],drops:[{player:"Younghoe Koo",from:"Eric Graef"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Arizona Cardinals",to:"Aaron Fay"}],drops:[{player:"Cleveland Browns",from:"Aaron Fay"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Kenyan Drake",to:"Aaron Fay"}],drops:[{player:"Parris Campbell",from:"Aaron Fay"}],picks:[]},
+    {week:15,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Zack Moss",to:"Vance Sipma"}],drops:[{player:"Hayden Hurst",from:"Vance Sipma"}],picks:[]},
+    {week:15,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Los Angeles Chargers",to:"Joshua Van Groningen"}],drops:[{player:"Washington Commanders",from:"Joshua Van Groningen"}],picks:[]},
+    {week:15,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Aaron Rodgers",to:"Tyler Goslinga"}],drops:[{player:"Ryan Tannehill",from:"Tyler Goslinga"}],picks:[]},
+    {week:15,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Juwan Johnson",to:"Joshua Van Groningen"}],drops:[{player:"Kyren Williams",from:"Joshua Van Groningen"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Pierre Strong",to:"Greg Cady"}],drops:[{player:"Brandin Cooks",from:"Greg Cady"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Andy Dalton",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:15,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Mike White",from:"Greg Cady"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Zay Jones",to:"Greg Mulder"}],drops:[{player:"New England Patriots",from:"Greg Mulder"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Baltimore Ravens",to:"Greg Mulder"}],drops:[{player:"Tennessee Titans",from:"Greg Mulder"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Brandin Cooks",to:"Greg Cady"}],drops:[{player:"Cincinnati Bengals",from:"Greg Cady"}],picks:[]},
+    {week:15,type:"free_agent",managers:["James Lazette"],adds:[{player:"Greg Dulcich",to:"James Lazette"}],drops:[{player:"Foster Moreau",from:"James Lazette"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Mike White",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:15,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Tyler Allgeier",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:15,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Ryan Tannehill",to:"Tyler Goslinga"}],drops:[{player:"Miami Dolphins",from:"Tyler Goslinga"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Brandin Cooks",from:"Eric Graef"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Marquise Goodwin",from:"Greg Cady"}],picks:[]},
+    {week:16,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Jacksonville Jaguars",to:"Joshua Van Groningen"}],drops:[{player:"Denver Broncos",from:"Joshua Van Groningen"}],picks:[]},
+    {week:16,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"New Orleans Saints",from:"James Lazette"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"K.J. Osborn",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:16,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Cincinnati Bengals",to:"Aaron Fay"}],drops:[{player:"Arizona Cardinals",from:"Aaron Fay"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Tennessee Titans",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:16,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Deon Jackson",to:"Greg Cady"}],drops:[{player:"Travis Homer",from:"Greg Cady"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Russell Wilson",to:"Greg Cady"}],drops:[{player:"Andy Dalton",from:"Greg Cady"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Marquise Goodwin",to:"Greg Cady"}],drops:[{player:"Pierre Strong",from:"Greg Cady"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Mike White",to:"Steve Vander Molen"}],drops:[{player:"Matthew Stafford",from:"Steve Vander Molen"}],picks:[]},
+    {week:17,type:"free_agent",managers:["James Lazette"],adds:[{player:"Jahan Dotson",to:"James Lazette"}],drops:[{player:"Greg Dulcich",from:"James Lazette"}],picks:[]},
+    {week:17,type:"free_agent",managers:["James Lazette"],adds:[{player:"Jakobi Meyers",to:"James Lazette"}],drops:[{player:"Devin Duvernay",from:"James Lazette"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Brandin Cooks",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:17,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Gardner Minshew",to:"Greg Cady"}],drops:[{player:"Russell Wilson",from:"Greg Cady"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"New England Patriots",to:"Aaron Fay"}],drops:[{player:"Cincinnati Bengals",from:"Aaron Fay"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Hayden Hurst",to:"Joshua Van Groningen"}],drops:[{player:"Juwan Johnson",from:"Joshua Van Groningen"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Antonio Brown",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:17,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Hassan Haskins",to:"Greg Cady"}],drops:[{player:"Deon Jackson",from:"Greg Cady"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Tennessee Titans",from:"Eric Graef"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"K.J. Osborn",from:"Joshua Van Groningen"}],picks:[]},
+    {week:17,type:"free_agent",managers:["James Lazette"],adds:[{player:"Noah Fant",to:"James Lazette"}],drops:[{player:"Odell Beckham",from:"James Lazette"}],picks:[]},
+    {week:17,type:"free_agent",managers:["James Lazette"],adds:[{player:"New York Giants",to:"James Lazette"}],drops:[],picks:[]},
+  ],
+  2023: [
+    {week:1,type:"waiver",managers:["Greg Cady"],adds:[{player:"Roschon Johnson",to:"Greg Cady"}],drops:[{player:"Deon Jackson",from:"Greg Cady"}],picks:[]},
+    {week:1,type:"waiver",managers:["Greg Cady"],adds:[{player:"Joshua Kelley",to:"Greg Cady"}],drops:[{player:"Jerick McKinnon",from:"Greg Cady"}],picks:[]},
+    {week:1,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Hunter Henry",to:"Matthew Van Groningen"}],drops:[{player:"Gerald Everett",from:"Matthew Van Groningen"}],picks:[]},
+    {week:1,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Jake Ferguson",to:"Trey Hugen"}],drops:[{player:"Isaiah Likely",from:"Trey Hugen"}],picks:[]},
+    {week:1,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Indianapolis Colts",to:"Trey Hugen"}],drops:[{player:"Seattle Seahawks",from:"Trey Hugen"}],picks:[]},
+    {week:1,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Kyren Williams",to:"Ross Van Groningen"}],drops:[],picks:[]},
+    {week:1,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Arizona Cardinals",to:"Aaron Fay"}],drops:[{player:"Pittsburgh Steelers",from:"Aaron Fay"}],picks:[]},
+    {week:1,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Brett Maher",to:"Aaron Fay"}],drops:[{player:"Matt Gay",from:"Aaron Fay"}],picks:[]},
+    {week:1,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Tampa Bay Buccaneers",to:"Matthew Van Groningen"}],drops:[{player:"Jacksonville Jaguars",from:"Matthew Van Groningen"}],picks:[]},
+    {week:1,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Kendrick Bourne",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:1,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Aaron Rodgers",from:"Joshua Van Groningen"}],picks:[]},
+    {week:1,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Rashid Shaheed",to:"Steve Vander Molen"}],drops:[{player:"Juwan Johnson",from:"Steve Vander Molen"}],picks:[]},
+    {week:1,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Puka Nacua",to:"Aaron Fay"}],drops:[{player:"Van Jefferson",from:"Aaron Fay"}],picks:[]},
+    {week:1,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Justice Hill",to:"Joshua Van Groningen"}],drops:[{player:"J.K. Dobbins",from:"Joshua Van Groningen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Luke Musgrave",to:"Greg Mulder"}],drops:[{player:"Kyler Murray",from:"Greg Mulder"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Juwan Johnson",to:"Steve Vander Molen"}],drops:[{player:"Marvin Mims",from:"Steve Vander Molen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Isaiah Likely",to:"Trey Hugen"}],drops:[{player:"Jake Ferguson",from:"Trey Hugen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Sean Tucker",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:1,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Jake Ferguson",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:1,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Sam LaPorta",to:"Steve Vander Molen"}],drops:[],picks:[]},
+    {week:1,type:"free_agent",managers:["Steve Vander Molen"],adds:[],drops:[{player:"Roschon Johnson",from:"Steve Vander Molen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Seattle Seahawks",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:1,type:"trade",managers:["Trey Hugen","Steve Vander Molen"],adds:[{player:"Alvin Kamara",to:"Trey Hugen"},{player:"Isiah Pacheco",to:"Steve Vander Molen"},{player:"Jaylen Warren",to:"Steve Vander Molen"}],drops:[{player:"Alvin Kamara",from:"Steve Vander Molen"},{player:"Isiah Pacheco",from:"Trey Hugen"},{player:"Jaylen Warren",from:"Trey Hugen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Jason Myers",to:"Joshua Van Groningen"}],drops:[{player:"Riley Patterson",from:"Joshua Van Groningen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Van Jefferson",to:"Aaron Fay"}],drops:[],picks:[]},
+    {week:1,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Gus Edwards",to:"Joshua Van Groningen"}],drops:[{player:"Sam LaPorta",from:"Joshua Van Groningen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Jacksonville Jaguars",to:"Matthew Van Groningen"}],drops:[{player:"Green Bay Packers",from:"Matthew Van Groningen"}],picks:[]},
+    {week:1,type:"waiver",managers:["Greg Mulder"],adds:[{player:"De'Von Achane",to:"Greg Mulder"}],drops:[{player:"D'Onta Foreman",from:"Greg Mulder"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Washington Commanders",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:1,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Kyler Murray",to:"Greg Mulder"}],drops:[{player:"Jameson Williams",from:"Greg Mulder"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Riley Patterson",to:"Joshua Van Groningen"}],drops:[{player:"De'Von Achane",from:"Joshua Van Groningen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Tony Jones",to:"Matthew Van Groningen"}],drops:[{player:"Tyler Boyd",from:"Matthew Van Groningen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Tank Dell",to:"Matthew Van Groningen"}],drops:[{player:"Rashod Bateman",from:"Matthew Van Groningen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Greg Cady"],adds:[{player:"Chuba Hubbard",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:2,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Matt Breida",to:"Tyler Goslinga"}],drops:[{player:"Antonio Gibson",from:"Tyler Goslinga"}],picks:[]},
+    {week:2,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Seattle Seahawks",to:"Trey Hugen"}],drops:[{player:"Indianapolis Colts",from:"Trey Hugen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Sam LaPorta",to:"Trey Hugen"}],drops:[{player:"Jake Ferguson",from:"Trey Hugen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Jerome Ford",to:"Steve Vander Molen"}],drops:[],picks:[]},
+    {week:2,type:"waiver",managers:["Eric Graef"],adds:[{player:"Josh Reynolds",to:"Eric Graef"}],drops:[{player:"Chase Brown",from:"Eric Graef"}],picks:[]},
+    {week:2,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Kansas City Chiefs",to:"Matthew Van Groningen"}],drops:[{player:"Tampa Bay Buccaneers",from:"Matthew Van Groningen"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Nico Collins",to:"Vance Sipma"}],drops:[{player:"JuJu Smith-Schuster",from:"Vance Sipma"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Steve Vander Molen"],adds:[],drops:[{player:"Sam LaPorta",from:"Steve Vander Molen"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Mac Jones",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:2,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Jerick McKinnon",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:2,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Zay Jones",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:2,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Denver Broncos",to:"Greg Mulder"}],drops:[{player:"Washington Commanders",from:"Greg Mulder"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Dalton Schultz",from:"Trey Hugen"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Zack Moss",to:"Greg Mulder"}],drops:[{player:"Miami Dolphins",from:"Greg Mulder"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Greg Mulder"],adds:[],drops:[{player:"Luke Musgrave",from:"Greg Mulder"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"DJ Chark",from:"Greg Cady"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Cleveland Browns",to:"Aaron Fay"}],drops:[{player:"Arizona Cardinals",from:"Aaron Fay"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Jake Moody",to:"Matthew Van Groningen"}],drops:[{player:"Daniel Carlson",from:"Matthew Van Groningen"}],picks:[]},
+    {week:3,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Cincinnati Bengals",to:"Trey Hugen"}],drops:[{player:"Seattle Seahawks",from:"Trey Hugen"}],picks:[]},
+    {week:3,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Joshua Palmer",to:"Tyler Goslinga"}],drops:[{player:"Robert Woods",from:"Tyler Goslinga"}],picks:[]},
+    {week:3,type:"waiver",managers:["Trey Hugen"],adds:[{player:"C.J. Stroud",to:"Trey Hugen"}],drops:[{player:"Mac Jones",from:"Trey Hugen"}],picks:[]},
+    {week:3,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Pittsburgh Steelers",to:"Tyler Goslinga"}],drops:[{player:"Darnell Mooney",from:"Tyler Goslinga"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Zach Ertz",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:3,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Matthew Stafford",to:"Joshua Van Groningen"}],drops:[{player:"Baker Mayfield",from:"Joshua Van Groningen"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Cleveland Browns",to:"Greg Mulder"}],drops:[{player:"Pittsburgh Steelers",from:"Greg Mulder"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Steve Vander Molen"],adds:[],drops:[{player:"Rashaad Penny",from:"Steve Vander Molen"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Baker Mayfield",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:3,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Robert Woods",to:"Tyler Goslinga"}],drops:[],picks:[]},
+    {week:3,type:"free_agent",managers:["James Lazette"],adds:[{player:"Tutu Atwell",to:"James Lazette"}],drops:[],picks:[]},
+    {week:3,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Ty Chandler",from:"Vance Sipma"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Nick Chubb",from:"Vance Sipma"}],picks:[]},
+    {week:3,type:"trade",managers:["Vance Sipma","James Lazette"],adds:[{player:"Dalton Kincaid",to:"Vance Sipma"},{player:"Joe Mixon",to:"Vance Sipma"},{player:"Josh Allen",to:"James Lazette"},{player:"T.J. Hockenson",to:"James Lazette"},{player:"Trevor Lawrence",to:"Vance Sipma"}],drops:[{player:"Dalton Kincaid",from:"James Lazette"},{player:"Joe Mixon",from:"James Lazette"},{player:"Josh Allen",from:"Vance Sipma"},{player:"T.J. Hockenson",from:"Vance Sipma"},{player:"Trevor Lawrence",from:"James Lazette"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Jalin Hyatt",from:"Eric Graef"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Tank Bigsby",from:"Trey Hugen"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Pittsburgh Steelers",to:"Greg Mulder"}],drops:[{player:"Denver Broncos",from:"Greg Mulder"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Jacksonville Jaguars",to:"Aaron Fay"}],drops:[{player:"Cleveland Browns",from:"Aaron Fay"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Brandon Aubrey",to:"Joshua Van Groningen"}],drops:[{player:"Jason Myers",from:"Joshua Van Groningen"}],picks:[]},
+    {week:4,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Jaleel McLaughlin",to:"Ross Van Groningen"}],drops:[{player:"Damien Harris",from:"Ross Van Groningen"}],picks:[]},
+    {week:4,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Houston Texans",to:"Trey Hugen"}],drops:[{player:"Cincinnati Bengals",from:"Trey Hugen"}],picks:[]},
+    {week:4,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Detroit Lions",to:"Aaron Fay"}],drops:[{player:"Indianapolis Colts",from:"Aaron Fay"}],picks:[]},
+    {week:4,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Michael Wilson",to:"Tyler Goslinga"}],drops:[{player:"Skyy Moore",from:"Tyler Goslinga"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Gerald Everett",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:4,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Jameson Williams",to:"Vance Sipma"}],drops:[{player:"Kadarius Toney",from:"Vance Sipma"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Keaton Mitchell",to:"Greg Cady"}],drops:[{player:"Sean Tucker",from:"Greg Cady"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Jaxon Smith-Njigba",from:"Joshua Van Groningen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Miami Dolphins",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:4,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Latavius Murray",to:"Matthew Van Groningen"}],drops:[{player:"Tony Jones",from:"Matthew Van Groningen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Indianapolis Colts",to:"Aaron Fay"}],drops:[{player:"Detroit Lions",from:"Aaron Fay"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Mike Williams",from:"Vance Sipma"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Detroit Lions",to:"Aaron Fay"}],drops:[{player:"Jacksonville Jaguars",from:"Aaron Fay"}],picks:[]},
+    {week:5,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Los Angeles Rams",to:"Trey Hugen"}],drops:[{player:"Houston Texans",from:"Trey Hugen"}],picks:[]},
+    {week:5,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"K.J. Osborn",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:5,type:"waiver",managers:["James Lazette"],adds:[{player:"Emari Demercado",to:"James Lazette"}],drops:[],picks:[]},
+    {week:5,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Keaton Mitchell",from:"Greg Cady"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Patrick Taylor",to:"Vance Sipma"}],drops:[{player:"Cameron Dicker",from:"Vance Sipma"}],picks:[]},
+    {week:5,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Kansas City Chiefs",to:"Matthew Van Groningen"}],drops:[{player:"Washington Commanders",from:"Matthew Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Aaron Fay"],adds:[],drops:[{player:"Samaje Perine",from:"Aaron Fay"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Tyler Goslinga"],adds:[],drops:[{player:"Matt Breida",from:"Tyler Goslinga"}],picks:[]},
+    {week:5,type:"trade",managers:["Joshua Van Groningen","Ross Van Groningen"],adds:[{player:"Jaleel McLaughlin",to:"Joshua Van Groningen"},{player:"Kendrick Bourne",to:"Ross Van Groningen"},{player:"Austin Ekeler",to:"Joshua Van Groningen"},{player:"CeeDee Lamb",to:"Joshua Van Groningen"},{player:"DeVonta Smith",to:"Ross Van Groningen"},{player:"Bijan Robinson",to:"Ross Van Groningen"}],drops:[{player:"Jaleel McLaughlin",from:"Ross Van Groningen"},{player:"Kendrick Bourne",from:"Joshua Van Groningen"},{player:"Austin Ekeler",from:"Ross Van Groningen"},{player:"CeeDee Lamb",from:"Ross Van Groningen"},{player:"DeVonta Smith",from:"Joshua Van Groningen"},{player:"Bijan Robinson",from:"Joshua Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Riley Patterson",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:5,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Logan Thomas",to:"Joshua Van Groningen"}],drops:[{player:"Jonnu Smith",from:"Joshua Van Groningen"}],picks:[]},
+    {week:5,type:"trade",managers:["Aaron Fay","Greg Mulder"],adds:[{player:"Jaylen Waddle",to:"Greg Mulder"},{player:"Rhamondre Stevenson",to:"Aaron Fay"}],drops:[{player:"Jaylen Waddle",from:"Aaron Fay"},{player:"Rhamondre Stevenson",from:"Greg Mulder"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Joshua Dobbs",to:"Steve Vander Molen"}],drops:[{player:"Jonathan Mingo",from:"Steve Vander Molen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Washington Commanders",to:"Matthew Van Groningen"}],drops:[{player:"Kansas City Chiefs",from:"Matthew Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Greg Mulder"],adds:[],drops:[{player:"Treylon Burks",from:"Greg Mulder"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Jonnu Smith",to:"Joshua Van Groningen"}],drops:[{player:"Gerald Everett",from:"Joshua Van Groningen"}],picks:[]},
+    {week:6,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Zach Evans",to:"Aaron Fay"}],drops:[{player:"Dalvin Cook",from:"Aaron Fay"}],picks:[]},
+    {week:6,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Seattle Seahawks",to:"Aaron Fay"}],drops:[{player:"Detroit Lions",from:"Aaron Fay"}],picks:[]},
+    {week:6,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Daniel Carlson",to:"Tyler Goslinga"}],drops:[{player:"Michael Wilson",from:"Tyler Goslinga"}],picks:[]},
+    {week:6,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Dustin Hopkins",to:"Joshua Van Groningen"}],drops:[{player:"Hunter Henry",from:"Joshua Van Groningen"}],picks:[]},
+    {week:6,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Curtis Samuel",to:"Matthew Van Groningen"}],drops:[{player:"Tank Dell",from:"Matthew Van Groningen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Keaontay Ingram",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:6,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Hunter Henry",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:6,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Sam Howell",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:6,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Daniel Jones",from:"Trey Hugen"}],picks:[]},
+    {week:6,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Logan Thomas",to:"Matthew Van Groningen"}],drops:[{player:"Hunter Henry",from:"Matthew Van Groningen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Las Vegas Raiders",to:"Greg Cady"}],drops:[{player:"Samaje Perine",from:"Greg Cady"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Logan Thomas",from:"Joshua Van Groningen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Green Bay Packers",to:"Ross Van Groningen"}],drops:[{player:"Odell Beckham",from:"Ross Van Groningen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Jason Myers",to:"Greg Mulder"}],drops:[{player:"Younghoe Koo",from:"Greg Mulder"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Jordan Mason",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Joshua Kelley",from:"Greg Cady"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Samaje Perine",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Antonio Gibson",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:6,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"D'Onta Foreman",to:"Vance Sipma"}],drops:[{player:"Patrick Taylor",from:"Vance Sipma"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Dalton Schultz",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:6,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Jeff Wilson",to:"Eric Graef"}],drops:[{player:"Deuce Vaughn",from:"Eric Graef"}],picks:[]},
+    {week:7,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Atlanta Falcons",to:"Trey Hugen"}],drops:[{player:"Los Angeles Rams",from:"Trey Hugen"}],picks:[]},
+    {week:7,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Taysom Hill",to:"Joshua Van Groningen"}],drops:[{player:"Deshaun Watson",from:"Joshua Van Groningen"}],picks:[]},
+    {week:7,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Josh Downs",to:"Joshua Van Groningen"}],drops:[{player:"Greg Joseph",from:"Joshua Van Groningen"}],picks:[]},
+    {week:7,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Ka'imi Fairbairn",to:"Aaron Fay"}],drops:[{player:"Brett Maher",from:"Aaron Fay"}],picks:[]},
+    {week:7,type:"waiver",managers:["Greg Cady"],adds:[{player:"Miami Dolphins",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:7,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Las Vegas Raiders",from:"Greg Cady"}],picks:[]},
+    {week:7,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Younghoe Koo",to:"Ross Van Groningen"}],drops:[{player:"Green Bay Packers",from:"Ross Van Groningen"}],picks:[]},
+    {week:7,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Joshua Kelley",to:"Aaron Fay"}],drops:[{player:"Zach Evans",from:"Aaron Fay"}],picks:[]},
+    {week:7,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Detroit Lions",to:"Aaron Fay"}],drops:[{player:"Seattle Seahawks",from:"Aaron Fay"}],picks:[]},
+    {week:7,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"DeAndre Hopkins",to:"Tyler Goslinga"}],drops:[{player:"Daniel Carlson",from:"Tyler Goslinga"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Greg Joseph",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:7,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"DeAndre Hopkins",from:"Joshua Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Brandon Aubrey",from:"Joshua Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Royce Freeman",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:7,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Luke Musgrave",to:"Vance Sipma"}],drops:[{player:"Zach Ertz",from:"Vance Sipma"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Jaxon Smith-Njigba",to:"Greg Mulder"}],drops:[{player:"Miami Dolphins",from:"Greg Mulder"}],picks:[]},
+    {week:7,type:"waiver",managers:["James Lazette"],adds:[{player:"Keaontay Ingram",to:"James Lazette"}],drops:[{player:"Russell Wilson",from:"James Lazette"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Kendrick Bourne",to:"Aaron Fay"}],drops:[],picks:[]},
+    {week:7,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Allen Lazard",from:"Eric Graef"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Darrell Henderson",to:"Trey Hugen"}],drops:[{player:"Keaontay Ingram",from:"Trey Hugen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["James Lazette"],adds:[{player:"Kyler Murray",to:"James Lazette"}],drops:[{player:"Emari Demercado",from:"James Lazette"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Jamaal Williams",to:"Greg Cady"}],drops:[{player:"Elijah Moore",from:"Greg Cady"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Tampa Bay Buccaneers",to:"Vance Sipma"}],drops:[{player:"New England Patriots",from:"Vance Sipma"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Quentin Johnston",from:"Vance Sipma"}],picks:[]},
+    {week:7,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Antonio Gibson",to:"Ross Van Groningen"}],drops:[{player:"Brandin Cooks",from:"Ross Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Mecole Hardman",to:"Ross Van Groningen"}],drops:[{player:"Kendrick Bourne",from:"Ross Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Jamaal Williams",from:"Greg Cady"}],picks:[]},
+    {week:7,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Justin Fields",to:"Greg Mulder"}],drops:[{player:"Antonio Gibson",from:"Greg Mulder"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Derek Carr",to:"Eric Graef"}],drops:[{player:"Justin Fields",from:"Eric Graef"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Desmond Ridder",to:"Matthew Van Groningen"}],drops:[{player:"Anthony Richardson",from:"Matthew Van Groningen"}],picks:[]},
+    {week:8,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Elijah Moore",to:"Greg Mulder"}],drops:[{player:"Brandin Cooks",from:"Greg Mulder"}],picks:[]},
+    {week:8,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Trey McBride",to:"Trey Hugen"}],drops:[{player:"Sam Howell",from:"Trey Hugen"}],picks:[]},
+    {week:8,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Cole Kmet",to:"Aaron Fay"}],drops:[{player:"Tyler Higbee",from:"Aaron Fay"}],picks:[]},
+    {week:8,type:"waiver",managers:["Aaron Fay"],adds:[{player:"DeMario Douglas",to:"Aaron Fay"}],drops:[{player:"Kendrick Bourne",from:"Aaron Fay"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Jordan Mason",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"waiver",managers:["Greg Cady"],adds:[{player:"Baker Mayfield",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:8,type:"waiver",managers:["Greg Cady"],adds:[{player:"Jake Ferguson",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:8,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Miami Dolphins",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"waiver",managers:["Eric Graef"],adds:[{player:"Las Vegas Raiders",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:8,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Leonard Fournette",to:"Vance Sipma"}],drops:[{player:"Jameson Williams",from:"Vance Sipma"}],picks:[]},
+    {week:8,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Will Levis",to:"Vance Sipma"}],drops:[{player:"Jordan Love",from:"Vance Sipma"}],picks:[]},
+    {week:8,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Emari Demercado",to:"Vance Sipma"}],drops:[{player:"Jerick McKinnon",from:"Vance Sipma"}],picks:[]},
+    {week:8,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Russell Wilson",to:"Matthew Van Groningen"}],drops:[{player:"Kirk Cousins",from:"Matthew Van Groningen"}],picks:[]},
+    {week:8,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Cole Kmet",from:"James Lazette"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Brandin Cooks",to:"Greg Mulder"}],drops:[{player:"Jaxon Smith-Njigba",from:"Greg Mulder"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Brandon Aubrey",to:"Vance Sipma"}],drops:[{player:"Riley Patterson",from:"Vance Sipma"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Jamaal Williams",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Houston Texans",to:"Vance Sipma"}],drops:[{player:"Tampa Bay Buccaneers",from:"Vance Sipma"}],picks:[]},
+    {week:9,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Noah Brown",to:"Aaron Fay"}],drops:[{player:"DeMario Douglas",from:"Aaron Fay"}],picks:[]},
+    {week:9,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Seattle Seahawks",to:"Aaron Fay"}],drops:[{player:"Minnesota Vikings",from:"Aaron Fay"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Will Levis",from:"Vance Sipma"}],picks:[]},
+    {week:9,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Keaontay Ingram",from:"James Lazette"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Cam Akers",from:"Greg Cady"}],picks:[]},
+    {week:9,type:"waiver",managers:["Eric Graef"],adds:[{player:"Tank Dell",to:"Eric Graef"}],drops:[{player:"Josh Reynolds",from:"Eric Graef"}],picks:[]},
+    {week:9,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Greg Joseph",to:"Trey Hugen"}],drops:[{player:"Trey McBride",from:"Trey Hugen"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Wan'Dale Robinson",to:"Tyler Goslinga"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Devin Singletary",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Joshua Dobbs",to:"Joshua Van Groningen"}],drops:[{player:"Jaleel McLaughlin",from:"Joshua Van Groningen"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Tyler Boyd",to:"Eric Graef"}],drops:[{player:"Kendre Miller",from:"Eric Graef"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Taylor Heinicke",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"New England Patriots",to:"Steve Vander Molen"}],drops:[{player:"Joshua Dobbs",from:"Steve Vander Molen"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Daniel Carlson",to:"Steve Vander Molen"}],drops:[{player:"Brandon McManus",from:"Steve Vander Molen"}],picks:[]},
+    {week:9,type:"waiver",managers:["James Lazette"],adds:[{player:"AJ Dillon",to:"James Lazette"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Gerald Everett",to:"Tyler Goslinga"}],drops:[{player:"AJ Dillon",from:"Tyler Goslinga"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Blake Grupe",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Roschon Johnson",from:"Greg Cady"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Cameron Dicker",to:"Aaron Fay"}],drops:[{player:"Ka'imi Fairbairn",from:"Aaron Fay"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Minnesota Vikings",to:"Aaron Fay"}],drops:[{player:"Detroit Lions",from:"Aaron Fay"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Matt Gay",to:"Matthew Van Groningen"}],drops:[{player:"Jake Moody",from:"Matthew Van Groningen"}],picks:[]},
+    {week:9,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Sam Howell",to:"Matthew Van Groningen"}],drops:[{player:"Desmond Ridder",from:"Matthew Van Groningen"}],picks:[]},
+    {week:10,type:"waiver",managers:["James Lazette"],adds:[{player:"Miami Dolphins",to:"James Lazette"}],drops:[],picks:[]},
+    {week:10,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Tutu Atwell",from:"James Lazette"}],picks:[]},
+    {week:10,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Washington Commanders",to:"Trey Hugen"}],drops:[{player:"Atlanta Falcons",from:"Trey Hugen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Blake Grupe",from:"Greg Cady"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Baker Mayfield",from:"Greg Cady"}],picks:[]},
+    {week:10,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Jerick McKinnon",to:"Aaron Fay"}],drops:[{player:"Seattle Seahawks",from:"Aaron Fay"}],picks:[]},
+    {week:10,type:"waiver",managers:["Eric Graef"],adds:[{player:"Deshaun Watson",to:"Eric Graef"}],drops:[{player:"Derek Carr",from:"Eric Graef"}],picks:[]},
+    {week:10,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Brandon McManus",to:"Matthew Van Groningen"}],drops:[{player:"Matt Gay",from:"Matthew Van Groningen"}],picks:[]},
+    {week:10,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Jacksonville Jaguars",to:"Joshua Van Groningen"}],drops:[{player:"Taylor Heinicke",from:"Joshua Van Groningen"}],picks:[]},
+    {week:10,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Tyler Conklin",to:"Joshua Van Groningen"}],drops:[{player:"Chicago Bears",from:"Joshua Van Groningen"}],picks:[]},
+    {week:10,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Brandin Cooks",to:"Vance Sipma"}],drops:[{player:"Khalil Shakir",from:"Vance Sipma"}],picks:[]},
+    {week:10,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Ty Chandler",to:"Ross Van Groningen"}],drops:[{player:"Mecole Hardman",from:"Ross Van Groningen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Trey McBride",to:"Steve Vander Molen"}],drops:[{player:"New England Patriots",from:"Steve Vander Molen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Zay Jones",from:"Eric Graef"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Khalil Shakir",to:"Vance Sipma"}],drops:[{player:"Emari Demercado",from:"Vance Sipma"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Keaton Mitchell",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:10,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Kansas City Chiefs",to:"Aaron Fay"}],drops:[{player:"Joshua Kelley",from:"Aaron Fay"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Tampa Bay Buccaneers",to:"Matthew Van Groningen"}],drops:[{player:"Kansas City Chiefs",from:"Matthew Van Groningen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Chicago Bears",to:"Joshua Van Groningen"}],drops:[{player:"Matthew Stafford",from:"Joshua Van Groningen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Jaxon Smith-Njigba",to:"Greg Mulder"}],drops:[{player:"Elijah Moore",from:"Greg Mulder"}],picks:[]},
+    {week:11,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Denver Broncos",to:"Trey Hugen"}],drops:[{player:"Washington Commanders",from:"Trey Hugen"}],picks:[]},
+    {week:11,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Samaje Perine",to:"Joshua Van Groningen"}],drops:[{player:"Justice Hill",from:"Joshua Van Groningen"}],picks:[]},
+    {week:11,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"New York Giants",to:"Joshua Van Groningen"}],drops:[{player:"Jacksonville Jaguars",from:"Joshua Van Groningen"}],picks:[]},
+    {week:11,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Isaiah Likely",to:"Ross Van Groningen"}],drops:[{player:"Jason Sanders",from:"Ross Van Groningen"}],picks:[]},
+    {week:11,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Greg Dortch",to:"Aaron Fay"}],drops:[{player:"Noah Brown",from:"Aaron Fay"}],picks:[]},
+    {week:11,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Zay Jones",to:"Tyler Goslinga"}],drops:[{player:"Gerald Everett",from:"Tyler Goslinga"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Matthew Stafford",from:"Eric Graef"}],picks:[]},
+    {week:11,type:"trade",managers:["Eric Graef","Greg Mulder"],adds:[{player:"Jared Goff",to:"Eric Graef"},{player:"Evan Engram",to:"Greg Mulder"}],drops:[{player:"Jared Goff",from:"Greg Mulder"},{player:"Evan Engram",from:"Eric Graef"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Aaron Fay"],adds:[],drops:[{player:"Michael Thomas",from:"Aaron Fay"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Greg Mulder"],adds:[],drops:[{player:"Zack Moss",from:"Greg Mulder"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Miles Sanders",from:"Trey Hugen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Rico Dowdle",to:"Trey Hugen"}],drops:[{player:"Greg Joseph",from:"Trey Hugen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Jaleel McLaughlin",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:11,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Detroit Lions",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:11,type:"waiver",managers:["Eric Graef"],adds:[{player:"Baker Mayfield",to:"Eric Graef"}],drops:[{player:"Jeff Wilson",from:"Eric Graef"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Matthew Stafford",to:"Eric Graef"}],drops:[{player:"Deshaun Watson",from:"Eric Graef"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Minnesota Vikings",to:"Matthew Van Groningen"}],drops:[{player:"Tampa Bay Buccaneers",from:"Matthew Van Groningen"}],picks:[]},
+    {week:12,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Jason Sanders",to:"Steve Vander Molen"}],drops:[{player:"Daniel Carlson",from:"Steve Vander Molen"}],picks:[]},
+    {week:12,type:"waiver",managers:["James Lazette"],adds:[{player:"Cade Otton",to:"James Lazette"}],drops:[],picks:[]},
+    {week:12,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Kareem Hunt",from:"James Lazette"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Luke Musgrave",from:"Vance Sipma"}],picks:[]},
+    {week:12,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Jacksonville Jaguars",to:"Trey Hugen"}],drops:[{player:"Denver Broncos",from:"Trey Hugen"}],picks:[]},
+    {week:12,type:"waiver",managers:["Eric Graef"],adds:[{player:"Riley Patterson",to:"Eric Graef"}],drops:[{player:"Tyler Bass",from:"Eric Graef"}],picks:[]},
+    {week:12,type:"waiver",managers:["Eric Graef"],adds:[{player:"Zack Moss",to:"Eric Graef"}],drops:[{player:"Baker Mayfield",from:"Eric Graef"}],picks:[]},
+    {week:12,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Derek Carr",to:"Joshua Van Groningen"}],drops:[{player:"Samaje Perine",from:"Joshua Van Groningen"}],picks:[]},
+    {week:12,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Tampa Bay Buccaneers",to:"Joshua Van Groningen"}],drops:[{player:"New York Giants",from:"Joshua Van Groningen"}],picks:[]},
+    {week:12,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Gardner Minshew",to:"Greg Mulder"}],drops:[{player:"Jake Browning",from:"Greg Mulder"}],picks:[]},
+    {week:12,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Matthew Stafford",to:"Trey Hugen"}],drops:[{player:"Rico Dowdle",from:"Trey Hugen"}],picks:[]},
+    {week:12,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Jordan Love",to:"Trey Hugen"}],drops:[{player:"Darrell Henderson",from:"Trey Hugen"}],picks:[]},
+    {week:12,type:"waiver",managers:["Greg Cady"],adds:[{player:"Jayden Reed",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:12,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Odell Beckham",to:"Matthew Van Groningen"}],drops:[{player:"K.J. Osborn",from:"Matthew Van Groningen"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Jeff Wilson",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:12,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Jake Browning",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:12,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Tennessee Titans",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:12,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Los Angeles Rams",to:"Ross Van Groningen"}],drops:[],picks:[]},
+    {week:12,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Royce Freeman",from:"Greg Cady"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Ross Van Groningen"],adds:[],drops:[{player:"Chig Okonkwo",from:"Ross Van Groningen"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Eric Graef"],adds:[{player:"New England Patriots",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:13,type:"waiver",managers:["James Lazette"],adds:[{player:"Khalil Shakir",to:"James Lazette"}],drops:[],picks:[]},
+    {week:13,type:"waiver",managers:["James Lazette"],adds:[{player:"Kareem Hunt",to:"James Lazette"}],drops:[],picks:[]},
+    {week:13,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Minnesota Vikings",to:"Joshua Van Groningen"}],drops:[{player:"Tyler Conklin",from:"Joshua Van Groningen"}],picks:[]},
+    {week:13,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Cade Otton",from:"James Lazette"}],picks:[]},
+    {week:13,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Baltimore Ravens",to:"Matthew Van Groningen"}],drops:[{player:"Indianapolis Colts",from:"Matthew Van Groningen"}],picks:[]},
+    {week:13,type:"waiver",managers:["Greg Cady"],adds:[{player:"Noah Brown",to:"Greg Cady"}],drops:[{player:"Los Angeles Chargers",from:"Greg Cady"}],picks:[]},
+    {week:13,type:"waiver",managers:["Greg Cady"],adds:[{player:"Jameson Williams",to:"Greg Cady"}],drops:[{player:"Jeff Wilson",from:"Greg Cady"}],picks:[]},
+    {week:13,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Jake Browning",to:"Vance Sipma"}],drops:[{player:"Juwan Johnson",from:"Vance Sipma"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Green Bay Packers",to:"Eric Graef"}],drops:[{player:"Las Vegas Raiders",from:"Eric Graef"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Tyler Higbee",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:13,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Juwan Johnson",to:"Vance Sipma"}],drops:[{player:"Gerald Everett",from:"Vance Sipma"}],picks:[]},
+    {week:13,type:"free_agent",managers:["James Lazette"],adds:[{player:"Wil Lutz",to:"James Lazette"}],drops:[{player:"Baltimore Ravens",from:"James Lazette"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Samaje Perine",to:"Tyler Goslinga"}],drops:[{player:"Wan'Dale Robinson",from:"Tyler Goslinga"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Atlanta Falcons",to:"Vance Sipma"}],drops:[{player:"Tennessee Titans",from:"Vance Sipma"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Gerald Everett",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Los Angeles Chargers",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Detroit Lions",from:"Greg Cady"}],picks:[]},
+    {week:13,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Baker Mayfield",to:"Ross Van Groningen"}],drops:[{player:"Ty Chandler",from:"Ross Van Groningen"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Jaleel McLaughlin",from:"Greg Cady"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Indianapolis Colts",to:"Matthew Van Groningen"}],drops:[{player:"Minnesota Vikings",from:"Matthew Van Groningen"}],picks:[]},
+    {week:14,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Ty Chandler",to:"Greg Mulder"}],drops:[{player:"Jason Myers",from:"Greg Mulder"}],picks:[]},
+    {week:14,type:"waiver",managers:["James Lazette"],adds:[{player:"Michael Thomas",to:"James Lazette"}],drops:[{player:"Khalil Shakir",from:"James Lazette"}],picks:[]},
+    {week:14,type:"waiver",managers:["James Lazette"],adds:[{player:"Denver Broncos",to:"James Lazette"}],drops:[{player:"Roschon Johnson",from:"James Lazette"}],picks:[]},
+    {week:14,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Chase Brown",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:14,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Matt Gay",to:"Matthew Van Groningen"}],drops:[{player:"Blake Grupe",from:"Matthew Van Groningen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Leonard Fournette",from:"Vance Sipma"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Chicago Bears",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:14,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Clyde Edwards-Helaire",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:14,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Brevin Jordan",to:"Eric Graef"}],drops:[{player:"Tyler Higbee",from:"Eric Graef"}],picks:[]},
+    {week:14,type:"free_agent",managers:["James Lazette"],adds:[{player:"Roschon Johnson",to:"James Lazette"}],drops:[],picks:[]},
+    {week:14,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Wil Lutz",from:"James Lazette"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Blake Grupe",to:"Matthew Van Groningen"}],drops:[{player:"Brandon McManus",from:"Matthew Van Groningen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Tyler Bass",to:"Greg Mulder"}],drops:[{player:"Gardner Minshew",from:"Greg Mulder"}],picks:[]},
+    {week:14,type:"waiver",managers:["Eric Graef"],adds:[{player:"Indianapolis Colts",to:"Eric Graef"}],drops:[{player:"New England Patriots",from:"Eric Graef"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Jonathan Mingo",to:"Eric Graef"}],drops:[{player:"Tank Dell",from:"Eric Graef"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Tyler Boyd",from:"Eric Graef"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Latavius Murray",from:"Matthew Van Groningen"}],picks:[]},
+    {week:15,type:"waiver",managers:["Eric Graef"],adds:[{player:"Tucker Kraft",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:15,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Zamir White",to:"Joshua Van Groningen"}],drops:[{player:"Derek Carr",from:"Joshua Van Groningen"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Keaton Mitchell",from:"Greg Cady"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Chig Okonkwo",from:"Joshua Van Groningen"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Wil Lutz",to:"Eric Graef"}],drops:[{player:"Riley Patterson",from:"Eric Graef"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Elijah Moore",to:"Tyler Goslinga"}],drops:[],picks:[]},
+    {week:15,type:"free_agent",managers:["Tyler Goslinga"],adds:[],drops:[{player:"Samaje Perine",from:"Tyler Goslinga"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Desmond Ridder",to:"Steve Vander Molen"}],drops:[],picks:[]},
+    {week:15,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Chig Okonkwo",to:"Joshua Van Groningen"}],drops:[{player:"Minnesota Vikings",from:"Joshua Van Groningen"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Quentin Johnston",to:"Eric Graef"}],drops:[{player:"Brevin Jordan",from:"Eric Graef"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Jonathan Mingo",from:"Eric Graef"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Joe Flacco",to:"Joshua Van Groningen"}],drops:[{player:"Joshua Dobbs",from:"Joshua Van Groningen"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Dontayvion Wicks",to:"Vance Sipma"}],drops:[{player:"D'Onta Foreman",from:"Vance Sipma"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Gardner Minshew",to:"Steve Vander Molen"}],drops:[{player:"Desmond Ridder",from:"Steve Vander Molen"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Tyler Boyd",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:16,type:"free_agent",managers:["Tyler Goslinga"],adds:[],drops:[{player:"Zay Jones",from:"Tyler Goslinga"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Justice Hill",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:16,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Cincinnati Bengals",to:"Greg Cady"}],drops:[{player:"Jameson Williams",from:"Greg Cady"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Jacksonville Jaguars",from:"Trey Hugen"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Jason Myers",to:"Eric Graef"}],drops:[{player:"Wil Lutz",from:"Eric Graef"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Green Bay Packers",from:"Eric Graef"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Derek Carr",to:"Vance Sipma"}],drops:[{player:"Atlanta Falcons",from:"Vance Sipma"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Tucker Kraft",from:"Eric Graef"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Dontayvion Wicks",from:"Vance Sipma"}],picks:[]},
+    {week:17,type:"free_agent",managers:["James Lazette"],adds:[{player:"Gerald Everett",to:"James Lazette"}],drops:[{player:"Michael Thomas",from:"James Lazette"}],picks:[]},
+  ],
+  2024: [
+    {week:1,type:"waiver",managers:["Greg Cady"],adds:[{player:"Dallas Goedert",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:1,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Demarcus Robinson",to:"Ross Van Groningen"}],drops:[{player:"Khalil Herbert",from:"Ross Van Groningen"}],picks:[]},
+    {week:1,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Geno Smith",to:"Ross Van Groningen"}],drops:[{player:"Kirk Cousins",from:"Ross Van Groningen"}],picks:[]},
+    {week:1,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Los Angeles Chargers",to:"Aaron Fay"}],drops:[{player:"New Orleans Saints",from:"Aaron Fay"}],picks:[]},
+    {week:1,type:"waiver",managers:["Eric Graef"],adds:[{player:"Allen Lazard",to:"Eric Graef"}],drops:[{player:"Jaylen Wright",from:"Eric Graef"}],picks:[]},
+    {week:1,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Jamaal Williams",to:"Tyler Goslinga"}],drops:[{player:"Braelon Allen",from:"Tyler Goslinga"}],picks:[]},
+    {week:1,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Tank Bigsby",to:"Ross Van Groningen"}],drops:[],picks:[]},
+    {week:1,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Braelon Allen",to:"Tyler Goslinga"}],drops:[],picks:[]},
+    {week:1,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Chicago Bears",to:"Matthew Van Groningen"}],drops:[{player:"Miami Dolphins",from:"Matthew Van Groningen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Cincinnati Bengals",to:"Greg Mulder"}],drops:[{player:"Dallas Goedert",from:"Greg Mulder"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Dallas Goedert",to:"Greg Mulder"}],drops:[{player:"Dalton Schultz",from:"Greg Mulder"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Isaiah Likely",to:"Trey Hugen"}],drops:[{player:"Ray Davis",from:"Trey Hugen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Dontayvion Wicks",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:1,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Justice Hill",to:"Vance Sipma"}],drops:[{player:"Emanuel Wilson",from:"Vance Sipma"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Ka'imi Fairbairn",to:"Tyler Goslinga"}],drops:[{player:"Ricky Pearsall",from:"Tyler Goslinga"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Jakobi Meyers",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:1,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Emanuel Wilson",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:2,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Kareem Hunt",to:"Ross Van Groningen"}],drops:[{player:"Jeff Wilson",from:"Ross Van Groningen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Eric Graef"],adds:[{player:"Quentin Johnston",to:"Eric Graef"}],drops:[{player:"Jakobi Meyers",from:"Eric Graef"}],picks:[]},
+    {week:2,type:"waiver",managers:["Greg Mulder"],adds:[{player:"D'Onta Foreman",to:"Greg Mulder"}],drops:[{player:"Cincinnati Bengals",from:"Greg Mulder"}],picks:[]},
+    {week:2,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Samaje Perine",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:2,type:"waiver",managers:["Greg Cady"],adds:[{player:"Ray Davis",to:"Greg Cady"}],drops:[{player:"MarShawn Lloyd",from:"Greg Cady"}],picks:[]},
+    {week:2,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Carson Steele",to:"Trey Hugen"}],drops:[{player:"Blake Corum",from:"Trey Hugen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Chicago Bears",to:"Trey Hugen"}],drops:[{player:"Philadelphia Eagles",from:"Trey Hugen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Cam Akers",to:"Trey Hugen"}],drops:[{player:"Jaylen Wright",from:"Trey Hugen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Darnell Mooney",to:"Greg Mulder"}],drops:[{player:"Matthew Stafford",from:"Greg Mulder"}],picks:[]},
+    {week:2,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Hunter Henry",to:"Matthew Van Groningen"}],drops:[{player:"Dalton Schultz",from:"Matthew Van Groningen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Las Vegas Raiders",to:"Matthew Van Groningen"}],drops:[{player:"Indianapolis Colts",from:"Matthew Van Groningen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Derek Carr",to:"Matthew Van Groningen"}],drops:[{player:"Trevor Lawrence",from:"Matthew Van Groningen"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Alec Pierce",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:2,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Colby Parkinson",to:"Aaron Fay"}],drops:[{player:"Cole Kmet",from:"Aaron Fay"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Rashid Shaheed",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:2,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Justin Fields",to:"Steve Vander Molen"}],drops:[],picks:[]},
+    {week:2,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Cairo Santos",to:"Matthew Van Groningen"}],drops:[{player:"Greg Zuerlein",from:"Matthew Van Groningen"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Seattle Seahawks",to:"Eric Graef"}],drops:[{player:"Romeo Doubs",from:"Eric Graef"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Indianapolis Colts",to:"Matthew Van Groningen"}],drops:[{player:"Chicago Bears",from:"Matthew Van Groningen"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Jeff Wilson",to:"Ross Van Groningen"}],drops:[{player:"Geno Smith",from:"Ross Van Groningen"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Dalton Schultz",to:"Matthew Van Groningen"}],drops:[{player:"Luke Musgrave",from:"Matthew Van Groningen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Jaylen Wright",to:"Trey Hugen"}],drops:[{player:"Chuba Hubbard",from:"Trey Hugen"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Dontayvion Wicks",from:"Matthew Van Groningen"}],picks:[]},
+    {week:3,type:"waiver",managers:["James Lazette"],adds:[{player:"Andrei Iosivas",to:"James Lazette"}],drops:[],picks:[]},
+    {week:3,type:"waiver",managers:["Aaron Fay"],adds:[{player:"New Orleans Saints",to:"Aaron Fay"}],drops:[{player:"Los Angeles Chargers",from:"Aaron Fay"}],picks:[]},
+    {week:3,type:"trade",managers:["Trey Hugen","Ross Van Groningen"],adds:[{player:"Tony Pollard",to:"Trey Hugen"},{player:"Rico Dowdle",to:"Ross Van Groningen"},{player:"Chris Olave",to:"Ross Van Groningen"},{player:"Tank Dell",to:"Trey Hugen"}],drops:[{player:"Tony Pollard",from:"Ross Van Groningen"},{player:"Rico Dowdle",from:"Trey Hugen"},{player:"Chris Olave",from:"Trey Hugen"},{player:"Tank Dell",from:"Ross Van Groningen"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Ross Van Groningen"],adds:[],drops:[{player:"Clyde Edwards-Helaire",from:"Ross Van Groningen"}],picks:[]},
+    {week:3,type:"trade",managers:["Aaron Fay","James Lazette","Ross Van Groningen"],adds:[{player:"Josh Jacobs",to:"Ross Van Groningen"},{player:"David Montgomery",to:"James Lazette"},{player:"Terry McLaurin",to:"Ross Van Groningen"},{player:"Justin Herbert",to:"Aaron Fay"},{player:"Brandon Aiyuk",to:"James Lazette"},{player:"Rhamondre Stevenson",to:"Ross Van Groningen"},{player:"Garrett Wilson",to:"Aaron Fay"},{player:"Brian Robinson",to:"James Lazette"},{player:"Chase Brown",to:"Ross Van Groningen"},{player:"De'Von Achane",to:"Aaron Fay"},{player:"C.J. Stroud",to:"Ross Van Groningen"}],drops:[{player:"Josh Jacobs",from:"James Lazette"},{player:"David Montgomery",from:"Ross Van Groningen"},{player:"Terry McLaurin",from:"James Lazette"},{player:"Justin Herbert",from:"Ross Van Groningen"},{player:"Brandon Aiyuk",from:"Aaron Fay"},{player:"Rhamondre Stevenson",from:"James Lazette"},{player:"Garrett Wilson",from:"Ross Van Groningen"},{player:"Brian Robinson",from:"Aaron Fay"},{player:"Chase Brown",from:"James Lazette"},{player:"De'Von Achane",from:"Ross Van Groningen"},{player:"C.J. Stroud",from:"Aaron Fay"}],picks:[]},
+    {week:3,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Minnesota Vikings",to:"Matthew Van Groningen"}],drops:[{player:"Las Vegas Raiders",from:"Matthew Van Groningen"}],picks:[]},
+    {week:3,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Cole Kmet",to:"Aaron Fay"}],drops:[{player:"Evan Engram",from:"Aaron Fay"}],picks:[]},
+    {week:3,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Jauan Jennings",to:"Tyler Goslinga"}],drops:[{player:"Gabe Davis",from:"Tyler Goslinga"}],picks:[]},
+    {week:3,type:"trade",managers:["Greg Cady","Eric Graef"],adds:[{player:"Jayden Reed",to:"Eric Graef"},{player:"Chris Godwin",to:"Greg Cady"},{player:"J.K. Dobbins",to:"Eric Graef"},{player:"Antonio Gibson",to:"Greg Cady"}],drops:[{player:"Jayden Reed",from:"Greg Cady"},{player:"Chris Godwin",from:"Eric Graef"},{player:"J.K. Dobbins",from:"Greg Cady"},{player:"Antonio Gibson",from:"Eric Graef"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Steve Vander Molen"],adds:[],drops:[{player:"Justin Fields",from:"Steve Vander Molen"}],picks:[]},
+    {week:3,type:"free_agent",managers:["James Lazette"],adds:[{player:"Mike Gesicki",to:"James Lazette"}],drops:[],picks:[]},
+    {week:3,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Pat Freiermuth",to:"Tyler Goslinga"}],drops:[{player:"Jauan Jennings",from:"Tyler Goslinga"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Jamaal Williams",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:3,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Los Angeles Chargers",to:"Aaron Fay"}],drops:[{player:"Buffalo Bills",from:"Aaron Fay"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Dalton Schultz",to:"Aaron Fay"}],drops:[{player:"Colby Parkinson",from:"Aaron Fay"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Jauan Jennings",to:"Tyler Goslinga"}],drops:[{player:"Jamaal Williams",from:"Tyler Goslinga"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Chuba Hubbard",to:"Greg Mulder"}],drops:[{player:"D'Onta Foreman",from:"Greg Mulder"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Dameon Pierce",from:"Joshua Van Groningen"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Buffalo Bills",to:"Aaron Fay"}],drops:[{player:"Los Angeles Chargers",from:"Aaron Fay"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Sam Darnold",to:"Aaron Fay"}],drops:[{player:"Curtis Samuel",from:"Aaron Fay"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Braelon Allen",to:"Aaron Fay"}],drops:[],picks:[]},
+    {week:3,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Clyde Edwards-Helaire",to:"Ross Van Groningen"}],drops:[{player:"Tank Bigsby",from:"Ross Van Groningen"}],picks:[]},
+    {week:4,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Baker Mayfield",to:"Greg Mulder"}],drops:[{player:"Christian Watson",from:"Greg Mulder"}],picks:[]},
+    {week:4,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Tucker Kraft",to:"Joshua Van Groningen"}],drops:[{player:"Elijah Higgins",from:"Joshua Van Groningen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Brandin Cooks",from:"Matthew Van Groningen"}],picks:[]},
+    {week:4,type:"trade",managers:["Vance Sipma","Matthew Van Groningen","Greg Mulder"],adds:[{player:"Tyreek Hill",to:"Greg Mulder"},{player:"Calvin Ridley",to:"Matthew Van Groningen"},{player:"Nick Chubb",to:"Matthew Van Groningen"},{player:"Deebo Samuel",to:"Matthew Van Groningen"},{player:"Jakobi Meyers",to:"Vance Sipma"},{player:"Zack Moss",to:"Matthew Van Groningen"},{player:"Darnell Mooney",to:"Vance Sipma"},{player:"Jerome Ford",to:"Matthew Van Groningen"},{player:"Jameson Williams",to:"Matthew Van Groningen"},{player:"Jaxon Smith-Njigba",to:"Greg Mulder"},{player:"Tyjae Spears",to:"Vance Sipma"},{player:"Bijan Robinson",to:"Vance Sipma"}],drops:[{player:"Tyreek Hill",from:"Matthew Van Groningen"},{player:"Calvin Ridley",from:"Vance Sipma"},{player:"Nick Chubb",from:"Vance Sipma"},{player:"Deebo Samuel",from:"Greg Mulder"},{player:"Jakobi Meyers",from:"Matthew Van Groningen"},{player:"Zack Moss",from:"Vance Sipma"},{player:"Darnell Mooney",from:"Greg Mulder"},{player:"Jerome Ford",from:"Vance Sipma"},{player:"Jameson Williams",from:"Vance Sipma"},{player:"Jaxon Smith-Njigba",from:"Matthew Van Groningen"},{player:"Tyjae Spears",from:"Matthew Van Groningen"},{player:"Bijan Robinson",from:"Matthew Van Groningen"}],picks:[]},
+    {week:4,type:"waiver",managers:["James Lazette"],adds:[{player:"Denver Broncos",to:"James Lazette"}],drops:[{player:"Ezekiel Elliott",from:"James Lazette"}],picks:[]},
+    {week:4,type:"waiver",managers:["James Lazette"],adds:[{player:"Wan'Dale Robinson",to:"James Lazette"}],drops:[{player:"Keon Coleman",from:"James Lazette"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Steve Vander Molen"],adds:[],drops:[{player:"Jake Elliott",from:"Steve Vander Molen"}],picks:[]},
+    {week:4,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Dontayvion Wicks",to:"Steve Vander Molen"}],drops:[],picks:[]},
+    {week:4,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Trey Sermon",to:"Steve Vander Molen"}],drops:[],picks:[]},
+    {week:4,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Chris Boswell",to:"Aaron Fay"}],drops:[{player:"Cameron Dicker",from:"Aaron Fay"}],picks:[]},
+    {week:4,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Justin Fields",to:"Matthew Van Groningen"}],drops:[{player:"Derek Carr",from:"Matthew Van Groningen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Las Vegas Raiders",to:"Eric Graef"}],drops:[{player:"Noah Fant",from:"Eric Graef"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Elijah Higgins",to:"Joshua Van Groningen"}],drops:[{player:"Mike Williams",from:"Joshua Van Groningen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Tank Bigsby",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:4,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Jakobi Meyers",to:"Matthew Van Groningen"}],drops:[{player:"DeMario Douglas",from:"Matthew Van Groningen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Roschon Johnson",to:"Greg Mulder"}],drops:[{player:"Trey Benson",from:"Greg Mulder"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Evan Engram",to:"Eric Graef"}],drops:[{player:"Jakobi Meyers",from:"Eric Graef"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Jakobi Meyers",to:"Eric Graef"}],drops:[{player:"Tampa Bay Buccaneers",from:"Eric Graef"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Buffalo Bills",to:"Ross Van Groningen"}],drops:[{player:"Joshua Palmer",from:"Ross Van Groningen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Noah Fant",to:"Eric Graef"}],drops:[{player:"Baker Mayfield",from:"Eric Graef"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Brayden Narveson",to:"Matthew Van Groningen"}],drops:[{player:"Cairo Santos",from:"Matthew Van Groningen"}],picks:[]},
+    {week:5,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Tampa Bay Buccaneers",to:"Trey Hugen"}],drops:[{player:"Chicago Bears",from:"Trey Hugen"}],picks:[]},
+    {week:5,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Emanuel Wilson",to:"Tyler Goslinga"}],drops:[{player:"Pat Freiermuth",from:"Tyler Goslinga"}],picks:[]},
+    {week:5,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Jake Elliott",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:5,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Houston Texans",to:"Ross Van Groningen"}],drops:[{player:"Miami Dolphins",from:"Ross Van Groningen"}],picks:[]},
+    {week:5,type:"waiver",managers:["Greg Cady"],adds:[{player:"Kenneth Gainwell",to:"Greg Cady"}],drops:[{player:"David Njoku",from:"Greg Cady"}],picks:[]},
+    {week:5,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Kirk Cousins",to:"Aaron Fay"}],drops:[{player:"Justin Herbert",from:"Aaron Fay"}],picks:[]},
+    {week:5,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Philadelphia Eagles",to:"Greg Mulder"}],drops:[{player:"Samaje Perine",from:"Greg Mulder"}],picks:[]},
+    {week:5,type:"waiver",managers:["Eric Graef"],adds:[{player:"Jake Bates",to:"Eric Graef"}],drops:[{player:"Jason Sanders",from:"Eric Graef"}],picks:[]},
+    {week:5,type:"waiver",managers:["Eric Graef"],adds:[{player:"Los Angeles Chargers",to:"Eric Graef"}],drops:[{player:"Colby Parkinson",from:"Eric Graef"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Tre Tucker",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:5,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Marquise Brown",from:"Matthew Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["James Lazette"],adds:[{player:"Zach Ertz",to:"James Lazette"}],drops:[{player:"Mike Gesicki",from:"James Lazette"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Colby Parkinson",to:"Eric Graef"}],drops:[{player:"Quentin Johnston",from:"Eric Graef"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Keon Coleman",to:"Eric Graef"}],drops:[{player:"Las Vegas Raiders",from:"Eric Graef"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Josh Downs",to:"Trey Hugen"}],drops:[{player:"Alec Pierce",from:"Trey Hugen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Alec Pierce",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:5,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Brayden Narveson",to:"Steve Vander Molen"}],drops:[{player:"Adonai Mitchell",from:"Steve Vander Molen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Cam Akers",to:"Trey Hugen"}],drops:[{player:"Isaiah Likely",from:"Trey Hugen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Ray Davis",from:"Greg Cady"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Miami Dolphins",to:"Ross Van Groningen"}],drops:[{player:"Houston Texans",from:"Ross Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Tyrone Tracy",to:"Trey Hugen"}],drops:[{player:"Carson Steele",from:"Trey Hugen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Alec Pierce",from:"Joshua Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Cade Otton",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:5,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Cam Akers",from:"Trey Hugen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Green Bay Packers",to:"Aaron Fay"}],drops:[{player:"New Orleans Saints",from:"Aaron Fay"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Austin Seibert",to:"Matthew Van Groningen"}],drops:[{player:"Brayden Narveson",from:"Matthew Van Groningen"}],picks:[]},
+    {week:6,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Kansas City Chiefs",to:"Greg Mulder"}],drops:[{player:"Chase McLaughlin",from:"Greg Mulder"}],picks:[]},
+    {week:6,type:"waiver",managers:["Greg Cady"],adds:[{player:"Ray Davis",to:"Greg Cady"}],drops:[{player:"Ty Johnson",from:"Greg Cady"}],picks:[]},
+    {week:6,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Sean Tucker",to:"Joshua Van Groningen"}],drops:[{player:"Jake Moody",from:"Joshua Van Groningen"}],picks:[]},
+    {week:6,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"David Njoku",to:"Joshua Van Groningen"}],drops:[{player:"Tucker Kraft",from:"Joshua Van Groningen"}],picks:[]},
+    {week:6,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Cameron Dicker",to:"Joshua Van Groningen"}],drops:[{player:"Jake Elliott",from:"Joshua Van Groningen"}],picks:[]},
+    {week:6,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Cincinnati Bengals",to:"Trey Hugen"}],drops:[{player:"Tampa Bay Buccaneers",from:"Trey Hugen"}],picks:[]},
+    {week:6,type:"waiver",managers:["James Lazette"],adds:[{player:"Baker Mayfield",to:"James Lazette"}],drops:[],picks:[]},
+    {week:6,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Dallas Cowboys",from:"James Lazette"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Jalen Tolbert",to:"Trey Hugen"}],drops:[{player:"Cam Akers",from:"Trey Hugen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Kenneth Gainwell",from:"Greg Cady"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Darius Slayton",to:"Aaron Fay"}],drops:[{player:"Gus Edwards",from:"Aaron Fay"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Tennessee Titans",to:"Steve Vander Molen"}],drops:[{player:"Kansas City Chiefs",from:"Steve Vander Molen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Pat Freiermuth",to:"Steve Vander Molen"}],drops:[{player:"Kimani Vidal",from:"Steve Vander Molen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Ty Johnson",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Atlanta Falcons",to:"Greg Cady"}],drops:[{player:"Cleveland Browns",from:"Greg Cady"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Rashod Bateman",to:"Aaron Fay"}],drops:[],picks:[]},
+    {week:6,type:"free_agent",managers:["Aaron Fay"],adds:[],drops:[{player:"Tua Tagovailoa",from:"Aaron Fay"}],picks:[]},
+    {week:6,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Chicago Bears",to:"Matthew Van Groningen"}],drops:[{player:"Hunter Henry",from:"Matthew Van Groningen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Chase McLaughlin",to:"Greg Mulder"}],drops:[{player:"Baker Mayfield",from:"Greg Mulder"}],picks:[]},
+    {week:7,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Chicago Bears",to:"Trey Hugen"}],drops:[{player:"Cincinnati Bengals",from:"Trey Hugen"}],picks:[]},
+    {week:7,type:"waiver",managers:["Greg Cady"],adds:[{player:"Christian Watson",to:"Greg Cady"}],drops:[{player:"Chris Godwin",from:"Greg Cady"}],picks:[]},
+    {week:7,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Jalen McMillan",to:"Tyler Goslinga"}],drops:[{player:"Emanuel Wilson",from:"Tyler Goslinga"}],picks:[]},
+    {week:7,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Detroit Lions",to:"Aaron Fay"}],drops:[{player:"New Orleans Saints",from:"Aaron Fay"}],picks:[]},
+    {week:7,type:"waiver",managers:["James Lazette"],adds:[{player:"Ricky Pearsall",to:"James Lazette"}],drops:[],picks:[]},
+    {week:7,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Chase McLaughlin",from:"James Lazette"}],picks:[]},
+    {week:7,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Brandon Aiyuk",from:"James Lazette"}],picks:[]},
+    {week:7,type:"waiver",managers:["Greg Cady"],adds:[{player:"Kenneth Gainwell",to:"Greg Cady"}],drops:[{player:"Antonio Gibson",from:"Greg Cady"}],picks:[]},
+    {week:7,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Keon Coleman",to:"Greg Mulder"}],drops:[{player:"Philadelphia Eagles",from:"Greg Mulder"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Hunter Henry",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:7,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Geno Smith",to:"Eric Graef"}],drops:[{player:"Keon Coleman",from:"Eric Graef"}],picks:[]},
+    {week:7,type:"free_agent",managers:["James Lazette"],adds:[{player:"Chase McLaughlin",to:"James Lazette"}],drops:[],picks:[]},
+    {week:7,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Tucker Kraft",to:"Ross Van Groningen"}],drops:[{player:"Demarcus Robinson",from:"Ross Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Romeo Doubs",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:7,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Jason Myers",to:"Steve Vander Molen"}],drops:[{player:"Brandon McManus",from:"Steve Vander Molen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Brandon McManus",to:"Steve Vander Molen"}],drops:[{player:"Brayden Narveson",from:"Steve Vander Molen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Jalen Tolbert",from:"Trey Hugen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Jamaal Williams",from:"Joshua Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Dameon Pierce",to:"Aaron Fay"}],drops:[{player:"Rashod Bateman",from:"Aaron Fay"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"New Orleans Saints",to:"Aaron Fay"}],drops:[{player:"Green Bay Packers",from:"Aaron Fay"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Colby Parkinson",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:7,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Justin Fields",from:"Matthew Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Chicago Bears",from:"Matthew Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Los Angeles Rams",to:"Greg Cady"}],drops:[{player:"Atlanta Falcons",from:"Greg Cady"}],picks:[]},
+    {week:7,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Andrei Iosivas",from:"James Lazette"}],picks:[]},
+    {week:8,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Jake Elliott",to:"Aaron Fay"}],drops:[{player:"Alec Pierce",from:"Aaron Fay"}],picks:[]},
+    {week:8,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Matthew Stafford",to:"Steve Vander Molen"}],drops:[{player:"Pat Freiermuth",from:"Steve Vander Molen"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Stefon Diggs",from:"Joshua Van Groningen"}],picks:[]},
+    {week:8,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Anthony Richardson",from:"James Lazette"}],picks:[]},
+    {week:8,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Philadelphia Eagles",to:"Aaron Fay"}],drops:[{player:"Detroit Lions",from:"Aaron Fay"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Andrei Iosivas",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"waiver",managers:["Eric Graef"],adds:[{player:"Cedric Tillman",to:"Eric Graef"}],drops:[{player:"Geno Smith",from:"Eric Graef"}],picks:[]},
+    {week:8,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"New Orleans Saints",to:"Joshua Van Groningen"}],drops:[{player:"Green Bay Packers",from:"Joshua Van Groningen"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Antonio Gibson",to:"Eric Graef"}],drops:[{player:"Seattle Seahawks",from:"Eric Graef"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Andrei Iosivas",to:"Greg Cady"}],drops:[{player:"Rashod Bateman",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Alec Pierce",to:"Aaron Fay"}],drops:[{player:"Dameon Pierce",from:"Aaron Fay"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Rashod Bateman",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:8,type:"waiver",managers:["Greg Cady"],adds:[{player:"Houston Texans",to:"Greg Cady"}],drops:[{player:"Christian Kirk",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Los Angeles Rams",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Ross Van Groningen"],adds:[],drops:[{player:"Houston Texans",from:"Ross Van Groningen"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Washington Commanders",to:"Steve Vander Molen"}],drops:[{player:"Tennessee Titans",from:"Steve Vander Molen"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Green Bay Packers",to:"Joshua Van Groningen"}],drops:[{player:"Sean Tucker",from:"Joshua Van Groningen"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Sterling Shepard",to:"Aaron Fay"}],drops:[{player:"Darius Slayton",from:"Aaron Fay"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Russell Wilson",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:8,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Colby Parkinson",from:"Matthew Van Groningen"}],picks:[]},
+    {week:9,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Jake Moody",to:"Joshua Van Groningen"}],drops:[{player:"Cameron Dicker",from:"Joshua Van Groningen"}],picks:[]},
+    {week:9,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"New York Giants",to:"Joshua Van Groningen"}],drops:[{player:"New Orleans Saints",from:"Joshua Van Groningen"}],picks:[]},
+    {week:9,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Mike Gesicki",to:"Aaron Fay"}],drops:[{player:"Dalton Schultz",from:"Aaron Fay"}],picks:[]},
+    {week:9,type:"free_agent",managers:["James Lazette"],adds:[{player:"Jalen Coker",to:"James Lazette"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Kenneth Gainwell",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Taysom Hill",to:"Tyler Goslinga"}],drops:[{player:"Jauan Jennings",from:"Tyler Goslinga"}],picks:[]},
+    {week:9,type:"waiver",managers:["Greg Cady"],adds:[{player:"Diontae Johnson",to:"Greg Cady"}],drops:[{player:"Kenneth Gainwell",from:"Greg Cady"}],picks:[]},
+    {week:9,type:"waiver",managers:["Eric Graef"],adds:[{player:"Detroit Lions",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Antonio Gibson",from:"Eric Graef"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Elijah Moore",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Cincinnati Bengals",to:"Vance Sipma"}],drops:[{player:"Diontae Johnson",from:"Vance Sipma"}],picks:[]},
+    {week:9,type:"free_agent",managers:["James Lazette"],adds:[{player:"Adam Thielen",to:"James Lazette"}],drops:[{player:"Taysom Hill",from:"James Lazette"}],picks:[]},
+    {week:9,type:"free_agent",managers:["James Lazette"],adds:[{player:"Tennessee Titans",to:"James Lazette"}],drops:[],picks:[]},
+    {week:10,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Audric Estime",to:"Ross Van Groningen"}],drops:[{player:"Jaleel McLaughlin",from:"Ross Van Groningen"}],picks:[]},
+    {week:10,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Geno Smith",to:"Joshua Van Groningen"}],drops:[{player:"New York Giants",from:"Joshua Van Groningen"}],picks:[]},
+    {week:10,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Gus Edwards",to:"Greg Mulder"}],drops:[{player:"Demarcus Robinson",from:"Greg Mulder"}],picks:[]},
+    {week:10,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Detroit Lions",to:"Aaron Fay"}],drops:[{player:"Philadelphia Eagles",from:"Aaron Fay"}],picks:[]},
+    {week:10,type:"waiver",managers:["James Lazette"],adds:[{player:"Jerry Jeudy",to:"James Lazette"}],drops:[{player:"Jalen Coker",from:"James Lazette"}],picks:[]},
+    {week:10,type:"waiver",managers:["James Lazette"],adds:[{player:"Justin Herbert",to:"James Lazette"}],drops:[{player:"Dak Prescott",from:"James Lazette"}],picks:[]},
+    {week:10,type:"waiver",managers:["Greg Cady"],adds:[{player:"Houston Texans",to:"Greg Cady"}],drops:[{player:"Kenneth Gainwell",from:"Greg Cady"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Robert Woods",to:"Aaron Fay"}],drops:[{player:"Jerry Jeudy",from:"Aaron Fay"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"DeMario Douglas",to:"Tyler Goslinga"}],drops:[],picks:[]},
+    {week:10,type:"free_agent",managers:["Tyler Goslinga"],adds:[],drops:[{player:"Ty Chandler",from:"Tyler Goslinga"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Miami Dolphins",to:"Ross Van Groningen"}],drops:[],picks:[]},
+    {week:10,type:"free_agent",managers:["Aaron Fay"],adds:[],drops:[{player:"Jake Elliott",from:"Aaron Fay"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Demarcus Robinson",to:"Greg Mulder"}],drops:[{player:"Keon Coleman",from:"Greg Mulder"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Blake Grupe",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:10,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Noah Brown",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:10,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Cameron Dicker",to:"Steve Vander Molen"}],drops:[{player:"Jason Myers",from:"Steve Vander Molen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Jonnu Smith",to:"Greg Mulder"}],drops:[{player:"Pat Freiermuth",from:"Greg Mulder"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Cam Akers",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:10,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Russell Wilson",from:"Matthew Van Groningen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Rashid Shaheed",from:"Matthew Van Groningen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Khalil Herbert",to:"Matthew Van Groningen"}],drops:[{player:"Zack Moss",from:"Matthew Van Groningen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Pat Freiermuth",to:"Greg Mulder"}],drops:[{player:"Baltimore Ravens",from:"Greg Mulder"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Tua Tagovailoa",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:10,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Cincinnati Bengals",from:"Vance Sipma"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Quentin Johnston",to:"Eric Graef"}],drops:[{player:"Detroit Lions",from:"Eric Graef"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Los Angeles Rams",to:"Greg Cady"}],drops:[{player:"Houston Texans",from:"Greg Cady"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Jauan Jennings",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:10,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Christian Watson",from:"Greg Cady"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Diontae Johnson",from:"Greg Cady"}],picks:[]},
+    {week:10,type:"free_agent",managers:["James Lazette"],adds:[{player:"Atlanta Falcons",to:"James Lazette"}],drops:[{player:"Tennessee Titans",from:"James Lazette"}],picks:[]},
+    {week:11,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Tampa Bay Buccaneers",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:11,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Chicago Bears",from:"Trey Hugen"}],picks:[]},
+    {week:11,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Jared Goff",to:"Aaron Fay"}],drops:[{player:"Kirk Cousins",from:"Aaron Fay"}],picks:[]},
+    {week:11,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Will Dissly",to:"Aaron Fay"}],drops:[{player:"Mike Gesicki",from:"Aaron Fay"}],picks:[]},
+    {week:11,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Nick Westbrook-Ikhine",to:"Aaron Fay"}],drops:[{player:"Sterling Shepard",from:"Aaron Fay"}],picks:[]},
+    {week:11,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Ameer Abdullah",to:"Joshua Van Groningen"}],drops:[{player:"Geno Smith",from:"Joshua Van Groningen"}],picks:[]},
+    {week:11,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Philadelphia Eagles",to:"Greg Mulder"}],drops:[{player:"Trey Benson",from:"Greg Mulder"}],picks:[]},
+    {week:11,type:"waiver",managers:["Greg Cady"],adds:[{player:"Cincinnati Bengals",to:"Greg Cady"}],drops:[{player:"Los Angeles Rams",from:"Greg Cady"}],picks:[]},
+    {week:11,type:"waiver",managers:["Greg Cady"],adds:[{player:"Jason Sanders",to:"Greg Cady"}],drops:[{player:"Evan McPherson",from:"Greg Cady"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Jonnu Smith",to:"Vance Sipma"}],drops:[{player:"Justice Hill",from:"Vance Sipma"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Bo Nix",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:11,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Russell Wilson",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:11,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Allen Lazard",from:"Eric Graef"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Anthony Richardson",to:"Trey Hugen"}],drops:[{player:"Devin Singletary",from:"Trey Hugen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Michael Pittman",to:"Greg Mulder"}],drops:[{player:"Roschon Johnson",from:"Greg Mulder"}],picks:[]},
+    {week:11,type:"trade",managers:["Aaron Fay","James Lazette"],adds:[{player:"Amon-Ra St. Brown",to:"Aaron Fay"},{player:"Nico Collins",to:"James Lazette"}],drops:[{player:"Amon-Ra St. Brown",from:"James Lazette"},{player:"Nico Collins",from:"Aaron Fay"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Jake Elliott",to:"Greg Mulder"}],drops:[{player:"Harrison Butker",from:"Greg Mulder"}],picks:[]},
+    {week:11,type:"trade",managers:["Greg Mulder","Ross Van Groningen"],adds:[{player:"Rhamondre Stevenson",to:"Greg Mulder"},{player:"Jaxon Smith-Njigba",to:"Ross Van Groningen"}],drops:[{player:"Rhamondre Stevenson",from:"Ross Van Groningen"},{player:"Jaxon Smith-Njigba",from:"Greg Mulder"}],picks:[]},
+    {week:11,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Hunter Henry",to:"Matthew Van Groningen"}],drops:[{player:"Tre Tucker",from:"Matthew Van Groningen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"John Metchie",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:11,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Austin Seibert",from:"Matthew Van Groningen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Khalil Herbert",from:"Matthew Van Groningen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Trey Benson",to:"Greg Mulder"}],drops:[{player:"Jonnu Smith",from:"Greg Mulder"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Marquez Valdes-Scantling",to:"Greg Cady"}],drops:[{player:"Jared Goff",from:"Greg Cady"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Rashod Bateman",to:"Greg Cady"}],drops:[{player:"Michael Pittman",from:"Greg Cady"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Hunter Henry",from:"Greg Cady"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Christian Watson",to:"Aaron Fay"}],drops:[{player:"Marquez Valdes-Scantling",from:"Aaron Fay"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Marquez Valdes-Scantling",to:"Aaron Fay"}],drops:[{player:"Robert Woods",from:"Aaron Fay"}],picks:[]},
+    {week:11,type:"free_agent",managers:["James Lazette"],adds:[{player:"Green Bay Packers",to:"James Lazette"}],drops:[{player:"Atlanta Falcons",from:"James Lazette"}],picks:[]},
+    {week:12,type:"waiver",managers:["Eric Graef"],adds:[{player:"Justice Hill",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:12,type:"waiver",managers:["Greg Cady"],adds:[{player:"Cincinnati Bengals",to:"Greg Cady"}],drops:[{player:"Quentin Johnston",from:"Greg Cady"}],picks:[]},
+    {week:12,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Dallas Cowboys",to:"Joshua Van Groningen"}],drops:[{player:"Austin Seibert",from:"Joshua Van Groningen"}],picks:[]},
+    {week:12,type:"waiver",managers:["Greg Cady"],adds:[{player:"Jonnu Smith",to:"Greg Cady"}],drops:[{player:"Trey Benson",from:"Greg Cady"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Wil Lutz",to:"Vance Sipma"}],drops:[{player:"Jonnu Smith",from:"Vance Sipma"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Ameer Abdullah",to:"Trey Hugen"}],drops:[{player:"Anthony Richardson",from:"Trey Hugen"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Quentin Johnston",to:"Greg Cady"}],drops:[{player:"Noah Brown",from:"Greg Cady"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Roschon Johnson",to:"Tyler Goslinga"}],drops:[],picks:[]},
+    {week:12,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Trey Benson",to:"Greg Cady"}],drops:[{player:"Rashod Bateman",from:"Greg Cady"}],picks:[]},
+    {week:12,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Green Bay Packers",from:"James Lazette"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Seattle Seahawks",to:"Eric Graef"}],drops:[{player:"Quentin Johnston",from:"Eric Graef"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Austin Seibert",to:"Joshua Van Groningen"}],drops:[{player:"Ameer Abdullah",from:"Joshua Van Groningen"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Russell Wilson",from:"Eric Graef"}],picks:[]},
+    {week:12,type:"waiver",managers:["Greg Cady"],adds:[{player:"DeMario Douglas",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:12,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Keon Coleman",to:"Greg Cady"}],drops:[{player:"Cincinnati Bengals",from:"Greg Cady"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Jason Myers",to:"Matthew Van Groningen"}],drops:[{player:"Blake Grupe",from:"Matthew Van Groningen"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Cleveland Browns",to:"Tyler Goslinga"}],drops:[],picks:[]},
+    {week:12,type:"free_agent",managers:["Tyler Goslinga"],adds:[],drops:[{player:"DeMario Douglas",from:"Tyler Goslinga"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Tyler Goslinga"],adds:[],drops:[{player:"Jalen McMillan",from:"Tyler Goslinga"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Chase McLaughlin",to:"Trey Hugen"}],drops:[{player:"Younghoe Koo",from:"Trey Hugen"}],picks:[]},
+    {week:13,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Arizona Cardinals",to:"Trey Hugen"}],drops:[{player:"Tampa Bay Buccaneers",from:"Trey Hugen"}],picks:[]},
+    {week:13,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Kendre Miller",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:13,type:"waiver",managers:["Greg Cady"],adds:[{player:"Trey Benson",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:13,type:"waiver",managers:["James Lazette"],adds:[{player:"Devin Singletary",to:"James Lazette"}],drops:[],picks:[]},
+    {week:13,type:"waiver",managers:["James Lazette"],adds:[{player:"Noah Gray",to:"James Lazette"}],drops:[],picks:[]},
+    {week:13,type:"waiver",managers:["James Lazette"],adds:[{player:"New Orleans Saints",to:"James Lazette"}],drops:[],picks:[]},
+    {week:13,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Devaughn Vele",from:"James Lazette"}],picks:[]},
+    {week:13,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Justin Herbert",from:"James Lazette"}],picks:[]},
+    {week:13,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Isaac Guerendo",to:"Vance Sipma"}],drops:[{player:"Tyjae Spears",from:"Vance Sipma"}],picks:[]},
+    {week:13,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Adam Thielen",to:"Joshua Van Groningen"}],drops:[{player:"Zane Gonzalez",from:"Joshua Van Groningen"}],picks:[]},
+    {week:13,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Patrick Taylor",to:"Trey Hugen"}],drops:[{player:"Tank Bigsby",from:"Trey Hugen"}],picks:[]},
+    {week:13,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Russell Wilson",to:"Ross Van Groningen"}],drops:[{player:"Audric Estime",from:"Ross Van Groningen"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Pat Freiermuth",to:"Trey Hugen"}],drops:[{player:"Bo Nix",from:"Trey Hugen"}],picks:[]},
+    {week:13,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Javonte Williams",to:"Vance Sipma"}],drops:[{player:"Wil Lutz",from:"Vance Sipma"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Mulder"],adds:[],drops:[{player:"Javonte Williams",from:"Greg Mulder"}],picks:[]},
+    {week:13,type:"free_agent",managers:["James Lazette"],adds:[{player:"Ameer Abdullah",to:"James Lazette"}],drops:[{player:"Adam Thielen",from:"James Lazette"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Kirk Cousins",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:13,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Zane Gonzalez",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:13,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Rashod Bateman",to:"Joshua Van Groningen"}],drops:[{player:"Elijah Moore",from:"Joshua Van Groningen"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"DeMario Douglas",from:"Greg Cady"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Younghoe Koo",to:"Greg Mulder"}],drops:[{player:"Jake Elliott",from:"Greg Mulder"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Ameer Abdullah",from:"Trey Hugen"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Kenneth Gainwell",to:"Eric Graef"}],drops:[{player:"Cedric Tillman",from:"Eric Graef"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Los Angeles Chargers",from:"Eric Graef"}],picks:[]},
+    {week:13,type:"free_agent",managers:["James Lazette"],adds:[{player:"Devaughn Vele",to:"James Lazette"}],drops:[{player:"Ricky Pearsall",from:"James Lazette"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Pat Freiermuth",from:"Trey Hugen"}],picks:[]},
+    {week:14,type:"waiver",managers:["Eric Graef"],adds:[{player:"Ray-Ray McCloud",to:"Eric Graef"}],drops:[{player:"Kenneth Gainwell",from:"Eric Graef"}],picks:[]},
+    {week:14,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Washington Commanders",to:"Joshua Van Groningen"}],drops:[{player:"Israel Abanikanda",from:"Joshua Van Groningen"}],picks:[]},
+    {week:14,type:"waiver",managers:["Eric Graef"],adds:[{player:"Los Angeles Chargers",to:"Eric Graef"}],drops:[{player:"Kirk Cousins",from:"Eric Graef"}],picks:[]},
+    {week:14,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Tank Bigsby",to:"Vance Sipma"}],drops:[{player:"Jonathon Brooks",from:"Vance Sipma"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"David Moore",to:"Steve Vander Molen"}],drops:[{player:"Trey Sermon",from:"Steve Vander Molen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Sincere McCormick",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:14,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Rashod Bateman",from:"Joshua Van Groningen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Travis Homer",to:"Tyler Goslinga"}],drops:[{player:"Roschon Johnson",from:"Tyler Goslinga"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Harrison Butker",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:14,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Matthew Wright",to:"Greg Mulder"}],drops:[{player:"Younghoe Koo",from:"Greg Mulder"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Baltimore Ravens",to:"Greg Cady"}],drops:[{player:"Dallas Goedert",from:"Greg Cady"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Tampa Bay Buccaneers",to:"Greg Cady"}],drops:[{player:"Cincinnati Bengals",from:"Greg Cady"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Tennessee Titans",to:"Steve Vander Molen"}],drops:[{player:"Washington Commanders",from:"Steve Vander Molen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Daniel Carlson",to:"Ross Van Groningen"}],drops:[{player:"Evan McPherson",from:"Ross Van Groningen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Parker Washington",to:"Matthew Van Groningen"}],drops:[{player:"Cam Akers",from:"Matthew Van Groningen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Geno Smith",to:"Matthew Van Groningen"}],drops:[{player:"John Metchie",from:"Matthew Van Groningen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Houston Texans",from:"Greg Cady"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Jake Elliott",to:"Tyler Goslinga"}],drops:[{player:"Taysom Hill",from:"Tyler Goslinga"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Atlanta Falcons",to:"Ross Van Groningen"}],drops:[{player:"Miami Dolphins",from:"Ross Van Groningen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Evan McPherson",to:"Ross Van Groningen"}],drops:[{player:"Kareem Hunt",from:"Ross Van Groningen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Israel Abanikanda",to:"Joshua Van Groningen"}],drops:[{player:"Zamir White",from:"Joshua Van Groningen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["James Lazette"],adds:[{player:"Quentin Johnston",to:"James Lazette"}],drops:[{player:"Wan'Dale Robinson",from:"James Lazette"}],picks:[]},
+    {week:15,type:"waiver",managers:["Greg Cady"],adds:[{player:"Ty Johnson",to:"Greg Cady"}],drops:[{player:"Trey Benson",from:"Greg Cady"}],picks:[]},
+    {week:15,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Kendre Miller",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:15,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Sincere McCormick",from:"Joshua Van Groningen"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Javonte Williams",from:"Vance Sipma"}],picks:[]},
+    {week:15,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Green Bay Packers",to:"Greg Mulder"}],drops:[{player:"Philadelphia Eagles",from:"Greg Mulder"}],picks:[]},
+    {week:15,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Wil Lutz",to:"Matthew Van Groningen"}],drops:[{player:"Jason Myers",from:"Matthew Van Groningen"}],picks:[]},
+    {week:15,type:"waiver",managers:["Eric Graef"],adds:[{player:"Jalen McMillan",to:"Eric Graef"}],drops:[{player:"Elijah Moore",from:"Eric Graef"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Devaughn Vele",to:"Tyler Goslinga"}],drops:[{player:"Jake Elliott",from:"Tyler Goslinga"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Atlanta Falcons",to:"Aaron Fay"}],drops:[{player:"Detroit Lions",from:"Aaron Fay"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Isaiah Davis",from:"Joshua Van Groningen"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Elijah Moore",to:"Eric Graef"}],drops:[{player:"Evan Engram",from:"Eric Graef"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Tyjae Spears",to:"Trey Hugen"}],drops:[{player:"Kendre Miller",from:"Trey Hugen"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Brenton Strange",to:"Aaron Fay"}],drops:[{player:"Will Dissly",from:"Aaron Fay"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Greg Mulder"],adds:[],drops:[{player:"Matthew Wright",from:"Greg Mulder"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Kenneth Gainwell",to:"Greg Cady"}],drops:[{player:"Marquez Valdes-Scantling",from:"Greg Cady"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Houston Texans",to:"Ross Van Groningen"}],drops:[{player:"Atlanta Falcons",from:"Ross Van Groningen"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Justin Herbert",to:"Ross Van Groningen"}],drops:[{player:"Daniel Carlson",from:"Ross Van Groningen"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Isaiah Davis",to:"Joshua Van Groningen"}],drops:[{player:"Dallas Cowboys",from:"Joshua Van Groningen"}],picks:[]},
+    {week:16,type:"waiver",managers:["Greg Cady"],adds:[{player:"Miami Dolphins",to:"Greg Cady"}],drops:[{player:"Tampa Bay Buccaneers",from:"Greg Cady"}],picks:[]},
+    {week:16,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Jason Sanders",to:"Joshua Van Groningen"}],drops:[{player:"Jake Moody",from:"Joshua Van Groningen"}],picks:[]},
+    {week:16,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Henry Ruggs",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:16,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Antonio Brown",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:16,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Tom Brady",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:16,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Cincinnati Bengals",from:"Joshua Van Groningen"}],picks:[]},
+    {week:16,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Bo Nix",to:"Greg Mulder"}],drops:[{player:"Green Bay Packers",from:"Greg Mulder"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Kendre Miller",from:"Joshua Van Groningen"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Jake Elliott",to:"Greg Cady"}],drops:[{player:"Brandon McManus",from:"Greg Cady"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Brandon McManus",to:"Greg Cady"}],drops:[{player:"Jason Sanders",from:"Greg Cady"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Marquise Brown",to:"Matthew Van Groningen"}],drops:[{player:"Nick Chubb",from:"Matthew Van Groningen"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Javonte Williams",to:"Greg Cady"}],drops:[{player:"Baltimore Ravens",from:"Greg Cady"}],picks:[]},
+    {week:16,type:"free_agent",managers:["James Lazette"],adds:[{player:"Kareem Hunt",to:"James Lazette"}],drops:[{player:"Devin Singletary",from:"James Lazette"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Indianapolis Colts",to:"Vance Sipma"}],drops:[{player:"Darnell Mooney",from:"Vance Sipma"}],picks:[]},
+    {week:16,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Philadelphia Eagles",to:"Joshua Van Groningen"}],drops:[{player:"San Francisco 49ers",from:"Joshua Van Groningen"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Cincinnati Bengals",to:"Joshua Van Groningen"}],drops:[{player:"Washington Commanders",from:"Joshua Van Groningen"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Raheem Blackshear",to:"Greg Mulder"}],drops:[{player:"Chuba Hubbard",from:"Greg Mulder"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Ray-Ray McCloud",from:"Eric Graef"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Kimani Vidal",to:"Greg Cady"}],drops:[{player:"Kenneth Gainwell",from:"Greg Cady"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Antonio Gibson",to:"Eric Graef"}],drops:[{player:"Seattle Seahawks",from:"Eric Graef"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Michael Carter",to:"Greg Cady"}],drops:[{player:"Keon Coleman",from:"Greg Cady"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Darnell Mooney",to:"Steve Vander Molen"}],drops:[{player:"David Moore",from:"Steve Vander Molen"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Las Vegas Raiders",to:"Steve Vander Molen"}],drops:[{player:"Tennessee Titans",from:"Steve Vander Molen"}],picks:[]},
+  ],
+  2025: [
+    {week:1,type:"waiver",managers:["Greg Cady"],adds:[{player:"Michael Penix",to:"Greg Cady"}],drops:[{player:"C.J. Stroud",from:"Greg Cady"}],picks:[]},
+    {week:1,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Hunter Henry",to:"Ross Van Groningen"}],drops:[{player:"New York Jets",from:"Ross Van Groningen"}],picks:[]},
+    {week:1,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Quentin Johnston",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:1,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Tyjae Spears",from:"Trey Hugen"}],picks:[]},
+    {week:1,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Harold Fannin",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:1,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Daniel Jones",to:"Joshua Van Groningen"}],drops:[{player:"Darnell Mooney",from:"Joshua Van Groningen"}],picks:[]},
+    {week:1,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Dallas Cowboys",to:"Joshua Van Groningen"}],drops:[{player:"Washington Commanders",from:"Joshua Van Groningen"}],picks:[]},
+    {week:1,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Marquise Brown",to:"Steve Vander Molen"}],drops:[{player:"Kyle Williams",from:"Steve Vander Molen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Isaac Guerendo",to:"Steve Vander Molen"}],drops:[],picks:[]},
+    {week:1,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"New England Patriots",to:"Steve Vander Molen"}],drops:[{player:"Dalton Kincaid",from:"Steve Vander Molen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"New York Jets",to:"Ross Van Groningen"}],drops:[{player:"Justice Hill",from:"Ross Van Groningen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"San Francisco 49ers",to:"Greg Mulder"}],drops:[{player:"Green Bay Packers",from:"Greg Mulder"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Buffalo Bills",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:1,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Tyjae Spears",to:"Trey Hugen"}],drops:[{player:"San Francisco 49ers",from:"Trey Hugen"}],picks:[]},
+    {week:1,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Houston Texans",to:"Ross Van Groningen"}],drops:[{player:"Seattle Seahawks",from:"Ross Van Groningen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Justice Hill",to:"Ross Van Groningen"}],drops:[],picks:[]},
+    {week:1,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Arizona Cardinals",to:"Matthew Van Groningen"}],drops:[{player:"Houston Texans",from:"Matthew Van Groningen"}],picks:[]},
+    {week:1,type:"free_agent",managers:["James Lazette"],adds:[{player:"Matt Gay",to:"James Lazette"}],drops:[],picks:[]},
+    {week:2,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Dalton Kincaid",to:"Ross Van Groningen"}],drops:[{player:"Hunter Henry",from:"Ross Van Groningen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Eric Graef"],adds:[{player:"Juwan Johnson",to:"Eric Graef"}],drops:[{player:"Ray Davis",from:"Eric Graef"}],picks:[]},
+    {week:2,type:"waiver",managers:["Eric Graef"],adds:[{player:"Wan'Dale Robinson",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:2,type:"waiver",managers:["Greg Cady"],adds:[{player:"Blake Corum",to:"Greg Cady"}],drops:[{player:"Ty Johnson",from:"Greg Cady"}],picks:[]},
+    {week:2,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Russell Wilson",to:"Trey Hugen"}],drops:[],picks:[]},
+    {week:2,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Troy Franklin",to:"Joshua Van Groningen"}],drops:[{player:"Kayshon Boutte",from:"Joshua Van Groningen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Jake Browning",to:"Steve Vander Molen"}],drops:[{player:"J.J. McCarthy",from:"Steve Vander Molen"}],picks:[]},
+    {week:2,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Elic Ayomanor",to:"Matthew Van Groningen"}],drops:[{player:"Justin Fields",from:"Matthew Van Groningen"}],picks:[]},
+    {week:2,type:"waiver",managers:["James Lazette"],adds:[{player:"Green Bay Packers",to:"James Lazette"}],drops:[{player:"Dont'e Thornton",from:"James Lazette"}],picks:[]},
+    {week:2,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Seattle Seahawks",to:"Aaron Fay"}],drops:[{player:"Los Angeles Rams",from:"Aaron Fay"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Jauan Jennings",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:2,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Tyler Loop",to:"Greg Cady"}],drops:[{player:"Wil Lutz",from:"Greg Cady"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Matt Prater",to:"Steve Vander Molen"}],drops:[{player:"Younghoe Koo",from:"Steve Vander Molen"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Michael Mayer",to:"Greg Mulder"}],drops:[{player:"Will Shipley",from:"Greg Mulder"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Marvin Mims",from:"Trey Hugen"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Ty Johnson",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:2,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Tyjae Spears",to:"Greg Cady"}],drops:[{player:"Blake Corum",from:"Greg Cady"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Zach Ertz",to:"Greg Cady"}],drops:[{player:"Jake Ferguson",from:"Greg Cady"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Kayshon Boutte",to:"Joshua Van Groningen"}],drops:[{player:"Jauan Jennings",from:"Joshua Van Groningen"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"DJ Giddens",to:"Vance Sipma"}],drops:[{player:"Woody Marks",from:"Vance Sipma"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Detroit Lions",to:"Steve Vander Molen"}],drops:[{player:"New England Patriots",from:"Steve Vander Molen"}],picks:[]},
+    {week:2,type:"free_agent",managers:["Steve Vander Molen"],adds:[],drops:[{player:"Isaac Guerendo",from:"Steve Vander Molen"}],picks:[]},
+    {week:3,type:"waiver",managers:["Eric Graef"],adds:[{player:"Detroit Lions",to:"Eric Graef"}],drops:[{player:"Najee Harris",from:"Eric Graef"}],picks:[]},
+    {week:3,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Rico Dowdle",to:"Ross Van Groningen"}],drops:[{player:"Jaydon Blue",from:"Ross Van Groningen"}],picks:[]},
+    {week:3,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Justin Fields",to:"Trey Hugen"}],drops:[{player:"Russell Wilson",from:"Trey Hugen"}],picks:[]},
+    {week:3,type:"waiver",managers:["James Lazette"],adds:[{player:"Tory Horton",to:"James Lazette"}],drops:[{player:"Green Bay Packers",from:"James Lazette"}],picks:[]},
+    {week:3,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Chris Rodriguez",to:"Steve Vander Molen"}],drops:[{player:"Romeo Doubs",from:"Steve Vander Molen"}],picks:[]},
+    {week:3,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Aaron Rodgers",to:"Steve Vander Molen"}],drops:[{player:"Jake Browning",from:"Steve Vander Molen"}],picks:[]},
+    {week:3,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Tre Tucker",to:"Tyler Goslinga"}],drops:[{player:"Colston Loveland",from:"Tyler Goslinga"}],picks:[]},
+    {week:3,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Hunter Henry",to:"Matthew Van Groningen"}],drops:[{player:"Tyrone Tracy",from:"Matthew Van Groningen"}],picks:[]},
+    {week:3,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Spencer Shrader",to:"Matthew Van Groningen"}],drops:[{player:"Daniel Carlson",from:"Matthew Van Groningen"}],picks:[]},
+    {week:3,type:"waiver",managers:["Greg Cady"],adds:[{player:"Matthew Stafford",to:"Greg Cady"}],drops:[{player:"Michael Penix",from:"Greg Cady"}],picks:[]},
+    {week:3,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"New England Patriots",to:"Joshua Van Groningen"}],drops:[{player:"Atlanta Falcons",from:"Joshua Van Groningen"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Chris Boswell",to:"Greg Mulder"}],drops:[{player:"Chase McLaughlin",from:"Greg Mulder"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Darnell Mooney",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:3,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Woody Marks",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:3,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Isaiah Likely",to:"Vance Sipma"}],drops:[{player:"Rico Dowdle",from:"Vance Sipma"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Greg Mulder"],adds:[],drops:[{player:"Michael Mayer",from:"Greg Mulder"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Noah Fant",to:"Aaron Fay"}],drops:[{player:"Austin Ekeler",from:"Aaron Fay"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Ja'Tavion Sanders",to:"Vance Sipma"}],drops:[{player:"DJ Giddens",from:"Vance Sipma"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Tampa Bay Buccaneers",to:"Steve Vander Molen"}],drops:[{player:"Detroit Lions",from:"Steve Vander Molen"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Jake Ferguson",to:"Steve Vander Molen"}],drops:[{player:"Luther Burden",from:"Steve Vander Molen"}],picks:[]},
+    {week:3,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Romeo Doubs",to:"Steve Vander Molen"}],drops:[],picks:[]},
+    {week:3,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Atlanta Falcons",to:"Joshua Van Groningen"}],drops:[{player:"Dallas Cowboys",from:"Joshua Van Groningen"}],picks:[]},
+    {week:4,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Darius Slayton",to:"Joshua Van Groningen"}],drops:[{player:"Luther Burden",from:"Joshua Van Groningen"}],picks:[]},
+    {week:4,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Kendre Miller",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:4,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Malik Nabers",from:"Joshua Van Groningen"}],picks:[]},
+    {week:4,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Justice Hill",to:"Aaron Fay"}],drops:[{player:"Nick Chubb",from:"Aaron Fay"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Tyreek Hill",from:"Eric Graef"}],picks:[]},
+    {week:4,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Jaxson Dart",to:"Steve Vander Molen"}],drops:[{player:"Christian Kirk",from:"Steve Vander Molen"}],picks:[]},
+    {week:4,type:"waiver",managers:["James Lazette"],adds:[{player:"Darren Waller",to:"James Lazette"}],drops:[{player:"Braelon Allen",from:"James Lazette"}],picks:[]},
+    {week:4,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Arizona Cardinals",to:"Vance Sipma"}],drops:[{player:"Jerome Ford",from:"Vance Sipma"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Romeo Doubs",to:"Greg Cady"}],drops:[{player:"Cedric Tillman",from:"Greg Cady"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Green Bay Packers",to:"Greg Mulder"}],drops:[{player:"San Francisco 49ers",from:"Greg Mulder"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Greg Mulder"],adds:[],drops:[{player:"Tank Bigsby",from:"Greg Mulder"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Ja'Tavion Sanders",from:"Vance Sipma"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Kenneth Gainwell",to:"Greg Cady"}],drops:[{player:"Isaac TeSlaa",from:"Greg Cady"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Indianapolis Colts",to:"Steve Vander Molen"}],drops:[{player:"Miami Dolphins",from:"Steve Vander Molen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Miami Dolphins",to:"Steve Vander Molen"}],drops:[{player:"Green Bay Packers",from:"Steve Vander Molen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Carson Wentz",to:"Steve Vander Molen"}],drops:[{player:"Aaron Rodgers",from:"Steve Vander Molen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Luther Burden",to:"Joshua Van Groningen"}],drops:[{player:"Dylan Sampson",from:"Joshua Van Groningen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Los Angeles Rams",to:"Aaron Fay"}],drops:[{player:"Seattle Seahawks",from:"Aaron Fay"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Brenton Strange",to:"Aaron Fay"}],drops:[{player:"Noah Fant",from:"Aaron Fay"}],picks:[]},
+    {week:4,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Green Bay Packers",to:"Steve Vander Molen"}],drops:[{player:"Tampa Bay Buccaneers",from:"Steve Vander Molen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Miles Sanders",to:"Ross Van Groningen"}],drops:[],picks:[]},
+    {week:4,type:"free_agent",managers:["Ross Van Groningen"],adds:[],drops:[{player:"James Conner",from:"Ross Van Groningen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Joey Slye",to:"Ross Van Groningen"}],drops:[{player:"Evan McPherson",from:"Ross Van Groningen"}],picks:[]},
+    {week:4,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Tyrone Tracy",to:"Ross Van Groningen"}],drops:[{player:"Evan Engram",from:"Ross Van Groningen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Los Angeles Chargers",to:"Matthew Van Groningen"}],drops:[{player:"Arizona Cardinals",from:"Matthew Van Groningen"}],picks:[]},
+    {week:5,type:"waiver",managers:["Greg Cady"],adds:[{player:"AJ Dillon",to:"Greg Cady"}],drops:[{player:"Zach Ertz",from:"Greg Cady"}],picks:[]},
+    {week:5,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Eddy Pineiro",to:"Ross Van Groningen"}],drops:[{player:"Joshua Karty",from:"Ross Van Groningen"}],picks:[]},
+    {week:5,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Hassan Haskins",to:"Ross Van Groningen"}],drops:[{player:"Emari Demercado",from:"Ross Van Groningen"}],picks:[]},
+    {week:5,type:"waiver",managers:["Trey Hugen"],adds:[{player:"AJ Barner",to:"Trey Hugen"}],drops:[{player:"T.J. Hockenson",from:"Trey Hugen"}],picks:[]},
+    {week:5,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Kimani Vidal",to:"Trey Hugen"}],drops:[{player:"DJ Giddens",from:"Trey Hugen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Spencer Shrader",from:"Matthew Van Groningen"}],picks:[]},
+    {week:5,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Trevor Lawrence",to:"Steve Vander Molen"}],drops:[{player:"Carson Wentz",from:"Steve Vander Molen"}],picks:[]},
+    {week:5,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Kenneth Gainwell",to:"Aaron Fay"}],drops:[{player:"Brian Robinson",from:"Aaron Fay"}],picks:[]},
+    {week:5,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Joey Slye",to:"Joshua Van Groningen"}],drops:[{player:"Darius Slayton",from:"Joshua Van Groningen"}],picks:[]},
+    {week:5,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"New England Patriots",to:"Joshua Van Groningen"}],drops:[{player:"Kansas City Chiefs",from:"Joshua Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Mason Taylor",to:"Vance Sipma"}],drops:[{player:"Isaiah Likely",from:"Vance Sipma"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Kenneth Gainwell",from:"Greg Cady"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Las Vegas Raiders",to:"Greg Cady"}],drops:[{player:"Romeo Doubs",from:"Greg Cady"}],picks:[]},
+    {week:5,type:"waiver",managers:["Greg Cady"],adds:[{player:"Jason Myers",to:"Greg Cady"}],drops:[{player:"Tyler Loop",from:"Greg Cady"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Rico Dowdle",to:"Ross Van Groningen"}],drops:[{player:"Tyrone Tracy",from:"Ross Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Nick Chubb",to:"Greg Mulder"}],drops:[{player:"Darnell Mooney",from:"Greg Mulder"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Joshua Karty",to:"Ross Van Groningen"}],drops:[{player:"Jason Myers",from:"Ross Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Ross Van Groningen"],adds:[],drops:[{player:"Jayden Higgins",from:"Ross Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"DJ Giddens",to:"Trey Hugen"}],drops:[{player:"Aaron Jones",from:"Trey Hugen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Ross Van Groningen"],adds:[],drops:[{player:"Miles Sanders",from:"Ross Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Zavier Scott",to:"Tyler Goslinga"}],drops:[],picks:[]},
+    {week:5,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Dillon Gabriel",to:"Tyler Goslinga"}],drops:[],picks:[]},
+    {week:5,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Sean Tucker",to:"Tyler Goslinga"}],drops:[],picks:[]},
+    {week:5,type:"trade",managers:["Tyler Goslinga","Trey Hugen","Ross Van Groningen"],adds:[{player:"Rome Odunze",to:"Ross Van Groningen"},{player:"Quinshon Judkins",to:"Trey Hugen"},{player:"Derrick Henry",to:"Tyler Goslinga"},{player:"Jaylen Waddle",to:"Tyler Goslinga"},{player:"Chuba Hubbard",to:"Ross Van Groningen"},{player:"Jaylen Warren",to:"Ross Van Groningen"}],drops:[{player:"Rome Odunze",from:"Tyler Goslinga"},{player:"Quinshon Judkins",from:"Tyler Goslinga"},{player:"Derrick Henry",from:"Ross Van Groningen"},{player:"Jaylen Waddle",from:"Trey Hugen"},{player:"Chuba Hubbard",from:"Tyler Goslinga"},{player:"Jaylen Warren",from:"Tyler Goslinga"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Michael Carter",to:"Ross Van Groningen"}],drops:[],picks:[]},
+    {week:5,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Emari Demercado",to:"Ross Van Groningen"}],drops:[{player:"Rico Dowdle",from:"Ross Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Kansas City Chiefs",to:"Joshua Van Groningen"}],drops:[{player:"New England Patriots",from:"Joshua Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Spencer Rattler",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:5,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Jason Myers",to:"Ross Van Groningen"}],drops:[{player:"Joey Slye",from:"Ross Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Ross Van Groningen"],adds:[],drops:[{player:"Joe Mixon",from:"Ross Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Cleveland Browns",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:5,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Chase McLaughlin",to:"Greg Mulder"}],drops:[{player:"Chris Boswell",from:"Greg Mulder"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Seattle Seahawks",to:"Matthew Van Groningen"}],drops:[{player:"Los Angeles Chargers",from:"Matthew Van Groningen"}],picks:[]},
+    {week:5,type:"free_agent",managers:["James Lazette"],adds:[{player:"Isaiah Bond",to:"James Lazette"}],drops:[{player:"Ollie Gordon",from:"James Lazette"}],picks:[]},
+    {week:5,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Malik Washington",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:5,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Jalen Coker",to:"Vance Sipma"}],drops:[{player:"Josh Downs",from:"Vance Sipma"}],picks:[]},
+    {week:6,type:"waiver",managers:["Greg Cady"],adds:[{player:"Josh Downs",to:"Greg Cady"}],drops:[{player:"Las Vegas Raiders",from:"Greg Cady"}],picks:[]},
+    {week:6,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Michael Mayer",to:"Joshua Van Groningen"}],drops:[{player:"Jake Tonges",from:"Joshua Van Groningen"}],picks:[]},
+    {week:6,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Kameron Johnson",to:"Joshua Van Groningen"}],drops:[{player:"Michael Badgley",from:"Joshua Van Groningen"}],picks:[]},
+    {week:6,type:"trade",managers:["James Lazette","Ross Van Groningen"],adds:[{player:"Eddy Pineiro",to:"James Lazette"},{player:"Deebo Samuel",to:"James Lazette"},{player:"Matt Gay",to:"Ross Van Groningen"},{player:"Kyle Pitts",to:"Ross Van Groningen"},{player:"Denver Broncos",to:"Ross Van Groningen"},{player:"Seattle Seahawks",to:"James Lazette"}],drops:[{player:"Eddy Pineiro",from:"Ross Van Groningen"},{player:"Deebo Samuel",from:"Ross Van Groningen"},{player:"Matt Gay",from:"James Lazette"},{player:"Kyle Pitts",from:"James Lazette"},{player:"Denver Broncos",from:"James Lazette"},{player:"Seattle Seahawks",from:"Ross Van Groningen"}],picks:[]},
+    {week:6,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Dalton Kincaid",to:"Ross Van Groningen"}],drops:[{player:"Dawson Knox",from:"Ross Van Groningen"}],picks:[]},
+    {week:6,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Houston Texans",to:"Trey Hugen"}],drops:[{player:"Buffalo Bills",from:"Trey Hugen"}],picks:[]},
+    {week:6,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Romeo Doubs",to:"Greg Mulder"}],drops:[{player:"Jauan Jennings",from:"Greg Mulder"}],picks:[]},
+    {week:6,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Kansas City Chiefs",to:"Steve Vander Molen"}],drops:[{player:"Indianapolis Colts",from:"Steve Vander Molen"}],picks:[]},
+    {week:6,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Aaron Rodgers",to:"Vance Sipma"}],drops:[{player:"Malik Washington",from:"Vance Sipma"}],picks:[]},
+    {week:6,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Chris Boswell",to:"Steve Vander Molen"}],drops:[{player:"Matt Prater",from:"Steve Vander Molen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Dawson Knox",to:"Ross Van Groningen"}],drops:[{player:"Dalton Kincaid",from:"Ross Van Groningen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Ray Davis",to:"Steve Vander Molen"}],drops:[{player:"Chris Rodriguez",from:"Steve Vander Molen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Zonovan Knight",to:"Ross Van Groningen"}],drops:[{player:"Michael Carter",from:"Ross Van Groningen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Seattle Seahawks",to:"Ross Van Groningen"}],drops:[{player:"Houston Texans",from:"Ross Van Groningen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Cade Otton",to:"Aaron Fay"}],drops:[{player:"Brenton Strange",from:"Aaron Fay"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Zach Ertz",to:"Vance Sipma"}],drops:[{player:"Chig Okonkwo",from:"Vance Sipma"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Jake Tonges",to:"Joshua Van Groningen"}],drops:[{player:"Harold Fannin",from:"Joshua Van Groningen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Los Angeles Chargers",to:"Tyler Goslinga"}],drops:[{player:"Baltimore Ravens",from:"Tyler Goslinga"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Tyrone Tracy",to:"Greg Cady"}],drops:[{player:"Brashard Smith",from:"Greg Cady"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Michael Badgley",to:"Joshua Van Groningen"}],drops:[{player:"Joey Slye",from:"Joshua Van Groningen"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Kendrick Bourne",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Mulder"],adds:[],drops:[{player:"Cleveland Browns",from:"Greg Mulder"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Arizona Cardinals",from:"Vance Sipma"}],picks:[]},
+    {week:6,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Brashard Smith",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:6,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Cam Little",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:6,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Jacksonville Jaguars",to:"Matthew Van Groningen"}],drops:[{player:"Seattle Seahawks",from:"Matthew Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Juwan Johnson",from:"Eric Graef"}],picks:[]},
+    {week:7,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Tampa Bay Buccaneers",to:"Ross Van Groningen"}],drops:[{player:"Hassan Haskins",from:"Ross Van Groningen"}],picks:[]},
+    {week:7,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Marvin Mims",to:"Steve Vander Molen"}],drops:[{player:"Luke McCaffrey",from:"Steve Vander Molen"}],picks:[]},
+    {week:7,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Darnell Mooney",to:"Steve Vander Molen"}],drops:[{player:"Trevor Lawrence",from:"Steve Vander Molen"}],picks:[]},
+    {week:7,type:"waiver",managers:["Eric Graef"],adds:[{player:"Michael Badgley",to:"Eric Graef"}],drops:[{player:"Jake Bates",from:"Eric Graef"}],picks:[]},
+    {week:7,type:"waiver",managers:["Eric Graef"],adds:[{player:"Jeremy McNichols",to:"Eric Graef"}],drops:[{player:"Detroit Lions",from:"Eric Graef"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Jayden Reed",from:"Eric Graef"}],picks:[]},
+    {week:7,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Isaiah Davis",to:"Joshua Van Groningen"}],drops:[{player:"Kendre Miller",from:"Joshua Van Groningen"}],picks:[]},
+    {week:7,type:"waiver",managers:["James Lazette"],adds:[{player:"Cincinnati Bengals",to:"James Lazette"}],drops:[{player:"Kyler Murray",from:"James Lazette"}],picks:[]},
+    {week:7,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Will Reichard",to:"Matthew Van Groningen"}],drops:[{player:"Wil Lutz",from:"Matthew Van Groningen"}],picks:[]},
+    {week:7,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Tez Johnson",to:"Matthew Van Groningen"}],drops:[{player:"Keon Coleman",from:"Matthew Van Groningen"}],picks:[]},
+    {week:7,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Brashard Smith",to:"Vance Sipma"}],drops:[{player:"Aaron Rodgers",from:"Vance Sipma"}],picks:[]},
+    {week:7,type:"trade",managers:["Steve Vander Molen","Ross Van Groningen"],adds:[],drops:[],picks:[]},
+    {week:7,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Kyle Monangai",to:"Matthew Van Groningen"}],drops:[{player:"Jordan Whittington",from:"Matthew Van Groningen"}],picks:[]},
+    {week:7,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Oronde Gadsden",to:"Joshua Van Groningen"}],drops:[{player:"Michael Mayer",from:"Joshua Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Buffalo Bills",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:7,type:"free_agent",managers:["James Lazette"],adds:[{player:"Jauan Jennings",to:"James Lazette"}],drops:[{player:"Tory Horton",from:"James Lazette"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Sam Darnold",to:"Steve Vander Molen"}],drops:[{player:"Marquise Brown",from:"Steve Vander Molen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Emanuel Wilson",to:"Steve Vander Molen"}],drops:[{player:"Ray Davis",from:"Steve Vander Molen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Luke McCaffrey",to:"Steve Vander Molen"}],drops:[{player:"Tre' Harris",from:"Steve Vander Molen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Jordan Whittington",to:"Matthew Van Groningen"}],drops:[{player:"David Njoku",from:"Matthew Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Kayshon Boutte",to:"Greg Cady"}],drops:[{player:"Josh Downs",from:"Greg Cady"}],picks:[]},
+    {week:7,type:"waiver",managers:["James Lazette"],adds:[{player:"Chris Godwin",to:"James Lazette"}],drops:[{player:"Jerry Jeudy",from:"James Lazette"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Samaje Perine",to:"Joshua Van Groningen"}],drops:[{player:"Kameron Johnson",from:"Joshua Van Groningen"}],picks:[]},
+    {week:7,type:"trade",managers:["Joshua Van Groningen","Greg Mulder"],adds:[{player:"A.J. Brown",to:"Greg Mulder"},{player:"Javonte Williams",to:"Greg Mulder"},{player:"Drake London",to:"Joshua Van Groningen"},{player:"Chase Brown",to:"Joshua Van Groningen"}],drops:[{player:"A.J. Brown",from:"Joshua Van Groningen"},{player:"Javonte Williams",from:"Joshua Van Groningen"},{player:"Drake London",from:"Greg Mulder"},{player:"Chase Brown",from:"Greg Mulder"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Brian Robinson",to:"Ross Van Groningen"}],drops:[{player:"Zonovan Knight",from:"Ross Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Wil Lutz",to:"Matthew Van Groningen"}],drops:[{player:"Cam Little",from:"Matthew Van Groningen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Chicago Bears",to:"Matthew Van Groningen"}],drops:[{player:"Jacksonville Jaguars",from:"Matthew Van Groningen"}],picks:[]},
+    {week:7,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Indianapolis Colts",to:"Trey Hugen"}],drops:[{player:"Chris Godwin",from:"Trey Hugen"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Carolina Panthers",to:"Tyler Goslinga"}],drops:[{player:"Los Angeles Chargers",from:"Tyler Goslinga"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Tyler Goslinga"],adds:[],drops:[{player:"Zavier Scott",from:"Tyler Goslinga"}],picks:[]},
+    {week:7,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Sterling Shepard",to:"Greg Cady"}],drops:[{player:"AJ Dillon",from:"Greg Cady"}],picks:[]},
+    {week:7,type:"free_agent",managers:["James Lazette"],adds:[{player:"Harold Fannin",to:"James Lazette"}],drops:[{player:"Isaiah Bond",from:"James Lazette"}],picks:[]},
+    {week:8,type:"waiver",managers:["Greg Cady"],adds:[{player:"Baltimore Ravens",to:"Greg Cady"}],drops:[{player:"Minnesota Vikings",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"waiver",managers:["Greg Cady"],adds:[{player:"Tank Bigsby",to:"Greg Cady"}],drops:[{player:"Sterling Shepard",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Zonovan Knight",to:"Greg Mulder"}],drops:[{player:"Buffalo Bills",from:"Greg Mulder"}],picks:[]},
+    {week:8,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Jacksonville Jaguars",to:"Steve Vander Molen"}],drops:[{player:"Kansas City Chiefs",from:"Steve Vander Molen"}],picks:[]},
+    {week:8,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Detroit Lions",to:"Matthew Van Groningen"}],drops:[{player:"Atlanta Falcons",from:"Matthew Van Groningen"}],picks:[]},
+    {week:8,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Jason Myers",to:"Matthew Van Groningen"}],drops:[{player:"Will Reichard",from:"Matthew Van Groningen"}],picks:[]},
+    {week:8,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Tyler Loop",to:"Vance Sipma"}],drops:[{player:"Jake Elliott",from:"Vance Sipma"}],picks:[]},
+    {week:8,type:"waiver",managers:["James Lazette"],adds:[{player:"AJ Barner",to:"James Lazette"}],drops:[{player:"Keon Coleman",from:"James Lazette"}],picks:[]},
+    {week:8,type:"waiver",managers:["James Lazette"],adds:[{player:"Aaron Rodgers",to:"James Lazette"}],drops:[],picks:[]},
+    {week:8,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Cincinnati Bengals",from:"James Lazette"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Matthew Wright",to:"Ross Van Groningen"}],drops:[{player:"Matt Gay",from:"Ross Van Groningen"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Matt Prater",to:"Greg Cady"}],drops:[{player:"Tyler Loop",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"free_agent",managers:["James Lazette"],adds:[{player:"Keon Coleman",to:"James Lazette"}],drops:[],picks:[]},
+    {week:8,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Dalton Schultz",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:8,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Noah Fant",to:"Matthew Van Groningen"}],drops:[{player:"Calvin Ridley",from:"Matthew Van Groningen"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Los Angeles Chargers",to:"Tyler Goslinga"}],drops:[{player:"Carolina Panthers",from:"Tyler Goslinga"}],picks:[]},
+    {week:8,type:"waiver",managers:["Eric Graef"],adds:[{player:"Matthew Stafford",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:8,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Jonnu Smith",to:"Tyler Goslinga"}],drops:[{player:"Tre Tucker",from:"Tyler Goslinga"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Calvin Austin",to:"Tyler Goslinga"}],drops:[{player:"Sean Tucker",from:"Tyler Goslinga"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Chimere Dike",to:"Tyler Goslinga"}],drops:[],picks:[]},
+    {week:8,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Joe Flacco",to:"Trey Hugen"}],drops:[{player:"AJ Barner",from:"Trey Hugen"}],picks:[]},
+    {week:8,type:"free_agent",managers:["James Lazette"],adds:[],drops:[{player:"Darren Waller",from:"James Lazette"}],picks:[]},
+    {week:8,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Chicago Bears",to:"Aaron Fay"}],drops:[{player:"Kenneth Gainwell",from:"Aaron Fay"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Tyler Loop",to:"Greg Cady"}],drops:[{player:"Jason Myers",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Aaron Jones",to:"Greg Cady"}],drops:[{player:"Matthew Stafford",from:"Greg Cady"}],picks:[]},
+    {week:8,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Atlanta Falcons",to:"Matthew Van Groningen"}],drops:[{player:"Chicago Bears",from:"Matthew Van Groningen"}],picks:[]},
+    {week:9,type:"waiver",managers:["Greg Cady"],adds:[{player:"Colston Loveland",to:"Greg Cady"}],drops:[{player:"Tucker Kraft",from:"Greg Cady"}],picks:[]},
+    {week:9,type:"waiver",managers:["Eric Graef"],adds:[{player:"Tampa Bay Buccaneers",to:"Eric Graef"}],drops:[{player:"Washington Commanders",from:"Eric Graef"}],picks:[]},
+    {week:9,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Cleveland Browns",to:"Greg Mulder"}],drops:[{player:"Zonovan Knight",from:"Greg Mulder"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Greg Mulder"],adds:[],drops:[{player:"Joshua Karty",from:"Greg Mulder"}],picks:[]},
+    {week:9,type:"waiver",managers:["James Lazette"],adds:[{player:"Kenneth Gainwell",to:"James Lazette"}],drops:[],picks:[]},
+    {week:9,type:"trade",managers:["James Lazette","Greg Mulder"],adds:[{player:"Alvin Kamara",to:"Greg Mulder"},{player:"Jauan Jennings",to:"Greg Mulder"},{player:"Rashid Shaheed",to:"James Lazette"}],drops:[{player:"Alvin Kamara",from:"James Lazette"},{player:"Jauan Jennings",from:"James Lazette"},{player:"Rashid Shaheed",from:"Greg Mulder"}],picks:[]},
+    {week:9,type:"trade",managers:["Matthew Van Groningen","James Lazette"],adds:[{player:"Jakobi Meyers",to:"Matthew Van Groningen"},{player:"Zach Charbonnet",to:"James Lazette"}],drops:[{player:"Jakobi Meyers",from:"James Lazette"},{player:"Zach Charbonnet",from:"Matthew Van Groningen"}],picks:[]},
+    {week:9,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Alec Pierce",to:"Trey Hugen"}],drops:[{player:"Terry McLaurin",from:"Trey Hugen"}],picks:[]},
+    {week:9,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Cairo Santos",to:"Tyler Goslinga"}],drops:[{player:"Dillon Gabriel",from:"Tyler Goslinga"}],picks:[]},
+    {week:9,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Will Reichard",to:"Trey Hugen"}],drops:[{player:"Indianapolis Colts",from:"Trey Hugen"}],picks:[]},
+    {week:9,type:"waiver",managers:["Trey Hugen"],adds:[{player:"J.J. McCarthy",to:"Trey Hugen"}],drops:[{player:"Jayden Daniels",from:"Trey Hugen"}],picks:[]},
+    {week:9,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Parker Washington",to:"Steve Vander Molen"}],drops:[{player:"Marvin Mims",from:"Steve Vander Molen"}],picks:[]},
+    {week:9,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Buffalo Bills",to:"Vance Sipma"}],drops:[{player:"San Francisco 49ers",from:"Vance Sipma"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Christian Watson",to:"Trey Hugen"}],drops:[{player:"Justin Fields",from:"Trey Hugen"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Dylan Sampson",to:"Trey Hugen"}],drops:[{player:"Joe Flacco",from:"Trey Hugen"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"C.J. Stroud",to:"Ross Van Groningen"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Chicago Bears",to:"Eric Graef"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Josh Downs",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Tre Tucker",to:"Aaron Fay"}],drops:[{player:"Chicago Bears",from:"Aaron Fay"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Devin Singletary",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:9,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Washington Commanders",to:"Eric Graef"}],drops:[{player:"Philadelphia Eagles",from:"Eric Graef"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Ollie Gordon",to:"Eric Graef"}],drops:[{player:"Jeremy McNichols",from:"Eric Graef"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Spencer Rattler",from:"Eric Graef"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Jake Bates",to:"Ross Van Groningen"}],drops:[{player:"Tampa Bay Buccaneers",from:"Ross Van Groningen"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Ross Van Groningen"],adds:[],drops:[{player:"Matthew Wright",from:"Ross Van Groningen"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Joshua Karty",to:"Greg Mulder"}],drops:[{player:"Cam Skattebo",from:"Greg Mulder"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"San Francisco 49ers",to:"Vance Sipma"}],drops:[{player:"Pittsburgh Steelers",from:"Vance Sipma"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Kaleb Johnson",from:"Vance Sipma"}],picks:[]},
+    {week:9,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Kendrick Bourne",from:"Vance Sipma"}],picks:[]},
+    {week:10,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Darren Waller",to:"Ross Van Groningen"}],drops:[{player:"Brock Purdy",from:"Ross Van Groningen"}],picks:[]},
+    {week:10,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Pittsburgh Steelers",to:"Ross Van Groningen"}],drops:[{player:"Marcus Mariota",from:"Ross Van Groningen"}],picks:[]},
+    {week:10,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Sean Tucker",to:"Aaron Fay"}],drops:[],picks:[]},
+    {week:10,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Jerry Jeudy",to:"Tyler Goslinga"}],drops:[{player:"Cairo Santos",from:"Tyler Goslinga"}],picks:[]},
+    {week:10,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Theo Johnson",to:"Trey Hugen"}],drops:[{player:"Christian Watson",from:"Trey Hugen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Tyjae Spears",to:"Vance Sipma"}],drops:[{player:"Brashard Smith",from:"Vance Sipma"}],picks:[]},
+    {week:10,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Atlanta Falcons",to:"Vance Sipma"}],drops:[{player:"Buffalo Bills",from:"Vance Sipma"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Juwan Johnson",to:"Greg Cady"}],drops:[{player:"Tyjae Spears",from:"Greg Cady"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Marcus Mariota",to:"Ross Van Groningen"}],drops:[],picks:[]},
+    {week:10,type:"free_agent",managers:["Ross Van Groningen"],adds:[],drops:[{player:"C.J. Stroud",from:"Ross Van Groningen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Jayden Daniels",to:"Trey Hugen"}],drops:[{player:"Dylan Sampson",from:"Trey Hugen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Chad Ryland",to:"Joshua Van Groningen"}],drops:[{player:"Ray Davis",from:"Joshua Van Groningen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Darius Slayton",to:"Greg Cady"}],drops:[{player:"Kayshon Boutte",from:"Greg Cady"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Luke Musgrave",to:"Matthew Van Groningen"}],drops:[{player:"Noah Fant",from:"Matthew Van Groningen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Eric Graef"],adds:[],drops:[{player:"Ollie Gordon",from:"Eric Graef"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Ray Davis",to:"Joshua Van Groningen"}],drops:[{player:"Isaiah Davis",from:"Joshua Van Groningen"}],picks:[]},
+    {week:10,type:"free_agent",managers:["James Lazette"],adds:[{player:"Rashod Bateman",to:"James Lazette"}],drops:[{player:"Aaron Rodgers",from:"James Lazette"}],picks:[]},
+    {week:10,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Carolina Panthers",to:"Steve Vander Molen"}],drops:[{player:"Jacksonville Jaguars",from:"Steve Vander Molen"}],picks:[]},
+    {week:11,type:"waiver",managers:["Greg Mulder"],adds:[{player:"AJ Barner",to:"Greg Mulder"}],drops:[{player:"Luke Musgrave",from:"Greg Mulder"}],picks:[]},
+    {week:11,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Jayden Higgins",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:11,type:"waiver",managers:["James Lazette"],adds:[{player:"Kayshon Boutte",to:"James Lazette"}],drops:[{player:"Emari Demercado",from:"James Lazette"}],picks:[]},
+    {week:11,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Jake Elliott",to:"Aaron Fay"}],drops:[{player:"Justice Hill",from:"Aaron Fay"}],picks:[]},
+    {week:11,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"San Francisco 49ers",to:"Steve Vander Molen"}],drops:[{player:"Kansas City Chiefs",from:"Steve Vander Molen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Elic Ayomanor",from:"Matthew Van Groningen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Matthew Golden",from:"Matthew Van Groningen"}],picks:[]},
+    {week:11,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Las Vegas Raiders",to:"Trey Hugen"}],drops:[{player:"Jayden Daniels",from:"Trey Hugen"}],picks:[]},
+    {week:11,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Jacoby Brissett",to:"Trey Hugen"}],drops:[{player:"J.J. McCarthy",from:"Trey Hugen"}],picks:[]},
+    {week:11,type:"trade",managers:["Matthew Van Groningen","Greg Mulder"],adds:[{player:"Alvin Kamara",to:"Matthew Van Groningen"},{player:"Dallas Goedert",to:"Matthew Van Groningen"},{player:"Michael Pittman",to:"Matthew Van Groningen"},{player:"Jahmyr Gibbs",to:"Greg Mulder"},{player:"Luke Musgrave",to:"Greg Mulder"}],drops:[{player:"Alvin Kamara",from:"Greg Mulder"},{player:"Dallas Goedert",from:"Greg Mulder"},{player:"Michael Pittman",from:"Greg Mulder"},{player:"Jahmyr Gibbs",from:"Matthew Van Groningen"},{player:"Luke Musgrave",from:"Matthew Van Groningen"}],picks:[]},
+    {week:11,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Darnell Mooney",to:"Joshua Van Groningen"}],drops:[{player:"Will Reichard",from:"Joshua Van Groningen"}],picks:[]},
+    {week:11,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Zonovan Knight",to:"Tyler Goslinga"}],drops:[{player:"Travis Hunter",from:"Tyler Goslinga"}],picks:[]},
+    {week:11,type:"free_agent",managers:["James Lazette"],adds:[{player:"Brock Purdy",to:"James Lazette"}],drops:[{player:"Rashod Bateman",from:"James Lazette"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Will Reichard",to:"Joshua Van Groningen"}],drops:[{player:"Chad Ryland",from:"Joshua Van Groningen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Jaleel McLaughlin",to:"Ross Van Groningen"}],drops:[{player:"Darren Waller",from:"Ross Van Groningen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Michael Wilson",to:"Matthew Van Groningen"}],drops:[{player:"J.K. Dobbins",from:"Matthew Van Groningen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Chris Rodriguez",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:11,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Brashard Smith",to:"Trey Hugen"}],drops:[{player:"Will Reichard",from:"Trey Hugen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Kansas City Chiefs",to:"Steve Vander Molen"}],drops:[{player:"Carolina Panthers",from:"Steve Vander Molen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Keon Coleman",to:"Steve Vander Molen"}],drops:[{player:"Darnell Mooney",from:"Steve Vander Molen"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Ollie Gordon",to:"Eric Graef"}],drops:[{player:"Tampa Bay Buccaneers",from:"Eric Graef"}],picks:[]},
+    {week:11,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Cam Little",to:"Eric Graef"}],drops:[{player:"Michael Badgley",from:"Eric Graef"}],picks:[]},
+    {week:11,type:"free_agent",managers:["James Lazette"],adds:[{player:"Emari Demercado",to:"James Lazette"}],drops:[{player:"AJ Barner",from:"James Lazette"}],picks:[]},
+    {week:12,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Tampa Bay Buccaneers",to:"Joshua Van Groningen"}],drops:[{player:"Greg Dortch",from:"Joshua Van Groningen"}],picks:[]},
+    {week:12,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Devin Neal",to:"Vance Sipma"}],drops:[{player:"Tyjae Spears",from:"Vance Sipma"}],picks:[]},
+    {week:12,type:"waiver",managers:["Vance Sipma"],adds:[{player:"John Metchie",to:"Vance Sipma"}],drops:[{player:"Jalen Coker",from:"Vance Sipma"}],picks:[]},
+    {week:12,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Philadelphia Eagles",to:"Greg Mulder"}],drops:[{player:"Nick Chubb",from:"Greg Mulder"}],picks:[]},
+    {week:12,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"New Orleans Saints",to:"Steve Vander Molen"}],drops:[{player:"Keon Coleman",from:"Steve Vander Molen"}],picks:[]},
+    {week:12,type:"free_agent",managers:["James Lazette"],adds:[{player:"Matt Gay",to:"James Lazette"}],drops:[{player:"Eddy Pineiro",from:"James Lazette"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Terry McLaurin",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:12,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Greg Dortch",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:12,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Andrei Iosivas",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:12,type:"free_agent",managers:["Greg Mulder"],adds:[],drops:[{player:"AJ Barner",from:"Greg Mulder"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Samaje Perine",from:"Joshua Van Groningen"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Christian Watson",to:"Greg Cady"}],drops:[{player:"Darius Slayton",from:"Greg Cady"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Jacksonville Jaguars",to:"Tyler Goslinga"}],drops:[{player:"Jonnu Smith",from:"Tyler Goslinga"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Luther Burden",to:"Trey Hugen"}],drops:[{player:"Jacory Croskey-Merritt",from:"Trey Hugen"}],picks:[]},
+    {week:12,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Michael Carter",to:"Trey Hugen"}],drops:[{player:"Theo Johnson",from:"Trey Hugen"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Tank Bigsby",from:"Greg Cady"}],picks:[]},
+    {week:13,type:"waiver",managers:["James Lazette"],adds:[{player:"Evan McPherson",to:"James Lazette"}],drops:[{player:"Matt Gay",from:"James Lazette"}],picks:[]},
+    {week:13,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Washington Commanders",to:"Tyler Goslinga"}],drops:[{player:"Los Angeles Chargers",from:"Tyler Goslinga"}],picks:[]},
+    {week:13,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Devaughn Vele",to:"Steve Vander Molen"}],drops:[],picks:[]},
+    {week:13,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Kansas City Chiefs",to:"Steve Vander Molen"}],drops:[{player:"San Francisco 49ers",from:"Steve Vander Molen"}],picks:[]},
+    {week:13,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Sam Darnold",to:"Trey Hugen"}],drops:[{player:"Brashard Smith",from:"Trey Hugen"}],picks:[]},
+    {week:13,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Adonai Mitchell",to:"Joshua Van Groningen"}],drops:[{player:"Darnell Mooney",from:"Joshua Van Groningen"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Theo Johnson",to:"Trey Hugen"}],drops:[{player:"Las Vegas Raiders",from:"Trey Hugen"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Tank Bigsby",to:"Greg Cady"}],drops:[{player:"Tony Pollard",from:"Greg Cady"}],picks:[]},
+    {week:13,type:"waiver",managers:["Vance Sipma"],adds:[{player:"Jayden Higgins",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Mulder"],adds:[],drops:[{player:"Green Bay Packers",from:"Greg Mulder"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Mulder"],adds:[],drops:[{player:"Jayden Higgins",from:"Greg Mulder"}],picks:[]},
+    {week:13,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Chris Boswell",to:"Steve Vander Molen"}],drops:[{player:"Sam Darnold",from:"Steve Vander Molen"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Steve Vander Molen"],adds:[],drops:[{player:"Chris Boswell",from:"Steve Vander Molen"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Indianapolis Colts",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:13,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Tez Johnson",from:"Matthew Van Groningen"}],picks:[]},
+    {week:13,type:"commissioner",managers:["Matthew Van Groningen"],adds:[{player:"Luke Musgrave",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:13,type:"commissioner",managers:["Matthew Van Groningen","Greg Mulder"],adds:[{player:"Jahmyr Gibbs",to:"Matthew Van Groningen"}],drops:[{player:"Jahmyr Gibbs",from:"Greg Mulder"}],picks:[]},
+    {week:13,type:"commissioner",managers:["Matthew Van Groningen","Greg Mulder"],adds:[{player:"Alvin Kamara",to:"Greg Mulder"},{player:"Dallas Goedert",to:"Greg Mulder"},{player:"Michael Pittman",to:"Greg Mulder"}],drops:[{player:"Alvin Kamara",from:"Matthew Van Groningen"},{player:"Dallas Goedert",from:"Matthew Van Groningen"},{player:"Michael Pittman",from:"Matthew Van Groningen"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Darren Waller",to:"Vance Sipma"}],drops:[{player:"Josh Downs",from:"Vance Sipma"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Colby Parkinson",to:"Aaron Fay"}],drops:[{player:"Jake Elliott",from:"Aaron Fay"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Mason Taylor",from:"Vance Sipma"}],picks:[]},
+    {week:13,type:"free_agent",managers:["James Lazette"],adds:[{player:"Brenton Strange",to:"James Lazette"}],drops:[{player:"Rashid Shaheed",from:"James Lazette"}],picks:[]},
+    {week:13,type:"free_agent",managers:["Greg Cady"],adds:[],drops:[{player:"Tank Bigsby",from:"Greg Cady"}],picks:[]},
+    {week:14,type:"waiver",managers:["Ross Van Groningen"],adds:[{player:"Jaylen Wright",to:"Ross Van Groningen"}],drops:[{player:"Jaleel McLaughlin",from:"Ross Van Groningen"}],picks:[]},
+    {week:14,type:"waiver",managers:["Tyler Goslinga"],adds:[{player:"Philip Rivers",to:"Tyler Goslinga"}],drops:[{player:"Calvin Austin",from:"Tyler Goslinga"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Zach Ertz",from:"Vance Sipma"}],picks:[]},
+    {week:14,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Ryan Flournoy",to:"Aaron Fay"}],drops:[{player:"Tre Tucker",from:"Aaron Fay"}],picks:[]},
+    {week:14,type:"waiver",managers:["Greg Cady"],adds:[{player:"Pittsburgh Steelers",to:"Greg Cady"}],drops:[{player:"Baltimore Ravens",from:"Greg Cady"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Daniel Jones",from:"Joshua Van Groningen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Greg Cady"],adds:[{player:"San Francisco 49ers",to:"Greg Cady"}],drops:[],picks:[]},
+    {week:14,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Jayden Reed",to:"Ross Van Groningen"}],drops:[{player:"John Metchie",from:"Ross Van Groningen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Green Bay Packers",to:"Vance Sipma"}],drops:[{player:"Atlanta Falcons",from:"Vance Sipma"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Jayden Daniels",to:"Greg Mulder"}],drops:[{player:"Jordan Love",from:"Greg Mulder"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Tony Pollard",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:14,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"John Metchie",to:"Ross Van Groningen"}],drops:[{player:"Pittsburgh Steelers",from:"Ross Van Groningen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Wil Lutz",to:"Steve Vander Molen"}],drops:[{player:"Chris Boswell",from:"Steve Vander Molen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Steve Vander Molen"],adds:[],drops:[{player:"Parker Washington",from:"Steve Vander Molen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Eric Graef"],adds:[{player:"Tennessee Titans",to:"Eric Graef"}],drops:[{player:"Ollie Gordon",from:"Eric Graef"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Carolina Panthers",to:"Aaron Fay"}],drops:[{player:"Sam LaPorta",from:"Aaron Fay"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"John Metchie",from:"Vance Sipma"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Miami Dolphins",to:"Trey Hugen"}],drops:[{player:"Theo Johnson",from:"Trey Hugen"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Greg Mulder"],adds:[],drops:[{player:"Romeo Doubs",from:"Greg Mulder"}],picks:[]},
+    {week:14,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Trevor Lawrence",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:14,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Detroit Lions",from:"Matthew Van Groningen"}],picks:[]},
+    {week:15,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Minnesota Vikings",to:"Joshua Van Groningen"}],drops:[{player:"Tampa Bay Buccaneers",from:"Joshua Van Groningen"}],picks:[]},
+    {week:15,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Jayden Reed",to:"Joshua Van Groningen"}],drops:[{player:"Marcus Mariota",from:"Joshua Van Groningen"}],picks:[]},
+    {week:15,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Malik Davis",to:"Greg Mulder"}],drops:[{player:"Jayden Daniels",from:"Greg Mulder"}],picks:[]},
+    {week:15,type:"waiver",managers:["Steve Vander Molen"],adds:[{player:"Chris Boswell",to:"Steve Vander Molen"}],drops:[{player:"Wil Lutz",from:"Steve Vander Molen"}],picks:[]},
+    {week:15,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Jacory Croskey-Merritt",to:"Matthew Van Groningen"}],drops:[{player:"Andrei Iosivas",from:"Matthew Van Groningen"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Ross Van Groningen"],adds:[],drops:[{player:"Jayden Reed",from:"Ross Van Groningen"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Harrison Mevis",to:"Greg Cady"}],drops:[{player:"Matt Prater",from:"Greg Cady"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Marcus Mariota",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:15,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Isaiah Davis",to:"Aaron Fay"}],drops:[{player:"Sean Tucker",from:"Aaron Fay"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"AJ Barner",to:"Aaron Fay"}],drops:[{player:"Cade Otton",from:"Aaron Fay"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Buffalo Bills",to:"Matthew Van Groningen"}],drops:[{player:"Luke Musgrave",from:"Matthew Van Groningen"}],picks:[]},
+    {week:15,type:"free_agent",managers:["Tyler Goslinga"],adds:[],drops:[{player:"Washington Commanders",from:"Tyler Goslinga"}],picks:[]},
+    {week:16,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Dylan Sampson",to:"Aaron Fay"}],drops:[{player:"Ryan Flournoy",from:"Aaron Fay"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Greg Mulder"],adds:[],drops:[{player:"Philadelphia Eagles",from:"Greg Mulder"}],picks:[]},
+    {week:16,type:"waiver",managers:["Joshua Van Groningen"],adds:[{player:"Taysom Hill",to:"Joshua Van Groningen"}],drops:[{player:"Minnesota Vikings",from:"Joshua Van Groningen"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Arizona Cardinals",to:"Tyler Goslinga"}],drops:[{player:"Philip Rivers",from:"Tyler Goslinga"}],picks:[]},
+    {week:16,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Denver Broncos",to:"Greg Mulder"}],drops:[{player:"Cleveland Browns",from:"Greg Mulder"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Tampa Bay Buccaneers",to:"Ross Van Groningen"}],drops:[{player:"Denver Broncos",from:"Ross Van Groningen"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Jalen Coker",to:"Tyler Goslinga"}],drops:[{player:"Zonovan Knight",from:"Tyler Goslinga"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Steve Vander Molen"],adds:[{player:"Marquise Brown",to:"Steve Vander Molen"}],drops:[{player:"Devaughn Vele",from:"Steve Vander Molen"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Greg Cady"],adds:[{player:"Eddy Pineiro",to:"Greg Cady"}],drops:[{player:"Harrison Mevis",from:"Greg Cady"}],picks:[]},
+    {week:16,type:"free_agent",managers:["James Lazette"],adds:[{player:"Cincinnati Bengals",to:"James Lazette"}],drops:[{player:"Kayshon Boutte",from:"James Lazette"}],picks:[]},
+    {week:16,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Audric Estime",to:"Vance Sipma"}],drops:[],picks:[]},
+    {week:16,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Atlanta Falcons",to:"Aaron Fay"}],drops:[{player:"Carolina Panthers",from:"Aaron Fay"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"George Kittle",from:"Joshua Van Groningen"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Tyler Goslinga"],adds:[{player:"Cleveland Browns",to:"Tyler Goslinga"}],drops:[{player:"Arizona Cardinals",from:"Tyler Goslinga"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Joshua Van Groningen"],adds:[{player:"Kyle Williams",to:"Joshua Van Groningen"}],drops:[],picks:[]},
+    {week:17,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"C.J. Stroud",to:"Greg Mulder"}],drops:[],picks:[]},
+    {week:17,type:"free_agent",managers:["Joshua Van Groningen"],adds:[],drops:[{player:"Jayden Reed",from:"Joshua Van Groningen"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"New York Giants",to:"Vance Sipma"}],drops:[{player:"Audric Estime",from:"Vance Sipma"}],picks:[]},
+    {week:17,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Detroit Lions",to:"Trey Hugen"}],drops:[{player:"Miami Dolphins",from:"Trey Hugen"}],picks:[]},
+  ],
+};
+
+const NFL_TRANSACTION_SUMMARY = {
+  "Greg Cady":{trades:1,waivers:50,freeAgents:135,totalMoves:186,playersAdded:149},
+  "Joshua Van Groningen":{trades:2,waivers:76,freeAgents:85,totalMoves:166,playersAdded:144},
+  "Greg Mulder":{trades:3,waivers:42,freeAgents:74,totalMoves:125,playersAdded:115},
+  "Matthew Van Groningen":{trades:2,waivers:42,freeAgents:75,totalMoves:124,playersAdded:111},
+  "Trey Hugen":{trades:2,waivers:47,freeAgents:69,totalMoves:120,playersAdded:105},
+  "Aaron Fay":{trades:1,waivers:54,freeAgents:52,totalMoves:109,playersAdded:106},
+  "Eric Graef":{trades:1,waivers:31,freeAgents:76,totalMoves:109,playersAdded:86},
+  "James Lazette":{trades:3,waivers:39,freeAgents:63,totalMoves:108,playersAdded:91},
+  "Ross Van Groningen":{trades:5,waivers:35,freeAgents:55,totalMoves:100,playersAdded:99},
+  "Vance Sipma":{trades:1,waivers:27,freeAgents:67,totalMoves:96,playersAdded:81},
+  "Steve Vander Molen":{trades:1,waivers:27,freeAgents:64,totalMoves:93,playersAdded:84},
+  "Tyler Goslinga":{trades:1,waivers:29,freeAgents:53,totalMoves:83,playersAdded:73},
+};
+
+const NFL_LINEUP_EFFICIENCY = {
+  2022: {
+    "Trey Hugen":{avgEff:88.2,avgBench:14.1,weeks:[{week:1,actual:117.26,max:124.86,eff:93.9,bench:7.6},{week:2,actual:94.4,max:104.0,eff:90.8,bench:9.6},{week:3,actual:67.54,max:108.44,eff:62.3,bench:40.9},{week:4,actual:104.84,max:118.44,eff:88.5,bench:13.6},{week:5,actual:104.48,max:118.98,eff:87.8,bench:14.5},{week:6,actual:121.94,max:143.64,eff:84.9,bench:21.7},{week:7,actual:112.08,max:128.58,eff:87.2,bench:16.5},{week:8,actual:98.1,max:125.2,eff:78.4,bench:27.1},{week:9,actual:103.82,max:102.62,eff:101.2,bench:-1.2},{week:10,actual:128.68,max:129.58,eff:99.3,bench:0.9},{week:11,actual:95.02,max:124.12,eff:76.6,bench:29.1},{week:12,actual:93.72,max:107.84,eff:86.9,bench:14.12},{week:13,actual:92.86,max:94.86,eff:97.9,bench:2.0},{week:14,actual:85.36,max:86.36,eff:98.8,bench:1.0}]},
+    "James Lazette":{avgEff:94.0,avgBench:7.53,weeks:[{week:1,actual:114.08,max:127.78,eff:89.3,bench:13.7},{week:2,actual:119.68,max:117.18,eff:102.1,bench:-2.5},{week:3,actual:123.3,max:132.1,eff:93.3,bench:8.8},{week:4,actual:123.42,max:130.92,eff:94.3,bench:7.5},{week:5,actual:115.76,max:120.76,eff:95.9,bench:5.0},{week:6,actual:89.36,max:85.16,eff:104.9,bench:-4.2},{week:7,actual:113.18,max:126.08,eff:89.8,bench:12.9},{week:8,actual:138.88,max:148.28,eff:93.7,bench:9.4},{week:9,actual:104.8,max:107.3,eff:97.7,bench:2.5},{week:10,actual:99.1,max:109.5,eff:90.5,bench:10.4},{week:11,actual:125.94,max:133.84,eff:94.1,bench:7.9},{week:12,actual:123.22,max:129.82,eff:94.9,bench:6.6},{week:13,actual:88.42,max:100.92,eff:87.6,bench:12.5},{week:14,actual:104.68,max:119.58,eff:87.5,bench:14.9}]},
+    "Joshua Van Groningen":{avgEff:87.6,avgBench:15.08,weeks:[{week:1,actual:79.78,max:100.68,eff:79.2,bench:20.9},{week:2,actual:81.7,max:98.0,eff:83.4,bench:16.3},{week:3,actual:108.24,max:138.24,eff:78.3,bench:30.0},{week:4,actual:105.0,max:119.8,eff:87.6,bench:14.8},{week:5,actual:93.84,max:113.44,eff:82.7,bench:19.6},{week:6,actual:100.66,max:108.72,eff:92.6,bench:8.06},{week:7,actual:115.3,max:128.02,eff:90.1,bench:12.72},{week:8,actual:123.5,max:138.3,eff:89.3,bench:14.8},{week:9,actual:138.8,max:141.2,eff:98.3,bench:2.4},{week:10,actual:118.72,max:121.12,eff:98.0,bench:2.4},{week:11,actual:100.58,max:129.98,eff:77.4,bench:29.4},{week:12,actual:118.44,max:134.84,eff:87.8,bench:16.4},{week:13,actual:122.74,max:141.74,eff:86.6,bench:19.0},{week:14,actual:84.62,max:89.02,eff:95.1,bench:4.4}]},
+    "Greg Cady":{avgEff:88.5,avgBench:13.4,weeks:[{week:1,actual:92.7,max:102.96,eff:90.0,bench:10.26},{week:2,actual:95.2,max:107.0,eff:89.0,bench:11.8},{week:3,actual:89.98,max:95.58,eff:94.1,bench:5.6},{week:4,actual:107.66,max:120.56,eff:89.3,bench:12.9},{week:5,actual:66.44,max:83.44,eff:79.6,bench:17.0},{week:6,actual:96.74,max:104.8,eff:92.3,bench:8.06},{week:7,actual:86.72,max:116.3,eff:74.6,bench:29.58},{week:8,actual:127.18,max:132.38,eff:96.1,bench:5.2},{week:9,actual:81.3,max:79.5,eff:102.3,bench:-1.8},{week:10,actual:96.96,max:107.66,eff:90.1,bench:10.7},{week:11,actual:110.54,max:141.54,eff:78.1,bench:31.0},{week:12,actual:108.48,max:137.94,eff:78.6,bench:29.46},{week:13,actual:95.26,max:111.26,eff:85.6,bench:16.0},{week:14,actual:142.62,max:144.52,eff:98.7,bench:1.9}]},
+    "Tyler Goslinga":{avgEff:90.7,avgBench:13.81,weeks:[{week:1,actual:132.42,max:140.32,eff:94.4,bench:7.9},{week:2,actual:175.32,max:207.62,eff:84.4,bench:32.3},{week:3,actual:100.9,max:114.0,eff:88.5,bench:13.1},{week:4,actual:105.76,max:124.16,eff:85.2,bench:18.4},{week:5,actual:147.46,max:155.06,eff:95.1,bench:7.6},{week:6,actual:133.6,max:141.9,eff:94.2,bench:8.3},{week:7,actual:82.16,max:87.16,eff:94.3,bench:5.0},{week:8,actual:125.0,max:141.5,eff:88.3,bench:16.5},{week:9,actual:126.22,max:139.12,eff:90.7,bench:12.9},{week:10,actual:126.7,max:137.8,eff:91.9,bench:11.1},{week:11,actual:121.0,max:132.4,eff:91.4,bench:11.4},{week:12,actual:157.92,max:179.42,eff:88.0,bench:21.5},{week:13,actual:155.1,max:175.8,eff:88.2,bench:20.7},{week:14,actual:123.68,max:130.28,eff:94.9,bench:6.6}]},
+    "Vance Sipma":{avgEff:82.6,avgBench:21.76,weeks:[{week:1,actual:103.32,max:124.82,eff:82.8,bench:21.5},{week:2,actual:160.58,max:191.68,eff:83.8,bench:31.1},{week:3,actual:97.16,max:123.06,eff:79.0,bench:25.9},{week:4,actual:105.38,max:118.98,eff:88.6,bench:13.6},{week:5,actual:103.4,max:129.3,eff:80.0,bench:25.9},{week:6,actual:87.98,max:103.98,eff:84.6,bench:16.0},{week:7,actual:113.46,max:142.86,eff:79.4,bench:29.4},{week:8,actual:137.24,max:156.98,eff:87.4,bench:19.74},{week:9,actual:78.1,max:84.68,eff:92.2,bench:6.58},{week:10,actual:109.1,max:139.1,eff:78.4,bench:30.0},{week:11,actual:91.6,max:95.2,eff:96.2,bench:3.6},{week:12,actual:117.06,max:145.54,eff:80.4,bench:28.48},{week:13,actual:95.5,max:116.8,eff:81.8,bench:21.3},{week:14,actual:51.46,max:83.0,eff:62.0,bench:31.54}]},
+    "Eric Graef":{avgEff:87.1,avgBench:17.69,weeks:[{week:1,actual:139.7,max:156.1,eff:89.5,bench:16.4},{week:2,actual:113.3,max:144.3,eff:78.5,bench:31.0},{week:3,actual:119.98,max:141.38,eff:84.9,bench:21.4},{week:4,actual:120.66,max:161.26,eff:74.8,bench:40.6},{week:5,actual:113.38,max:127.48,eff:88.9,bench:14.1},{week:6,actual:93.32,max:101.62,eff:91.8,bench:8.3},{week:7,actual:99.92,max:133.12,eff:75.1,bench:33.2},{week:8,actual:113.82,max:135.92,eff:83.7,bench:22.1},{week:9,actual:106.24,max:108.54,eff:97.9,bench:2.3},{week:10,actual:105.14,max:118.84,eff:88.5,bench:13.7},{week:11,actual:131.96,max:141.76,eff:93.1,bench:9.8},{week:12,actual:128.4,max:143.0,eff:89.8,bench:14.6},{week:13,actual:100.92,max:106.42,eff:94.8,bench:5.5},{week:14,actual:113.28,max:127.98,eff:88.5,bench:14.7}]},
+    "Ross Van Groningen":{avgEff:82.7,avgBench:22.92,weeks:[{week:1,actual:89.52,max:110.02,eff:81.4,bench:20.5},{week:2,actual:95.36,max:105.36,eff:90.5,bench:10.0},{week:3,actual:99.4,max:129.4,eff:76.8,bench:30.0},{week:4,actual:127.58,max:174.68,eff:73.0,bench:47.1},{week:5,actual:129.28,max:176.38,eff:73.3,bench:47.1},{week:6,actual:115.1,max:129.1,eff:89.2,bench:14.0},{week:7,actual:104.14,max:114.94,eff:90.6,bench:10.8},{week:8,actual:80.08,max:101.08,eff:79.2,bench:21.0},{week:9,actual:99.44,max:114.54,eff:86.8,bench:15.1},{week:10,actual:82.0,max:99.8,eff:82.2,bench:17.8},{week:11,actual:91.7,max:105.5,eff:86.9,bench:13.8},{week:12,actual:98.8,max:141.2,eff:70.0,bench:42.4},{week:13,actual:132.64,max:145.04,eff:91.5,bench:12.4},{week:14,actual:121.76,max:140.66,eff:86.6,bench:18.9}]},
+    "Greg Mulder":{avgEff:89.4,avgBench:13.84,weeks:[{week:1,actual:135.72,max:154.12,eff:88.1,bench:18.4},{week:2,actual:114.52,max:134.12,eff:85.4,bench:19.6},{week:3,actual:124.22,max:129.62,eff:95.8,bench:5.4},{week:4,actual:106.96,max:121.56,eff:88.0,bench:14.6},{week:5,actual:156.16,max:164.14,eff:95.1,bench:7.98},{week:6,actual:100.7,max:104.8,eff:96.1,bench:4.1},{week:7,actual:103.0,max:116.34,eff:88.5,bench:13.34},{week:8,actual:97.82,max:119.32,eff:82.0,bench:21.5},{week:9,actual:146.52,max:164.52,eff:89.1,bench:18.0},{week:10,actual:121.46,max:124.46,eff:97.6,bench:3.0},{week:11,actual:115.16,max:123.58,eff:93.2,bench:8.42},{week:12,actual:83.76,max:103.26,eff:81.1,bench:19.5},{week:13,actual:127.54,max:145.94,eff:87.4,bench:18.4},{week:14,actual:115.26,max:136.76,eff:84.3,bench:21.5}]},
+    "Matthew Van Groningen":{avgEff:85.9,avgBench:16.02,weeks:[{week:1,actual:101.9,max:123.98,eff:82.2,bench:22.08},{week:2,actual:99.16,max:128.56,eff:77.1,bench:29.4},{week:3,actual:96.0,max:102.6,eff:93.6,bench:6.6},{week:4,actual:165.48,max:173.58,eff:95.3,bench:8.1},{week:5,actual:85.88,max:108.54,eff:79.1,bench:22.66},{week:6,actual:84.98,max:93.4,eff:91.0,bench:8.42},{week:7,actual:76.3,max:92.7,eff:82.3,bench:16.4},{week:8,actual:116.56,max:133.86,eff:87.1,bench:17.3},{week:9,actual:102.52,max:121.82,eff:84.2,bench:19.3},{week:10,actual:116.5,max:140.6,eff:82.9,bench:24.1},{week:11,actual:55.6,max:85.16,eff:65.3,bench:29.56},{week:12,actual:125.76,max:134.8,eff:93.3,bench:9.04},{week:13,actual:98.08,max:114.62,eff:85.6,bench:16.54},{week:14,actual:139.3,max:134.1,eff:103.9,bench:-5.2}]},
+    "Steve Vander Molen":{avgEff:90.5,avgBench:10.15,weeks:[{week:1,actual:81.6,max:100.3,eff:81.4,bench:18.7},{week:2,actual:82.18,max:89.08,eff:92.3,bench:6.9},{week:3,actual:117.36,max:119.96,eff:97.8,bench:2.6},{week:4,actual:70.16,max:82.96,eff:84.6,bench:12.8},{week:5,actual:100.62,max:122.62,eff:82.1,bench:22.0},{week:6,actual:105.92,max:130.32,eff:81.3,bench:24.4},{week:7,actual:93.62,max:94.12,eff:99.5,bench:0.5},{week:8,actual:130.48,max:137.82,eff:94.7,bench:7.34},{week:9,actual:70.7,max:73.9,eff:95.7,bench:3.2},{week:10,actual:89.12,max:114.82,eff:77.6,bench:25.7},{week:11,actual:91.58,max:104.08,eff:88.0,bench:12.5},{week:12,actual:64.0,max:68.6,eff:93.3,bench:4.6},{week:13,actual:120.0,max:119.3,eff:100.6,bench:-0.7},{week:14,actual:71.18,max:72.68,eff:97.9,bench:1.5}]},
+    "Aaron Fay":{avgEff:84.9,avgBench:17.63,weeks:[{week:1,actual:118.56,max:125.86,eff:94.2,bench:7.3},{week:2,actual:110.06,max:126.86,eff:86.8,bench:16.8},{week:3,actual:114.54,max:129.68,eff:88.3,bench:15.14},{week:4,actual:106.4,max:140.22,eff:75.9,bench:33.82},{week:5,actual:103.42,max:120.82,eff:85.6,bench:17.4},{week:6,actual:81.92,max:92.52,eff:88.5,bench:10.6},{week:7,actual:90.22,max:121.72,eff:74.1,bench:31.5},{week:8,actual:141.94,max:152.04,eff:93.4,bench:10.1},{week:9,actual:108.0,max:124.8,eff:86.5,bench:16.8},{week:10,actual:61.44,max:65.04,eff:94.5,bench:3.6},{week:11,actual:101.5,max:112.3,eff:90.4,bench:10.8},{week:12,actual:89.96,max:114.56,eff:78.5,bench:24.6},{week:13,actual:118.4,max:129.2,eff:91.6,bench:10.8},{week:14,actual:57.78,max:95.4,eff:60.6,bench:37.62}]},
+  },
+  2023: {
+    "Trey Hugen":{avgEff:81.5,avgBench:24.88,weeks:[{week:1,actual:44.66,max:77.16,eff:57.9,bench:32.5},{week:2,actual:105.64,max:138.54,eff:76.3,bench:32.9},{week:3,actual:140.98,max:163.04,eff:86.5,bench:22.06},{week:4,actual:70.62,max:119.24,eff:59.2,bench:48.62},{week:5,actual:146.96,max:156.84,eff:93.7,bench:9.88},{week:6,actual:122.56,max:146.74,eff:83.5,bench:24.18},{week:7,actual:90.36,max:110.26,eff:82.0,bench:19.9},{week:8,actual:131.2,max:157.68,eff:83.2,bench:26.48},{week:9,actual:101.7,max:102.5,eff:99.2,bench:0.8},{week:10,actual:123.14,max:128.44,eff:95.9,bench:5.3},{week:11,actual:90.84,max:102.94,eff:88.2,bench:12.1},{week:12,actual:147.66,max:175.46,eff:84.2,bench:27.8},{week:13,actual:156.38,max:185.6,eff:84.3,bench:29.22},{week:14,actual:112.72,max:169.26,eff:66.6,bench:56.54}]},
+    "James Lazette":{avgEff:87.9,avgBench:17.74,weeks:[{week:1,actual:92.14,max:101.94,eff:90.4,bench:9.8},{week:2,actual:100.74,max:156.28,eff:64.5,bench:55.54},{week:3,actual:102.42,max:127.02,eff:80.6,bench:24.6},{week:4,actual:152.18,max:180.78,eff:84.2,bench:28.6},{week:5,actual:130.36,max:147.76,eff:88.2,bench:17.4},{week:6,actual:129.16,max:140.76,eff:91.8,bench:11.6},{week:7,actual:131.4,max:138.5,eff:94.9,bench:7.1},{week:8,actual:117.36,max:138.66,eff:84.6,bench:21.3},{week:9,actual:111.22,max:112.02,eff:99.3,bench:0.8},{week:10,actual:120.38,max:152.16,eff:79.1,bench:31.78},{week:11,actual:123.2,max:129.2,eff:95.4,bench:6.0},{week:12,actual:156.26,max:176.16,eff:88.7,bench:19.9},{week:13,actual:100.1,max:100.0,eff:100.1,bench:-0.1},{week:14,actual:105.32,max:119.32,eff:88.3,bench:14.0}]},
+    "Joshua Van Groningen":{avgEff:87.5,avgBench:16.59,weeks:[{week:1,actual:120.66,max:148.96,eff:81.0,bench:28.3},{week:2,actual:108.7,max:153.9,eff:70.6,bench:45.2},{week:3,actual:101.16,max:108.16,eff:93.5,bench:7.0},{week:4,actual:88.56,max:92.46,eff:95.8,bench:3.9},{week:5,actual:95.98,max:123.58,eff:77.7,bench:27.6},{week:6,actual:82.34,max:85.64,eff:96.1,bench:3.3},{week:7,actual:119.04,max:135.64,eff:87.8,bench:16.6},{week:8,actual:123.38,max:159.34,eff:77.4,bench:35.96},{week:9,actual:132.14,max:142.54,eff:92.7,bench:10.4},{week:10,actual:143.52,max:146.02,eff:98.3,bench:2.5},{week:11,actual:103.04,max:107.74,eff:95.6,bench:4.7},{week:12,actual:100.3,max:119.5,eff:83.9,bench:19.2},{week:13,actual:117.04,max:125.74,eff:93.1,bench:8.7},{week:14,actual:83.62,max:102.56,eff:81.5,bench:18.94}]},
+    "Greg Cady":{avgEff:87.9,avgBench:14.12,weeks:[{week:1,actual:90.8,max:105.0,eff:86.5,bench:14.2},{week:2,actual:96.72,max:122.32,eff:79.1,bench:25.6},{week:3,actual:112.48,max:121.98,eff:92.2,bench:9.5},{week:4,actual:109.16,max:134.06,eff:81.4,bench:24.9},{week:5,actual:136.42,max:134.92,eff:101.1,bench:-1.5},{week:6,actual:86.1,max:109.7,eff:78.5,bench:23.6},{week:7,actual:123.66,max:135.96,eff:91.0,bench:12.3},{week:8,actual:132.76,max:141.76,eff:93.7,bench:9.0},{week:9,actual:104.68,max:125.88,eff:83.2,bench:21.2},{week:10,actual:84.52,max:97.22,eff:86.9,bench:12.7},{week:11,actual:73.6,max:90.2,eff:81.6,bench:16.6},{week:12,actual:110.3,max:125.0,eff:88.2,bench:14.7},{week:13,actual:119.82,max:126.02,eff:95.1,bench:6.2},{week:14,actual:106.38,max:115.08,eff:92.4,bench:8.7}]},
+    "Tyler Goslinga":{avgEff:82.5,avgBench:21.72,weeks:[{week:1,actual:80.94,max:111.64,eff:72.5,bench:30.7},{week:2,actual:98.6,max:131.2,eff:75.2,bench:32.6},{week:3,actual:155.88,max:171.68,eff:90.8,bench:15.8},{week:4,actual:81.92,max:108.82,eff:75.3,bench:26.9},{week:5,actual:109.44,max:132.28,eff:82.7,bench:22.84},{week:6,actual:95.04,max:104.84,eff:90.7,bench:9.8},{week:7,actual:123.66,max:132.46,eff:93.4,bench:8.8},{week:8,actual:93.3,max:146.7,eff:63.6,bench:53.4},{week:9,actual:73.5,max:90.3,eff:81.4,bench:16.8},{week:10,actual:129.74,max:136.34,eff:95.2,bench:6.6},{week:11,actual:109.08,max:132.52,eff:82.3,bench:23.44},{week:12,actual:102.82,max:107.52,eff:95.6,bench:4.7},{week:13,actual:84.0,max:107.26,eff:78.3,bench:23.26},{week:14,actual:97.14,max:125.52,eff:77.4,bench:28.38}]},
+    "Vance Sipma":{avgEff:87.9,avgBench:13.11,weeks:[{week:1,actual:132.54,max:149.3,eff:88.8,bench:16.76},{week:2,actual:99.94,max:123.46,eff:80.9,bench:23.52},{week:3,actual:93.26,max:113.76,eff:82.0,bench:20.5},{week:4,actual:98.94,max:107.74,eff:91.8,bench:8.8},{week:5,actual:47.88,max:69.4,eff:69.0,bench:21.52},{week:6,actual:73.84,max:91.14,eff:81.0,bench:17.3},{week:7,actual:92.5,max:103.76,eff:89.1,bench:11.26},{week:8,actual:108.78,max:111.28,eff:97.8,bench:2.5},{week:9,actual:84.88,max:96.88,eff:87.6,bench:12.0},{week:10,actual:97.1,max:112.3,eff:86.5,bench:15.2},{week:11,actual:132.88,max:138.28,eff:96.1,bench:5.4},{week:12,actual:120.66,max:130.86,eff:92.2,bench:10.2},{week:13,actual:161.02,max:171.52,eff:93.9,bench:10.5},{week:14,actual:123.7,max:131.8,eff:93.9,bench:8.1}]},
+    "Eric Graef":{avgEff:87.7,avgBench:14.63,weeks:[{week:1,actual:90.24,max:114.84,eff:78.6,bench:24.6},{week:2,actual:90.94,max:103.84,eff:87.6,bench:12.9},{week:3,actual:126.06,max:136.56,eff:92.3,bench:10.5},{week:4,actual:138.8,max:155.8,eff:89.1,bench:17.0},{week:5,actual:113.38,max:138.28,eff:82.0,bench:24.9},{week:6,actual:80.42,max:96.42,eff:83.4,bench:16.0},{week:7,actual:98.44,max:109.14,eff:90.2,bench:10.7},{week:8,actual:115.3,max:127.1,eff:90.7,bench:11.8},{week:9,actual:156.64,max:159.74,eff:98.1,bench:3.1},{week:10,actual:95.5,max:123.0,eff:77.6,bench:27.5},{week:11,actual:109.64,max:121.74,eff:90.1,bench:12.1},{week:12,actual:118.58,max:133.28,eff:89.0,bench:14.7},{week:13,actual:104.42,max:105.62,eff:98.9,bench:1.2},{week:14,actual:73.24,max:91.04,eff:80.4,bench:17.8}]},
+    "Ross Van Groningen":{avgEff:90.4,avgBench:11.67,weeks:[{week:1,actual:125.1,max:135.68,eff:92.2,bench:10.58},{week:2,actual:141.58,max:156.12,eff:90.7,bench:14.54},{week:3,actual:111.7,max:110.4,eff:101.2,bench:-1.3},{week:4,actual:105.7,max:115.2,eff:91.8,bench:9.5},{week:5,actual:79.08,max:83.08,eff:95.2,bench:4.0},{week:6,actual:105.0,max:126.1,eff:83.3,bench:21.1},{week:7,actual:54.66,max:67.86,eff:80.5,bench:13.2},{week:8,actual:120.52,max:138.42,eff:87.1,bench:17.9},{week:9,actual:104.42,max:127.02,eff:82.2,bench:22.6},{week:10,actual:121.68,max:132.26,eff:92.0,bench:10.58},{week:11,actual:109.44,max:111.52,eff:98.1,bench:2.08},{week:12,actual:139.5,max:147.5,eff:94.6,bench:8.0},{week:13,actual:116.86,max:129.06,eff:90.5,bench:12.2},{week:14,actual:113.66,max:132.06,eff:86.1,bench:18.4}]},
+    "Greg Mulder":{avgEff:86.9,avgBench:18.15,weeks:[{week:1,actual:92.06,max:114.72,eff:80.2,bench:22.66},{week:2,actual:116.68,max:123.82,eff:94.2,bench:7.14},{week:3,actual:119.78,max:158.48,eff:75.6,bench:38.7},{week:4,actual:128.54,max:136.74,eff:94.0,bench:8.2},{week:5,actual:123.04,max:169.94,eff:72.4,bench:46.9},{week:6,actual:95.52,max:114.22,eff:83.6,bench:18.7},{week:7,actual:134.94,max:138.98,eff:97.1,bench:4.04},{week:8,actual:105.18,max:136.28,eff:77.2,bench:31.1},{week:9,actual:96.68,max:96.38,eff:100.3,bench:-0.3},{week:10,actual:92.3,max:114.12,eff:80.9,bench:21.82},{week:11,actual:110.66,max:144.56,eff:76.5,bench:33.9},{week:12,actual:98.28,max:103.38,eff:95.1,bench:5.1},{week:13,actual:124.58,max:134.28,eff:92.8,bench:9.7},{week:14,actual:164.54,max:171.04,eff:96.2,bench:6.5}]},
+    "Matthew Van Groningen":{avgEff:89.4,avgBench:13.04,weeks:[{week:1,actual:126.46,max:135.32,eff:93.5,bench:8.86},{week:2,actual:138.44,max:158.26,eff:87.5,bench:19.82},{week:3,actual:157.58,max:155.58,eff:101.3,bench:-2.0},{week:4,actual:109.66,max:146.3,eff:75.0,bench:36.64},{week:5,actual:79.72,max:94.86,eff:84.0,bench:15.14},{week:6,actual:84.44,max:93.54,eff:90.3,bench:9.1},{week:7,actual:106.42,max:110.22,eff:96.6,bench:3.8},{week:8,actual:125.86,max:138.06,eff:91.2,bench:12.2},{week:9,actual:78.7,max:86.8,eff:90.7,bench:8.1},{week:10,actual:90.38,max:99.68,eff:90.7,bench:9.3},{week:11,actual:116.54,max:131.24,eff:88.8,bench:14.7},{week:12,actual:107.8,max:124.8,eff:86.4,bench:17.0},{week:13,actual:124.98,max:134.58,eff:92.9,bench:9.6},{week:14,actual:100.76,max:121.06,eff:83.2,bench:20.3}]},
+    "Steve Vander Molen":{avgEff:85.1,avgBench:18.76,weeks:[{week:1,actual:97.96,max:108.66,eff:90.2,bench:10.7},{week:2,actual:75.7,max:115.6,eff:65.5,bench:39.9},{week:3,actual:127.5,max:153.7,eff:83.0,bench:26.2},{week:4,actual:140.48,max:148.78,eff:94.4,bench:8.3},{week:5,actual:128.74,max:141.44,eff:91.0,bench:12.7},{week:6,actual:131.28,max:147.88,eff:88.8,bench:16.6},{week:7,actual:115.36,max:136.44,eff:84.5,bench:21.08},{week:8,actual:105.02,max:127.32,eff:82.5,bench:22.3},{week:9,actual:75.74,max:103.34,eff:73.3,bench:27.6},{week:10,actual:134.42,max:146.02,eff:92.1,bench:11.6},{week:11,actual:111.8,max:119.4,eff:93.6,bench:7.6},{week:12,actual:99.08,max:141.58,eff:70.0,bench:42.5},{week:13,actual:88.68,max:96.88,eff:91.5,bench:8.2},{week:14,actual:74.84,max:82.14,eff:91.1,bench:7.3}]},
+    "Aaron Fay":{avgEff:87.0,avgBench:15.41,weeks:[{week:1,actual:93.24,max:110.64,eff:84.3,bench:17.4},{week:2,actual:86.66,max:118.4,eff:73.2,bench:31.74},{week:3,actual:92.96,max:114.36,eff:81.3,bench:21.4},{week:4,actual:81.48,max:105.98,eff:76.9,bench:24.5},{week:5,actual:115.12,max:116.42,eff:98.9,bench:1.3},{week:6,actual:125.48,max:145.28,eff:86.4,bench:19.8},{week:7,actual:94.74,max:116.24,eff:81.5,bench:21.5},{week:8,actual:101.46,max:119.66,eff:84.8,bench:18.2},{week:9,actual:102.52,max:124.96,eff:82.0,bench:22.44},{week:10,actual:120.46,max:123.26,eff:97.7,bench:2.8},{week:11,actual:80.96,max:81.6,eff:99.2,bench:0.64},{week:12,actual:97.44,max:113.84,eff:85.6,bench:16.4},{week:13,actual:112.46,max:122.36,eff:91.9,bench:9.9},{week:14,actual:121.94,max:129.64,eff:94.1,bench:7.7}]},
+  },
+  2024: {
+    "Trey Hugen":{avgEff:86.3,avgBench:16.86,weeks:[{week:1,actual:55.56,max:89.66,eff:62.0,bench:34.1},{week:2,actual:90.32,max:104.32,eff:86.6,bench:14.0},{week:3,actual:139.16,max:153.46,eff:90.7,bench:14.3},{week:4,actual:110.78,max:128.38,eff:86.3,bench:17.6},{week:5,actual:163.88,max:181.88,eff:90.1,bench:18.0},{week:6,actual:129.82,max:148.12,eff:87.6,bench:18.3},{week:7,actual:105.04,max:112.34,eff:93.5,bench:7.3},{week:8,actual:95.26,max:129.46,eff:73.6,bench:34.2},{week:9,actual:101.74,max:116.94,eff:87.0,bench:15.2},{week:10,actual:157.72,max:154.62,eff:102.0,bench:-3.1},{week:11,actual:110.14,max:121.14,eff:90.9,bench:11.0},{week:12,actual:102.72,max:124.02,eff:82.8,bench:21.3},{week:13,actual:110.16,max:129.66,eff:85.0,bench:19.5},{week:14,actual:134.66,max:148.96,eff:90.4,bench:14.3}]},
+    "James Lazette":{avgEff:87.2,avgBench:16.04,weeks:[{week:1,actual:113.78,max:135.48,eff:84.0,bench:21.7},{week:2,actual:97.76,max:106.52,eff:91.8,bench:8.76},{week:3,actual:75.78,max:137.06,eff:55.3,bench:61.28},{week:4,actual:117.72,max:131.62,eff:89.4,bench:13.9},{week:5,actual:109.18,max:116.88,eff:93.4,bench:7.7},{week:6,actual:80.42,max:93.42,eff:86.1,bench:13.0},{week:7,actual:123.5,max:135.6,eff:91.1,bench:12.1},{week:8,actual:86.32,max:99.72,eff:86.6,bench:13.4},{week:9,actual:83.92,max:88.1,eff:95.3,bench:4.18},{week:10,actual:90.64,max:98.24,eff:92.3,bench:7.6},{week:11,actual:102.68,max:145.48,eff:70.6,bench:42.8},{week:12,actual:103.76,max:113.26,eff:91.6,bench:9.5},{week:13,actual:140.1,max:145.9,eff:96.0,bench:5.8},{week:14,actual:100.5,max:103.3,eff:97.3,bench:2.8}]},
+    "Joshua Van Groningen":{avgEff:88.4,avgBench:15.68,weeks:[{week:1,actual:128.48,max:141.68,eff:90.7,bench:13.2},{week:2,actual:160.24,max:168.24,eff:95.2,bench:8.0},{week:3,actual:95.4,max:104.8,eff:91.0,bench:9.4},{week:4,actual:146.98,max:157.98,eff:93.0,bench:11.0},{week:5,actual:95.44,max:120.1,eff:79.5,bench:24.66},{week:6,actual:121.26,max:119.26,eff:101.7,bench:-2.0},{week:7,actual:97.7,max:131.3,eff:74.4,bench:33.6},{week:8,actual:132.18,max:147.48,eff:89.6,bench:15.3},{week:9,actual:90.56,max:106.06,eff:85.4,bench:15.5},{week:10,actual:107.54,max:106.94,eff:100.6,bench:-0.6},{week:11,actual:90.24,max:115.64,eff:78.0,bench:25.4},{week:12,actual:119.3,max:122.2,eff:97.6,bench:2.9},{week:13,actual:127.5,max:143.8,eff:88.7,bench:16.3},{week:14,actual:123.36,max:170.26,eff:72.5,bench:46.9}]},
+    "Greg Cady":{avgEff:89.5,avgBench:13.68,weeks:[{week:1,actual:104.1,max:143.9,eff:72.3,bench:39.8},{week:2,actual:139.18,max:144.78,eff:96.1,bench:5.6},{week:3,actual:128.16,max:145.36,eff:88.2,bench:17.2},{week:4,actual:128.96,max:148.06,eff:87.1,bench:19.1},{week:5,actual:99.26,max:116.66,eff:85.1,bench:17.4},{week:6,actual:96.82,max:107.42,eff:90.1,bench:10.6},{week:7,actual:131.8,max:139.1,eff:94.8,bench:7.3},{week:8,actual:104.14,max:116.9,eff:89.1,bench:12.76},{week:9,actual:96.52,max:108.32,eff:89.1,bench:11.8},{week:10,actual:102.1,max:108.9,eff:93.8,bench:6.8},{week:11,actual:174.44,max:172.94,eff:100.9,bench:-1.5},{week:12,actual:117.92,max:123.52,eff:95.5,bench:5.6},{week:13,actual:123.96,max:137.16,eff:90.4,bench:13.2},{week:14,actual:102.64,max:128.44,eff:79.9,bench:25.8}]},
+    "Tyler Goslinga":{avgEff:88.7,avgBench:13.53,weeks:[{week:1,actual:94.64,max:110.84,eff:85.4,bench:16.2},{week:2,actual:109.14,max:121.34,eff:89.9,bench:12.2},{week:3,actual:95.28,max:107.82,eff:88.4,bench:12.54},{week:4,actual:105.6,max:126.7,eff:83.3,bench:21.1},{week:5,actual:94.74,max:114.96,eff:82.4,bench:20.22},{week:6,actual:120.64,max:139.54,eff:86.5,bench:18.9},{week:7,actual:66.56,max:76.86,eff:86.6,bench:10.3},{week:8,actual:103.84,max:123.7,eff:83.9,bench:19.86},{week:9,actual:129.02,max:126.02,eff:102.4,bench:-3.0},{week:10,actual:98.24,max:116.64,eff:84.2,bench:18.4},{week:11,actual:119.56,max:126.46,eff:94.5,bench:6.9},{week:12,actual:115.06,max:122.26,eff:94.1,bench:7.2},{week:13,actual:109.74,max:139.84,eff:78.5,bench:30.1},{week:14,actual:74.16,max:72.7,eff:102.0,bench:-1.46}]},
+    "Vance Sipma":{avgEff:86.8,avgBench:19.02,weeks:[{week:1,actual:101.68,max:136.48,eff:74.5,bench:34.8},{week:2,actual:100.46,max:126.96,eff:79.1,bench:26.5},{week:3,actual:159.72,max:171.92,eff:92.9,bench:12.2},{week:4,actual:114.6,max:143.0,eff:80.1,bench:28.4},{week:5,actual:100.74,max:148.74,eff:67.7,bench:48.0},{week:6,actual:129.8,max:136.6,eff:95.0,bench:6.8},{week:7,actual:124.92,max:156.42,eff:79.9,bench:31.5},{week:8,actual:124.22,max:157.12,eff:79.1,bench:32.9},{week:9,actual:151.2,max:152.0,eff:99.5,bench:0.8},{week:10,actual:99.6,max:109.8,eff:90.7,bench:10.2},{week:11,actual:107.88,max:122.48,eff:88.1,bench:14.6},{week:12,actual:135.08,max:127.08,eff:106.3,bench:-8.0},{week:13,actual:133.52,max:146.22,eff:91.3,bench:12.7},{week:14,actual:152.28,max:167.18,eff:91.1,bench:14.9}]},
+    "Eric Graef":{avgEff:88.6,avgBench:14.92,weeks:[{week:1,actual:131.72,max:139.46,eff:94.5,bench:7.74},{week:2,actual:69.58,max:87.8,eff:79.2,bench:18.22},{week:3,actual:96.58,max:118.88,eff:81.2,bench:22.3},{week:4,actual:132.34,max:138.84,eff:95.3,bench:6.5},{week:5,actual:122.62,max:127.52,eff:96.2,bench:4.9},{week:6,actual:148.32,max:165.22,eff:89.8,bench:16.9},{week:7,actual:125.44,max:164.24,eff:76.4,bench:38.8},{week:8,actual:112.16,max:137.36,eff:81.7,bench:25.2},{week:9,actual:127.72,max:142.6,eff:89.6,bench:14.88},{week:10,actual:124.4,max:137.1,eff:90.7,bench:12.7},{week:11,actual:90.28,max:110.58,eff:81.6,bench:20.3},{week:12,actual:120.08,max:121.18,eff:99.1,bench:1.1},{week:13,actual:121.28,max:136.58,eff:88.8,bench:15.3},{week:14,actual:100.76,max:104.76,eff:96.2,bench:4.0}]},
+    "Ross Van Groningen":{avgEff:86.0,avgBench:17.89,weeks:[{week:1,actual:85.96,max:106.26,eff:80.9,bench:20.3},{week:2,actual:121.3,max:124.8,eff:97.2,bench:3.5},{week:3,actual:84.8,max:94.0,eff:90.2,bench:9.2},{week:4,actual:86.3,max:110.9,eff:77.8,bench:24.6},{week:5,actual:127.64,max:151.14,eff:84.5,bench:23.5},{week:6,actual:112.08,max:124.48,eff:90.0,bench:12.4},{week:7,actual:110.94,max:119.24,eff:93.0,bench:8.3},{week:8,actual:134.7,max:156.1,eff:86.3,bench:21.4},{week:9,actual:73.44,max:121.84,eff:60.3,bench:48.4},{week:10,actual:113.48,max:122.68,eff:92.5,bench:9.2},{week:11,actual:98.38,max:113.68,eff:86.5,bench:15.3},{week:12,actual:133.28,max:146.98,eff:90.7,bench:13.7},{week:13,actual:124.48,max:152.08,eff:81.9,bench:27.6},{week:14,actual:144.42,max:157.52,eff:91.7,bench:13.1}]},
+    "Greg Mulder":{avgEff:87.7,avgBench:15.89,weeks:[{week:1,actual:115.32,max:125.72,eff:91.7,bench:10.4},{week:2,actual:114.22,max:122.72,eff:93.1,bench:8.5},{week:3,actual:107.24,max:117.34,eff:91.4,bench:10.1},{week:4,actual:77.52,max:92.02,eff:84.2,bench:14.5},{week:5,actual:115.9,max:126.5,eff:91.6,bench:10.6},{week:6,actual:114.66,max:117.76,eff:97.4,bench:3.1},{week:7,actual:101.26,max:121.86,eff:83.1,bench:20.6},{week:8,actual:113.94,max:128.14,eff:88.9,bench:14.2},{week:9,actual:144.5,max:173.6,eff:83.2,bench:29.1},{week:10,actual:115.96,max:120.08,eff:96.6,bench:4.12},{week:11,actual:137.64,max:153.04,eff:89.9,bench:15.4},{week:12,actual:90.46,max:126.16,eff:71.7,bench:35.7},{week:13,actual:91.02,max:129.52,eff:70.3,bench:38.5},{week:14,actual:129.72,max:137.32,eff:94.5,bench:7.6}]},
+    "Matthew Van Groningen":{avgEff:82.0,avgBench:19.68,weeks:[{week:1,actual:83.88,max:117.96,eff:71.1,bench:34.08},{week:2,actual:89.64,max:123.14,eff:72.8,bench:33.5},{week:3,actual:72.38,max:121.96,eff:59.3,bench:49.58},{week:4,actual:90.82,max:109.92,eff:82.6,bench:19.1},{week:5,actual:103.62,max:106.72,eff:97.1,bench:3.1},{week:6,actual:97.66,max:99.8,eff:97.9,bench:2.14},{week:7,actual:73.64,max:98.84,eff:74.5,bench:25.2},{week:8,actual:91.44,max:108.74,eff:84.1,bench:17.3},{week:9,actual:95.44,max:92.94,eff:102.7,bench:-2.5},{week:10,actual:62.88,max:84.28,eff:74.6,bench:21.4},{week:11,actual:65.44,max:100.74,eff:65.0,bench:35.3},{week:12,actual:89.74,max:104.7,eff:85.7,bench:14.96},{week:13,actual:91.84,max:110.94,eff:82.8,bench:19.1},{week:14,actual:128.22,max:131.42,eff:97.6,bench:3.2}]},
+    "Steve Vander Molen":{avgEff:91.8,avgBench:9.33,weeks:[{week:1,actual:106.54,max:111.04,eff:95.9,bench:4.5},{week:2,actual:97.76,max:105.96,eff:92.3,bench:8.2},{week:3,actual:94.28,max:93.98,eff:100.3,bench:-0.3},{week:4,actual:89.42,max:110.02,eff:81.3,bench:20.6},{week:5,actual:99.96,max:110.76,eff:90.2,bench:10.8},{week:6,actual:123.7,max:124.5,eff:99.4,bench:0.8},{week:7,actual:102.28,max:117.78,eff:86.8,bench:15.5},{week:8,actual:143.6,max:148.0,eff:97.0,bench:4.4},{week:9,actual:120.62,max:127.52,eff:94.6,bench:6.9},{week:10,actual:87.42,max:110.32,eff:79.2,bench:22.9},{week:11,actual:120.26,max:128.7,eff:93.4,bench:8.44},{week:12,actual:121.78,max:128.52,eff:94.8,bench:6.74},{week:13,actual:89.06,max:107.82,eff:82.6,bench:18.76},{week:14,actual:93.2,max:95.6,eff:97.5,bench:2.4}]},
+    "Aaron Fay":{avgEff:88.4,avgBench:14.09,weeks:[{week:1,actual:96.26,max:123.96,eff:77.7,bench:27.7},{week:2,actual:110.9,max:116.2,eff:95.4,bench:5.3},{week:3,actual:89.1,max:109.24,eff:81.6,bench:20.14},{week:4,actual:100.4,max:117.9,eff:85.2,bench:17.5},{week:5,actual:95.06,max:101.36,eff:93.8,bench:6.3},{week:6,actual:101.4,max:108.6,eff:93.4,bench:7.2},{week:7,actual:84.66,max:88.26,eff:95.9,bench:3.6},{week:8,actual:151.7,max:171.14,eff:88.6,bench:19.44},{week:9,actual:118.3,max:128.8,eff:91.8,bench:10.5},{week:10,actual:70.74,max:78.74,eff:89.8,bench:8.0},{week:11,actual:144.04,max:160.74,eff:89.6,bench:16.7},{week:12,actual:84.16,max:115.3,eff:73.0,bench:31.14},{week:13,actual:110.5,max:131.8,eff:83.8,bench:21.3},{week:14,actual:131.88,max:134.28,eff:98.2,bench:2.4}]},
+  },
+  2025: {
+    "Trey Hugen":{avgEff:86.9,avgBench:14.03,weeks:[{week:1,actual:63.52,max:93.22,eff:68.1,bench:29.7},{week:2,actual:124.7,max:140.4,eff:88.8,bench:15.7},{week:3,actual:63.8,max:86.3,eff:73.9,bench:22.5},{week:4,actual:113.74,max:130.04,eff:87.5,bench:16.3},{week:5,actual:134.12,max:137.42,eff:97.6,bench:3.3},{week:6,actual:110.34,max:115.84,eff:95.3,bench:5.5},{week:7,actual:142.64,max:154.64,eff:92.2,bench:12.0},{week:8,actual:95.92,max:125.42,eff:76.5,bench:29.5},{week:9,actual:70.82,max:88.72,eff:79.8,bench:17.9},{week:10,actual:107.82,max:114.02,eff:94.6,bench:6.2},{week:11,actual:51.2,max:56.8,eff:90.1,bench:5.6},{week:12,actual:82.28,max:94.38,eff:87.2,bench:12.1},{week:13,actual:128.54,max:137.74,eff:93.3,bench:9.2},{week:14,actual:121.06,max:131.96,eff:91.7,bench:10.9}]},
+    "James Lazette":{avgEff:89.8,avgBench:10.44,weeks:[{week:1,actual:111.98,max:120.28,eff:93.1,bench:8.3},{week:2,actual:97.0,max:105.0,eff:92.4,bench:8.0},{week:3,actual:123.92,max:127.32,eff:97.3,bench:3.4},{week:4,actual:120.76,max:130.96,eff:92.2,bench:10.2},{week:5,actual:110.38,max:117.68,eff:93.8,bench:7.3},{week:6,actual:121.04,max:115.64,eff:104.7,bench:-5.4},{week:7,actual:68.42,max:75.02,eff:91.2,bench:6.6},{week:8,actual:35.48,max:52.38,eff:67.7,bench:16.9},{week:9,actual:85.32,max:100.02,eff:85.3,bench:14.7},{week:10,actual:120.02,max:128.62,eff:93.3,bench:8.6},{week:11,actual:113.02,max:141.6,eff:79.8,bench:28.58},{week:12,actual:66.62,max:79.52,eff:83.8,bench:12.9},{week:13,actual:140.96,max:161.02,eff:87.5,bench:20.06},{week:14,actual:113.68,max:119.68,eff:95.0,bench:6.0}]},
+    "Joshua Van Groningen":{avgEff:89.2,avgBench:13.41,weeks:[{week:1,actual:93.74,max:117.04,eff:80.1,bench:23.3},{week:2,actual:120.04,max:147.54,eff:81.4,bench:27.5},{week:3,actual:88.62,max:92.72,eff:95.6,bench:4.1},{week:4,actual:89.28,max:120.04,eff:74.4,bench:30.76},{week:5,actual:121.28,max:128.18,eff:94.6,bench:6.9},{week:6,actual:89.58,max:88.68,eff:101.0,bench:-0.9},{week:7,actual:101.22,max:129.96,eff:77.9,bench:28.74},{week:8,actual:142.88,max:152.18,eff:93.9,bench:9.3},{week:9,actual:113.08,max:128.52,eff:88.0,bench:15.44},{week:10,actual:89.3,max:114.4,eff:78.1,bench:25.1},{week:11,actual:123.8,max:135.3,eff:91.5,bench:11.5},{week:12,actual:107.64,max:105.64,eff:101.9,bench:-2.0},{week:13,actual:95.24,max:96.74,eff:98.4,bench:1.5},{week:14,actual:70.98,max:77.48,eff:91.6,bench:6.5}]},
+    "Greg Cady":{avgEff:83.2,avgBench:22.11,weeks:[{week:1,actual:97.12,max:126.1,eff:77.0,bench:28.98},{week:2,actual:111.68,max:144.18,eff:77.5,bench:32.5},{week:3,actual:151.32,max:163.12,eff:92.8,bench:11.8},{week:4,actual:131.08,max:191.2,eff:68.6,bench:60.12},{week:5,actual:109.06,max:114.86,eff:95.0,bench:5.8},{week:6,actual:84.44,max:100.98,eff:83.6,bench:16.54},{week:7,actual:67.78,max:109.88,eff:61.7,bench:42.1},{week:8,actual:126.6,max:144.1,eff:87.9,bench:17.5},{week:9,actual:116.1,max:121.9,eff:95.2,bench:5.8},{week:10,actual:106.1,max:119.2,eff:89.0,bench:13.1},{week:11,actual:103.62,max:116.52,eff:88.9,bench:12.9},{week:12,actual:106.06,max:115.66,eff:91.7,bench:9.6},{week:13,actual:71.96,max:98.56,eff:73.0,bench:26.6},{week:14,actual:129.44,max:155.64,eff:83.2,bench:26.2}]},
+    "Tyler Goslinga":{avgEff:88.9,avgBench:14.64,weeks:[{week:1,actual:78.4,max:97.0,eff:80.8,bench:18.6},{week:2,actual:155.06,max:186.26,eff:83.2,bench:31.2},{week:3,actual:111.38,max:128.48,eff:86.7,bench:17.1},{week:4,actual:101.92,max:129.72,eff:78.6,bench:27.8},{week:5,actual:114.82,max:121.92,eff:94.2,bench:7.1},{week:6,actual:120.04,max:131.14,eff:91.5,bench:11.1},{week:7,actual:121.34,max:148.94,eff:81.5,bench:27.6},{week:8,actual:129.34,max:123.84,eff:104.4,bench:-5.5},{week:9,actual:118.26,max:123.16,eff:96.0,bench:4.9},{week:10,actual:184.4,max:182.8,eff:100.9,bench:-1.6},{week:11,actual:81.5,max:85.9,eff:94.9,bench:4.4},{week:12,actual:127.36,max:152.56,eff:83.5,bench:25.2},{week:13,actual:127.24,max:134.04,eff:94.9,bench:6.8},{week:14,actual:81.36,max:111.66,eff:72.9,bench:30.3}]},
+    "Vance Sipma":{avgEff:89.4,avgBench:12.55,weeks:[{week:1,actual:131.76,max:134.36,eff:98.1,bench:2.6},{week:2,actual:101.22,max:108.82,eff:93.0,bench:7.6},{week:3,actual:116.12,max:127.82,eff:90.8,bench:11.7},{week:4,actual:132.76,max:155.16,eff:85.6,bench:22.4},{week:5,actual:94.22,max:99.52,eff:94.7,bench:5.3},{week:6,actual:113.0,max:131.6,eff:85.9,bench:18.6},{week:7,actual:84.76,max:92.76,eff:91.4,bench:8.0},{week:8,actual:108.12,max:119.42,eff:90.5,bench:11.3},{week:9,actual:105.6,max:119.2,eff:88.6,bench:13.6},{week:10,actual:108.24,max:109.74,eff:98.6,bench:1.5},{week:11,actual:105.38,max:127.18,eff:82.9,bench:21.8},{week:12,actual:76.52,max:103.52,eff:73.9,bench:27.0},{week:13,actual:84.32,max:100.82,eff:83.6,bench:16.5},{week:14,actual:108.54,max:116.34,eff:93.3,bench:7.8}]},
+    "Eric Graef":{avgEff:79.0,avgBench:25.66,weeks:[{week:1,actual:106.86,max:132.46,eff:80.7,bench:25.6},{week:2,actual:118.0,max:129.8,eff:90.9,bench:11.8},{week:3,actual:106.76,max:132.52,eff:80.6,bench:25.76},{week:4,actual:115.58,max:143.88,eff:80.3,bench:28.3},{week:5,actual:91.4,max:97.4,eff:93.8,bench:6.0},{week:6,actual:83.48,max:115.18,eff:72.5,bench:31.7},{week:7,actual:102.12,max:122.02,eff:83.7,bench:19.9},{week:8,actual:94.04,max:112.34,eff:83.7,bench:18.3},{week:9,actual:93.96,max:113.04,eff:83.1,bench:19.08},{week:10,actual:107.14,max:129.2,eff:82.9,bench:22.06},{week:11,actual:73.42,max:114.0,eff:64.4,bench:40.58},{week:12,actual:97.52,max:143.52,eff:67.9,bench:46.0},{week:13,actual:62.74,max:100.12,eff:62.7,bench:37.38},{week:14,actual:97.56,max:124.34,eff:78.5,bench:26.78}]},
+    "Ross Van Groningen":{avgEff:90.3,avgBench:11.94,weeks:[{week:1,actual:126.48,max:131.68,eff:96.1,bench:5.2},{week:2,actual:99.94,max:118.34,eff:84.5,bench:18.4},{week:3,actual:75.54,max:82.44,eff:91.6,bench:6.9},{week:4,actual:101.06,max:113.76,eff:88.8,bench:12.7},{week:5,actual:177.68,max:179.88,eff:98.8,bench:2.2},{week:6,actual:139.74,max:145.54,eff:96.0,bench:5.8},{week:7,actual:126.96,max:135.86,eff:93.4,bench:8.9},{week:8,actual:88.02,max:106.02,eff:83.0,bench:18.0},{week:9,actual:107.7,max:141.1,eff:76.3,bench:33.4},{week:10,actual:126.82,max:133.92,eff:94.7,bench:7.1},{week:11,actual:109.62,max:127.02,eff:86.3,bench:17.4},{week:12,actual:127.86,max:133.46,eff:95.8,bench:5.6},{week:13,actual:96.7,max:113.7,eff:85.0,bench:17.0},{week:14,actual:125.34,max:133.84,eff:93.6,bench:8.5}]},
+    "Greg Mulder":{avgEff:84.3,avgBench:18.4,weeks:[{week:1,actual:101.78,max:108.68,eff:93.7,bench:6.9},{week:2,actual:60.24,max:105.28,eff:57.2,bench:45.04},{week:3,actual:83.44,max:112.74,eff:74.0,bench:29.3},{week:4,actual:88.4,max:119.18,eff:74.2,bench:30.78},{week:5,actual:113.1,max:123.2,eff:91.8,bench:10.1},{week:6,actual:131.5,max:133.92,eff:98.2,bench:2.42},{week:7,actual:145.04,max:150.44,eff:96.4,bench:5.4},{week:8,actual:145.76,max:155.8,eff:93.6,bench:10.04},{week:9,actual:125.22,max:133.32,eff:93.9,bench:8.1},{week:10,actual:54.12,max:71.52,eff:75.7,bench:17.4},{week:11,actual:81.8,max:100.76,eff:81.2,bench:18.96},{week:12,actual:165.06,max:170.36,eff:96.9,bench:5.3},{week:13,actual:115.3,max:151.06,eff:76.3,bench:35.76},{week:14,actual:112.1,max:144.2,eff:77.7,bench:32.1}]},
+    "Matthew Van Groningen":{avgEff:83.8,avgBench:19.75,weeks:[{week:1,actual:92.38,max:133.82,eff:69.0,bench:41.44},{week:2,actual:75.08,max:119.2,eff:63.0,bench:44.12},{week:3,actual:120.82,max:128.42,eff:94.1,bench:7.6},{week:4,actual:115.02,max:132.22,eff:87.0,bench:17.2},{week:5,actual:84.02,max:111.92,eff:75.1,bench:27.9},{week:6,actual:65.14,max:66.04,eff:98.6,bench:0.9},{week:7,actual:123.08,max:134.78,eff:91.3,bench:11.7},{week:8,actual:73.18,max:85.48,eff:85.6,bench:12.3},{week:9,actual:107.96,max:116.86,eff:92.4,bench:8.9},{week:10,actual:114.9,max:131.0,eff:87.7,bench:16.1},{week:11,actual:104.24,max:118.24,eff:88.2,bench:14.0},{week:12,actual:82.56,max:121.76,eff:67.8,bench:39.2},{week:13,actual:104.18,max:130.58,eff:79.8,bench:26.4},{week:14,actual:130.86,max:139.66,eff:93.7,bench:8.8}]},
+    "Steve Vander Molen":{avgEff:89.8,avgBench:14.19,weeks:[{week:1,actual:70.22,max:88.22,eff:79.6,bench:18.0},{week:2,actual:129.34,max:132.74,eff:97.4,bench:3.4},{week:3,actual:113.4,max:139.0,eff:81.6,bench:25.6},{week:4,actual:144.5,max:159.1,eff:90.8,bench:14.6},{week:5,actual:145.04,max:153.18,eff:94.7,bench:8.14},{week:6,actual:126.52,max:153.9,eff:82.2,bench:27.38},{week:7,actual:154.94,max:165.22,eff:93.8,bench:10.28},{week:8,actual:109.72,max:133.92,eff:81.9,bench:24.2},{week:9,actual:134.84,max:155.9,eff:86.5,bench:21.06},{week:10,actual:130.18,max:128.08,eff:101.6,bench:-2.1},{week:11,actual:116.36,max:136.36,eff:85.3,bench:20.0},{week:12,actual:160.56,max:178.56,eff:89.9,bench:18.0},{week:13,actual:115.44,max:123.54,eff:93.4,bench:8.1},{week:14,actual:95.96,max:97.96,eff:98.0,bench:2.0}]},
+    "Aaron Fay":{avgEff:81.9,avgBench:22.53,weeks:[{week:1,actual:106.92,max:129.92,eff:82.3,bench:23.0},{week:2,actual:78.28,max:105.78,eff:74.0,bench:27.5},{week:3,actual:113.36,max:121.3,eff:93.5,bench:7.94},{week:4,actual:76.12,max:111.8,eff:68.1,bench:35.68},{week:5,actual:127.02,max:151.52,eff:83.8,bench:24.5},{week:6,actual:135.78,max:153.68,eff:88.4,bench:17.9},{week:7,actual:106.44,max:132.9,eff:80.1,bench:26.46},{week:8,actual:120.82,max:119.64,eff:101.0,bench:-1.18},{week:9,actual:101.2,max:123.2,eff:82.1,bench:22.0},{week:10,actual:122.0,max:150.1,eff:81.3,bench:28.1},{week:11,actual:69.44,max:131.04,eff:53.0,bench:61.6},{week:12,actual:74.28,max:80.68,eff:92.1,bench:6.4},{week:13,actual:116.24,max:121.64,eff:95.6,bench:5.4},{week:14,actual:76.4,max:106.46,eff:71.8,bench:30.06}]},
+  },
+};
+
 const ALUMNI = new Set(["Spencer Hower","Casey Rhoda","Tim Hoekstra","Jonathon Israel","Jon Vander Molen","Ben de Ruiter","Zac Dewey","Tommy Van Groningen"]);
 const mgr = (name) => ALUMNI.has(name) ? `${name} 💀🪦⚰️` : name;
 const firstName = (name) => {
@@ -46416,6 +47998,9 @@ function LeagueHQTab() {
               { n:"2", title:"Recompute Pre-calculated Stats",
                 items:["Run recalculate_h2h.py → update DATA.h2h",
                        "Run playoff_data.py → update DATA.playoffData + DATA.leagueWinners",
+                       "Run nfl_playoff_scores.py > out.txt → paste NFL_PLAYOFF_SCORES into App.jsx (replaces old block)",
+                       "Run nfl_transactions.py > out.txt → paste NFL_TRANSACTIONS + NFL_TRANSACTION_SUMMARY into App.jsx",
+                       "Run nfl_lineup_efficiency.py > out.txt → paste NFL_LINEUP_EFFICIENCY into App.jsx",
                        "Manually update DATA.eraProfiles (W/L, streaks, best/worst season)",
                        "Append new season to DATA.seasonHistories for each manager",
                        "Recompute DATA.scoreDistByManager, DATA.careerLuck, DATA.dramaData, DATA.managerGrades"] },
@@ -46423,6 +48008,7 @@ function LeagueHQTab() {
                 items:["Add new year to all 5 ALL_YEARS arrays",
                        "Replace year===2025 (9 instances) with new year",
                        "Rename DraftPrediction2026 → DraftPrediction2027 (component + tile + routing)",
+                       "Add new year to NFL_PLAYOFF_SCORES year dropdown in PlayoffHistoryTab bracketYear selector",
                        "Update Championships list in LeagueHQTab (scroll to 'Championships')"] },
               { n:"4", title:"Regenerate AI Narratives",
                 items:["Update CURRENT_YEAR in regenerate_draft_profiles.js, then run it",
@@ -46523,6 +48109,95 @@ function LeagueHQTab() {
               [Add your notes here — trades of note, rules disputes, memorable moments,
               offseason decisions. This is your scratchpad.]
             </div>
+          </SectionCard>
+
+          <SectionCard emoji="📋" title="Annual Update Checklist" color="#e9c46a">
+            <BodyText>Run this every January after the season ends. Complete steps in order.</BodyText>
+            {[
+              { n:"1", title:"Collect Raw Data",
+                items:["Pull weekly scores from Sleeper API (all 17 weeks) → append to DATA.playerData.weeklyScores",
+                       "Pull auction draft picks from Sleeper API → append to DATA.playerData.draftPicks",
+                       "Add any new players to DATA.playerData.players (name, position, nflTeam)"] },
+              { n:"2", title:"Recompute Pre-calculated Stats",
+                items:["Run recalculate_h2h.py → update DATA.h2h",
+                       "Run playoff_data.py → update DATA.playoffData + DATA.leagueWinners",
+                       "Manually update DATA.eraProfiles (W/L, streaks, best/worst season)",
+                       "Append new season to DATA.seasonHistories for each manager",
+                       "Recompute DATA.scoreDistByManager, DATA.careerLuck, DATA.dramaData, DATA.managerGrades"] },
+              { n:"3", title:"Update Year Constants in JSX",
+                items:["Add new year to all 5 ALL_YEARS arrays",
+                       "Replace year===2025 (9 instances) with new year",
+                       "Rename DraftPrediction2026 → DraftPrediction2027 (component + tile + routing)",
+                       "Update Championships list in LeagueHQTab (scroll to 'Championships')"] },
+              { n:"4", title:"Regenerate AI Narratives",
+                items:["Update CURRENT_YEAR in regenerate_draft_profiles.js, then run it",
+                       "Paste output into DATA.draftProfiles in the JSX",
+                       "Manually update key sections of DATA.managerProfiles (story, moments, legacy)"] },
+              { n:"5", title:"Validate & Deploy",
+                items:["Run Babel parse check (see dev notes below)",
+                       "Spot-check: new year in selectors, correct W/L records, no stubs visible",
+                       "Verify Sleeper API shape: open the 2026 Season tab, hit Refresh, confirm no schema warning banner",
+                       "Deploy to GitHub Pages"] },
+            ].map(step => (
+              <div key={step.n} style={{ borderTop:"1px solid #1a1a1a", paddingTop:10 }}>
+                <div style={{ fontWeight:700, fontSize:mobile?12:13, color:"#e9c46a", marginBottom:6 }}>
+                  Step {step.n}: {step.title}
+                </div>
+                <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
+                  {step.items.map((item, i) => (
+                    <div key={i} style={{ display:"flex", gap:8, fontSize:mobile?11:12, color:"#666", alignItems:"flex-start" }}>
+                      <span style={{ color:"#e9c46a", flexShrink:0 }}>→</span>
+                      <span style={{ fontFamily:"monospace", background:"#050505", borderRadius:4, padding:"2px 6px", lineHeight:1.6, wordBreak:"break-word" }}>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </SectionCard>
+
+          <SectionCard emoji="🗓️" title="Pre-Season Checklist" color="#64b5f6">
+            <BodyText>Run this each August before the auction draft.</BodyText>
+            {[
+              { n:"1", title:"Verify Sleeper display names", items:["Check all active managers' Sleeper handles still match SLEEPER_NAME_MAP in App.jsx — managers sometimes change handles between seasons"] },
+              { n:"2", title:"Update the current season league ID", items:["Update SLEEPER_2026_LEAGUE_ID constant in App.jsx to the new season's ID — find it in the Sleeper URL after creating the new league"] },
+              { n:"3", title:"Add new league ID to Python scripts", items:["In recalculate_h2h.py, add the new season to the LEAGUE_IDS dictionary at the top of the file"] },
+              { n:"4", title:"Check manager changes", items:["Add departing managers to the alumni set", "Add new managers to MANAGER_NFL_TEAM with NFL team allegiance", "Compute NFL Franchise Twin + reason, add to DATA.mgrNFLTwin and DATA.mgrNFLTwinReason", "Apply the geographic rule for anyone who moved more than 1 hour from Ripon"] },
+              { n:"5", title:"Test live data fetch", items:["Open the 2026 Season tab, confirm standings/matchups/transactions load from Sleeper with no schema warning banner"] },
+              { n:"6", title:"Babel check + deploy", items:["Run Babel parse check: node -e \"const p=require('@babel/parser');p.parse(require('fs').readFileSync('App.jsx','utf8'),{sourceType:'module',plugins:['jsx']});console.log('PASS');\""] },
+            ].map(step => (
+              <div key={step.n} style={{ borderTop:"1px solid #1a1a1a", paddingTop:10 }}>
+                <div style={{ fontWeight:700, fontSize:mobile?12:13, color:"#64b5f6", marginBottom:6 }}>Step {step.n}: {step.title}</div>
+                <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
+                  {step.items.map((item, i) => (
+                    <div key={i} style={{ display:"flex", gap:8, fontSize:mobile?11:12, color:"#666", alignItems:"flex-start" }}>
+                      <span style={{ color:"#64b5f6", flexShrink:0 }}>→</span>
+                      <span style={{ fontFamily:"monospace", background:"#050505", borderRadius:4, padding:"2px 6px", lineHeight:1.6, wordBreak:"break-word" }}>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </SectionCard>
+
+          <SectionCard emoji="⚙️" title="Script Reference" color="#a8dadc">
+            <BodyText>All scripts live in C:\Users\RVANGRON\Downloads\</BodyText>
+            {[
+              { label:"recalculate_h2h.py",
+                val:"WHEN: January annual update.  HOW: python recalculate_h2h.py > h2h_output.txt  OUTPUT: Paste JS block into DATA.h2h in App.jsx. Pulls all Sleeper-era matchup data and recomputes every H2H record." },
+              { label:"generate_draft_profiles.py",
+                val:"WHEN: January annual update, after recalculate_h2h.py.  HOW: python generate_draft_profiles.py > profiles_output.txt  OUTPUT: Paste into DATA.draftProfiles. Calls Claude Sonnet with career stats to generate narrative profiles. Requires ANTHROPIC_API_KEY." },
+              { label:"yahoo_h2h.py (historical — already run)",
+                val:"This script pulled Yahoo Fantasy API data for 2015–2021 seasons. Requires OAuth. Already run — output is permanently embedded. No need to run again unless historical data needs correction." },
+              { label:"Babel parse check (run before every deploy)",
+                val:"Run: node with @babel/parser — see Dev Notes in DD vault or the Commissioner Vault for the full command" },
+              { label:"Change vault password",
+                val:"Search VAULT_PASSWORD in LeagueHQTab — plain text string, update it there. Same password used across both NFL and DD vaults." },
+            ].map(({label, val}) => (
+              <div key={label} style={{ borderTop:"1px solid #1a1a1a", paddingTop:8 }}>
+                <div style={{ fontSize:mobile?10:11, fontWeight:700, color:"#a8dadc", marginBottom:3 }}>{label}</div>
+                <div style={{ fontSize:mobile?10:11, color:"#555", fontFamily:"monospace", background:"#050505", borderRadius:4, padding:"4px 8px", overflowX:"auto", whiteSpace:"pre-wrap", lineHeight:1.5 }}>{val}</div>
+              </div>
+            ))}
           </SectionCard>
 
         </div>
@@ -48440,10 +50115,11 @@ function H2HMatrixSection() {
 
 // ── NFL TWIN GALLERY ──────────────────────────────────────────────────────────
 function NFLTwinGallery() {
-  const mobile    = useMobile();
+  const mobile      = useMobile();
   const [showAlumni, setShowAlumni] = useState(false);
-  const allMgrs   = [...new Set(Object.keys(DATA.eraProfiles))].sort();
-  const displayed = allMgrs.filter(m => showAlumni || !ALUMNI.has(m));
+  const [expanded,   setExpanded]   = useState(null);
+  const allMgrs     = [...new Set(Object.keys(DATA.eraProfiles))].sort();
+  const displayed   = allMgrs.filter(m => showAlumni || !ALUMNI.has(m));
 
   return (
     <Card>
@@ -48452,39 +50128,53 @@ function NFLTwinGallery() {
         <ToggleBtn active={showAlumni} onToggle={() => setShowAlumni(s => !s)}
           label={showAlumni ? "👁️ Show All" : "👁️ Active Only"} />
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: mobile ? "1fr 1fr" : "1fr 1fr 1fr 1fr", gap: mobile ? 8 : 12 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: mobile ? 10 : 12 }}>
         {displayed.map(name => {
           const twin     = DATA.mgrNFLTwin[name];
           const twinData = twin ? DATA.nflTeams[twin] : null;
+          const reason   = DATA.mgrNFLTwinReason?.[name];
           const mgrCol   = getColor(name);
           const isAlum   = ALUMNI.has(name);
+          const isOpen   = expanded === name;
           if (!twin || !twinData) return null;
           return (
             <div key={name} style={{
               background: "#0a0a0a",
-              border: `1px solid ${twinData.color}33`,
-              borderTop: `3px solid ${twinData.color}`,
-              borderRadius: 8, padding: mobile ? "10px" : "14px",
-              opacity: isAlum ? 0.65 : 1,
+              border: `1px solid ${twinData.color}${isOpen ? "66" : "33"}`,
+              borderLeft: `4px solid ${twinData.color}`,
+              borderRadius: 8,
+              opacity: isAlum ? 0.75 : 1,
+              overflow: "hidden",
             }}>
-              {/* NFL logo + team */}
-              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+              {/* ── Header row ── */}
+              <button onClick={() => setExpanded(isOpen ? null : name)}
+                style={{ width: "100%", background: "none", border: "none", cursor: "pointer",
+                  display: "flex", alignItems: "center", gap: mobile ? 10 : 14,
+                  padding: mobile ? "10px 12px" : "12px 16px", textAlign: "left" }}>
                 <TeamLogo teamData={twinData} size={mobile ? 36 : 44} />
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ color: twinData.color, fontWeight: 700, fontSize: mobile ? 11 : 12,
-                    overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{twin}</div>
-                  <div style={{ color: "#555", fontSize: 11 }}>{twinData.abbr}</div>
+                  <div style={{ color: twinData.color, fontWeight: 700,
+                    fontSize: mobile ? 12 : 14, letterSpacing: 0.5 }}>{twin}</div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 3 }}>
+                    <ManagerLogo name={name} size={18} />
+                    <span style={{ color: mgrCol, fontWeight: 600, fontSize: mobile ? 11 : 12 }}>
+                      {firstName(name)}{isAlum ? " · Alumni" : ""}
+                    </span>
+                  </div>
                 </div>
-              </div>
-              {/* Manager */}
-              <div style={{ display: "flex", alignItems: "center", gap: 6, paddingTop: 8,
-                borderTop: `1px solid ${twinData.color}22` }}>
-                <ManagerLogo name={name} size={22} />
-                <span style={{ color: mgrCol, fontWeight: 600, fontSize: mobile ? 11 : 12,
-                  overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                  {firstName(name)}{isAlum ? " 💀" : ""}
-                </span>
-              </div>
+                <span style={{ color: isOpen ? twinData.color : "#444", fontSize: 14, flexShrink: 0,
+                  transition: "transform 0.15s", transform: isOpen ? "rotate(180deg)" : "none" }}>▼</span>
+              </button>
+              {/* ── Expanded write-up ── */}
+              {isOpen && reason && (
+                <div style={{ padding: mobile ? "0 12px 14px" : "0 16px 16px",
+                  borderTop: `1px solid ${twinData.color}22` }}>
+                  <div style={{ fontSize: mobile ? 11 : 12, color: "#aaa", lineHeight: 1.8,
+                    paddingTop: 12, fontStyle: "italic" }}>
+                    "{reason}"
+                  </div>
+                </div>
+              )}
             </div>
           );
         })}
@@ -50744,152 +52434,7 @@ function VaultTab() {
   const { open: openRivalry } = useRivalry();
   // ── Section nav ──
   const [section, setSection] = useState("home");
-  const [docsOpen, setDocsOpen] = useState(null);
 
-  // ── Commissioner's Docs ──
-  const VAULT_DOCS = {
-    "ANNUAL_UPDATE.md": {
-      emoji: "📅",
-      title: "No Fun League — Annual Update Checklist",
-      content: `# No Fun League — Annual Update Checklist
-
-Run this checklist each January after the season ends. Complete steps in order.
-
-## Step 1 — Add new season to embedded data
-
-In App.jsx, update the DATA constant with the new season's standings, weekly scores, and playoff results. Pull final standings from Sleeper and the playoff bracket screenshot.
-
-## Step 2 — Run the H2H recalculator
-
-Run from C:\\Users\\RVANGRON\\Downloads\\:
-
-  python recalculate_h2h.py
-
-Paste the output into the h2h block inside DATA in App.jsx.
-
-## Step 3 — Run the draft profile generator
-
-  python generate_draft_profiles.py
-
-This calls Claude Sonnet with each manager's computed stats and generates narrative paragraphs for the Manager Profile tiles. Paste output into the aiProfiles block in DATA.
-
-## Step 4 — Update keeper history
-
-Add the new year's keeper selections to the keeper history data in App.jsx.
-
-## Step 5 — Verify manager roster changes
-
-If any managers joined or left, update:
-- MANAGER_NFL_TEAM (add new manager's NFL team allegiance)
-- mgrNFLTwin (add new manager's franchise twin)
-- Active/alumni lists
-
-## Step 6 — Babel parse check
-
-  node -e "const parser = require('@babel/parser'); const src = require('fs').readFileSync('App.jsx','utf8'); parser.parse(src,{sourceType:'module',plugins:['jsx']}); console.log('PASS');"
-
-## Step 7 — Deploy
-
-Upload App.jsx to GitHub → src folder → commit → wait for green checkmark in Actions.
-
----
-Last updated: May 2026`,
-    },
-    "PRESEASON.md": {
-      emoji: "☀️",
-      title: "No Fun League — Pre-Season Checklist",
-      content: `# No Fun League — Pre-Season Checklist
-
-Run this checklist each August before the auction draft.
-
-## Step 1 — Verify Sleeper display names
-
-Check that all active managers' Sleeper handles still match SLEEPER_NAME_MAP in App.jsx. Managers sometimes change their Sleeper display names between seasons.
-
-Current map keys to verify:
-- Confirm each handle still resolves to the right manager in the Sleeper app
-- Update any changed handles before the season goes live
-
-## Step 2 — Update the current season league ID
-
-In App.jsx, update SLEEPER_2026_LEAGUE_ID (or whichever year constant) to the new season's Sleeper league ID. Find it in the Sleeper URL after creating the new league.
-
-## Step 3 — Add new league ID to Python scripts
-
-In recalculate_h2h.py, add the new season to the LEAGUE_IDS dictionary at the top of the file.
-
-## Step 4 — Check manager changes
-
-If anyone joined, left, or relocated:
-- Add departing managers to the alumni list
-- Add new managers to MANAGER_NFL_TEAM with their NFL team allegiance
-- Compute their NFL Franchise Twin and add to mgrNFLTwin in DATA
-- Apply the geographic rule for anyone who moved more than 1 hour from Ripon
-
-## Step 5 — Review NFL team allegiances
-
-Ask the group if anyone wants to change their NFL team allegiance for the new season. Update MANAGER_NFL_TEAM accordingly.
-
-## Step 6 — Test live data fetch
-
-After setting the new league ID, open the dashboard and hit the 2026 Season tab. Confirm standings, matchups, and transactions are loading correctly from Sleeper.
-
-## Step 7 — Babel check + deploy
-
-  node -e "const parser = require('@babel/parser'); const src = require('fs').readFileSync('App.jsx','utf8'); parser.parse(src,{sourceType:'module',plugins:['jsx']}); console.log('PASS');"
-
-Upload and commit to GitHub.
-
----
-Last updated: May 2026`,
-    },
-    "SCRIPTS.md": {
-      emoji: "⚙️",
-      title: "No Fun League — Script Reference",
-      content: `# No Fun League — Script Reference
-
-All scripts live in C:\\Users\\RVANGRON\\Downloads\\
-
----
-
-## recalculate_h2h.py
-
-WHEN: January annual update, after adding new season data.
-
-WHAT: Pulls all matchup data from the Sleeper API for all Sleeper-era seasons (2022–present) and recomputes every head-to-head record (W, L, PF, PA) for every manager pair.
-
-HOW:
-  python recalculate_h2h.py > h2h_output.txt
-
-OUTPUT: Paste the printed JS block into the h2h section inside DATA in App.jsx.
-
-NOTE: Yahoo era (2015–2021) H2H data is already embedded and does not need recalculation.
-
----
-
-## generate_draft_profiles.py
-
-WHEN: January annual update, after recalculating H2H.
-
-WHAT: Calls Claude Sonnet with each manager's career statistics and generates narrative AI profile paragraphs for the Manager Profile section of the dashboard.
-
-HOW:
-  python generate_draft_profiles.py > profiles_output.txt
-
-OUTPUT: Paste the printed JS block into the aiProfiles section in DATA in App.jsx.
-
-REQUIRES: Anthropic API key set in the script header.
-
----
-
-## yahoo_h2h.py (historical — already run)
-
-This script was used to pull Yahoo Fantasy API data for the 2015–2021 seasons. It requires OAuth authentication. It has already been run and its output is permanently embedded in the dashboard. No need to run again unless historical data needs correction.
-
----
-Last updated: May 2026`,
-    },
-  };
 
   // ── Scores section state ──
   const [view, setView]               = useState("top");
@@ -51091,8 +52636,9 @@ Last updated: May 2026`,
 
           { key: "luck",      emoji: "🎲", label: "Rigged?",           sub: "Luck vs skill breakdown",             color: "#9b5de5" },
           { key: "bellcurve", emoji: "📉", label: "Score Dist.",       sub: "Scoring distribution",               color: "#2ecc71" },
-          { key: "drama",     emoji: "🎢", label: "Chaos Meter",       sub: "Blowouts, nail-biters & wild games",  color: "#2176d2" },
-          { key: "docs",      emoji: "📋", label: "Commissioner's Docs", sub: "Annual update, pre-season checklist & script reference", color: "#e9c46a" },
+          { key: "drama",     emoji: "🎢", label: "Chaos Meter",        sub: "Blowouts, nail-biters & wild games",                    color: "#2176d2" },
+          { key: "txns",      emoji: "🤝", label: "Transaction History", sub: "Trade kings, waiver activity & FA adds — 2022–2025",    color: "#64b5f6" },
+          { key: "lineupeff", emoji: "🎯", label: "Lineup Efficiency",    sub: "Who maximizes their roster vs who leaves pts on bench", color: "#2ecc71" },
         ];
         const activeTitle = VAULT_TILES.find(t => t.key === section);
 
@@ -51519,39 +53065,104 @@ Last updated: May 2026`,
       {/* ═══ SECTION: YEAR-OVER-YEAR SCORING ════════════════════════════════════ */}
 
       {/* ═══ SECTION: RIVALRY INDEX ══════════════════════════════════════════ */}
-      {section === "rivalry" && <RivalrySection />}
-
-      {/* ═══ SECTION: COMMISSIONER'S DOCS ══════════════════════════════════ */}
-      {section === "docs" && (
-        <div>
-          {docsOpen ? (
-            <div>
-              <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:16 }}>
-                <button onClick={() => setDocsOpen(null)} style={{ background:"#1a1a1a", border:"1px solid #333", borderRadius:8, padding:"6px 12px", color:"#e9c46a", fontSize:13, cursor:"pointer" }}>← Docs</button>
-                <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?14:16, color:"#e9c46a" }}>{VAULT_DOCS[docsOpen].emoji} {VAULT_DOCS[docsOpen].title}</div>
-              </div>
-              <pre style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"16px", fontSize:mobile?11:12, color:"#ccc", overflowX:"auto", whiteSpace:"pre-wrap", lineHeight:1.7, fontFamily:"'Courier New',monospace" }}>
-                {VAULT_DOCS[docsOpen].content}
-              </pre>
-            </div>
-          ) : (
-            <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
-              <div style={{ fontSize:11, color:"#555", textTransform:"uppercase", letterSpacing:1, marginBottom:4 }}>Commissioner Documents</div>
-              {Object.entries(VAULT_DOCS).map(([filename, doc]) => (
-                <button key={filename} onClick={() => setDocsOpen(filename)}
-                  style={{ display:"flex", alignItems:"center", gap:14, background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"12px 16px", cursor:"pointer", textAlign:"left" }}>
-                  <span style={{ fontSize:28 }}>{doc.emoji}</span>
-                  <div style={{ flex:1 }}>
-                    <div style={{ fontSize:13, fontWeight:600, color:"#fff", marginBottom:2 }}>{doc.title}</div>
-                    <div style={{ fontSize:11, color:"#555" }}>{filename}</div>
+      {section === "txns" && (() => {
+        const summary  = NFL_TRANSACTION_SUMMARY || {};
+        const sorted   = Object.entries(summary).sort((a,b) => b[1].totalMoves - a[1].totalMoves);
+        const maxMoves = sorted[0]?.[1]?.totalMoves || 1;
+        return (
+          <Card>
+            <SectionTitle>🤝 Transaction History — 2022–2025</SectionTitle>
+            <BodyText>All completed trades, waiver claims and free agent adds across the Sleeper era. Sorted by total moves.</BodyText>
+            <div style={{ display:"flex", flexDirection:"column", gap:mobile?8:10, marginTop:8 }}>
+              {sorted.map(([mgr, s], i) => (
+                <div key={mgr} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
+                  <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:8 }}>
+                    <div style={{ width:22, textAlign:"center", fontSize:12, color:i<3?"#64b5f6":"#555", flexShrink:0 }}>{i===0?"🥇":i===1?"🥈":i===2?"🥉":`#${i+1}`}</div>
+                    <ManagerLogo name={mgr} size={20} />
+                    <span style={{ fontSize:mobile?12:14, fontWeight:600, color:"#fff", flex:1 }}>{firstName(mgr)}</span>
+                    <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:16, color:"#64b5f6", flexShrink:0 }}>{s.totalMoves}</span>
+                    <span style={{ fontSize:10, color:"#555" }}>moves</span>
                   </div>
-                  <span style={{ color:"#333", fontSize:12 }}>→</span>
-                </button>
+                  <div style={{ background:"#111", borderRadius:3, height:4, marginBottom:8 }}>
+                    <div style={{ height:4, borderRadius:3, width:`${s.totalMoves/maxMoves*100}%`, background:"#64b5f6" }} />
+                  </div>
+                  <div style={{ display:"flex", gap:mobile?8:16, fontSize:10, color:"#555", flexWrap:"wrap" }}>
+                    <span>🤝 <span style={{ color:"#2176d2" }}>{s.trades}</span> trades</span>
+                    <span>📡 <span style={{ color:"#2ecc71" }}>{s.waivers}</span> waivers</span>
+                    <span>🆓 <span style={{ color:"#aaa" }}>{s.freeAgents}</span> FA adds</span>
+                    <span>👤 <span style={{ color:"#aaa" }}>{s.playersAdded}</span> players added</span>
+                  </div>
+                </div>
               ))}
             </div>
-          )}
-        </div>
-      )}
+          </Card>
+        );
+      })()}
+
+      {section === "lineupeff" && (() => {
+        const eff = NFL_LINEUP_EFFICIENCY || {};
+        const years = Object.keys(eff).map(Number).sort();
+        const careerEff = {};
+        years.forEach(yr => {
+          Object.entries(eff[yr] || {}).forEach(([mgr, data]) => {
+            if (!careerEff[mgr]) careerEff[mgr] = { totalEff:0, totalBench:0, seasons:0, byYear:{} };
+            careerEff[mgr].totalEff   += data.avgEff;
+            careerEff[mgr].totalBench += data.avgBench;
+            careerEff[mgr].seasons    += 1;
+            careerEff[mgr].byYear[yr]  = { avgEff:data.avgEff, avgBench:data.avgBench };
+          });
+        });
+        const sorted = Object.entries(careerEff)
+          .map(([mgr, d]) => ({
+            mgr,
+            avgEff:   parseFloat((d.totalEff   / d.seasons).toFixed(1)),
+            avgBench: parseFloat((d.totalBench / d.seasons).toFixed(2)),
+            seasons:  d.seasons,
+            byYear:   d.byYear,
+          }))
+          .sort((a,b) => b.avgEff - a.avgEff);
+        const maxBench = Math.max(...sorted.map(m => m.avgBench));
+        return (
+          <Card>
+            <SectionTitle>🎯 Lineup Efficiency — 2022–2025</SectionTitle>
+            <BodyText>Actual pts scored ÷ max possible pts from full roster each week. Career average across all Sleeper-era seasons.</BodyText>
+            <div style={{ display:"flex", flexDirection:"column", gap:mobile?8:10, marginTop:8 }}>
+              {sorted.map((m, i) => {
+                const color = m.avgEff >= 93 ? "#2ecc71" : m.avgEff >= 89 ? "#f4a261" : "#d42b2b";
+                const label = m.avgEff >= 93 ? "🎯 Sharp"
+                            : m.avgEff >= 90 ? "✅ Solid"
+                            : m.avgEff >= 87 ? "⚠️ Leaky"
+                            :                  "❌ Leaving pts";
+                return (
+                  <div key={m.mgr} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
+                    <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:8 }}>
+                      <div style={{ width:22, textAlign:"center", fontSize:12, color:i<3?"#2ecc71":"#555", flexShrink:0 }}>
+                        {i===0?"🥇":i===1?"🥈":i===2?"🥉":`#${i+1}`}
+                      </div>
+                      <ManagerLogo name={m.mgr} size={20} />
+                      <span style={{ fontSize:mobile?12:14, fontWeight:600, color:"#fff", flex:1 }}>{firstName(m.mgr)}</span>
+                      <span style={{ fontSize:10, color, background:`${color}22`, borderRadius:4, padding:"2px 7px", flexShrink:0 }}>{label}</span>
+                      <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:16, color, flexShrink:0 }}>{m.avgEff}%</span>
+                    </div>
+                    <div style={{ background:"#111", borderRadius:3, height:4, marginBottom:8 }}>
+                      <div style={{ height:4, borderRadius:3, width:`${m.avgEff}%`, background:color }} />
+                    </div>
+                    <div style={{ display:"flex", gap:mobile?10:20, fontSize:10, color:"#555", flexWrap:"wrap" }}>
+                      <span>Bench/wk <span style={{ color:"#d42b2b" }}>−{m.avgBench}</span> pts avg</span>
+                      <span>{m.seasons} season{m.seasons>1?"s":""}</span>
+                      {years.map(yr => m.byYear[yr] && (
+                        <span key={yr}>{yr}: <span style={{ color:m.byYear[yr].avgEff>=92?"#2ecc71":m.byYear[yr].avgEff>=88?"#f4a261":"#d42b2b" }}>{m.byYear[yr].avgEff}%</span></span>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </Card>
+        );
+      })()}
+
+      {section === "rivalry" && <RivalrySection />}
 
     </div>
   );
@@ -51563,10 +53174,13 @@ function PlayoffHistoryTab({ pendingSection }) {
   const { open: openPlayoffYear } = usePlayoffYear();
   const { open: openMatchup } = useMatchup();
   const [section, setSection] = useState(pendingSection || null);
+  const [bracketYear, setBracketYear] = useState(2025);
+  const [bracketView, setBracketView] = useState("winners");
 
   // ── Tile definitions ────────────────────────────────────────────────────────
   const PH_TILES = [
     { key: "rollcall",  emoji: "🏆", label: "Roll Call",           sub: "Year-by-year championship history",                      color: "#e9c46a" },
+    { key: "bracket",   emoji: "🗓️", label: "Full Bracket",        sub: "Every playoff game with scores — 2022–2025",             color: "#2176d2" },
     { key: "titles",    emoji: "🥇", label: "Title Count",         sub: "All-time hardware leaderboard",                          color: "#f4a261" },
     { key: "record",    emoji: "📒", label: "Record Book",         sub: "All-time playoff W/L, titles, finals record & avg PF",   color: "#2176d2" },
     { key: "finals",    emoji: "🎖️", label: "Championship Game",   sub: "Who's been to the big game and who closed the deal",      color: "#64b5f6" },
@@ -51726,6 +53340,70 @@ function PlayoffHistoryTab({ pendingSection }) {
       <BackBtn />
 
       {/* ── ROLL CALL ─────────────────────────────────────────────────────── */}
+      {section === "bracket" && (() => {
+        const yearData = NFL_PLAYOFF_SCORES?.[bracketYear];
+        const games    = yearData?.[bracketView] || [];
+        const rounds   = [...new Set(games.map(g => g.round))].sort();
+        return (
+          <Card>
+            <div style={{ display:"flex", gap:8, flexWrap:"wrap", alignItems:"center", marginBottom:16 }}>
+              <select value={bracketYear} onChange={e => setBracketYear(Number(e.target.value))}
+                style={{ background:"#111", border:"1px solid #2176d2", borderRadius:8, color:"#2176d2", fontSize:14, fontWeight:700, padding:"6px 12px", cursor:"pointer", outline:"none" }}>
+                {[2022,2023,2024,2025].map(y => <option key={y} value={y}>{y}</option>)}
+              </select>
+              {[["winners","🏆 Playoff Bracket"],["losers","💩 Toilet Bowl"]].map(([v,l]) => (
+                <button key={v} onClick={() => setBracketView(v)}
+                  style={{ padding:"6px 14px", borderRadius:8, border:`1px solid ${bracketView===v?"#2176d2":"#222"}`, background:bracketView===v?"#2176d2":"#111", color:bracketView===v?"#fff":"#555", fontSize:12, cursor:"pointer", fontWeight:bracketView===v?700:400 }}>
+                  {l}
+                </button>
+              ))}
+            </div>
+            {bracketView === "losers" && (
+              <div style={{ fontSize:11, color:"#555", background:"#1a1a1a", borderRadius:6, padding:"6px 12px", marginBottom:12 }}>
+                💩 Toilet Bowl: lower score advances · highest scorer eliminated each round
+              </div>
+            )}
+            {rounds.map(r => {
+              const roundGames = games.filter(g => g.round === r);
+              const label = r === 3
+                ? (bracketView === "winners" ? "🏆 Championship & 3rd Place" : "💩 Toilet Bowl Final & 3rd Place")
+                : r === 2 ? "Semifinal" : "Round 1";
+              return (
+                <div key={r} style={{ marginBottom:16 }}>
+                  <SectionTitle>{label}</SectionTitle>
+                  <div style={{ display:"flex", flexDirection:"column", gap:8, marginTop:8 }}>
+                    {roundGames.map((g, i) => {
+                      const isChamp  = g.label === "Championship";
+                      const isToilet = g.label === "Toilet Bowl";
+                      const accent   = isChamp ? "#e9c46a" : isToilet ? "#9b5de5" : "#2176d2";
+                      return (
+                        <div key={i} style={{ background:"#0a0a0a", border:`1px solid ${accent}33`, borderLeft:`3px solid ${accent}`, borderRadius:"0 8px 8px 0", padding:"10px 14px" }}>
+                          <div style={{ fontSize:10, color:accent, fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1.5, marginBottom:8 }}>{g.label.toUpperCase()}</div>
+                          <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+                            <ManagerLogo name={g.t1} size={20} />
+                            <span style={{ flex:1, fontSize:mobile?12:13, fontWeight:600, color:g.winner===g.t1?"#fff":"#555", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
+                              {firstName(g.t1)} {g.winner===g.t1 && (bracketView==="losers"?"💩":"✓")}
+                            </span>
+                            <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?16:20, color:g.winner===g.t1?"#2176d2":"#555", flexShrink:0 }}>{g.t1pts}</span>
+                            <span style={{ color:"#333", fontSize:11, padding:"0 4px", flexShrink:0 }}>vs</span>
+                            <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?16:20, color:g.winner===g.t2?"#2176d2":"#555", flexShrink:0 }}>{g.t2pts}</span>
+                            <span style={{ flex:1, fontSize:mobile?12:13, fontWeight:600, color:g.winner===g.t2?"#fff":"#555", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", textAlign:"right" }}>
+                              {g.winner===g.t2 && (bracketView==="losers"?"💩":"✓")} {firstName(g.t2)}
+                            </span>
+                            <ManagerLogo name={g.t2} size={20} />
+                          </div>
+                          <div style={{ fontSize:10, color:"#333", marginTop:6, textAlign:"center" }}>margin {g.margin} pts</div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+          </Card>
+        );
+      })()}
+
       {section === "rollcall" && (
         <Card>
           <SectionTitle>📜 Championship Roll Call</SectionTitle>
@@ -56628,7 +58306,9 @@ function DDLeaderboardTab() {
 
 function DDPlayoffHistoryTab() {
   const mobile = useMobile();
-  const [section, setSection] = React.useState("home");
+  const [section,     setSection]   = React.useState("home");
+  const [bracketYear, setBracketYear] = React.useState(2025);
+  const [bracketView, setBracketView] = React.useState("winners");
 
   // ── Per-manager finish tallies ────────────────────────────────
   const finishMap = {};
@@ -56685,6 +58365,7 @@ function DDPlayoffHistoryTab() {
 
   const DD_PH_TILES = [
     { key:"rollcall", emoji:"🏆", label:"Champion Roll Call",   sub:"Every title winner in Duck Dynasty history",       color:"#e9c46a" },
+    { key:"bracket",  emoji:"🗓️", label:"Full Bracket",         sub:"Every playoff game with scores — all 3 seasons",   color:"#E07B20" },
     { key:"finals",   emoji:"🎖️", label:"Championship Games",   sub:"Title game scores and margins all-time",           color:"#E07B20" },
     { key:"titles",   emoji:"🥇", label:"Playoff Finishes",     sub:"All-time championship and playoff finish tally",   color:"#2ecc71" },
     { key:"record",   emoji:"📒", label:"Record Book",          sub:"Best and worst playoff records per manager",       color:"#2176d2" },
@@ -56922,6 +58603,71 @@ function DDPlayoffHistoryTab() {
         </div>
       )}
 
+      {section === "bracket" && (() => {
+        const yearData = DD_PLAYOFF_SCORES?.[bracketYear];
+        const games = yearData?.[bracketView] || [];
+        const rounds = [...new Set(games.map(g=>g.round))].sort();
+        return (
+          <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
+            <div style={{ display:"flex", gap:8, flexWrap:"wrap", alignItems:"center" }}>
+              <select value={bracketYear} onChange={e=>setBracketYear(Number(e.target.value))}
+                style={{ background:"#111", border:"1px solid #E07B20", borderRadius:8, color:"#E07B20", fontSize:14, fontWeight:700, padding:"6px 12px", cursor:"pointer", outline:"none" }}>
+                {[2023,2024,2025].map(y=><option key={y} value={y}>{y}</option>)}
+              </select>
+              {[["winners","🏆 Playoff Bracket"],["losers","💩 Toilet Bowl"]].map(([v,l])=>(
+                <button key={v} onClick={()=>setBracketView(v)} style={{ padding:"6px 14px", borderRadius:8, border:`1px solid ${bracketView===v?"#E07B20":"#222"}`, background:bracketView===v?"#E07B20":"#111", color:bracketView===v?"#fff":"#555", fontSize:12, cursor:"pointer", fontWeight:bracketView===v?700:400 }}>{l}</button>
+              ))}
+            </div>
+            {bracketView==="losers" && <div style={{ fontSize:11, color:"#555", background:"#111", borderRadius:6, padding:"6px 12px" }}>💩 Toilet Bowl: lower score advances · highest scorer each round is eliminated</div>}
+            {rounds.map(r=>{
+              const roundGames = games.filter(g=>g.round===r);
+              const labelGroups = [...new Set(roundGames.map(g=>g.label))];
+              return (
+                <div key={r}>
+                  {labelGroups.map(grpLabel=>{
+                    const grpGames = roundGames.filter(g=>g.label===grpLabel);
+                    const isChampGrp  = grpLabel==="Championship";
+                    const isToiletGrp = grpLabel==="Toilet Bowl";
+                    const isPlacement = ["5th Place","8th Place","10th Place","3rd Place"].includes(grpLabel);
+                    const hdrColor = isChampGrp?"#e9c46a":isToiletGrp?"#d42b2b":isPlacement?"#555":"#E07B20";
+                    const hdrEmoji = isChampGrp?"🏆":isToiletGrp?"💩":grpLabel==="Semifinal"?"🔥":grpLabel==="5th Place"?"5️⃣":grpLabel==="8th Place"?"8️⃣":grpLabel==="10th Place"?"🔟":grpLabel==="3rd Place"?"🥉":"";
+                    return (
+                      <div key={grpLabel} style={{ marginBottom:12 }}>
+                        <div style={{ fontSize:11, color:hdrColor, fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:2, textTransform:"uppercase", marginBottom:8 }}>{hdrEmoji} {grpLabel}</div>
+                        <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+                          {grpGames.map((g,i)=>{
+                            const accent = isChampGrp?"#e9c46a":isToiletGrp?"#d42b2b":isPlacement?"#444":"#E07B20";
+                            return (
+                              <div key={i} style={{ background:"#0a0a0a", border:`1px solid ${accent}33`, borderLeft:`3px solid ${accent}`, borderRadius:"0 8px 8px 0", padding:"10px 14px" }}>
+                                <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+                                  <DDManagerLogo name={g.t1} size={20} />
+                                  <span style={{ flex:1, fontSize:mobile?12:13, fontWeight:600, color:g.winner===g.t1?"#fff":"#555", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
+                                    {g.t1.split(" ")[0]} {g.winner===g.t1&&(bracketView==="losers"?"💩":"✓")}
+                                  </span>
+                                  <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?16:20, color:g.winner===g.t1?"#E07B20":"#555", flexShrink:0 }}>{g.t1pts}</span>
+                                  <span style={{ color:"#333", fontSize:11, padding:"0 4px", flexShrink:0 }}>vs</span>
+                                  <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?16:20, color:g.winner===g.t2?"#E07B20":"#555", flexShrink:0 }}>{g.t2pts}</span>
+                                  <span style={{ flex:1, fontSize:mobile?12:13, fontWeight:600, color:g.winner===g.t2?"#fff":"#555", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", textAlign:"right" }}>
+                                    {g.winner===g.t2&&(bracketView==="losers"?"💩":"✓")} {g.t2.split(" ")[0]}
+                                  </span>
+                                  <DDManagerLogo name={g.t2} size={20} />
+                                </div>
+                                <div style={{ fontSize:10, color:"#333", marginTop:6, textAlign:"center" }}>margin {g.margin} pts</div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })}
+            {!yearData && <div style={{ color:"#555", fontSize:12, padding:20, textAlign:"center" }}>No bracket data for {bracketYear}</div>}
+          </div>
+        );
+      })()}
+
       {section === "toilet" && (
         <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
           <div style={{ fontSize:11, color:"#555", marginBottom:4 }}>The pond's most forgettable season finishes</div>
@@ -56943,6 +58689,67 @@ function DDPlayoffHistoryTab() {
   );
 }
 
+
+function DDManagerProfilesPanel({ allMgrList, mobile }) {
+  const [selected, setSelected] = React.useState(null);
+  const mgrs = [...(allMgrList || [])];
+
+  if (selected) {
+    const profile = DD_MANAGER_PROFILES?.[selected.name];
+    return (
+      <div style={{ display:"flex", flexDirection:"column", gap:14 }}>
+        <button onClick={() => setSelected(null)} style={{ background:"#111", border:"1px solid #222", borderRadius:8, padding:"5px 12px", color:"#e9c46a", fontSize:12, cursor:"pointer", alignSelf:"flex-start" }}>← All Profiles</button>
+        <div style={{ display:"flex", alignItems:"center", gap:12, background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:10, padding:"14px 16px" }}>
+          <DDManagerLogo name={selected.name} size={40} />
+          <div>
+            <div style={{ fontSize:mobile?16:20, fontWeight:700, color:"#fff" }}>{selected.name}</div>
+            {profile?.headline && (
+              <div style={{ fontSize:mobile?12:13, color:"#e9c46a", fontStyle:"italic", marginTop:4 }}>"{profile.headline}"</div>
+            )}
+          </div>
+        </div>
+        {profile?.narrative ? (
+          <div style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"16px", fontSize:mobile?12:13, color:"#bbb", lineHeight:1.85 }}>
+            {profile.narrative}
+          </div>
+        ) : (
+          <div style={{ color:"#555", fontSize:12, padding:16 }}>No profile available for this manager.</div>
+        )}
+        <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
+          {selected.championships > 0 && <span style={{ fontSize:11, color:"#e9c46a", background:"#1a1500", borderRadius:4, padding:"3px 10px" }}>{"🏆".repeat(selected.championships)} Champion</span>}
+          {selected.playoffApps > 0 && <span style={{ fontSize:11, color:"#555", background:"#111", borderRadius:4, padding:"3px 10px" }}>✅ {selected.playoffApps}/{selected.seasons} playoff apps</span>}
+          {selected.toilet > 0 && <span style={{ fontSize:11, color:"#d42b2b", background:"#1a0a0a", borderRadius:4, padding:"3px 10px" }}>💩 {selected.toilet}x toilet bowl</span>}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+      <div style={{ fontSize:11, color:"#555", marginBottom:4 }}>Select a manager to read their Duck Dynasty profile</div>
+      <div style={{ display:"grid", gridTemplateColumns:mobile?"1fr 1fr":"repeat(4,1fr)", gap:8 }}>
+        {mgrs.map(m => {
+          const profile = DD_MANAGER_PROFILES?.[m.name];
+          return (
+            <button key={m.name} onClick={() => setSelected(m)}
+              style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"12px", cursor:"pointer", textAlign:"left", opacity:m.isAlum?0.6:1 }}>
+              <DDManagerLogo name={m.name} size={28} />
+              <div style={{ fontSize:13, fontWeight:500, color:m.isAlum?"#555":"#fff", marginTop:6 }}>{firstName(m.name)}</div>
+              {profile?.headline && (
+                <div style={{ fontSize:9, color:"#444", marginTop:4, lineHeight:1.4, fontStyle:"italic", display:"-webkit-box", WebkitLineClamp:2, WebkitBoxOrient:"vertical", overflow:"hidden" }}>
+                  "{profile.headline}"
+                </div>
+              )}
+              <div style={{ fontSize:10, color:m.championships>0?"#e9c46a":"#555", marginTop:6 }}>
+                {m.championships>0?"🏆".repeat(m.championships):""} {m.wins}–{m.losses}
+              </div>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 function DDManagersTab() {
   const mobile = useMobile();
@@ -56996,6 +58803,7 @@ function DDManagersTab() {
     { key:"arc",      emoji:"📈",   label:"Career Arc",        sub:"Year-by-year performance timeline",               color:"#9b5de5" },
     { key:"rankings", emoji:"🏅",   label:"Manager Rankings",  sub:"Composite ranking across all key metrics",        color:"#a8dadc" },
     { key:"matrix",   emoji:"🔲",   label:"H2H Matrix",        sub:"Head-to-head record grid for all managers",       color:"#555"    },
+    { key:"aiprofile",emoji:"📖",   label:"Manager Profiles",  sub:"FF podcast-style dynasty profiles for all 12",    color:"#e9c46a" },
   ];
   const currentTile = DD_MGR_TILES.find(t => t.key === section);
 
@@ -57421,6 +59229,9 @@ function DDManagersTab() {
         );
       })()}
 
+
+      {section === "aiprofile" && <DDManagerProfilesPanel allMgrList={allMgrList} mobile={mobile} />}
+
     </div>
   );
 }
@@ -57437,9 +59248,10 @@ function DDLeagueHQTab() {
   const VAULT_PASSWORD = "Goodell1!";
 
   const DD_HQ_TILES = [
-    { key:"links",   emoji:"🔗", label:"League Links",   sub:"Sleeper league & season archives",           color:"#64b5f6" },
-    { key:"rules",   emoji:"📝", label:"Rules & Format", sub:"Scoring format, roster rules & dynasty info", color:"#a8dadc" },
-    { key:"vault",   emoji:"🔐", label:"Commissioner's Vault", sub:"Annual update checklist, dev notes & roadmap", color:"#e9c46a" },
+    { key:"links",         emoji:"🔗", label:"League Links",         sub:"Sleeper league & season archives",                color:"#64b5f6" },
+    { key:"constitution",  emoji:"📜", label:"Constitution",          sub:"Duck Dynasty league rules & bylaws",              color:"#E07B20" },
+    { key:"rules",         emoji:"📝", label:"Rules & Format",        sub:"Scoring format, roster rules & dynasty info",     color:"#a8dadc" },
+    { key:"vault",         emoji:"🔐", label:"Commissioner's Vault",  sub:"Annual update checklist, dev notes & roadmap",    color:"#e9c46a" },
   ];
 
   if (section !== "home") {
@@ -57473,6 +59285,25 @@ function DDLeagueHQTab() {
                 <span style={{ color:"#333", fontSize:16 }}>↗</span>
               </a>
             ))}
+          </div>
+        )}
+
+        {/* CONSTITUTION */}
+        {section === "constitution" && (
+          <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
+            <div style={{ fontSize:12, color:"#555", marginBottom:4 }}>
+              The official rules, bylaws, and guidelines governing Duck Dynasty.
+            </div>
+            <a href="https://docs.google.com/document/d/1RBsLbc3klaglx-go24vTLyAdcUo3P4F3amm7YuH8C04/edit?usp=sharing"
+              target="_blank" rel="noreferrer"
+              style={{ display:"flex", alignItems:"center", gap:14, background:"#0a0a0a", border:"1px solid #E07B2044", borderLeft:"4px solid #E07B20", borderRadius:"0 8px 8px 0", padding:"16px 20px", textDecoration:"none" }}>
+              <span style={{ fontSize:32, flexShrink:0 }}>📜</span>
+              <div style={{ flex:1 }}>
+                <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?15:18, color:"#E07B20", letterSpacing:1, marginBottom:4 }}>Duck Dynasty Constitution</div>
+                <div style={{ fontSize:11, color:"#555" }}>docs.google.com · Opens in Google Docs</div>
+              </div>
+              <span style={{ color:"#E07B20", fontSize:20, flexShrink:0 }}>↗</span>
+            </a>
           </div>
         )}
 
@@ -57584,9 +59415,12 @@ function DDLeagueHQTab() {
                                "Add new champion to DD_HISTORICAL.champions array"] },
                       { n:"2", title:"Run the data pipeline scripts (Downloads folder)",
                         items:["python dd_recalculate_h2h.py  →  paste into DD_POND_DATA.h2h",
-                               "python dd_rookie_drafts.py  →  paste into DD_DRAFT_DATA, add year to picker",
+                               "python dd_rookie_drafts.py  →  paste into DD_DRAFT_DATA, add new year to year picker in DDDraftTab",
                                "python dd_roster_snapshot.py > out.txt  →  paste DD_PLAYER_META + DD_ROSTER_HISTORY",
-                               "python dd_player_scores.py > out.txt  →  paste DD_PLAYER_SCORES + DD_MGR_ROSTER_SCORES"] },
+                               "python dd_player_scores.py > out.txt  →  paste DD_PLAYER_SCORES + DD_MGR_ROSTER_SCORES",
+                               "python dd_playoff_scores.py > out.txt  →  paste DD_PLAYOFF_SCORES into App.jsx (replaces old block), add new year to bracketYear selector in DDPlayoffHistoryTab",
+                               "python dd_transactions.py > out.txt  →  paste DD_TRANSACTIONS + DD_TRANSACTION_SUMMARY into App.jsx",
+                               "python dd_lineup_efficiency.py > out.txt  →  paste DD_LINEUP_EFFICIENCY into App.jsx"] },
                       { n:"3", title:"Update name maps if needed",
                         items:["If any manager changed Sleeper handle: update DD_SLEEPER_NAME_MAP in App.jsx",
                                "Update NAME_MAP at top of all 4 Python scripts to match"] },
@@ -57650,21 +59484,23 @@ function DDLeagueHQTab() {
                   <DDCard emoji="🗺️" title="Roadmap & Wishlist" color="#2ecc71">
                     <DDBody>Current build status and features planned for future sessions.</DDBody>
                     {[
-                      { status:"🔲", item:"DD 2026 Rookie Draft — May 8th", note:"Run dd_rookie_drafts.py after draft completes. Paste into DD_DRAFT_DATA, add 2026 to year picker in DDDraftTab." },
-                      { status:"🔲", item:"Pick Holdings 2027–2029", note:"Live Sleeper fetch of /league/{id}/traded_picks. Still need: live vs manual decision, display preference confirmed." },
-                      { status:"🔲", item:"Re-run dd_roster_snapshot.py after rookie draft", note:"Captures 2026 rosters with new picks included. Run same day as rookie draft." },
-                      { status:"🔲", item:"Re-run dd_player_scores.py (fixed version)", note:"Populates DD_MGR_ROSTER_SCORES which is currently empty. Run January 2027." },
+                      { status:"🔲", item:"DD 2026 Rookie Draft scripts — run now", note:"Run dd_rookie_drafts.py after draft completes → paste into DD_DRAFT_DATA, add 2026 to year picker in DDDraftTab. Then re-run dd_roster_snapshot.py to capture 2026 rosters with new picks." },
+                      { status:"🔲", item:"Re-run dd_player_scores.py (fixed version)", note:"Populates DD_MGR_ROSTER_SCORES which is currently empty. Run January 2027 after season ends." },
+                      { status:"🔲", item:"DD Lineup Efficiency 2026", note:"Run dd_lineup_efficiency.py in January 2027 after season ends to add 2026 to DD_LINEUP_EFFICIENCY data." },
                       { status:"🔲", item:"DD AI Manager Profiles", note:"Equivalent of NFL generate_draft_profiles.py for dynasty managers. Uses DD career stats + DD_PLAYER_SCORES for narrative generation." },
-                      { status:"🔲", item:"Trade History Report", note:"Full transaction history from Sleeper across all seasons. Shows who traded what to whom, trade win/loss record." },
-                      { status:"🔲", item:"Watchout — Sleeper API version risk", note:"If Sleeper renames endpoint fields, live 2026 Season tab breaks silently. Check API response format once per season." },
+                      { status:"🔲", item:"Watchout — Sleeper API version risk", note:"If Sleeper renames endpoint fields, live 2026 Season tab breaks silently. Check API response format once per season at season start." },
                       { status:"✅", item:"Full 10-tab DD dashboard", note:"2026 Season · Season Explorer · Leaderboard · Playoff History · Managers · The Pond · Draft · Players · Dynasty Intel · League HQ" },
                       { status:"✅", item:"Live 2026 Season tab (8 reports)", note:"Standings, matchups, transactions, power rankings, scoring snapshot, scoring trends, luck index, commissioner's report" },
-                      { status:"✅", item:"Dynasty Intel tab (6 reports)", note:"Dynasty Power Index · Breakout Tracker · Roster Turnover · Franchise Matrix · Trade Value · Ownership Journey" },
+                      { status:"✅", item:"Dynasty Intel tab (7 reports)", note:"Dynasty Power Index · Breakout Tracker · Roster Turnover · Franchise Matrix · Trade Value · Ownership Journey · Lineup Efficiency" },
+                      { status:"✅", item:"Playoff History — Full Bracket Viewer", note:"All 3 seasons (2023–2025) with every game score, round by round. Toggle between Playoff Bracket and Toilet Bowl. DD_PLAYOFF_SCORES embedded." },
+                      { status:"✅", item:"Transaction History", note:"DD_TRANSACTIONS + DD_TRANSACTION_SUMMARY embedded. 🤝 Transaction History tile in The Pond. Sorted by total moves with trade/waiver/FA breakdown." },
+                      { status:"✅", item:"DD Lineup Efficiency (2023–2025)", note:"DD_LINEUP_EFFICIENCY embedded. 🎯 tile in Dynasty Intel. Career averages + per-season breakdown. Greg Mulder sharpest (98.7%), Vance Sipma most leaky." },
+                      { status:"✅", item:"Pick Holdings 2027–2029", note:"Live Sleeper fetch from /traded_picks. 🔮 tile in Draft tab. Toggle: By Year (5-column grid) or By Manager (cards). Traded picks highlighted in blue." },
                       { status:"✅", item:"Players tab (4 reports)", note:"Scoring leaders · Draft class performance · Roster depth · Age curve" },
                       { status:"✅", item:"DD Franchise Twins — independently computed", note:"13 DD-specific assignments grounded in full NFL franchise history. Independent from NFL side assignments." },
-                      { status:"✅", item:"Full DD data pipeline (4 scripts)", note:"dd_rookie_drafts.py · dd_recalculate_h2h.py · dd_roster_snapshot.py · dd_player_scores.py" },
-                      { status:"✅", item:"DD_PLAYER_META + DD_ROSTER_HISTORY + DD_PLAYER_SCORES", note:"424 dynasty players with metadata · 4 seasons of roster snapshots · 868 players with weekly scoring data" },
-                      { status:"✅", item:"Commissioner's Vault with inline sections", note:"Annual update checklist · Dev notes · Roadmap · Commissioner's notes — matching NFL format" },
+                      { status:"✅", item:"Full DD data pipeline (7 scripts)", note:"dd_rookie_drafts · dd_recalculate_h2h · dd_roster_snapshot · dd_player_scores · dd_playoff_scores · dd_transactions · dd_lineup_efficiency" },
+                      { status:"✅", item:"Full DD data embedded", note:"DD_PLAYER_META · DD_ROSTER_HISTORY · DD_PLAYER_SCORES · DD_POND_DATA · DD_PLAYOFF_SCORES · DD_TRANSACTIONS · DD_TRANSACTION_SUMMARY · DD_LINEUP_EFFICIENCY" },
+                      { status:"✅", item:"Commissioner's Vault with inline sections", note:"Annual update checklist (7 scripts) · Dev notes · Roadmap · Commissioner's notes — matching NFL format" },
                     ].map(({status, item, note}) => (
                       <div key={item} style={{ display:"flex", gap:8, alignItems:"flex-start",
                                                borderTop:"1px solid #1a1a1a", paddingTop:8 }}>
@@ -57936,6 +59772,7 @@ function DDPondTab() {
     { key:"lowweeks",  emoji:"💀",  label:"Low Scoring Weeks", sub:"Worst single-week performances ever",               color:"#555" },
     { key:"streaks",   emoji:"📈",  label:"Win/Loss Streaks",  sub:"Longest winning and losing streaks all-time",       color:"#9b5de5" },
     { key:"luck",      emoji:"🍀",  label:"Luck Index",        sub:"Actual wins vs expected wins over 3 seasons",       color:"#2ecc71" },
+    { key:"txns",      emoji:"🤝",  label:"Transaction History",sub:"Trade kings, waiver wire activity & FA adds",       color:"#64b5f6" },
   ];
 
   const firstName = n => n ? n.split(" ")[0] : "—";
@@ -57998,19 +59835,42 @@ function DDPondTab() {
         {/* RIVALRY */}
         {section === "rivalry" && (
           <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+            <div style={{ fontSize:11, color:"#555", marginBottom:4 }}>
+              Rivalry score = closeness × frequency · includes points scored in all matchups
+            </div>
             {DD_POND_DATA.rivalries.map((r,i) => {
               const maxScore = DD_POND_DATA.rivalries[0].score;
               const pct = Math.round(r.score/maxScore*100);
+              const h2h = DD_POND_DATA.h2h[r.a]?.[r.b] || {};
+              const totalPF = h2h.PF && h2h.PA ? (h2h.PF + h2h.PA).toFixed(1) : null;
+              const avgCombined = totalPF && r.total > 0 ? (parseFloat(totalPF) / r.total).toFixed(1) : null;
+              const aWins = r.aW > r.aL;
               return (
                 <div key={i} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
                   <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:6 }}>
-                    <span style={{ fontSize:12, color:"#E07B20", width:20, flexShrink:0 }}>#{i+1}</span>
-                    <DDManagerLogo name={r.a} size={18} /><span style={{ fontSize:13, fontWeight:500, color:"#fff" }}>{firstName(r.a)}</span>
+                    <span style={{ fontSize:12, color:"#E07B20", width:22, flexShrink:0 }}>
+                      {i===0?"🔥":i===1?"⚔️":i===2?"💥":`#${i+1}`}
+                    </span>
+                    <DDManagerLogo name={r.a} size={18} />
+                    <span style={{ fontSize:13, fontWeight:600, color:aWins?"#2ecc71":"#d42b2b" }}>{firstName(r.a)}</span>
                     <span style={{ fontSize:11, color:"#555" }}>vs</span>
-                    <DDManagerLogo name={r.b} size={18} /><span style={{ fontSize:13, fontWeight:500, color:"#fff" }}>{firstName(r.b)}</span>
-                    <span style={{ fontSize:11, color:"#555", marginLeft:"auto" }}>{r.aW}–{r.aL} · {r.total} games</span>
+                    <DDManagerLogo name={r.b} size={18} />
+                    <span style={{ fontSize:13, fontWeight:600, color:!aWins?"#2ecc71":"#d42b2b" }}>{firstName(r.b)}</span>
+                    <span style={{ fontSize:11, color:"#aaa", marginLeft:"auto", flexShrink:0 }}>
+                      {r.aW}–{r.aL} · {r.total} games
+                    </span>
                   </div>
-                  <div style={{ background:"#1a1a1a", borderRadius:3, height:4 }}><div style={{ height:4, borderRadius:3, width:`${pct}%`, background:"#E07B20" }} /></div>
+                  <div style={{ background:"#1a1a1a", borderRadius:3, height:4, marginBottom: totalPF ? 8 : 0 }}>
+                    <div style={{ height:4, borderRadius:3, width:`${pct}%`, background:"#E07B20" }} />
+                  </div>
+                  {totalPF && (
+                    <div style={{ display:"flex", gap:mobile?8:16, fontSize:10, color:"#555", flexWrap:"wrap" }}>
+                      <span>{firstName(r.a)} PF <span style={{ color:aWins?"#2ecc71":"#d42b2b" }}>{h2h.PF?.toFixed(1)}</span></span>
+                      <span>{firstName(r.b)} PF <span style={{ color:!aWins?"#2ecc71":"#d42b2b" }}>{h2h.PA?.toFixed(1)}</span></span>
+                      <span>Combined <span style={{ color:"#E07B20" }}>{totalPF}</span></span>
+                      <span>Avg/game <span style={{ color:"#fff" }}>{avgCombined}</span></span>
+                    </div>
+                  )}
                 </div>
               );
             })}
@@ -58020,18 +59880,39 @@ function DDPondTab() {
         {/* OWNAGE */}
         {section === "ownage" && (
           <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-            {DD_POND_DATA.ownage.map((o,i) => (
-              <div key={i} style={{ display:"flex", alignItems:"center", gap:10, background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
-                <span style={{ fontSize:12, color:"#E07B20", width:20, flexShrink:0 }}>#{i+1}</span>
-                <DDManagerLogo name={o.Winner} size={18} />
-                <span style={{ fontSize:13, fontWeight:500, color:"#2ecc71" }}>{firstName(o.Winner)}</span>
-                <span style={{ fontSize:11, color:"#555" }}>owns</span>
-                <DDManagerLogo name={o.Loser} size={18} />
-                <span style={{ fontSize:13, color:"#d42b2b" }}>{firstName(o.Loser)}</span>
-                <span style={{ fontSize:13, fontWeight:700, color:"#e9c46a", marginLeft:"auto" }}>{o.W}–{o.L}</span>
-                <span style={{ fontSize:11, color:"#555", width:36, textAlign:"right" }}>{Math.round(o.WPct*100)}%</span>
-              </div>
-            ))}
+            <div style={{ fontSize:11, color:"#555", marginBottom:4 }}>
+              Most one-sided all-time series · min 3 matchups · includes points scored
+            </div>
+            {DD_POND_DATA.ownage.map((o,i) => {
+              const h2h = DD_POND_DATA.h2h[o.Winner]?.[o.Loser] || {};
+              const pf = h2h.PF ? h2h.PF.toFixed(1) : null;
+              const pa = h2h.PA ? h2h.PA.toFixed(1) : null;
+              const ppg = h2h.PF && o.Total > 0 ? (h2h.PF / o.Total).toFixed(1) : null;
+              return (
+                <div key={i} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
+                  <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom: pf ? 8 : 0 }}>
+                    <span style={{ fontSize:12, color:"#e9c46a", width:22, flexShrink:0 }}>
+                      {i===0?"👑":i===1?"🥈":i===2?"🥉":`#${i+1}`}
+                    </span>
+                    <DDManagerLogo name={o.Winner} size={20} />
+                    <span style={{ fontSize:13, fontWeight:600, color:"#2ecc71" }}>{firstName(o.Winner)}</span>
+                    <span style={{ fontSize:11, color:"#555" }}>owns</span>
+                    <DDManagerLogo name={o.Loser} size={20} />
+                    <span style={{ fontSize:13, color:"#d42b2b" }}>{firstName(o.Loser)}</span>
+                    <span style={{ marginLeft:"auto", fontSize:14, fontWeight:700, color:"#e9c46a", flexShrink:0 }}>{o.W}–{o.L}</span>
+                    <span style={{ fontSize:11, color:"#555", width:34, textAlign:"right", flexShrink:0 }}>{Math.round(o.WPct*100)}%</span>
+                  </div>
+                  {pf && (
+                    <div style={{ display:"flex", gap:mobile?8:16, fontSize:10, color:"#555", paddingLeft:32, flexWrap:"wrap" }}>
+                      <span>Total PF <span style={{ color:"#2ecc71" }}>{pf}</span></span>
+                      <span>Total PA <span style={{ color:"#d42b2b" }}>{pa}</span></span>
+                      <span>Avg margin <span style={{ color:"#e9c46a" }}>+{((h2h.PF - h2h.PA) / o.Total).toFixed(1)}</span></span>
+                      <span>Avg score <span style={{ color:"#fff" }}>{ppg} pts/game</span></span>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         )}
 
@@ -58166,7 +60047,39 @@ function DDPondTab() {
             })}
           </div>
         )}
-      </div>
+
+        {section === "txns" && (() => {
+          const summary = DD_TRANSACTION_SUMMARY || {};
+          const sorted  = Object.entries(summary).sort((a,b)=>b[1].totalMoves - a[1].totalMoves);
+          const maxMoves = sorted[0]?.[1]?.totalMoves || 1;
+          return (
+            <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+              <div style={{ fontSize:11, color:"#555", background:"#111", borderRadius:6, padding:"6px 12px", marginBottom:4 }}>
+                All transactions across 2023–2025 · trades, waiver claims and free agent adds
+              </div>
+              {sorted.map(([mgr, s], i) => (
+                <div key={mgr} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
+                  <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:8 }}>
+                    <div style={{ width:22, textAlign:"center", fontSize:12, color:i<3?"#64b5f6":"#555", flexShrink:0 }}>#{i+1}</div>
+                    <DDManagerLogo name={mgr} size={20} />
+                    <span style={{ fontSize:mobile?12:14, fontWeight:600, color:"#fff", flex:1 }}>{mgr.split(" ")[0]}</span>
+                    <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:16, color:"#64b5f6", flexShrink:0 }}>{s.totalMoves}</span>
+                    <span style={{ fontSize:10, color:"#555" }}>moves</span>
+                  </div>
+                  <div style={{ background:"#111", borderRadius:3, height:4, marginBottom:8 }}>
+                    <div style={{ height:4, borderRadius:3, width:`${s.totalMoves/maxMoves*100}%`, background:"#64b5f6" }} />
+                  </div>
+                  <div style={{ display:"flex", gap:mobile?8:16, fontSize:10, color:"#555", flexWrap:"wrap" }}>
+                    <span>🤝 <span style={{ color:"#E07B20" }}>{s.trades}</span> trades</span>
+                    <span>📡 <span style={{ color:"#2ecc71" }}>{s.waivers}</span> waivers</span>
+                    <span>🆓 <span style={{ color:"#aaa" }}>{s.freeAgents}</span> FA adds</span>
+                    <span>👤 <span style={{ color:"#aaa" }}>{s.playersAdded}</span> players added</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          );
+        })()}      </div>
     );
   }
 
@@ -58188,9 +60101,169 @@ function DDPondTab() {
     </div>
   );
 }
+function DDPickHoldings({ mobile }) {
+  const TARGET_YEARS = ["2027","2028","2029"];
+  const ROUNDS = 5;
+  const ROUND_LABELS = {1:"1st",2:"2nd",3:"3rd",4:"4th",5:"5th"};
+
+  const [picks,    setPicks]    = React.useState(null);
+  const [pickErr,  setPickErr]  = React.useState(false);
+  const [pickView, setPickView] = React.useState("year");
+
+  React.useEffect(() => {
+    const load = async () => {
+      try {
+        const [rostersRes, usersRes, picksRes] = await Promise.all([
+          fetch(`https://api.sleeper.app/v1/league/${DD_LEAGUE_ID}/rosters`),
+          fetch(`https://api.sleeper.app/v1/league/${DD_LEAGUE_ID}/users`),
+          fetch(`https://api.sleeper.app/v1/league/${DD_LEAGUE_ID}/traded_picks`),
+        ]);
+        const rosters = await rostersRes.json();
+        const users   = await usersRes.json();
+        const traded  = await picksRes.json();
+
+        const userMap = {};
+        users.forEach(u => { userMap[u.user_id] = DD_SLEEPER_NAME_MAP[u.display_name] || u.display_name; });
+        const rosterMap = {};
+        rosters.forEach(r => { rosterMap[r.roster_id] = userMap[r.owner_id] || `Team ${r.roster_id}`; });
+
+        const table = {};
+        TARGET_YEARS.forEach(yr => {
+          table[yr] = {};
+          rosters.forEach(r => {
+            for (let rnd = 1; rnd <= ROUNDS; rnd++) {
+              const key = `${r.roster_id}_${rnd}`;
+              table[yr][key] = { round:rnd, originalOwner:rosterMap[r.roster_id], currentOwner:rosterMap[r.roster_id], traded:false };
+            }
+          });
+        });
+
+        (traded || []).forEach(p => {
+          const yr = String(p.season);
+          if (!TARGET_YEARS.includes(yr)) return;
+          const key = `${p.roster_id}_${p.round}`;
+          if (table[yr]?.[key]) {
+            const newOwner = rosterMap[p.owner_id] || `Team ${p.owner_id}`;
+            table[yr][key].currentOwner = newOwner;
+            table[yr][key].traded = newOwner !== table[yr][key].originalOwner;
+          }
+        });
+
+        setPicks({ table, rosterMap, rosters });
+      } catch(e) { setPickErr(true); }
+    };
+    load();
+  }, []);
+
+  if (pickErr) return <div style={{ color:"#d42b2b", padding:20 }}>Failed to load pick holdings from Sleeper.</div>;
+  if (!picks)  return <div style={{ color:"#555", padding:20, textAlign:"center" }}>🔄 Loading pick holdings...</div>;
+
+  const { table, rosterMap, rosters } = picks;
+  const allMgrs = [...new Set(Object.values(rosterMap))].filter(Boolean).sort();
+
+  return (
+    <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
+      {/* Toggle */}
+      <div style={{ display:"flex", gap:8, alignItems:"center" }}>
+        {[["year","📅 By Year"],["manager","🧑‍💼 By Manager"]].map(([v,l]) => (
+          <button key={v} onClick={() => setPickView(v)}
+            style={{ padding:"6px 14px", borderRadius:8, border:`1px solid ${pickView===v?"#64b5f6":"#222"}`, background:pickView===v?"#64b5f6":"#111", color:pickView===v?"#fff":"#555", fontSize:12, cursor:"pointer", fontWeight:pickView===v?700:400 }}>
+            {l}
+          </button>
+        ))}
+        <span style={{ fontSize:11, color:"#333" }}>🔄 Live from Sleeper</span>
+      </div>
+
+      {/* BY YEAR VIEW */}
+      {pickView === "year" && TARGET_YEARS.map(yr => (
+        <div key={yr}>
+          <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?14:16, color:"#64b5f6", letterSpacing:2, marginBottom:8 }}>📅 {yr} Draft Picks</div>
+          <div style={{ display:"grid", gridTemplateColumns:mobile?"1fr 1fr":"repeat(5,1fr)", gap:6 }}>
+            {Array.from({length:ROUNDS},(_,i)=>i+1).map(rnd => (
+              <div key={rnd} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px" }}>
+                <div style={{ fontSize:10, color:"#64b5f6", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1, marginBottom:8, textAlign:"center" }}>{ROUND_LABELS[rnd]} RD</div>
+                {rosters.map(r => {
+                  const pick = table[yr]?.[`${r.roster_id}_${rnd}`];
+                  if (!pick) return null;
+                  const isTraded = pick.traded;
+                  return (
+                    <div key={r.roster_id} style={{ display:"flex", alignItems:"center", gap:4, marginBottom:4, padding:"3px 6px", borderRadius:4, background:isTraded?"#0a1520":"#111", border:`1px solid ${isTraded?"#64b5f655":"#1a1a1a"}` }}>
+                      <DDManagerLogo name={pick.currentOwner} size={14} />
+                      <span style={{ fontSize:mobile?9:10, color:isTraded?"#64b5f6":"#555", flex:1, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
+                        {pick.currentOwner.split(" ")[0]}
+                      </span>
+                      {isTraded && <span style={{ fontSize:8, color:"#64b5f6" }}>↔</span>}
+                    </div>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      {/* BY MANAGER VIEW */}
+      {pickView === "manager" && (
+        <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+          {allMgrs.map(mgr => {
+            const held = [], given = [];
+            TARGET_YEARS.forEach(yr => {
+              rosters.forEach(r => {
+                Array.from({length:ROUNDS},(_,i)=>i+1).forEach(rnd => {
+                  const p = table[yr]?.[`${r.roster_id}_${rnd}`];
+                  if (!p) return;
+                  if (p.currentOwner === mgr) held.push({yr, rnd, originalOwner:p.originalOwner, traded:p.traded});
+                  else if (p.originalOwner === mgr && p.traded) given.push({yr, rnd, currentOwner:p.currentOwner});
+                });
+              });
+            });
+            const uniqHeld  = held.filter((p,i,a)  => a.findIndex(x=>x.yr===p.yr&&x.rnd===p.rnd&&x.originalOwner===p.originalOwner)===i);
+            const uniqGiven = given.filter((p,i,a) => a.findIndex(x=>x.yr===p.yr&&x.rnd===p.rnd&&x.originalOwner===p.currentOwner)===i);
+
+            return (
+              <div key={mgr} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"12px 14px" }}>
+                <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:10 }}>
+                  <DDManagerLogo name={mgr} size={22} />
+                  <span style={{ fontSize:mobile?13:15, fontWeight:600, color:"#fff", flex:1 }}>{mgr.split(" ")[0]}</span>
+                  <span style={{ fontSize:11, color:"#64b5f6" }}>{uniqHeld.length} picks held</span>
+                  {uniqGiven.length > 0 && <span style={{ fontSize:11, color:"#d42b2b" }}>{uniqGiven.length} given away</span>}
+                </div>
+                {TARGET_YEARS.map(yr => {
+                  const yrPicks = uniqHeld.filter(p=>p.yr===yr).sort((a,b)=>a.rnd-b.rnd);
+                  if (!yrPicks.length) return null;
+                  return (
+                    <div key={yr} style={{ marginBottom:6 }}>
+                      <span style={{ fontSize:10, color:"#555", marginRight:8 }}>{yr}</span>
+                      {yrPicks.map((p,i) => (
+                        <span key={i} style={{ display:"inline-block", fontSize:10, padding:"2px 7px", borderRadius:4, marginRight:4, marginBottom:4, background:p.traded?"#0a1520":"#111", border:`1px solid ${p.traded?"#64b5f655":"#1a1a1a"}`, color:p.traded?"#64b5f6":"#555" }}>
+                          {ROUND_LABELS[p.rnd]}{p.traded ? ` (via ${p.originalOwner.split(" ")[0]})` : ""}
+                        </span>
+                      ))}
+                    </div>
+                  );
+                })}
+                {uniqGiven.length > 0 && (
+                  <div style={{ borderTop:"1px solid #111", paddingTop:8, marginTop:4 }}>
+                    <span style={{ fontSize:10, color:"#d42b2b", marginRight:8 }}>Traded away:</span>
+                    {uniqGiven.sort((a,b)=>a.yr.localeCompare(b.yr)||a.rnd-b.rnd).map((p,i) => (
+                      <span key={i} style={{ display:"inline-block", fontSize:10, padding:"2px 7px", borderRadius:4, marginRight:4, marginBottom:4, background:"#1a0a0a", border:"1px solid #d42b2b33", color:"#d42b2b" }}>
+                        {p.yr} {ROUND_LABELS[p.rnd]} → {p.currentOwner.split(" ")[0]}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function DDDraftTab() {
   const mobile = useMobile();
-  const [year, setYear] = React.useState(2025);
+  const [year, setYear] = React.useState(2026);
   const [section, setSection] = React.useState("home");
   const [selectedMgr, setSelectedMgr] = React.useState(null);
   const draft = DD_DRAFT_DATA[year];
@@ -58215,6 +60288,7 @@ function DDDraftTab() {
     { key:"capital",   emoji:"🏗️",  label:"Draft Capital",         sub:"Who accumulated the most pick capital",          color:"#e9c46a" },
     { key:"slotvalue", emoji:"📐",  label:"Pick vs. Slot",         sub:"Trade-ups, trade-downs, slot value gained/lost", color:"#9b5de5" },
     { key:"postend",   emoji:"🎨",  label:"Positional Tendencies", sub:"What positions each manager targets by round",   color:"#d42b2b" },
+    { key:"pickhold",  emoji:"🔮",  label:"Pick Holdings",         sub:"Who holds what future picks — 2027 to 2029",    color:"#64b5f6" },
   ];
   const currentTile = DD_DRAFT_TILES.find(t => t.key === section);
 
@@ -58225,7 +60299,7 @@ function DDDraftTab() {
       <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:10 }}>
         <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?16:20, color:"#E07B20", letterSpacing:2 }}>🎯 Rookie Draft History</div>
         <div style={{ display:"flex", gap:6 }}>
-          {[2024,2025].map(y => (
+          {[2024,2025,2026].map(y => (
             <button key={y} onClick={() => { setYear(y); setSelectedMgr(null); }}
               style={{ padding:"5px 14px", borderRadius:8, border:`1px solid ${year===y?"#E07B20":"#222"}`, background:year===y?"#E07B20":"#111", color:year===y?"#fff":"#555", fontSize:13, cursor:"pointer", fontWeight:year===y?700:400 }}>
               {y}
@@ -58580,6 +60654,8 @@ function DDDraftTab() {
         );
       })()}
 
+      {section === "pickhold" && <DDPickHoldings mobile={mobile} />}
+
       <div style={{ background:"#0a0f06", border:"1px solid #E07B2044", borderRadius:8, padding:"10px 14px", fontSize:12, color:"#888", textAlign:"center", marginTop:4 }}>
         🦆 2026 Rookie Draft starting May 8th — results will be added after the draft
       </div>
@@ -58911,6 +60987,7 @@ function DDDynastyTab() {
     { key:"matrix",   emoji:"🗺️", label:"Franchise Matrix",     sub:"Win rate vs. roster age — where every team stands",     color:"#2176d2" },
     { key:"tvChart",  emoji:"💎", label:"Trade Value",          sub:"Dynasty player value rankings by age & performance",    color:"#9b5de5" },
     { key:"journey",  emoji:"🔗", label:"Ownership Journey",    sub:"Player career ownership chains across all 4 seasons",   color:"#d42b2b" },
+    { key:"lineupeff",emoji:"🎯", label:"Lineup Efficiency",     sub:"Who maximizes their roster vs who leaves pts on bench",  color:"#2ecc71" },
   ];
   const currentTile = DD_DYNASTY_TILES.find(t => t.key === section);
 
@@ -59396,6 +61473,74 @@ function DDDynastyTab() {
           </div>
         );
       })()}
+
+      {/* ── LINEUP EFFICIENCY ──────────────────────────────────────────── */}
+      {section === "lineupeff" && (() => {
+        const eff = DD_LINEUP_EFFICIENCY || {};
+        const years = Object.keys(eff).map(Number).sort();
+
+        // Compute career averages per manager
+        const careerEff = {};
+        years.forEach(yr => {
+          Object.entries(eff[yr] || {}).forEach(([mgr, data]) => {
+            if (!careerEff[mgr]) careerEff[mgr] = { totalEff:0, totalBench:0, seasons:0, byYear:{} };
+            careerEff[mgr].totalEff   += data.avgEff;
+            careerEff[mgr].totalBench += data.avgBench;
+            careerEff[mgr].seasons    += 1;
+            careerEff[mgr].byYear[yr]  = { avgEff:data.avgEff, avgBench:data.avgBench };
+          });
+        });
+        const sorted = Object.entries(careerEff)
+          .map(([mgr, d]) => ({
+            mgr,
+            avgEff:   parseFloat((d.totalEff   / d.seasons).toFixed(1)),
+            avgBench: parseFloat((d.totalBench / d.seasons).toFixed(2)),
+            seasons:  d.seasons,
+            byYear:   d.byYear,
+          }))
+          .sort((a,b) => b.avgEff - a.avgEff);
+
+        const maxBench = Math.max(...sorted.map(m => m.avgBench));
+
+        return (
+          <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+            <div style={{ fontSize:11, color:"#555", background:"#111", borderRadius:6, padding:"6px 12px", marginBottom:4 }}>
+              Efficiency = actual pts scored ÷ max possible pts from your full roster · career average across all seasons
+            </div>
+            {sorted.map((m, i) => {
+              const color = m.avgEff >= 96 ? "#2ecc71" : m.avgEff >= 92 ? "#E07B20" : "#d42b2b";
+              const label = m.avgEff >= 96 ? "🎯 Sharp"
+                          : m.avgEff >= 93 ? "✅ Solid"
+                          : m.avgEff >= 90 ? "⚠️ Leaky"
+                          :                  "❌ Leaving pts";
+              return (
+                <div key={m.mgr} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
+                  <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:8 }}>
+                    <div style={{ width:22, textAlign:"center", fontSize:12, color:i<3?"#2ecc71":"#555", flexShrink:0 }}>
+                      {i===0?"🥇":i===1?"🥈":i===2?"🥉":`#${i+1}`}
+                    </div>
+                    <DDManagerLogo name={m.mgr} size={20} />
+                    <span style={{ fontSize:mobile?12:14, fontWeight:600, color:"#fff", flex:1 }}>{m.mgr.split(" ")[0]}</span>
+                    <span style={{ fontSize:10, color, background:`${color}22`, borderRadius:4, padding:"2px 7px", flexShrink:0 }}>{label}</span>
+                    <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:16, color, flexShrink:0 }}>{m.avgEff}%</span>
+                  </div>
+                  <div style={{ background:"#111", borderRadius:3, height:4, marginBottom:8 }}>
+                    <div style={{ height:4, borderRadius:3, width:`${m.avgEff}%`, background:color }} />
+                  </div>
+                  <div style={{ display:"flex", gap:mobile?10:20, fontSize:10, color:"#555", flexWrap:"wrap" }}>
+                    <span>Bench/wk <span style={{ color:"#d42b2b" }}>−{m.avgBench}</span> pts avg</span>
+                    <span>{m.seasons} season{m.seasons>1?"s":""}</span>
+                    {years.map(yr => m.byYear[yr] && (
+                      <span key={yr}>{yr}: <span style={{ color:m.byYear[yr].avgEff>=95?"#2ecc71":m.byYear[yr].avgEff>=91?"#E07B20":"#d42b2b" }}>{m.byYear[yr].avgEff}%</span></span>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        );
+      })()}
+
 
     </div>
   );
@@ -60308,9 +62453,9 @@ const DD_PLAYER_META = {
   "10867": {name:"Jake Bobo",pos:"WR",team:"SEA",age:27,yearsExp:3,college:"UCLA",},
   "11292": {name:"Tommy DeVito",pos:"QB",team:"NE",age:27,yearsExp:3,college:"Illinois",},
   "11299": {name:"Zavier Scott",pos:"RB",team:"MIN",age:26,yearsExp:3,college:"Maine",},
-  "11435": {name:"Emanuel Wilson",pos:"RB",team:"SEA",age:26,yearsExp:3,college:"Fort Valley State",},
+  "11435": {name:"Emanuel Wilson",pos:"RB",team:"SEA",age:27,yearsExp:3,college:"Fort Valley State",},
   "11439": {name:"Jaleel McLaughlin",pos:"RB",team:"DEN",age:25,yearsExp:3,college:"Youngstown State",},
-  "11559": {name:"Michael Penix",pos:"QB",team:"ATL",age:25,yearsExp:2,college:"Washington",injStatus:"Questionable",},
+  "11559": {name:"Michael Penix",pos:"QB",team:"ATL",age:26,yearsExp:2,college:"Washington",injStatus:"Questionable",},
   "11560": {name:"Caleb Williams",pos:"QB",team:"CHI",age:24,yearsExp:2,college:"USC",},
   "11562": {name:"Spencer Rattler",pos:"QB",team:"NO",age:25,yearsExp:2,college:"South Carolina",injStatus:"Questionable",},
   "11563": {name:"Bo Nix",pos:"QB",team:"DEN",age:26,yearsExp:2,college:"Oregon",injStatus:"Questionable",},
@@ -60334,7 +62479,7 @@ const DD_PLAYER_META = {
   "11596": {name:"Ben Sinnott",pos:"TE",team:"WAS",age:23,yearsExp:2,college:"Kansas State",},
   "11597": {name:"Theo Johnson",pos:"TE",team:"NYG",age:25,yearsExp:2,college:"Penn State",},
   "11600": {name:"Ja'Tavion Sanders",pos:"TE",team:"CAR",age:23,yearsExp:2,college:"Texas",injStatus:"Questionable",},
-  "11603": {name:"AJ Barner",pos:"TE",team:"SEA",age:23,yearsExp:2,college:"Michigan",},
+  "11603": {name:"AJ Barner",pos:"TE",team:"SEA",age:24,yearsExp:2,college:"Michigan",},
   "11604": {name:"Brock Bowers",pos:"TE",team:"LV",age:23,yearsExp:2,college:"Georgia",injStatus:"Questionable",},
   "11610": {name:"Malik Washington",pos:"WR",team:"MIA",age:25,yearsExp:2,college:"Virginia",},
   "11617": {name:"Malachi Corley",pos:"WR",team:"CLE",age:24,yearsExp:2,college:"Western Kentucky",},
@@ -60381,11 +62526,11 @@ const DD_PLAYER_META = {
   "12487": {name:"Terrance Ferguson",pos:"TE",team:"LAR",age:23,yearsExp:1,college:"Oregon",},
   "12489": {name:"RJ Harvey",pos:"RB",team:"DEN",age:25,yearsExp:1,college:"UCF",},
   "12490": {name:"Bhayshul Tuten",pos:"RB",team:"JAX",age:23,yearsExp:1,college:"Virginia Tech",},
-  "12492": {name:"Pat Bryant",pos:"WR",team:"DEN",age:23,yearsExp:1,college:"Illinois",injStatus:"Questionable",},
+  "12492": {name:"Pat Bryant",pos:"WR",team:"DEN",age:23,yearsExp:1,college:"Illinois",},
   "12493": {name:"Oronde Gadsden",pos:"TE",team:"LAC",age:22,yearsExp:1,college:"Syracuse",},
   "12495": {name:"Ollie Gordon",pos:"RB",team:"MIA",age:22,yearsExp:1,college:"Oklahoma State",},
   "12497": {name:"Tory Horton",pos:"WR",team:"SEA",age:23,yearsExp:1,college:"Colorado State",injStatus:"Questionable",},
-  "12498": {name:"Mason Taylor",pos:"TE",team:"NYJ",age:21,yearsExp:1,college:"LSU",},
+  "12498": {name:"Mason Taylor",pos:"TE",team:"NYJ",age:22,yearsExp:1,college:"LSU",},
   "12499": {name:"Elic Ayomanor",pos:"WR",team:"TEN",age:22,yearsExp:1,college:"Stanford",},
   "12500": {name:"Quinn Ewers",pos:"QB",team:"MIA",age:23,yearsExp:1,college:"Texas",injStatus:"Questionable",},
   "12501": {name:"Matthew Golden",pos:"WR",team:"GB",age:22,yearsExp:1,college:"Texas",},
@@ -60421,7 +62566,55 @@ const DD_PLAYER_META = {
   "12547": {name:"Kyle Williams",pos:"WR",team:"NE",age:23,yearsExp:1,college:"Washington State",},
   "12641": {name:"Jaylin Lane",pos:"WR",team:"WAS",age:24,yearsExp:1,college:"Virginia Tech",injStatus:"Questionable",},
   "12775": {name:"Max Brosmer",pos:"QB",team:"MIN",age:25,yearsExp:1,college:"Minnesota",},
+  "13268": {name:"Elijah Sarratt",pos:"WR",team:"BAL",age:22,yearsExp:0,college:"Indiana",},
+  "13269": {name:"Fernando Mendoza",pos:"QB",team:"LV",age:22,yearsExp:0,college:"Indiana",},
+  "13270": {name:"CJ Daniels",pos:"WR",team:"LAR",age:24,yearsExp:0,college:"Miami (FL)",},
+  "13272": {name:"Carson Beck",pos:"QB",team:"ARI",age:23,yearsExp:0,college:"Miami (FL)",},
+  "13274": {name:"Germie Bernard",pos:"WR",team:"PIT",age:22,yearsExp:0,college:"Alabama",},
+  "13275": {name:"Ty Simpson",pos:"QB",team:"LAR",age:23,yearsExp:0,college:"Alabama",},
+  "13276": {name:"Omar Cooper",pos:"WR",team:"NYJ",age:22,yearsExp:0,college:"Indiana",},
+  "13278": {name:"Max Klare",pos:"TE",team:"LAR",age:22,yearsExp:0,college:"Ohio State",},
+  "13279": {name:"Carnell Tate",pos:"WR",team:"TEN",age:21,yearsExp:0,college:"Ohio State",},
+  "13281": {name:"Jordyn Tyson",pos:"WR",team:"NO",age:21,yearsExp:0,college:"Arizona State",injStatus:"Questionable",},
+  "13285": {name:"Malachi Fields",pos:"WR",team:"NYG",age:22,yearsExp:0,college:"Notre Dame",},
+  "13286": {name:"Jadarian Price",pos:"RB",team:"SEA",age:22,yearsExp:0,college:"Notre Dame",},
+  "13287": {name:"Jeremiyah Love",pos:"RB",team:"ARI",age:20,yearsExp:0,college:"Notre Dame",},
+  "13288": {name:"Nicholas Singleton",pos:"RB",team:"TEN",age:22,yearsExp:0,college:"Penn State",},
+  "13289": {name:"Drew Allar",pos:"QB",team:"PIT",age:22,yearsExp:0,college:"Penn State",injStatus:"Questionable",},
+  "13293": {name:"Ja'Kobi Lane",pos:"WR",team:"BAL",age:22,yearsExp:0,college:"USC",},
+  "13294": {name:"Makai Lemon",pos:"WR",team:"PHI",age:21,yearsExp:0,college:"USC",},
+  "13296": {name:"Caleb Douglas",pos:"WR",team:"MIA",age:22,yearsExp:0,college:"Texas Tech",},
+  "13298": {name:"KC Concepcion",pos:"WR",team:"CLE",age:21,yearsExp:0,college:"Texas A&M",},
+  "13300": {name:"Le'Veon Moss",pos:"RB",team:"MIA",age:null,yearsExp:0,},
+  "13301": {name:"Antonio Williams",pos:"WR",team:"WAS",age:21,yearsExp:0,college:"Clemson",},
+  "13302": {name:"Adam Randall",pos:"RB",team:"BAL",age:21,yearsExp:0,college:"Clemson",},
+  "13303": {name:"Cade Klubnik",pos:"QB",team:"NYJ",age:22,yearsExp:0,college:"Clemson",},
+  "13305": {name:"Mike Washington",pos:"RB",team:"LV",age:22,yearsExp:0,college:"Arkansas",},
+  "13306": {name:"Taylen Green",pos:"QB",team:"CLE",age:23,yearsExp:0,college:"Arkansas",},
+  "13311": {name:"Chris Bell",pos:"WR",team:"MIA",age:21,yearsExp:0,college:"Louisville",injStatus:"Questionable",},
+  "13317": {name:"Ted Hurst",pos:"WR",team:"TB",age:21,yearsExp:0,college:"Georgia State",},
+  "13319": {name:"Oscar Delp",pos:"TE",team:"NO",age:22,yearsExp:0,college:"Georgia",},
+  "13320": {name:"Zachariah Branch",pos:"WR",team:"ATL",age:22,yearsExp:0,college:"Georgia",},
+  "13330": {name:"Kenyon Sadiq",pos:"TE",team:"NYJ",age:21,yearsExp:0,college:"Oregon",},
+  "13337": {name:"Emmett Johnson",pos:"RB",team:"KC",age:22,yearsExp:0,college:"Nebraska",},
+  "13338": {name:"Kevin Coleman",pos:"WR",team:"MIA",age:22,yearsExp:0,college:"Missouri",},
+  "13342": {name:"John Michael Gyllenborg",pos:"TE",team:"KC",age:null,yearsExp:0,college:"Wyoming",},
+  "13345": {name:"Jonah Coleman",pos:"RB",team:"DEN",age:22,yearsExp:0,college:"Washington",},
+  "13346": {name:"Denzel Boston",pos:"WR",team:"CLE",age:22,yearsExp:0,college:"Washington",},
+  "13347": {name:"Demond Claiborne",pos:"RB",team:"MIN",age:22,yearsExp:0,college:"Wake Forest",},
+  "13348": {name:"J'Mari Taylor",pos:"RB",team:"JAX",age:null,yearsExp:0,},
+  "13349": {name:"Eli Stowers",pos:"TE",team:"PHI",age:23,yearsExp:0,college:"Vanderbilt",},
+  "13353": {name:"Chris Brazzell",pos:"WR",team:"CAR",age:22,yearsExp:0,college:"Tennessee",},
+  "13380": {name:"Brenen Thompson",pos:"WR",team:"LAC",age:22,yearsExp:0,college:"Mississippi State",},
   "1339": {name:"Zach Ertz",pos:"TE",team:"FA",age:35,yearsExp:13,college:"Stanford",injStatus:"Questionable",},
+  "13401": {name:"Michael Trigg",pos:"TE",team:"DAL",age:23,yearsExp:0,college:"Baylor",},
+  "13402": {name:"Skyler Bell",pos:"WR",team:"BUF",age:23,yearsExp:0,college:"UConn",},
+  "13404": {name:"Garrett Nussmeier",pos:"QB",team:"KC",age:24,yearsExp:0,college:"LSU",},
+  "13405": {name:"Kaytron Allen",pos:"RB",team:"WAS",age:23,yearsExp:0,college:"Penn State",},
+  "13414": {name:"Kaelon Black",pos:"RB",team:"SF",age:24,yearsExp:0,college:"Indiana",},
+  "13417": {name:"De'Zhaun Stribling",pos:"WR",team:"SF",age:23,yearsExp:0,college:"Ole Miss",},
+  "13420": {name:"Bryce Lance",pos:"WR",team:"NO",age:23,yearsExp:0,college:"North Dakota State",},
+  "13424": {name:"Seth McGowan",pos:"RB",team:"IND",age:24,yearsExp:0,college:"Kentucky",},
   "1352": {name:"Robert Woods",pos:"WR",team:"FA",age:33,yearsExp:12,college:"USC",injStatus:"NA",},
   "1373": {name:"Geno Smith",pos:"QB",team:"NYJ",age:35,yearsExp:13,college:"West Virginia",},
   "1426": {name:"DeAndre Hopkins",pos:"WR",team:"FA",age:33,yearsExp:13,college:"Clemson",},
@@ -60440,7 +62633,7 @@ const DD_PLAYER_META = {
   "2251": {name:"Logan Thomas",pos:"TE",team:"FA",age:33,yearsExp:10,college:"Virginia Tech",},
   "2307": {name:"Marcus Mariota",pos:"QB",team:"WAS",age:32,yearsExp:11,college:"Oregon",},
   "2309": {name:"Amari Cooper",pos:"WR",team:"FA",age:31,yearsExp:10,college:"Alabama",},
-  "2359": {name:"Ameer Abdullah",pos:"RB",team:"FA",age:32,yearsExp:11,college:"Nebraska",},
+  "2359": {name:"Ameer Abdullah",pos:"RB",team:"JAX",age:32,yearsExp:11,college:"Nebraska",},
   "2374": {name:"Tyler Lockett",pos:"WR",team:"FA",age:33,yearsExp:11,college:"Kansas State",},
   "2449": {name:"Stefon Diggs",pos:"WR",team:"FA",age:32,yearsExp:11,college:"Maryland",},
   "2505": {name:"Darren Waller",pos:"TE",team:"FA",age:33,yearsExp:11,college:"Georgia Tech",injStatus:"Questionable",},
@@ -60464,7 +62657,7 @@ const DD_PLAYER_META = {
   "4017": {name:"Deshaun Watson",pos:"QB",team:"CLE",age:30,yearsExp:9,college:"Clemson",},
   "4018": {name:"Joe Mixon",pos:"RB",team:"FA",age:29,yearsExp:9,college:"Oklahoma",injStatus:"Questionable",},
   "4029": {name:"Dalvin Cook",pos:"RB",team:"FA",age:29,yearsExp:8,college:"Florida State",},
-  "4033": {name:"David Njoku",pos:"TE",team:"FA",age:29,yearsExp:9,college:"Miami (FL)",},
+  "4033": {name:"David Njoku",pos:"TE",team:"LAC",age:29,yearsExp:9,college:"Miami (FL)",},
   "4034": {name:"Christian McCaffrey",pos:"RB",team:"SF",age:29,yearsExp:9,college:"Stanford",},
   "4035": {name:"Alvin Kamara",pos:"RB",team:"NO",age:30,yearsExp:9,college:"Tennessee",injStatus:"Questionable",},
   "4037": {name:"Chris Godwin",pos:"WR",team:"TB",age:30,yearsExp:9,college:"Penn State",},
@@ -60478,7 +62671,7 @@ const DD_PLAYER_META = {
   "4089": {name:"Gerald Everett",pos:"TE",team:"FA",age:30,yearsExp:8,college:"South Alabama",},
   "4098": {name:"Kareem Hunt",pos:"RB",team:"FA",age:30,yearsExp:9,college:"Toledo",},
   "4111": {name:"D'Onta Foreman",pos:"RB",team:"FA",age:28,yearsExp:8,college:"Texas",},
-  "4137": {name:"James Conner",pos:"RB",team:"ARI",age:30,yearsExp:9,college:"Pittsburgh",},
+  "4137": {name:"James Conner",pos:"RB",team:"ARI",age:31,yearsExp:9,college:"Pittsburgh",},
   "4144": {name:"Jonnu Smith",pos:"TE",team:"FA",age:30,yearsExp:9,college:"Florida International",},
   "4149": {name:"Jamaal Williams",pos:"RB",team:"FA",age:29,yearsExp:8,college:"BYU",},
   "4171": {name:"Josh Reynolds",pos:"WR",team:"FA",age:31,yearsExp:9,college:"Texas A&M",injStatus:"Questionable",},
@@ -60505,6 +62698,7 @@ const DD_PLAYER_META = {
   "4983": {name:"DJ Moore",pos:"WR",team:"BUF",age:29,yearsExp:8,college:"Maryland",},
   "4984": {name:"Josh Allen",pos:"QB",team:"BUF",age:29,yearsExp:8,college:"Wyoming",injStatus:"Questionable",},
   "4988": {name:"Nick Chubb",pos:"RB",team:"FA",age:30,yearsExp:8,college:"Georgia",injStatus:"IR",},
+  "4993": {name:"Mike Gesicki",pos:"TE",team:"CIN",age:30,yearsExp:8,college:"Penn State",},
   "5000": {name:"Chase Edmonds",pos:"RB",team:"FA",age:29,yearsExp:8,college:"Fordham",},
   "5001": {name:"Dalton Schultz",pos:"TE",team:"HOU",age:29,yearsExp:8,college:"Stanford",injStatus:"Questionable",},
   "5010": {name:"Will Dissly",pos:"TE",team:"FA",age:29,yearsExp:8,college:"Washington",injStatus:"Questionable",},
@@ -60564,10 +62758,10 @@ const DD_PLAYER_META = {
   "6820": {name:"Clyde Edwards-Helaire",pos:"RB",team:"FA",age:26,yearsExp:6,college:"LSU",},
   "6824": {name:"Donovan Peoples-Jones",pos:"WR",team:"FA",age:26,yearsExp:5,college:"Michigan",},
   "6826": {name:"Cole Kmet",pos:"TE",team:"CHI",age:27,yearsExp:6,college:"Notre Dame",},
-  "6828": {name:"AJ Dillon",pos:"RB",team:"CAR",age:27,yearsExp:6,college:"Boston College",},
+  "6828": {name:"AJ Dillon",pos:"RB",team:"CAR",age:28,yearsExp:6,college:"Boston College",},
   "6845": {name:"Zack Moss",pos:"RB",team:"FA",age:27,yearsExp:5,college:"Utah",injStatus:"Questionable",},
   "6865": {name:"Colby Parkinson",pos:"TE",team:"LAR",age:27,yearsExp:6,college:"Stanford",},
-  "6886": {name:"Chase Claypool",pos:"WR",team:"FA",age:26,yearsExp:4,college:"Notre Dame",status:"Inactive",},
+  "6886": {name:"Chase Claypool",pos:"WR",team:"FA",age:26,yearsExp:4,college:"Notre Dame",status:"Inactive",injStatus:"IR",},
   "6904": {name:"Jalen Hurts",pos:"QB",team:"PHI",age:27,yearsExp:6,college:"Oklahoma",},
   "6943": {name:"Gabe Davis",pos:"WR",team:"FA",age:26,yearsExp:6,college:"UCF",injStatus:"Questionable",},
   "6945": {name:"Antonio Gibson",pos:"RB",team:"FA",age:27,yearsExp:6,college:"Memphis",injStatus:"Questionable",},
@@ -60575,7 +62769,7 @@ const DD_PLAYER_META = {
   "7002": {name:"Juwan Johnson",pos:"TE",team:"NO",age:29,yearsExp:6,college:"Oregon",},
   "7021": {name:"Rico Dowdle",pos:"RB",team:"PIT",age:27,yearsExp:6,college:"South Carolina",},
   "7045": {name:"Joshua Kelley",pos:"RB",team:"FA",age:27,yearsExp:5,college:"UCLA",},
-  "7049": {name:"Jauan Jennings",pos:"WR",team:"FA",age:28,yearsExp:6,college:"Tennessee",},
+  "7049": {name:"Jauan Jennings",pos:"WR",team:"MIN",age:28,yearsExp:6,college:"Tennessee",},
   "7066": {name:"K.J. Osborn",pos:"WR",team:"TEN",age:28,yearsExp:6,college:"Miami (FL)",},
   "7090": {name:"Darnell Mooney",pos:"WR",team:"NYG",age:28,yearsExp:6,college:"Tulane",},
   "7496": {name:"Nick Westbrook-Ikhine",pos:"WR",team:"IND",age:29,yearsExp:6,college:"Indiana",},
@@ -60604,9 +62798,9 @@ const DD_PLAYER_META = {
   "7600": {name:"Pat Freiermuth",pos:"TE",team:"PIT",age:27,yearsExp:5,college:"Penn State",},
   "7601": {name:"Rondale Moore",pos:"WR",team:"FA",age:25,yearsExp:5,college:"Purdue",},
   "7606": {name:"Kadarius Toney",pos:"WR",team:"FA",age:25,yearsExp:3,college:"Florida",},
-  "7607": {name:"Michael Carter",pos:"RB",team:"TEN",age:26,yearsExp:5,college:"North Carolina",},
+  "7607": {name:"Michael Carter",pos:"RB",team:"TEN",age:27,yearsExp:5,college:"North Carolina",},
   "7608": {name:"Khalil Herbert",pos:"RB",team:"FA",age:27,yearsExp:5,college:"Virginia Tech",},
-  "7610": {name:"Trey Lance",pos:"QB",team:"LAC",age:25,yearsExp:5,college:"North Dakota State",},
+  "7610": {name:"Trey Lance",pos:"QB",team:"LAC",age:26,yearsExp:5,college:"North Dakota State",},
   "7611": {name:"Rhamondre Stevenson",pos:"RB",team:"NE",age:28,yearsExp:5,college:"Oklahoma",},
   "7670": {name:"Joshua Palmer",pos:"WR",team:"BUF",age:26,yearsExp:5,college:"Tennessee",injStatus:"Questionable",},
   "7828": {name:"Noah Gray",pos:"TE",team:"KC",age:27,yearsExp:5,college:"Duke",},
@@ -60629,7 +62823,7 @@ const DD_PLAYER_META = {
   "8137": {name:"George Pickens",pos:"WR",team:"DAL",age:25,yearsExp:4,college:"Georgia",},
   "8138": {name:"James Cook",pos:"RB",team:"BUF",age:26,yearsExp:4,college:"Georgia",},
   "8139": {name:"Zamir White",pos:"RB",team:"FA",age:26,yearsExp:4,college:"Georgia",},
-  "8142": {name:"Alec Pierce",pos:"WR",team:"IND",age:25,yearsExp:4,college:"Cincinnati",injStatus:"Questionable",},
+  "8142": {name:"Alec Pierce",pos:"WR",team:"IND",age:26,yearsExp:4,college:"Cincinnati",injStatus:"Questionable",},
   "8143": {name:"Jerome Ford",pos:"RB",team:"WAS",age:26,yearsExp:4,college:"Cincinnati",injStatus:"Questionable",},
   "8144": {name:"Chris Olave",pos:"WR",team:"NO",age:25,yearsExp:4,college:"Ohio State",injStatus:"Questionable",},
   "8146": {name:"Garrett Wilson",pos:"WR",team:"NYJ",age:25,yearsExp:4,college:"Ohio State",injStatus:"Questionable",},
@@ -60639,9 +62833,9 @@ const DD_PLAYER_META = {
   "8151": {name:"Kenneth Walker",pos:"RB",team:"KC",age:25,yearsExp:4,college:"Michigan State",},
   "8153": {name:"Isaiah Spiller",pos:"RB",team:"FA",age:23,yearsExp:3,college:"Texas A&M",},
   "8154": {name:"Brian Robinson",pos:"RB",team:"ATL",age:27,yearsExp:4,college:"Alabama",},
-  "8155": {name:"Breece Hall",pos:"RB",team:"NYJ",age:24,yearsExp:4,college:"Iowa State",injStatus:"Questionable",},
+  "8155": {name:"Breece Hall",pos:"RB",team:"NYJ",age:24,yearsExp:4,college:"Iowa State",},
   "8157": {name:"Bailey Zappe",pos:"QB",team:"NYJ",age:27,yearsExp:4,college:"Western Kentucky",},
-  "8159": {name:"Desmond Ridder",pos:"QB",team:"GB",age:26,yearsExp:4,college:"Cincinnati",},
+  "8159": {name:"Desmond Ridder",pos:"QB",team:"FA",age:26,yearsExp:4,college:"Cincinnati",},
   "8160": {name:"Kenny Pickett",pos:"QB",team:"CAR",age:27,yearsExp:4,college:"Pittsburgh",},
   "8161": {name:"Malik Willis",pos:"QB",team:"MIA",age:26,yearsExp:4,college:"Liberty",},
   "8162": {name:"Sam Howell",pos:"QB",team:"DAL",age:25,yearsExp:4,college:"North Carolina",},
@@ -60660,10 +62854,11 @@ const DD_PLAYER_META = {
   "8225": {name:"Daniel Bellinger",pos:"TE",team:"TEN",age:25,yearsExp:4,college:"San Diego State",},
   "8228": {name:"Jaylen Warren",pos:"RB",team:"PIT",age:27,yearsExp:4,college:"Oklahoma State",},
   "8230": {name:"Ty Chandler",pos:"RB",team:"NO",age:27,yearsExp:4,college:"North Carolina",},
-  "827": {name:"Tyrod Taylor",pos:"QB",team:"FA",age:36,yearsExp:15,college:"Virginia Tech",injStatus:"Questionable",},
+  "827": {name:"Tyrod Taylor",pos:"QB",team:"GB",age:36,yearsExp:15,college:"Virginia Tech",},
   "829": {name:"Andy Dalton",pos:"QB",team:"PHI",age:38,yearsExp:15,college:"TCU",},
   "8408": {name:"Jordan Mason",pos:"RB",team:"MIN",age:26,yearsExp:4,college:"Georgia Tech",},
   "8676": {name:"Rashid Shaheed",pos:"WR",team:"SEA",age:27,yearsExp:4,college:"Weber State",},
+  "8698": {name:"Jake Tonges",pos:"TE",team:"SF",age:26,yearsExp:4,college:"California",injStatus:"Questionable",},
   "8800": {name:"Malik Davis",pos:"RB",team:"DAL",age:27,yearsExp:4,college:"Florida",injStatus:"Questionable",},
   "9221": {name:"Jahmyr Gibbs",pos:"RB",team:"DET",age:24,yearsExp:3,college:"Alabama",},
   "9224": {name:"Chase Brown",pos:"RB",team:"CIN",age:26,yearsExp:3,college:"Illinois",},
@@ -60671,7 +62866,7 @@ const DD_PLAYER_META = {
   "9226": {name:"De'Von Achane",pos:"RB",team:"MIA",age:24,yearsExp:3,college:"Texas A&M",},
   "9227": {name:"Israel Abanikanda",pos:"RB",team:"DAL",age:23,yearsExp:3,college:"Pittsburgh",},
   "9228": {name:"Bryce Young",pos:"QB",team:"CAR",age:24,yearsExp:3,college:"Alabama",},
-  "9229": {name:"Anthony Richardson",pos:"QB",team:"IND",age:23,yearsExp:3,college:"Florida",injStatus:"Questionable",},
+  "9229": {name:"Anthony Richardson",pos:"QB",team:"IND",age:23,yearsExp:3,college:"Florida",},
   "9231": {name:"Jaren Hall",pos:"QB",team:"FA",age:27,yearsExp:2,college:"BYU",},
   "947": {name:"Julio Jones",pos:"WR",team:"FA",age:35,yearsExp:13,college:"Alabama",},
   "9479": {name:"Darnell Washington",pos:"TE",team:"PIT",age:24,yearsExp:3,college:"Georgia",injStatus:"Questionable",},
@@ -60682,7 +62877,7 @@ const DD_PLAYER_META = {
   "9486": {name:"Dontayvion Wicks",pos:"WR",team:"PHI",age:24,yearsExp:3,college:"Virginia",},
   "9487": {name:"Parker Washington",pos:"WR",team:"JAX",age:24,yearsExp:3,college:"Penn State",},
   "9488": {name:"Jaxon Smith-Njigba",pos:"WR",team:"SEA",age:24,yearsExp:3,college:"Ohio State",},
-  "9489": {name:"Justin Shorter",pos:"WR",team:"LV",age:26,yearsExp:3,college:"Florida",},
+  "9489": {name:"Justin Shorter",pos:"WR",team:"LV",age:26,yearsExp:3,college:"Florida",status:"Inactive",injStatus:"IR",},
   "9490": {name:"Tyler Scott",pos:"WR",team:"LAR",age:24,yearsExp:3,college:"Cincinnati",},
   "9492": {name:"Trey Palmer",pos:"WR",team:"NO",age:25,yearsExp:3,college:"Nebraska",injStatus:"Questionable",},
   "9493": {name:"Puka Nacua",pos:"WR",team:"LAR",age:24,yearsExp:3,college:"BYU",},
@@ -60691,7 +62886,7 @@ const DD_PLAYER_META = {
   "9500": {name:"Josh Downs",pos:"WR",team:"IND",age:24,yearsExp:3,college:"North Carolina",},
   "9501": {name:"DeMario Douglas",pos:"WR",team:"NE",age:25,yearsExp:3,college:"Liberty",},
   "9502": {name:"Tank Dell",pos:"WR",team:"HOU",age:26,yearsExp:3,college:"Houston",injStatus:"Questionable",},
-  "9504": {name:"Kayshon Boutte",pos:"WR",team:"NE",age:23,yearsExp:3,college:"LSU",},
+  "9504": {name:"Kayshon Boutte",pos:"WR",team:"NE",age:24,yearsExp:3,college:"LSU",},
   "9505": {name:"Deuce Vaughn",pos:"RB",team:"DEN",age:24,yearsExp:3,college:"Kansas State",},
   "9506": {name:"Sean Tucker",pos:"RB",team:"TB",age:24,yearsExp:3,college:"Syracuse",},
   "9508": {name:"Tyjae Spears",pos:"RB",team:"TEN",age:24,yearsExp:3,college:"Tulane",},
@@ -60753,22 +62948,21 @@ const DD_ROSTER_HISTORY = {
     "Will Hoekstra": ["11566","11650","1166","12483","12492","12500","12545","331","4033","4037","4177","5022","5850","5872","5947","6794","7543","7585","7587","7600","8151","9508","9753"],
   },
   2026: {
-    "Aaron Fay": ["10236","11559","11617","11994","12469","12485","12509","12540","1373","1426","2216","2449","3198","421","6130","6803","6865","6943","7611","7828","8138","8180","8188","9481","9758"],
-    "Christian Manes": ["10226","11565","11571","11600","11620","11625","12474","12484","12495","12522","1339","4018","4035","4066","4663","6783","7090","8125","8183","9504"],
-    "Greg Mulder": ["10213","10219","11575","11626","12497","12502","12507","12511","2133","3214","3257","4046","4098","4137","4217","4983","6768","7049","7523","8134","8147","9225","9509","9756","9757"],
-    "Jake Beukelman": ["11435","11563","11564","11569","11584","11603","11631","11637","12487","12489","12514","5870","6790","7567","7588","8130","8136","8137","8148","9493","9501","9511"],
-    "James Lazette": ["10859","11576","11834","12503","12519","12526","12531","12541","12547","2505","3321","4017","4034","4866","6804","6904","7002","7547","8126","8131","8155","8408","9224","96"],
-    "Jared Stuit": ["11560","11589","11618","11627","11643","12455","12498","12510","12527","12530","12533","12534","12535","1479","6786","6797","6819","7021","8110","8167","9480","9488","9494"],
-    "Ross Van Groningen": ["10444","11439","11628","11638","11651","12457","12499","12508","12512","12517","12775","4950","4984","5844","5846","5906","7526","7571","7607","8132","8146","8210","8676","9221"],
-    "Steve Vander Molen": ["10229","10232","11583","11586","1234","12476","12490","12529","1837","2307","4943","4988","5849","6806","6813","7525","7527","7553","7564","8111","9226","9484","9500","9502","9997"],
-    "Trey Hugen": ["10222","11597","11647","11655","12504","12506","12521","12536","3294","4039","4881","4892","4981","5012","5045","5848","6801","7569","7591","8144","8150","8154","8228"],
-    "Tyler Goslinga": ["10218","11581","11604","11624","11635","11646","12471","12481","12501","12518","12641","5967","6149","6770","7670","8121","8161","9228","9486"],
-    "Vance Sipma": ["11596","11610","11632","12486","12493","12524","1466","19","3163","4199","5001","5859","5892","5927","7528","7594","8112","8142","8205","9229","9482","9487","9754"],
-    "Will Hoekstra": ["11566","1166","12483","12492","12500","12545","4033","4037","4177","5022","5850","5872","5947","6794","7543","7600","8151","9508","9753"],
+    "Aaron Fay": ["10236","11559","12469","12485","12509","12518","12540","13268","13270","13305","1373","2216","2449","3198","421","6130","6770","6803","6865","7611","7828","8138","8180","9758"],
+    "Christian Manes": ["10226","11565","11571","11600","11620","11625","12474","12484","12495","12522","13275","13285","13287","13298","13317","13319","1339","4018","4035","4066","4663","6783","7090","8125","8183","9504"],
+    "Greg Mulder": ["10213","10219","11575","11626","12497","12502","12507","12511","13417","13420","2133","3214","3257","4046","4137","4217","4983","6768","7049","7523","8134","9225","9509","9756","9757"],
+    "Jake Beukelman": ["11435","11563","11564","11584","11603","11631","11637","12487","12489","12514","13274","13278","13346","13348","13405","5870","6790","7567","7588","8130","8136","8137","8148","9493","9501","9511"],
+    "James Lazette": ["10859","11576","11834","12503","12519","12526","12531","12541","12547","13272","13342","13402","19","3321","4017","4034","4866","6804","6904","7002","7547","8126","8131","8155","8408","9224"],
+    "Jared Stuit": ["11560","11589","11618","11627","11643","12510","12527","12530","12533","12534","12535","13289","13303","13401","13414","1479","6786","6797","6819","7021","8110","8167","9480","9488","9494"],
+    "Ross Van Groningen": ["10444","11439","11628","11638","11651","12457","12499","12508","12512","12517","12775","13281","13301","13337","13338","4950","4984","5844","5846","5906","7526","7571","7607","8132","8146","8210","8676","9221"],
+    "Steve Vander Molen": ["10229","10232","11583","11586","1234","12476","12490","12529","13300","13345","13404","1837","2307","4943","4988","5849","6806","6813","7525","7527","7553","7564","8111","9226","9484","9500","9502","9997"],
+    "Trey Hugen": ["10222","11597","11647","11655","12504","12506","12521","12536","13276","13288","13380","3294","4039","4881","4892","4981","5012","5045","5848","6801","7569","7591","8144","8150","8154","8228"],
+    "Tyler Goslinga": ["10218","11581","11604","11624","11635","11646","12471","12481","12501","12641","13269","13279","13311","13347","13353","13424","4993","5967","8121","8161","8698","9228","9486"],
+    "Vance Sipma": ["11610","11632","12486","12493","12524","13286","13296","13330","1466","3163","4199","5001","5859","5892","5927","7528","7594","8112","8142","8205","9229","9482","9487","96","9754"],
+    "Will Hoekstra": ["11566","1166","12483","12492","12500","12545","13293","13294","13302","13306","13320","13349","4033","4037","5022","5850","5872","5947","6794","7543","7600","8151","9508","9753"],
   },
 };
 
-// ── DD DATA CONSTANTS ─────────────────────────────────────────────────────────
 const DD_DRAFT_DATA = {
   2024: {
     rounds: 3, type: 'linear',
@@ -60862,6 +63056,59 @@ const DD_DRAFT_DATA = {
       {rd:4,pk:46,slot:10,mgr:'Tyler Goslinga',pos:'RB',player:'DJ Giddens',team:'IND'},
       {rd:4,pk:47,slot:11,mgr:'Vance Sipma',pos:'TE',player:'Oronde Gadsden II',team:'LAC'},
       {rd:4,pk:48,slot:12,mgr:'Greg Mulder',pos:'TE',player:'Gunnar Helm',team:'TEN'},
+    ],
+  },
+  2026: {
+    rounds: 4, type: 'linear',
+    picks: [
+      {rd:1,pk:1,slot:1,mgr:'Tyler Goslinga',pos:'QB',player:'Fernando Mendoza',team:'LV'},
+      {rd:1,pk:2,slot:2,mgr:'Christian Manes',pos:'RB',player:'Jeremiyah Love',team:'ARI'},
+      {rd:1,pk:3,slot:3,mgr:'Tyler Goslinga',pos:'WR',player:'Carnell Tate',team:'TEN'},
+      {rd:1,pk:4,slot:4,mgr:'Ross Van Groningen',pos:'WR',player:'Jordyn Tyson',team:'NO'},
+      {rd:1,pk:5,slot:5,mgr:'Vance Sipma',pos:'RB',player:'Jadarian Price',team:'SEA'},
+      {rd:1,pk:6,slot:6,mgr:'Will Hoekstra',pos:'WR',player:'Makai Lemon',team:'PHI'},
+      {rd:1,pk:7,slot:7,mgr:'Christian Manes',pos:'WR',player:'KC Concepcion',team:'CLE'},
+      {rd:1,pk:8,slot:8,mgr:'Christian Manes',pos:'QB',player:'Ty Simpson',team:'LAR'},
+      {rd:1,pk:9,slot:9,mgr:'Steve Vander Molen',pos:'RB',player:'Jonah Coleman',team:'DEN'},
+      {rd:1,pk:10,slot:10,mgr:'Vance Sipma',pos:'TE',player:'Kenyon Sadiq',team:'NYJ'},
+      {rd:1,pk:11,slot:11,mgr:'Will Hoekstra',pos:'TE',player:'Eli Stowers',team:'PHI'},
+      {rd:1,pk:12,slot:12,mgr:'Jake Beukelman',pos:'WR',player:'Denzel Boston',team:'CLE'},
+      {rd:2,pk:13,slot:1,mgr:'Trey Hugen',pos:'WR',player:'Omar Cooper',team:'NYJ'},
+      {rd:2,pk:14,slot:2,mgr:'Trey Hugen',pos:'RB',player:'Nicholas Singleton',team:'TEN'},
+      {rd:2,pk:15,slot:3,mgr:'Tyler Goslinga',pos:'WR',player:'Chris Bell',team:'MIA'},
+      {rd:2,pk:16,slot:4,mgr:'Aaron Fay',pos:'WR',player:'Elijah Sarratt',team:'BAL'},
+      {rd:2,pk:17,slot:5,mgr:'Ross Van Groningen',pos:'RB',player:'Emmett Johnson',team:'KC'},
+      {rd:2,pk:18,slot:6,mgr:'Greg Mulder',pos:'WR',player:"De'Zhaun Stribling",team:'SF'},
+      {rd:2,pk:19,slot:7,mgr:'Ross Van Groningen',pos:'WR',player:'Antonio Williams',team:'WAS'},
+      {rd:2,pk:20,slot:8,mgr:'James Lazette',pos:'QB',player:'Carson Beck',team:'ARI'},
+      {rd:2,pk:21,slot:9,mgr:'Jake Beukelman',pos:'WR',player:'Germie Bernard',team:'PIT'},
+      {rd:2,pk:22,slot:10,mgr:'Jared Stuit',pos:'QB',player:'Drew Allar',team:'PIT'},
+      {rd:2,pk:23,slot:11,mgr:'Jared Stuit',pos:'RB',player:'Kaelon Black',team:'SF'},
+      {rd:2,pk:24,slot:12,mgr:'Jake Beukelman',pos:'RB',player:'Kaytron Allen',team:'WAS'},
+      {rd:3,pk:25,slot:1,mgr:'Tyler Goslinga',pos:'WR',player:'Chris Brazzell',team:'CAR'},
+      {rd:3,pk:26,slot:2,mgr:'Christian Manes',pos:'WR',player:'Malachi Fields',team:'NYG'},
+      {rd:3,pk:27,slot:3,mgr:'Will Hoekstra',pos:'WR',player:'Zachariah Branch',team:'ATL'},
+      {rd:3,pk:28,slot:4,mgr:'Aaron Fay',pos:'RB',player:'Mike Washington',team:'LV'},
+      {rd:3,pk:29,slot:5,mgr:'James Lazette',pos:'WR',player:'Skyler Bell',team:'BUF'},
+      {rd:3,pk:30,slot:6,mgr:'Will Hoekstra',pos:'WR',player:"Ja'Kobi Lane",team:'BAL'},
+      {rd:3,pk:31,slot:7,mgr:'Jake Beukelman',pos:'TE',player:'Max Klare',team:'LAR'},
+      {rd:3,pk:32,slot:8,mgr:'Tyler Goslinga',pos:'RB',player:'Demond Claiborne',team:'MIN'},
+      {rd:3,pk:33,slot:9,mgr:'Steve Vander Molen',pos:'QB',player:'Garrett Nussmeier',team:'KC'},
+      {rd:3,pk:34,slot:10,mgr:'Christian Manes',pos:'WR',player:'Ted Hurst',team:'TB'},
+      {rd:3,pk:35,slot:11,mgr:'Jared Stuit',pos:'QB',player:'Cade Klubnik',team:'NYJ'},
+      {rd:3,pk:36,slot:12,mgr:'Will Hoekstra',pos:'RB',player:'Adam Randall',team:'BAL'},
+      {rd:4,pk:37,slot:1,mgr:'Trey Hugen',pos:'WR',player:'Brenen Thompson',team:'LAC'},
+      {rd:4,pk:38,slot:2,mgr:'Christian Manes',pos:'TE',player:'Oscar Delp',team:'NO'},
+      {rd:4,pk:39,slot:3,mgr:'Will Hoekstra',pos:'QB',player:'Taylen Green',team:'CLE'},
+      {rd:4,pk:40,slot:4,mgr:'Aaron Fay',pos:'WR',player:'CJ Daniels',team:'LAR'},
+      {rd:4,pk:41,slot:5,mgr:'Vance Sipma',pos:'WR',player:'Caleb Douglas',team:'MIA'},
+      {rd:4,pk:42,slot:6,mgr:'Greg Mulder',pos:'WR',player:'Bryce Lance',team:'NO'},
+      {rd:4,pk:43,slot:7,mgr:'Ross Van Groningen',pos:'WR',player:'Kevin Coleman',team:'MIA'},
+      {rd:4,pk:44,slot:8,mgr:'James Lazette',pos:'TE',player:'John Michael Gyllenborg',team:'KC'},
+      {rd:4,pk:45,slot:9,mgr:'Steve Vander Molen',pos:'RB',player:"Le'Veon Moss",team:'MIA'},
+      {rd:4,pk:46,slot:10,mgr:'Tyler Goslinga',pos:'RB',player:'Seth McGowan',team:'IND'},
+      {rd:4,pk:47,slot:11,mgr:'Jared Stuit',pos:'TE',player:'Michael Trigg',team:'DAL'},
+      {rd:4,pk:48,slot:12,mgr:'Jake Beukelman',pos:'RB',player:"J'Mari Taylor",team:'JAX'},
     ],
   },
 };
