@@ -60103,8 +60103,8 @@ function DDPondTab() {
 }
 function DDPickHoldings({ mobile }) {
   const TARGET_YEARS = ["2027","2028","2029"];
-  const ROUNDS = 5;
-  const ROUND_LABELS = {1:"1st",2:"2nd",3:"3rd",4:"4th",5:"5th"};
+  const ROUNDS = 4;
+  const ROUND_LABELS = {1:"1st",2:"2nd",3:"3rd",4:"4th"};
 
   const [picks,    setPicks]    = React.useState(null);
   const [pickErr,  setPickErr]  = React.useState(false);
@@ -60970,6 +60970,142 @@ function DDPlayersTab() {
   );
 }
 
+function DDFranchiseMatrix({ careerStats, rosterAges, mobile }) {
+  const [selected, setSelected] = React.useState(null);
+  const [writeup,  setWriteup]  = React.useState(null);
+  const [loading,  setLoading]  = React.useState(false);
+  const R1=5.359375, R2=3.0625, R3=1.75, R4=1;
+  const RV = [R1,R2,R3,R4, R1,R2,R3,R4, R1,R2,R3,R4];
+  const weightedWinPct = React.useMemo(() => {
+    const W = {2025:0.50,2024:0.33,2023:0.17};
+    const out = {};
+    Object.keys(careerStats).forEach(mgr => {
+      let ws=0, wt=0;
+      [2023,2024,2025].forEach(yr => {
+        const s = DD_HISTORICAL.seasons[yr]?.regular.find(m => m.name===mgr);
+        if (!s) return;
+        const gp = s.wins+s.losses; if (!gp) return;
+        ws += (s.wins/gp)*W[yr]; wt += W[yr];
+      });
+      out[mgr] = wt > 0 ? parseFloat((ws/wt).toFixed(3)) : 0;
+    });
+    return out;
+  }, [careerStats]);
+  const pickCapital = React.useMemo(() => {
+    const sc = {};
+    Object.entries(DD_PICK_CAPITAL).forEach(([mgr,cnts]) => {
+      sc[mgr] = parseFloat(cnts.reduce((a,cv,i)=>a+cv*RV[i],0).toFixed(2));
+    });
+    return sc;
+  }, []);
+  const points = React.useMemo(() => {
+    const mgrs = Object.keys(careerStats).filter(m => rosterAges[m] && pickCapital[m]);
+    const cv=mgrs.map(m=>pickCapital[m]);
+    const minC=Math.min(...cv), maxC=Math.max(...cv);
+    const av=mgrs.map(m=>rosterAges[m]);
+    const minA=Math.min(...av), maxA=Math.max(...av);
+    return mgrs.map(m => {
+      const nC = maxC>minC?(pickCapital[m]-minC)/(maxC-minC):0.5;
+      const nY = maxA>minA?1-(rosterAges[m]-minA)/(maxA-minA):0.5;
+      const fv = parseFloat((0.6*nC+0.4*nY).toFixed(3));
+      return { mgr:m, winPct:weightedWinPct[m]||0, fv,
+               age:rosterAges[m], cap:pickCapital[m].toFixed(1),
+               nC:Math.round(nC*100), nY:Math.round(nY*100) };
+    });
+  }, [careerStats, rosterAges, pickCapital, weightedWinPct]);
+  const fvArr=points.map(p=>p.fv);
+  const minFV=Math.min(...fvArr), maxFV=Math.max(...fvArr);
+  const fvR=maxFV-minFV||1, medFV=(minFV+maxFV)/2;
+  const qC=(fv,w)=>fv>=medFV&&w>=0.5?"#2ecc71":fv<medFV&&w>=0.5?"#e9c46a":fv>=medFV?"#2176d2":"#d42b2b";
+  const qL=(fv,w)=>{
+    if(fv>=medFV&&w>=0.5) return "🟢 Winning + Future";
+    if(fv<medFV&&w>=0.5)  return "🟡 Win Now";
+    if(fv>=medFV)          return "🔵 True Rebuild";
+    return "🔴 Danger Zone";
+  };
+  const Wsv=mobile?300:460, Hsv=260, PD=32, PW=Wsv-PD*2, PH=Hsv-PD*2;
+  const fetchWriteup = async (p) => {
+    setSelected(p); setWriteup(null); setLoading(true);
+    const ctx = DD_FRANCHISE_CONTEXT[p.mgr] || "";
+    const prompt = `You are writing a dynasty fantasy football scouting report for Duck Dynasty, a Sleeper dynasty league.\\n\\nManager: ${p.mgr}\\nQuadrant: ${qL(p.fv,p.winPct)}\\nWeighted Win% (2025=50%, 2024=33%, 2023=17%): ${(p.winPct*100).toFixed(1)}%\\nFuture Value Score: ${(p.fv*100).toFixed(0)}/100 (60% draft capital + 40% roster youth)\\nAvg Roster Age: ${p.age} | Draft Capital: ${p.cap} units (1.75x round multiplier)\\nCapital Score: ${p.nC}/100 | Youth Score: ${p.nY}/100\\n\\nFranchise context (use specific details from this in your report):\\n${ctx}\\n\\nWrite 3 sentences max. Use the franchise context to make specific observations — mention actual picks owned, recent trades, records, or roster facts. GM-level dynasty language. End with one concrete recommendation. No generic filler.`
+    try {
+      const res = await fetch("https://api.anthropic.com/v1/messages",{
+        method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({model:"claude-sonnet-4-20250514",max_tokens:1000,
+          messages:[{role:"user",content:prompt}]})
+      });
+      const d = await res.json();
+      setWriteup(d.content?.find(b=>b.type==="text")?.text||"Unable to generate.");
+    } catch { setWriteup("Unable to generate."); }
+    setLoading(false);
+  };
+  return (
+    <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
+      <div style={{ fontSize:11, color:"#555", background:"#111", borderRadius:6, padding:"6px 12px" }}>
+        X: Future Value (60% capital + 40% youth) · Y: weighted win % · tap a dot for AI scouting report
+      </div>
+      <div style={{ overflowX:"auto" }}>
+        <svg width={Wsv} height={Hsv} style={{ display:"block", margin:"0 auto" }}>
+          <rect x={PD} y={PD} width={PW/2} height={PH/2} fill="#1a1500" />
+          <rect x={PD+PW/2} y={PD} width={PW/2} height={PH/2} fill="#0a1a0a" />
+          <rect x={PD} y={PD+PH/2} width={PW/2} height={PH/2} fill="#1a0a0a" />
+          <rect x={PD+PW/2} y={PD+PH/2} width={PW/2} height={PH/2} fill="#0a0a1a" />
+          <text x={PD+PW/4}   y={PD+12}    textAnchor="middle" fill="#e9c46a" fontSize="9" fontWeight="600">Win Now</text>
+          <text x={PD+PW*3/4} y={PD+12}    textAnchor="middle" fill="#2ecc71" fontSize="9" fontWeight="600">Winning + Future</text>
+          <text x={PD+PW/4}   y={Hsv-PD-4} textAnchor="middle" fill="#d42b2b" fontSize="9" fontWeight="600">Danger Zone</text>
+          <text x={PD+PW*3/4} y={Hsv-PD-4} textAnchor="middle" fill="#2176d2" fontSize="9" fontWeight="600">True Rebuild</text>
+          <line x1={PD+PW/2} y1={PD} x2={PD+PW/2} y2={PD+PH} stroke="#333" strokeWidth="1" strokeDasharray="4 3" />
+          <line x1={PD} y1={PD+PH/2} x2={PD+PW} y2={PD+PH/2} stroke="#333" strokeWidth="1" strokeDasharray="4 3" />
+          <rect x={PD} y={PD} width={PW} height={PH} fill="none" stroke="#222" strokeWidth="1" />
+          {points.map(p => {
+            const x=PD+((p.fv-minFV)/fvR)*PW;
+            const y=PD+(1-p.winPct)*PH;
+            const col=qC(p.fv,p.winPct);
+            const sel=selected?.mgr===p.mgr;
+            return (
+              <g key={p.mgr} onClick={()=>fetchWriteup(p)} style={{ cursor:"pointer" }}>
+                <circle cx={x} cy={y} r={sel?9:6} fill={col}
+                  fillOpacity={sel?1:0.82} stroke={sel?"#fff":"none"} strokeWidth="1.5" />
+                <text x={x} y={y-11} textAnchor="middle" fill={col} fontSize="8" fontWeight="600">{p.mgr.split(" ")[0]}</text>
+              </g>
+            );
+          })}
+          <text x={PD}    y={Hsv-3} fill="#444" fontSize="8">Low Future</text>
+          <text x={PD+PW} y={Hsv-3} textAnchor="end" fill="#444" fontSize="8">High Future</text>
+          <text x={2} y={PD+4}  fill="#444" fontSize="8">100%</text>
+          <text x={2} y={PD+PH} fill="#444" fontSize="8">0%</text>
+        </svg>
+      </div>
+      {selected && (
+        <div style={{ background:"#0a0a0a", border:`1px solid ${qC(selected.fv,selected.winPct)}44`, borderRadius:8, padding:"10px 14px" }}>
+          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:8 }}>
+            <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:15, color:qC(selected.fv,selected.winPct) }}>{selected.mgr}</span>
+            <span style={{ fontSize:10, background:`${qC(selected.fv,selected.winPct)}22`, color:qC(selected.fv,selected.winPct), borderRadius:4, padding:"2px 8px" }}>{qL(selected.fv,selected.winPct)}</span>
+          </div>
+          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr", gap:6, marginBottom:8, fontSize:11 }}>
+            <div><div style={{ color:"#555", fontSize:10 }}>Weighted W%</div><div style={{ color:"#eee", fontWeight:600 }}>{(selected.winPct*100).toFixed(1)}%</div></div>
+            <div><div style={{ color:"#555", fontSize:10 }}>Future Value</div><div style={{ color:"#eee", fontWeight:600 }}>{(selected.fv*100).toFixed(0)}/100</div></div>
+            <div><div style={{ color:"#555", fontSize:10 }}>Avg Age</div><div style={{ color:"#eee", fontWeight:600 }}>{selected.age}</div></div>
+            <div><div style={{ color:"#555", fontSize:10 }}>Capital</div><div style={{ color:"#eee", fontWeight:600 }}>{selected.cap} units</div></div>
+          </div>
+          {loading && <div style={{ color:"#555", fontSize:11, fontStyle:"italic" }}>Generating scouting report…</div>}
+          {writeup && <div style={{ color:"#bbb", fontSize:11, lineHeight:1.65, borderTop:"1px solid #1a1a1a", paddingTop:8 }}>{writeup}</div>}
+        </div>
+      )}
+      <div style={{ display:"grid", gridTemplateColumns:mobile?"1fr 1fr":"1fr 1fr 1fr 1fr", gap:6 }}>
+        {[["🟢","#2ecc71","Winning + Future","High W% · High FV"],["🟡","#e9c46a","Win Now","High W% · Low FV"],
+          ["🔵","#2176d2","True Rebuild","Low W% · High FV"],["🔴","#d42b2b","Danger Zone","Low W% · Low FV"]
+        ].map(([emoji,color,label,sub]) => (
+          <div key={label} style={{ background:"#0a0a0a", border:`1px solid ${color}33`, borderRadius:6, padding:"6px 10px" }}>
+            <div style={{ fontSize:11, color, marginBottom:2 }}>{emoji} {label}</div>
+            <div style={{ fontSize:10, color:"#555" }}>{sub}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function DDDynastyTab() {
   const mobile = useMobile();
   const [section,     setSection]    = React.useState("home");
@@ -61312,77 +61448,10 @@ function DDDynastyTab() {
         </div>
       )}
 
-      {/* ── FRANCHISE MATRIX ─────────────────────────────────────── */}
-      {section === "matrix" && (() => {
-        const mgrs = Object.keys(careerStats).filter(m => rosterAges[m]);
-        const points = mgrs.map(m => {
-          const cs  = careerStats[m];
-          const gp  = cs.wins + cs.losses;
-          return { mgr:m, winPct: gp>0 ? cs.wins/gp : 0, avgAge: rosterAges[m]||27 };
-        });
-        const ages    = points.map(p => p.avgAge);
-        const minAge  = Math.min(...ages); const maxAge = Math.max(...ages);
-        const ageRange= maxAge - minAge || 1;
-        const medAge  = (minAge + maxAge) / 2;
-        const medWin  = 0.5;
-        const W = mobile ? 320 : 480; const H = 280; const PAD = 36;
-        const plotW = W - PAD*2; const plotH = H - PAD*2;
-        return (
-          <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
-            <div style={{ fontSize:11, color:"#555", background:"#111", borderRadius:6, padding:"6px 12px" }}>
-              X axis: average roster age (younger = left) · Y axis: all-time win rate (higher = better)
-            </div>
-            <div style={{ overflowX:"auto" }}>
-              <svg width={W} height={H} style={{ display:"block", margin:"0 auto" }}>
-                {/* Quadrant backgrounds */}
-                <rect x={PAD} y={PAD} width={plotW/2} height={plotH/2} fill="#0a1a0a" />
-                <rect x={PAD+plotW/2} y={PAD} width={plotW/2} height={plotH/2} fill="#1a1500" />
-                <rect x={PAD} y={PAD+plotH/2} width={plotW/2} height={plotH/2} fill="#0a0a1a" />
-                <rect x={PAD+plotW/2} y={PAD+plotH/2} width={plotW/2} height={plotH/2} fill="#1a0a0a" />
-                {/* Quadrant labels */}
-                <text x={PAD+plotW/4} y={PAD+14} textAnchor="middle" fill="#2ecc71" fontSize="10" fontWeight="600">Dynasty Window</text>
-                <text x={PAD+plotW*3/4} y={PAD+14} textAnchor="middle" fill="#e9c46a" fontSize="10" fontWeight="600">Win Now</text>
-                <text x={PAD+plotW/4} y={H-PAD-6} textAnchor="middle" fill="#2176d2" fontSize="10" fontWeight="600">Rebuilding</text>
-                <text x={PAD+plotW*3/4} y={H-PAD-6} textAnchor="middle" fill="#d42b2b" fontSize="10" fontWeight="600">Stuck</text>
-                {/* Axis lines */}
-                <line x1={PAD+plotW/2} y1={PAD} x2={PAD+plotW/2} y2={PAD+plotH} stroke="#333" strokeWidth="1" />
-                <line x1={PAD} y1={PAD+plotH/2} x2={PAD+plotW} y2={PAD+plotH/2} stroke="#333" strokeWidth="1" />
-                {/* Border */}
-                <rect x={PAD} y={PAD} width={plotW} height={plotH} fill="none" stroke="#222" strokeWidth="1" />
-                {/* Data points */}
-                {points.map(p => {
-                  const x = PAD + ((p.avgAge - minAge) / ageRange) * plotW;
-                  const y = PAD + (1 - p.winPct) * plotH;
-                  const dotColor = p.avgAge < medAge && p.winPct >= medWin ? "#2ecc71"
-                                 : p.avgAge >= medAge && p.winPct >= medWin ? "#e9c46a"
-                                 : p.avgAge < medAge && p.winPct < medWin  ? "#2176d2"
-                                 :                                             "#d42b2b";
-                  const label = firstName(p.mgr);
-                  return (
-                    <g key={p.mgr}>
-                      <circle cx={x} cy={y} r="6" fill={dotColor} fillOpacity="0.85" />
-                      <text x={x} y={y-10} textAnchor="middle" fill={dotColor} fontSize="9" fontWeight="600">{label}</text>
-                    </g>
-                  );
-                })}
-                {/* Axis labels */}
-                <text x={PAD} y={H-4} fill="#444" fontSize="9">Younger</text>
-                <text x={PAD+plotW} y={H-4} textAnchor="end" fill="#444" fontSize="9">Older</text>
-                <text x={4} y={PAD} fill="#444" fontSize="9">100%</text>
-                <text x={4} y={PAD+plotH} fill="#444" fontSize="9">0%</text>
-              </svg>
-            </div>
-            <div style={{ display:"grid", gridTemplateColumns:mobile?"1fr 1fr":"1fr 1fr 1fr 1fr", gap:6, marginTop:4 }}>
-              {[["#2ecc71","🟢 Dynasty Window","Young + Winning"],["#e9c46a","🟡 Win Now","Old + Winning"],["#2176d2","🔵 Rebuilding","Young + Losing"],["#d42b2b","🔴 Stuck","Old + Losing"]].map(([color, label, sub]) => (
-                <div key={label} style={{ background:"#0a0a0a", border:`1px solid ${color}33`, borderRadius:6, padding:"6px 10px" }}>
-                  <div style={{ fontSize:11, color, marginBottom:2 }}>{label}</div>
-                  <div style={{ fontSize:10, color:"#555" }}>{sub}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        );
-      })()}
+      {/* ── FRANCHISE MATRIX ───────────────────────────── */}
+      {section === "matrix" && (
+        <DDFranchiseMatrix careerStats={careerStats} rosterAges={rosterAges} mobile={mobile} />
+      )}
 
       {/* ── DYNASTY TRADE VALUE ──────────────────────────────────── */}
       {section === "tvChart" && (() => {
@@ -62961,6 +63030,23 @@ const DD_ROSTER_HISTORY = {
     "Vance Sipma": ["11610","11632","12486","12493","12524","13286","13296","13330","1466","3163","4199","5001","5859","5892","5927","7528","7594","8112","8142","8205","9229","9482","9487","96","9754"],
     "Will Hoekstra": ["11566","1166","12483","12492","12500","12545","13293","13294","13302","13306","13320","13349","4033","4037","5022","5850","5872","5947","6794","7543","7600","8151","9508","9753"],
   },
+};
+
+// DD Pick Capital — update when picks are traded. Last updated: May 2026
+// [27_1st,27_2nd,27_3rd,27_4th, 28_1st,28_2nd,28_3rd,28_4th, 29_1st,29_2nd,29_3rd,29_4th]
+const DD_PICK_CAPITAL = {
+  "Aaron Fay":          [1,1,1,1, 1,1,1,0, 1,1,1,0],
+  "Christian Manes":    [0,1,1,1, 1,1,1,1, 1,1,1,1],
+  "Greg Mulder":        [2,1,1,1, 1,1,1,1, 1,1,1,1],
+  "Jake Beukelman":     [1,1,1,2, 1,1,1,1, 1,1,1,1],
+  "James Lazette":      [0,1,1,1, 1,0,1,1, 1,1,1,1],
+  "Jared Stuit":        [0,1,1,1, 1,1,1,1, 1,1,1,1],
+  "Ross Van Groningen": [3,1,1,0, 1,2,1,1, 1,1,1,1],
+  "Steve Vander Molen": [0,1,1,1, 1,0,1,1, 1,1,1,1],
+  "Trey Hugen":         [1,2,2,0, 1,1,1,1, 1,1,1,1],
+  "Tyler Goslinga":     [2,1,1,1, 1,1,1,2, 1,1,1,2],
+  "Vance Sipma":        [1,0,0,2, 1,1,1,1, 1,1,1,1],
+  "Will Hoekstra":      [1,1,1,1, 1,1,1,1, 1,1,1,1],
 };
 
 const DD_DRAFT_DATA = {
