@@ -45879,7 +45879,7 @@ const DD_HISTORICAL = {
   },
 };
 
-function useSleeperLive() {
+function useSleeperLive(leagueId = SLEEPER_2026_LEAGUE_ID, nameMap = SLEEPER_NAME_MAP) {
   const [state, setState] = React.useState({
     loading:           false,
     error:             null,
@@ -45900,7 +45900,7 @@ function useSleeperLive() {
     // ════════════════════════════════════════════════════════════
 
     try {
-      const LID = SLEEPER_2026_LEAGUE_ID;
+      const LID = leagueId;
 
       const [leagueRes, rostersRes, usersRes] = await Promise.all([
         fetch(`${SLEEPER_BASE}/league/${LID}`),
@@ -45946,7 +45946,7 @@ function useSleeperLive() {
       const rosterIdToName = {};
       rosters.forEach(r => {
         const display = uidToDisplay[r.owner_id] || "";
-        rosterIdToName[r.roster_id] = SLEEPER_NAME_MAP[display] || display || `Team ${r.roster_id}`;
+        rosterIdToName[r.roster_id] = nameMap[display] || display || `Team ${r.roster_id}`;
       });
 
       // Build standings from roster metadata
