@@ -48831,9 +48831,13 @@ function LeaderboardTab() {
 
   // ── Win Streaks state ──
   const [winStreakAlumni, setWinStreakAlumni] = useState(true);
+  const [winStreakSort, setWinStreakSort] = useState("Streak");
+  const [winStreakDir, setWinStreakDir] = useState("desc");
 
   // ── Loss Streaks state ──
   const [lossStreakAlumni, setLossStreakAlumni] = useState(true);
+  const [lossStreakSort, setLossStreakSort] = useState("Streak");
+  const [lossStreakDir, setLossStreakDir] = useState("desc");
 
   // ── All-Time Standings logic ──
   const handleSort = (key) => {
@@ -49006,14 +49010,29 @@ const SeasonRecordsTable = ({ pool, sortK, sortD, onSort, titleText, onMatchup, 
   );
 
   // ── Shared streak table renderer ──
-  const StreakTable = ({ pool, streakColor, label }) => (
+  const StreakTable = ({ pool, streakColor, label, sortKey: skKey, sortDir: skDir, onSort: skOnSort }) => {
+    const skArrow = (key) => skKey === key ? (skDir === "asc" ? " ↑" : " ↓") : "";
+    const sortedPool = [...pool].sort((a, b) => {
+      let result = 0;
+      if (skKey === "Streak") result = a.Streak - b.Streak;
+      else if (skKey === "Manager") result = a.Manager.localeCompare(b.Manager);
+      else if (skKey === "StartYear") result = (a.StartYear||0) - (b.StartYear||0) || (a.StartWeek||0) - (b.StartWeek||0);
+      else if (skKey === "EndYear") result = (a.EndYear||0) - (b.EndYear||0) || (a.EndWeek||0) - (b.EndWeek||0);
+      return skDir === "asc" ? result : -result;
+    });
+    const SkTh = ({ lbl, sk, color }) => (
+      <th onClick={() => skOnSort(sk)} style={{ textAlign:"left", padding:"8px 12px", borderBottom:"1px solid #222222", color: skKey === sk ? "#fff" : (color || "#2176d2"), fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1, fontSize:14, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap" }}>
+        {lbl}{skArrow(sk)}
+      </th>
+    );
+    return (
     <Card>
       <SectionTitle>{label}</SectionTitle>
       {mobile ? (
         <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
-          {pool.map((s,i) => (
-            <div key={`${s.Manager}-${s._rank}`} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a", borderRadius:6, padding:"5px 7px", display:"flex", alignItems:"center", gap:8 }}>
-              <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:16, color: s._rank<3?"#e9c46a":"#555", minWidth:22, textAlign:"center" }}>{rank(s._rank)}</span>
+          {sortedPool.map((s,i) => (
+            <div key={`${s.Manager}-${i}`} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a", borderRadius:6, padding:"5px 7px", display:"flex", alignItems:"center", gap:8 }}>
+              <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:16, color: i<3?"#e9c46a":"#555", minWidth:22, textAlign:"center" }}>{rank(i)}</span>
               <div style={{ flex:1, minWidth:0 }}>
                 <div style={{ display:"inline-flex", alignItems:"center", gap:5 }}>
                   <MgrName name={s.Manager} />
@@ -49029,14 +49048,17 @@ const SeasonRecordsTable = ({ pool, sortK, sortD, onSort, titleText, onMatchup, 
         <div style={{ overflowX:"auto" }}>
           <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
             <thead><tr>
-              {["Rank","Manager","Streak","Started","Ended","Status"].map(h => (
-                <th key={h} style={{ textAlign:"left", padding:"8px 12px", borderBottom:"1px solid #222222", color:"#2176d2", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1, fontSize:14 }}>{h}</th>
-              ))}
+              <th style={{ textAlign:"left", padding:"8px 12px", borderBottom:"1px solid #222222", color:"#2176d2", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1, fontSize:14 }}>Rank</th>
+              <SkTh lbl="Manager" sk="Manager" color="#2176d2" />
+              <SkTh lbl="Streak" sk="Streak" color="#2176d2" />
+              <SkTh lbl="Started" sk="StartYear" color="#2176d2" />
+              <SkTh lbl="Ended" sk="EndYear" color="#2176d2" />
+              <th style={{ textAlign:"left", padding:"8px 12px", borderBottom:"1px solid #222222", color:"#2176d2", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1, fontSize:14 }}>Status</th>
             </tr></thead>
             <tbody>
-              {pool.map((s,i) => (
-                <tr key={`${s.Manager}-${s._rank}`} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
-                  <td style={{ padding:"9px 12px", borderBottom:"1px solid #1a1a1a", color: s._rank<3?"#e9c46a":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:16 }}>{rank(s._rank)}</td>
+              {sortedPool.map((s,i) => (
+                <tr key={`${s.Manager}-${i}`} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                  <td style={{ padding:"9px 12px", borderBottom:"1px solid #1a1a1a", color: i<3?"#e9c46a":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:16 }}>{rank(i)}</td>
                   <td style={{ padding:"9px 12px", borderBottom:"1px solid #1a1a1a" }}><span style={{ display:"inline-flex", alignItems:"center", gap:5 }}><MgrName name={s.Manager} /></span></td>
                   <td style={{ padding:"9px 12px", borderBottom:"1px solid #1a1a1a" }}>
                     <span style={{ color:streakColor, fontFamily:"'Cooper Black',Georgia,serif", fontSize:20 }}>{s.Streak}</span>
@@ -49058,6 +49080,7 @@ const SeasonRecordsTable = ({ pool, sortK, sortD, onSort, titleText, onMatchup, 
       )}
     </Card>
   );
+  };
 
   // ── Shared season filter bar ──
   const SeasonFilterBar = ({ zeroPPR, setZeroPPR, halfPPR, setHalfPPR, t10, setT10, t12, setT12, t14, setT14, alumni, setAlumni }) => (
@@ -49239,7 +49262,7 @@ const SeasonRecordsTable = ({ pool, sortK, sortD, onSort, titleText, onMatchup, 
           <FilterBar>
             <ToggleBtn active={winStreakAlumni} onToggle={() => setWinStreakAlumni(s=>!s)} label={winStreakAlumni ? "👁️ Show All" : "👁️ Active Only"} />
           </FilterBar>
-          <StreakTable pool={winPool} streakColor="#e9c46a" label="🔥 Longest Winning Streaks All-Time" />
+          <StreakTable pool={winPool} streakColor="#e9c46a" label="🔥 Longest Winning Streaks All-Time" sortKey={winStreakSort} sortDir={winStreakDir} onSort={(key) => { if (winStreakSort === key) setWinStreakDir(d => d === "asc" ? "desc" : "asc"); else { setWinStreakSort(key); setWinStreakDir(key === "Manager" ? "asc" : "desc"); } }} />
         </div>
       )}
 
@@ -49249,7 +49272,7 @@ const SeasonRecordsTable = ({ pool, sortK, sortD, onSort, titleText, onMatchup, 
           <FilterBar>
             <ToggleBtn active={lossStreakAlumni} onToggle={() => setLossStreakAlumni(s=>!s)} label={lossStreakAlumni ? "👁️ Show All" : "👁️ Active Only"} />
           </FilterBar>
-          <StreakTable pool={lossPool} streakColor="#2176d2" label="🧊 Longest Losing Streaks All-Time" />
+          <StreakTable pool={lossPool} streakColor="#2176d2" label="🧊 Longest Losing Streaks All-Time" sortKey={lossStreakSort} sortDir={lossStreakDir} onSort={(key) => { if (lossStreakSort === key) setLossStreakDir(d => d === "asc" ? "desc" : "asc"); else { setLossStreakSort(key); setLossStreakDir(key === "Manager" ? "asc" : "desc"); } }} />
         </div>
       )}
 
@@ -52446,6 +52469,9 @@ function VaultTab() {
   const { open: openTeamName } = useTeamName();
   const { open: openSeason } = useSeason();
   const { open: openRivalry } = useRivalry();
+  // ── Live 2026 data for Top/Low Weeks enhancement ──
+  const { currentPlayerData, managers: liveMgrs, currentWeek, refresh: refreshLive } = useSleeperLive();
+  React.useEffect(() => { refreshLive(); }, [refreshLive]);
   // ── Section nav ──
   const [section, setSection] = useState("home");
 
@@ -52540,19 +52566,64 @@ function VaultTab() {
 
   const weeksMgrs = DATA.mostTopWeeks.map(m => {
     const low = DATA.mostLowWeeks.find(l => l.Manager === m.Manager);
-    return { Manager: m.Manager, "Top Weeks": m["Top Weeks"], "Low Weeks": low ? low["Low Weeks"] : 0, "Years in League": m["Years in League"] };
+    return { Manager: m.Manager, "Top Weeks": m["Top Weeks"], "Low Weeks": low ? low["Low Weeks"] : 0, "Years in League": m["Years in League"], topLive: 0, lowLive: 0 };
   });
   DATA.mostLowWeeks.forEach(l => {
     if (!weeksMgrs.find(m => m.Manager === l.Manager))
-      weeksMgrs.push({ Manager: l.Manager, "Top Weeks": 0, "Low Weeks": l["Low Weeks"], "Years in League": l["Years in League"] });
+      weeksMgrs.push({ Manager: l.Manager, "Top Weeks": 0, "Low Weeks": l["Low Weeks"], "Years in League": l["Years in League"], topLive: 0, lowLive: 0 });
+  });
+
+  // ── Enhance with live 2026 Top/Low Weeks ──
+  if (currentPlayerData && currentPlayerData.weeklyScores && currentPlayerData.weeklyScores.length > 0) {
+    // Group scores by week → find highest and lowest scoring manager each week
+    const byWeek = {};
+    currentPlayerData.weeklyScores.forEach(s => {
+      if (!s.starter) return; // only count starter points
+      if (!byWeek[s.week]) byWeek[s.week] = {};
+      if (!byWeek[s.week][s.manager]) byWeek[s.week][s.manager] = 0;
+      byWeek[s.week][s.manager] += s.points;
+    });
+
+    const liveTopCounts = {};
+    const liveLowCounts = {};
+
+    Object.values(byWeek).forEach(mgrScores => {
+      const entries = Object.entries(mgrScores).filter(([_, pts]) => pts > 0);
+      if (entries.length < 2) return; // need at least 2 managers with scores
+      const maxPts = Math.max(...entries.map(([_, pts]) => pts));
+      const minPts = Math.min(...entries.map(([_, pts]) => pts));
+      // Award top week to all tied at max
+      entries.forEach(([mgr, pts]) => {
+        if (pts === maxPts) liveTopCounts[mgr] = (liveTopCounts[mgr] || 0) + 1;
+        if (pts === minPts) liveLowCounts[mgr] = (liveLowCounts[mgr] || 0) + 1;
+      });
+    });
+
+    // Merge live counts into weeksMgrs
+    Object.entries(liveTopCounts).forEach(([mgr, count]) => {
+      const existing = weeksMgrs.find(m => m.Manager === mgr);
+      if (existing) { existing.topLive = count; }
+      else { weeksMgrs.push({ Manager: mgr, "Top Weeks": 0, "Low Weeks": 0, "Years in League": 1, topLive: count, lowLive: 0 }); }
+    });
+    Object.entries(liveLowCounts).forEach(([mgr, count]) => {
+      const existing = weeksMgrs.find(m => m.Manager === mgr);
+      if (existing) { existing.lowLive = count; }
+      else { weeksMgrs.push({ Manager: mgr, "Top Weeks": 0, "Low Weeks": 0, "Years in League": 1, topLive: 0, lowLive: count }); }
+    });
+  }
+
+  // Add combined totals for sorting
+  weeksMgrs.forEach(m => {
+    m.topTotal = m["Top Weeks"] + (m.topLive || 0);
+    m.lowTotal = m["Low Weeks"] + (m.lowLive || 0);
   });
   const sortedWeeks = [...weeksMgrs].map((item, i) => ({...item, _rank: i})).sort((a, b) => {
     let result = 0;
     if      (weeksSortKey === "Manager")         result = a.Manager.localeCompare(b.Manager);
-    else if (weeksSortKey === "Top Weeks")        result = a["Top Weeks"] - b["Top Weeks"];
-    else if (weeksSortKey === "Top Avg")          result = (a["Top Weeks"]/a["Years in League"]) - (b["Top Weeks"]/b["Years in League"]);
-    else if (weeksSortKey === "Low Weeks")        result = a["Low Weeks"] - b["Low Weeks"];
-    else if (weeksSortKey === "Low Avg")          result = (a["Low Weeks"]/a["Years in League"]) - (b["Low Weeks"]/b["Years in League"]);
+    else if (weeksSortKey === "Top Weeks")        result = a.topTotal - b.topTotal;
+    else if (weeksSortKey === "Top Avg")          result = (a.topTotal/a["Years in League"]) - (b.topTotal/b["Years in League"]);
+    else if (weeksSortKey === "Low Weeks")        result = a.lowTotal - b.lowTotal;
+    else if (weeksSortKey === "Low Avg")          result = (a.lowTotal/a["Years in League"]) - (b.lowTotal/b["Years in League"]);
     else if (weeksSortKey === "Years in League")  result = a["Years in League"] - b["Years in League"];
     return weeksSortDir === "asc" ? result : -result;
   });
@@ -52810,8 +52881,8 @@ function VaultTab() {
                   <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:16, color: m._rank<3?"#e9c46a":"#555", minWidth:22, textAlign:"center" }}>{rank(m._rank)}</span>
 <MgrSpan name={m.Manager} style={{ flex:1, minWidth:0, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", fontSize:13 }}>{m.Manager}</MgrSpan>
                   <div style={{ display:"flex", gap:12, flexShrink:0, fontSize:13 }}>
-                    <span>🔥 <b style={{ color:"#e9c46a" }}>{m["Top Weeks"]}</b></span>
-                    <span>💀 <b style={{ color:"#2176d2" }}>{m["Low Weeks"]}</b></span>
+                    <span>🔥 <b style={{ color:"#e9c46a" }}>{m.topTotal}</b>{m.topLive > 0 && <span style={{ fontSize:9, color:"#2ecc71", marginLeft:2 }}>+{m.topLive}</span>}</span>
+                    <span>💀 <b style={{ color:"#2176d2" }}>{m.lowTotal}</b>{m.lowLive > 0 && <span style={{ fontSize:9, color:"#d42b2b", marginLeft:2 }}>+{m.lowLive}</span>}</span>
                   </div>
                 </div>
               ))}
@@ -52831,10 +52902,10 @@ function VaultTab() {
                       <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a", color: m._rank<3?"#e9c46a":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:16 }}>{rank(m._rank)}</td>
                       <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a" }}><span style={{ display:"inline-flex", alignItems:"center", gap:5 }}><MgrName name={m.Manager} /></span></td>
                       <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a", color:"#aaa" }}>{m["Years in League"]}</td>
-                      <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a" }}><span style={{ color:"#e9c46a", fontWeight:600 }}>{m["Top Weeks"]}</span></td>
-                      <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a" }}><span style={{ color:"#e9c46a99" }}>{(m["Top Weeks"]/m["Years in League"]).toFixed(1)}</span></td>
-                      <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a" }}><span style={{ color:"#2176d2", fontWeight:600 }}>{m["Low Weeks"]}</span></td>
-                      <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a" }}><span style={{ color:"#2176d299" }}>{(m["Low Weeks"]/m["Years in League"]).toFixed(1)}</span></td>
+                      <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a" }}><span style={{ color:"#e9c46a", fontWeight:600 }}>{m.topTotal}</span>{m.topLive > 0 && <span style={{ fontSize:10, color:"#2ecc71", marginLeft:3 }}>+{m.topLive} in '26</span>}</td>
+                      <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a" }}><span style={{ color:"#e9c46a99" }}>{(m.topTotal/m["Years in League"]).toFixed(1)}</span></td>
+                      <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a" }}><span style={{ color:"#2176d2", fontWeight:600 }}>{m.lowTotal}</span>{m.lowLive > 0 && <span style={{ fontSize:10, color:"#d42b2b", marginLeft:3 }}>+{m.lowLive} in '26</span>}</td>
+                      <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a" }}><span style={{ color:"#2176d299" }}>{(m.lowTotal/m["Years in League"]).toFixed(1)}</span></td>
                     </tr>
                   ))}
                 </tbody>
@@ -58634,6 +58705,8 @@ function DDSeasonExplorerTab() {
 function DDLeaderboardTab() {
   const mobile = useMobile();
   const [section, setSection] = React.useState("home");
+  const [lbSortKey, setLbSortKey] = React.useState("wpct");
+  const [lbSortDir, setLbSortDir] = React.useState("desc");
 
   // ── All-time manager stats ─────────────────────────────────────
   const allManagers = {};
@@ -58705,33 +58778,98 @@ function DDLeaderboardTab() {
         </div>
       )}
 
-      {section === "standings" && (
-        <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
-          <div style={{ fontSize:11, color:"#555", marginBottom:4 }}>Based on 2023–2025 regular seasons · sorted by win rate</div>
-          {sortedMgrs.map((m, i) => {
-            const gp = m.wins+m.losses;
-            const wpct = gp ? (m.wins/gp*100).toFixed(1) : "0.0";
-            const ppg  = gp ? (m.pf/gp).toFixed(1) : "0.0";
-            return (
-              <div key={m.name} style={{ display:"flex", alignItems:"center", gap:10, padding:mobile?"10px 10px":"11px 14px", background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8 }}>
-                <div style={{ width:24, textAlign:"center", fontSize:13, color:i<3?"#E07B20":"#555", flexShrink:0 }}>{i===0?"🥇":i===1?"🥈":i===2?"🥉":`#${i+1}`}</div>
-                <DDManagerLogo name={m.name} size={22} />
-                <div style={{ flex:1, minWidth:0 }}>
-                  <div style={{ fontSize:mobile?13:14, fontWeight:500, color:m.isAlum?"#555":"#fff", overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
-                    {m.name.split(" ")[0]} {m.championships>0?"🏆".repeat(m.championships):""}
-                    {m.isAlum && <span style={{ fontSize:10, color:"#555", background:"#1a1a1a", borderRadius:4, padding:"1px 5px", marginLeft:6 }}>alumni</span>}
+      {section === "standings" && (() => {
+        const handleLbSort = (key) => {
+          if (lbSortKey === key) setLbSortDir(d => d === "asc" ? "desc" : "asc");
+          else { setLbSortKey(key); setLbSortDir(key === "name" ? "asc" : "desc"); }
+        };
+        const arrow = (key) => lbSortKey === key ? (lbSortDir === "asc" ? " ↑" : " ↓") : "";
+
+        const lbSorted = [...sortedMgrs].map(m => {
+          const gp = m.wins + m.losses;
+          return { ...m, wpct: gp ? m.wins / gp : 0, ppg: gp ? m.pf / gp : 0, gp };
+        }).sort((a, b) => {
+          let result = 0;
+          if (lbSortKey === "name") result = a.name.localeCompare(b.name);
+          else if (lbSortKey === "wpct") result = a.wpct - b.wpct;
+          else if (lbSortKey === "wins") result = a.wins - b.wins;
+          else if (lbSortKey === "losses") result = a.losses - b.losses;
+          else if (lbSortKey === "seasons") result = a.seasons - b.seasons;
+          else if (lbSortKey === "pf") result = a.pf - b.pf;
+          else if (lbSortKey === "ppg") result = a.ppg - b.ppg;
+          else if (lbSortKey === "championships") result = a.championships - b.championships;
+          else if (lbSortKey === "playoffApps") result = a.playoffApps - b.playoffApps;
+          return lbSortDir === "asc" ? result : -result;
+        });
+
+        const rank = i => i===0?"🥇":i===1?"🥈":i===2?"🥉":`#${i+1}`;
+        const ThBtn = ({ label, sortK, color }) => (
+          <th onClick={() => handleLbSort(sortK)} style={{ padding:"8px 10px", textAlign: sortK === "name" ? "left" : "center", color: lbSortKey === sortK ? "#fff" : (color || "#888"), fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"2px solid #333" }}>
+            {label}{arrow(sortK)}
+          </th>
+        );
+
+        return (
+          <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+            <div style={{ fontSize:11, color:"#555", marginBottom:4 }}>Based on 2023–2025 regular seasons · click headers to sort</div>
+            {mobile ? (
+              <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
+                {lbSorted.map((m, i) => (
+                  <div key={m.name} style={{ display:"flex", alignItems:"center", gap:8, padding:"8px 10px", background: i%2===0?"#0d0d0d":"#1a1a1a", borderRadius:6 }}>
+                    <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:14, color: i<3?"#E07B20":"#555", minWidth:28, textAlign:"center" }}>{rank(i)}</span>
+                    <DDManagerLogo name={m.name} size={20} />
+                    <span style={{ flex:1, fontSize:13, color:m.isAlum?"#555":"#fff", fontWeight:500 }}>{m.name.split(" ")[0]} {m.championships>0?"🏆".repeat(m.championships):""}</span>
+                    <div style={{ textAlign:"right", flexShrink:0 }}>
+                      <div style={{ fontSize:13, fontWeight:600, color:"#E07B20" }}>{(m.wpct*100).toFixed(1)}%</div>
+                      <div style={{ fontSize:10, color:"#555" }}>{m.wins}W-{m.losses}L</div>
+                    </div>
                   </div>
-                  <div style={{ fontSize:11, color:"#555" }}>{m.seasons} season{m.seasons>1?"s":""} · {m.wins}W {m.losses}L · {wpct}%</div>
-                </div>
-                <div style={{ textAlign:"right", flexShrink:0 }}>
-                  <div style={{ fontSize:13, fontWeight:500, color:"#fff" }}>{wpct}%</div>
-                  <div style={{ fontSize:11, color:"#555" }}>{ppg} pts/wk</div>
-                </div>
+                ))}
               </div>
-            );
-          })}
-        </div>
-      )}
+            ) : (
+              <div style={{ overflowX:"auto" }}>
+                <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                  <thead>
+                    <tr>
+                      <th style={{ padding:"8px 10px", textAlign:"left", color:"#E07B20", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1, fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
+                      <ThBtn label="Manager" sortK="name" color="#888" />
+                      <ThBtn label="Seasons" sortK="seasons" color="#888" />
+                      <ThBtn label="W" sortK="wins" color="#2ecc71" />
+                      <ThBtn label="L" sortK="losses" color="#d42b2b" />
+                      <ThBtn label="W%" sortK="wpct" color="#E07B20" />
+                      <ThBtn label="Pts/Wk" sortK="ppg" color="#e9c46a" />
+                      <ThBtn label="🏆" sortK="championships" color="#e9c46a" />
+                      <ThBtn label="Playoffs" sortK="playoffApps" color="#2ecc71" />
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {lbSorted.map((m, i) => (
+                      <tr key={m.name} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color: i<3?"#E07B20":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:16 }}>{rank(i)}</td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}>
+                          <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
+                            <DDManagerLogo name={m.name} size={20} />
+                            <span style={{ color:m.isAlum?"#555":"#fff", fontWeight:500 }}>{m.name}</span>
+                            {m.championships > 0 && <span>{"🏆".repeat(m.championships)}</span>}
+                            {m.isAlum && <span style={{ fontSize:9, color:"#555", background:"#1a1a1a", borderRadius:4, padding:"1px 5px" }}>alumni</span>}
+                          </span>
+                        </td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#aaa" }}>{m.seasons}</td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2ecc71", fontWeight:600 }}>{m.wins}</td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#d42b2b" }}>{m.losses}</td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#E07B20", fontWeight:700, fontSize:15 }}>{(m.wpct*100).toFixed(1)}%</td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#e9c46a" }}>{m.ppg.toFixed(1)}</td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#e9c46a" }}>{m.championships || "—"}</td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2ecc71" }}>{m.playoffApps}/{m.seasons}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        );
+      })()}
 
       {section === "playoffs" && (
         <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
@@ -60321,6 +60459,18 @@ function DDPondTab() {
   const mobile = useMobile();
   const [section, setSection] = React.useState("home");
   const [h2hMgr, setH2hMgr] = React.useState(null);
+  const [tbSortKey, setTbSortKey] = React.useState("topWeeks");
+  const [tbSortDir, setTbSortDir] = React.useState("desc");
+  const [h2hSortKey, setH2hSortKey] = React.useState("W");
+  const [h2hSortDir, setH2hSortDir] = React.useState("desc");
+  const [ownSortKey, setOwnSortKey] = React.useState("WPct");
+  const [ownSortDir, setOwnSortDir] = React.useState("desc");
+  const [blowSortKey, setBlowSortKey] = React.useState("margin");
+  const [blowSortDir, setBlowSortDir] = React.useState("desc");
+  const [closeSortKey, setCloseSortKey] = React.useState("margin");
+  const [closeSortDir, setCloseSortDir] = React.useState("asc");
+  const [luckSortKey, setLuckSortKey] = React.useState("LuckDelta");
+  const [luckSortDir, setLuckSortDir] = React.useState("desc");
 
   const DD_POND_TILES = [
     { key:"h2h",       emoji:"⚔️",  label:"H2H Records",      sub:"Head-to-head records between every manager pair",  color:"#2176d2" },
@@ -60333,6 +60483,7 @@ function DDPondTab() {
     { key:"streaks",   emoji:"📈",  label:"Win/Loss Streaks",  sub:"Longest winning and losing streaks all-time",       color:"#9b5de5" },
     { key:"luck",      emoji:"🍀",  label:"Luck Index",        sub:"Actual wins vs expected wins over 3 seasons",       color:"#2ecc71" },
     { key:"txns",      emoji:"🤝",  label:"Transaction History",sub:"Trade kings, waiver wire activity & FA adds",       color:"#64b5f6" },
+    { key:"topbottom", emoji:"🎯",  label:"Top/Bottom Weeks",  sub:"Who scored the most or least each week, all-time",  color:"#9b5de5" },
   ];
 
   const firstName = n => n ? n.split(" ")[0] : "—";
@@ -60372,21 +60523,82 @@ function DDPondTab() {
                   <DDManagerLogo name={h2hMgr} size={28} />
                   <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:16, color:getColor(h2hMgr) }}>{h2hMgr}</div>
                 </div>
-                {Object.entries(DD_POND_DATA.h2h[h2hMgr]).sort((a,b)=>b[1].W-a[1].W).map(([opp,rec]) => {
-                  const tot=rec.W+rec.L; const wpct=tot?Math.round(rec.W/tot*100):0;
-                  const barW=tot?Math.round(rec.W/tot*100):0;
-                  return (
-                    <div key={opp} style={{ display:"flex", alignItems:"center", gap:8, padding:"8px 0", borderBottom:"1px solid #111" }}>
-                      <DDManagerLogo name={opp} size={18} />
-                      <span style={{ fontSize:13, color:"#fff", width:mobile?70:100, flexShrink:0, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{firstName(opp)}</span>
-                      <div style={{ flex:1, background:"#1a1a1a", borderRadius:3, height:6 }}>
-                        <div style={{ height:6, borderRadius:3, width:`${barW}%`, background:rec.W>rec.L?"#2ecc71":rec.W<rec.L?"#d42b2b":"#555", transition:"width 0.3s" }} />
-                      </div>
-                      <span style={{ fontSize:13, fontWeight:500, color:rec.W>rec.L?"#2ecc71":rec.W<rec.L?"#d42b2b":"#555", width:40, textAlign:"right", flexShrink:0 }}>{rec.W}–{rec.L}</span>
-                      <span style={{ fontSize:11, color:"#555", width:36, textAlign:"right", flexShrink:0 }}>{wpct}%</span>
+                {(() => {
+                  const handleH2hSort = (key) => {
+                    if (h2hSortKey === key) setH2hSortDir(d => d === "asc" ? "desc" : "asc");
+                    else { setH2hSortKey(key); setH2hSortDir(key === "opp" ? "asc" : "desc"); }
+                  };
+                  const h2hArrow = (key) => h2hSortKey === key ? (h2hSortDir === "asc" ? " ↑" : " ↓") : "";
+
+                  const entries = Object.entries(DD_POND_DATA.h2h[h2hMgr]).map(([opp, rec]) => {
+                    const tot = rec.W + rec.L;
+                    return { opp, W: rec.W, L: rec.L, total: tot, wpct: tot ? rec.W / tot : 0, PF: rec.PF, PA: rec.PA };
+                  }).sort((a, b) => {
+                    let result = 0;
+                    if (h2hSortKey === "opp") result = a.opp.localeCompare(b.opp);
+                    else if (h2hSortKey === "W") result = a.W - b.W;
+                    else if (h2hSortKey === "L") result = a.L - b.L;
+                    else if (h2hSortKey === "total") result = a.total - b.total;
+                    else if (h2hSortKey === "wpct") result = a.wpct - b.wpct;
+                    else if (h2hSortKey === "PF") result = a.PF - b.PF;
+                    return h2hSortDir === "asc" ? result : -result;
+                  });
+
+                  const H2hTh = ({ label, sortK, color }) => (
+                    <th onClick={() => handleH2hSort(sortK)} style={{ padding:"6px 8px", textAlign: sortK === "opp" ? "left" : "center", color: h2hSortKey === sortK ? "#fff" : (color || "#888"), fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"1px solid #333" }}>
+                      {label}{h2hArrow(sortK)}
+                    </th>
+                  );
+
+                  return mobile ? (
+                    <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
+                      {entries.map(e => {
+                        const barW = e.total ? Math.round(e.W / e.total * 100) : 0;
+                        return (
+                          <div key={e.opp} style={{ display:"flex", alignItems:"center", gap:8, padding:"8px 0", borderBottom:"1px solid #111" }}>
+                            <DDManagerLogo name={e.opp} size={18} />
+                            <span style={{ fontSize:13, color:"#fff", width:70, flexShrink:0, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{firstName(e.opp)}</span>
+                            <div style={{ flex:1, background:"#1a1a1a", borderRadius:3, height:6 }}>
+                              <div style={{ height:6, borderRadius:3, width:`${barW}%`, background:e.W>e.L?"#2ecc71":e.W<e.L?"#d42b2b":"#555" }} />
+                            </div>
+                            <span style={{ fontSize:13, fontWeight:500, color:e.W>e.L?"#2ecc71":e.W<e.L?"#d42b2b":"#555", width:40, textAlign:"right", flexShrink:0 }}>{e.W}–{e.L}</span>
+                            <span style={{ fontSize:11, color:"#555", width:36, textAlign:"right", flexShrink:0 }}>{Math.round(e.wpct*100)}%</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <div style={{ overflowX:"auto" }}>
+                      <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                        <thead>
+                          <tr>
+                            <H2hTh label="Opponent" sortK="opp" color="#888" />
+                            <H2hTh label="W" sortK="W" color="#2ecc71" />
+                            <H2hTh label="L" sortK="L" color="#d42b2b" />
+                            <H2hTh label="Games" sortK="total" color="#888" />
+                            <H2hTh label="W%" sortK="wpct" color="#E07B20" />
+                            <H2hTh label="PF" sortK="PF" color="#e9c46a" />
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {entries.map(e => (
+                            <tr key={e.opp} style={{ borderBottom:"1px solid #111" }}>
+                              <td style={{ padding:"8px", display:"flex", alignItems:"center", gap:6 }}>
+                                <DDManagerLogo name={e.opp} size={18} />
+                                <span style={{ color:"#fff", fontWeight:500 }}>{e.opp}</span>
+                              </td>
+                              <td style={{ padding:"8px", textAlign:"center", color:"#2ecc71", fontWeight:600 }}>{e.W}</td>
+                              <td style={{ padding:"8px", textAlign:"center", color:"#d42b2b" }}>{e.L}</td>
+                              <td style={{ padding:"8px", textAlign:"center", color:"#aaa" }}>{e.total}</td>
+                              <td style={{ padding:"8px", textAlign:"center", color:e.wpct>0.5?"#2ecc71":e.wpct<0.5?"#d42b2b":"#555", fontWeight:700 }}>{Math.round(e.wpct*100)}%</td>
+                              <td style={{ padding:"8px", textAlign:"center", color:"#e9c46a" }}>{e.PF.toFixed(1)}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
                     </div>
                   );
-                })}
+                })()}
               </div>
             )}
           </div>
@@ -60438,87 +60650,240 @@ function DDPondTab() {
         )}
 
         {/* OWNAGE */}
-        {section === "ownage" && (
-          <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-            <div style={{ fontSize:11, color:"#555", marginBottom:4 }}>
-              Most one-sided all-time series · min 3 matchups · includes points scored
-            </div>
-            {DD_POND_DATA.ownage.map((o,i) => {
-              const h2h = DD_POND_DATA.h2h[o.Winner]?.[o.Loser] || {};
-              const pf = h2h.PF ? h2h.PF.toFixed(1) : null;
-              const pa = h2h.PA ? h2h.PA.toFixed(1) : null;
-              const ppg = h2h.PF && o.Total > 0 ? (h2h.PF / o.Total).toFixed(1) : null;
-              return (
-                <div key={i} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
-                  <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom: pf ? 8 : 0 }}>
-                    <span style={{ fontSize:12, color:"#e9c46a", width:22, flexShrink:0 }}>
-                      {i===0?"👑":i===1?"🥈":i===2?"🥉":`#${i+1}`}
-                    </span>
-                    <DDManagerLogo name={o.Winner} size={20} />
-                    <span style={{ fontSize:13, fontWeight:600, color:"#2ecc71" }}>{firstName(o.Winner)}</span>
-                    <span style={{ fontSize:11, color:"#555" }}>owns</span>
-                    <DDManagerLogo name={o.Loser} size={20} />
-                    <span style={{ fontSize:13, color:"#d42b2b" }}>{firstName(o.Loser)}</span>
-                    <span style={{ marginLeft:"auto", fontSize:14, fontWeight:700, color:"#e9c46a", flexShrink:0 }}>{o.W}–{o.L}</span>
-                    <span style={{ fontSize:11, color:"#555", width:34, textAlign:"right", flexShrink:0 }}>{Math.round(o.WPct*100)}%</span>
-                  </div>
-                  {pf && (
-                    <div style={{ display:"flex", gap:mobile?8:16, fontSize:10, color:"#555", paddingLeft:32, flexWrap:"wrap" }}>
-                      <span>Total PF <span style={{ color:"#2ecc71" }}>{pf}</span></span>
-                      <span>Total PA <span style={{ color:"#d42b2b" }}>{pa}</span></span>
-                      <span>Avg margin <span style={{ color:"#e9c46a" }}>+{((h2h.PF - h2h.PA) / o.Total).toFixed(1)}</span></span>
-                      <span>Avg score <span style={{ color:"#fff" }}>{ppg} pts/game</span></span>
+        {section === "ownage" && (() => {
+          const handleOwnSort = (key) => {
+            if (ownSortKey === key) setOwnSortDir(d => d === "asc" ? "desc" : "asc");
+            else { setOwnSortKey(key); setOwnSortDir(key === "Winner" || key === "Loser" ? "asc" : "desc"); }
+          };
+          const ownArrow = (key) => ownSortKey === key ? (ownSortDir === "asc" ? " ↑" : " ↓") : "";
+
+          const ownData = [...DD_POND_DATA.ownage].sort((a, b) => {
+            let result = 0;
+            if (ownSortKey === "Winner") result = a.Winner.localeCompare(b.Winner);
+            else if (ownSortKey === "Loser") result = a.Loser.localeCompare(b.Loser);
+            else if (ownSortKey === "W") result = a.W - b.W;
+            else if (ownSortKey === "L") result = a.L - b.L;
+            else if (ownSortKey === "Total") result = a.Total - b.Total;
+            else if (ownSortKey === "WPct") result = a.WPct - b.WPct;
+            return ownSortDir === "asc" ? result : -result;
+          });
+
+          const OwnTh = ({ label, sortK, color }) => (
+            <th onClick={() => handleOwnSort(sortK)} style={{ padding:"8px 10px", textAlign: sortK === "Winner" || sortK === "Loser" ? "left" : "center", color: ownSortKey === sortK ? "#fff" : (color || "#888"), fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"2px solid #333" }}>
+              {label}{ownArrow(sortK)}
+            </th>
+          );
+
+          const rank = i => i===0?"👑":i===1?"🥈":i===2?"🥉":`#${i+1}`;
+
+          return (
+            <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+              <div style={{ fontSize:11, color:"#555", marginBottom:4 }}>
+                Most one-sided all-time series · min 3 matchups · click headers to sort
+              </div>
+              {mobile ? (
+                <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
+                  {ownData.map((o, i) => (
+                    <div key={i} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 12px", display:"flex", alignItems:"center", gap:8 }}>
+                      <span style={{ fontSize:12, color:"#e9c46a", width:22, flexShrink:0 }}>{rank(i)}</span>
+                      <DDManagerLogo name={o.Winner} size={18} />
+                      <span style={{ fontSize:12, fontWeight:600, color:"#2ecc71" }}>{firstName(o.Winner)}</span>
+                      <span style={{ fontSize:10, color:"#555" }}>→</span>
+                      <DDManagerLogo name={o.Loser} size={18} />
+                      <span style={{ fontSize:12, color:"#d42b2b" }}>{firstName(o.Loser)}</span>
+                      <span style={{ marginLeft:"auto", fontSize:13, fontWeight:700, color:"#e9c46a", flexShrink:0 }}>{o.W}–{o.L}</span>
                     </div>
-                  )}
+                  ))}
                 </div>
-              );
-            })}
-          </div>
-        )}
+              ) : (
+                <div style={{ overflowX:"auto" }}>
+                  <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                    <thead>
+                      <tr>
+                        <th style={{ padding:"8px 10px", textAlign:"left", color:"#e9c46a", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1, fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
+                        <OwnTh label="Dominator" sortK="Winner" color="#2ecc71" />
+                        <OwnTh label="Victim" sortK="Loser" color="#d42b2b" />
+                        <OwnTh label="W" sortK="W" color="#2ecc71" />
+                        <OwnTh label="L" sortK="L" color="#d42b2b" />
+                        <OwnTh label="Games" sortK="Total" color="#888" />
+                        <OwnTh label="W%" sortK="WPct" color="#e9c46a" />
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {ownData.map((o, i) => (
+                        <tr key={i} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color: i<3?"#e9c46a":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>{rank(i)}</td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}>
+                            <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
+                              <DDManagerLogo name={o.Winner} size={18} />
+                              <span style={{ color:"#2ecc71", fontWeight:600 }}>{o.Winner}</span>
+                            </span>
+                          </td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}>
+                            <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
+                              <DDManagerLogo name={o.Loser} size={18} />
+                              <span style={{ color:"#d42b2b" }}>{o.Loser}</span>
+                            </span>
+                          </td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2ecc71", fontWeight:600 }}>{o.W}</td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#d42b2b" }}>{o.L}</td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#aaa" }}>{o.Total}</td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#e9c46a", fontWeight:700 }}>{Math.round(o.WPct*100)}%</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
+          );
+        })()}
 
         {/* BLOWOUTS */}
-        {section === "blowouts" && (
-          <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-            {DD_POND_DATA.biggestBlowouts.map((g,i) => (
-              <div key={i} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
-                <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
-                  <span style={{ fontSize:11, color:"#d42b2b", width:20, flexShrink:0 }}>#{i+1}</span>
-                  <DDManagerLogo name={g.winner} size={16} />
-                  <span style={{ fontSize:13, fontWeight:500, color:"#fff" }}>{firstName(g.winner)}</span>
-                  <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:15, color:"#2ecc71" }}>{g.winPts}</span>
-                  <span style={{ fontSize:11, color:"#555" }}>vs</span>
-                  <DDManagerLogo name={g.loser} size={16} />
-                  <span style={{ fontSize:13, color:"#555" }}>{firstName(g.loser)}</span>
-                  <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:15, color:"#555" }}>{g.losePts}</span>
-                  <span style={{ fontSize:12, color:"#d42b2b", fontWeight:700, marginLeft:"auto" }}>+{g.margin}</span>
+        {section === "blowouts" && (() => {
+          const handleBlowSort = (key) => {
+            if (blowSortKey === key) setBlowSortDir(d => d === "asc" ? "desc" : "asc");
+            else { setBlowSortKey(key); setBlowSortDir(key === "winner" || key === "loser" ? "asc" : "desc"); }
+          };
+          const blowArrow = (key) => blowSortKey === key ? (blowSortDir === "asc" ? " ↑" : " ↓") : "";
+          const blowData = [...DD_POND_DATA.biggestBlowouts].sort((a, b) => {
+            let result = 0;
+            if (blowSortKey === "margin") result = a.margin - b.margin;
+            else if (blowSortKey === "winner") result = a.winner.localeCompare(b.winner);
+            else if (blowSortKey === "loser") result = a.loser.localeCompare(b.loser);
+            else if (blowSortKey === "winPts") result = a.winPts - b.winPts;
+            else if (blowSortKey === "year") result = a.year - b.year || a.week - b.week;
+            return blowSortDir === "asc" ? result : -result;
+          });
+          const BlowTh = ({ label, sortK, color }) => (
+            <th onClick={() => handleBlowSort(sortK)} style={{ padding:"8px 10px", textAlign: sortK === "winner" || sortK === "loser" ? "left" : "center", color: blowSortKey === sortK ? "#fff" : (color || "#888"), fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"2px solid #333" }}>
+              {label}{blowArrow(sortK)}
+            </th>
+          );
+          return (
+            <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+              <div style={{ fontSize:11, color:"#555", marginBottom:4 }}>Largest margins of victory all-time · click headers to sort</div>
+              {mobile ? (
+                <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
+                  {blowData.map((g, i) => (
+                    <div key={i} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 12px" }}>
+                      <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
+                        <span style={{ fontSize:11, color:"#d42b2b", width:20, flexShrink:0 }}>#{i+1}</span>
+                        <DDManagerLogo name={g.winner} size={16} />
+                        <span style={{ fontSize:13, fontWeight:500, color:"#fff" }}>{firstName(g.winner)}</span>
+                        <span style={{ fontSize:11, color:"#555" }}>vs</span>
+                        <DDManagerLogo name={g.loser} size={16} />
+                        <span style={{ fontSize:13, color:"#555" }}>{firstName(g.loser)}</span>
+                        <span style={{ fontSize:12, color:"#d42b2b", fontWeight:700, marginLeft:"auto" }}>+{g.margin}</span>
+                      </div>
+                      <div style={{ fontSize:11, color:"#333", paddingLeft:28 }}>{g.year} Wk {g.week}</div>
+                    </div>
+                  ))}
                 </div>
-                <div style={{ fontSize:11, color:"#333", paddingLeft:28 }}>{g.year} Wk {g.week}</div>
-              </div>
-            ))}
-          </div>
-        )}
+              ) : (
+                <div style={{ overflowX:"auto" }}>
+                  <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                    <thead><tr>
+                      <th style={{ padding:"8px 10px", textAlign:"left", color:"#d42b2b", fontFamily:"'Cooper Black',Georgia,serif", fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
+                      <BlowTh label="Winner" sortK="winner" color="#2ecc71" />
+                      <BlowTh label="Score" sortK="winPts" color="#2ecc71" />
+                      <BlowTh label="Loser" sortK="loser" color="#d42b2b" />
+                      <th style={{ padding:"8px 10px", textAlign:"center", color:"#888", fontSize:11, borderBottom:"2px solid #333" }}>Score</th>
+                      <BlowTh label="Margin" sortK="margin" color="#d42b2b" />
+                      <BlowTh label="When" sortK="year" color="#888" />
+                    </tr></thead>
+                    <tbody>
+                      {blowData.map((g, i) => (
+                        <tr key={i} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color: i<3?"#d42b2b":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>#{i+1}</td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}><span style={{ display:"inline-flex", alignItems:"center", gap:5 }}><DDManagerLogo name={g.winner} size={16} /><span style={{ color:"#fff", fontWeight:500 }}>{firstName(g.winner)}</span></span></td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2ecc71", fontWeight:700 }}>{g.winPts}</td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}><span style={{ display:"inline-flex", alignItems:"center", gap:5 }}><DDManagerLogo name={g.loser} size={16} /><span style={{ color:"#555" }}>{firstName(g.loser)}</span></span></td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#555" }}>{g.losePts}</td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#d42b2b", fontWeight:700 }}>+{g.margin}</td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#555" }}>{g.year} Wk{g.week}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
+          );
+        })()}
 
         {/* CLOSEST */}
-        {section === "closest" && (
-          <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-            {DD_POND_DATA.closestGames.map((g,i) => (
-              <div key={i} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
-                <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
-                  <span style={{ fontSize:11, color:"#2ecc71", width:20, flexShrink:0 }}>#{i+1}</span>
-                  <DDManagerLogo name={g.winner} size={16} />
-                  <span style={{ fontSize:13, fontWeight:500, color:"#fff" }}>{firstName(g.winner)}</span>
-                  <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:15, color:"#2ecc71" }}>{g.winPts}</span>
-                  <span style={{ fontSize:11, color:"#555" }}>vs</span>
-                  <DDManagerLogo name={g.loser} size={16} />
-                  <span style={{ fontSize:13, color:"#555" }}>{firstName(g.loser)}</span>
-                  <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:15, color:"#555" }}>{g.losePts}</span>
-                  <span style={{ fontSize:12, color:"#2ecc71", fontWeight:700, marginLeft:"auto" }}>+{g.margin}</span>
+        {section === "closest" && (() => {
+          const handleCloseSort = (key) => {
+            if (closeSortKey === key) setCloseSortDir(d => d === "asc" ? "desc" : "asc");
+            else { setCloseSortKey(key); setCloseSortDir(key === "winner" || key === "loser" ? "asc" : "asc"); }
+          };
+          const closeArrow = (key) => closeSortKey === key ? (closeSortDir === "asc" ? " ↑" : " ↓") : "";
+          const closeData = [...DD_POND_DATA.closestGames].sort((a, b) => {
+            let result = 0;
+            if (closeSortKey === "margin") result = a.margin - b.margin;
+            else if (closeSortKey === "winner") result = a.winner.localeCompare(b.winner);
+            else if (closeSortKey === "loser") result = a.loser.localeCompare(b.loser);
+            else if (closeSortKey === "winPts") result = a.winPts - b.winPts;
+            else if (closeSortKey === "year") result = a.year - b.year || a.week - b.week;
+            return closeSortDir === "asc" ? result : -result;
+          });
+          const CloseTh = ({ label, sortK, color }) => (
+            <th onClick={() => handleCloseSort(sortK)} style={{ padding:"8px 10px", textAlign: sortK === "winner" || sortK === "loser" ? "left" : "center", color: closeSortKey === sortK ? "#fff" : (color || "#888"), fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"2px solid #333" }}>
+              {label}{closeArrow(sortK)}
+            </th>
+          );
+          return (
+            <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+              <div style={{ fontSize:11, color:"#555", marginBottom:4 }}>Nail-biters decided by the smallest margins · click headers to sort</div>
+              {mobile ? (
+                <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
+                  {closeData.map((g, i) => (
+                    <div key={i} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 12px" }}>
+                      <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
+                        <span style={{ fontSize:11, color:"#2ecc71", width:20, flexShrink:0 }}>#{i+1}</span>
+                        <DDManagerLogo name={g.winner} size={16} />
+                        <span style={{ fontSize:13, fontWeight:500, color:"#fff" }}>{firstName(g.winner)}</span>
+                        <span style={{ fontSize:11, color:"#555" }}>vs</span>
+                        <DDManagerLogo name={g.loser} size={16} />
+                        <span style={{ fontSize:13, color:"#555" }}>{firstName(g.loser)}</span>
+                        <span style={{ fontSize:12, color:"#2ecc71", fontWeight:700, marginLeft:"auto" }}>+{g.margin}</span>
+                      </div>
+                      <div style={{ fontSize:11, color:"#333", paddingLeft:28 }}>{g.year} Wk {g.week}</div>
+                    </div>
+                  ))}
                 </div>
-                <div style={{ fontSize:11, color:"#333", paddingLeft:28 }}>{g.year} Wk {g.week}</div>
-              </div>
-            ))}
-          </div>
-        )}
+              ) : (
+                <div style={{ overflowX:"auto" }}>
+                  <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                    <thead><tr>
+                      <th style={{ padding:"8px 10px", textAlign:"left", color:"#2ecc71", fontFamily:"'Cooper Black',Georgia,serif", fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
+                      <CloseTh label="Winner" sortK="winner" color="#2ecc71" />
+                      <CloseTh label="Score" sortK="winPts" color="#2ecc71" />
+                      <CloseTh label="Loser" sortK="loser" color="#d42b2b" />
+                      <th style={{ padding:"8px 10px", textAlign:"center", color:"#888", fontSize:11, borderBottom:"2px solid #333" }}>Score</th>
+                      <CloseTh label="Margin" sortK="margin" color="#2ecc71" />
+                      <CloseTh label="When" sortK="year" color="#888" />
+                    </tr></thead>
+                    <tbody>
+                      {closeData.map((g, i) => (
+                        <tr key={i} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color: i<3?"#2ecc71":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>#{i+1}</td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}><span style={{ display:"inline-flex", alignItems:"center", gap:5 }}><DDManagerLogo name={g.winner} size={16} /><span style={{ color:"#fff", fontWeight:500 }}>{firstName(g.winner)}</span></span></td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2ecc71", fontWeight:700 }}>{g.winPts}</td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}><span style={{ display:"inline-flex", alignItems:"center", gap:5 }}><DDManagerLogo name={g.loser} size={16} /><span style={{ color:"#555" }}>{firstName(g.loser)}</span></span></td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#555" }}>{g.losePts}</td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2ecc71", fontWeight:700 }}>+{g.margin}</td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#555" }}>{g.year} Wk{g.week}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
+          );
+        })()}
 
         {/* TOP WEEKS */}
         {section === "topweeks" && (
@@ -60577,36 +60942,99 @@ function DDPondTab() {
         )}
 
         {/* LUCK */}
-        {section === "luck" && (
-          <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-            <div style={{ fontSize:11, color:"#555", background:"#111", borderRadius:6, padding:"6px 12px", marginBottom:4 }}>
-              Actual wins minus expected wins (based on weekly PF rank) · 3-season total
-            </div>
-            {DD_POND_DATA.luck.map((l,i) => {
-              const maxAbs = Math.max(...DD_POND_DATA.luck.map(x=>Math.abs(x.LuckDelta)));
-              const pct = Math.abs(l.LuckDelta)/maxAbs*48;
-              const lucky = l.LuckDelta >= 0;
-              return (
-                <div key={i} style={{ display:"flex", alignItems:"center", gap:8, background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"9px 14px" }}>
-                  <DDManagerLogo name={l.Manager} size={20} />
-                  <span style={{ fontSize:13, fontWeight:500, color:"#fff", width:mobile?70:90, flexShrink:0, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{firstName(l.Manager)}</span>
-                  <div style={{ flex:1, minWidth:0, position:"relative" }}>
-                    <div style={{ background:"#1a1a1a", borderRadius:3, height:8, position:"relative" }}>
-                      <div style={{ position:"absolute", left:"50%", top:0, bottom:0, width:1.5, background:"#333" }} />
-                      {lucky
-                        ? <div style={{ position:"absolute", left:"50%", width:`${pct}%`, height:8, background:"#2176d2", borderRadius:"0 3px 3px 0" }} />
-                        : <div style={{ position:"absolute", right:"50%", width:`${pct}%`, height:8, background:"#d42b2b", borderRadius:"3px 0 0 3px" }} />}
-                    </div>
-                  </div>
-                  <span style={{ fontSize:13, fontWeight:500, color:lucky?"#2176d2":"#d42b2b", width:40, textAlign:"right", flexShrink:0 }}>
-                    {lucky?"+":""}{l.LuckDelta}
-                  </span>
-                  <span style={{ fontSize:11, color:"#555", width:mobile?60:80, textAlign:"right", flexShrink:0 }}>{l.ActualW}W/{l.ExpectedW}exp</span>
+        {section === "luck" && (() => {
+          const handleLuckSort = (key) => {
+            if (luckSortKey === key) setLuckSortDir(d => d === "asc" ? "desc" : "asc");
+            else { setLuckSortKey(key); setLuckSortDir(key === "Manager" ? "asc" : "desc"); }
+          };
+          const luckArrow = (key) => luckSortKey === key ? (luckSortDir === "asc" ? " ↑" : " ↓") : "";
+          const luckData = [...DD_POND_DATA.luck].sort((a, b) => {
+            let result = 0;
+            if (luckSortKey === "Manager") result = a.Manager.localeCompare(b.Manager);
+            else if (luckSortKey === "LuckDelta") result = a.LuckDelta - b.LuckDelta;
+            else if (luckSortKey === "ActualW") result = a.ActualW - b.ActualW;
+            else if (luckSortKey === "ExpectedW") result = a.ExpectedW - b.ExpectedW;
+            return luckSortDir === "asc" ? result : -result;
+          });
+          const LuckTh = ({ label, sortK, color }) => (
+            <th onClick={() => handleLuckSort(sortK)} style={{ padding:"8px 10px", textAlign: sortK === "Manager" ? "left" : "center", color: luckSortKey === sortK ? "#fff" : (color || "#888"), fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"2px solid #333" }}>
+              {label}{luckArrow(sortK)}
+            </th>
+          );
+          const maxAbs = Math.max(...DD_POND_DATA.luck.map(x => Math.abs(x.LuckDelta)));
+
+          return (
+            <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+              <div style={{ fontSize:11, color:"#555", background:"#111", borderRadius:6, padding:"6px 12px", marginBottom:4 }}>
+                Actual wins minus expected wins (based on weekly PF rank) · 3-season total · click headers to sort
+              </div>
+              {mobile ? (
+                <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
+                  {luckData.map((l, i) => {
+                    const pct = Math.abs(l.LuckDelta) / maxAbs * 48;
+                    const lucky = l.LuckDelta >= 0;
+                    return (
+                      <div key={i} style={{ display:"flex", alignItems:"center", gap:8, background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"9px 12px" }}>
+                        <DDManagerLogo name={l.Manager} size={20} />
+                        <span style={{ fontSize:13, fontWeight:500, color:"#fff", width:70, flexShrink:0 }}>{firstName(l.Manager)}</span>
+                        <div style={{ flex:1, minWidth:0, position:"relative" }}>
+                          <div style={{ background:"#1a1a1a", borderRadius:3, height:8, position:"relative" }}>
+                            <div style={{ position:"absolute", left:"50%", top:0, bottom:0, width:1.5, background:"#333" }} />
+                            {lucky
+                              ? <div style={{ position:"absolute", left:"50%", width:`${pct}%`, height:8, background:"#2176d2", borderRadius:"0 3px 3px 0" }} />
+                              : <div style={{ position:"absolute", right:"50%", width:`${pct}%`, height:8, background:"#d42b2b", borderRadius:"3px 0 0 3px" }} />}
+                          </div>
+                        </div>
+                        <span style={{ fontSize:13, fontWeight:500, color:lucky?"#2176d2":"#d42b2b", width:40, textAlign:"right", flexShrink:0 }}>{lucky?"+":""}{l.LuckDelta}</span>
+                      </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
-          </div>
-        )}
+              ) : (
+                <div style={{ overflowX:"auto" }}>
+                  <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                    <thead><tr>
+                      <th style={{ padding:"8px 10px", textAlign:"left", color:"#2176d2", fontFamily:"'Cooper Black',Georgia,serif", fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
+                      <LuckTh label="Manager" sortK="Manager" color="#888" />
+                      <LuckTh label="Luck Δ" sortK="LuckDelta" color="#2176d2" />
+                      <th style={{ padding:"8px 10px", textAlign:"center", color:"#555", fontSize:11, borderBottom:"2px solid #333" }}>Visual</th>
+                      <LuckTh label="Actual W" sortK="ActualW" color="#2ecc71" />
+                      <LuckTh label="Expected W" sortK="ExpectedW" color="#e9c46a" />
+                    </tr></thead>
+                    <tbody>
+                      {luckData.map((l, i) => {
+                        const pct = Math.abs(l.LuckDelta) / maxAbs * 48;
+                        const lucky = l.LuckDelta >= 0;
+                        return (
+                          <tr key={i} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color: i<3?"#2176d2":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>#{i+1}</td>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}>
+                              <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
+                                <DDManagerLogo name={l.Manager} size={18} />
+                                <span style={{ color:"#fff", fontWeight:500 }}>{l.Manager}</span>
+                              </span>
+                            </td>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:lucky?"#2176d2":"#d42b2b", fontWeight:700, fontSize:15 }}>{lucky?"+":""}{l.LuckDelta}</td>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", width:120 }}>
+                              <div style={{ background:"#1a1a1a", borderRadius:3, height:8, position:"relative" }}>
+                                <div style={{ position:"absolute", left:"50%", top:0, bottom:0, width:1.5, background:"#333" }} />
+                                {lucky
+                                  ? <div style={{ position:"absolute", left:"50%", width:`${pct}%`, height:8, background:"#2176d2", borderRadius:"0 3px 3px 0" }} />
+                                  : <div style={{ position:"absolute", right:"50%", width:`${pct}%`, height:8, background:"#d42b2b", borderRadius:"3px 0 0 3px" }} />}
+                              </div>
+                            </td>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2ecc71" }}>{l.ActualW}</td>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#e9c46a" }}>{l.ExpectedW}</td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
+          );
+        })()}
 
         {section === "txns" && (() => {
           const summary = DD_TRANSACTION_SUMMARY || {};
@@ -60639,7 +61067,140 @@ function DDPondTab() {
               ))}
             </div>
           );
-        })()}      </div>
+        })()}
+
+        {section === "topbottom" && (() => {
+          // Compute historical top/bottom weeks from DD_LINEUP_EFFICIENCY (2023-2025)
+          const ddTopCounts = {};
+          const ddLowCounts = {};
+          [2023, 2024, 2025].forEach(yr => {
+            const yearData = DD_LINEUP_EFFICIENCY[yr];
+            if (!yearData) return;
+            const allWeeks = new Set();
+            Object.values(yearData).forEach(mgr => {
+              (mgr.weeks || []).forEach(w => allWeeks.add(w.week));
+            });
+            allWeeks.forEach(wk => {
+              const scores = [];
+              Object.entries(yearData).forEach(([name, mgr]) => {
+                const weekData = (mgr.weeks || []).find(w => w.week === wk);
+                if (weekData && weekData.actual > 0) scores.push({ name, pts: weekData.actual });
+              });
+              if (scores.length < 2) return;
+              const maxPts = Math.max(...scores.map(s => s.pts));
+              const minPts = Math.min(...scores.map(s => s.pts));
+              scores.forEach(s => {
+                if (s.pts === maxPts) ddTopCounts[s.name] = (ddTopCounts[s.name] || 0) + 1;
+                if (s.pts === minPts) ddLowCounts[s.name] = (ddLowCounts[s.name] || 0) + 1;
+              });
+            });
+          });
+
+          // Build manager list with seasons count
+          const ddAllMgrs = [...new Set([...Object.keys(ddTopCounts), ...Object.keys(ddLowCounts)])];
+          const ddWeeksMgrs = ddAllMgrs.map(name => {
+            const seasons = [2023,2024,2025].filter(yr => DD_LINEUP_EFFICIENCY[yr]?.[name]).length;
+            return {
+              name,
+              seasons,
+              topWeeks: ddTopCounts[name] || 0,
+              lowWeeks: ddLowCounts[name] || 0,
+              topPerSeason: seasons > 0 ? ((ddTopCounts[name] || 0) / seasons) : 0,
+              lowPerSeason: seasons > 0 ? ((ddLowCounts[name] || 0) / seasons) : 0,
+            };
+          });
+
+          const handleTbSort = (key) => {
+            if (tbSortKey === key) setTbSortDir(d => d === "asc" ? "desc" : "asc");
+            else { setTbSortKey(key); setTbSortDir(key === "name" ? "asc" : "desc"); }
+          };
+          const arrow = (key) => tbSortKey === key ? (tbSortDir === "asc" ? " ↑" : " ↓") : "";
+
+          const sortedMgrs = [...ddWeeksMgrs].sort((a, b) => {
+            let result = 0;
+            if (tbSortKey === "name") result = a.name.localeCompare(b.name);
+            else if (tbSortKey === "seasons") result = a.seasons - b.seasons;
+            else if (tbSortKey === "topWeeks") result = a.topWeeks - b.topWeeks;
+            else if (tbSortKey === "topPerSeason") result = a.topPerSeason - b.topPerSeason;
+            else if (tbSortKey === "lowWeeks") result = a.lowWeeks - b.lowWeeks;
+            else if (tbSortKey === "lowPerSeason") result = a.lowPerSeason - b.lowPerSeason;
+            return tbSortDir === "asc" ? result : -result;
+          });
+
+          const rank = i => i===0?"🥇":i===1?"🥈":i===2?"🥉":`#${i+1}`;
+
+          const ThBtn = ({ label, sortK, color }) => (
+            <th onClick={() => handleTbSort(sortK)} style={{ padding:"8px 12px", textAlign: sortK === "name" ? "left" : "center", color, fontWeight:700, fontSize:12, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap" }}>
+              {label}{arrow(sortK)}
+            </th>
+          );
+
+          return (
+            <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
+              <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?14:16, color:"#9b5de5", letterSpacing:2, textTransform:"uppercase", marginBottom:4 }}>
+                📆 High & Low Score Weeks All-Time
+              </div>
+              <div style={{ fontSize:11, color:"#555", marginBottom:8 }}>
+                How often did each manager appear in the top or bottom weekly scores? Click headers to sort.
+              </div>
+
+              {mobile ? (
+                <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
+                  {sortedMgrs.map((m, i) => (
+                    <div key={m.name} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a", borderRadius:6, padding:"8px 10px", display:"flex", alignItems:"center", gap:8 }}>
+                      <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:14, color: i<3?"#e9c46a":"#555", minWidth:28, textAlign:"center" }}>{rank(i)}</span>
+                      <DDManagerLogo name={m.name} size={20} />
+                      <span style={{ flex:1, fontSize:13, color:getColor(m.name), fontWeight:600 }}>{firstName(m.name)}</span>
+                      <div style={{ display:"flex", gap:12, flexShrink:0 }}>
+                        <span>🔥 <b style={{ color:"#e9c46a" }}>{m.topWeeks}</b></span>
+                        <span>💀 <b style={{ color:"#2176d2" }}>{m.lowWeeks}</b></span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div style={{ overflowX:"auto" }}>
+                  <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                    <thead>
+                      <tr style={{ borderBottom:"2px solid #333" }}>
+                        <th style={{ padding:"8px 12px", textAlign:"left", color:"#9b5de5", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1, fontSize:12 }}>Rank</th>
+                        <ThBtn label="Manager" sortK="name" color="#888" />
+                        <ThBtn label="Seasons" sortK="seasons" color="#888" />
+                        <ThBtn label="🔥 Top Weeks" sortK="topWeeks" color="#e9c46a" />
+                        <ThBtn label="📊 Per Season" sortK="topPerSeason" color="#e9c46a99" />
+                        <ThBtn label="💀 Low Weeks" sortK="lowWeeks" color="#2176d2" />
+                        <ThBtn label="📊 Per Season" sortK="lowPerSeason" color="#2176d299" />
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {sortedMgrs.map((m, i) => (
+                        <tr key={m.name} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                          <td style={{ padding:"9px 12px", borderBottom:"1px solid #1a1a1a", color: i<3?"#e9c46a":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:16 }}>{rank(i)}</td>
+                          <td style={{ padding:"9px 12px", borderBottom:"1px solid #1a1a1a" }}>
+                            <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
+                              <DDManagerLogo name={m.name} size={20} />
+                              <span style={{ color:getColor(m.name), fontWeight:600 }}>{m.name}</span>
+                            </span>
+                          </td>
+                          <td style={{ padding:"9px 12px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#aaa" }}>{m.seasons}</td>
+                          <td style={{ padding:"9px 12px", borderBottom:"1px solid #1a1a1a", textAlign:"center" }}><span style={{ color:"#e9c46a", fontWeight:700, fontSize:15 }}>{m.topWeeks}</span></td>
+                          <td style={{ padding:"9px 12px", borderBottom:"1px solid #1a1a1a", textAlign:"center" }}><span style={{ color:"#e9c46a99" }}>{m.topPerSeason.toFixed(1)}</span></td>
+                          <td style={{ padding:"9px 12px", borderBottom:"1px solid #1a1a1a", textAlign:"center" }}><span style={{ color:"#2176d2", fontWeight:700, fontSize:15 }}>{m.lowWeeks}</span></td>
+                          <td style={{ padding:"9px 12px", borderBottom:"1px solid #1a1a1a", textAlign:"center" }}><span style={{ color:"#2176d299" }}>{m.lowPerSeason.toFixed(1)}</span></td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              <div style={{ color:"#444", fontSize:11, marginTop:8, paddingTop:8, borderTop:"1px solid #1a1a1a" }}>
+                🔥 Top Week = scored the highest of all managers that week · 💀 Low Week = lowest scorer · Ties count for both · Click headers to sort · Will auto-update with 2026 live data during the season.
+              </div>
+            </div>
+          );
+        })()}
+      </div>
     );
   }
 
