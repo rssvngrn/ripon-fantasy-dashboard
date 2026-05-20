@@ -44477,7 +44477,7 @@ const ToggleBtn = ({ active, onToggle, label }) => {
   );
 };
 // ── MGR NAME w/ LOGO (logo + firstName on mobile, full name on desktop) ──────
-const MgrName = ({ name, size }) => {
+const MgrName = ({ name, size, ddLogos }) => {
   const mobile = useMobile();
   const { open } = usePopover();
   const s = size || (mobile ? 30 : 30);
@@ -44486,7 +44486,7 @@ const MgrName = ({ name, size }) => {
       onClick={e => { e.stopPropagation(); open(name, { x: e.clientX, y: e.clientY }); }}
       style={{ display:"inline-flex", alignItems:"center", gap: mobile ? 4 : 5, minWidth:0, overflow:"hidden", cursor:"pointer" }}
     >
-      <ManagerLogo name={name} size={s} />
+      {ddLogos ? <DDManagerLogo name={name} size={s} /> : <ManagerLogo name={name} size={s} />}
       <span style={{ color:getColor(name), fontWeight:600, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", textDecoration:"underline", textDecorationStyle:"dotted", textDecorationColor: getColor(name) + "66", textUnderlineOffset: 3 }}>
         {shortMgr(name, mobile)}
       </span>
@@ -46132,7 +46132,7 @@ function CommissionerBanner({ onDismiss }) {
 
 // ── Sub-components ────────────────────────────────────────────────────────────
 
-function CSStandings({ managers }) {
+function CSStandings({ managers, ddLogos }) {
   const mobile = useMobile();
   const PLAYOFF_SPOTS = 6;
   const headers = mobile
@@ -46168,7 +46168,7 @@ function CSStandings({ managers }) {
               return (
                 <tr key={m.rosterId} style={{ borderBottom: "1px solid #222", background: rowBg, borderLeft: leftBorder }}>
                   <td style={{ padding: "8px", textAlign: "center", color: "#666", fontWeight: 600 }}>{i + 1}</td>
-                  <td style={{ padding: "8px" }}><MgrName name={m.name} size={24} /></td>
+                  <td style={{ padding: "8px" }}><MgrName name={m.name} size={24} ddLogos={ddLogos} /></td>
                   <td style={{ padding: "8px", textAlign: "center", color: "#2ecc71", fontWeight: 700 }}>{m.wins}</td>
                   <td style={{ padding: "8px", textAlign: "center", color: "#2176d2", fontWeight: 700 }}>{m.losses}</td>
                   <td style={{ padding: "8px", textAlign: "center" }}>{m.pf.toFixed(2)}</td>
@@ -47185,7 +47185,7 @@ function CSWeeklyRecap({ managers, matchups, transactions, currentWeek }) {
 
   const Story = ({ label, labelColor="#555", accent, children, stat }) => (
     <div style={{
-      background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8,
+      background:"#0a0a0a", border:"1px solid #1a1a1a",
       borderLeft: accent ? `3px solid ${accent}` : "1px solid #1a1a1a",
       borderRadius: accent ? "0 8px 8px 0" : 8,
       padding: mobile ? "10px 12px" : "12px 16px", marginBottom:8
@@ -47412,7 +47412,7 @@ function CurrentSeasonTab() {
       )}
 
       {/* ── SECTION VIEWS ── */}
-      {section === "standings"    && <CSStandings managers={managers} />}
+      {section === "standings"    && <CSStandings managers={managers} ddLogos={true} />}
       {section === "matchups"     && matchups.length > 0 && <CSMatchupCards matchups={matchups} week={currentWeek} />}
       {section === "matchups"     && matchups.length === 0 && !loading && (
         <div style={{ color: "#555", fontSize: 14, padding: "32px 0", textAlign: "center" }}>
@@ -57137,6 +57137,533 @@ function DraftManagerProfile() {
 }
 
 // ── DRAFT TAB ─────────────────────────────────────────────────────────────────
+// ── MANAGER DEEP DIVE ──────────────────────────────────────────────────────────
+function ManagerDeepDive() {
+  const mobile = useMobile();
+  const picks  = DATA.playerData.draftPicks || [];
+  const scores = DATA.playerData.weeklyScores || [];
+  const { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
+          Cell, LineChart, Line, Legend } = Recharts;
+
+  const POSITIONS = ["QB","RB","WR","TE"];
+  const POS_COLOR = { QB:"#2176d2", RB:"#2a9d8f", WR:"#e9c46a", TE:"#f4a261" };
+
+  // ── Helpers ──
+  const currentMgrs = [...new Set(picks.filter(p => p.year === 2025).map(p => p.manager))].sort();
+  const allMgrs = [...new Set(picks.map(p => p.manager))].sort();
+  const firstName = n => n ? n.split(" ")[0] : "—";
+
+  const [view, setView] = React.useState("overview"); // "overview" | manager name
+  const [subTab, setSubTab] = React.useState("evolution");
+
+  // ── Season points per player ──
+  const playerPts = React.useMemo(() => {
+    const out = {};
+    scores.forEach(s => { const k = s.year + "_" + s.playerId; out[k] = (out[k] || 0) + s.points; });
+    return out;
+  }, []);
+
+  // ── Per-manager, per-year positional spend as % of total budget ──
+  const mgrYearSpend = React.useMemo(() => {
+    const out = {};
+    allMgrs.forEach(mgr => {
+      const mgrPicks = picks.filter(p => p.manager === mgr);
+      const years = [...new Set(mgrPicks.map(p => p.year))].sort();
+      out[mgr] = years.map(yr => {
+        const yrPicks = mgrPicks.filter(p => p.year === yr);
+        const total = yrPicks.reduce((s, p) => s + p.price, 0) || 1;
+        const byPos = {};
+        POSITIONS.forEach(pos => { byPos[pos] = 0; });
+        yrPicks.forEach(p => {
+          const pos = normPos(p.position);
+          if (POSITIONS.includes(pos)) byPos[pos] += p.price;
+        });
+        const pcts = {};
+        POSITIONS.forEach(pos => { pcts[pos] = Math.round(byPos[pos] / total * 100); });
+        return { year: yr, total, ...byPos, ...Object.fromEntries(POSITIONS.map(pos => [pos + "Pct", pcts[pos]])) };
+      });
+    });
+    return out;
+  }, []);
+
+  // ── Slot efficiency: pts/$ per position per manager (career) ──
+  const slotEfficiency = React.useMemo(() => {
+    const out = {};
+    allMgrs.forEach(mgr => {
+      const mgrPicks = picks.filter(p => p.manager === mgr && p.price > 0);
+      const posData = {};
+      POSITIONS.forEach(pos => { posData[pos] = { spent: 0, pts: 0 }; });
+      mgrPicks.forEach(p => {
+        const pos = normPos(p.position);
+        if (!POSITIONS.includes(pos)) return;
+        const pts = playerPts[p.year + "_" + p.playerId] || 0;
+        posData[pos].spent += p.price;
+        posData[pos].pts += pts;
+      });
+      const eff = {};
+      POSITIONS.forEach(pos => {
+        eff[pos] = posData[pos].spent > 0 ? Math.round(posData[pos].pts / posData[pos].spent * 10) / 10 : 0;
+      });
+      out[mgr] = eff;
+    });
+    // League avg
+    const lgEff = {};
+    POSITIONS.forEach(pos => {
+      const vals = currentMgrs.map(m => out[m]?.[pos] || 0).filter(v => v > 0);
+      lgEff[pos] = vals.length > 0 ? Math.round(vals.reduce((s, v) => s + v, 0) / vals.length * 10) / 10 : 0;
+    });
+    out._leagueAvg = lgEff;
+    return out;
+  }, [playerPts]);
+
+  // ── Strategic pivots: year-over-year spend changes > 30% ──
+  const pivots = React.useMemo(() => {
+    const all = [];
+    allMgrs.forEach(mgr => {
+      const data = mgrYearSpend[mgr] || [];
+      for (let i = 1; i < data.length; i++) {
+        const prev = data[i - 1];
+        const curr = data[i];
+        POSITIONS.forEach(pos => {
+          const prevAmt = prev[pos] || 0;
+          const currAmt = curr[pos] || 0;
+          if (prevAmt < 5 && currAmt < 5) return; // ignore tiny amounts
+          const change = prevAmt > 0 ? ((currAmt - prevAmt) / prevAmt) * 100 : (currAmt > 10 ? 100 : 0);
+          if (Math.abs(change) >= 40) {
+            all.push({
+              mgr, pos, year: curr.year,
+              prevAmt, currAmt,
+              change: Math.round(change),
+              direction: change > 0 ? "up" : "down",
+            });
+          }
+        });
+      }
+    });
+    return all.sort((a, b) => Math.abs(b.change) - Math.abs(a.change));
+  }, [mgrYearSpend]);
+
+  // ── SUB-TAB VIEWS ──
+
+  // SPEND EVOLUTION — per manager line chart
+  const SpendEvolution = ({ mgr }) => {
+    const data = mgr ? (mgrYearSpend[mgr] || []) : [];
+    if (mgr && data.length === 0) return <div style={{ color: "#555", fontSize: 12 }}>No data available.</div>;
+
+    // Overview: small multiples
+    if (!mgr) {
+      return (
+        <div style={{ display: "grid", gridTemplateColumns: mobile ? "1fr" : "1fr 1fr 1fr", gap: mobile ? 12 : 16 }}>
+          {currentMgrs.map(m => {
+            const d = mgrYearSpend[m] || [];
+            if (d.length < 2) return null;
+            return (
+              <div key={m} style={{ background: "#0a0a0a", border: "1px solid #222", borderRadius: 8, padding: "12px" }}>
+                <div style={{ fontSize: 12, fontWeight: 700, color: getColor(m), marginBottom: 8 }}>{firstName(m)}</div>
+                <div style={{ height: 120 }}>
+                  <ResponsiveContainer width="100%" height="100%">
+                    <LineChart data={d} margin={{ top: 4, right: 8, left: -20, bottom: 0 }}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#1a1a1a" />
+                      <XAxis dataKey="year" tick={{ fill: "#555", fontSize: 9 }} tickFormatter={v => String(v).slice(2)} />
+                      <YAxis tick={{ fill: "#555", fontSize: 9 }} unit="%" domain={[0, 60]} />
+                      {POSITIONS.map(pos => (
+                        <Line key={pos} type="monotone" dataKey={pos + "Pct"} stroke={POS_COLOR[pos]} strokeWidth={2} dot={false} />
+                      ))}
+                    </LineChart>
+                  </ResponsiveContainer>
+                </div>
+                <div style={{ display: "flex", gap: 8, justifyContent: "center", marginTop: 4 }}>
+                  {POSITIONS.map(pos => (
+                    <span key={pos} style={{ fontSize: 9, color: POS_COLOR[pos], fontWeight: 700 }}>{pos}</span>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      );
+    }
+
+    // Individual manager
+    // Enrich data with season finish
+    const enrichedData = data.map(d => {
+      const seasonData = ALL_SEASONS[d.year];
+      const mgrRecord = seasonData ? seasonData.find(s => s.Manager === mgr) : null;
+      const finish = mgrRecord ? mgrRecord.PlayoffFinish : null;
+      const wins = mgrRecord ? mgrRecord.Wins : null;
+      const losses = mgrRecord ? mgrRecord.Losses : null;
+      return { ...d, finish, wins, losses };
+    });
+
+    return (
+      <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+        <div style={{ height: mobile ? 200 : 280 }}>
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart data={enrichedData} margin={{ top: 4, right: 16, left: 0, bottom: 20 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#1a1a1a" />
+              <XAxis dataKey="year" tick={{ fill: "#666", fontSize: 11 }}
+                tickFormatter={yr => {
+                  const d = enrichedData.find(e => e.year === yr);
+                  return d && d.finish ? `${yr}` : `${yr}`;
+                }} />
+              <YAxis tick={{ fill: "#666", fontSize: 11 }} unit="%" domain={[0, 60]} />
+              <Tooltip contentStyle={{ background: "#0d0d0d", border: "1px solid #333", borderRadius: 6 }}
+                formatter={(val, name) => [val + "%", name.replace("Pct", "")]}
+                labelFormatter={(yr) => {
+                  const d = enrichedData.find(e => e.year === Number(yr));
+                  if (!d || !d.finish) return yr;
+                  const suffix = d.finish === 1 ? "🏆" : d.finish <= 3 ? "🥈🥉"[d.finish-2] : "";
+                  return `${yr} — Finished #${d.finish} ${suffix} (${d.wins}-${d.losses})`;
+                }} />
+              {POSITIONS.map(pos => (
+                <Line key={pos} type="monotone" dataKey={pos + "Pct"} name={pos}
+                  stroke={POS_COLOR[pos]} strokeWidth={2.5} dot={{ r: 3, fill: POS_COLOR[pos] }} />
+              ))}
+              <Legend formatter={v => v.replace("Pct", "")} />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+
+        {/* Season finish row */}
+        <div style={{ display: "flex", justifyContent: "space-around", flexWrap: "wrap", gap: 4, padding: "0 20px" }}>
+          {enrichedData.map(d => {
+            const isChamp = d.finish === 1;
+            const isTop3 = d.finish && d.finish <= 3;
+            return (
+              <div key={d.year} style={{ textAlign: "center", minWidth: 40 }}>
+                <div style={{ fontSize: 9, color: "#555" }}>{d.year}</div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: isChamp ? "#e9c46a" : isTop3 ? "#2ecc71" : d.finish && d.finish >= 10 ? "#2176d2" : "#888" }}>
+                  {d.finish ? (isChamp ? "🏆" : `#${d.finish}`) : "—"}
+                </div>
+                {d.wins !== null && <div style={{ fontSize: 9, color: "#444" }}>{d.wins}-{d.losses}</div>}
+              </div>
+            );
+          })}
+        </div>
+
+        <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
+          {POSITIONS.map(pos => {
+            const vals = data.map(d => d[pos + "Pct"]);
+            const trend = vals.length >= 3 ? vals[vals.length - 1] - vals[0] : 0;
+            return (
+              <div key={pos} style={{ textAlign: "center" }}>
+                <div style={{ fontSize: 10, color: "#555", textTransform: "uppercase" }}>{pos} trend</div>
+                <div style={{ fontSize: 16, fontWeight: 800, color: Math.abs(trend) < 3 ? "#555" : trend > 0 ? "#2ecc71" : "#2176d2" }}>
+                  {trend > 0 ? "+" : ""}{trend}%
+                </div>
+                <div style={{ fontSize: 9, color: "#444" }}>first→last season</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
+
+  // SLOT EFFICIENCY
+  const SlotEfficiency = ({ mgr }) => {
+    const lgAvg = slotEfficiency._leagueAvg;
+
+    if (!mgr) {
+      // Overview: heatmap
+      return (
+        <div style={{ overflowX: "auto" }}>
+          <div style={{ fontSize: 11, color: "#555", marginBottom: 12 }}>
+            Points per dollar by position (career). Green = above league avg, blue = below.
+          </div>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: mobile ? 11 : 12 }}>
+            <thead>
+              <tr style={{ borderBottom: "2px solid #333" }}>
+                <th style={{ padding: "6px 8px", textAlign: "left", color: "#888", fontSize: 11 }}>Manager</th>
+                {POSITIONS.map(pos => (
+                  <th key={pos} style={{ padding: "6px 8px", textAlign: "center", color: POS_COLOR[pos], fontWeight: 700, fontSize: 11 }}>{pos}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {currentMgrs.map((m, i) => {
+                const eff = slotEfficiency[m] || {};
+                return (
+                  <tr key={m} style={{ borderBottom: "1px solid #1a1a1a", background: i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.015)" }}>
+                    <td style={{ padding: "6px 8px", color: getColor(m), fontWeight: 600, fontSize: 12 }}>{firstName(m)}</td>
+                    {POSITIONS.map(pos => {
+                      const val = eff[pos] || 0;
+                      const diff = val - (lgAvg[pos] || 0);
+                      const bg = diff > 1 ? "#2ecc7122" : diff < -1 ? "#2176d222" : "transparent";
+                      const color = diff > 1 ? "#2ecc71" : diff < -1 ? "#2176d2" : "#888";
+                      return (
+                        <td key={pos} style={{ padding: "6px 8px", textAlign: "center", background: bg }}>
+                          <div style={{ fontWeight: 700, color, fontSize: 13 }}>{val.toFixed(1)}</div>
+                          <div style={{ fontSize: 9, color: "#555" }}>{diff > 0 ? "+" : ""}{diff.toFixed(1)}</div>
+                        </td>
+                      );
+                    })}
+                  </tr>
+                );
+              })}
+              <tr style={{ borderTop: "2px solid #333" }}>
+                <td style={{ padding: "6px 8px", color: "#888", fontWeight: 700, fontSize: 11 }}>LG AVG</td>
+                {POSITIONS.map(pos => (
+                  <td key={pos} style={{ padding: "6px 8px", textAlign: "center", color: "#888", fontWeight: 700, fontSize: 13 }}>
+                    {(lgAvg[pos] || 0).toFixed(1)}
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      );
+    }
+
+    // Individual
+    const eff = slotEfficiency[mgr] || {};
+    return (
+      <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: mobile ? 8 : 12 }}>
+          {POSITIONS.map(pos => {
+            const val = eff[pos] || 0;
+            const lg = lgAvg[pos] || 0;
+            const diff = val - lg;
+            return (
+              <div key={pos} style={{ background: "#0a0a0a", border: `1px solid ${POS_COLOR[pos]}33`, borderTop: `3px solid ${POS_COLOR[pos]}`, borderRadius: 8, padding: "14px 12px", textAlign: "center" }}>
+                <div style={{ fontSize: 11, fontWeight: 800, color: POS_COLOR[pos], marginBottom: 6 }}>{pos}</div>
+                <div style={{ fontSize: 22, fontWeight: 800, color: diff > 1 ? "#2ecc71" : diff < -1 ? "#2176d2" : "#aaa" }}>{val.toFixed(1)}</div>
+                <div style={{ fontSize: 10, color: "#555" }}>pts/$</div>
+                <div style={{ fontSize: 11, color: diff > 1 ? "#2ecc71" : diff < -1 ? "#2176d2" : "#555", marginTop: 4 }}>
+                  {diff > 0 ? "+" : ""}{diff.toFixed(1)} vs avg
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div style={{ fontSize: 11, color: "#555", background: "#0a0a0a", border: "1px solid #222", borderRadius: 6, padding: "8px 12px" }}>
+          Higher pts/$ = more production per auction dollar spent at that position. Green = outperforming the league, blue = underperforming.
+        </div>
+      </div>
+    );
+  };
+
+  // STRATEGIC PIVOTS
+  const StrategicPivots = ({ mgr }) => {
+    const filtered = mgr ? pivots.filter(p => p.mgr === mgr) : pivots.slice(0, 30);
+    if (filtered.length === 0) return <div style={{ color: "#555", fontSize: 12, textAlign: "center", padding: "20px 0" }}>No major pivots detected (threshold: 40% year-over-year change).</div>;
+
+    return (
+      <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+        <div style={{ fontSize: 11, color: "#555", marginBottom: 8 }}>
+          Year-over-year spend changes ≥40% at any position. Sorted by magnitude.
+        </div>
+        {filtered.map((p, i) => (
+          <div key={i} style={{ display: "flex", alignItems: "center", gap: 10, background: "#0a0a0a", border: "1px solid #1a1a1a", borderLeft: `3px solid ${POS_COLOR[p.pos]}`, borderRadius: 6, padding: "8px 12px" }}>
+            {!mgr && <span style={{ fontSize: 12, fontWeight: 700, color: getColor(p.mgr), minWidth: 60 }}>{firstName(p.mgr)}</span>}
+            <span style={{ fontSize: 11, color: "#888", minWidth: 36 }}>{p.year}</span>
+            <span style={{ fontSize: 11, fontWeight: 700, color: POS_COLOR[p.pos], background: POS_COLOR[p.pos] + "22", borderRadius: 4, padding: "2px 8px" }}>{p.pos}</span>
+            <span style={{ fontSize: 12, fontWeight: 800, color: p.direction === "up" ? "#2ecc71" : "#2176d2" }}>
+              {p.direction === "up" ? "↑" : "↓"} {Math.abs(p.change)}%
+            </span>
+            <span style={{ fontSize: 11, color: "#555" }}>
+              ${p.prevAmt} → ${p.currAmt}
+            </span>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  // WHAT WINS
+  const WhatWins = () => {
+    // For each position, split all manager-seasons into "above avg spend" vs "below avg spend"
+    // and compare their win rates
+    const analysis = React.useMemo(() => {
+      const results = {};
+      POSITIONS.forEach(pos => {
+        const posKey = pos + "Pct";
+        // Gather all manager-season data points with win%
+        const dataPoints = [];
+        allMgrs.forEach(mgr => {
+          const spendData = mgrYearSpend[mgr] || [];
+          spendData.forEach(d => {
+            const seasonData = ALL_SEASONS[d.year];
+            const mgrRecord = seasonData ? seasonData.find(s => s.Manager === mgr) : null;
+            if (!mgrRecord) return;
+            const total = (mgrRecord.Wins || 0) + (mgrRecord.Losses || 0);
+            if (total === 0) return;
+            dataPoints.push({
+              spendPct: d[posKey] || 0,
+              winPct: mgrRecord.Wins / total * 100,
+            });
+          });
+        });
+
+        if (dataPoints.length === 0) { results[pos] = null; return; }
+
+        // Find median spend %
+        const sorted = [...dataPoints].sort((a, b) => a.spendPct - b.spendPct);
+        const median = sorted[Math.floor(sorted.length / 2)].spendPct;
+
+        const high = dataPoints.filter(d => d.spendPct > median);
+        const low = dataPoints.filter(d => d.spendPct <= median);
+
+        const highAvgWin = high.length > 0 ? high.reduce((s, d) => s + d.winPct, 0) / high.length : 0;
+        const lowAvgWin = low.length > 0 ? low.reduce((s, d) => s + d.winPct, 0) / low.length : 0;
+
+        results[pos] = {
+          highWin: Math.round(highAvgWin * 10) / 10,
+          lowWin: Math.round(lowAvgWin * 10) / 10,
+          diff: Math.round((highAvgWin - lowAvgWin) * 10) / 10,
+          highCount: high.length,
+          lowCount: low.length,
+          median: Math.round(median),
+        };
+      });
+      return results;
+    }, [mgrYearSpend]);
+
+    // Sort positions by absolute difference (most impactful first)
+    const sortedPositions = [...POSITIONS].sort((a, b) => {
+      const diffA = analysis[a] ? Math.abs(analysis[a].diff) : 0;
+      const diffB = analysis[b] ? Math.abs(analysis[b].diff) : 0;
+      return diffB - diffA;
+    });
+
+    return (
+      <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+        <div style={{ fontSize: 11, color: "#555", background: "#0a0a0a", border: "1px solid #222", borderRadius: 6, padding: "8px 12px" }}>
+          For each position, we split all manager-seasons into <strong style={{ color: "#2ecc71" }}>high spenders</strong> (above median) vs <strong style={{ color: "#2176d2" }}>low spenders</strong> (below median) and compare their average win rates. Does spending big actually translate to more wins?
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: mobile ? "1fr" : "1fr 1fr", gap: mobile ? 12 : 16 }}>
+          {sortedPositions.map(pos => {
+            const d = analysis[pos];
+            if (!d) return null;
+            const winner = d.diff > 1 ? "high" : d.diff < -1 ? "low" : "neutral";
+            const verdict = winner === "high"
+              ? `Spending big at ${pos} helps (+${d.diff}%)`
+              : winner === "low"
+              ? `Spending less at ${pos} is better (${d.diff}%)`
+              : `${pos} spend doesn't clearly matter`;
+            const verdictColor = winner === "high" ? "#2ecc71" : winner === "low" ? "#2176d2" : "#555";
+
+            return (
+              <div key={pos} style={{ background: "#0a0a0a", border: `1px solid ${POS_COLOR[pos]}33`, borderTop: `3px solid ${POS_COLOR[pos]}`, borderRadius: 8, padding: mobile ? "14px 12px" : "18px 16px" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
+                  <span style={{ fontSize: 14, fontWeight: 800, color: POS_COLOR[pos] }}>{pos}</span>
+                  <span style={{ fontSize: 10, color: "#555" }}>median: {d.median}% of budget</span>
+                </div>
+
+                {/* Bar comparison */}
+                <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 12 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <span style={{ fontSize: 10, color: "#2ecc71", fontWeight: 700, width: 75, flexShrink: 0 }}>High spend</span>
+                    <div style={{ flex: 1, background: "#111", borderRadius: 4, height: 22, overflow: "hidden", position: "relative" }}>
+                      <div style={{ width: `${Math.min(d.highWin * 1.5, 100)}%`, height: "100%", background: "#2ecc7144", borderRadius: 4 }} />
+                      <span style={{ position: "absolute", right: 8, top: 3, fontSize: 12, fontWeight: 700, color: "#2ecc71" }}>{d.highWin}%</span>
+                    </div>
+                    <span style={{ fontSize: 9, color: "#444", width: 30, textAlign: "right" }}>n={d.highCount}</span>
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <span style={{ fontSize: 10, color: "#2176d2", fontWeight: 700, width: 75, flexShrink: 0 }}>Low spend</span>
+                    <div style={{ flex: 1, background: "#111", borderRadius: 4, height: 22, overflow: "hidden", position: "relative" }}>
+                      <div style={{ width: `${Math.min(d.lowWin * 1.5, 100)}%`, height: "100%", background: "#2176d244", borderRadius: 4 }} />
+                      <span style={{ position: "absolute", right: 8, top: 3, fontSize: 12, fontWeight: 700, color: "#2176d2" }}>{d.lowWin}%</span>
+                    </div>
+                    <span style={{ fontSize: 9, color: "#444", width: 30, textAlign: "right" }}>n={d.lowCount}</span>
+                  </div>
+                </div>
+
+                {/* Verdict */}
+                <div style={{ fontSize: 11, fontWeight: 700, color: verdictColor, borderTop: "1px solid #1a1a1a", paddingTop: 8 }}>
+                  {winner === "high" ? "↑" : winner === "low" ? "↓" : "≈"} {verdict}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Summary */}
+        <div style={{ background: "#0a0a0a", border: "1px solid #222", borderRadius: 8, padding: "12px 16px" }}>
+          <div style={{ fontSize: 12, fontWeight: 700, color: "#888", marginBottom: 8 }}>The Verdict</div>
+          <div style={{ fontSize: 12, color: "#aaa", lineHeight: 1.6 }}>
+            {sortedPositions.map(pos => {
+              const d = analysis[pos];
+              if (!d) return null;
+              const winner = d.diff > 1 ? "helps" : d.diff < -1 ? "hurts" : "neutral";
+              return (
+                <div key={pos} style={{ marginBottom: 4 }}>
+                  <span style={{ color: POS_COLOR[pos], fontWeight: 700 }}>{pos}:</span>{" "}
+                  {winner === "helps"
+                    ? <span>Spending above median <span style={{ color: "#2ecc71" }}>correlates with +{d.diff}% more wins</span></span>
+                    : winner === "hurts"
+                    ? <span>Spending above median <span style={{ color: "#2176d2" }}>correlates with {d.diff}% fewer wins</span></span>
+                    : <span style={{ color: "#555" }}>No meaningful difference between high and low spenders</span>
+                  }
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  // ── MAIN RENDER ──
+  const selectedMgr = view !== "overview" ? view : null;
+  const SUB_TABS = [
+    { key: "evolution", label: "Spend Evolution", emoji: "📈" },
+    { key: "efficiency", label: "Slot Efficiency", emoji: "⚡" },
+    { key: "pivots", label: "Strategic Pivots", emoji: "🔄" },
+    { key: "whatwins", label: "What Wins", emoji: "🏆" },
+  ];
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: mobile ? 16 : 24 }}>
+
+      {/* Manager selector */}
+      <div>
+        <div style={{ fontSize: 11, fontWeight: 700, color: "#888", textTransform: "uppercase", letterSpacing: 0.8, marginBottom: 8 }}>View</div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+          <button onClick={() => setView("overview")} style={{
+            background: view === "overview" ? "#9b5de522" : "#1a1a1a",
+            border: `1px solid ${view === "overview" ? "#9b5de5" : "#333"}`,
+            borderRadius: 6, color: view === "overview" ? "#9b5de5" : "#666",
+            cursor: "pointer", fontSize: 12, fontWeight: view === "overview" ? 700 : 400, padding: "5px 14px",
+          }}>📊 Overview</button>
+          {currentMgrs.map(mgr => {
+            const active = view === mgr;
+            const color = getColor(mgr);
+            return (
+              <button key={mgr} onClick={() => setView(mgr)} style={{
+                background: active ? color + "22" : "#1a1a1a",
+                border: `1px solid ${active ? color : "#333"}`,
+                borderRadius: 6, color: active ? color : "#aaa",
+                cursor: "pointer", fontSize: 12, fontWeight: active ? 700 : 400, padding: "5px 12px",
+              }}>{firstName(mgr)}</button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Sub-tab selector */}
+      <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+        {SUB_TABS.map(t => (
+          <button key={t.key} onClick={() => setSubTab(t.key)} style={{
+            background: subTab === t.key ? "#e9c46a22" : "#1a1a1a",
+            border: `1px solid ${subTab === t.key ? "#e9c46a" : "#333"}`,
+            borderRadius: 6, color: subTab === t.key ? "#e9c46a" : "#666",
+            cursor: "pointer", fontSize: mobile ? 11 : 12, fontWeight: subTab === t.key ? 700 : 400, padding: "5px 12px",
+          }}>{t.emoji} {t.label}</button>
+        ))}
+      </div>
+
+      {/* Content */}
+      {subTab === "evolution" && <SpendEvolution mgr={selectedMgr} />}
+      {subTab === "efficiency" && <SlotEfficiency mgr={selectedMgr} />}
+      {subTab === "pivots" && <StrategicPivots mgr={selectedMgr} />}
+      {subTab === "whatwins" && <WhatWins />}
+    </div>
+  );
+}
+
 function DraftTab() {
   const mobile=useMobile();
   const [section,setSection]=useState("home");
@@ -57152,6 +57679,7 @@ function DraftTab() {
     {key:"contested",  emoji: "🔝", label: "Most Contested Players", sub:"Players who appeared on multiple rosters or got bid furthest above position avg", color:"#2176d2"},
     {key:"predict2026",emoji:"🔮",label:"2026 Draft Prediction",   sub:"Projected keepers, predicted budget splits & style tendencies for every manager",   color:"#9b5de5"},
     {key:"profile",    emoji: "🧑‍💻", label: "Manager Draft Profile",  sub:"AI-generated deep dive — tendencies, tidbits, trends & commissioner's take",      color:"#a8dadc"},
+    {key:"deepdive",   emoji: "🔬", label: "Manager Deep Dive",       sub:"Spend evolution, efficiency by slot, strategic pivots & what actually wins",        color:"#9b5de5"},
   ];
   const STUB=<div style={{color:"#555",fontSize:14,textAlign:"center",padding:"40px 0"}}>Coming soon.</div>;
   const activeTitle=TILES.find(t=>t.key===section);
@@ -57188,6 +57716,7 @@ function DraftTab() {
       {section==="contested"   && <MostContested />}
       {section==="predict2026" && <DraftPrediction2026 />}
       {section==="profile"     && <DraftManagerProfile />}
+      {section==="deepdive"    && <ManagerDeepDive />}
     </div>
   );
 }
@@ -57467,8 +57996,7 @@ function ScoringLeaderboards() {
                                    borderRadius:4, padding:"2px 5px", flexShrink:0,
                                    border:`1px solid ${color}44` }}>{e.pos}</span>
                     <span style={{ fontWeight:700, fontSize:mobile?12:13, color:"#e9e9f0",
-                                   flex:1, minWidth:0, overflow:"hidden",
-                                   overflow:"hidden" }}>
+                                   flex:1, minWidth:0, overflow:"hidden" }}>
                       <PlayerWithLogo name={e.name} nflTeam={e.nflTeam} size={mobile?21:24} />
                     </span>
                     <span style={{ fontFamily:"'Cooper Black',Georgia,serif",
@@ -59580,7 +60108,7 @@ function DDLeagueHQTab() {
               )}
             </div>
           );
-        })()}}
+        })()}
       </div>
     );
   }
