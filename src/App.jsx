@@ -42724,7 +42724,7 @@ const DATA = {
     "Tyler Goslinga": {
       story:     "Tyler Goslinga joined in 2018 with a last-place debut and has built one of the most impressive resumes in recent league history. One championship, two draft day titles, 59-50 all-time. His last three draft classes all podiumed. He has gone from last place in his debut to the most reliable top-performer in the Sleeper era — a trajectory that has no parallel in league history.",
       style:     "Goslinga builds premium TE-first rosters, pays the highest average at the position of any active manager, and surrounds that anchor with high-upside skill position targets. His $1 pick average is the best of any active manager. He keeps QB lean, lets the TE and WR market carry the roster, and has a genuine eye for undervalued players before their price reflects their potential.",
-      moments:   "Lamar Jackson for $5 in 2019 producing +225 ROI — the single greatest value pick in league history. The 2022 championship season (13.01 pts/$, league best). Brock Purdy for $1 in 2023 (330 pts). And the starting point: Jimmy Garoppolo for $11 in 2018 (-211 ROI), the most expensive debut mistake in league history, which makes the turnaround even more remarkable.",
+      moments:   "Lamar Jackson for $5 in 2019 producing +225 ROI — the single greatest value pick in league history. The 2025 championship season — his first title, beating Greg Mulder in the final 120.28 to 81.0. Brock Purdy for $1 in 2023 (330 pts). And the starting point: Jimmy Garoppolo for $11 in 2018 (-211 ROI), the most expensive debut mistake in league history, which makes the turnaround even more remarkable.",
       rivalries:  "Goslinga's 7-game win streak reflects his ability to run through competition during peak seasons. His matchup against Aaron Fay — two managers who arrived in the same era representing different approaches — has been one of the defining head-to-head series of the post-2020 league.",
       legacy:    "One championship, two draft day titles, the greatest single value pick in history, a historic turnaround from last-place debut to sustained dominance. Tyler Goslinga's legacy is one of the most complete in the modern era. If the trajectory continues, the conversation will be about where he ranks among the all-time greats.",
     },
@@ -44307,19 +44307,105 @@ const NFL_TRANSACTIONS = {
 };
 
 const NFL_TRANSACTION_SUMMARY = {
-  "Greg Cady":{trades:1,waivers:50,freeAgents:135,totalMoves:186,playersAdded:149},
-  "Joshua Van Groningen":{trades:2,waivers:76,freeAgents:85,totalMoves:166,playersAdded:144},
-  "Greg Mulder":{trades:3,waivers:42,freeAgents:74,totalMoves:125,playersAdded:115},
-  "Matthew Van Groningen":{trades:2,waivers:42,freeAgents:75,totalMoves:124,playersAdded:111},
-  "Trey Hugen":{trades:2,waivers:47,freeAgents:69,totalMoves:120,playersAdded:105},
-  "Aaron Fay":{trades:1,waivers:54,freeAgents:52,totalMoves:109,playersAdded:106},
-  "Eric Graef":{trades:1,waivers:31,freeAgents:76,totalMoves:109,playersAdded:86},
-  "James Lazette":{trades:3,waivers:39,freeAgents:63,totalMoves:108,playersAdded:91},
-  "Ross Van Groningen":{trades:5,waivers:35,freeAgents:55,totalMoves:100,playersAdded:99},
-  "Vance Sipma":{trades:1,waivers:27,freeAgents:67,totalMoves:96,playersAdded:81},
-  "Steve Vander Molen":{trades:1,waivers:27,freeAgents:64,totalMoves:93,playersAdded:84},
-  "Tyler Goslinga":{trades:1,waivers:29,freeAgents:53,totalMoves:83,playersAdded:73},
+  "Greg Cady":{trades:7,waivers:50,freeAgents:135,totalMoves:192,playersAdded:149,yahooTrades:6,sleeperTrades:1},
+  "Joshua Van Groningen":{trades:15,waivers:76,freeAgents:85,totalMoves:179,playersAdded:144,yahooTrades:13,sleeperTrades:2},
+  "Eric Graef":{trades:17,waivers:31,freeAgents:76,totalMoves:125,playersAdded:86,yahooTrades:16,sleeperTrades:1},
+  "Greg Mulder":{trades:12,waivers:42,freeAgents:74,totalMoves:134,playersAdded:115,yahooTrades:9,sleeperTrades:3},
+  "Matthew Van Groningen":{trades:5,waivers:42,freeAgents:75,totalMoves:127,playersAdded:111,yahooTrades:3,sleeperTrades:2},
+  "Trey Hugen":{trades:10,waivers:47,freeAgents:69,totalMoves:128,playersAdded:105,yahooTrades:8,sleeperTrades:2},
+  "Aaron Fay":{trades:4,waivers:54,freeAgents:52,totalMoves:112,playersAdded:106,yahooTrades:3,sleeperTrades:1},
+  "James Lazette":{trades:7,waivers:39,freeAgents:63,totalMoves:112,playersAdded:91,yahooTrades:4,sleeperTrades:3},
+  "Ross Van Groningen":{trades:13,waivers:35,freeAgents:55,totalMoves:108,playersAdded:99,yahooTrades:8,sleeperTrades:5},
+  "Vance Sipma":{trades:8,waivers:27,freeAgents:67,totalMoves:103,playersAdded:81,yahooTrades:7,sleeperTrades:1},
+  "Steve Vander Molen":{trades:5,waivers:27,freeAgents:64,totalMoves:97,playersAdded:84,yahooTrades:4,sleeperTrades:1},
+  "Tyler Goslinga":{trades:5,waivers:29,freeAgents:53,totalMoves:87,playersAdded:73,yahooTrades:4,sleeperTrades:1},
+  "Ben de Ruiter":{trades:10,waivers:0,freeAgents:0,totalMoves:10,playersAdded:0,yahooTrades:10,sleeperTrades:0},
+  "Spencer Hower":{trades:1,waivers:0,freeAgents:0,totalMoves:1,playersAdded:0,yahooTrades:1,sleeperTrades:0},
 };
+
+// ══════════════════════════════════════════════════════════════════════════════
+// NFL TRADE DETAILS — All 69 trades with player names (48 Yahoo + 21 Sleeper)
+// Verified: Sleeper from API (June 3 2026), Yahoo cross-referenced against
+// player ownership in DATA.playerData.weeklyScores (source of truth)
+// Format: {year, week, sides: {"Manager A": {sent:["Player X"], got:["Player Y"]}, ...}}
+// Yahoo-era trades don't have week numbers (week:0) — Sleeper trades have exact weeks
+// ══════════════════════════════════════════════════════════════════════════════
+const NFL_TRADE_DETAILS = [
+  // ── 2015 Yahoo (6 trades) ──
+  {year:2015,week:0,sides:{"Eric Graef":{sent:["Latavius Murray"],got:["Jeremy Maclin"]},"Trey Hugen":{sent:["Jeremy Maclin"],got:["Latavius Murray"]}}},
+  {year:2015,week:0,sides:{"Greg Cady":{sent:["Jarvis Landry"],got:["Chris Ivory"]},"Greg Mulder":{sent:["Chris Ivory"],got:["Jarvis Landry"]}}},
+  {year:2015,week:0,sides:{"Eric Graef":{sent:["Mark Ingram II","Arian Foster"],got:["Larry Fitzgerald","T.J. Yeldon"]},"Greg Mulder":{sent:["Larry Fitzgerald","T.J. Yeldon"],got:["Mark Ingram II","Arian Foster"]}}},
+  {year:2015,week:0,sides:{"Eric Graef":{sent:["Philip Rivers"],got:["Brandon Marshall"]},"Ross Van Groningen":{sent:["Brandon Marshall"],got:["Philip Rivers"]}}},
+  {year:2015,week:0,sides:{"Ross Van Groningen":{sent:["Tom Brady","Sammy Watkins"],got:["Julian Edelman","Dez Bryant"]},"Eric Graef":{sent:["Julian Edelman","Dez Bryant"],got:["Tom Brady","Sammy Watkins"]}}},
+  {year:2015,week:0,sides:{"Trey Hugen":{sent:["Mike Wallace","Colin Kaepernick","Jamaal Charles"],got:["Ben Roethlisberger","Lamar Miller","Andre Johnson"]},"Ross Van Groningen":{sent:["Ben Roethlisberger","Lamar Miller","Andre Johnson"],got:["Mike Wallace","Colin Kaepernick","Jamaal Charles"]}}},
+  // ── 2016 Yahoo (6 trades) ──
+  {year:2016,week:0,sides:{"Greg Mulder":{sent:["Coby Fleener"],got:["Zach Ertz"]},"Greg Cady":{sent:["Zach Ertz"],got:["Coby Fleener"]}}},
+  {year:2016,week:0,sides:{"Greg Cady":{sent:["Zach Ertz"],got:["Coby Fleener"]},"Greg Mulder":{sent:["Coby Fleener"],got:["Zach Ertz"]}}},
+  {year:2016,week:0,sides:{"Greg Cady":{sent:["Isaiah Crowell"],got:["Antonio Gates"]},"Ross Van Groningen":{sent:["Antonio Gates"],got:["Isaiah Crowell"]}}},
+  {year:2016,week:0,sides:{"Spencer Hower":{sent:["Danny Woodhead"],got:["Chris Ivory"]},"James Lazette":{sent:["Chris Ivory"],got:["Danny Woodhead"]}}},
+  {year:2016,week:0,sides:{"Trey Hugen":{sent:["Carson Palmer","Willie Snead IV"],got:["Jarvis Landry","Andy Dalton"]},"Spencer Hower":{sent:["Jarvis Landry","Andy Dalton"],got:["Carson Palmer","Willie Snead IV"]}}},
+  {year:2016,week:0,sides:{"Eric Graef":{sent:["T.J. Yeldon","Matt Ryan"],got:["Eli Manning","Isaiah Crowell"]},"Greg Cady":{sent:["Eli Manning","Isaiah Crowell"],got:["T.J. Yeldon","Matt Ryan"]}}},
+  // ── 2017 Yahoo (6 trades) ──
+  {year:2017,week:0,sides:{"Spencer Hower":{sent:["Nelson Agholor","Adrian Peterson"],got:["Adam Thielen","Sammy Watkins"]},"Steve Vander Molen":{sent:["Adam Thielen","Sammy Watkins"],got:["Nelson Agholor","Adrian Peterson"]}}},
+  {year:2017,week:0,sides:{"James Lazette":{sent:["Drew Brees"],got:["Brandin Cooks"]},"Greg Cady":{sent:["Brandin Cooks"],got:["Drew Brees"]}}},
+  {year:2017,week:0,sides:{"Greg Cady":{sent:["Jonathan Stewart"],got:["Kenny Stills"]},"Matthew Van Groningen":{sent:["Kenny Stills"],got:["Jonathan Stewart"]}}},
+  {year:2017,week:0,sides:{"Spencer Hower":{sent:["Christian McCaffrey"],got:["Larry Fitzgerald"]},"Greg Mulder":{sent:["Larry Fitzgerald"],got:["Christian McCaffrey"]}}},
+  {year:2017,week:0,sides:{"Greg Cady":{sent:["Demaryius Thomas"],got:["Martavis Bryant"]},"Ross Van Groningen":{sent:["Martavis Bryant"],got:["Demaryius Thomas"]}}},
+  {year:2017,week:0,sides:{"Ben de Ruiter":{sent:["T.Y. Hilton"],got:["LeSean McCoy"]},"Greg Cady":{sent:["LeSean McCoy"],got:["T.Y. Hilton"]}}},
+  // ── 2018 Yahoo (4 trades) ──
+  {year:2018,week:0,sides:{"Ross Van Groningen":{sent:["Mark Ingram II"],got:["Le'Veon Bell"]},"Vance Sipma":{sent:["Le'Veon Bell"],got:["Mark Ingram II"]}}},
+  {year:2018,week:0,sides:{"Eric Graef":{sent:["Ezekiel Elliott"],got:["Julio Jones"]},"Zac Dewey":{sent:["Julio Jones"],got:["Ezekiel Elliott"]}}},
+  {year:2018,week:0,sides:{"Tyler Goslinga":{sent:["A.J. Green","Baker Mayfield"],got:["Matt Breida","Jared Goff"]},"Trey Hugen":{sent:["Matt Breida","Jared Goff"],got:["A.J. Green","Baker Mayfield"]}}},
+  {year:2018,week:0,sides:{"Ross Van Groningen":{sent:["LeSean McCoy"],got:["Kenny Stills"]},"Tyler Goslinga":{sent:["Kenny Stills"],got:["LeSean McCoy"]}}},
+  // ── 2019 Yahoo (5 trades) ──
+  {year:2019,week:0,sides:{"Ross Van Groningen":{sent:["Julian Edelman","Joe Mixon"],got:["David Johnson","Will Fuller V"]},"Ben de Ruiter":{sent:["David Johnson","Will Fuller V"],got:["Julian Edelman","Joe Mixon"]}}},
+  {year:2019,week:0,sides:{"Tyler Goslinga":{sent:["Derrick Henry"],got:["John Ross"]},"James Lazette":{sent:["John Ross"],got:["Derrick Henry"]}}},
+  {year:2019,week:0,sides:{"Ross Van Groningen":{sent:["Michael Gallup"],got:["Hollywood Brown"]},"Zac Dewey":{sent:["Hollywood Brown"],got:["Michael Gallup"]}}},
+  {year:2019,week:0,sides:{"Matthew Van Groningen":{sent:["Christian Kirk"],got:["Duke Johnson"]},"James Lazette":{sent:["Duke Johnson"],got:["Christian Kirk"]}}},
+  // ── 2020 Yahoo (6 trades) ──
+  {year:2020,week:0,sides:{"Steve Vander Molen":{sent:["Robert Tonyan"],got:["Clyde Edwards-Helaire"]},"Aaron Fay":{sent:["Clyde Edwards-Helaire"],got:["Robert Tonyan"]}}},
+  {year:2020,week:0,sides:{"Ben de Ruiter":{sent:["Derek Carr"],got:["Hollywood Brown"]},"Ross Van Groningen":{sent:["Hollywood Brown"],got:["Derek Carr"]}}},
+  {year:2020,week:0,sides:{"Tyler Goslinga":{sent:["Eric Ebron"],got:["Austin Hooper"]},"Eric Graef":{sent:["Austin Hooper"],got:["Eric Ebron"]}}},
+  {year:2020,week:0,sides:{"Tyler Goslinga":{sent:["Marquez Valdes-Scantling","Allen Robinson"],got:["David Johnson"]},"Ben de Ruiter":{sent:["David Johnson"],got:["Marquez Valdes-Scantling","Allen Robinson"]}}},
+  {year:2020,week:0,sides:{"Ben de Ruiter":{sent:["Noah Fant"],got:["Jalen Reagor"]},"Greg Mulder":{sent:["Jalen Reagor"],got:["Noah Fant"]}}},
+  // ── 2021 Yahoo (11 trades) ──
+  {year:2021,week:0,sides:{"Joshua Van Groningen":{sent:["Myles Gaskin","Van Jefferson"],got:["DeAndre Hopkins"]},"Matthew Van Groningen":{sent:["DeAndre Hopkins"],got:["Myles Gaskin","Van Jefferson"]}}},
+  {year:2021,week:0,sides:{"Steve Vander Molen":{sent:["Leonard Fournette","Travis Kelce"],got:["DeVonta Smith","Darren Waller"]},"Trey Hugen":{sent:["DeVonta Smith","Darren Waller"],got:["Leonard Fournette","Travis Kelce"]}}},
+  {year:2021,week:0,sides:{"Steve Vander Molen":{sent:["Aaron Jones Sr."],got:["Michael Carter"]},"Joshua Van Groningen":{sent:["Michael Carter"],got:["Aaron Jones Sr."]}}},
+  {year:2021,week:0,sides:{"Ben de Ruiter":{sent:["David Johnson","J.K. Dobbins"],got:["Chase Edmonds"]},"Greg Cady":{sent:["Chase Edmonds"],got:["David Johnson","J.K. Dobbins"]}}},
+  {year:2021,week:0,sides:{"Ross Van Groningen":{sent:["Chase Claypool"],got:["Tyler Lockett"]},"Greg Mulder":{sent:["Tyler Lockett"],got:["Chase Claypool"]}}},
+  {year:2021,week:0,sides:{"Tyler Goslinga":{sent:["George Kittle","Tyreek Hill","Kirk Cousins","Joe Mixon"],got:["DeVonta Smith","Antonio Gibson","Lamar Jackson","Darren Waller"]},"Trey Hugen":{sent:["DeVonta Smith","Antonio Gibson","Lamar Jackson","Darren Waller"],got:["George Kittle","Tyreek Hill","Kirk Cousins","Joe Mixon"]}}},
+  {year:2021,week:0,sides:{"Aaron Fay":{sent:["Robert Woods","Josh Jacobs"],got:["Brandin Cooks"]},"Joshua Van Groningen":{sent:["Brandin Cooks"],got:["Robert Woods","Josh Jacobs"]}}},
+  {year:2021,week:0,sides:{"Trey Hugen":{sent:["Melvin Gordon III","Daniel Jones"],got:["Elijah Mitchell","Robbie Chosen"]},"Ben de Ruiter":{sent:["Elijah Mitchell","Robbie Chosen"],got:["Melvin Gordon III","Daniel Jones"]}}},
+  {year:2021,week:0,sides:{"Ben de Ruiter":{sent:["Saquon Barkley"],got:["Tony Pollard","Tee Higgins"]},"Matthew Van Groningen":{sent:["Tony Pollard","Tee Higgins"],got:["Saquon Barkley"]}}},
+  {year:2021,week:0,sides:{"Greg Cady":{sent:["Chase Edmonds","Jakobi Meyers"],got:["Ezekiel Elliott"]},"Ben de Ruiter":{sent:["Ezekiel Elliott"],got:["Chase Edmonds","Jakobi Meyers"]}}},
+  {year:2021,week:0,sides:{"Ross Van Groningen":{sent:["Lamar Jackson","Antonio Gibson"],got:["Dak Prescott","DJ Moore","Ty'Son Williams"]},"Trey Hugen":{sent:["Dak Prescott","DJ Moore","Ty'Son Williams"],got:["Lamar Jackson","Antonio Gibson"]}}},
+  // ── 2022 Sleeper (4 trades) ──
+  {year:2022,week:3,sides:{"Joshua Van Groningen":{sent:["Miles Sanders","Gabe Davis","Javonte Williams"],got:["Ezekiel Elliott","Joe Mixon"]},"Ross Van Groningen":{sent:["Ezekiel Elliott","Joe Mixon"],got:["Miles Sanders","Gabe Davis","Javonte Williams"]}}},
+  {year:2022,week:4,sides:{"Ross Van Groningen":{sent:["Aaron Rodgers"],got:["Allen Lazard"]},"Trey Hugen":{sent:["Allen Lazard"],got:["Aaron Rodgers"]}}},
+  {year:2022,week:6,sides:{"Ross Van Groningen":{sent:["Marquise Brown"],got:["Michael Thomas"]},"Joshua Van Groningen":{sent:["Michael Thomas"],got:["Marquise Brown"]}}},
+  {year:2022,week:7,sides:{"Joshua Van Groningen":{sent:["D'Onta Foreman","Taysom Hill","Diontae Johnson"],got:["Gerald Everett","Tee Higgins"]},"Matthew Van Groningen":{sent:["Gerald Everett","Tee Higgins"],got:["D'Onta Foreman","Taysom Hill","Diontae Johnson"]}}},
+  // ── 2023 Sleeper (5 trades) ──
+  {year:2023,week:1,sides:{"Steve Vander Molen":{sent:["Isiah Pacheco","Jaylen Warren"],got:["Alvin Kamara"]},"Trey Hugen":{sent:["Alvin Kamara"],got:["Isiah Pacheco","Jaylen Warren"]}}},
+  {year:2023,week:3,sides:{"Vance Sipma":{sent:["Josh Allen","T.J. Hockenson"],got:["Dalton Kincaid","Joe Mixon","Trevor Lawrence"]},"James Lazette":{sent:["Dalton Kincaid","Joe Mixon","Trevor Lawrence"],got:["Josh Allen","T.J. Hockenson"]}}},
+  {year:2023,week:5,sides:{"Joshua Van Groningen":{sent:["Kendrick Bourne","DeVonta Smith","Bijan Robinson"],got:["Jaleel McLaughlin","Austin Ekeler","CeeDee Lamb"]},"Ross Van Groningen":{sent:["Jaleel McLaughlin","Austin Ekeler","CeeDee Lamb"],got:["Kendrick Bourne","DeVonta Smith","Bijan Robinson"]}}},
+  {year:2023,week:5,sides:{"Greg Mulder":{sent:["Rhamondre Stevenson"],got:["Jaylen Waddle"]},"Aaron Fay":{sent:["Jaylen Waddle"],got:["Rhamondre Stevenson"]}}},
+  {year:2023,week:11,sides:{"Eric Graef":{sent:["Evan Engram"],got:["Jared Goff"]},"Greg Mulder":{sent:["Jared Goff"],got:["Evan Engram"]}}},
+  // ── 2024 Sleeper (6 trades) ──
+  {year:2024,week:3,sides:{"Trey Hugen":{sent:["Rico Dowdle","Chris Olave"],got:["Tony Pollard","Tank Dell"]},"Ross Van Groningen":{sent:["Tony Pollard","Tank Dell"],got:["Rico Dowdle","Chris Olave"]}}},
+  {year:2024,week:3,sides:{"Ross Van Groningen":{sent:["David Montgomery","Justin Herbert","Garrett Wilson","De'Von Achane"],got:["Josh Jacobs","Terry McLaurin","Rhamondre Stevenson","Chase Brown","C.J. Stroud"]},"James Lazette":{sent:["Josh Jacobs","Terry McLaurin","Rhamondre Stevenson","Chase Brown"],got:["David Montgomery","Brandon Aiyuk","Brian Robinson"]},"Aaron Fay":{sent:["Brandon Aiyuk","Brian Robinson","C.J. Stroud"],got:["Justin Herbert","Garrett Wilson","De'Von Achane"]}}},
+  {year:2024,week:3,sides:{"Eric Graef":{sent:["Chris Godwin","Antonio Gibson"],got:["Jayden Reed","J.K. Dobbins"]},"Greg Cady":{sent:["Jayden Reed","J.K. Dobbins"],got:["Chris Godwin","Antonio Gibson"]}}},
+  {year:2024,week:4,sides:{"Greg Mulder":{sent:["Deebo Samuel","Darnell Mooney"],got:["Tyreek Hill","Jaxon Smith-Njigba"]},"Matthew Van Groningen":{sent:["Tyreek Hill","Jakobi Meyers","Jaxon Smith-Njigba","Tyjae Spears","Bijan Robinson"],got:["Calvin Ridley","Nick Chubb","Deebo Samuel","Zack Moss","Jerome Ford","Jameson Williams"]},"Vance Sipma":{sent:["Calvin Ridley","Nick Chubb","Zack Moss","Jerome Ford","Jameson Williams"],got:["Jakobi Meyers","Darnell Mooney","Tyjae Spears","Bijan Robinson"]}}},
+  {year:2024,week:11,sides:{"Aaron Fay":{sent:["Nico Collins"],got:["Amon-Ra St. Brown"]},"James Lazette":{sent:["Amon-Ra St. Brown"],got:["Nico Collins"]}}},
+  {year:2024,week:11,sides:{"Greg Mulder":{sent:["Jaxon Smith-Njigba"],got:["Rhamondre Stevenson"]},"Ross Van Groningen":{sent:["Rhamondre Stevenson"],got:["Jaxon Smith-Njigba"]}}},
+  // ── 2025 Sleeper (7 trades) ──
+  {year:2025,week:5,sides:{"Ross Van Groningen":{sent:["Derrick Henry"],got:["Rome Odunze","Chuba Hubbard","Jaylen Warren"]},"Trey Hugen":{sent:["Jaylen Waddle"],got:["Quinshon Judkins"]},"Tyler Goslinga":{sent:["Rome Odunze","Quinshon Judkins","Chuba Hubbard","Jaylen Warren"],got:["Derrick Henry","Jaylen Waddle"]}}},
+  {year:2025,week:6,sides:{"James Lazette":{sent:["Matt Gay","Kyle Pitts","Denver Broncos"],got:["Eddy Pineiro","Deebo Samuel","Seattle Seahawks"]},"Ross Van Groningen":{sent:["Eddy Pineiro","Deebo Samuel","Seattle Seahawks"],got:["Matt Gay","Kyle Pitts","Denver Broncos"]}}},
+  {year:2025,week:7,sides:{"Greg Mulder":{sent:["Drake London","Chase Brown"],got:["A.J. Brown","Javonte Williams"]},"Joshua Van Groningen":{sent:["A.J. Brown","Javonte Williams"],got:["Drake London","Chase Brown"]}}},
+  {year:2025,week:9,sides:{"Greg Mulder":{sent:["Rashid Shaheed"],got:["Alvin Kamara","Jauan Jennings"]},"James Lazette":{sent:["Alvin Kamara","Jauan Jennings"],got:["Rashid Shaheed"]}}},
+  {year:2025,week:9,sides:{"Matthew Van Groningen":{sent:["Zach Charbonnet"],got:["Jakobi Meyers"]},"James Lazette":{sent:["Jakobi Meyers"],got:["Zach Charbonnet"]}}},
+  {year:2025,week:11,sides:{"Matthew Van Groningen":{sent:["Jahmyr Gibbs","Luke Musgrave"],got:["Alvin Kamara","Dallas Goedert","Michael Pittman"]},"Greg Mulder":{sent:["Alvin Kamara","Dallas Goedert","Michael Pittman"],got:["Jahmyr Gibbs","Luke Musgrave"]}}},
+];
 
 const NFL_LINEUP_EFFICIENCY = {
   2022: {
@@ -45804,7 +45890,7 @@ const DD_MANAGER_TWIN_REASON = {
   "Matthew Van Groningen":  "one promising season (rank 4), gone before the rebuild could peak",
 };
 
-const DD_ALUMNI = new Set(["Matthew Van Groningen"]);
+const DD_ALUMNI = new Set([]);
 
 const DD_HISTORICAL = {
   champions: [
@@ -45818,7 +45904,7 @@ const DD_HISTORICAL = {
         { rank:1,  name:"Aaron Fay",              team:"RUN CMC",                 wins:13, losses:1,  pf:1923.56, pa:1409.98 },
         { rank:2,  name:"Trey Hugen",             team:"Reigning Champs",         wins:9,  losses:5,  pf:1658.64, pa:1466.84 },
         { rank:3,  name:"Greg Mulder",            team:"Tuafinity and Bijan",     wins:8,  losses:6,  pf:1623.18, pa:1480.14 },
-        { rank:4,  name:"Matthew Van Groningen",  team:"Thielen Up My Cousins",   wins:8,  losses:6,  pf:1568.58, pa:1495.66 },
+        { rank:4,  name:"Christian Manes",  team:"Thielen Up My Cousins",   wins:8,  losses:6,  pf:1568.58, pa:1495.66 },
         { rank:5,  name:"Jake Beukelman",         team:"The Stroud Boys",         wins:7,  losses:7,  pf:1716.72, pa:1587.48 },
         { rank:6,  name:"James Lazette",          team:"My Kuntz Hurts",          wins:7,  losses:7,  pf:1533.5,  pa:1656.08 },
         { rank:7,  name:"Vance Sipma",            team:"F*** you Jared Goof",     wins:7,  losses:7,  pf:1457.3,  pa:1615.14 },
@@ -46846,7 +46932,7 @@ function CSScoringSnapshot({ managers, currentWeek }) {
     "Aaron Fay": 104.24, "Ben de Ruiter": 96.0, "Casey Rhoda": 93.9,
     "Eric Graef": 108.18, "Greg Cady": 105.37, "Greg Mulder": 109.11,
     "James Lazette": 109.81, "Jon Vander Molen": 103.01, "Jonathon Israel": 85.7,
-    "Joshua Van Groningen": 108.94, "Matthew Van Groningen": 101.85,
+    "Joshua Van Groningen": 108.94, "Christian Manes": 101.85,
     "Ross Van Groningen": 105.63, "Spencer Hower": 104.23, "Steve Vander Molen": 107.44,
     "Tim Hoekstra": 78.31, "Tommy Van Groningen": 67.72, "Trey Hugen": 110.28,
     "Tyler Goslinga": 109.43, "Vance Sipma": 102.75, "Zac Dewey": 101.49,
@@ -47119,7 +47205,7 @@ function CSWeeklyRecap({ managers, matchups, transactions, currentWeek }) {
     "Aaron Fay":104.24,"Ben de Ruiter":96.0,"Casey Rhoda":93.9,
     "Eric Graef":108.18,"Greg Cady":105.37,"Greg Mulder":109.11,
     "James Lazette":109.81,"Jon Vander Molen":103.01,"Jonathon Israel":85.7,
-    "Joshua Van Groningen":108.94,"Matthew Van Groningen":101.85,
+    "Joshua Van Groningen":108.94,"Christian Manes":101.85,
     "Ross Van Groningen":105.63,"Spencer Hower":104.23,"Steve Vander Molen":107.44,
     "Tim Hoekstra":78.31,"Tommy Van Groningen":67.72,"Trey Hugen":110.28,
     "Tyler Goslinga":109.43,"Vance Sipma":102.75,"Zac Dewey":101.49,
@@ -47434,8 +47520,8 @@ function CurrentSeasonTab() {
 // ── LEAGUE HQ TAB ─────────────────────────────────────────────────────────────
 // Script library — module-level to avoid large strings inside JSX
 // NFL scripts A — module-level to avoid large strings inside JSX
-const _NFL_A={'recalculate_h2h.py':{e:"\"\"\"\nNo Fun League \u2014 H2H Recalculator\n=================================\nPulls matchup data from the Sleeper API for all Sleeper-era seasons (2022\u20132025)\nand recomputes head-to-head records (W, L, PF, PA) for every manager pair.\n\nNOTE: Sleeper only covers 2022+. Yahoo era (2015\u20132021) matchups are NOT\naccessible via this API and must be handled separately.\n\nUSAGE:\n  1. Fill in LEAGUE_IDS below with your Sleeper league ID for each year.\n     Find it in the Sleeper URL: https://sleeper.app/leagues/<LEAGUE_ID>\n  2. Run:  python3 recalculate_h2h.py\n  3. The script prints a JS snippet ready to paste into the dashboard.\n\nSleeper API docs: https://docs.sleeper.com\n\"\"\"\n\nimport json\nimport ssl\nimport urllib.request\nfrom collections import defaultdict\n\n# Bypass SSL verification (needed on corporate networks)\nssl_ctx = ssl.create_default_context()\nssl_ctx.check_hostname = False\nssl_ctx.verify_mode = ssl.CERT_NONE\n\n# \u2500\u2500 CONFIG \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nLEAGUE_IDS = {\n    2022: \"840017898612338688\",\n    2023: \"980152745451630592\",\n    2024: \"1113519608654413824\",\n    2025: \"1230239678033055744\",\n}\n\n# Map Sleeper display names \u2192 canonical dashboard names.\n# Edit if any display names differ from what Sleeper shows.\nNAME_MAP = {\n    \"Aaron Fay\":               \"Aaron Fay\",\n    \"Eric Graef\":              \"Eric Graef\",\n    \"Greg Cady\":               \"Greg Cady\",\n    \"Greg Mulder\":             \"Greg Mulder\",\n    \"James Lazette\":           \"James Lazette\",\n    \"Joshua Van Groningen\":    \"Joshua Van Groningen\",\n    \"Matthew Van Groningen\":   \"Matthew Van Groningen\",\n    \"Ross Van Groningen\":      \"Ross Van Groningen\",\n    \"Steve Vander Molen\":      \"Steve Vander Molen\",\n    \"Trey Hugen\":              \"Trey Hugen\",\n    \"Tyler Goslinga\":          \"Tyler Goslinga\",\n    \"Vance Sipma\":             \"Vance Sipma\",\n    # Alumni \u2014 add if you want their Sleeper-era records too\n    \"Ben de Ruiter\":           \"Ben de Ruiter\",\n    \"Zac Dewey\":               \"Zac Dewey\",\n    \"Jonathon Israel\":         \"Jonathon Israel\",\n    \"Joshua Van Groningen\":    \"Joshua Van Groningen\",\n    \"Spencer Hower\":           \"Spencer Hower\",\n}\n# \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nBASE = \"https://api.sleeper.app/v1\"\n\ndef get(url):\n    with urllib.request.urlopen(url, context=ssl_ctx) as r:\n        return json.loads(r.read())\n\ndef fetch_users(league_id):\n    \"\"\"Returns {user_id: display_name}\"\"\"\n    rosters  = get(f\"{BASE}/league/{league_id}/rosters\")\n    users    = get(f\"{BASE}/league/{league_id}/users\")\n    uid_name = {u[\"user_id\"]: u.get(\"display_name\", u[\"user_id\"]) for u in users}\n    # Map roster_id \u2192 display_name\n    roster_map = {}\n    for r in rosters:\n        uid = r.get(\"owner_id\")\n        roster_map[r[\"roster_id\"]] = uid_name.get(uid, f\"Unknown({uid})\")\n    return roster_map\n\ndef fetch_matchups(league_id, num_weeks=14):\n    \"\"\"Returns list of (roster_id_a, pts_a, roster_id_b, pts_b) for all reg-season matchups.\"\"\"\n    games = []\n    for week in range(1, num_weeks + 1):\n        data = get(f\"{BASE}/league/{league_id}/matchups/{week}\")\n        if not data:\n            break\n        # Group by matchup_id\n        by_matchup = defaultdict(list)\n        for entry in data:\n            by_matchup[entry[\"matchup_id\"]].append(entry)\n        for mid, entries in by_matchup.items():\n            if len(entries) == 2:\n                a, b = entries\n                games.append((\n                    a[\"roster_id\"], a.get(\"points\", 0) or 0,\n                    b[\"roster_id\"], b.get(\"points\", 0) or 0,\n                ))\n    return games\n\ndef fetch_playoff_weeks(league_id):\n    \"\"\"Return the week number the playoffs start so we can exclude them.\"\"\"\n    info = get(f\"{BASE}/league/{league_id}\")\n    settings = info.get(\"settings\", {})\n    # playoff_week_start is 1-indexed\n    return settings.get(\"playoff_week_start\", 15)\n\n# \u2500\u2500 MAIN \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n# h2h[name_a][name_b] = {\"W\": 0, \"L\": 0, \"PF\": 0.0, \"PA\": 0.0}\nh2h = defaultdict(lambda: defaultdict(lambda: {\"W\": 0, \"L\": 0, \"PF\": 0.0, \"PA\": 0.0}))\n\nfor year, lid in sorted(LEAGUE_IDS.items()):\n    if lid.startswith(\"YOUR_\"):\n        print(f\"  [SKIP] {year} \u2014 no league ID provided\")\n        continue\n    print(f\"Fetching {year} (league {lid})...\")\n    roster_map = fetch_users(lid)\n    playoff_start = fetch_playoff_weeks(lid)\n    matchups = fetch_matchups(lid, num_weeks=playoff_start - 1)  # reg season only\n    print(f\"  {len(roster_map)} rosters, {len(matchups)} reg-season matchups\")\n\n    for rid_a, pts_a, rid_b, pts_b in matchups:\n        raw_a = roster_map.get(rid_a, \"\")\n        raw_b = roster_map.get(rid_b, \"\")\n        name_a = NAME_MAP.get(raw_a, raw_a)\n        name_b = NAME_MAP.get(raw_b, raw_b)\n\n        if not name_a or not name_b:\n            continue\n\n        if pts_a > pts_b:\n            h2h[name_a][name_b][\"W\"] += 1\n            h2h[name_b][name_a][\"L\"] += 1\n        else:\n            h2h[name_b][name_a][\"W\"] += 1\n            h2h[name_a][name_b][\"L\"] += 1\n\n        h2h[name_a][name_b][\"PF\"] += pts_a\n        h2h[name_a][name_b][\"PA\"] += pts_b\n        h2h[name_b][name_a][\"PF\"] += pts_b\n        h2h[name_b][name_a][\"PA\"] += pts_a\n\n# \u2500\u2500 OUTPUT \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nprint(\"\\n\\n// \u2500\u2500 PASTE THIS INTO THE DASHBOARD (replace the h2h: {...} block) \u2500\u2500\")\nprint(\"  h2h: {\")\nfor mgr_a in sorted(h2h.keys()):\n    opponents = h2h[mgr_a]\n    inner = \", \".join(\n        f'\"{opp}\":{{W:{v[\"W\"]},L:{v[\"L\"]},PF:{round(v[\"PF\"],2)},PA:{round(v[\"PA\"],2)}}}'\n        for opp, v in sorted(opponents.items())\n    )\n    print(f'    \"{mgr_a}\": {{ {inner} }},')\nprint(\"  },\")\n\n# Also print a summary for verification\nprint(\"\\n\\n// \u2500\u2500 VERIFICATION SUMMARY \u2500\u2500\")\nprint(f\"{'Pair':<48} {'W-L':>8} {'Total':>6}\")\nprint(\"-\" * 65)\nseen = set()\nfor a in sorted(h2h.keys()):\n    for b in sorted(h2h[a].keys()):\n        key = tuple(sorted([a, b]))\n        if key in seen:\n            continue\n        seen.add(key)\n        wa = h2h[a][b][\"W\"]\n        la = h2h[a][b][\"L\"]\n        print(f\"{a} vs {b:<28} {wa}-{la:>3} {wa+la:>6}\")\n",d:"Recalculates all H2H records from Sleeper API.",w:"January \u2014 Step 2 of annual update"},'playoff_data.py':{e:"\"\"\"\nNo Fun League \u2014 Playoff Database Builder (2015\u20132025)\n=====================================================\nFetches playoff bracket data from Yahoo (2015\u20132021) and Sleeper (2022\u20132025).\nOutputs a complete playoff JS block for the dashboard covering:\n  - Individual game log (year, round, bracket, opponent, score, W/L)\n  - Overall playoff W/L/PF/PA per manager\n  - Playoff h2h matchup records\n  - Championship/finals appearances and wins\n\"\"\"\n\nimport json, ssl, urllib.request, urllib.parse, webbrowser, base64\nfrom collections import defaultdict\n\n# \u2500\u2500 CREDENTIALS \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nYAHOO_CLIENT_ID     = \"dj0yJmk9TURCODVkazJiYWQyJmQ9WVdrOVJ6RnZSalpDZGtRbWNHbzlNQT09JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTFj\"\nYAHOO_CLIENT_SECRET = \"00a057aeb25c4a3759aff5addeee9a5984fb772d\"\nREDIRECT_URI        = \"https://localhost\"\n\n# \u2500\u2500 LEAGUE KEYS \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nYAHOO_LEAGUES = {\n    2015: \"348.l.883924\",\n    2016: \"359.l.475003\",\n    2017: \"371.l.331879\",\n    2018: \"380.l.162988\",\n    2019: \"390.l.140437\",\n    2020: \"399.l.648483\",\n    2021: \"406.l.683609\",\n}\n\nSLEEPER_LEAGUES = {\n    2022: \"840017898612338688\",\n    2023: \"980152745451630592\",\n    2024: \"1113519608654413824\",\n    2025: \"1230239678033055744\",\n}\n\n# \u2500\u2500 TEAM KEY \u2192 MANAGER NAME (Yahoo) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nTEAM_KEY_MAP = {\n    \"348.l.883924.t.1\": \"Ross Van Groningen\", \"348.l.883924.t.2\": \"Greg Mulder\",\n    \"348.l.883924.t.3\": \"Trey Hugen\",         \"348.l.883924.t.4\": \"Greg Cady\",\n    \"348.l.883924.t.5\": \"Tim Hoekstra\",        \"348.l.883924.t.6\": \"Steve Vander Molen\",\n    \"348.l.883924.t.7\": \"Tommy Van Groningen\", \"348.l.883924.t.8\": \"Casey Rhoda\",\n    \"348.l.883924.t.9\": \"Jonathon Israel\",     \"348.l.883924.t.10\": \"Eric Graef\",\n    \"359.l.475003.t.1\": \"Ross Van Groningen\",  \"359.l.475003.t.2\": \"Greg Mulder\",\n    \"359.l.475003.t.3\": \"Steve Vander Molen\",  \"359.l.475003.t.4\": \"Trey Hugen\",\n    \"359.l.475003.t.5\": \"Greg Cady\",           \"359.l.475003.t.6\": \"Eric Graef\",\n    \"359.l.475003.t.7\": \"Vance Sipma\",         \"359.l.475003.t.8\": \"Spencer Hower\",\n    \"359.l.475003.t.9\": \"James Lazette\",       \"359.l.475003.t.10\": \"Matthew Van Groningen\",\n    \"359.l.475003.t.11\": \"Ben de Ruiter\",      \"359.l.475003.t.12\": \"Jonathon Israel\",\n    \"371.l.331879.t.1\": \"Ross Van Groningen\",  \"371.l.331879.t.2\": \"Greg Mulder\",\n    \"371.l.331879.t.3\": \"Steve Vander Molen\",  \"371.l.331879.t.4\": \"Trey Hugen\",\n    \"371.l.331879.t.5\": \"Greg Cady\",           \"371.l.331879.t.6\": \"Eric Graef\",\n    \"371.l.331879.t.7\": \"Spencer Hower\",       \"371.l.331879.t.8\": \"James Lazette\",\n    \"371.l.331879.t.9\": \"Matthew Van Groningen\",\"371.l.331879.t.10\": \"Ben de Ruiter\",\n    \"371.l.331879.t.11\": \"Jonathon Israel\",    \"371.l.331879.t.12\": \"Vance Sipma\",\n    \"380.l.162988.t.1\": \"Ross Van Groningen\",  \"380.l.162988.t.2\": \"Greg Mulder\",\n    \"380.l.162988.t.3\": \"Ben de Ruiter\",       \"380.l.162988.t.4\": \"James Lazette\",\n    \"380.l.162988.t.5\": \"Trey Hugen\",          \"380.l.162988.t.6\": \"Matthew Van Groningen\",\n    \"380.l.162988.t.7\": \"Eric Graef\",          \"380.l.162988.t.8\": \"Vance Sipma\",\n    \"380.l.162988.t.9\": \"Greg Cady\",           \"380.l.162988.t.10\": \"Steve Vander Molen\",\n    \"380.l.162988.t.11\": \"Zac Dewey\",          \"380.l.162988.t.12\": \"Tyler Goslinga\",\n    \"390.l.140437.t.1\": \"Ross Van Groningen\",  \"390.l.140437.t.2\": \"Zac Dewey\",\n    \"390.l.140437.t.3\": \"Eric Graef\",          \"390.l.140437.t.4\": \"Trey Hugen\",\n    \"390.l.140437.t.5\": \"Ben de Ruiter\",       \"390.l.140437.t.6\": \"Tyler Goslinga\",\n    \"390.l.140437.t.7\": \"Vance Sipma\",         \"390.l.140437.t.8\": \"Greg Cady\",\n    \"390.l.140437.t.9\": \"James Lazette\",       \"390.l.140437.t.10\": \"Steve Vander Molen\",\n    \"390.l.140437.t.11\": \"Matthew Van Groningen\",\"390.l.140437.t.12\": \"Greg Mulder\",\n    \"399.l.648483.t.1\": \"Ross Van Groningen\",  \"399.l.648483.t.2\": \"Zac Dewey\",\n    \"399.l.648483.t.3\": \"Eric Graef\",          \"399.l.648483.t.4\": \"Trey Hugen\",\n    \"399.l.648483.t.5\": \"Ben de Ruiter\",       \"399.l.648483.t.6\": \"Tyler Goslinga\",\n    \"399.l.648483.t.7\": \"Vance Sipma\",         \"399.l.648483.t.8\": \"Greg Cady\",\n    \"399.l.648483.t.9\": \"James Lazette\",       \"399.l.648483.t.10\": \"Steve Vander Molen\",\n    \"399.l.648483.t.11\": \"Matthew Van Groningen\",\"399.l.648483.t.12\": \"Greg Mulder\",\n    \"399.l.648483.t.13\": \"Joshua Van Groningen\",\"399.l.648483.t.14\": \"Aaron Fay\",\n    \"406.l.683609.t.1\": \"Ross Van Groningen\",  \"406.l.683609.t.2\": \"Zac Dewey\",\n    \"406.l.683609.t.3\": \"Eric Graef\",          \"406.l.683609.t.4\": \"Trey Hugen\",\n    \"406.l.683609.t.5\": \"Ben de Ruiter\",       \"406.l.683609.t.6\": \"Tyler Goslinga\",\n    \"406.l.683609.t.7\": \"Vance Sipma\",         \"406.l.683609.t.8\": \"Greg Cady\",\n    \"406.l.683609.t.9\": \"James Lazette\",       \"406.l.683609.t.10\": \"Steve Vander Molen\",\n    \"406.l.683609.t.11\": \"Matthew Van Groningen\",\"406.l.683609.t.12\": \"Greg Mulder\",\n    \"406.l.683609.t.13\": \"Joshua Van Groningen\",\"406.l.683609.t.14\": \"Aaron Fay\",\n}\n\n# \u2500\u2500 SSL \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nssl_ctx = ssl.create_default_context()\nssl_ctx.check_hostname = False\nssl_ctx.verify_mode = ssl.CERT_NONE\n\ndef http_get(url, headers=None):\n    req = urllib.request.Request(url, headers=headers or {})\n    with urllib.request.urlopen(req, context=ssl_ctx) as r:\n        return r.read()\n\ndef http_post(url, data, headers=None):\n    req = urllib.request.Request(url, data=urllib.parse.urlencode(data).encode(), headers=headers or {})\n    with urllib.request.urlopen(req, context=ssl_ctx) as r:\n        return r.read()\n\n# \u2500\u2500 YAHOO OAUTH \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nauth_url = (\n    \"https://api.login.yahoo.com/oauth2/request_auth\"\n    f\"?client_id={YAHOO_CLIENT_ID}&redirect_uri={urllib.parse.quote(REDIRECT_URI)}\"\n    \"&response_type=code&language=en-us\"\n)\nprint(\"Opening browser for Yahoo login...\")\nwebbrowser.open(auth_url)\nprint(f\"\\nIf browser didn't open: {auth_url}\\n\")\nprint(\"After approving, paste the full redirect URL here:\")\nredirect_url = input(\"> \").strip()\ncode = urllib.parse.parse_qs(urllib.parse.urlparse(redirect_url).query).get(\"code\", [None])[0]\ncreds = base64.b64encode(f\"{YAHOO_CLIENT_ID}:{YAHOO_CLIENT_SECRET}\".encode()).decode()\ntoken_resp = json.loads(http_post(\n    \"https://api.login.yahoo.com/oauth2/get_token\",\n    {\"grant_type\": \"authorization_code\", \"redirect_uri\": REDIRECT_URI, \"code\": code},\n    {\"Authorization\": f\"Basic {creds}\", \"Content-Type\": \"application/x-www-form-urlencoded\"}\n))\nyahoo_token = token_resp[\"access_token\"]\nprint(\"\u2705 Yahoo authenticated\\n\")\n\ndef yahoo_get(path):\n    url = f\"https://fantasysports.yahooapis.com/fantasy/v2/{path}&format=json\"\n    return json.loads(http_get(url, {\"Authorization\": f\"Bearer {yahoo_token}\"}))\n\ndef sleeper_get(path):\n    return json.loads(http_get(f\"https://api.sleeper.app/v1{path}\"))\n\n# \u2500\u2500 ROUND NAME HELPER \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\ndef round_name(round_num, total_rounds, bracket):\n    \"\"\"Convert round number to human-readable name.\"\"\"\n    if bracket == \"consolation\":\n        if round_num == total_rounds:\n            return \"3rd Place Game\"\n        elif round_num == total_rounds - 1:\n            return \"Consolation Semifinal\"\n        else:\n            return f\"Consolation Round {round_num}\"\n    else:\n        if round_num == total_rounds:\n            return \"Championship\"\n        elif round_num == total_rounds - 1:\n            return \"Semifinal\"\n        elif round_num == total_rounds - 2:\n            return \"Quarterfinal\"\n        else:\n            return f\"Round {round_num}\"\n\n# \u2500\u2500 GAME LOG \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\ngame_log = []  # list of dicts\n\n# \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n# YAHOO (2015\u20132021)\n# \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nprint(\"=\" * 60)\nprint(\"FETCHING YAHOO PLAYOFF DATA (2015\u20132021)\")\nprint(\"=\" * 60)\n\nfor year, lkey in sorted(YAHOO_LEAGUES.items()):\n    print(f\"\\n{year} ({lkey})...\")\n    settings_data = yahoo_get(f\"league/{lkey}/settings?\")\n    settings      = settings_data[\"fantasy_content\"][\"league\"][1][\"settings\"][0]\n    playoff_start = int(settings.get(\"playoff_start_week\", 14))\n    num_playoff_teams = int(settings.get(\"num_playoff_teams\", 4))\n    # figure out total weeks in season\n    end_week = int(settings.get(\"end_week\", 16))\n    playoff_weeks = list(range(playoff_start, end_week + 1))\n    print(f\"  Playoff weeks: {playoff_weeks}, {num_playoff_teams} teams\")\n\n    # Fetch all playoff weeks\n    week_matchups = {}\n    for week in playoff_weeks:\n        sb = yahoo_get(f\"league/{lkey}/scoreboard;week={week}?\")\n        matchups = sb[\"fantasy_content\"][\"league\"][1][\"scoreboard\"][\"0\"][\"matchups\"]\n        week_matchups[week] = []\n        for m_idx in range(matchups[\"count\"]):\n            m = matchups[str(m_idx)][\"matchup\"]\n            if m.get(\"status\") != \"postevent\":\n                continue\n            t0 = m[\"0\"][\"teams\"][\"0\"][\"team\"]\n            t1 = m[\"0\"][\"teams\"][\"1\"][\"team\"]\n            key0 = t0[0][0][\"team_key\"]\n            key1 = t1[0][0][\"team_key\"]\n            pts0 = float(t0[1][\"team_points\"][\"total\"] or 0)\n            pts1 = float(t1[1][\"team_points\"][\"total\"] or 0)\n            is_consolation = m.get(\"is_consolation\", 0) == 1\n            week_matchups[week].append({\n                \"key0\": key0, \"key1\": key1,\n                \"pts0\": pts0, \"pts1\": pts1,\n                \"consolation\": is_consolation,\n            })\n\n    # Determine round numbers\n    # playoffs weeks index \u2192 round (1-based)\n    total_rounds = len(playoff_weeks)\n    for r_idx, week in enumerate(playoff_weeks):\n        r_num = r_idx + 1\n        # Count consolation vs winners rounds\n        winners_in_week   = [m for m in week_matchups[week] if not m[\"consolation\"]]\n        consolation_in_week = [m for m in week_matchups[week] if m[\"consolation\"]]\n\n        # Label rounds\n        winners_total = sum(1 for w in playoff_weeks for m in week_matchups[w] if not m[\"consolation\"] and week_matchups[w].index(m) >= 0)\n        # Simpler: just use position in playoff_weeks for naming\n        winners_rounds   = [w for w in playoff_weeks if any(not m[\"consolation\"] for m in week_matchups[w])]\n        consolation_rounds = [w for w in playoff_weeks if any(m[\"consolation\"] for m in week_matchups[w])]\n\n        for m in week_matchups[week]:\n            name0 = TEAM_KEY_MAP.get(m[\"key0\"])\n            name1 = TEAM_KEY_MAP.get(m[\"key1\"])\n            if not name0 or not name1:\n                print(f\"  WARNING: unmapped key in {year} week {week}\")\n                continue\n\n            bracket = \"consolation\" if m[\"consolation\"] else \"winners\"\n            if bracket == \"winners\":\n                r_in_bracket = winners_rounds.index(week) + 1\n                total_in_bracket = len(winners_rounds)\n            else:\n                r_in_bracket = consolation_rounds.index(week) + 1\n                total_in_bracket = len(consolation_rounds)\n\n            rname = round_name(r_in_bracket, total_in_bracket, bracket)\n            is_championship = (bracket == \"winners\" and r_in_bracket == total_in_bracket)\n\n            winner = name0 if m[\"pts0\"] > m[\"pts1\"] else name1\n            loser  = name1 if m[\"pts0\"] > m[\"pts1\"] else name0\n\n            for name, pts_for, pts_against in [(name0, m[\"pts0\"], m[\"pts1\"]), (name1, m[\"pts1\"], m[\"pts0\"])]:\n                game_log.append({\n                    \"year\": year, \"week\": week, \"round\": r_in_bracket,\n                    \"roundName\": rname, \"bracket\": bracket,\n                    \"manager\": name,\n                    \"opponent\": name1 if name == name0 else name0,\n                    \"pf\": round(pts_for, 2), \"pa\": round(pts_against, 2),\n                    \"win\": name == winner,\n                    \"championship\": is_championship,\n                    \"champion\": is_championship and name == winner,\n                })\n\n    # Summary\n    winners_games = [g for g in game_log if g[\"year\"] == year and g[\"bracket\"] == \"winners\"]\n    consol_games  = [g for g in game_log if g[\"year\"] == year and g[\"bracket\"] == \"consolation\"]\n    print(f\"  {len(winners_games)//2} winners bracket games, {len(consol_games)//2} consolation games\")\n\n# \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n# SLEEPER (2022\u20132025)\n# \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nprint(\"\\n\" + \"=\" * 60)\nprint(\"FETCHING SLEEPER PLAYOFF DATA (2022\u20132025)\")\nprint(\"=\" * 60)\n\nfor year, lid in sorted(SLEEPER_LEAGUES.items()):\n    print(f\"\\n{year} ({lid})...\")\n\n    # Get rosters \u2192 user mapping\n    rosters = sleeper_get(f\"/league/{lid}/rosters\")\n    users   = sleeper_get(f\"/league/{lid}/users\")\n    uid_name = {u[\"user_id\"]: u.get(\"display_name\", \"\") for u in users}\n    roster_name = {r[\"roster_id\"]: uid_name.get(r.get(\"owner_id\",\"\"), f\"Unknown\") for r in rosters}\n\n    # Sleeper display_name \u2192 dashboard name\n    SLEEPER_NAME_MAP = {\n        \"TylerGoslinga\": \"Tyler Goslinga\", \"grgmldr\": \"Greg Mulder\",\n        \"JoshVG\": \"Joshua Van Groningen\",  \"egraef\": \"Eric Graef\",\n        \"JamesL81\": \"James Lazette\",       \"fourputtbogey\": \"Ross Van Groningen\",\n        \"Slimcady\": \"Greg Cady\",           \"ChiefsKingdom92\": \"Trey Hugen\",\n        \"uclafay22\": \"Aaron Fay\",          \"matthewvg92\": \"Matthew Van Groningen\",\n        \"VSipma77\": \"Vance Sipma\",         \"svandermolen\": \"Steve Vander Molen\",\n    }\n    roster_canon = {rid: SLEEPER_NAME_MAP.get(dname, dname) for rid, dname in roster_name.items()}\n\n    # Get bracket data\n    winners_bracket = sleeper_get(f\"/league/{lid}/winners_bracket\")\n    losers_bracket  = sleeper_get(f\"/league/{lid}/losers_bracket\")\n\n    # Process bracket helper\n    def process_bracket(bracket_data, bracket_type):\n        if not bracket_data:\n            return\n        # Find total rounds\n        rounds = [m.get(\"r\", 1) for m in bracket_data if isinstance(m, dict)]\n        total_r = max(rounds) if rounds else 1\n\n        for m in bracket_data:\n            if not isinstance(m, dict):\n                continue\n            r_num = m.get(\"r\", 1)\n            t1_rid = m.get(\"t1\")\n            t2_rid = m.get(\"t2\")\n            w_rid  = m.get(\"w\")\n            l_rid  = m.get(\"l\")\n\n            if not t1_rid or not t2_rid or not w_rid:\n                continue  # bye or unplayed\n\n            name1 = roster_canon.get(t1_rid)\n            name2 = roster_canon.get(t2_rid)\n            winner_name = roster_canon.get(w_rid)\n            if not name1 or not name2 or not winner_name:\n                print(f\"  WARNING: unmapped roster in {year} {bracket_type}\")\n                continue\n\n            rname = round_name(r_num, total_r, bracket_type)\n            is_championship = (bracket_type == \"winners\" and r_num == total_r)\n\n            # Get scores from matchups \u2014 need to find the week\n            # Sleeper bracket has 'p' field for points in some versions\n            pts1 = float(m.get(\"t1_from\", {}).get(\"w\", 0) or m.get(\"p1\", 0) or 0) if isinstance(m.get(\"t1_from\"), dict) else 0\n            pts2 = float(m.get(\"t2_from\", {}).get(\"w\", 0) or m.get(\"p2\", 0) or 0) if isinstance(m.get(\"t2_from\"), dict) else 0\n\n            for name, opp in [(name1, name2), (name2, name1)]:\n                pts_for = pts1 if name == name1 else pts2\n                pts_against = pts2 if name == name1 else pts1\n                game_log.append({\n                    \"year\": year, \"week\": None, \"round\": r_num,\n                    \"roundName\": rname, \"bracket\": bracket_type,\n                    \"manager\": name, \"opponent\": opp,\n                    \"pf\": round(pts_for, 2), \"pa\": round(pts_against, 2),\n                    \"win\": name == winner_name,\n                    \"championship\": is_championship,\n                    \"champion\": is_championship and name == winner_name,\n                })\n\n    process_bracket(winners_bracket, \"winners\")\n    process_bracket(losers_bracket, \"consolation\")\n\n    # Note: Sleeper bracket doesn't always include scores in bracket endpoint\n    # We'll need to supplement with matchup scores\n    # Get playoff matchup scores from scoreboard\n    league_info   = sleeper_get(f\"/league/{lid}\")\n    playoff_start = league_info.get(\"settings\", {}).get(\"playoff_week_start\", 15)\n    end_week      = league_info.get(\"settings\", {}).get(\"playoff_round_type\", 16)\n\n    # Fetch playoff weeks to get scores\n    print(f\"  Fetching playoff scores from week {playoff_start}+...\")\n    playoff_matchup_scores = {}  # (roster_id1, roster_id2) \u2192 (pts1, pts2)\n    for week in range(playoff_start, playoff_start + 5):  # try up to 5 playoff weeks\n        try:\n            week_data = sleeper_get(f\"/league/{lid}/matchups/{week}\")\n            if not week_data:\n                break\n            # Group by matchup_id\n            by_matchup = defaultdict(list)\n            for entry in week_data:\n                by_matchup[entry[\"matchup_id\"]].append(entry)\n            for mid, entries in by_matchup.items():\n                if len(entries) == 2:\n                    r0, r1 = entries[0][\"roster_id\"], entries[1][\"roster_id\"]\n                    p0 = float(entries[0].get(\"points\", 0) or 0)\n                    p1 = float(entries[1].get(\"points\", 0) or 0)\n                    playoff_matchup_scores[(r0, r1, week)] = (p0, p1)\n                    playoff_matchup_scores[(r1, r0, week)] = (p1, p0)\n        except:\n            break\n\n    # Now update game log entries for this year with actual scores\n    # Match by manager+opponent+year\n    for entry in game_log:\n        if entry[\"year\"] != year or entry[\"pf\"] != 0:\n            continue\n        # Try to find matching score\n        mgr_rid  = next((rid for rid, n in roster_canon.items() if n == entry[\"manager\"]), None)\n        opp_rid  = next((rid for rid, n in roster_canon.items() if n == entry[\"opponent\"]), None)\n        if not mgr_rid or not opp_rid:\n            continue\n        for week in range(playoff_start, playoff_start + 5):\n            key = (mgr_rid, opp_rid, week)\n            if key in playoff_matchup_scores:\n                entry[\"pf\"] = playoff_matchup_scores[key][0]\n                entry[\"pa\"] = playoff_matchup_scores[key][1]\n                entry[\"week\"] = week\n                break\n\n    winners_games = [g for g in game_log if g[\"year\"] == year and g[\"bracket\"] == \"winners\"]\n    consol_games  = [g for g in game_log if g[\"year\"] == year and g[\"bracket\"] == \"consolation\"]\n    print(f\"  {len(winners_games)//2} winners bracket games, {len(consol_games)//2} consolation games\")\n\n# \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n# AGGREGATE STATS\n# \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nprint(\"\\n\\nAggregating stats...\")\n\n# De-duplicate (each game appears twice \u2014 once per manager)\n# Use manager perspective entries only for aggregation\n\n# Overall playoff record per manager (winners bracket only = \"true\" playoffs)\nplayoff_record  = defaultdict(lambda: {\"W\":0,\"L\":0,\"PF\":0.0,\"PA\":0.0})\nconsolation_record = defaultdict(lambda: {\"W\":0,\"L\":0,\"PF\":0.0,\"PA\":0.0})\nplayoff_h2h     = defaultdict(lambda: defaultdict(lambda: {\"W\":0,\"L\":0,\"PF\":0.0,\"PA\":0.0}))\nappearances     = defaultdict(int)   # times making playoffs (winners bracket round 1)\nchampionships   = defaultdict(int)\nfinals_appearances = defaultdict(int)\n\nfor g in game_log:\n    mgr = g[\"manager\"]\n    rec = playoff_record[mgr] if g[\"bracket\"] == \"winners\" else consolation_record[mgr]\n    rec[\"W\"]  += 1 if g[\"win\"] else 0\n    rec[\"L\"]  += 0 if g[\"win\"] else 1\n    rec[\"PF\"] = round(rec[\"PF\"] + g[\"pf\"], 2)\n    rec[\"PA\"] = round(rec[\"PA\"] + g[\"pa\"], 2)\n\n    if g[\"bracket\"] == \"winners\":\n        opp = g[\"opponent\"]\n        playoff_h2h[mgr][opp][\"W\"]  += 1 if g[\"win\"] else 0\n        playoff_h2h[mgr][opp][\"L\"]  += 0 if g[\"win\"] else 1\n        playoff_h2h[mgr][opp][\"PF\"] = round(playoff_h2h[mgr][opp][\"PF\"] + g[\"pf\"], 2)\n        playoff_h2h[mgr][opp][\"PA\"] = round(playoff_h2h[mgr][opp][\"PA\"] + g[\"pa\"], 2)\n\n        if g[\"round\"] == 1:\n            appearances[mgr] += 1\n        if g[\"championship\"]:\n            finals_appearances[mgr] += 1\n        if g[\"champion\"]:\n            championships[mgr] += 1\n\n# \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n# OUTPUT\n# \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nprint(\"\\n\\n// \u2500\u2500 PASTE THIS INTO THE DASHBOARD \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\")\nprint(\"  playoffData: {\")\n\n# Game log\nprint(\"    gameLog: [\")\nfor g in sorted(game_log, key=lambda x: (x[\"year\"], x[\"bracket\"], x[\"round\"])):\n    # Only output one side per game (manager perspective)\n    print(f'      {{year:{g[\"year\"]},round:{g[\"round\"]},roundName:\"{g[\"roundName\"]}\",bracket:\"{g[\"bracket\"]}\",manager:\"{g[\"manager\"]}\",opponent:\"{g[\"opponent\"]}\",pf:{g[\"pf\"]},pa:{g[\"pa\"]},win:{\"true\" if g[\"win\"] else \"false\"},championship:{\"true\" if g[\"championship\"] else \"false\"},champion:{\"true\" if g[\"champion\"] else \"false\"}}},')\nprint(\"    ],\")\n\n# Overall records\nprint(\"    records: {\")\nall_mgrs = sorted(set(list(playoff_record.keys()) + list(consolation_record.keys())))\nfor mgr in all_mgrs:\n    pr = playoff_record[mgr]\n    cr = consolation_record[mgr]\n    print(f'      \"{mgr}\": {{playoffs:{{W:{pr[\"W\"]},L:{pr[\"L\"]},PF:{pr[\"PF\"]},PA:{pr[\"PA\"]}}},consolation:{{W:{cr[\"W\"]},L:{cr[\"L\"]},PF:{cr[\"PF\"]},PA:{cr[\"PA\"]}}},appearances:{appearances[mgr]},finalsAppearances:{finals_appearances[mgr]},championships:{championships[mgr]}}},')\nprint(\"    },\")\n\n# Playoff h2h\nprint(\"    h2h: {\")\nfor mgr in sorted(playoff_h2h.keys()):\n    inner = \", \".join(\n        f'\"{opp}\":{{W:{v[\"W\"]},L:{v[\"L\"]},PF:{v[\"PF\"]},PA:{v[\"PA\"]}}}'\n        for opp, v in sorted(playoff_h2h[mgr].items())\n    )\n    print(f'      \"{mgr}\": {{ {inner} }},')\nprint(\"    },\")\nprint(\"  },\")\n\n# Verification summary\nprint(\"\\n\\n// \u2500\u2500 VERIFICATION SUMMARY \u2500\u2500\")\nprint(f\"Total game log entries: {len(game_log)} (each game = 2 entries, one per manager)\")\nprint(f\"Unique games: {len(game_log)//2}\")\nprint(f\"\\n{'Manager':<25} {'Apps':>5} {'Finals':>7} {'Titles':>7} {'W':>5} {'L':>5} {'PF':>9} {'PA':>9}\")\nprint(\"-\" * 75)\nfor mgr in sorted(all_mgrs):\n    pr = playoff_record[mgr]\n    print(f\"{mgr:<25} {appearances[mgr]:>5} {finals_appearances[mgr]:>7} {championships[mgr]:>7} {pr['W']:>5} {pr['L']:>5} {pr['PF']:>9.2f} {pr['PA']:>9.2f}\")\n",d:"Extracts Yahoo-era playoff brackets and championship data.",w:"January \u2014 Step 2 of annual update"},'nfl_playoff_scores.py':{e:"\"\"\"\nnfl_playoff_scores.py \u2014 no external dependencies\nRun: python nfl_playoff_scores.py > nfl_playoff_scores_output.txt\n\"\"\"\nimport urllib.request, urllib.error, json, time, sys, ssl\n\nBASE = \"https://api.sleeper.app/v1\"\nCTX  = ssl._create_unverified_context()\n\nNFL_LEAGUE_IDS = {2022:\"840017898612338688\",2023:\"980152745451630592\",2024:\"1113519608654413824\",2025:\"1230239678033055744\"}\nNAME_MAP = {\n    \"rssvngrn\":\"Ross Van Groningen\",\"GregM_fantasy\":\"Greg Mulder\",\n    \"EricGraef\":\"Eric Graef\",\"TreyHugen\":\"Trey Hugen\",\n    \"TylerGoslinga\":\"Tyler Goslinga\",\"JoshVG\":\"Joshua Van Groningen\",\n    \"StevVM\":\"Steve Vander Molen\",\"JamesL81\":\"James Lazette\",\n    \"VanceSipma\":\"Vance Sipma\",\"AaronFay\":\"Aaron Fay\",\n    \"GregCady\":\"Greg Cady\",\"MatthewVG\":\"Matthew Van Groningen\",\n}\nROUND_TO_WEEK  = {1:15,2:16,3:17}\nWINNERS_LABELS = {1:\"Round 1\",2:\"Semifinal\",3:\"Championship\"}\nLOSERS_LABELS  = {1:\"Round 1\",2:\"Semifinal\",3:\"Toilet Bowl\"}\n\ndef get(url):\n    for _ in range(3):\n        try:\n            with urllib.request.urlopen(url,timeout=15,context=CTX) as r:\n                return json.loads(r.read().decode(\"utf-8\"))\n        except urllib.error.HTTPError as e:\n            if e.code==429: print(\"  Rate limited...\",file=sys.stderr); time.sleep(5)\n            else: print(f\"  HTTP {e.code}\",file=sys.stderr); return None\n        except Exception as e: print(f\"  Error: {e}\",file=sys.stderr); return None\n    return None\n\ndef roster_map(league_id):\n    rosters=get(f\"{BASE}/league/{league_id}/rosters\") or []\n    users=get(f\"{BASE}/league/{league_id}/users\") or []\n    time.sleep(0.4)\n    un={u[\"user_id\"]:NAME_MAP.get(u.get(\"display_name\",\"\"),u.get(\"display_name\",\"\")) for u in users}\n    return {r[\"roster_id\"]:un.get(r.get(\"owner_id\",\"\"),f\"Roster {r['roster_id']}\") for r in rosters}\n\ndef week_scores(league_id,week):\n    data=get(f\"{BASE}/league/{league_id}/matchups/{week}\") or []\n    time.sleep(0.3)\n    return {e[\"roster_id\"]:round(e.get(\"points\",0.0),2) for e in data}\n\ndef process(bracket,rm,ws,labels):\n    games=[]\n    for e in bracket:\n        r,t1,t2,w=e.get(\"r\"),e.get(\"t1\"),e.get(\"t2\"),e.get(\"w\")\n        if t1 is None or t2 is None: continue\n        sc=ws.get(ROUND_TO_WEEK.get(r),{})\n        n1,n2=rm.get(t1,f\"R{t1}\"),rm.get(t2,f\"R{t2}\")\n        p1,p2=sc.get(t1,0.0),sc.get(t2,0.0)\n        win=rm.get(w,f\"R{w}\") if w else (n1 if p1>=p2 else n2)\n        lbl=labels.get(r,f\"Round {r}\")\n        if r==3 and len([x for x in bracket if x.get(\"r\")==3])==2:\n            same=sorted([x for x in bracket if x.get(\"r\")==3],key=lambda x:x.get(\"p\",99))\n            lbl=labels.get(3,\"Championship\") if e is same[0] else \"3rd Place\"\n        games.append({\"round\":r,\"label\":lbl,\"t1\":n1,\"t1pts\":p1,\"t2\":n2,\"t2pts\":p2,\"winner\":win,\"margin\":round(abs(p1-p2),2)})\n    return sorted(games,key=lambda g:(g[\"round\"],g[\"t1\"]))\n\nall_s={}\nfor season,lid in sorted(NFL_LEAGUE_IDS.items()):\n    print(f\"\\nFetching NFL {season}...\",file=sys.stderr)\n    rm=roster_map(lid)\n    ws={w:week_scores(lid,w) for w in [15,16,17]}\n    wb=get(f\"{BASE}/league/{lid}/winners_bracket\") or []; time.sleep(0.4)\n    lb=get(f\"{BASE}/league/{lid}/losers_bracket\") or []; time.sleep(0.4)\n    all_s[season]={\"winners\":process(wb,rm,ws,WINNERS_LABELS),\"losers\":process(lb,rm,ws,LOSERS_LABELS)}\n    print(f\"  {len(all_s[season]['winners'])} playoff + {len(all_s[season]['losers'])} toilet bowl games\",file=sys.stderr)\n\ndef fmt(g): return f'      {{round:{g[\"round\"]},label:\"{g[\"label\"]}\",t1:\"{g[\"t1\"]}\",t1pts:{g[\"t1pts\"]},t2:\"{g[\"t2\"]}\",t2pts:{g[\"t2pts\"]},winner:\"{g[\"winner\"]}\",margin:{g[\"margin\"]}}}'\nlines=[\"const NFL_PLAYOFF_SCORES = {\"]\nfor s in sorted(all_s):\n    lines+=[f\"  {s}: {{\",\"    winners: [\"]+[fmt(g)+\",\" for g in all_s[s][\"winners\"]]+[\"    ],\",\"    losers: [\"]+[fmt(g)+\",\" for g in all_s[s][\"losers\"]]+[\"    ],\",\"  },\"]\nlines.append(\"};\")\nprint(\"\\n\".join(lines))\n",d:"Pulls Sleeper playoff game scores (2022\u2013present).",w:"January \u2014 after playoffs end"}};
-const _NFL_B={'nfl_transactions.py':{e:"\"\"\"\nnfl_transactions.py \u2014 no external dependencies\nRun: python nfl_transactions.py > nfl_transactions_output.txt\nTakes 3-5 minutes.\n\"\"\"\nimport urllib.request, urllib.error, json, time, sys, ssl\n\nBASE = \"https://api.sleeper.app/v1\"\nCTX  = ssl._create_unverified_context()\n\nNFL_LEAGUE_IDS = {2022:\"840017898612338688\",2023:\"980152745451630592\",2024:\"1113519608654413824\",2025:\"1230239678033055744\"}\nNAME_MAP = {\n    \"rssvngrn\":\"Ross Van Groningen\",\"GregM_fantasy\":\"Greg Mulder\",\n    \"EricGraef\":\"Eric Graef\",\"TreyHugen\":\"Trey Hugen\",\n    \"TylerGoslinga\":\"Tyler Goslinga\",\"JoshVG\":\"Joshua Van Groningen\",\n    \"StevVM\":\"Steve Vander Molen\",\"JamesL81\":\"James Lazette\",\n    \"VanceSipma\":\"Vance Sipma\",\"AaronFay\":\"Aaron Fay\",\n    \"GregCady\":\"Greg Cady\",\"MatthewVG\":\"Matthew Van Groningen\",\n}\n\ndef get(url):\n    for _ in range(3):\n        try:\n            with urllib.request.urlopen(url,timeout=20,context=CTX) as r:\n                return json.loads(r.read().decode(\"utf-8\"))\n        except urllib.error.HTTPError as e:\n            if e.code==429: print(\"  Rate limited...\",file=sys.stderr); time.sleep(5)\n            else: print(f\"  HTTP {e.code}\",file=sys.stderr); return None\n        except Exception as e: print(f\"  Error: {e}\",file=sys.stderr); return None\n    return None\n\ndef build_maps(league_id):\n    rosters=get(f\"{BASE}/league/{league_id}/rosters\") or []\n    users=get(f\"{BASE}/league/{league_id}/users\") or []\n    time.sleep(0.4)\n    un={u[\"user_id\"]:NAME_MAP.get(u.get(\"display_name\",\"\"),u.get(\"display_name\",\"\")) for u in users}\n    rn={r[\"roster_id\"]:un.get(r.get(\"owner_id\",\"\"),f\"R{r['roster_id']}\") for r in rosters}\n    print(\"  Fetching player registry...\",file=sys.stderr)\n    players=get(f\"{BASE}/players/nfl\") or {}\n    time.sleep(1.5)\n    pn={pid:(f\"{p.get('first_name','')} {p.get('last_name','')}\".strip() or pid) for pid,p in players.items()}\n    return rn,pn\n\ndef fetch_txns(league_id,rn,pn):\n    txns=[]\n    for week in range(1,18):\n        wt=get(f\"{BASE}/league/{league_id}/transactions/{week}\") or []\n        time.sleep(0.25)\n        for t in wt:\n            if t.get(\"status\")!=\"complete\": continue\n            rids=t.get(\"roster_ids\",[])\n            adds=t.get(\"adds\") or {}\n            drops=t.get(\"drops\") or {}\n            dps=t.get(\"draft_picks\") or []\n            mgrs=list({rn.get(r,f\"R{r}\") for r in rids})\n            txns.append({\"week\":week,\"type\":t.get(\"type\",\"\"),\"managers\":mgrs,\n                \"adds\":[{\"player\":pn.get(pid,pid),\"to\":rn.get(rid,f\"R{rid}\")} for pid,rid in adds.items()],\n                \"drops\":[{\"player\":pn.get(pid,pid),\"from\":rn.get(rid,f\"R{rid}\")} for pid,rid in drops.items()],\n                \"picks\":[{\"round\":dp.get(\"round\"),\"season\":dp.get(\"season\"),\"from\":rn.get(dp.get(\"previous_owner_id\"),\"?\"),\"to\":rn.get(dp.get(\"owner_id\"),\"?\")} for dp in dps],\n            })\n    return txns\n\ndef esc(s): return str(s).replace('\"','\\\\\"').replace('\\n',' ')\n\nall_txns={}\nfor season,lid in sorted(NFL_LEAGUE_IDS.items()):\n    print(f\"\\nNFL {season}...\",file=sys.stderr)\n    rn,pn=build_maps(lid)\n    txns=fetch_txns(lid,rn,pn)\n    all_txns[season]=txns\n    print(f\"  {len(txns)} transactions\",file=sys.stderr)\n\nmgr_stats={}\ndef ensure(n):\n    if n not in mgr_stats: mgr_stats[n]={\"trades\":0,\"waivers\":0,\"freeAgents\":0,\"totalMoves\":0,\"playersAdded\":0}\nfor s,txns in all_txns.items():\n    for t in txns:\n        for m in t[\"managers\"]:\n            ensure(m)\n            if t[\"type\"]==\"trade\": mgr_stats[m][\"trades\"]+=1\n            elif t[\"type\"]==\"waiver\": mgr_stats[m][\"waivers\"]+=1\n            elif t[\"type\"]==\"free_agent\": mgr_stats[m][\"freeAgents\"]+=1\n            mgr_stats[m][\"totalMoves\"]+=1\n        for a in t[\"adds\"]: ensure(a[\"to\"]); mgr_stats[a[\"to\"]][\"playersAdded\"]+=1\nfor m in mgr_stats: mgr_stats[m][\"trades\"]=mgr_stats[m][\"trades\"]//2 if mgr_stats[m][\"trades\"]>1 else mgr_stats[m][\"trades\"]\n\nlines=[\"const NFL_TRANSACTIONS = {\"]\nfor s in sorted(all_txns):\n    lines.append(f\"  {s}: [\")\n    for t in all_txns[s]:\n        ms=\"[\"+\",\".join(f'\"{esc(m)}\"' for m in t[\"managers\"])+\"]\"\n        ad=\"[\"+\",\".join(f'{{player:\"{esc(a[\"player\"])}\",to:\"{esc(a[\"to\"])}\"}}' for a in t[\"adds\"])+\"]\"\n        dr=\"[\"+\",\".join(f'{{player:\"{esc(d[\"player\"])}\",from:\"{esc(d[\"from\"])}\"}}' for d in t[\"drops\"])+\"]\"\n        pk=\"[\"+\",\".join(f'{{round:{p.get(\"round\",\"?\")},season:{p.get(\"season\",\"?\")},from:\"{esc(p[\"from\"])}\",to:\"{esc(p[\"to\"])}\"}}' for p in t[\"picks\"])+\"]\"\n        lines.append(f'    {{week:{t[\"week\"]},type:\"{t[\"type\"]}\",managers:{ms},adds:{ad},drops:{dr},picks:{pk}}},')\n    lines.append(\"  ],\")\nlines.append(\"};\")\nlines.append(\"\")\nlines.append(\"const NFL_TRANSACTION_SUMMARY = {\")\nfor m,s in sorted(mgr_stats.items(),key=lambda x:-x[1][\"totalMoves\"]):\n    lines.append(f'  \"{esc(m)}\":{{trades:{s[\"trades\"]},waivers:{s[\"waivers\"]},freeAgents:{s[\"freeAgents\"]},totalMoves:{s[\"totalMoves\"]},playersAdded:{s[\"playersAdded\"]}}},')\nlines.append(\"};\")\nprint(\"\\n\".join(lines))\n",d:"Pulls all trades, waivers and FA moves from Sleeper.",w:"January \u2014 Step 2 of annual update"},'regenerate_manager_profiles.py':{e:"\"\"\"\nregenerate_manager_profiles.py\n================================\nRe-generates the DATA.managerProfiles narratives in App.jsx using the Anthropic API.\nRun this every 2-3 seasons or when a manager's story changes significantly.\n\nUsage:\n    python regenerate_manager_profiles.py\n\nRequires:\n    pip install anthropic\n    Set ANTHROPIC_API_KEY environment variable or paste key below.\n\nOutput:\n    Prints the updated managerProfiles block. Copy-paste it into App.jsx,\n    replacing the existing block (search: managerProfiles:).\n\"\"\"\n\nimport os, json, time\nimport anthropic\n\nAPI_KEY = os.environ.get(\"ANTHROPIC_API_KEY\") or \"paste-your-key-here\"\n\n# \u2500\u2500 Update these stats each season before re-running \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nMANAGER_STATS = {\n    \"Aaron Fay\": {\n        \"seasons\": \"2020\u20132025 (6 seasons)\", \"record\": \"37-46\", \"titles\": 0,\n        \"draft_day_titles\": 0, \"best_season\": \"2021 (10-4)\", \"worst_season\": \"2020 (5-8)\",\n        \"notable_picks\": \"Joe Burrow $2 \u2192 336pts (+195 ROI) in 2021. Daniel Jones + Baker Mayfield bust in 2020.\",\n        \"win_streaks\": \"Best win streak: 5 games\",\n        \"notes\": \"Best $1 pick average of any active manager. Oscillates between brilliance and inconsistency.\"\n    },\n    \"Eric Graef\": {\n        \"seasons\": \"2015\u20132025 (11 seasons)\", \"record\": \"85-63\", \"titles\": 1,\n        \"draft_day_titles\": 4, \"best_season\": \"2024 (championship)\", \"worst_season\": \"2016\",\n        \"notable_picks\": \"Baker Mayfield $1 \u2192 337pts in 2024 (+137 ROI, best $1 pick in history). Adrian Peterson bust 2016.\",\n        \"win_streaks\": \"Career best ~6 games\",\n        \"notes\": \"Four draft day podiums. Volume RB drafter. Quiet, consistent process across 11 seasons.\"\n    },\n    \"Greg Cady\": {\n        \"seasons\": \"2015\u20132025 (11 seasons)\", \"record\": \"76-72\", \"titles\": 3,\n        \"draft_day_titles\": 2, \"best_season\": \"2019 and 2024 (both championships)\", \"worst_season\": \"Several mid-table finishes\",\n        \"notable_picks\": \"Caleb Williams $4 in 2024. 2019 draft 13.42 pts/$ (best ever). Back-to-back +37/+39 ROI draft classes 2024-2025.\",\n        \"win_streaks\": \"8-game win streak (one of longest ever)\",\n        \"notes\": \"Most championships in league history (3). Cheapest QB philosophy. Instinct for breakouts.\"\n    },\n    \"Greg Mulder\": {\n        \"seasons\": \"2015\u20132025 (11 seasons)\", \"record\": \"79-69\", \"titles\": 2,\n        \"draft_day_titles\": 1, \"best_season\": \"2017 and 2023 (championships)\", \"worst_season\": \"2015 (last place debut)\",\n        \"notable_picks\": \"Jalen Hurts + Deebo Samuel both +160 ROI same class (2021). David Johnson elite 2016 then catastrophic bust 2017.\",\n        \"win_streaks\": \"Career best ~7 games\",\n        \"notes\": \"Most $1 production of any active manager. High bust rate. Process works brilliantly when picks hit.\"\n    },\n    \"James Lazette\": {\n        \"seasons\": \"2016\u20132025 (10 seasons)\", \"record\": \"76-59\", \"titles\": 1,\n        \"draft_day_titles\": 2, \"best_season\": \"2023 (14.36 pts/$ \u2014 best full-spend draft in history)\", \"worst_season\": \"2022\",\n        \"notable_picks\": \"2023 draft class: 14.36 pts/$ on full $200 budget \u2014 best ever recorded in the league. 2020 championship season 10-3.\",\n        \"win_streaks\": \"6-game win streak\",\n        \"notes\": \"Most systematic manager in the league. Best average draft day rank among multi-season managers.\"\n    },\n    \"Joshua Van Groningen\": {\n        \"seasons\": \"2020\u20132025 (6 seasons)\", \"record\": \"42-41\", \"titles\": 2,\n        \"draft_day_titles\": 1, \"best_season\": \"2021 and 2022 (back-to-back championships)\", \"worst_season\": \"2023\",\n        \"notable_picks\": \"2024 class 13.18 pts/$ (best that year). Javonte Williams bust 2022 (-173 ROI worst pick that year).\",\n        \"win_streaks\": \"Career best ~6 games\",\n        \"notes\": \"Two titles in six seasons. Best career ROI of any active manager. High-variance TE-first rosters.\"\n    },\n    \"Matthew Van Groningen\": {\n        \"seasons\": \"2016\u20132025 (10 seasons)\", \"record\": \"63-72\", \"titles\": 0,\n        \"draft_day_titles\": 0, \"best_season\": \"2018 (15.58 pts/$ on $88 budget, second-best ever)\", \"worst_season\": \"2024-2025 (back-to-back negative ROI)\",\n        \"notable_picks\": \"Aaron Rodgers $5 \u2192 399pts 2020 (+185 ROI). Trevor Lawrence $30+ \u2192 bust 2024 (-177 ROI). 12-game win streak (second-longest ever).\",\n        \"win_streaks\": \"12-game win streak \u2014 second longest in league history\",\n        \"notes\": \"Big-swing manager. Tools for greatness, zero titles. Recently pivoted to RB concentration with poor results.\"\n    },\n    \"Ross Van Groningen\": {\n        \"seasons\": \"2015\u20132025 (11 seasons, commissioner)\", \"record\": \"81-67\", \"titles\": 0,\n        \"draft_day_titles\": 0, \"best_season\": \"2023 (10-4, runner-up)\", \"worst_season\": \"2021 (7-9, last in pts/$)\",\n        \"notable_picks\": \"Alvin Kamara $58 \u2192 +160 ROI 2020. James Conner $36 \u2192 29pts 2025 (most expensive recent bust). 2021: 7.86 pts/$ last in league.\",\n        \"win_streaks\": \"Career best ~5 games\",\n        \"notes\": \"Commits hardest to RB ($25 avg) of any active manager. 11 seasons, zero titles. 2023 finals appearance.\"\n    },\n    \"Steve Vander Molen\": {\n        \"seasons\": \"2015\u20132025 (11 seasons)\", \"record\": \"74-74\", \"titles\": 0,\n        \"draft_day_titles\": 1, \"best_season\": \"2025 (13-1, best regular season record in history)\", \"worst_season\": \"2021\",\n        \"notable_picks\": \"Carson Palmer $1 \u2192 314pts 2015. Matthew Stafford +133 ROI 2021. 14-game win streak (longest ever).\",\n        \"win_streaks\": \"14-game win streak \u2014 the all-time record\",\n        \"notes\": \"Best career ROI of any 10+ season manager (+14.4 avg). Zero titles. 2025: 13-1 but no championship.\"\n    },\n    \"Trey Hugen\": {\n        \"seasons\": \"2015\u20132025 (11 seasons)\", \"record\": \"82-66\", \"titles\": 1,\n        \"draft_day_titles\": 2, \"best_season\": \"2018 (greatest draft class in history: 19.8 pts/$)\", \"worst_season\": \"2022-2023\",\n        \"notable_picks\": \"Patrick Mahomes $6 \u2192 448pts 2018 (anchored best draft ever). Back-to-back draft day titles 2017-2018.\",\n        \"win_streaks\": \"9-game win streak\",\n        \"notes\": \"Highest scoring variance of any active manager. 2018 Mahomes draft the gold standard. Chasing that peak ever since.\"\n    },\n    \"Tyler Goslinga\": {\n        \"seasons\": \"2018\u20132025 (8 seasons)\", \"record\": \"59-50\", \"titles\": 1,\n        \"draft_day_titles\": 2, \"best_season\": \"2022 (championship, 13.01 pts/$)\", \"worst_season\": \"2018 (last place debut)\",\n        \"notable_picks\": \"Lamar Jackson $5 \u2192 +225 ROI 2019 (greatest value pick in league history). Brock Purdy $1 \u2192 330pts 2023. Jimmy Garoppolo $11 \u2192 -211 ROI 2018 (worst debut pick).\",\n        \"win_streaks\": \"7-game win streak\",\n        \"notes\": \"Last-to-first trajectory. Three consecutive draft podiums. Best $1 pick average active. TE-first builder.\"\n    },\n    \"Vance Sipma\": {\n        \"seasons\": \"2016\u20132025 (10 seasons)\", \"record\": \"59-76\", \"titles\": 0,\n        \"draft_day_titles\": 0, \"best_season\": \"2024 (11-3, runner-up)\", \"worst_season\": \"2018\",\n        \"notable_picks\": \"Marcus Mariota 2018 (-261 ROI \u2014 worst single pick in league history). Jordan Love $1 \u2192 256pts 2023. 2024 runner-up.\",\n        \"win_streaks\": \"8-game win streak\",\n        \"notes\": \"Spends more on QB than anyone. 2024 breakout (11-3, runner-up) after years of struggle. 59-76 overall.\"\n    },\n}\n\nPROMPT_TEMPLATE = \"\"\"You are writing a manager profile for a fantasy football league called the No Fun League (NFL), based in Ripon, California. This is a 12-team, head-to-head, auction draft league that has run since 2015. The league uses Yahoo (2015-2021) and Sleeper (2022+), non-PPR then PPR, $200 auction budget.\n\nManager: {name}\nCareer stats: {stats}\n\nWrite a manager profile with exactly these 5 fields as a JSON object:\n- story: 3-4 sentence career narrative covering their journey, arc, and where they stand\n- style: 2-3 sentences on how they draft and manage (spending tendencies, philosophy, risk tolerance)\n- moments: 2-3 sentences covering their defining highs and lows with specific picks, seasons, records\n- rivalries: 2 sentences on their head-to-head history and notable matchups\n- legacy: 1-2 sentences summarizing their legacy with their record and what defines them\n\nRequirements:\n- Use specific numbers, pick prices, ROI figures, and records from the stats provided\n- Write in third person, present tense for legacy, past/mixed for others\n- Voice should be like a sharp sports journalist \u2014 no fluff, no filler\n- Each field must be a single paragraph (no bullet points, no line breaks within a field)\n- Return ONLY valid JSON, nothing else \u2014 no markdown, no preamble\n\nExample format:\n{{\"story\": \"...\", \"style\": \"...\", \"moments\": \"...\", \"rivalries\": \"...\", \"legacy\": \"...\"}}\"\"\"\n\n\ndef generate_profile(client, name, stats):\n    prompt = PROMPT_TEMPLATE.format(name=name, stats=json.dumps(stats, indent=2))\n    message = client.messages.create(\n        model=\"claude-sonnet-4-5\",\n        max_tokens=1000,\n        messages=[{\"role\": \"user\", \"content\": prompt}]\n    )\n    raw = message.content[0].text.strip()\n    # Strip markdown fences if present\n    if raw.startswith(\"```\"):\n        raw = raw.split(\"```\")[1]\n        if raw.startswith(\"json\"):\n            raw = raw[4:]\n    return json.loads(raw.strip())\n\n\ndef main():\n    client = anthropic.Anthropic(api_key=API_KEY)\n    profiles = {}\n\n    print(\"Regenerating NFL manager profiles...\\n\")\n    for name, stats in MANAGER_STATS.items():\n        print(f\"  {name}...\", end=\" \", flush=True)\n        try:\n            profiles[name] = generate_profile(client, name, stats)\n            print(\"\u2713\")\n        except Exception as e:\n            print(f\"\u2717  {e}\")\n            profiles[name] = None\n        time.sleep(0.5)\n\n    # Build output block\n    print(\"\\n\\n\" + \"=\" * 60)\n    print(\"Copy everything below into App.jsx,\")\n    print(\"replacing the existing managerProfiles block:\")\n    print(\"=\" * 60 + \"\\n\")\n\n    print(\"  managerProfiles: {\")\n    for name, p in profiles.items():\n        if not p:\n            print(f\"    // \u26a0 {name}: generation failed \u2014 keep existing entry\")\n            continue\n        def esc(s):\n            return s.replace(\"\\\\\", \"\\\\\\\\\").replace('\"', '\\\\\"')\n        print(f'    \"{name}\": {{')\n        print(f'      story:     \"{esc(p[\"story\"])}\",')\n        print(f'      style:     \"{esc(p[\"style\"])}\",')\n        print(f'      moments:   \"{esc(p[\"moments\"])}\",')\n        print(f'      rivalries:  \"{esc(p[\"rivalries\"])}\",')\n        print(f'      legacy:    \"{esc(p[\"legacy\"])}\",')\n        print(f'    }},')\n    print(\"  },\")\n\n\nif __name__ == \"__main__\":\n    main()\n",d:"Re-generates AI career narratives. Needs ANTHROPIC_API_KEY.",w:"Every 2\u20133 seasons"},'regenerate_draft_profiles.js':{e:"/**\n * regenerate_draft_profiles.js\n * ==============================\n * Re-generates the DATA.draftProfiles AI narratives in App.jsx.\n * Run annually after the season ends, or when you want fresh copy.\n *\n * Usage (Node.js):\n *   npm install @anthropic-ai/sdk\n *   ANTHROPIC_API_KEY=your-key node regenerate_draft_profiles.js\n *\n * Output: Paste the printed draftProfiles block into App.jsx,\n *         replacing the existing one (search: draftProfiles:).\n */\n\nconst Anthropic = require(\"@anthropic-ai/sdk\");\nconst client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });\n\n// \u2500\u2500 Update these stats each season before re-running \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nconst MANAGER_DRAFT_STATS = {\n  \"Eric Graef\": {\n    seasons: \"2015\u20132025 (11 seasons)\",\n    draftDayTitles: 4,\n    avgBid: \"$18\",\n    avgROI: \"+14.2 pts/$\",\n    bestPick: \"Baker Mayfield $1 \u2192 337pts in 2024 (+137 ROI \u2014 best $1 pick in history)\",\n    worstPick: \"Adrian Peterson 2016 (catastrophic bust)\",\n    notes: \"Volume RB drafter. Most draft-day podium finishes (4). Quiet, process-first approach.\",\n  },\n  \"Greg Cady\": {\n    seasons: \"2015\u20132025 (11 seasons)\",\n    draftDayTitles: 2,\n    avgBid: \"$14\",\n    avgROI: \"+18.6 pts/$\",\n    bestPick: \"2019 draft 13.42 pts/$ (best efficiency ever). Back-to-back +37/+39 ROI classes 2024\u20132025.\",\n    worstPick: \"Multiple overpriced veterans mid-career\",\n    notes: \"3 championships. Cheapest QB drafter. Best instinct for breakouts. Most titles in league history.\",\n  },\n  \"Greg Mulder\": {\n    seasons: \"2015\u20132025 (11 seasons)\",\n    draftDayTitles: 1,\n    avgBid: \"$12\",\n    avgROI: \"+21.3 pts/$\",\n    bestPick: \"Jalen Hurts + Deebo Samuel both +160 ROI same class (2021). Highest $1 production ever.\",\n    worstPick: \"David Johnson elite 2016 \u2192 catastrophic bust 2017 same team\",\n    notes: \"2 championships. High bust rate balanced by elite hits. Most $1 production of any active manager.\",\n  },\n  \"James Lazette\": {\n    seasons: \"2016\u20132025 (10 seasons)\",\n    draftDayTitles: 2,\n    avgBid: \"$22\",\n    avgROI: \"+16.8 pts/$\",\n    bestPick: \"2023 class: 14.36 pts/$ on full $200 budget \u2014 best full-spend draft ever recorded\",\n    worstPick: \"2022 class underperformed across the board\",\n    notes: \"Most systematic drafter in the league. Spends the most on average. Best overall draft record among 10+ season managers.\",\n  },\n  \"Joshua Van Groningen\": {\n    seasons: \"2020\u20132025 (6 seasons)\",\n    draftDayTitles: 1,\n    avgBid: \"$16\",\n    avgROI: \"+22.1 pts/$\",\n    bestPick: \"2024 class 13.18 pts/$ (best that year). Best career ROI of any active manager.\",\n    worstPick: \"Javonte Williams $40+ in 2022 (\u2212173 ROI, worst that year)\",\n    notes: \"2 back-to-back championships (2021, 2022). Best career ROI. High-variance TE-first rosters.\",\n  },\n  \"Matthew Van Groningen\": {\n    seasons: \"2016\u20132025 (10 seasons)\",\n    draftDayTitles: 0,\n    avgBid: \"$19\",\n    avgROI: \"+8.4 pts/$\",\n    bestPick: \"Aaron Rodgers $5 \u2192 399pts in 2020 (+185 ROI). 2018: 15.58 pts/$ on $88 budget (2nd-best ever).\",\n    worstPick: \"Trevor Lawrence $30+ in 2024 (\u2212177 ROI). Back-to-back negative ROI classes 2024\u20132025.\",\n    notes: \"Big-swing manager. 12-game win streak (2nd-longest ever). Zero titles despite tools for greatness.\",\n  },\n  \"Ross Van Groningen\": {\n    seasons: \"2015\u20132025 (11 seasons, commissioner)\",\n    draftDayTitles: 0,\n    avgBid: \"$25\",\n    avgROI: \"+9.2 pts/$\",\n    bestPick: \"Alvin Kamara $58 \u2192 +160 ROI in 2020. Consistently finds $1 contributors.\",\n    worstPick: \"James Conner $36 \u2192 29pts in 2025 (most expensive recent bust). 2021: 7.86 pts/$ (last in league).\",\n    notes: \"Commits hardest to RB ($25 avg). 11 seasons, zero titles. 2023 finals appearance (runner-up).\",\n  },\n  \"Steve Vander Molen\": {\n    seasons: \"2015\u20132025 (11 seasons)\",\n    draftDayTitles: 1,\n    avgBid: \"$14\",\n    avgROI: \"+14.4 pts/$\",\n    bestPick: \"Carson Palmer $1 \u2192 314pts in 2015. Matthew Stafford +133 ROI in 2021. Best career ROI of 10+ season managers.\",\n    worstPick: \"Multiple mid-tier busts mid-career\",\n    notes: \"Best career ROI of any 10+ season manager. Zero titles. 2025: 13-1 regular season record, no championship.\",\n  },\n  \"Trey Hugen\": {\n    seasons: \"2015\u20132025 (11 seasons)\",\n    draftDayTitles: 2,\n    avgBid: \"$17\",\n    avgROI: \"+16.1 pts/$\",\n    bestPick: \"Patrick Mahomes $6 \u2192 448pts in 2018 (anchored greatest draft class ever: 19.8 pts/$)\",\n    worstPick: \"Multiple high-spend busts in 2022\u20132023\",\n    notes: \"1 championship. Back-to-back draft day titles 2017\u20132018. Highest scoring variance. Chasing the 2018 Mahomes peak.\",\n  },\n  \"Tyler Goslinga\": {\n    seasons: \"2018\u20132025 (8 seasons)\",\n    draftDayTitles: 2,\n    avgBid: \"$13\",\n    avgROI: \"+18.9 pts/$\",\n    bestPick: \"Lamar Jackson $5 \u2192 +225 ROI in 2019 (greatest value pick in league history). Brock Purdy $1 \u2192 330pts in 2023.\",\n    worstPick: \"Jimmy Garoppolo $11 \u2192 \u2212211 ROI in 2018 (worst debut pick).\",\n    notes: \"1 championship. Last-to-first arc. Three consecutive draft podiums. Best $1 pick average of active managers.\",\n  },\n  \"Aaron Fay\": {\n    seasons: \"2020\u20132025 (6 seasons)\",\n    draftDayTitles: 0,\n    avgBid: \"$11\",\n    avgROI: \"+13.6 pts/$\",\n    bestPick: \"Joe Burrow $2 \u2192 336pts (+195 ROI) in 2021. Best $1 pick average of any active manager.\",\n    worstPick: \"Daniel Jones + Baker Mayfield double bust in 2020\",\n    notes: \"Zero titles in 6 seasons. Oscillates between brilliance and inconsistency. Best $1 pick efficiency.\",\n  },\n  \"Vance Sipma\": {\n    seasons: \"2016\u20132025 (10 seasons)\",\n    draftDayTitles: 0,\n    avgBid: \"$24\",\n    avgROI: \"+7.1 pts/$\",\n    bestPick: \"Jordan Love $1 \u2192 256pts in 2023. 2024 runner-up season.\",\n    worstPick: \"Marcus Mariota 2018 (\u2212261 ROI \u2014 worst single pick in league history). Spends most on QB.\",\n    notes: \"Zero titles. Spends more on QB than anyone. 2024 breakout (11-3, runner-up) after years of struggle.\",\n  },\n};\n\nconst PROMPT_TEMPLATE = `You are writing a draft day profile for a fantasy football manager in the No Fun League (NFL), a 12-team head-to-head auction draft league based in Ripon, California. $200 budget, non-PPR through 2021 then PPR.\n\nManager: {name}\nDraft stats: {stats}\n\nWrite a profile with exactly 4 fields as JSON:\n- overview: 2-3 sentences on their overall draft philosophy and approach\n- bestPick: 1-2 sentences on their best or most representative pick(s) with specific prices and ROI\n- worstPick: 1-2 sentences on their biggest draft mistake(s) with specific context\n- style: 1-2 sentences on their signature tendencies \u2014 what they reliably do differently from others\n\nRequirements:\n- Use specific numbers from the stats (prices, ROI, years)\n- Third person, present tense for style/overview, past tense for specific picks\n- Sharp sports journalist voice \u2014 specific, no filler\n- Return ONLY valid JSON, no markdown, no preamble\n\nExample: {\"overview\": \"...\", \"bestPick\": \"...\", \"worstPick\": \"...\", \"style\": \"...\"}`;\n\nasync function generateProfile(name, stats) {\n  const prompt = PROMPT_TEMPLATE.replace(\"{name}\", name).replace(\n    \"{stats}\",\n    JSON.stringify(stats, null, 2)\n  );\n  const message = await client.messages.create({\n    model: \"claude-sonnet-4-5\",\n    max_tokens: 800,\n    messages: [{ role: \"user\", content: prompt }],\n  });\n  let raw = message.content[0].text.trim();\n  if (raw.startsWith(\"```\")) {\n    raw = raw.split(\"```\")[1];\n    if (raw.startsWith(\"json\")) raw = raw.slice(4);\n  }\n  return JSON.parse(raw.trim());\n}\n\nasync function main() {\n  const profiles = {};\n  console.log(\"Regenerating NFL draft profiles...\\n\");\n\n  for (const [name, stats] of Object.entries(MANAGER_DRAFT_STATS)) {\n    process.stdout.write(`  ${name}... `);\n    try {\n      profiles[name] = await generateProfile(name, stats);\n      console.log(\"\u2713\");\n    } catch (e) {\n      console.log(`\u2717  ${e.message}`);\n      profiles[name] = null;\n    }\n    await new Promise((r) => setTimeout(r, 500));\n  }\n\n  console.log(\"\\n\\n\" + \"=\".repeat(60));\n  console.log(\"Copy everything below into App.jsx,\");\n  console.log(\"replacing the existing draftProfiles block:\");\n  console.log(\"=\".repeat(60) + \"\\n\");\n\n  const esc = (s) => s.replace(/\\\\/g, \"\\\\\\\\\").replace(/\"/g, '\\\\\"');\n\n  console.log(\"  draftProfiles: {\");\n  for (const [name, p] of Object.entries(profiles)) {\n    if (!p) {\n      console.log(`    // \u26a0 ${name}: generation failed \u2014 keep existing entry`);\n      continue;\n    }\n    console.log(`    \"${name}\": {`);\n    console.log(`      overview:  \"${esc(p.overview)}\",`);\n    console.log(`      bestPick:  \"${esc(p.bestPick)}\",`);\n    console.log(`      worstPick: \"${esc(p.worstPick)}\",`);\n    console.log(`      style:     \"${esc(p.style)}\",`);\n    console.log(`    },`);\n  }\n  console.log(\"  },\");\n}\n\nmain().catch(console.error);\n",d:"Re-generates AI draft profiles (Node.js). Needs ANTHROPIC_API_KEY.",w:"Every 2\u20133 seasons"}};
+const _NFL_A={'recalculate_h2h.py':{e:"\"\"\"\nNo Fun League \u2014 H2H Recalculator\n=================================\nPulls matchup data from the Sleeper API for all Sleeper-era seasons (2022\u20132025)\nand recomputes head-to-head records (W, L, PF, PA) for every manager pair.\n\nNOTE: Sleeper only covers 2022+. Yahoo era (2015\u20132021) matchups are NOT\naccessible via this API and must be handled separately.\n\nUSAGE:\n  1. Fill in LEAGUE_IDS below with your Sleeper league ID for each year.\n     Find it in the Sleeper URL: https://sleeper.app/leagues/<LEAGUE_ID>\n  2. Run:  python3 recalculate_h2h.py\n  3. The script prints a JS snippet ready to paste into the dashboard.\n\nSleeper API docs: https://docs.sleeper.com\n\"\"\"\n\nimport json\nimport ssl\nimport urllib.request\nfrom collections import defaultdict\n\n# Bypass SSL verification (needed on corporate networks)\nssl_ctx = ssl.create_default_context()\nssl_ctx.check_hostname = False\nssl_ctx.verify_mode = ssl.CERT_NONE\n\n# \u2500\u2500 CONFIG \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nLEAGUE_IDS = {\n    2022: \"840017898612338688\",\n    2023: \"980152745451630592\",\n    2024: \"1113519608654413824\",\n    2025: \"1230239678033055744\",\n}\n\n# Map Sleeper display names \u2192 canonical dashboard names.\n# Edit if any display names differ from what Sleeper shows.\nNAME_MAP = {\n    \"Aaron Fay\":               \"Aaron Fay\",\n    \"Eric Graef\":              \"Eric Graef\",\n    \"Greg Cady\":               \"Greg Cady\",\n    \"Greg Mulder\":             \"Greg Mulder\",\n    \"James Lazette\":           \"James Lazette\",\n    \"Joshua Van Groningen\":    \"Joshua Van Groningen\",\n    \"Christian Manes\":   \"Christian Manes\",\n    \"Ross Van Groningen\":      \"Ross Van Groningen\",\n    \"Steve Vander Molen\":      \"Steve Vander Molen\",\n    \"Trey Hugen\":              \"Trey Hugen\",\n    \"Tyler Goslinga\":          \"Tyler Goslinga\",\n    \"Vance Sipma\":             \"Vance Sipma\",\n    # Alumni \u2014 add if you want their Sleeper-era records too\n    \"Ben de Ruiter\":           \"Ben de Ruiter\",\n    \"Zac Dewey\":               \"Zac Dewey\",\n    \"Jonathon Israel\":         \"Jonathon Israel\",\n    \"Joshua Van Groningen\":    \"Joshua Van Groningen\",\n    \"Spencer Hower\":           \"Spencer Hower\",\n}\n# \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n\nBASE = \"https://api.sleeper.app/v1\"\n\ndef get(url):\n    with urllib.request.urlopen(url, context=ssl_ctx) as r:\n        return json.loads(r.read())\n\ndef fetch_users(league_id):\n    \"\"\"Returns {user_id: display_name}\"\"\"\n    rosters  = get(f\"{BASE}/league/{league_id}/rosters\")\n    users    = get(f\"{BASE}/league/{league_id}/users\")\n    uid_name = {u[\"user_id\"]: u.get(\"display_name\", u[\"user_id\"]) for u in users}\n    # Map roster_id \u2192 display_name\n    roster_map = {}\n    for r in rosters:\n        uid = r.get(\"owner_id\")\n        roster_map[r[\"roster_id\"]] = uid_name.get(uid, f\"Unknown({uid})\")\n    return roster_map\n\ndef fetch_matchups(league_id, num_weeks=14):\n    \"\"\"Returns list of (roster_id_a, pts_a, roster_id_b, pts_b) for all reg-season matchups.\"\"\"\n    games = []\n    for week in range(1, num_weeks + 1):\n        data = get(f\"{BASE}/league/{league_id}/matchups/{week}\")\n        if not data:\n            break\n        # Group by matchup_id\n        by_matchup = defaultdict(list)\n        for entry in data:\n            by_matchup[entry[\"matchup_id\"]].append(entry)\n        for mid, entries in by_matchup.items():\n            if len(entries) == 2:\n                a, b = entries\n                games.append((\n                    a[\"roster_id\"], a.get(\"points\", 0) or 0,\n                    b[\"roster_id\"], b.get(\"points\", 0) or 0,\n                ))\n    return games\n\ndef fetch_playoff_weeks(league_id):\n    \"\"\"Return the week number the playoffs start so we can exclude them.\"\"\"\n    info = get(f\"{BASE}/league/{league_id}\")\n    settings = info.get(\"settings\", {})\n    # playoff_week_start is 1-indexed\n    return settings.get(\"playoff_week_start\", 15)\n\n# \u2500\u2500 MAIN \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n# h2h[name_a][name_b] = {\"W\": 0, \"L\": 0, \"PF\": 0.0, \"PA\": 0.0}\nh2h = defaultdict(lambda: defaultdict(lambda: {\"W\": 0, \"L\": 0, \"PF\": 0.0, \"PA\": 0.0}))\n\nfor year, lid in sorted(LEAGUE_IDS.items()):\n    if lid.startswith(\"YOUR_\"):\n        print(f\"  [SKIP] {year} \u2014 no league ID provided\")\n        continue\n    print(f\"Fetching {year} (league {lid})...\")\n    roster_map = fetch_users(lid)\n    playoff_start = fetch_playoff_weeks(lid)\n    matchups = fetch_matchups(lid, num_weeks=playoff_start - 1)  # reg season only\n    print(f\"  {len(roster_map)} rosters, {len(matchups)} reg-season matchups\")\n\n    for rid_a, pts_a, rid_b, pts_b in matchups:\n        raw_a = roster_map.get(rid_a, \"\")\n        raw_b = roster_map.get(rid_b, \"\")\n        name_a = NAME_MAP.get(raw_a, raw_a)\n        name_b = NAME_MAP.get(raw_b, raw_b)\n\n        if not name_a or not name_b:\n            continue\n\n        if pts_a > pts_b:\n            h2h[name_a][name_b][\"W\"] += 1\n            h2h[name_b][name_a][\"L\"] += 1\n        else:\n            h2h[name_b][name_a][\"W\"] += 1\n            h2h[name_a][name_b][\"L\"] += 1\n\n        h2h[name_a][name_b][\"PF\"] += pts_a\n        h2h[name_a][name_b][\"PA\"] += pts_b\n        h2h[name_b][name_a][\"PF\"] += pts_b\n        h2h[name_b][name_a][\"PA\"] += pts_a\n\n# \u2500\u2500 OUTPUT \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nprint(\"\\n\\n// \u2500\u2500 PASTE THIS INTO THE DASHBOARD (replace the h2h: {...} block) \u2500\u2500\")\nprint(\"  h2h: {\")\nfor mgr_a in sorted(h2h.keys()):\n    opponents = h2h[mgr_a]\n    inner = \", \".join(\n        f'\"{opp}\":{{W:{v[\"W\"]},L:{v[\"L\"]},PF:{round(v[\"PF\"],2)},PA:{round(v[\"PA\"],2)}}}'\n        for opp, v in sorted(opponents.items())\n    )\n    print(f'    \"{mgr_a}\": {{ {inner} }},')\nprint(\"  },\")\n\n# Also print a summary for verification\nprint(\"\\n\\n// \u2500\u2500 VERIFICATION SUMMARY \u2500\u2500\")\nprint(f\"{'Pair':<48} {'W-L':>8} {'Total':>6}\")\nprint(\"-\" * 65)\nseen = set()\nfor a in sorted(h2h.keys()):\n    for b in sorted(h2h[a].keys()):\n        key = tuple(sorted([a, b]))\n        if key in seen:\n            continue\n        seen.add(key)\n        wa = h2h[a][b][\"W\"]\n        la = h2h[a][b][\"L\"]\n        print(f\"{a} vs {b:<28} {wa}-{la:>3} {wa+la:>6}\")\n",d:"Recalculates all H2H records from Sleeper API.",w:"January \u2014 Step 2 of annual update"},'playoff_data.py':{e:"\"\"\"\nNo Fun League \u2014 Playoff Database Builder (2015\u20132025)\n=====================================================\nFetches playoff bracket data from Yahoo (2015\u20132021) and Sleeper (2022\u20132025).\nOutputs a complete playoff JS block for the dashboard covering:\n  - Individual game log (year, round, bracket, opponent, score, W/L)\n  - Overall playoff W/L/PF/PA per manager\n  - Playoff h2h matchup records\n  - Championship/finals appearances and wins\n\"\"\"\n\nimport json, ssl, urllib.request, urllib.parse, webbrowser, base64\nfrom collections import defaultdict\n\n# \u2500\u2500 CREDENTIALS \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nYAHOO_CLIENT_ID     = \"dj0yJmk9TURCODVkazJiYWQyJmQ9WVdrOVJ6RnZSalpDZGtRbWNHbzlNQT09JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTFj\"\nYAHOO_CLIENT_SECRET = \"00a057aeb25c4a3759aff5addeee9a5984fb772d\"\nREDIRECT_URI        = \"https://localhost\"\n\n# \u2500\u2500 LEAGUE KEYS \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nYAHOO_LEAGUES = {\n    2015: \"348.l.883924\",\n    2016: \"359.l.475003\",\n    2017: \"371.l.331879\",\n    2018: \"380.l.162988\",\n    2019: \"390.l.140437\",\n    2020: \"399.l.648483\",\n    2021: \"406.l.683609\",\n}\n\nSLEEPER_LEAGUES = {\n    2022: \"840017898612338688\",\n    2023: \"980152745451630592\",\n    2024: \"1113519608654413824\",\n    2025: \"1230239678033055744\",\n}\n\n# \u2500\u2500 TEAM KEY \u2192 MANAGER NAME (Yahoo) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nTEAM_KEY_MAP = {\n    \"348.l.883924.t.1\": \"Ross Van Groningen\", \"348.l.883924.t.2\": \"Greg Mulder\",\n    \"348.l.883924.t.3\": \"Trey Hugen\",         \"348.l.883924.t.4\": \"Greg Cady\",\n    \"348.l.883924.t.5\": \"Tim Hoekstra\",        \"348.l.883924.t.6\": \"Steve Vander Molen\",\n    \"348.l.883924.t.7\": \"Tommy Van Groningen\", \"348.l.883924.t.8\": \"Casey Rhoda\",\n    \"348.l.883924.t.9\": \"Jonathon Israel\",     \"348.l.883924.t.10\": \"Eric Graef\",\n    \"359.l.475003.t.1\": \"Ross Van Groningen\",  \"359.l.475003.t.2\": \"Greg Mulder\",\n    \"359.l.475003.t.3\": \"Steve Vander Molen\",  \"359.l.475003.t.4\": \"Trey Hugen\",\n    \"359.l.475003.t.5\": \"Greg Cady\",           \"359.l.475003.t.6\": \"Eric Graef\",\n    \"359.l.475003.t.7\": \"Vance Sipma\",         \"359.l.475003.t.8\": \"Spencer Hower\",\n    \"359.l.475003.t.9\": \"James Lazette\",       \"359.l.475003.t.10\": \"Christian Manes\",\n    \"359.l.475003.t.11\": \"Ben de Ruiter\",      \"359.l.475003.t.12\": \"Jonathon Israel\",\n    \"371.l.331879.t.1\": \"Ross Van Groningen\",  \"371.l.331879.t.2\": \"Greg Mulder\",\n    \"371.l.331879.t.3\": \"Steve Vander Molen\",  \"371.l.331879.t.4\": \"Trey Hugen\",\n    \"371.l.331879.t.5\": \"Greg Cady\",           \"371.l.331879.t.6\": \"Eric Graef\",\n    \"371.l.331879.t.7\": \"Spencer Hower\",       \"371.l.331879.t.8\": \"James Lazette\",\n    \"371.l.331879.t.9\": \"Christian Manes\",\"371.l.331879.t.10\": \"Ben de Ruiter\",\n    \"371.l.331879.t.11\": \"Jonathon Israel\",    \"371.l.331879.t.12\": \"Vance Sipma\",\n    \"380.l.162988.t.1\": \"Ross Van Groningen\",  \"380.l.162988.t.2\": \"Greg Mulder\",\n    \"380.l.162988.t.3\": \"Ben de Ruiter\",       \"380.l.162988.t.4\": \"James Lazette\",\n    \"380.l.162988.t.5\": \"Trey Hugen\",          \"380.l.162988.t.6\": \"Christian Manes\",\n    \"380.l.162988.t.7\": \"Eric Graef\",          \"380.l.162988.t.8\": \"Vance Sipma\",\n    \"380.l.162988.t.9\": \"Greg Cady\",           \"380.l.162988.t.10\": \"Steve Vander Molen\",\n    \"380.l.162988.t.11\": \"Zac Dewey\",          \"380.l.162988.t.12\": \"Tyler Goslinga\",\n    \"390.l.140437.t.1\": \"Ross Van Groningen\",  \"390.l.140437.t.2\": \"Zac Dewey\",\n    \"390.l.140437.t.3\": \"Eric Graef\",          \"390.l.140437.t.4\": \"Trey Hugen\",\n    \"390.l.140437.t.5\": \"Ben de Ruiter\",       \"390.l.140437.t.6\": \"Tyler Goslinga\",\n    \"390.l.140437.t.7\": \"Vance Sipma\",         \"390.l.140437.t.8\": \"Greg Cady\",\n    \"390.l.140437.t.9\": \"James Lazette\",       \"390.l.140437.t.10\": \"Steve Vander Molen\",\n    \"390.l.140437.t.11\": \"Christian Manes\",\"390.l.140437.t.12\": \"Greg Mulder\",\n    \"399.l.648483.t.1\": \"Ross Van Groningen\",  \"399.l.648483.t.2\": \"Zac Dewey\",\n    \"399.l.648483.t.3\": \"Eric Graef\",          \"399.l.648483.t.4\": \"Trey Hugen\",\n    \"399.l.648483.t.5\": \"Ben de Ruiter\",       \"399.l.648483.t.6\": \"Tyler Goslinga\",\n    \"399.l.648483.t.7\": \"Vance Sipma\",         \"399.l.648483.t.8\": \"Greg Cady\",\n    \"399.l.648483.t.9\": \"James Lazette\",       \"399.l.648483.t.10\": \"Steve Vander Molen\",\n    \"399.l.648483.t.11\": \"Christian Manes\",\"399.l.648483.t.12\": \"Greg Mulder\",\n    \"399.l.648483.t.13\": \"Joshua Van Groningen\",\"399.l.648483.t.14\": \"Aaron Fay\",\n    \"406.l.683609.t.1\": \"Ross Van Groningen\",  \"406.l.683609.t.2\": \"Zac Dewey\",\n    \"406.l.683609.t.3\": \"Eric Graef\",          \"406.l.683609.t.4\": \"Trey Hugen\",\n    \"406.l.683609.t.5\": \"Ben de Ruiter\",       \"406.l.683609.t.6\": \"Tyler Goslinga\",\n    \"406.l.683609.t.7\": \"Vance Sipma\",         \"406.l.683609.t.8\": \"Greg Cady\",\n    \"406.l.683609.t.9\": \"James Lazette\",       \"406.l.683609.t.10\": \"Steve Vander Molen\",\n    \"406.l.683609.t.11\": \"Christian Manes\",\"406.l.683609.t.12\": \"Greg Mulder\",\n    \"406.l.683609.t.13\": \"Joshua Van Groningen\",\"406.l.683609.t.14\": \"Aaron Fay\",\n}\n\n# \u2500\u2500 SSL \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nssl_ctx = ssl.create_default_context()\nssl_ctx.check_hostname = False\nssl_ctx.verify_mode = ssl.CERT_NONE\n\ndef http_get(url, headers=None):\n    req = urllib.request.Request(url, headers=headers or {})\n    with urllib.request.urlopen(req, context=ssl_ctx) as r:\n        return r.read()\n\ndef http_post(url, data, headers=None):\n    req = urllib.request.Request(url, data=urllib.parse.urlencode(data).encode(), headers=headers or {})\n    with urllib.request.urlopen(req, context=ssl_ctx) as r:\n        return r.read()\n\n# \u2500\u2500 YAHOO OAUTH \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nauth_url = (\n    \"https://api.login.yahoo.com/oauth2/request_auth\"\n    f\"?client_id={YAHOO_CLIENT_ID}&redirect_uri={urllib.parse.quote(REDIRECT_URI)}\"\n    \"&response_type=code&language=en-us\"\n)\nprint(\"Opening browser for Yahoo login...\")\nwebbrowser.open(auth_url)\nprint(f\"\\nIf browser didn't open: {auth_url}\\n\")\nprint(\"After approving, paste the full redirect URL here:\")\nredirect_url = input(\"> \").strip()\ncode = urllib.parse.parse_qs(urllib.parse.urlparse(redirect_url).query).get(\"code\", [None])[0]\ncreds = base64.b64encode(f\"{YAHOO_CLIENT_ID}:{YAHOO_CLIENT_SECRET}\".encode()).decode()\ntoken_resp = json.loads(http_post(\n    \"https://api.login.yahoo.com/oauth2/get_token\",\n    {\"grant_type\": \"authorization_code\", \"redirect_uri\": REDIRECT_URI, \"code\": code},\n    {\"Authorization\": f\"Basic {creds}\", \"Content-Type\": \"application/x-www-form-urlencoded\"}\n))\nyahoo_token = token_resp[\"access_token\"]\nprint(\"\u2705 Yahoo authenticated\\n\")\n\ndef yahoo_get(path):\n    url = f\"https://fantasysports.yahooapis.com/fantasy/v2/{path}&format=json\"\n    return json.loads(http_get(url, {\"Authorization\": f\"Bearer {yahoo_token}\"}))\n\ndef sleeper_get(path):\n    return json.loads(http_get(f\"https://api.sleeper.app/v1{path}\"))\n\n# \u2500\u2500 ROUND NAME HELPER \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\ndef round_name(round_num, total_rounds, bracket):\n    \"\"\"Convert round number to human-readable name.\"\"\"\n    if bracket == \"consolation\":\n        if round_num == total_rounds:\n            return \"3rd Place Game\"\n        elif round_num == total_rounds - 1:\n            return \"Consolation Semifinal\"\n        else:\n            return f\"Consolation Round {round_num}\"\n    else:\n        if round_num == total_rounds:\n            return \"Championship\"\n        elif round_num == total_rounds - 1:\n            return \"Semifinal\"\n        elif round_num == total_rounds - 2:\n            return \"Quarterfinal\"\n        else:\n            return f\"Round {round_num}\"\n\n# \u2500\u2500 GAME LOG \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\ngame_log = []  # list of dicts\n\n# \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n# YAHOO (2015\u20132021)\n# \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nprint(\"=\" * 60)\nprint(\"FETCHING YAHOO PLAYOFF DATA (2015\u20132021)\")\nprint(\"=\" * 60)\n\nfor year, lkey in sorted(YAHOO_LEAGUES.items()):\n    print(f\"\\n{year} ({lkey})...\")\n    settings_data = yahoo_get(f\"league/{lkey}/settings?\")\n    settings      = settings_data[\"fantasy_content\"][\"league\"][1][\"settings\"][0]\n    playoff_start = int(settings.get(\"playoff_start_week\", 14))\n    num_playoff_teams = int(settings.get(\"num_playoff_teams\", 4))\n    # figure out total weeks in season\n    end_week = int(settings.get(\"end_week\", 16))\n    playoff_weeks = list(range(playoff_start, end_week + 1))\n    print(f\"  Playoff weeks: {playoff_weeks}, {num_playoff_teams} teams\")\n\n    # Fetch all playoff weeks\n    week_matchups = {}\n    for week in playoff_weeks:\n        sb = yahoo_get(f\"league/{lkey}/scoreboard;week={week}?\")\n        matchups = sb[\"fantasy_content\"][\"league\"][1][\"scoreboard\"][\"0\"][\"matchups\"]\n        week_matchups[week] = []\n        for m_idx in range(matchups[\"count\"]):\n            m = matchups[str(m_idx)][\"matchup\"]\n            if m.get(\"status\") != \"postevent\":\n                continue\n            t0 = m[\"0\"][\"teams\"][\"0\"][\"team\"]\n            t1 = m[\"0\"][\"teams\"][\"1\"][\"team\"]\n            key0 = t0[0][0][\"team_key\"]\n            key1 = t1[0][0][\"team_key\"]\n            pts0 = float(t0[1][\"team_points\"][\"total\"] or 0)\n            pts1 = float(t1[1][\"team_points\"][\"total\"] or 0)\n            is_consolation = m.get(\"is_consolation\", 0) == 1\n            week_matchups[week].append({\n                \"key0\": key0, \"key1\": key1,\n                \"pts0\": pts0, \"pts1\": pts1,\n                \"consolation\": is_consolation,\n            })\n\n    # Determine round numbers\n    # playoffs weeks index \u2192 round (1-based)\n    total_rounds = len(playoff_weeks)\n    for r_idx, week in enumerate(playoff_weeks):\n        r_num = r_idx + 1\n        # Count consolation vs winners rounds\n        winners_in_week   = [m for m in week_matchups[week] if not m[\"consolation\"]]\n        consolation_in_week = [m for m in week_matchups[week] if m[\"consolation\"]]\n\n        # Label rounds\n        winners_total = sum(1 for w in playoff_weeks for m in week_matchups[w] if not m[\"consolation\"] and week_matchups[w].index(m) >= 0)\n        # Simpler: just use position in playoff_weeks for naming\n        winners_rounds   = [w for w in playoff_weeks if any(not m[\"consolation\"] for m in week_matchups[w])]\n        consolation_rounds = [w for w in playoff_weeks if any(m[\"consolation\"] for m in week_matchups[w])]\n\n        for m in week_matchups[week]:\n            name0 = TEAM_KEY_MAP.get(m[\"key0\"])\n            name1 = TEAM_KEY_MAP.get(m[\"key1\"])\n            if not name0 or not name1:\n                print(f\"  WARNING: unmapped key in {year} week {week}\")\n                continue\n\n            bracket = \"consolation\" if m[\"consolation\"] else \"winners\"\n            if bracket == \"winners\":\n                r_in_bracket = winners_rounds.index(week) + 1\n                total_in_bracket = len(winners_rounds)\n            else:\n                r_in_bracket = consolation_rounds.index(week) + 1\n                total_in_bracket = len(consolation_rounds)\n\n            rname = round_name(r_in_bracket, total_in_bracket, bracket)\n            is_championship = (bracket == \"winners\" and r_in_bracket == total_in_bracket)\n\n            winner = name0 if m[\"pts0\"] > m[\"pts1\"] else name1\n            loser  = name1 if m[\"pts0\"] > m[\"pts1\"] else name0\n\n            for name, pts_for, pts_against in [(name0, m[\"pts0\"], m[\"pts1\"]), (name1, m[\"pts1\"], m[\"pts0\"])]:\n                game_log.append({\n                    \"year\": year, \"week\": week, \"round\": r_in_bracket,\n                    \"roundName\": rname, \"bracket\": bracket,\n                    \"manager\": name,\n                    \"opponent\": name1 if name == name0 else name0,\n                    \"pf\": round(pts_for, 2), \"pa\": round(pts_against, 2),\n                    \"win\": name == winner,\n                    \"championship\": is_championship,\n                    \"champion\": is_championship and name == winner,\n                })\n\n    # Summary\n    winners_games = [g for g in game_log if g[\"year\"] == year and g[\"bracket\"] == \"winners\"]\n    consol_games  = [g for g in game_log if g[\"year\"] == year and g[\"bracket\"] == \"consolation\"]\n    print(f\"  {len(winners_games)//2} winners bracket games, {len(consol_games)//2} consolation games\")\n\n# \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n# SLEEPER (2022\u20132025)\n# \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nprint(\"\\n\" + \"=\" * 60)\nprint(\"FETCHING SLEEPER PLAYOFF DATA (2022\u20132025)\")\nprint(\"=\" * 60)\n\nfor year, lid in sorted(SLEEPER_LEAGUES.items()):\n    print(f\"\\n{year} ({lid})...\")\n\n    # Get rosters \u2192 user mapping\n    rosters = sleeper_get(f\"/league/{lid}/rosters\")\n    users   = sleeper_get(f\"/league/{lid}/users\")\n    uid_name = {u[\"user_id\"]: u.get(\"display_name\", \"\") for u in users}\n    roster_name = {r[\"roster_id\"]: uid_name.get(r.get(\"owner_id\",\"\"), f\"Unknown\") for r in rosters}\n\n    # Sleeper display_name \u2192 dashboard name\n    SLEEPER_NAME_MAP = {\n        \"TylerGoslinga\": \"Tyler Goslinga\", \"grgmldr\": \"Greg Mulder\",\n        \"JoshVG\": \"Joshua Van Groningen\",  \"egraef\": \"Eric Graef\",\n        \"JamesL81\": \"James Lazette\",       \"fourputtbogey\": \"Ross Van Groningen\",\n        \"Slimcady\": \"Greg Cady\",           \"ChiefsKingdom92\": \"Trey Hugen\",\n        \"uclafay22\": \"Aaron Fay\",          \"matthewvg92\": \"Christian Manes\",\n        \"VSipma77\": \"Vance Sipma\",         \"svandermolen\": \"Steve Vander Molen\",\n    }\n    roster_canon = {rid: SLEEPER_NAME_MAP.get(dname, dname) for rid, dname in roster_name.items()}\n\n    # Get bracket data\n    winners_bracket = sleeper_get(f\"/league/{lid}/winners_bracket\")\n    losers_bracket  = sleeper_get(f\"/league/{lid}/losers_bracket\")\n\n    # Process bracket helper\n    def process_bracket(bracket_data, bracket_type):\n        if not bracket_data:\n            return\n        # Find total rounds\n        rounds = [m.get(\"r\", 1) for m in bracket_data if isinstance(m, dict)]\n        total_r = max(rounds) if rounds else 1\n\n        for m in bracket_data:\n            if not isinstance(m, dict):\n                continue\n            r_num = m.get(\"r\", 1)\n            t1_rid = m.get(\"t1\")\n            t2_rid = m.get(\"t2\")\n            w_rid  = m.get(\"w\")\n            l_rid  = m.get(\"l\")\n\n            if not t1_rid or not t2_rid or not w_rid:\n                continue  # bye or unplayed\n\n            name1 = roster_canon.get(t1_rid)\n            name2 = roster_canon.get(t2_rid)\n            winner_name = roster_canon.get(w_rid)\n            if not name1 or not name2 or not winner_name:\n                print(f\"  WARNING: unmapped roster in {year} {bracket_type}\")\n                continue\n\n            rname = round_name(r_num, total_r, bracket_type)\n            is_championship = (bracket_type == \"winners\" and r_num == total_r)\n\n            # Get scores from matchups \u2014 need to find the week\n            # Sleeper bracket has 'p' field for points in some versions\n            pts1 = float(m.get(\"t1_from\", {}).get(\"w\", 0) or m.get(\"p1\", 0) or 0) if isinstance(m.get(\"t1_from\"), dict) else 0\n            pts2 = float(m.get(\"t2_from\", {}).get(\"w\", 0) or m.get(\"p2\", 0) or 0) if isinstance(m.get(\"t2_from\"), dict) else 0\n\n            for name, opp in [(name1, name2), (name2, name1)]:\n                pts_for = pts1 if name == name1 else pts2\n                pts_against = pts2 if name == name1 else pts1\n                game_log.append({\n                    \"year\": year, \"week\": None, \"round\": r_num,\n                    \"roundName\": rname, \"bracket\": bracket_type,\n                    \"manager\": name, \"opponent\": opp,\n                    \"pf\": round(pts_for, 2), \"pa\": round(pts_against, 2),\n                    \"win\": name == winner_name,\n                    \"championship\": is_championship,\n                    \"champion\": is_championship and name == winner_name,\n                })\n\n    process_bracket(winners_bracket, \"winners\")\n    process_bracket(losers_bracket, \"consolation\")\n\n    # Note: Sleeper bracket doesn't always include scores in bracket endpoint\n    # We'll need to supplement with matchup scores\n    # Get playoff matchup scores from scoreboard\n    league_info   = sleeper_get(f\"/league/{lid}\")\n    playoff_start = league_info.get(\"settings\", {}).get(\"playoff_week_start\", 15)\n    end_week      = league_info.get(\"settings\", {}).get(\"playoff_round_type\", 16)\n\n    # Fetch playoff weeks to get scores\n    print(f\"  Fetching playoff scores from week {playoff_start}+...\")\n    playoff_matchup_scores = {}  # (roster_id1, roster_id2) \u2192 (pts1, pts2)\n    for week in range(playoff_start, playoff_start + 5):  # try up to 5 playoff weeks\n        try:\n            week_data = sleeper_get(f\"/league/{lid}/matchups/{week}\")\n            if not week_data:\n                break\n            # Group by matchup_id\n            by_matchup = defaultdict(list)\n            for entry in week_data:\n                by_matchup[entry[\"matchup_id\"]].append(entry)\n            for mid, entries in by_matchup.items():\n                if len(entries) == 2:\n                    r0, r1 = entries[0][\"roster_id\"], entries[1][\"roster_id\"]\n                    p0 = float(entries[0].get(\"points\", 0) or 0)\n                    p1 = float(entries[1].get(\"points\", 0) or 0)\n                    playoff_matchup_scores[(r0, r1, week)] = (p0, p1)\n                    playoff_matchup_scores[(r1, r0, week)] = (p1, p0)\n        except:\n            break\n\n    # Now update game log entries for this year with actual scores\n    # Match by manager+opponent+year\n    for entry in game_log:\n        if entry[\"year\"] != year or entry[\"pf\"] != 0:\n            continue\n        # Try to find matching score\n        mgr_rid  = next((rid for rid, n in roster_canon.items() if n == entry[\"manager\"]), None)\n        opp_rid  = next((rid for rid, n in roster_canon.items() if n == entry[\"opponent\"]), None)\n        if not mgr_rid or not opp_rid:\n            continue\n        for week in range(playoff_start, playoff_start + 5):\n            key = (mgr_rid, opp_rid, week)\n            if key in playoff_matchup_scores:\n                entry[\"pf\"] = playoff_matchup_scores[key][0]\n                entry[\"pa\"] = playoff_matchup_scores[key][1]\n                entry[\"week\"] = week\n                break\n\n    winners_games = [g for g in game_log if g[\"year\"] == year and g[\"bracket\"] == \"winners\"]\n    consol_games  = [g for g in game_log if g[\"year\"] == year and g[\"bracket\"] == \"consolation\"]\n    print(f\"  {len(winners_games)//2} winners bracket games, {len(consol_games)//2} consolation games\")\n\n# \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n# AGGREGATE STATS\n# \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nprint(\"\\n\\nAggregating stats...\")\n\n# De-duplicate (each game appears twice \u2014 once per manager)\n# Use manager perspective entries only for aggregation\n\n# Overall playoff record per manager (winners bracket only = \"true\" playoffs)\nplayoff_record  = defaultdict(lambda: {\"W\":0,\"L\":0,\"PF\":0.0,\"PA\":0.0})\nconsolation_record = defaultdict(lambda: {\"W\":0,\"L\":0,\"PF\":0.0,\"PA\":0.0})\nplayoff_h2h     = defaultdict(lambda: defaultdict(lambda: {\"W\":0,\"L\":0,\"PF\":0.0,\"PA\":0.0}))\nappearances     = defaultdict(int)   # times making playoffs (winners bracket round 1)\nchampionships   = defaultdict(int)\nfinals_appearances = defaultdict(int)\n\nfor g in game_log:\n    mgr = g[\"manager\"]\n    rec = playoff_record[mgr] if g[\"bracket\"] == \"winners\" else consolation_record[mgr]\n    rec[\"W\"]  += 1 if g[\"win\"] else 0\n    rec[\"L\"]  += 0 if g[\"win\"] else 1\n    rec[\"PF\"] = round(rec[\"PF\"] + g[\"pf\"], 2)\n    rec[\"PA\"] = round(rec[\"PA\"] + g[\"pa\"], 2)\n\n    if g[\"bracket\"] == \"winners\":\n        opp = g[\"opponent\"]\n        playoff_h2h[mgr][opp][\"W\"]  += 1 if g[\"win\"] else 0\n        playoff_h2h[mgr][opp][\"L\"]  += 0 if g[\"win\"] else 1\n        playoff_h2h[mgr][opp][\"PF\"] = round(playoff_h2h[mgr][opp][\"PF\"] + g[\"pf\"], 2)\n        playoff_h2h[mgr][opp][\"PA\"] = round(playoff_h2h[mgr][opp][\"PA\"] + g[\"pa\"], 2)\n\n        if g[\"round\"] == 1:\n            appearances[mgr] += 1\n        if g[\"championship\"]:\n            finals_appearances[mgr] += 1\n        if g[\"champion\"]:\n            championships[mgr] += 1\n\n# \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n# OUTPUT\n# \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nprint(\"\\n\\n// \u2500\u2500 PASTE THIS INTO THE DASHBOARD \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\")\nprint(\"  playoffData: {\")\n\n# Game log\nprint(\"    gameLog: [\")\nfor g in sorted(game_log, key=lambda x: (x[\"year\"], x[\"bracket\"], x[\"round\"])):\n    # Only output one side per game (manager perspective)\n    print(f'      {{year:{g[\"year\"]},round:{g[\"round\"]},roundName:\"{g[\"roundName\"]}\",bracket:\"{g[\"bracket\"]}\",manager:\"{g[\"manager\"]}\",opponent:\"{g[\"opponent\"]}\",pf:{g[\"pf\"]},pa:{g[\"pa\"]},win:{\"true\" if g[\"win\"] else \"false\"},championship:{\"true\" if g[\"championship\"] else \"false\"},champion:{\"true\" if g[\"champion\"] else \"false\"}}},')\nprint(\"    ],\")\n\n# Overall records\nprint(\"    records: {\")\nall_mgrs = sorted(set(list(playoff_record.keys()) + list(consolation_record.keys())))\nfor mgr in all_mgrs:\n    pr = playoff_record[mgr]\n    cr = consolation_record[mgr]\n    print(f'      \"{mgr}\": {{playoffs:{{W:{pr[\"W\"]},L:{pr[\"L\"]},PF:{pr[\"PF\"]},PA:{pr[\"PA\"]}}},consolation:{{W:{cr[\"W\"]},L:{cr[\"L\"]},PF:{cr[\"PF\"]},PA:{cr[\"PA\"]}}},appearances:{appearances[mgr]},finalsAppearances:{finals_appearances[mgr]},championships:{championships[mgr]}}},')\nprint(\"    },\")\n\n# Playoff h2h\nprint(\"    h2h: {\")\nfor mgr in sorted(playoff_h2h.keys()):\n    inner = \", \".join(\n        f'\"{opp}\":{{W:{v[\"W\"]},L:{v[\"L\"]},PF:{v[\"PF\"]},PA:{v[\"PA\"]}}}'\n        for opp, v in sorted(playoff_h2h[mgr].items())\n    )\n    print(f'      \"{mgr}\": {{ {inner} }},')\nprint(\"    },\")\nprint(\"  },\")\n\n# Verification summary\nprint(\"\\n\\n// \u2500\u2500 VERIFICATION SUMMARY \u2500\u2500\")\nprint(f\"Total game log entries: {len(game_log)} (each game = 2 entries, one per manager)\")\nprint(f\"Unique games: {len(game_log)//2}\")\nprint(f\"\\n{'Manager':<25} {'Apps':>5} {'Finals':>7} {'Titles':>7} {'W':>5} {'L':>5} {'PF':>9} {'PA':>9}\")\nprint(\"-\" * 75)\nfor mgr in sorted(all_mgrs):\n    pr = playoff_record[mgr]\n    print(f\"{mgr:<25} {appearances[mgr]:>5} {finals_appearances[mgr]:>7} {championships[mgr]:>7} {pr['W']:>5} {pr['L']:>5} {pr['PF']:>9.2f} {pr['PA']:>9.2f}\")\n",d:"Extracts Yahoo-era playoff brackets and championship data.",w:"January \u2014 Step 2 of annual update"},'nfl_playoff_scores.py':{e:"\"\"\"\nnfl_playoff_scores.py \u2014 no external dependencies\nRun: python nfl_playoff_scores.py > nfl_playoff_scores_output.txt\n\"\"\"\nimport urllib.request, urllib.error, json, time, sys, ssl\n\nBASE = \"https://api.sleeper.app/v1\"\nCTX  = ssl._create_unverified_context()\n\nNFL_LEAGUE_IDS = {2022:\"840017898612338688\",2023:\"980152745451630592\",2024:\"1113519608654413824\",2025:\"1230239678033055744\"}\nNAME_MAP = {\n    \"rssvngrn\":\"Ross Van Groningen\",\"GregM_fantasy\":\"Greg Mulder\",\n    \"EricGraef\":\"Eric Graef\",\"TreyHugen\":\"Trey Hugen\",\n    \"TylerGoslinga\":\"Tyler Goslinga\",\"JoshVG\":\"Joshua Van Groningen\",\n    \"StevVM\":\"Steve Vander Molen\",\"JamesL81\":\"James Lazette\",\n    \"VanceSipma\":\"Vance Sipma\",\"AaronFay\":\"Aaron Fay\",\n    \"GregCady\":\"Greg Cady\",\"MatthewVG\":\"Christian Manes\",\n}\nROUND_TO_WEEK  = {1:15,2:16,3:17}\nWINNERS_LABELS = {1:\"Round 1\",2:\"Semifinal\",3:\"Championship\"}\nLOSERS_LABELS  = {1:\"Round 1\",2:\"Semifinal\",3:\"Toilet Bowl\"}\n\ndef get(url):\n    for _ in range(3):\n        try:\n            with urllib.request.urlopen(url,timeout=15,context=CTX) as r:\n                return json.loads(r.read().decode(\"utf-8\"))\n        except urllib.error.HTTPError as e:\n            if e.code==429: print(\"  Rate limited...\",file=sys.stderr); time.sleep(5)\n            else: print(f\"  HTTP {e.code}\",file=sys.stderr); return None\n        except Exception as e: print(f\"  Error: {e}\",file=sys.stderr); return None\n    return None\n\ndef roster_map(league_id):\n    rosters=get(f\"{BASE}/league/{league_id}/rosters\") or []\n    users=get(f\"{BASE}/league/{league_id}/users\") or []\n    time.sleep(0.4)\n    un={u[\"user_id\"]:NAME_MAP.get(u.get(\"display_name\",\"\"),u.get(\"display_name\",\"\")) for u in users}\n    return {r[\"roster_id\"]:un.get(r.get(\"owner_id\",\"\"),f\"Roster {r['roster_id']}\") for r in rosters}\n\ndef week_scores(league_id,week):\n    data=get(f\"{BASE}/league/{league_id}/matchups/{week}\") or []\n    time.sleep(0.3)\n    return {e[\"roster_id\"]:round(e.get(\"points\",0.0),2) for e in data}\n\ndef process(bracket,rm,ws,labels):\n    games=[]\n    for e in bracket:\n        r,t1,t2,w=e.get(\"r\"),e.get(\"t1\"),e.get(\"t2\"),e.get(\"w\")\n        if t1 is None or t2 is None: continue\n        sc=ws.get(ROUND_TO_WEEK.get(r),{})\n        n1,n2=rm.get(t1,f\"R{t1}\"),rm.get(t2,f\"R{t2}\")\n        p1,p2=sc.get(t1,0.0),sc.get(t2,0.0)\n        win=rm.get(w,f\"R{w}\") if w else (n1 if p1>=p2 else n2)\n        lbl=labels.get(r,f\"Round {r}\")\n        if r==3 and len([x for x in bracket if x.get(\"r\")==3])==2:\n            same=sorted([x for x in bracket if x.get(\"r\")==3],key=lambda x:x.get(\"p\",99))\n            lbl=labels.get(3,\"Championship\") if e is same[0] else \"3rd Place\"\n        games.append({\"round\":r,\"label\":lbl,\"t1\":n1,\"t1pts\":p1,\"t2\":n2,\"t2pts\":p2,\"winner\":win,\"margin\":round(abs(p1-p2),2)})\n    return sorted(games,key=lambda g:(g[\"round\"],g[\"t1\"]))\n\nall_s={}\nfor season,lid in sorted(NFL_LEAGUE_IDS.items()):\n    print(f\"\\nFetching NFL {season}...\",file=sys.stderr)\n    rm=roster_map(lid)\n    ws={w:week_scores(lid,w) for w in [15,16,17]}\n    wb=get(f\"{BASE}/league/{lid}/winners_bracket\") or []; time.sleep(0.4)\n    lb=get(f\"{BASE}/league/{lid}/losers_bracket\") or []; time.sleep(0.4)\n    all_s[season]={\"winners\":process(wb,rm,ws,WINNERS_LABELS),\"losers\":process(lb,rm,ws,LOSERS_LABELS)}\n    print(f\"  {len(all_s[season]['winners'])} playoff + {len(all_s[season]['losers'])} toilet bowl games\",file=sys.stderr)\n\ndef fmt(g): return f'      {{round:{g[\"round\"]},label:\"{g[\"label\"]}\",t1:\"{g[\"t1\"]}\",t1pts:{g[\"t1pts\"]},t2:\"{g[\"t2\"]}\",t2pts:{g[\"t2pts\"]},winner:\"{g[\"winner\"]}\",margin:{g[\"margin\"]}}}'\nlines=[\"const NFL_PLAYOFF_SCORES = {\"]\nfor s in sorted(all_s):\n    lines+=[f\"  {s}: {{\",\"    winners: [\"]+[fmt(g)+\",\" for g in all_s[s][\"winners\"]]+[\"    ],\",\"    losers: [\"]+[fmt(g)+\",\" for g in all_s[s][\"losers\"]]+[\"    ],\",\"  },\"]\nlines.append(\"};\")\nprint(\"\\n\".join(lines))\n",d:"Pulls Sleeper playoff game scores (2022\u2013present).",w:"January \u2014 after playoffs end"}};
+const _NFL_B={'nfl_transactions.py':{e:"\"\"\"\nnfl_transactions.py \u2014 no external dependencies\nRun: python nfl_transactions.py > nfl_transactions_output.txt\nTakes 3-5 minutes.\n\"\"\"\nimport urllib.request, urllib.error, json, time, sys, ssl\n\nBASE = \"https://api.sleeper.app/v1\"\nCTX  = ssl._create_unverified_context()\n\nNFL_LEAGUE_IDS = {2022:\"840017898612338688\",2023:\"980152745451630592\",2024:\"1113519608654413824\",2025:\"1230239678033055744\"}\nNAME_MAP = {\n    \"rssvngrn\":\"Ross Van Groningen\",\"GregM_fantasy\":\"Greg Mulder\",\n    \"EricGraef\":\"Eric Graef\",\"TreyHugen\":\"Trey Hugen\",\n    \"TylerGoslinga\":\"Tyler Goslinga\",\"JoshVG\":\"Joshua Van Groningen\",\n    \"StevVM\":\"Steve Vander Molen\",\"JamesL81\":\"James Lazette\",\n    \"VanceSipma\":\"Vance Sipma\",\"AaronFay\":\"Aaron Fay\",\n    \"GregCady\":\"Greg Cady\",\"MatthewVG\":\"Christian Manes\",\n}\n\ndef get(url):\n    for _ in range(3):\n        try:\n            with urllib.request.urlopen(url,timeout=20,context=CTX) as r:\n                return json.loads(r.read().decode(\"utf-8\"))\n        except urllib.error.HTTPError as e:\n            if e.code==429: print(\"  Rate limited...\",file=sys.stderr); time.sleep(5)\n            else: print(f\"  HTTP {e.code}\",file=sys.stderr); return None\n        except Exception as e: print(f\"  Error: {e}\",file=sys.stderr); return None\n    return None\n\ndef build_maps(league_id):\n    rosters=get(f\"{BASE}/league/{league_id}/rosters\") or []\n    users=get(f\"{BASE}/league/{league_id}/users\") or []\n    time.sleep(0.4)\n    un={u[\"user_id\"]:NAME_MAP.get(u.get(\"display_name\",\"\"),u.get(\"display_name\",\"\")) for u in users}\n    rn={r[\"roster_id\"]:un.get(r.get(\"owner_id\",\"\"),f\"R{r['roster_id']}\") for r in rosters}\n    print(\"  Fetching player registry...\",file=sys.stderr)\n    players=get(f\"{BASE}/players/nfl\") or {}\n    time.sleep(1.5)\n    pn={pid:(f\"{p.get('first_name','')} {p.get('last_name','')}\".strip() or pid) for pid,p in players.items()}\n    return rn,pn\n\ndef fetch_txns(league_id,rn,pn):\n    txns=[]\n    for week in range(1,18):\n        wt=get(f\"{BASE}/league/{league_id}/transactions/{week}\") or []\n        time.sleep(0.25)\n        for t in wt:\n            if t.get(\"status\")!=\"complete\": continue\n            rids=t.get(\"roster_ids\",[])\n            adds=t.get(\"adds\") or {}\n            drops=t.get(\"drops\") or {}\n            dps=t.get(\"draft_picks\") or []\n            mgrs=list({rn.get(r,f\"R{r}\") for r in rids})\n            txns.append({\"week\":week,\"type\":t.get(\"type\",\"\"),\"managers\":mgrs,\n                \"adds\":[{\"player\":pn.get(pid,pid),\"to\":rn.get(rid,f\"R{rid}\")} for pid,rid in adds.items()],\n                \"drops\":[{\"player\":pn.get(pid,pid),\"from\":rn.get(rid,f\"R{rid}\")} for pid,rid in drops.items()],\n                \"picks\":[{\"round\":dp.get(\"round\"),\"season\":dp.get(\"season\"),\"from\":rn.get(dp.get(\"previous_owner_id\"),\"?\"),\"to\":rn.get(dp.get(\"owner_id\"),\"?\")} for dp in dps],\n            })\n    return txns\n\ndef esc(s): return str(s).replace('\"','\\\\\"').replace('\\n',' ')\n\nall_txns={}\nfor season,lid in sorted(NFL_LEAGUE_IDS.items()):\n    print(f\"\\nNFL {season}...\",file=sys.stderr)\n    rn,pn=build_maps(lid)\n    txns=fetch_txns(lid,rn,pn)\n    all_txns[season]=txns\n    print(f\"  {len(txns)} transactions\",file=sys.stderr)\n\nmgr_stats={}\ndef ensure(n):\n    if n not in mgr_stats: mgr_stats[n]={\"trades\":0,\"waivers\":0,\"freeAgents\":0,\"totalMoves\":0,\"playersAdded\":0}\nfor s,txns in all_txns.items():\n    for t in txns:\n        for m in t[\"managers\"]:\n            ensure(m)\n            if t[\"type\"]==\"trade\": mgr_stats[m][\"trades\"]+=1\n            elif t[\"type\"]==\"waiver\": mgr_stats[m][\"waivers\"]+=1\n            elif t[\"type\"]==\"free_agent\": mgr_stats[m][\"freeAgents\"]+=1\n            mgr_stats[m][\"totalMoves\"]+=1\n        for a in t[\"adds\"]: ensure(a[\"to\"]); mgr_stats[a[\"to\"]][\"playersAdded\"]+=1\nfor m in mgr_stats: mgr_stats[m][\"trades\"]=mgr_stats[m][\"trades\"]//2 if mgr_stats[m][\"trades\"]>1 else mgr_stats[m][\"trades\"]\n\nlines=[\"const NFL_TRANSACTIONS = {\"]\nfor s in sorted(all_txns):\n    lines.append(f\"  {s}: [\")\n    for t in all_txns[s]:\n        ms=\"[\"+\",\".join(f'\"{esc(m)}\"' for m in t[\"managers\"])+\"]\"\n        ad=\"[\"+\",\".join(f'{{player:\"{esc(a[\"player\"])}\",to:\"{esc(a[\"to\"])}\"}}' for a in t[\"adds\"])+\"]\"\n        dr=\"[\"+\",\".join(f'{{player:\"{esc(d[\"player\"])}\",from:\"{esc(d[\"from\"])}\"}}' for d in t[\"drops\"])+\"]\"\n        pk=\"[\"+\",\".join(f'{{round:{p.get(\"round\",\"?\")},season:{p.get(\"season\",\"?\")},from:\"{esc(p[\"from\"])}\",to:\"{esc(p[\"to\"])}\"}}' for p in t[\"picks\"])+\"]\"\n        lines.append(f'    {{week:{t[\"week\"]},type:\"{t[\"type\"]}\",managers:{ms},adds:{ad},drops:{dr},picks:{pk}}},')\n    lines.append(\"  ],\")\nlines.append(\"};\")\nlines.append(\"\")\nlines.append(\"const NFL_TRANSACTION_SUMMARY = {\")\nfor m,s in sorted(mgr_stats.items(),key=lambda x:-x[1][\"totalMoves\"]):\n    lines.append(f'  \"{esc(m)}\":{{trades:{s[\"trades\"]},waivers:{s[\"waivers\"]},freeAgents:{s[\"freeAgents\"]},totalMoves:{s[\"totalMoves\"]},playersAdded:{s[\"playersAdded\"]}}},')\nlines.append(\"};\")\nprint(\"\\n\".join(lines))\n",d:"Pulls all trades, waivers and FA moves from Sleeper.",w:"January \u2014 Step 2 of annual update"},'regenerate_manager_profiles.py':{e:"\"\"\"\nregenerate_manager_profiles.py\n================================\nRe-generates the DATA.managerProfiles narratives in App.jsx using the Anthropic API.\nRun this every 2-3 seasons or when a manager's story changes significantly.\n\nUsage:\n    python regenerate_manager_profiles.py\n\nRequires:\n    pip install anthropic\n    Set ANTHROPIC_API_KEY environment variable or paste key below.\n\nOutput:\n    Prints the updated managerProfiles block. Copy-paste it into App.jsx,\n    replacing the existing block (search: managerProfiles:).\n\"\"\"\n\nimport os, json, time\nimport anthropic\n\nAPI_KEY = os.environ.get(\"ANTHROPIC_API_KEY\") or \"paste-your-key-here\"\n\n# \u2500\u2500 Update these stats each season before re-running \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nMANAGER_STATS = {\n    \"Aaron Fay\": {\n        \"seasons\": \"2020\u20132025 (6 seasons)\", \"record\": \"37-46\", \"titles\": 0,\n        \"draft_day_titles\": 0, \"best_season\": \"2021 (10-4)\", \"worst_season\": \"2020 (5-8)\",\n        \"notable_picks\": \"Joe Burrow $2 \u2192 336pts (+195 ROI) in 2021. Daniel Jones + Baker Mayfield bust in 2020.\",\n        \"win_streaks\": \"Best win streak: 5 games\",\n        \"notes\": \"Best $1 pick average of any active manager. Oscillates between brilliance and inconsistency.\"\n    },\n    \"Eric Graef\": {\n        \"seasons\": \"2015\u20132025 (11 seasons)\", \"record\": \"85-63\", \"titles\": 1,\n        \"draft_day_titles\": 4, \"best_season\": \"2024 (championship)\", \"worst_season\": \"2016\",\n        \"notable_picks\": \"Baker Mayfield $1 \u2192 337pts in 2024 (+137 ROI, best $1 pick in history). Adrian Peterson bust 2016.\",\n        \"win_streaks\": \"Career best ~6 games\",\n        \"notes\": \"Four draft day podiums. Volume RB drafter. Quiet, consistent process across 11 seasons.\"\n    },\n    \"Greg Cady\": {\n        \"seasons\": \"2015\u20132025 (11 seasons)\", \"record\": \"76-72\", \"titles\": 3,\n        \"draft_day_titles\": 2, \"best_season\": \"2019 and 2024 (both championships)\", \"worst_season\": \"Several mid-table finishes\",\n        \"notable_picks\": \"Caleb Williams $4 in 2024. 2019 draft 13.42 pts/$ (best ever). Back-to-back +37/+39 ROI draft classes 2024-2025.\",\n        \"win_streaks\": \"8-game win streak (one of longest ever)\",\n        \"notes\": \"Most championships in league history (3). Cheapest QB philosophy. Instinct for breakouts.\"\n    },\n    \"Greg Mulder\": {\n        \"seasons\": \"2015\u20132025 (11 seasons)\", \"record\": \"79-69\", \"titles\": 2,\n        \"draft_day_titles\": 1, \"best_season\": \"2017 and 2023 (championships)\", \"worst_season\": \"2015 (last place debut)\",\n        \"notable_picks\": \"Jalen Hurts + Deebo Samuel both +160 ROI same class (2021). David Johnson elite 2016 then catastrophic bust 2017.\",\n        \"win_streaks\": \"Career best ~7 games\",\n        \"notes\": \"Most $1 production of any active manager. High bust rate. Process works brilliantly when picks hit.\"\n    },\n    \"James Lazette\": {\n        \"seasons\": \"2016\u20132025 (10 seasons)\", \"record\": \"76-59\", \"titles\": 1,\n        \"draft_day_titles\": 2, \"best_season\": \"2023 (14.36 pts/$ \u2014 best full-spend draft in history)\", \"worst_season\": \"2022\",\n        \"notable_picks\": \"2023 draft class: 14.36 pts/$ on full $200 budget \u2014 best ever recorded in the league. 2020 championship season 10-3.\",\n        \"win_streaks\": \"6-game win streak\",\n        \"notes\": \"Most systematic manager in the league. Best average draft day rank among multi-season managers.\"\n    },\n    \"Joshua Van Groningen\": {\n        \"seasons\": \"2020\u20132025 (6 seasons)\", \"record\": \"42-41\", \"titles\": 2,\n        \"draft_day_titles\": 1, \"best_season\": \"2021 and 2022 (back-to-back championships)\", \"worst_season\": \"2023\",\n        \"notable_picks\": \"2024 class 13.18 pts/$ (best that year). Javonte Williams bust 2022 (-173 ROI worst pick that year).\",\n        \"win_streaks\": \"Career best ~6 games\",\n        \"notes\": \"Two titles in six seasons. Best career ROI of any active manager. High-variance TE-first rosters.\"\n    },\n    \"Christian Manes\": {\n        \"seasons\": \"2016\u20132025 (10 seasons)\", \"record\": \"63-72\", \"titles\": 0,\n        \"draft_day_titles\": 0, \"best_season\": \"2018 (15.58 pts/$ on $88 budget, second-best ever)\", \"worst_season\": \"2024-2025 (back-to-back negative ROI)\",\n        \"notable_picks\": \"Aaron Rodgers $5 \u2192 399pts 2020 (+185 ROI). Trevor Lawrence $30+ \u2192 bust 2024 (-177 ROI). 12-game win streak (second-longest ever).\",\n        \"win_streaks\": \"12-game win streak \u2014 second longest in league history\",\n        \"notes\": \"Big-swing manager. Tools for greatness, zero titles. Recently pivoted to RB concentration with poor results.\"\n    },\n    \"Ross Van Groningen\": {\n        \"seasons\": \"2015\u20132025 (11 seasons, commissioner)\", \"record\": \"81-67\", \"titles\": 0,\n        \"draft_day_titles\": 0, \"best_season\": \"2023 (10-4, runner-up)\", \"worst_season\": \"2021 (7-9, last in pts/$)\",\n        \"notable_picks\": \"Alvin Kamara $58 \u2192 +160 ROI 2020. James Conner $36 \u2192 29pts 2025 (most expensive recent bust). 2021: 7.86 pts/$ last in league.\",\n        \"win_streaks\": \"Career best ~5 games\",\n        \"notes\": \"Commits hardest to RB ($25 avg) of any active manager. 11 seasons, zero titles. 2023 finals appearance.\"\n    },\n    \"Steve Vander Molen\": {\n        \"seasons\": \"2015\u20132025 (11 seasons)\", \"record\": \"74-74\", \"titles\": 0,\n        \"draft_day_titles\": 1, \"best_season\": \"2025 (13-1, best regular season record in history)\", \"worst_season\": \"2021\",\n        \"notable_picks\": \"Carson Palmer $1 \u2192 314pts 2015. Matthew Stafford +133 ROI 2021. 14-game win streak (longest ever).\",\n        \"win_streaks\": \"14-game win streak \u2014 the all-time record\",\n        \"notes\": \"Best career ROI of any 10+ season manager (+14.4 avg). Zero titles. 2025: 13-1 but no championship.\"\n    },\n    \"Trey Hugen\": {\n        \"seasons\": \"2015\u20132025 (11 seasons)\", \"record\": \"82-66\", \"titles\": 1,\n        \"draft_day_titles\": 2, \"best_season\": \"2018 (greatest draft class in history: 19.8 pts/$)\", \"worst_season\": \"2022-2023\",\n        \"notable_picks\": \"Patrick Mahomes $6 \u2192 448pts 2018 (anchored best draft ever). Back-to-back draft day titles 2017-2018.\",\n        \"win_streaks\": \"9-game win streak\",\n        \"notes\": \"Highest scoring variance of any active manager. 2018 Mahomes draft the gold standard. Chasing that peak ever since.\"\n    },\n    \"Tyler Goslinga\": {\n        \"seasons\": \"2018\u20132025 (8 seasons)\", \"record\": \"59-50\", \"titles\": 1,\n        \"draft_day_titles\": 2, \"best_season\": \"2022 (championship, 13.01 pts/$)\", \"worst_season\": \"2018 (last place debut)\",\n        \"notable_picks\": \"Lamar Jackson $5 \u2192 +225 ROI 2019 (greatest value pick in league history). Brock Purdy $1 \u2192 330pts 2023. Jimmy Garoppolo $11 \u2192 -211 ROI 2018 (worst debut pick).\",\n        \"win_streaks\": \"7-game win streak\",\n        \"notes\": \"Last-to-first trajectory. Three consecutive draft podiums. Best $1 pick average active. TE-first builder.\"\n    },\n    \"Vance Sipma\": {\n        \"seasons\": \"2016\u20132025 (10 seasons)\", \"record\": \"59-76\", \"titles\": 0,\n        \"draft_day_titles\": 0, \"best_season\": \"2024 (11-3, runner-up)\", \"worst_season\": \"2018\",\n        \"notable_picks\": \"Marcus Mariota 2018 (-261 ROI \u2014 worst single pick in league history). Jordan Love $1 \u2192 256pts 2023. 2024 runner-up.\",\n        \"win_streaks\": \"8-game win streak\",\n        \"notes\": \"Spends more on QB than anyone. 2024 breakout (11-3, runner-up) after years of struggle. 59-76 overall.\"\n    },\n}\n\nPROMPT_TEMPLATE = \"\"\"You are writing a manager profile for a fantasy football league called the No Fun League (NFL), based in Ripon, California. This is a 12-team, head-to-head, auction draft league that has run since 2015. The league uses Yahoo (2015-2021) and Sleeper (2022+), non-PPR then PPR, $200 auction budget.\n\nManager: {name}\nCareer stats: {stats}\n\nWrite a manager profile with exactly these 5 fields as a JSON object:\n- story: 3-4 sentence career narrative covering their journey, arc, and where they stand\n- style: 2-3 sentences on how they draft and manage (spending tendencies, philosophy, risk tolerance)\n- moments: 2-3 sentences covering their defining highs and lows with specific picks, seasons, records\n- rivalries: 2 sentences on their head-to-head history and notable matchups\n- legacy: 1-2 sentences summarizing their legacy with their record and what defines them\n\nRequirements:\n- Use specific numbers, pick prices, ROI figures, and records from the stats provided\n- Write in third person, present tense for legacy, past/mixed for others\n- Voice should be like a sharp sports journalist \u2014 no fluff, no filler\n- Each field must be a single paragraph (no bullet points, no line breaks within a field)\n- Return ONLY valid JSON, nothing else \u2014 no markdown, no preamble\n\nExample format:\n{{\"story\": \"...\", \"style\": \"...\", \"moments\": \"...\", \"rivalries\": \"...\", \"legacy\": \"...\"}}\"\"\"\n\n\ndef generate_profile(client, name, stats):\n    prompt = PROMPT_TEMPLATE.format(name=name, stats=json.dumps(stats, indent=2))\n    message = client.messages.create(\n        model=\"claude-sonnet-4-5\",\n        max_tokens=1000,\n        messages=[{\"role\": \"user\", \"content\": prompt}]\n    )\n    raw = message.content[0].text.strip()\n    # Strip markdown fences if present\n    if raw.startswith(\"```\"):\n        raw = raw.split(\"```\")[1]\n        if raw.startswith(\"json\"):\n            raw = raw[4:]\n    return json.loads(raw.strip())\n\n\ndef main():\n    client = anthropic.Anthropic(api_key=API_KEY)\n    profiles = {}\n\n    print(\"Regenerating NFL manager profiles...\\n\")\n    for name, stats in MANAGER_STATS.items():\n        print(f\"  {name}...\", end=\" \", flush=True)\n        try:\n            profiles[name] = generate_profile(client, name, stats)\n            print(\"\u2713\")\n        except Exception as e:\n            print(f\"\u2717  {e}\")\n            profiles[name] = None\n        time.sleep(0.5)\n\n    # Build output block\n    print(\"\\n\\n\" + \"=\" * 60)\n    print(\"Copy everything below into App.jsx,\")\n    print(\"replacing the existing managerProfiles block:\")\n    print(\"=\" * 60 + \"\\n\")\n\n    print(\"  managerProfiles: {\")\n    for name, p in profiles.items():\n        if not p:\n            print(f\"    // \u26a0 {name}: generation failed \u2014 keep existing entry\")\n            continue\n        def esc(s):\n            return s.replace(\"\\\\\", \"\\\\\\\\\").replace('\"', '\\\\\"')\n        print(f'    \"{name}\": {{')\n        print(f'      story:     \"{esc(p[\"story\"])}\",')\n        print(f'      style:     \"{esc(p[\"style\"])}\",')\n        print(f'      moments:   \"{esc(p[\"moments\"])}\",')\n        print(f'      rivalries:  \"{esc(p[\"rivalries\"])}\",')\n        print(f'      legacy:    \"{esc(p[\"legacy\"])}\",')\n        print(f'    }},')\n    print(\"  },\")\n\n\nif __name__ == \"__main__\":\n    main()\n",d:"Re-generates AI career narratives. Needs ANTHROPIC_API_KEY.",w:"Every 2\u20133 seasons"},'regenerate_draft_profiles.js':{e:"/**\n * regenerate_draft_profiles.js\n * ==============================\n * Re-generates the DATA.draftProfiles AI narratives in App.jsx.\n * Run annually after the season ends, or when you want fresh copy.\n *\n * Usage (Node.js):\n *   npm install @anthropic-ai/sdk\n *   ANTHROPIC_API_KEY=your-key node regenerate_draft_profiles.js\n *\n * Output: Paste the printed draftProfiles block into App.jsx,\n *         replacing the existing one (search: draftProfiles:).\n */\n\nconst Anthropic = require(\"@anthropic-ai/sdk\");\nconst client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });\n\n// \u2500\u2500 Update these stats each season before re-running \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nconst MANAGER_DRAFT_STATS = {\n  \"Eric Graef\": {\n    seasons: \"2015\u20132025 (11 seasons)\",\n    draftDayTitles: 4,\n    avgBid: \"$18\",\n    avgROI: \"+14.2 pts/$\",\n    bestPick: \"Baker Mayfield $1 \u2192 337pts in 2024 (+137 ROI \u2014 best $1 pick in history)\",\n    worstPick: \"Adrian Peterson 2016 (catastrophic bust)\",\n    notes: \"Volume RB drafter. Most draft-day podium finishes (4). Quiet, process-first approach.\",\n  },\n  \"Greg Cady\": {\n    seasons: \"2015\u20132025 (11 seasons)\",\n    draftDayTitles: 2,\n    avgBid: \"$14\",\n    avgROI: \"+18.6 pts/$\",\n    bestPick: \"2019 draft 13.42 pts/$ (best efficiency ever). Back-to-back +37/+39 ROI classes 2024\u20132025.\",\n    worstPick: \"Multiple overpriced veterans mid-career\",\n    notes: \"3 championships. Cheapest QB drafter. Best instinct for breakouts. Most titles in league history.\",\n  },\n  \"Greg Mulder\": {\n    seasons: \"2015\u20132025 (11 seasons)\",\n    draftDayTitles: 1,\n    avgBid: \"$12\",\n    avgROI: \"+21.3 pts/$\",\n    bestPick: \"Jalen Hurts + Deebo Samuel both +160 ROI same class (2021). Highest $1 production ever.\",\n    worstPick: \"David Johnson elite 2016 \u2192 catastrophic bust 2017 same team\",\n    notes: \"2 championships. High bust rate balanced by elite hits. Most $1 production of any active manager.\",\n  },\n  \"James Lazette\": {\n    seasons: \"2016\u20132025 (10 seasons)\",\n    draftDayTitles: 2,\n    avgBid: \"$22\",\n    avgROI: \"+16.8 pts/$\",\n    bestPick: \"2023 class: 14.36 pts/$ on full $200 budget \u2014 best full-spend draft ever recorded\",\n    worstPick: \"2022 class underperformed across the board\",\n    notes: \"Most systematic drafter in the league. Spends the most on average. Best overall draft record among 10+ season managers.\",\n  },\n  \"Joshua Van Groningen\": {\n    seasons: \"2020\u20132025 (6 seasons)\",\n    draftDayTitles: 1,\n    avgBid: \"$16\",\n    avgROI: \"+22.1 pts/$\",\n    bestPick: \"2024 class 13.18 pts/$ (best that year). Best career ROI of any active manager.\",\n    worstPick: \"Javonte Williams $40+ in 2022 (\u2212173 ROI, worst that year)\",\n    notes: \"2 back-to-back championships (2021, 2022). Best career ROI. High-variance TE-first rosters.\",\n  },\n  \"Christian Manes\": {\n    seasons: \"2016\u20132025 (10 seasons)\",\n    draftDayTitles: 0,\n    avgBid: \"$19\",\n    avgROI: \"+8.4 pts/$\",\n    bestPick: \"Aaron Rodgers $5 \u2192 399pts in 2020 (+185 ROI). 2018: 15.58 pts/$ on $88 budget (2nd-best ever).\",\n    worstPick: \"Trevor Lawrence $30+ in 2024 (\u2212177 ROI). Back-to-back negative ROI classes 2024\u20132025.\",\n    notes: \"Big-swing manager. 12-game win streak (2nd-longest ever). Zero titles despite tools for greatness.\",\n  },\n  \"Ross Van Groningen\": {\n    seasons: \"2015\u20132025 (11 seasons, commissioner)\",\n    draftDayTitles: 0,\n    avgBid: \"$25\",\n    avgROI: \"+9.2 pts/$\",\n    bestPick: \"Alvin Kamara $58 \u2192 +160 ROI in 2020. Consistently finds $1 contributors.\",\n    worstPick: \"James Conner $36 \u2192 29pts in 2025 (most expensive recent bust). 2021: 7.86 pts/$ (last in league).\",\n    notes: \"Commits hardest to RB ($25 avg). 11 seasons, zero titles. 2023 finals appearance (runner-up).\",\n  },\n  \"Steve Vander Molen\": {\n    seasons: \"2015\u20132025 (11 seasons)\",\n    draftDayTitles: 1,\n    avgBid: \"$14\",\n    avgROI: \"+14.4 pts/$\",\n    bestPick: \"Carson Palmer $1 \u2192 314pts in 2015. Matthew Stafford +133 ROI in 2021. Best career ROI of 10+ season managers.\",\n    worstPick: \"Multiple mid-tier busts mid-career\",\n    notes: \"Best career ROI of any 10+ season manager. Zero titles. 2025: 13-1 regular season record, no championship.\",\n  },\n  \"Trey Hugen\": {\n    seasons: \"2015\u20132025 (11 seasons)\",\n    draftDayTitles: 2,\n    avgBid: \"$17\",\n    avgROI: \"+16.1 pts/$\",\n    bestPick: \"Patrick Mahomes $6 \u2192 448pts in 2018 (anchored greatest draft class ever: 19.8 pts/$)\",\n    worstPick: \"Multiple high-spend busts in 2022\u20132023\",\n    notes: \"1 championship. Back-to-back draft day titles 2017\u20132018. Highest scoring variance. Chasing the 2018 Mahomes peak.\",\n  },\n  \"Tyler Goslinga\": {\n    seasons: \"2018\u20132025 (8 seasons)\",\n    draftDayTitles: 2,\n    avgBid: \"$13\",\n    avgROI: \"+18.9 pts/$\",\n    bestPick: \"Lamar Jackson $5 \u2192 +225 ROI in 2019 (greatest value pick in league history). Brock Purdy $1 \u2192 330pts in 2023.\",\n    worstPick: \"Jimmy Garoppolo $11 \u2192 \u2212211 ROI in 2018 (worst debut pick).\",\n    notes: \"1 championship. Last-to-first arc. Three consecutive draft podiums. Best $1 pick average of active managers.\",\n  },\n  \"Aaron Fay\": {\n    seasons: \"2020\u20132025 (6 seasons)\",\n    draftDayTitles: 0,\n    avgBid: \"$11\",\n    avgROI: \"+13.6 pts/$\",\n    bestPick: \"Joe Burrow $2 \u2192 336pts (+195 ROI) in 2021. Best $1 pick average of any active manager.\",\n    worstPick: \"Daniel Jones + Baker Mayfield double bust in 2020\",\n    notes: \"Zero titles in 6 seasons. Oscillates between brilliance and inconsistency. Best $1 pick efficiency.\",\n  },\n  \"Vance Sipma\": {\n    seasons: \"2016\u20132025 (10 seasons)\",\n    draftDayTitles: 0,\n    avgBid: \"$24\",\n    avgROI: \"+7.1 pts/$\",\n    bestPick: \"Jordan Love $1 \u2192 256pts in 2023. 2024 runner-up season.\",\n    worstPick: \"Marcus Mariota 2018 (\u2212261 ROI \u2014 worst single pick in league history). Spends most on QB.\",\n    notes: \"Zero titles. Spends more on QB than anyone. 2024 breakout (11-3, runner-up) after years of struggle.\",\n  },\n};\n\nconst PROMPT_TEMPLATE = `You are writing a draft day profile for a fantasy football manager in the No Fun League (NFL), a 12-team head-to-head auction draft league based in Ripon, California. $200 budget, non-PPR through 2021 then PPR.\n\nManager: {name}\nDraft stats: {stats}\n\nWrite a profile with exactly 4 fields as JSON:\n- overview: 2-3 sentences on their overall draft philosophy and approach\n- bestPick: 1-2 sentences on their best or most representative pick(s) with specific prices and ROI\n- worstPick: 1-2 sentences on their biggest draft mistake(s) with specific context\n- style: 1-2 sentences on their signature tendencies \u2014 what they reliably do differently from others\n\nRequirements:\n- Use specific numbers from the stats (prices, ROI, years)\n- Third person, present tense for style/overview, past tense for specific picks\n- Sharp sports journalist voice \u2014 specific, no filler\n- Return ONLY valid JSON, no markdown, no preamble\n\nExample: {\"overview\": \"...\", \"bestPick\": \"...\", \"worstPick\": \"...\", \"style\": \"...\"}`;\n\nasync function generateProfile(name, stats) {\n  const prompt = PROMPT_TEMPLATE.replace(\"{name}\", name).replace(\n    \"{stats}\",\n    JSON.stringify(stats, null, 2)\n  );\n  const message = await client.messages.create({\n    model: \"claude-sonnet-4-5\",\n    max_tokens: 800,\n    messages: [{ role: \"user\", content: prompt }],\n  });\n  let raw = message.content[0].text.trim();\n  if (raw.startsWith(\"```\")) {\n    raw = raw.split(\"```\")[1];\n    if (raw.startsWith(\"json\")) raw = raw.slice(4);\n  }\n  return JSON.parse(raw.trim());\n}\n\nasync function main() {\n  const profiles = {};\n  console.log(\"Regenerating NFL draft profiles...\\n\");\n\n  for (const [name, stats] of Object.entries(MANAGER_DRAFT_STATS)) {\n    process.stdout.write(`  ${name}... `);\n    try {\n      profiles[name] = await generateProfile(name, stats);\n      console.log(\"\u2713\");\n    } catch (e) {\n      console.log(`\u2717  ${e.message}`);\n      profiles[name] = null;\n    }\n    await new Promise((r) => setTimeout(r, 500));\n  }\n\n  console.log(\"\\n\\n\" + \"=\".repeat(60));\n  console.log(\"Copy everything below into App.jsx,\");\n  console.log(\"replacing the existing draftProfiles block:\");\n  console.log(\"=\".repeat(60) + \"\\n\");\n\n  const esc = (s) => s.replace(/\\\\/g, \"\\\\\\\\\").replace(/\"/g, '\\\\\"');\n\n  console.log(\"  draftProfiles: {\");\n  for (const [name, p] of Object.entries(profiles)) {\n    if (!p) {\n      console.log(`    // \u26a0 ${name}: generation failed \u2014 keep existing entry`);\n      continue;\n    }\n    console.log(`    \"${name}\": {`);\n    console.log(`      overview:  \"${esc(p.overview)}\",`);\n    console.log(`      bestPick:  \"${esc(p.bestPick)}\",`);\n    console.log(`      worstPick: \"${esc(p.worstPick)}\",`);\n    console.log(`      style:     \"${esc(p.style)}\",`);\n    console.log(`    },`);\n  }\n  console.log(\"  },\");\n}\n\nmain().catch(console.error);\n",d:"Re-generates AI draft profiles (Node.js). Needs ANTHROPIC_API_KEY.",w:"Every 2\u20133 seasons"}};
 const NFL_VAULT_SCRIPTS={..._NFL_A,..._NFL_B};
 
 function LeagueHQTab() {
@@ -52512,6 +52598,23 @@ function VaultTab() {
   const [h2hAlumni, setH2hAlumni]     = useState(true);
   const [h2hView, setH2hView]         = useState("lookup");
 
+  // ── Lineup Efficiency section state ──
+  const [leTab, setLeTab]             = useState("rankings");
+  const [leSortKey, setLeSortKey]     = useState("avgEff");
+  const [leSortDir, setLeSortDir]     = useState("desc");
+  const [leMgr, setLeMgr]            = useState("Ross Van Groningen");
+  const [leAlumni, setLeAlumni]       = useState(false);
+
+  // ── Transaction History section state ──
+  const [txSortKey, setTxSortKey]     = useState("totalMoves");
+  const [txSortDir, setTxSortDir]     = useState("desc");
+
+  // ── Lopsided Trades section state ──
+  const [lopSort, setLopSort]         = useState("diff");
+  const [lopDir, setLopDir]           = useState("desc");
+  const [lopView, setLopView]         = useState("rankings");
+  const [lopAlumni, setLopAlumni]     = useState(true);
+
   const arrow = (key, active, dir) => active === key ? (dir === "asc" ? " ↑" : " ↓") : "";
 
   const VIEWS = [
@@ -52694,7 +52797,7 @@ function VaultTab() {
     if (h2hSort === key) setH2hDir(d => d === "asc" ? "desc" : "asc");
     else { setH2hSort(key); setH2hDir(key === "Opp" ? "asc" : "desc"); }
   };
-  const activeMgrs = ["Aaron Fay","Eric Graef","Greg Cady","Greg Mulder","James Lazette","Joshua Van Groningen","Matthew Van Groningen","Ross Van Groningen","Steve Vander Molen","Trey Hugen","Tyler Goslinga","Vance Sipma"];
+  const activeMgrs = ["Aaron Fay","Eric Graef","Greg Cady","Greg Mulder","James Lazette","Joshua Van Groningen","Christian Manes","Ross Van Groningen","Steve Vander Molen","Trey Hugen","Tyler Goslinga","Vance Sipma"];
   const allMgrsList = Object.keys(DATA.h2h).sort();
 
 
@@ -52723,6 +52826,7 @@ function VaultTab() {
           { key: "bellcurve", emoji: "📉", label: "Score Dist.",       sub: "Scoring distribution",               color: "#2ecc71" },
           { key: "drama",     emoji: "🎢", label: "Chaos Meter",        sub: "Blowouts, nail-biters & wild games",                    color: "#2176d2" },
           { key: "txns",      emoji: "🤝", label: "Transaction History", sub: "Trade kings, waiver activity & FA adds — 2022–2025",    color: "#64b5f6" },
+          { key: "lopsided",  emoji: "⚖️",  label: "Lopsided Trades",   sub: "Most one-sided trades in league history — who fleeced who", color: "#d42b2b" },
           { key: "lineupeff", emoji: "🎯", label: "Lineup Efficiency",    sub: "Who maximizes their roster vs who leaves pts on bench", color: "#2ecc71" },
         ];
         const activeTitle = VAULT_TILES.find(t => t.key === section);
@@ -53154,96 +53258,792 @@ function VaultTab() {
         const summary  = NFL_TRANSACTION_SUMMARY || {};
         const sorted   = Object.entries(summary).sort((a,b) => b[1].totalMoves - a[1].totalMoves);
         const maxMoves = sorted[0]?.[1]?.totalMoves || 1;
+
+        const handleTxSort = (key) => {
+          if (txSortKey === key) setTxSortDir(d => d === "asc" ? "desc" : "asc");
+          else { setTxSortKey(key); setTxSortDir(key === "mgr" ? "asc" : "desc"); }
+        };
+        const txArrow = (key) => txSortKey === key ? (txSortDir === "asc" ? " ↑" : " ↓") : "";
+
+        const rows = Object.entries(summary).map(([mgr, s]) => ({ mgr, ...s })).sort((a, b) => {
+          let result = 0;
+          if (txSortKey === "mgr") result = a.mgr.localeCompare(b.mgr);
+          else result = (a[txSortKey] || 0) - (b[txSortKey] || 0);
+          return txSortDir === "asc" ? result : -result;
+        });
+
+        const TxTh = ({ label, sortK, color }) => (
+          <th onClick={() => handleTxSort(sortK)} style={{ padding:"8px 10px", textAlign: sortK === "mgr" ? "left" : "center", color: txSortKey === sortK ? "#fff" : (color || "#888"), fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"2px solid #333" }}>
+            {label}{txArrow(sortK)}
+          </th>
+        );
+
         return (
-          <Card>
-            <SectionTitle>🤝 Transaction History — 2022–2025</SectionTitle>
-            <BodyText>All completed trades, waiver claims and free agent adds across the Sleeper era. Sorted by total moves.</BodyText>
-            <div style={{ display:"flex", flexDirection:"column", gap:mobile?8:10, marginTop:8 }}>
-              {sorted.map(([mgr, s], i) => (
-                <div key={mgr} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
-                  <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:8 }}>
-                    <div style={{ width:22, textAlign:"center", fontSize:12, color:i<3?"#64b5f6":"#555", flexShrink:0 }}>{i===0?"🥇":i===1?"🥈":i===2?"🥉":`#${i+1}`}</div>
-                    <ManagerLogo name={mgr} size={20} />
-                    <span style={{ fontSize:mobile?12:14, fontWeight:600, color:"#fff", flex:1 }}>{firstName(mgr)}</span>
-                    <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:16, color:"#64b5f6", flexShrink:0 }}>{s.totalMoves}</span>
-                    <span style={{ fontSize:10, color:"#555" }}>moves</span>
-                  </div>
-                  <div style={{ background:"#111", borderRadius:3, height:4, marginBottom:8 }}>
-                    <div style={{ height:4, borderRadius:3, width:`${s.totalMoves/maxMoves*100}%`, background:"#64b5f6" }} />
-                  </div>
-                  <div style={{ display:"flex", gap:mobile?8:16, fontSize:10, color:"#555", flexWrap:"wrap" }}>
-                    <span>🤝 <span style={{ color:"#2176d2" }}>{s.trades}</span> trades</span>
-                    <span>📡 <span style={{ color:"#2ecc71" }}>{s.waivers}</span> waivers</span>
-                    <span>🆓 <span style={{ color:"#aaa" }}>{s.freeAgents}</span> FA adds</span>
-                    <span>👤 <span style={{ color:"#aaa" }}>{s.playersAdded}</span> players added</span>
-                  </div>
-                </div>
-              ))}
+          <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
+            <p style={{ fontSize:mobile?12:13, color:"#aaa", lineHeight:1.75, margin:0 }}>All completed trades (2015–2025), waiver claims and free agent adds (2022–2025 Sleeper era). Click headers to sort.</p>
+            <div style={{ overflowX:"auto" }}>
+              <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                <thead><tr>
+                  <th style={{ padding:"8px 10px", textAlign:"left", color:"#64b5f6", fontFamily:"'Cooper Black',Georgia,serif", fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
+                  <TxTh label="Manager" sortK="mgr" color="#888" />
+                  <TxTh label="Total Moves" sortK="totalMoves" color="#64b5f6" />
+                  <th style={{ padding:"8px 10px", textAlign:"center", color:"#555", fontSize:11, borderBottom:"2px solid #333" }}>Activity</th>
+                  <TxTh label="Trades" sortK="trades" color="#2176d2" />
+                  <TxTh label="Waivers" sortK="waivers" color="#2ecc71" />
+                  <TxTh label="FA Adds" sortK="freeAgents" color="#aaa" />
+                  <TxTh label="Players Added" sortK="playersAdded" color="#f4a261" />
+                </tr></thead>
+                <tbody>
+                  {rows.map((m, i) => {
+                    const barW = Math.round(m.totalMoves / maxMoves * 100);
+                    return (
+                      <tr key={m.mgr} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color: i<3?"#64b5f6":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>{i===0?"🥇":i===1?"🥈":i===2?"🥉":`#${i+1}`}</td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}>
+                          <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
+                            <ManagerLogo name={m.mgr} size={18} />
+                            <span style={{ color:"#fff", fontWeight:500 }}>{m.mgr}</span>
+                          </span>
+                        </td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#64b5f6", fontWeight:700, fontFamily:"'Cooper Black',Georgia,serif", fontSize:15 }}>{m.totalMoves}</td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", width:80 }}>
+                          <div style={{ background:"#181818", borderRadius:3, height:6 }}>
+                            <div style={{ height:6, borderRadius:3, width:`${barW}%`, background:"#64b5f6" }} />
+                          </div>
+                        </td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2176d2", fontWeight:600 }}>{m.trades}</td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2ecc71" }}>{m.waivers}</td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#aaa" }}>{m.freeAgents}</td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#f4a261" }}>{m.playersAdded}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
             </div>
-          </Card>
+            <div style={{ fontSize:11, color:"#444", marginTop:4, borderTop:"1px solid #1a1a1a", paddingTop:8 }}>
+              📊 Trades cover all 11 seasons (Yahoo 2015–2021 + Sleeper 2022–2025). Waivers &amp; FA adds are Sleeper era only (2022–2025).
+            </div>
+          </div>
+        );
+      })()}
+
+      {section === "lopsided" && (() => {
+        // ── Most Lopsided Trades — compute post-trade performance ──
+        const ws = DATA.playerData?.weeklyScores || [];
+        const players = DATA.playerData?.players || {};
+        const draftPicks = DATA.playerData?.draftPicks || [];
+
+        // Build name → playerId lookup (handles duplicates by preferring active players)
+        const nameToIds = {};
+        Object.entries(players).forEach(([id, p]) => {
+          const n = p.name;
+          if (!nameToIds[n]) nameToIds[n] = [];
+          nameToIds[n].push(id);
+        });
+
+        // Build playerId → year/week → points map (STARTERS ONLY — bench pts don't count)
+        const idYearWeekPts = {};
+        ws.forEach(r => {
+          if (!r.starter) return; // only count points when player was in the starting lineup
+          if (!idYearWeekPts[r.playerId]) idYearWeekPts[r.playerId] = {};
+          const yk = r.year + "_" + r.week;
+          if (!idYearWeekPts[r.playerId][yk]) idYearWeekPts[r.playerId][yk] = 0;
+          idYearWeekPts[r.playerId][yk] += r.points;
+        });
+
+        // Build keeper lookup: "playerName|year|manager" → true (kept that player into that season)
+        const keeperLookup = {};
+        draftPicks.filter(p => p.isKeeper).forEach(p => {
+          keeperLookup[p.playerName + "|" + p.year + "|" + p.manager] = p.price;
+        });
+
+        // Check if a player was kept by a manager in any subsequent season
+        const getKeeperYears = (playerName, manager, tradeYear) => {
+          const kept = [];
+          for (let yr = tradeYear + 1; yr <= 2025; yr++) {
+            const price = keeperLookup[playerName + "|" + yr + "|" + manager];
+            if (price !== undefined) kept.push({ year: yr, price });
+            else break; // stop at first year not kept
+          }
+          return kept;
+        };
+
+        // Compute keeper bonus points: 50% yr1, 25% yr2, 12.5% yr3+ (floor)
+        const computeKeeperBonus = (playerName, manager, tradeYear) => {
+          const keptYrs = getKeeperYears(playerName, manager, tradeYear);
+          if (keptYrs.length === 0) return 0;
+          let bonus = 0;
+          const ids = nameToIds[playerName] || [];
+          keptYrs.forEach((ky, idx) => {
+            const weight = idx === 0 ? 0.5 : idx === 1 ? 0.25 : 0.125;
+            let seasonPts = 0;
+            ids.forEach(id => {
+              for (let w = 1; w <= 17; w++) {
+                const pts = idYearWeekPts[id]?.[ky.year + "_" + w];
+                if (pts !== undefined) seasonPts += pts;
+              }
+            });
+            bonus += seasonPts * weight;
+          });
+          return parseFloat(bonus.toFixed(1));
+        };
+
+        // For each trade, compute rest-of-season fantasy points for each player
+        const computeROS = (playerName, year, afterWeek) => {
+          const ids = nameToIds[playerName];
+          if (!ids || ids.length === 0) return null;
+          // Sum points for all matching IDs in remaining weeks of that season
+          // If afterWeek is 0 (Yahoo-era, no week data), sum entire season
+          let total = 0;
+          let weeksFound = 0;
+          const startWeek = afterWeek === 0 ? 1 : afterWeek + 1;
+          ids.forEach(id => {
+            for (let w = startWeek; w <= 17; w++) {
+              const pts = idYearWeekPts[id]?.[year + "_" + w];
+              if (pts !== undefined) { total += pts; weeksFound++; }
+            }
+          });
+          return weeksFound > 0 ? { total: parseFloat(total.toFixed(1)), weeks: weeksFound } : null;
+        };
+
+        // Analyze each trade
+        const analyzed = NFL_TRADE_DETAILS.map((trade, idx) => {
+          const managers = Object.keys(trade.sides);
+          if (managers.length < 2) return null;
+          const [mgrA, mgrB] = managers;
+          const sideA = trade.sides[mgrA];
+          const sideB = trade.sides[mgrB];
+
+          // What mgrA got (= what mgrB sent) — compute their ROS for mgrA
+          let aGotPts = 0, aKeeperBonus = 0, aGotPlayers = [];
+          (sideA.got || []).forEach(pName => {
+            const ros = computeROS(pName, trade.year, trade.week);
+            const keptYrs = getKeeperYears(pName, mgrA, trade.year);
+            const kBonus = computeKeeperBonus(pName, mgrA, trade.year);
+            aGotPlayers.push({ name: pName, pts: ros ? ros.total : 0, kept: keptYrs, keeperBonus: kBonus });
+            if (ros) aGotPts += ros.total;
+            aKeeperBonus += kBonus;
+          });
+
+          // What mgrB got (= what mgrA sent) — compute their ROS for mgrB
+          let bGotPts = 0, bKeeperBonus = 0, bGotPlayers = [];
+          (sideB.got || []).forEach(pName => {
+            const ros = computeROS(pName, trade.year, trade.week);
+            const keptYrs = getKeeperYears(pName, mgrB, trade.year);
+            const kBonus = computeKeeperBonus(pName, mgrB, trade.year);
+            bGotPlayers.push({ name: pName, pts: ros ? ros.total : 0, kept: keptYrs, keeperBonus: kBonus });
+            if (ros) bGotPts += ros.total;
+            bKeeperBonus += kBonus;
+          });
+
+          const aTotalValue = aGotPts + aKeeperBonus;
+          const bTotalValue = bGotPts + bKeeperBonus;
+          const diff = Math.abs(aTotalValue - bTotalValue);
+          const winner = aTotalValue >= bTotalValue ? mgrA : mgrB;
+          const loser = aTotalValue >= bTotalValue ? mgrB : mgrA;
+          const winnerGot = aTotalValue >= bTotalValue ? aGotPlayers : bGotPlayers;
+          const loserGot = aTotalValue >= bTotalValue ? bGotPlayers : aGotPlayers;
+          const winnerPts = Math.max(aTotalValue, bTotalValue);
+          const loserPts = Math.min(aTotalValue, bTotalValue);
+          const winnerROS = aTotalValue >= bTotalValue ? aGotPts : bGotPts;
+          const loserROS = aTotalValue >= bTotalValue ? bGotPts : aGotPts;
+          const winnerKeeper = aTotalValue >= bTotalValue ? aKeeperBonus : bKeeperBonus;
+          const loserKeeper = aTotalValue >= bTotalValue ? bKeeperBonus : aKeeperBonus;
+
+          return { idx, year: trade.year, week: trade.week, winner, loser, winnerGot, loserGot, winnerPts: parseFloat(winnerPts.toFixed(1)), loserPts: parseFloat(loserPts.toFixed(1)), diff: parseFloat(diff.toFixed(1)), winnerROS: parseFloat(winnerROS.toFixed(1)), loserROS: parseFloat(loserROS.toFixed(1)), winnerKeeper: parseFloat(winnerKeeper.toFixed(1)), loserKeeper: parseFloat(loserKeeper.toFixed(1)), mgrA, mgrB, aGotPts: parseFloat(aTotalValue.toFixed(1)), bGotPts: parseFloat(bTotalValue.toFixed(1)) };
+        }).filter(Boolean).filter(t => t.diff > 0);
+
+        // Alumni filter
+        const filteredAnalyzed = lopAlumni ? analyzed : analyzed.filter(t => !ALUMNI.has(t.winner) && !ALUMNI.has(t.loser));
+
+        // Sort
+        const handleLopSort = (key) => {
+          if (lopSort === key) setLopDir(d => d === "asc" ? "desc" : "asc");
+          else { setLopSort(key); setLopDir(key === "winner" || key === "loser" ? "asc" : "desc"); }
+        };
+        const lopArrow = (key) => lopSort === key ? (lopDir === "asc" ? " ↑" : " ↓") : "";
+        const sortedTrades = [...filteredAnalyzed].sort((a, b) => {
+          let r = 0;
+          if (lopSort === "diff") r = a.diff - b.diff;
+          else if (lopSort === "winner") r = a.winner.localeCompare(b.winner);
+          else if (lopSort === "loser") r = a.loser.localeCompare(b.loser);
+          else if (lopSort === "winnerPts") r = a.winnerPts - b.winnerPts;
+          else if (lopSort === "loserPts") r = a.loserPts - b.loserPts;
+          else if (lopSort === "year") r = a.year - b.year || a.week - b.week;
+          return lopDir === "asc" ? r : -r;
+        });
+
+        // Manager fleece stats
+        const fleeceMap = {};
+        filteredAnalyzed.forEach(t => {
+          if (!fleeceMap[t.winner]) fleeceMap[t.winner] = { wins: 0, losses: 0, totalGained: 0 };
+          if (!fleeceMap[t.loser]) fleeceMap[t.loser] = { wins: 0, losses: 0, totalGained: 0 };
+          fleeceMap[t.winner].wins++;
+          fleeceMap[t.winner].totalGained += t.diff;
+          fleeceMap[t.loser].losses++;
+          fleeceMap[t.loser].totalGained -= t.diff;
+        });
+
+        const biggestFleece = sortedTrades[0];
+        const bestTrader = Object.entries(fleeceMap).sort((a, b) => b[1].totalGained - a[1].totalGained)[0];
+        const worstTrader = Object.entries(fleeceMap).sort((a, b) => a[1].totalGained - b[1].totalGained)[0];
+
+        const LopTh = ({ label, sortK }) => (
+          <th onClick={() => handleLopSort(sortK)} style={{ padding:"8px 10px", textAlign: sortK === "winner" || sortK === "loser" ? "left" : "center", color: lopSort === sortK ? "#fff" : "#888", fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"2px solid #333" }}>
+            {label}{lopArrow(sortK)}
+          </th>
+        );
+
+        const TABS = [
+          { key: "rankings", label: "⚖️ Most Lopsided" },
+          { key: "fleece",   label: "🧠 Fleece Kings" },
+          { key: "timeline", label: "📅 Timeline" },
+        ];
+
+        return (
+          <div style={{ display:"flex", flexDirection:"column", gap:18 }}>
+            {/* Tabs */}
+            <div style={{ display:"flex", gap:6, flexWrap:"wrap", alignItems:"center" }}>
+              {TABS.map(t => (
+                <button key={t.key} onClick={() => setLopView(t.key)}
+                  style={{ padding:"6px 14px", borderRadius:8, border: lopView === t.key ? "1px solid #d42b2b" : "1px solid #333", background: lopView === t.key ? "#d42b2b22" : "transparent", color: lopView === t.key ? "#d42b2b" : "#888", cursor:"pointer", fontSize:12, fontWeight:600 }}>
+                  {t.label}
+                </button>
+              ))}
+              <div style={{ marginLeft:"auto" }}>
+                <button onClick={() => setLopAlumni(a => !a)}
+                  style={{ padding:"5px 10px", borderRadius:6, border: lopAlumni ? "1px solid #555" : "1px solid #9b5de5", background: lopAlumni ? "transparent" : "#9b5de522", color: lopAlumni ? "#555" : "#9b5de5", cursor:"pointer", fontSize:11, fontWeight:600 }}>
+                  {lopAlumni ? "👻 Alumni: On" : "👻 Alumni: Off"}
+                </button>
+              </div>
+            </div>
+
+            {/* Callout cards */}
+            {lopView === "rankings" && (
+              <div style={{ display:"grid", gridTemplateColumns: mobile ? "1fr" : "1fr 1fr 1fr", gap:12 }}>
+                {biggestFleece && (
+                  <div style={{ background:"#0a0a0a", border:"1px solid #d42b2b44", borderRadius:10, padding:14 }}>
+                    <div style={{ fontSize:11, color:"#d42b2b", fontWeight:700, marginBottom:6 }}>🏆 MOST LOPSIDED TRADE</div>
+                    <div style={{ fontSize:13, color:"#eee", fontWeight:600 }}>{biggestFleece.winner} fleeced {biggestFleece.loser}</div>
+                    <div style={{ fontSize:11, color:"#888", marginTop:4 }}>{biggestFleece.year} Wk{biggestFleece.week} — {biggestFleece.diff.toFixed(0)} pt advantage ROS</div>
+                  </div>
+                )}
+                {bestTrader && (
+                  <div style={{ background:"#0a0a0a", border:"1px solid #2ecc7144", borderRadius:10, padding:14 }}>
+                    <div style={{ fontSize:11, color:"#2ecc71", fontWeight:700, marginBottom:6 }}>🧠 BEST TRADER ALL-TIME</div>
+                    <div style={{ fontSize:13, color:"#eee", fontWeight:600 }}>{bestTrader[0]}</div>
+                    <div style={{ fontSize:11, color:"#888", marginTop:4 }}>+{bestTrader[1].totalGained.toFixed(0)} net pts gained · {bestTrader[1].wins}W–{bestTrader[1].losses}L in trades</div>
+                  </div>
+                )}
+                {worstTrader && (
+                  <div style={{ background:"#0a0a0a", border:"1px solid #f4a26144", borderRadius:10, padding:14 }}>
+                    <div style={{ fontSize:11, color:"#f4a261", fontWeight:700, marginBottom:6 }}>🤡 WORST TRADER ALL-TIME</div>
+                    <div style={{ fontSize:13, color:"#eee", fontWeight:600 }}>{worstTrader[0]}</div>
+                    <div style={{ fontSize:11, color:"#888", marginTop:4 }}>{worstTrader[1].totalGained.toFixed(0)} net pts · {worstTrader[1].wins}W–{worstTrader[1].losses}L in trades</div>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {lopView === "rankings" && (
+              <div style={{ overflowX:"auto" }}>
+                <table style={{ width:"100%", borderCollapse:"collapse", fontSize:mobile?11:13 }}>
+                  <thead>
+                    <tr style={{ background:"#0a0a0a" }}>
+                      <th style={{ padding:"8px 10px", textAlign:"center", color:"#555", fontSize:11, borderBottom:"2px solid #333" }}>#</th>
+                      <LopTh label="Winner" sortK="winner" />
+                      <th style={{ padding:"8px 10px", textAlign:"left", color:"#888", fontSize:11, borderBottom:"2px solid #333" }}>Got</th>
+                      <LopTh label="Loser" sortK="loser" />
+                      <th style={{ padding:"8px 10px", textAlign:"left", color:"#888", fontSize:11, borderBottom:"2px solid #333" }}>Got</th>
+                      <LopTh label="W Pts" sortK="winnerPts" />
+                      <LopTh label="L Pts" sortK="loserPts" />
+                      <LopTh label="Diff" sortK="diff" />
+                      <LopTh label="When" sortK="year" />
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {sortedTrades.slice(0, 30).map((t, i) => (
+                      <tr key={i} style={{ background: i % 2 === 0 ? "#050505" : "#0a0a0a" }}>
+                        <td style={{ padding:"8px 10px", textAlign:"center", color: i < 3 ? "#d42b2b" : "#555", fontWeight: i < 3 ? 700 : 400, borderBottom:"1px solid #1a1a1a" }}>{i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : i + 1}</td>
+                        <td style={{ padding:"8px 10px", color:"#2ecc71", fontWeight:600, borderBottom:"1px solid #1a1a1a", whiteSpace:"nowrap" }}>{mobile ? t.winner.split(" ")[0] : t.winner}</td>
+                        <td style={{ padding:"8px 10px", color:"#aaa", borderBottom:"1px solid #1a1a1a", fontSize:11 }}>{t.winnerGot.map(p => p.name + (p.kept && p.kept.length > 0 ? " 🔒" : "")).join(", ")}</td>
+                        <td style={{ padding:"8px 10px", color:"#d42b2b", fontWeight:600, borderBottom:"1px solid #1a1a1a", whiteSpace:"nowrap" }}>{mobile ? t.loser.split(" ")[0] : t.loser}</td>
+                        <td style={{ padding:"8px 10px", color:"#666", borderBottom:"1px solid #1a1a1a", fontSize:11 }}>{t.loserGot.map(p => p.name + (p.kept && p.kept.length > 0 ? " 🔒" : "")).join(", ")}</td>
+                        <td style={{ padding:"8px 10px", textAlign:"center", color:"#2ecc71", fontWeight:700, borderBottom:"1px solid #1a1a1a" }}>{t.winnerPts.toFixed(0)}{t.winnerKeeper > 0 && <span style={{ fontSize:9, color:"#9b5de5" }}> +{t.winnerKeeper.toFixed(0)}🔒</span>}</td>
+                        <td style={{ padding:"8px 10px", textAlign:"center", color:"#d42b2b", borderBottom:"1px solid #1a1a1a" }}>{t.loserPts.toFixed(0)}{t.loserKeeper > 0 && <span style={{ fontSize:9, color:"#9b5de5" }}> +{t.loserKeeper.toFixed(0)}🔒</span>}</td>
+                        <td style={{ padding:"8px 10px", textAlign:"center", color:"#f4a261", fontWeight:700, fontFamily:"'Cooper Black',Georgia,serif", borderBottom:"1px solid #1a1a1a" }}>+{t.diff.toFixed(0)}</td>
+                        <td style={{ padding:"8px 10px", textAlign:"center", color:"#555", borderBottom:"1px solid #1a1a1a", whiteSpace:"nowrap" }}>{t.year} Wk{t.week}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                <div style={{ fontSize:11, color:"#444", marginTop:8, borderTop:"1px solid #1a1a1a", paddingTop:8 }}>
+                  ⚖️ Total Value = ROS pts (100%) + Keeper Yr 1 (50%) + Yr 2 (25%) + Yr 3+ (12.5% floor). 🔒 = kept as keeper. Purple number = keeper bonus pts included in total. Top 30 shown.
+                </div>
+              </div>
+            )}
+
+            {lopView === "fleece" && (() => {
+              const fleeceRows = Object.entries(fleeceMap).map(([mgr, s]) => ({ mgr, ...s, net: s.totalGained, trades: s.wins + s.losses, winRate: s.wins / (s.wins + s.losses) })).sort((a, b) => b.net - a.net);
+              return (
+                <div style={{ overflowX:"auto" }}>
+                  <div style={{ fontSize:11, color:"#555", marginBottom:10 }}>Net fantasy points gained/lost across all trades in league history. Positive = you win trades. Negative = you get fleeced.</div>
+                  <table style={{ width:"100%", borderCollapse:"collapse", fontSize:mobile?11:13 }}>
+                    <thead>
+                      <tr style={{ background:"#0a0a0a" }}>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#555", fontSize:11, borderBottom:"2px solid #333" }}>#</th>
+                        <th style={{ padding:"8px 10px", textAlign:"left", color:"#888", fontSize:11, fontWeight:700, borderBottom:"2px solid #333" }}>Manager</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#888", fontSize:11, fontWeight:700, borderBottom:"2px solid #333" }}>Trades</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#888", fontSize:11, fontWeight:700, borderBottom:"2px solid #333" }}>Won</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#888", fontSize:11, fontWeight:700, borderBottom:"2px solid #333" }}>Lost</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#888", fontSize:11, fontWeight:700, borderBottom:"2px solid #333" }}>Win%</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#888", fontSize:11, fontWeight:700, borderBottom:"2px solid #333" }}>Net Pts</th>
+                        <th style={{ padding:"8px 10px", textAlign:"left", color:"#888", fontSize:11, fontWeight:700, borderBottom:"2px solid #333" }}>Visual</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {fleeceRows.map((r, i) => {
+                        const maxNet = Math.max(...fleeceRows.map(x => Math.abs(x.net)));
+                        const barW = maxNet > 0 ? (Math.abs(r.net) / maxNet) * 100 : 0;
+                        const barColor = r.net >= 0 ? "#2ecc71" : "#d42b2b";
+                        return (
+                          <tr key={r.mgr} style={{ background: i % 2 === 0 ? "#050505" : "#0a0a0a" }}>
+                            <td style={{ padding:"8px 10px", textAlign:"center", color:"#555", borderBottom:"1px solid #1a1a1a" }}>{i + 1}</td>
+                            <td style={{ padding:"8px 10px", color:"#eee", fontWeight:600, borderBottom:"1px solid #1a1a1a", whiteSpace:"nowrap" }}>{mobile ? r.mgr.split(" ")[0] : r.mgr}</td>
+                            <td style={{ padding:"8px 10px", textAlign:"center", color:"#aaa", borderBottom:"1px solid #1a1a1a" }}>{r.trades}</td>
+                            <td style={{ padding:"8px 10px", textAlign:"center", color:"#2ecc71", fontWeight:600, borderBottom:"1px solid #1a1a1a" }}>{r.wins}</td>
+                            <td style={{ padding:"8px 10px", textAlign:"center", color:"#d42b2b", borderBottom:"1px solid #1a1a1a" }}>{r.losses}</td>
+                            <td style={{ padding:"8px 10px", textAlign:"center", color: r.winRate >= 0.5 ? "#2ecc71" : "#d42b2b", fontWeight:600, borderBottom:"1px solid #1a1a1a" }}>{(r.winRate * 100).toFixed(0)}%</td>
+                            <td style={{ padding:"8px 10px", textAlign:"center", color: barColor, fontWeight:700, fontFamily:"'Cooper Black',Georgia,serif", borderBottom:"1px solid #1a1a1a" }}>{r.net >= 0 ? "+" : ""}{r.net.toFixed(0)}</td>
+                            <td style={{ padding:"8px 10px", borderBottom:"1px solid #1a1a1a", width:100 }}>
+                              <div style={{ display:"flex", alignItems:"center", gap:4 }}>
+                                <div style={{ background:"#181818", borderRadius:3, height:8, width:"100%", position:"relative" }}>
+                                  <div style={{ position:"absolute", height:8, borderRadius:3, width:`${barW}%`, background: barColor, [r.net >= 0 ? "left" : "right"]: 0 }} />
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              );
+            })()}
+
+            {lopView === "timeline" && (
+              <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+                <div style={{ fontSize:11, color:"#555", marginBottom:4 }}>Every trade in league history sorted chronologically — green winner, red loser, with ROS point totals. 🔒 = kept as keeper the following season(s).</div>
+                {[...filteredAnalyzed].sort((a, b) => b.year - a.year || b.week - a.week).map((t, i) => (
+                  <div key={i} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:mobile?"10px":"12px 16px", display:"flex", flexDirection: mobile ? "column" : "row", gap: mobile ? 8 : 16, alignItems: mobile ? "stretch" : "center" }}>
+                    <div style={{ minWidth:70, color:"#555", fontSize:11, fontWeight:600 }}>{t.year} {t.week > 0 ? `Wk${t.week}` : ""}</div>
+                    <div style={{ flex:1 }}>
+                      <div style={{ display:"flex", alignItems:"center", gap:6, marginBottom:4, flexWrap:"wrap" }}>
+                        <span style={{ color:"#2ecc71", fontWeight:700, fontSize:12 }}>✅ {mobile ? t.winner.split(" ")[0] : t.winner}</span>
+                        <span style={{ color:"#555", fontSize:11 }}>got</span>
+                        <span style={{ color:"#aaa", fontSize:11 }}>{t.winnerGot.map(p => `${p.name} (${p.pts.toFixed(0)}${p.kept && p.kept.length > 0 ? " 🔒×" + p.kept.length : ""})`).join(", ")}</span>
+                        <span style={{ color:"#2ecc71", fontWeight:700, fontSize:11, marginLeft:"auto" }}>= {t.winnerROS.toFixed(0)}{t.winnerKeeper > 0 ? ` +${t.winnerKeeper.toFixed(0)}🔒` : ""}</span>
+                      </div>
+                      <div style={{ display:"flex", alignItems:"center", gap:6, flexWrap:"wrap" }}>
+                        <span style={{ color:"#d42b2b", fontWeight:700, fontSize:12 }}>❌ {mobile ? t.loser.split(" ")[0] : t.loser}</span>
+                        <span style={{ color:"#555", fontSize:11 }}>got</span>
+                        <span style={{ color:"#666", fontSize:11 }}>{t.loserGot.map(p => `${p.name} (${p.pts.toFixed(0)}${p.kept && p.kept.length > 0 ? " 🔒×" + p.kept.length : ""})`).join(", ")}</span>
+                        <span style={{ color:"#d42b2b", fontSize:11, marginLeft:"auto" }}>= {t.loserROS.toFixed(0)}{t.loserKeeper > 0 ? ` +${t.loserKeeper.toFixed(0)}🔒` : ""}</span>
+                      </div>
+                    </div>
+                    <div style={{ minWidth:60, textAlign:"right" }}>
+                      <span style={{ color:"#f4a261", fontWeight:700, fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>+{t.diff.toFixed(0)}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         );
       })()}
 
       {section === "lineupeff" && (() => {
-        const eff = NFL_LINEUP_EFFICIENCY || {};
-        const years = Object.keys(eff).map(Number).sort();
-        const careerEff = {};
-        years.forEach(yr => {
-          Object.entries(eff[yr] || {}).forEach(([mgr, data]) => {
-            if (!careerEff[mgr]) careerEff[mgr] = { totalEff:0, totalBench:0, seasons:0, byYear:{} };
-            careerEff[mgr].totalEff   += data.avgEff;
-            careerEff[mgr].totalBench += data.avgBench;
-            careerEff[mgr].seasons    += 1;
-            careerEff[mgr].byYear[yr]  = { avgEff:data.avgEff, avgBench:data.avgBench };
+        // Compute lineup efficiency from DATA.playerData.weeklyScores (all 11 seasons)
+        const ws = DATA.playerData?.weeklyScores || [];
+        const players = DATA.playerData?.players || {};
+
+        const SLOTS = { QB: 1, RB: 2, WR: 2, TE: 1, K: 1, DEF: 1 };
+        const FLEX_POS = new Set(["RB", "WR", "TE"]);
+
+        const computeOptimal = (playerScores) => {
+          const byPos = {};
+          playerScores.forEach(p => {
+            const pos = p.position || "UNKNOWN";
+            if (!byPos[pos]) byPos[pos] = [];
+            byPos[pos].push(p.points);
           });
+          Object.values(byPos).forEach(arr => arr.sort((a, b) => b - a));
+          let optimal = 0;
+          const used = {};
+          Object.entries(SLOTS).forEach(([pos, count]) => {
+            const available = byPos[pos] || [];
+            used[pos] = 0;
+            for (let i = 0; i < count && i < available.length; i++) { optimal += available[i]; used[pos]++; }
+          });
+          const flexCandidates = [];
+          FLEX_POS.forEach(pos => {
+            const available = byPos[pos] || [];
+            for (let i = used[pos] || 0; i < available.length; i++) flexCandidates.push(available[i]);
+          });
+          flexCandidates.sort((a, b) => b - a);
+          if (flexCandidates.length > 0) optimal += flexCandidates[0];
+          return optimal;
+        };
+
+        // Group by year/manager/week
+        const byKey = {};
+        ws.forEach(r => {
+          const key = r.year + "|" + r.manager + "|" + r.week;
+          if (!byKey[key]) byKey[key] = { year: r.year, manager: r.manager, week: r.week, players: [] };
+          byKey[key].players.push({ playerId: r.playerId, points: r.points, starter: r.starter, position: players[r.playerId]?.position || "UNKNOWN" });
         });
-        const sorted = Object.entries(careerEff)
-          .map(([mgr, d]) => ({
-            mgr,
-            avgEff:   parseFloat((d.totalEff   / d.seasons).toFixed(1)),
-            avgBench: parseFloat((d.totalBench / d.seasons).toFixed(2)),
-            seasons:  d.seasons,
-            byYear:   d.byYear,
-          }))
-          .sort((a,b) => b.avgEff - a.avgEff);
-        const maxBench = Math.max(...sorted.map(m => m.avgBench));
+
+        // Compute per manager per year
+        const mgrYearEff = {};
+        Object.values(byKey).forEach(wk => {
+          const actual = wk.players.filter(p => p.starter).reduce((s, p) => s + p.points, 0);
+          if (actual <= 0) return;
+          const optimal = computeOptimal(wk.players);
+          if (optimal <= 0) return;
+          const eff = (actual / optimal) * 100;
+          const bench = optimal - actual;
+          if (!mgrYearEff[wk.manager]) mgrYearEff[wk.manager] = {};
+          if (!mgrYearEff[wk.manager][wk.year]) mgrYearEff[wk.manager][wk.year] = { totalEff: 0, totalBench: 0, weeks: 0 };
+          mgrYearEff[wk.manager][wk.year].totalEff += eff;
+          mgrYearEff[wk.manager][wk.year].totalBench += bench;
+          mgrYearEff[wk.manager][wk.year].weeks++;
+        });
+
+        // Build career data
+        const careerData = {};
+        Object.entries(mgrYearEff).forEach(([mgr, yrs]) => {
+          const byYear = {};
+          let tEff = 0, tBench = 0, tSeasons = 0;
+          Object.entries(yrs).forEach(([yr, d]) => {
+            const avgEff = parseFloat((d.totalEff / d.weeks).toFixed(1));
+            const avgBench = parseFloat((d.totalBench / d.weeks).toFixed(2));
+            byYear[parseInt(yr)] = { avgEff, avgBench, weeks: d.weeks };
+            tEff += avgEff; tBench += avgBench; tSeasons++;
+          });
+          careerData[mgr] = { avgEff: parseFloat((tEff / tSeasons).toFixed(1)), avgBench: parseFloat((tBench / tSeasons).toFixed(2)), seasons: tSeasons, byYear };
+        });
+
+        const allYears = [...new Set(ws.map(r => r.year))].sort();
+        const activeMgrs = Object.keys(careerData).filter(m => !ALUMNI.has(m)).sort();
+        const allMgrs = Object.keys(careerData).sort();
+        const visibleMgrs = leAlumni ? allMgrs : activeMgrs;
+
+        const sortedRows = visibleMgrs
+          .map(mgr => ({ mgr, ...careerData[mgr] }))
+          .sort((a, b) => {
+            let result = 0;
+            if (leSortKey === "mgr") result = a.mgr.localeCompare(b.mgr);
+            else if (leSortKey === "avgEff") result = a.avgEff - b.avgEff;
+            else if (leSortKey === "avgBench") result = a.avgBench - b.avgBench;
+            else if (leSortKey === "seasons") result = a.seasons - b.seasons;
+            return leSortDir === "asc" ? result : -result;
+          });
+
+        const handleLeSort = (key) => {
+          if (leSortKey === key) setLeSortDir(d => d === "asc" ? "desc" : "asc");
+          else { setLeSortKey(key); setLeSortDir(key === "mgr" ? "asc" : "desc"); }
+        };
+        const leArrow = (key) => leSortKey === key ? (leSortDir === "asc" ? " ↑" : " ↓") : "";
+
+        const LeTh = ({ label, sortK, color }) => (
+          <th onClick={() => handleLeSort(sortK)} style={{ padding:"8px 10px", textAlign: sortK === "mgr" ? "left" : "center", color: leSortKey === sortK ? "#fff" : (color || "#888"), fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"2px solid #333" }}>
+            {label}{leArrow(sortK)}
+          </th>
+        );
+
+        // Manager deep-dive data
+        const mgrData = careerData[leMgr];
+        const mgrYears = mgrData ? Object.entries(mgrData.byYear).sort(([a],[b]) => parseInt(a) - parseInt(b)) : [];
+
         return (
-          <Card>
-            <SectionTitle>🎯 Lineup Efficiency — 2022–2025</SectionTitle>
-            <BodyText>Actual pts scored ÷ max possible pts from full roster each week. Career average across all Sleeper-era seasons.</BodyText>
-            <div style={{ display:"flex", flexDirection:"column", gap:mobile?8:10, marginTop:8 }}>
-              {sorted.map((m, i) => {
-                const color = m.avgEff >= 93 ? "#2ecc71" : m.avgEff >= 89 ? "#f4a261" : "#d42b2b";
-                const label = m.avgEff >= 93 ? "🎯 Sharp"
-                            : m.avgEff >= 90 ? "✅ Solid"
-                            : m.avgEff >= 87 ? "⚠️ Leaky"
-                            :                  "❌ Leaving pts";
-                return (
-                  <div key={m.mgr} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
-                    <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:8 }}>
-                      <div style={{ width:22, textAlign:"center", fontSize:12, color:i<3?"#2ecc71":"#555", flexShrink:0 }}>
-                        {i===0?"🥇":i===1?"🥈":i===2?"🥉":`#${i+1}`}
-                      </div>
-                      <ManagerLogo name={m.mgr} size={20} />
-                      <span style={{ fontSize:mobile?12:14, fontWeight:600, color:"#fff", flex:1 }}>{firstName(m.mgr)}</span>
-                      <span style={{ fontSize:10, color, background:`${color}22`, borderRadius:4, padding:"2px 7px", flexShrink:0 }}>{label}</span>
-                      <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:16, color, flexShrink:0 }}>{m.avgEff}%</span>
-                    </div>
-                    <div style={{ background:"#111", borderRadius:3, height:4, marginBottom:8 }}>
-                      <div style={{ height:4, borderRadius:3, width:`${m.avgEff}%`, background:color }} />
-                    </div>
-                    <div style={{ display:"flex", gap:mobile?10:20, fontSize:10, color:"#555", flexWrap:"wrap" }}>
-                      <span>Bench/wk <span style={{ color:"#d42b2b" }}>−{m.avgBench}</span> pts avg</span>
-                      <span>{m.seasons} season{m.seasons>1?"s":""}</span>
-                      {years.map(yr => m.byYear[yr] && (
-                        <span key={yr}>{yr}: <span style={{ color:m.byYear[yr].avgEff>=92?"#2ecc71":m.byYear[yr].avgEff>=88?"#f4a261":"#d42b2b" }}>{m.byYear[yr].avgEff}%</span></span>
+          <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
+            <p style={{ fontSize:mobile?12:13, color:"#aaa", lineHeight:1.75, margin:0 }}>Actual starter pts ÷ optimal lineup pts (position-aware) each week. Career average across all seasons.</p>
+
+            {/* Sub-tabs */}
+            <div style={{ display:"flex", gap:6, alignItems:"center", flexWrap:"wrap" }}>
+              {[["rankings","🏆 Rankings"],["manager","🔍 Deep Dive"],["best","🔥 Best Seasons"],["worst","💀 Worst Seasons"]].map(([k,l]) => (
+                <button key={k} onClick={() => setLeTab(k)} style={{
+                  background: leTab===k ? "#2ecc71" : "#1a1a1a",
+                  color: leTab===k ? "#000" : "#aaa",
+                  border:`1px solid ${leTab===k ? "#2ecc71" : "#333"}`,
+                  borderRadius:6, padding:mobile?"6px 10px":"7px 16px",
+                  cursor:"pointer", fontSize:mobile?11:13, whiteSpace:"nowrap", flexShrink:0, fontWeight: leTab===k ? 700 : 400,
+                }}>{l}</button>
+              ))}
+              <div style={{ marginLeft:"auto" }}>
+                <button onClick={() => setLeAlumni(a => !a)} style={{ background:"#1a1a1a", border:"1px solid #333", borderRadius:6, padding:"5px 10px", color:"#aaa", cursor:"pointer", fontSize:11 }}>
+                  {leAlumni ? "👁️ All" : "👁️ Active Only"}
+                </button>
+              </div>
+            </div>
+
+            {/* RANKINGS TABLE */}
+            {leTab === "rankings" && (
+              <div style={{ overflowX:"auto" }}>
+                <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                  <thead><tr>
+                    <th style={{ padding:"8px 10px", textAlign:"left", color:"#2ecc71", fontFamily:"'Cooper Black',Georgia,serif", fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
+                    <LeTh label="Manager" sortK="mgr" color="#888" />
+                    <LeTh label="Efficiency" sortK="avgEff" color="#2ecc71" />
+                    <LeTh label="Bench/Wk" sortK="avgBench" color="#d42b2b" />
+                    <LeTh label="Seasons" sortK="seasons" color="#888" />
+                    <th style={{ padding:"8px 10px", textAlign:"center", color:"#555", fontSize:11, borderBottom:"2px solid #333" }}>Grade</th>
+                  </tr></thead>
+                  <tbody>
+                    {sortedRows.map((m, i) => {
+                      const color = m.avgEff >= 92 ? "#e9c46a" : m.avgEff >= 91 ? "#2ecc71" : m.avgEff >= 88 ? "#f4a261" : "#d42b2b";
+                      const grade = m.avgEff >= 92 ? "👑 Elite" : m.avgEff >= 91 ? "🎯 Sharp" : m.avgEff >= 88 ? "✅ Solid" : m.avgEff >= 85 ? "⚠️ Leaky" : "❌ Leaving pts";
+                      return (
+                        <tr key={m.mgr} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a", cursor:"pointer" }} onClick={() => { setLeMgr(m.mgr); setLeTab("manager"); }}>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color: i<3?"#2ecc71":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>{i===0?"🥇":i===1?"🥈":i===2?"🥉":`#${i+1}`}</td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}>
+                            <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
+                              <ManagerLogo name={m.mgr} size={18} />
+                              <span style={{ color:"#fff", fontWeight:500 }}>{m.mgr}</span>
+                              {ALUMNI.has(m.mgr) && <span style={{ fontSize:10, color:"#555" }}>💀</span>}
+                            </span>
+                          </td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center" }}>
+                            <span style={{ color, fontWeight:700, fontFamily:"'Cooper Black',Georgia,serif", fontSize:15 }}>{m.avgEff}%</span>
+                          </td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#d42b2b" }}>−{m.avgBench}</td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#aaa" }}>{m.seasons}</td>
+                          <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", fontSize:10, color }}>{grade}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+                <div style={{ fontSize:11, color:"#444", marginTop:8 }}>Click any row to see year-by-year breakdown</div>
+              </div>
+            )}
+
+            {/* MANAGER DEEP DIVE */}
+            {leTab === "manager" && (
+              <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
+                <div style={{ display:"flex", alignItems:"center", gap:12, flexWrap:"wrap" }}>
+                  <span style={{ color:"#aaa", fontSize:13 }}>Select Manager:</span>
+                  <div style={{ position:"relative" }}>
+                    <select value={leMgr} onChange={e => setLeMgr(e.target.value)} style={{
+                      background:"#1a1a1a", color:"#fff", border:"1px solid #333", borderRadius:6,
+                      padding:"7px 32px 7px 12px", fontSize:14, cursor:"pointer",
+                      appearance:"none", WebkitAppearance:"none", outline:"none",
+                    }}>
+                      <optgroup label="Active">{activeMgrs.map(m => <option key={m} value={m}>{m}</option>)}</optgroup>
+                      <optgroup label="Alumni">{allMgrs.filter(m => ALUMNI.has(m)).map(m => <option key={m} value={m}>{m}</option>)}</optgroup>
+                    </select>
+                    <span style={{ position:"absolute", right:10, top:"50%", transform:"translateY(-50%)", color:"#2ecc71", pointerEvents:"none", fontSize:11 }}>▼</span>
+                  </div>
+                </div>
+
+                {mgrData && (
+                  <div>
+                    {/* Career summary cards */}
+                    <div style={{ display:"flex", gap:8, flexWrap:"wrap", marginBottom:16 }}>
+                      {[
+                        { label:"Career Eff", value:`${mgrData.avgEff}%`, color: mgrData.avgEff>=93?"#2ecc71":mgrData.avgEff>=89?"#f4a261":"#d42b2b" },
+                        { label:"Bench/Wk", value:`−${mgrData.avgBench}`, color:"#d42b2b" },
+                        { label:"Seasons", value:mgrData.seasons, color:"#aaa" },
+                        { label:"Best Season", value: mgrYears.length ? `${mgrYears.reduce((b,c) => c[1].avgEff > b[1].avgEff ? c : b)[0]} (${mgrYears.reduce((b,c) => c[1].avgEff > b[1].avgEff ? c : b)[1].avgEff}%)` : "—", color:"#2ecc71" },
+                        { label:"Worst Season", value: mgrYears.length ? `${mgrYears.reduce((b,c) => c[1].avgEff < b[1].avgEff ? c : b)[0]} (${mgrYears.reduce((b,c) => c[1].avgEff < b[1].avgEff ? c : b)[1].avgEff}%)` : "—", color:"#d42b2b" },
+                      ].map(({label, value, color}) => (
+                        <div key={label} style={{ flex:1, minWidth:mobile?100:120, background:"#0a0a0a", borderRadius:8, padding:"10px 12px" }}>
+                          <div style={{ fontSize:10, color:"#555", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1.5, marginBottom:3 }}>{label}</div>
+                          <div style={{ color, fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?14:18 }}>{value}</div>
+                        </div>
                       ))}
                     </div>
+
+                    {/* Year-by-year table */}
+                    <div style={{ overflowX:"auto" }}>
+                      <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                        <thead><tr>
+                          <th style={{ padding:"8px 10px", textAlign:"left", color:"#2ecc71", fontFamily:"'Cooper Black',Georgia,serif", fontSize:12, borderBottom:"2px solid #333" }}>Year</th>
+                          <th style={{ padding:"8px 10px", textAlign:"center", color:"#2ecc71", fontSize:11, borderBottom:"2px solid #333" }}>Efficiency</th>
+                          <th style={{ padding:"8px 10px", textAlign:"center", color:"#555", fontSize:11, borderBottom:"2px solid #333" }}>Visual</th>
+                          <th style={{ padding:"8px 10px", textAlign:"center", color:"#d42b2b", fontSize:11, borderBottom:"2px solid #333" }}>Bench/Wk</th>
+                          <th style={{ padding:"8px 10px", textAlign:"center", color:"#888", fontSize:11, borderBottom:"2px solid #333" }}>Weeks</th>
+                          <th style={{ padding:"8px 10px", textAlign:"center", color:"#e9c46a", fontSize:11, borderBottom:"2px solid #333" }}>Record</th>
+                          <th style={{ padding:"8px 10px", textAlign:"center", color:"#f4a261", fontSize:11, borderBottom:"2px solid #333" }}>Finish</th>
+                          <th style={{ padding:"8px 10px", textAlign:"center", color:"#888", fontSize:11, borderBottom:"2px solid #333" }}>Grade</th>
+                        </tr></thead>
+                        <tbody>
+                          {mgrYears.map(([yr, d], i) => {
+                            const color = d.avgEff >= 92 ? "#e9c46a" : d.avgEff >= 91 ? "#2ecc71" : d.avgEff >= 88 ? "#f4a261" : "#d42b2b";
+                            const grade = d.avgEff >= 92 ? "👑 Elite" : d.avgEff >= 91 ? "🎯 Sharp" : d.avgEff >= 88 ? "✅ Solid" : d.avgEff >= 85 ? "⚠️ Leaky" : "❌ Leaving pts";
+                            const barW = Math.max(0, Math.min(100, (d.avgEff - 70) / 30 * 100));
+                            const sh = DATA.seasonHistories[leMgr] || [];
+                            const season = sh.find(s => s.year === parseInt(yr));
+                            const record = season ? `${season.W}-${season.L}` : "—";
+                            const finish = season ? season.PlayoffFinish : null;
+                            const finishColor = finish === 1 ? "#e9c46a" : finish <= 3 ? "#2ecc71" : finish >= 10 ? "#d42b2b" : "#aaa";
+                            return (
+                              <tr key={yr} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", fontFamily:"'Cooper Black',Georgia,serif", fontSize:15, color:"#2176d2" }}>{yr}</td>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color, fontWeight:700, fontFamily:"'Cooper Black',Georgia,serif", fontSize:15 }}>{d.avgEff}%</td>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", width:100 }}>
+                                  <div style={{ background:"#181818", borderRadius:3, height:6 }}>
+                                    <div style={{ height:6, borderRadius:3, width:`${barW}%`, background:color }} />
+                                  </div>
+                                </td>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#d42b2b" }}>−{d.avgBench}</td>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#aaa" }}>{d.weeks}</td>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#e9c46a" }}>{record}</td>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:finishColor, fontWeight:600 }}>{finish === 1 ? "🏆" : finish ? `#${finish}` : "—"}</td>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", fontSize:10, color }}>{grade}</td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
-                );
-              })}
-            </div>
-          </Card>
+                )}
+              </div>
+            )}
+
+            {/* BEST SEASONS */}
+            {leTab === "best" && (() => {
+              const allSeasonEffs = [];
+              Object.entries(mgrYearEff).forEach(([mgr, yrs]) => {
+                Object.entries(yrs).forEach(([yr, d]) => {
+                  const avgEff = parseFloat((d.totalEff / d.weeks).toFixed(1));
+                  const avgBench = parseFloat((d.totalBench / d.weeks).toFixed(2));
+                  const sh = DATA.seasonHistories[mgr] || [];
+                  const season = sh.find(s => s.year === parseInt(yr));
+                  const finish = season ? season.PlayoffFinish : null;
+                  const record = season ? `${season.W}-${season.L}` : "—";
+                  allSeasonEffs.push({ mgr, year: parseInt(yr), avgEff, avgBench, weeks: d.weeks, finish, record });
+                });
+              });
+              const topSeasons = [...allSeasonEffs].sort((a, b) => b.avgEff - a.avgEff).slice(0, 20);
+
+              return (
+                <div>
+                  <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:14, color:"#2ecc71", letterSpacing:1, marginBottom:8 }}>🔥 Top 20 Most Efficient Seasons (2015–2025)</div>
+                  <div style={{ overflowX:"auto" }}>
+                    <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                      <thead><tr>
+                        <th style={{ padding:"8px 10px", textAlign:"left", color:"#2ecc71", fontFamily:"'Cooper Black',Georgia,serif", fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
+                        <th style={{ padding:"8px 10px", textAlign:"left", color:"#888", fontSize:11, borderBottom:"2px solid #333" }}>Manager</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#2176d2", fontSize:11, borderBottom:"2px solid #333" }}>Year</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#2ecc71", fontSize:11, borderBottom:"2px solid #333" }}>Efficiency</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#555", fontSize:11, borderBottom:"2px solid #333" }}>Visual</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#d42b2b", fontSize:11, borderBottom:"2px solid #333" }}>Bench/Wk</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#e9c46a", fontSize:11, borderBottom:"2px solid #333" }}>Record</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#f4a261", fontSize:11, borderBottom:"2px solid #333" }}>Finish</th>
+                      </tr></thead>
+                      <tbody>
+                        {topSeasons.map((s, i) => {
+                          const color = s.avgEff >= 92 ? "#e9c46a" : s.avgEff >= 91 ? "#2ecc71" : s.avgEff >= 88 ? "#f4a261" : "#d42b2b";
+                          const barW = Math.max(0, Math.min(100, (s.avgEff - 70) / 30 * 100));
+                          const finishColor = s.finish === 1 ? "#e9c46a" : s.finish <= 3 ? "#2ecc71" : s.finish >= 10 ? "#d42b2b" : "#aaa";
+                          return (
+                            <tr key={`${s.mgr}-${s.year}`} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color: i<3?"#2ecc71":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>{i===0?"🥇":i===1?"🥈":i===2?"🥉":`#${i+1}`}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}>
+                                <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
+                                  <ManagerLogo name={s.mgr} size={18} />
+                                  <span style={{ color:"#fff", fontWeight:500 }}>{firstName(s.mgr)}</span>
+                                </span>
+                              </td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2176d2", fontFamily:"'Cooper Black',Georgia,serif" }}>{s.year}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color, fontWeight:700, fontFamily:"'Cooper Black',Georgia,serif", fontSize:15 }}>{s.avgEff}%</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", width:80 }}>
+                                <div style={{ background:"#181818", borderRadius:3, height:6 }}>
+                                  <div style={{ height:6, borderRadius:3, width:`${barW}%`, background:color }} />
+                                </div>
+                              </td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#d42b2b" }}>−{s.avgBench}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#e9c46a" }}>{s.record}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:finishColor, fontWeight:600 }}>{s.finish === 1 ? "🏆" : s.finish ? `#${s.finish}` : "—"}</td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              );
+            })()}
+
+            {/* WORST SEASONS */}
+            {leTab === "worst" && (() => {
+              const allSeasonEffs = [];
+              Object.entries(mgrYearEff).forEach(([mgr, yrs]) => {
+                Object.entries(yrs).forEach(([yr, d]) => {
+                  const avgEff = parseFloat((d.totalEff / d.weeks).toFixed(1));
+                  const avgBench = parseFloat((d.totalBench / d.weeks).toFixed(2));
+                  const sh = DATA.seasonHistories[mgr] || [];
+                  const season = sh.find(s => s.year === parseInt(yr));
+                  const finish = season ? season.PlayoffFinish : null;
+                  const record = season ? `${season.W}-${season.L}` : "—";
+                  allSeasonEffs.push({ mgr, year: parseInt(yr), avgEff, avgBench, weeks: d.weeks, finish, record });
+                });
+              });
+              const bottomSeasons = [...allSeasonEffs].sort((a, b) => a.avgEff - b.avgEff).slice(0, 20);
+
+              return (
+                <div>
+                  <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:14, color:"#d42b2b", letterSpacing:1, marginBottom:8 }}>💀 Top 20 Least Efficient Seasons (2015–2025)</div>
+                  <div style={{ overflowX:"auto" }}>
+                    <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                      <thead><tr>
+                        <th style={{ padding:"8px 10px", textAlign:"left", color:"#d42b2b", fontFamily:"'Cooper Black',Georgia,serif", fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
+                        <th style={{ padding:"8px 10px", textAlign:"left", color:"#888", fontSize:11, borderBottom:"2px solid #333" }}>Manager</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#2176d2", fontSize:11, borderBottom:"2px solid #333" }}>Year</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#d42b2b", fontSize:11, borderBottom:"2px solid #333" }}>Efficiency</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#555", fontSize:11, borderBottom:"2px solid #333" }}>Visual</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#d42b2b", fontSize:11, borderBottom:"2px solid #333" }}>Bench/Wk</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#e9c46a", fontSize:11, borderBottom:"2px solid #333" }}>Record</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#f4a261", fontSize:11, borderBottom:"2px solid #333" }}>Finish</th>
+                      </tr></thead>
+                      <tbody>
+                        {bottomSeasons.map((s, i) => {
+                          const color = s.avgEff >= 92 ? "#e9c46a" : s.avgEff >= 91 ? "#2ecc71" : s.avgEff >= 88 ? "#f4a261" : "#d42b2b";
+                          const barW = Math.max(0, Math.min(100, (s.avgEff - 70) / 30 * 100));
+                          const finishColor = s.finish === 1 ? "#e9c46a" : s.finish <= 3 ? "#2ecc71" : s.finish >= 10 ? "#d42b2b" : "#aaa";
+                          return (
+                            <tr key={`${s.mgr}-${s.year}`} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color: i<3?"#d42b2b":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>{i===0?"💀":i===1?"💀":i===2?"💀":`#${i+1}`}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}>
+                                <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
+                                  <ManagerLogo name={s.mgr} size={18} />
+                                  <span style={{ color:"#fff", fontWeight:500 }}>{firstName(s.mgr)}</span>
+                                </span>
+                              </td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2176d2", fontFamily:"'Cooper Black',Georgia,serif" }}>{s.year}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color, fontWeight:700, fontFamily:"'Cooper Black',Georgia,serif", fontSize:15 }}>{s.avgEff}%</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", width:80 }}>
+                                <div style={{ background:"#181818", borderRadius:3, height:6 }}>
+                                  <div style={{ height:6, borderRadius:3, width:`${barW}%`, background:color }} />
+                                </div>
+                              </td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#d42b2b" }}>−{s.avgBench}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#e9c46a" }}>{s.record}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:finishColor, fontWeight:600 }}>{s.finish === 1 ? "🏆" : s.finish ? `#${s.finish}` : "—"}</td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              );
+            })()}
+
+          </div>
         );
       })()}
 
@@ -59918,9 +60718,9 @@ function DDManagersTab() {
 
 
 // DD scripts — module-level
-const _DD_A={'dd_recalculate_h2h.py':{e:"\"\"\"\nDuck Dynasty \u2014 H2H & Stats Recalculator\n\"\"\"\n\nimport json, ssl, urllib.request\nfrom collections import defaultdict\n\nssl_ctx = ssl.create_default_context()\nssl_ctx.check_hostname = False\nssl_ctx.verify_mode = ssl.CERT_NONE\n\nLEAGUE_IDS = {\n    2023: \"987773503715741696\",\n    2024: \"1055318745977061376\",\n    2025: \"1180599430784786432\",\n}\n\nNAME_MAP = {\n    \"jbeuk\":\"Jake Beukelman\",\"jaredstuit\":\"Jared Stuit\",\"cmanes3\":\"Christian Manes\",\n    \"willhoekstra\":\"Will Hoekstra\",\"fourputtbogey\":\"Ross Van Groningen\",\n    \"ChiefsKingdom92\":\"Trey Hugen\",\"uclafay22\":\"Aaron Fay\",\"JamesL81\":\"James Lazette\",\n    \"svandermolen\":\"Steve Vander Molen\",\"grgmldr\":\"Greg Mulder\",\"VSipma77\":\"Vance Sipma\",\n    \"TylerGoslinga\":\"Tyler Goslinga\",\"matthewvg92\":\"Matthew Van Groningen\",\n    \"Jake Beukelman\":\"Jake Beukelman\",\"Jared Stuit\":\"Jared Stuit\",\n    \"Christian Manes\":\"Christian Manes\",\"Will Hoekstra\":\"Will Hoekstra\",\n    \"Ross Van Groningen\":\"Ross Van Groningen\",\"Trey Hugen\":\"Trey Hugen\",\n    \"Aaron Fay\":\"Aaron Fay\",\"James Lazette\":\"James Lazette\",\n    \"Steve Vander Molen\":\"Steve Vander Molen\",\"Greg Mulder\":\"Greg Mulder\",\n    \"Vance Sipma\":\"Vance Sipma\",\"Tyler Goslinga\":\"Tyler Goslinga\",\n    \"Matthew Van Groningen\":\"Matthew Van Groningen\",\n}\n\nBASE = \"https://api.sleeper.app/v1\"\n\ndef get(url):\n    with urllib.request.urlopen(url, context=ssl_ctx) as r:\n        return json.loads(r.read())\n\ndef fetch_users(lid):\n    rosters = get(f\"{BASE}/league/{lid}/rosters\")\n    users   = get(f\"{BASE}/league/{lid}/users\")\n    uid_map = {}\n    for u in users:\n        n = NAME_MAP.get(u.get(\"display_name\",\"\")) or NAME_MAP.get(u.get(\"username\",\"\")) or u.get(\"display_name\",\"\")\n        uid_map[u[\"user_id\"]] = n\n    return {r[\"roster_id\"]: uid_map.get(r.get(\"owner_id\"),\"\") for r in rosters}\n\ndef fetch_playoff_start(lid):\n    return get(f\"{BASE}/league/{lid}\").get(\"settings\",{}).get(\"playoff_week_start\",15)\n\ndef fetch_matchups(lid, weeks):\n    games = []\n    for wk in range(1, weeks+1):\n        data = get(f\"{BASE}/league/{lid}/matchups/{wk}\")\n        if not data: break\n        by_id = defaultdict(list)\n        for e in data: by_id[e[\"matchup_id\"]].append(e)\n        for mid, entries in by_id.items():\n            if len(entries)==2:\n                a,b = entries\n                games.append({\"week\":wk,\"rid_a\":a[\"roster_id\"],\"pts_a\":round(a.get(\"points\",0) or 0,2),\n                               \"rid_b\":b[\"roster_id\"],\"pts_b\":round(b.get(\"points\",0) or 0,2)})\n    return games\n\nh2h = defaultdict(lambda: defaultdict(lambda: {\"W\":0,\"L\":0,\"PF\":0.0,\"PA\":0.0}))\nall_games = []\nunique_scores = []\nseen_scores = set()\n\nfor year, lid in sorted(LEAGUE_IDS.items()):\n    print(f\"Fetching {year}...\")\n    rm = fetch_users(lid)\n    ps = fetch_playoff_start(lid)\n    ms = fetch_matchups(lid, ps-1)\n    print(f\"  {len(ms)} games\")\n    for g in ms:\n        na = rm.get(g[\"rid_a\"],\"\"); nb = rm.get(g[\"rid_b\"],\"\")\n        pa = g[\"pts_a\"]; pb = g[\"pts_b\"]\n        if not na or not nb or \"Unknown\" in na or \"Unknown\" in nb: continue\n        a_won = pa > pb\n        if a_won:\n            h2h[na][nb][\"W\"]+=1; h2h[nb][na][\"L\"]+=1; w,l,wp,lp = na,nb,pa,pb\n        elif pb > pa:\n            h2h[nb][na][\"W\"]+=1; h2h[na][nb][\"L\"]+=1; w,l,wp,lp = nb,na,pb,pa\n        else:\n            w,l,wp,lp = na,nb,pa,pb\n        h2h[na][nb][\"PF\"]=round(h2h[na][nb][\"PF\"]+pa,2); h2h[na][nb][\"PA\"]=round(h2h[na][nb][\"PA\"]+pb,2)\n        h2h[nb][na][\"PF\"]=round(h2h[nb][na][\"PF\"]+pb,2); h2h[nb][na][\"PA\"]=round(h2h[nb][na][\"PA\"]+pa,2)\n        margin = round(abs(wp-lp),2)\n        all_games.append({\"year\":year,\"week\":g[\"week\"],\"winner\":w,\"loser\":l,\"winPts\":wp,\"losePts\":lp,\"margin\":margin,\"na\":na,\"nb\":nb,\"pa\":pa,\"pb\":pb})\n        for nm,pts in [(na,pa),(nb,pb)]:\n            k=(year,g[\"week\"],nm)\n            if k not in seen_scores:\n                seen_scores.add(k)\n                unique_scores.append({\"year\":year,\"week\":g[\"week\"],\"name\":nm,\"pts\":pts})\n\n# Rivalries\nrivalries=[]; seen_p=set()\nfor a in h2h:\n    for b in h2h[a]:\n        k=tuple(sorted([a,b]))\n        if k in seen_p: continue\n        seen_p.add(k)\n        aW=h2h[a][b][\"W\"]; aL=h2h[a][b][\"L\"]; tot=aW+aL\n        if tot==0: continue\n        bal=1.0-abs(aW-aL)/tot\n        rivalries.append({\"a\":a,\"b\":b,\"aW\":aW,\"aL\":aL,\"total\":tot,\"score\":round(tot*bal,4)})\nrivalries.sort(key=lambda r:r[\"score\"],reverse=True)\n\n# Ownage\nownage=[]; seen_p=set()\nfor a in h2h:\n    for b in h2h[a]:\n        k=tuple(sorted([a,b]))\n        if k in seen_p: continue\n        seen_p.add(k)\n        aW=h2h[a][b][\"W\"]; aL=h2h[a][b][\"L\"]\n        if aW==aL: continue\n        if aW>aL: wn,ln,w,l=a,b,aW,aL\n        else: wn,ln,w,l=b,a,aL,aW\n        tot=w+l; wpct=round(w/tot,4)\n        if wpct>=0.6 and tot>=3:\n            ownage.append({\"Winner\":wn,\"Loser\":ln,\"W\":w,\"L\":l,\"Total\":tot,\"WPct\":wpct})\nownage.sort(key=lambda o:(o[\"WPct\"],o[\"W\"]),reverse=True)\n\n# Streaks \u2014 build ordered W/L sequence per manager\nmgr_seq = defaultdict(list)\nfor g in all_games:\n    mgr_seq[g[\"na\"]].append((g[\"year\"],g[\"week\"],g[\"pa\"]>g[\"pb\"]))\n    mgr_seq[g[\"nb\"]].append((g[\"year\"],g[\"week\"],g[\"pb\"]>g[\"pa\"]))\n# Deduplicate and sort\nfor nm in mgr_seq:\n    seen_wk=set(); dedup=[]\n    for tup in sorted(mgr_seq[nm], key=lambda t:(t[0],t[1])):\n        k=(tup[0],tup[1])\n        if k not in seen_wk: seen_wk.add(k); dedup.append(tup)\n    mgr_seq[nm]=dedup\n\nwin_streaks=[]; loss_streaks=[]\nfor name, seq in mgr_seq.items():\n    bw=0; cw=0; bws=None; bwe=None; ws=None\n    bl=0; cl=0; bls=None; ble=None; ls=None\n    for yr,wk,won in seq:\n        if won:\n            if cw==0: ws=(yr,wk)\n            cw+=1; cl=0\n            if cw>bw: bw=cw; bws=ws; bwe=(yr,wk)\n        else:\n            if cl==0: ls=(yr,wk)\n            cl+=1; cw=0\n            if cl>bl: bl=cl; bls=ls; ble=(yr,wk)\n    if bw>=3 and bws: win_streaks.append({\"Manager\":name,\"Streak\":bw,\"StartYear\":bws[0],\"StartWeek\":bws[1],\"EndYear\":bwe[0],\"EndWeek\":bwe[1]})\n    if bl>=3 and bls: loss_streaks.append({\"Manager\":name,\"Streak\":bl,\"StartYear\":bls[0],\"StartWeek\":bls[1],\"EndYear\":ble[0],\"EndWeek\":ble[1]})\nwin_streaks.sort(key=lambda s:s[\"Streak\"],reverse=True)\nloss_streaks.sort(key=lambda s:s[\"Streak\"],reverse=True)\n\n# Luck \u2014 build winner map from all_games\nwinner_map = {}\nfor g in all_games:\n    winner_map[(g[\"year\"],g[\"week\"],g[\"winner\"])]=True\n    winner_map[(g[\"year\"],g[\"week\"],g[\"loser\"])]=False\n\nweeks_data = defaultdict(list)\nfor s in unique_scores: weeks_data[(s[\"year\"],s[\"week\"])].append(s)\n\nluck_acc = defaultdict(lambda:{\"actual\":0,\"expected\":0.0,\"games\":0})\nfor (yr,wk), scores in weeks_data.items():\n    n=len(scores)\n    if n<2: continue\n    for s in scores:\n        nm=s[\"name\"]; pts=s[\"pts\"]\n        beats=sum(1 for o in scores if o[\"name\"]!=nm and pts>o[\"pts\"])\n        exp=beats/(n-1)\n        act=1 if winner_map.get((yr,wk,nm),False) else 0\n        luck_acc[nm][\"expected\"]=round(luck_acc[nm][\"expected\"]+exp,4)\n        luck_acc[nm][\"actual\"]+=act\n        luck_acc[nm][\"games\"]+=1\n\nluck_list=[]\nfor name,v in luck_acc.items():\n    exp=round(v[\"expected\"],2); act=v[\"actual\"]\n    luck_list.append({\"Manager\":name,\"ActualW\":act,\"ExpectedW\":exp,\"LuckDelta\":round(act-exp,2),\"Games\":v[\"games\"]})\nluck_list.sort(key=lambda l:l[\"LuckDelta\"],reverse=True)\n\nblowouts=sorted(all_games,key=lambda g:g[\"margin\"],reverse=True)[:20]\nclosest=sorted(all_games,key=lambda g:g[\"margin\"])[:20]\ntop_scores=sorted(unique_scores,key=lambda s:s[\"pts\"],reverse=True)[:20]\nbottom_scores=sorted(unique_scores,key=lambda s:s[\"pts\"])[:20]\n\n# OUTPUT\nprint(\"\\n\\n// PASTE THIS INTO App.jsx as DD_POND_DATA (after DD_HISTORICAL)\\n\")\nprint(\"const DD_POND_DATA = {\")\nprint(\"  h2h: {\")\nfor a in sorted(h2h.keys()):\n    inner=\", \".join(f'\"{b}\":{{W:{v[\"W\"]},L:{v[\"L\"]},PF:{round(v[\"PF\"],2)},PA:{round(v[\"PA\"],2)}}}' for b,v in sorted(h2h[a].items()))\n    print(f'    \"{a}\": {{ {inner} }},')\nprint(\"  },\")\nprint(\"  rivalries: [\")\nfor r in rivalries[:20]: print(f'    {{a:\"{r[\"a\"]}\",b:\"{r[\"b\"]}\",aW:{r[\"aW\"]},aL:{r[\"aL\"]},total:{r[\"total\"]},score:{r[\"score\"]}}},')\nprint(\"  ],\")\nprint(\"  ownage: [\")\nfor o in ownage[:20]: print(f'    {{Winner:\"{o[\"Winner\"]}\",Loser:\"{o[\"Loser\"]}\",W:{o[\"W\"]},L:{o[\"L\"]},Total:{o[\"Total\"]},WPct:{o[\"WPct\"]}}},')\nprint(\"  ],\")\nprint(\"  biggestBlowouts: [\")\nfor g in blowouts: print(f'    {{year:{g[\"year\"]},week:{g[\"week\"]},winner:\"{g[\"winner\"]}\",loser:\"{g[\"loser\"]}\",winPts:{g[\"winPts\"]},losePts:{g[\"losePts\"]},margin:{g[\"margin\"]}}},')\nprint(\"  ],\")\nprint(\"  closestGames: [\")\nfor g in closest: print(f'    {{year:{g[\"year\"]},week:{g[\"week\"]},winner:\"{g[\"winner\"]}\",loser:\"{g[\"loser\"]}\",winPts:{g[\"winPts\"]},losePts:{g[\"losePts\"]},margin:{g[\"margin\"]}}},')\nprint(\"  ],\")\nprint(\"  topScores: [\")\nfor s in top_scores: print(f'    {{year:{s[\"year\"]},week:{s[\"week\"]},name:\"{s[\"name\"]}\",pts:{s[\"pts\"]}}},')\nprint(\"  ],\")\nprint(\"  bottomScores: [\")\nfor s in bottom_scores: print(f'    {{year:{s[\"year\"]},week:{s[\"week\"]},name:\"{s[\"name\"]}\",pts:{s[\"pts\"]}}},')\nprint(\"  ],\")\nprint(\"  winStreaks: [\")\nfor s in win_streaks: print(f'    {{Manager:\"{s[\"Manager\"]}\",Streak:{s[\"Streak\"]},StartYear:{s[\"StartYear\"]},StartWeek:{s[\"StartWeek\"]},EndYear:{s[\"EndYear\"]},EndWeek:{s[\"EndWeek\"]}}},')\nprint(\"  ],\")\nprint(\"  lossStreaks: [\")\nfor s in loss_streaks: print(f'    {{Manager:\"{s[\"Manager\"]}\",Streak:{s[\"Streak\"]},StartYear:{s[\"StartYear\"]},StartWeek:{s[\"StartWeek\"]},EndYear:{s[\"EndYear\"]},EndWeek:{s[\"EndWeek\"]}}},')\nprint(\"  ],\")\nprint(\"  luck: [\")\nfor l in luck_list: print(f'    {{Manager:\"{l[\"Manager\"]}\",ActualW:{l[\"ActualW\"]},ExpectedW:{l[\"ExpectedW\"]},LuckDelta:{l[\"LuckDelta\"]},Games:{l[\"Games\"]}}},')\nprint(\"  ],\")\nprint(\"};\")\nprint(f\"\\n// Games: {len(all_games)} | Scores: {len(unique_scores)} | Rivalries: {len(rivalries)} | Ownage: {len(ownage)}\")\n",d:"Recalculates DD H2H records, rivalries, streaks and luck.",w:"January \u2014 Step 2 of annual update"},'dd_rookie_drafts.py':{e:"\"\"\"\nDuck Dynasty \u2014 Rookie Draft Data Puller\n========================================\nPulls the 2024 and 2025 rookie draft picks from Sleeper.\nRun this, paste the output back to Claude.\n\nUSAGE:\n  python3 dd_rookie_drafts.py\n\"\"\"\n\nimport json, ssl, urllib.request\n\nssl_ctx = ssl.create_default_context()\nssl_ctx.check_hostname = False\nssl_ctx.verify_mode = ssl.CERT_NONE\n\nLEAGUE_IDS = {\n    2024: \"1055318745977061376\",\n    2025: \"1180599430784786432\",\n    2026: \"1315072924524220416\",\n\n}\n\nNAME_MAP = {\n    \"jbeuk\":\"Jake Beukelman\",\"jaredstuit\":\"Jared Stuit\",\"cmanes3\":\"Christian Manes\",\n    \"willhoekstra\":\"Will Hoekstra\",\"fourputtbogey\":\"Ross Van Groningen\",\n    \"ChiefsKingdom92\":\"Trey Hugen\",\"uclafay22\":\"Aaron Fay\",\"JamesL81\":\"James Lazette\",\n    \"svandermolen\":\"Steve Vander Molen\",\"grgmldr\":\"Greg Mulder\",\"VSipma77\":\"Vance Sipma\",\n    \"TylerGoslinga\":\"Tyler Goslinga\",\"matthewvg92\":\"Matthew Van Groningen\",\n    \"Jake Beukelman\":\"Jake Beukelman\",\"Jared Stuit\":\"Jared Stuit\",\n    \"Christian Manes\":\"Christian Manes\",\"Will Hoekstra\":\"Will Hoekstra\",\n    \"Ross Van Groningen\":\"Ross Van Groningen\",\"Trey Hugen\":\"Trey Hugen\",\n    \"Aaron Fay\":\"Aaron Fay\",\"James Lazette\":\"James Lazette\",\n    \"Steve Vander Molen\":\"Steve Vander Molen\",\"Greg Mulder\":\"Greg Mulder\",\n    \"Vance Sipma\":\"Vance Sipma\",\"Tyler Goslinga\":\"Tyler Goslinga\",\n    \"Matthew Van Groningen\":\"Matthew Van Groningen\",\n}\n\nBASE = \"https://api.sleeper.app/v1\"\n\ndef get(url):\n    with urllib.request.urlopen(url, context=ssl_ctx) as r:\n        return json.loads(r.read())\n\ndef resolve_name(uid, users):\n    for u in users:\n        if u[\"user_id\"] == uid:\n            n = NAME_MAP.get(u.get(\"display_name\",\"\")) or NAME_MAP.get(u.get(\"username\",\"\")) or u.get(\"display_name\",\"\")\n            return n\n    return f\"Unknown({uid})\"\n\nfor year, lid in sorted(LEAGUE_IDS.items()):\n    print(f\"\\nFetching {year} drafts for league {lid}...\")\n    drafts = get(f\"{BASE}/league/{lid}/drafts\")\n    users  = get(f\"{BASE}/league/{lid}/users\")\n\n    # Build user_id \u2192 name\n    uid_to_name = {}\n    for u in users:\n        n = NAME_MAP.get(u.get(\"display_name\",\"\")) or NAME_MAP.get(u.get(\"username\",\"\")) or u.get(\"display_name\",\"\")\n        uid_to_name[u[\"user_id\"]] = n\n\n    print(f\"  Found {len(drafts)} draft(s)\")\n    for d in drafts:\n        print(f\"  Draft ID: {d['draft_id']} | Type: {d.get('type','?')} | Status: {d.get('status','?')} | Season: {d.get('season','?')} | Rounds: {d.get('settings',{}).get('rounds','?')}\")\n\n    # Get picks for each draft\n    for d in drafts:\n        draft_id = d[\"draft_id\"]\n        dtype    = d.get(\"type\",\"\")\n        status   = d.get(\"status\",\"\")\n        rounds   = d.get(\"settings\",{}).get(\"rounds\",3)\n\n        print(f\"\\n  Pulling picks for draft {draft_id} ({dtype}, {rounds} rounds, {status})...\")\n        picks = get(f\"{BASE}/draft/{draft_id}/picks\")\n        print(f\"  {len(picks)} picks returned\")\n\n        if not picks:\n            print(\"  (no picks yet)\")\n            continue\n\n        # Print first few picks to verify data shape\n        print(f\"  Sample pick: {json.dumps(picks[0], indent=2)[:300]}\")\n        print(f\"\\n  All picks:\")\n        for p in picks:\n            pid     = p.get(\"player_id\",\"\")\n            meta    = p.get(\"metadata\",{})\n            name    = meta.get(\"first_name\",\"\") + \" \" + meta.get(\"last_name\",\"\")\n            pos     = meta.get(\"position\",\"\")\n            team    = meta.get(\"team\",\"\")\n            rd      = p.get(\"round\",0)\n            pick_no = p.get(\"pick_no\",0)\n            slot    = p.get(\"draft_slot\",0)\n            uid     = p.get(\"picked_by\",\"\")\n            mgr     = uid_to_name.get(uid, f\"Unknown({uid})\")\n            print(f\"    Rd{rd} Pk{pick_no} (Slot{slot}) | {mgr:25} | {pos:4} | {name} ({team})\")\n\n",d:"Pulls DD rookie draft picks from Sleeper.",w:"After each rookie draft"},'dd_playoff_scores.py':{e:"\"\"\"\ndd_playoff_scores.py \u2014 no external dependencies\nRun: python dd_playoff_scores.py > dd_playoff_scores_output.txt\n\"\"\"\nimport urllib.request, urllib.error, json, time, sys, ssl\n\nBASE = \"https://api.sleeper.app/v1\"\nCTX  = ssl._create_unverified_context()  # bypass SSL cert check\n\nDD_LEAGUE_IDS = {2023:\"987773503715741696\",2024:\"1055318745977061376\",2025:\"1180599430784786432\"}\nNAME_MAP = {\n    \"fourputtbogey\":\"Ross Van Groningen\",\"grgmldr\":\"Greg Mulder\",\n    \"TylerGoslinga\":\"Tyler Goslinga\",\"jbeuk\":\"Jake Beukelman\",\n    \"jaredstuit\":\"Jared Stuit\",\"cmanes3\":\"Christian Manes\",\n    \"ChiefsKingdom92\":\"Trey Hugen\",\"JamesL81\":\"James Lazette\",\n    \"svandermolen\":\"Steve Vander Molen\",\"VSipma77\":\"Vance Sipma\",\n    \"uclafay22\":\"Aaron Fay\",\"willhoekstra\":\"Will Hoekstra\",\n    \"matthewvg92\":\"Matthew Van Groningen\",\n}\nROUND_TO_WEEK  = {1:15,2:16,3:17}\nWINNERS_LABELS = {1:\"Round 1\",2:\"Semifinal\",3:\"Championship\"}\nLOSERS_LABELS  = {1:\"Round 1\",2:\"Semifinal\",3:\"Toilet Bowl\"}\n\ndef get(url):\n    for _ in range(3):\n        try:\n            with urllib.request.urlopen(url,timeout=15,context=CTX) as r:\n                return json.loads(r.read().decode(\"utf-8\"))\n        except urllib.error.HTTPError as e:\n            if e.code==429: print(\"  Rate limited...\",file=sys.stderr); time.sleep(5)\n            else: print(f\"  HTTP {e.code}\",file=sys.stderr); return None\n        except Exception as e: print(f\"  Error: {e}\",file=sys.stderr); return None\n    return None\n\ndef roster_map(league_id):\n    rosters=get(f\"{BASE}/league/{league_id}/rosters\") or []\n    users=get(f\"{BASE}/league/{league_id}/users\") or []\n    time.sleep(0.4)\n    un={u[\"user_id\"]:NAME_MAP.get(u.get(\"display_name\",\"\"),u.get(\"display_name\",\"\")) for u in users}\n    return {r[\"roster_id\"]:un.get(r.get(\"owner_id\",\"\"),f\"Roster {r['roster_id']}\") for r in rosters}\n\ndef week_scores(league_id,week):\n    data=get(f\"{BASE}/league/{league_id}/matchups/{week}\") or []\n    time.sleep(0.3)\n    return {e[\"roster_id\"]:round(e.get(\"points\",0.0),2) for e in data}\n\ndef process(bracket,rm,ws,labels):\n    games=[]\n    for e in bracket:\n        r,t1,t2,w=e.get(\"r\"),e.get(\"t1\"),e.get(\"t2\"),e.get(\"w\")\n        if t1 is None or t2 is None: continue\n        sc=ws.get(ROUND_TO_WEEK.get(r),{})\n        n1,n2=rm.get(t1,f\"R{t1}\"),rm.get(t2,f\"R{t2}\")\n        p1,p2=sc.get(t1,0.0),sc.get(t2,0.0)\n        win=rm.get(w,f\"R{w}\") if w else (n1 if p1>=p2 else n2)\n        lbl=labels.get(r,f\"Round {r}\")\n        if r==3 and len([x for x in bracket if x.get(\"r\")==3])==2:\n            same=sorted([x for x in bracket if x.get(\"r\")==3],key=lambda x:x.get(\"p\",99))\n            lbl=labels.get(3,\"Championship\") if e is same[0] else \"3rd Place\"\n        games.append({\"round\":r,\"label\":lbl,\"t1\":n1,\"t1pts\":p1,\"t2\":n2,\"t2pts\":p2,\"winner\":win,\"margin\":round(abs(p1-p2),2)})\n    return sorted(games,key=lambda g:(g[\"round\"],g[\"t1\"]))\n\nall_s={}\nfor season,lid in sorted(DD_LEAGUE_IDS.items()):\n    print(f\"\\nFetching {season}...\",file=sys.stderr)\n    rm=roster_map(lid)\n    ws={w:week_scores(lid,w) for w in [15,16,17]}\n    wb=get(f\"{BASE}/league/{lid}/winners_bracket\") or []; time.sleep(0.4)\n    lb=get(f\"{BASE}/league/{lid}/losers_bracket\") or []; time.sleep(0.4)\n    all_s[season]={\"winners\":process(wb,rm,ws,WINNERS_LABELS),\"losers\":process(lb,rm,ws,LOSERS_LABELS)}\n    print(f\"  {len(all_s[season]['winners'])} playoff + {len(all_s[season]['losers'])} toilet bowl games\",file=sys.stderr)\n\ndef fmt(g): return f'      {{round:{g[\"round\"]},label:\"{g[\"label\"]}\",t1:\"{g[\"t1\"]}\",t1pts:{g[\"t1pts\"]},t2:\"{g[\"t2\"]}\",t2pts:{g[\"t2pts\"]},winner:\"{g[\"winner\"]}\",margin:{g[\"margin\"]}}}'\nlines=[\"const DD_PLAYOFF_SCORES = {\"]\nfor s in sorted(all_s):\n    lines+=[f\"  {s}: {{\",\"    winners: [\"]+[fmt(g)+\",\" for g in all_s[s][\"winners\"]]+[\"    ],\",\"    losers: [\"]+[fmt(g)+\",\" for g in all_s[s][\"losers\"]]+[\"    ],\",\"  },\"]\nlines.append(\"};\")\nprint(\"\\n\".join(lines))\n",d:"Pulls DD playoff game scores from Sleeper.",w:"January \u2014 after playoffs end"}};
-const _DD_B={'dd_transactions.py':{e:"\"\"\"\ndd_transactions.py \u2014 no external dependencies\nRun: python dd_transactions.py > dd_transactions_output.txt\nTakes 3-5 minutes.\n\"\"\"\nimport urllib.request, urllib.error, json, time, sys, ssl\n\nBASE = \"https://api.sleeper.app/v1\"\nCTX  = ssl._create_unverified_context()\n\nDD_LEAGUE_IDS = {2023:\"987773503715741696\",2024:\"1055318745977061376\",2025:\"1180599430784786432\"}\nNAME_MAP = {\n    \"fourputtbogey\":\"Ross Van Groningen\",\"grgmldr\":\"Greg Mulder\",\n    \"TylerGoslinga\":\"Tyler Goslinga\",\"jbeuk\":\"Jake Beukelman\",\n    \"jaredstuit\":\"Jared Stuit\",\"cmanes3\":\"Christian Manes\",\n    \"ChiefsKingdom92\":\"Trey Hugen\",\"JamesL81\":\"James Lazette\",\n    \"svandermolen\":\"Steve Vander Molen\",\"VSipma77\":\"Vance Sipma\",\n    \"uclafay22\":\"Aaron Fay\",\"willhoekstra\":\"Will Hoekstra\",\n    \"matthewvg92\":\"Matthew Van Groningen\",\n}\n\ndef get(url):\n    for _ in range(3):\n        try:\n            with urllib.request.urlopen(url,timeout=20,context=CTX) as r:\n                return json.loads(r.read().decode(\"utf-8\"))\n        except urllib.error.HTTPError as e:\n            if e.code==429: print(\"  Rate limited...\",file=sys.stderr); time.sleep(5)\n            else: print(f\"  HTTP {e.code}\",file=sys.stderr); return None\n        except Exception as e: print(f\"  Error: {e}\",file=sys.stderr); return None\n    return None\n\ndef build_maps(league_id):\n    rosters=get(f\"{BASE}/league/{league_id}/rosters\") or []\n    users=get(f\"{BASE}/league/{league_id}/users\") or []\n    time.sleep(0.4)\n    un={u[\"user_id\"]:NAME_MAP.get(u.get(\"display_name\",\"\"),u.get(\"display_name\",\"\")) for u in users}\n    rn={r[\"roster_id\"]:un.get(r.get(\"owner_id\",\"\"),f\"R{r['roster_id']}\") for r in rosters}\n    print(\"  Fetching player registry...\",file=sys.stderr)\n    players=get(f\"{BASE}/players/nfl\") or {}\n    time.sleep(1.5)\n    pn={pid:(f\"{p.get('first_name','')} {p.get('last_name','')}\".strip() or pid) for pid,p in players.items()}\n    return rn,pn\n\ndef fetch_txns(league_id,rn,pn):\n    txns=[]\n    for week in range(1,18):\n        wt=get(f\"{BASE}/league/{league_id}/transactions/{week}\") or []\n        time.sleep(0.25)\n        for t in wt:\n            if t.get(\"status\")!=\"complete\": continue\n            rids=t.get(\"roster_ids\",[])\n            adds=t.get(\"adds\") or {}\n            drops=t.get(\"drops\") or {}\n            dps=t.get(\"draft_picks\") or []\n            mgrs=list({rn.get(r,f\"R{r}\") for r in rids})\n            txns.append({\"week\":week,\"type\":t.get(\"type\",\"\"),\"managers\":mgrs,\n                \"adds\":[{\"player\":pn.get(pid,pid),\"to\":rn.get(rid,f\"R{rid}\")} for pid,rid in adds.items()],\n                \"drops\":[{\"player\":pn.get(pid,pid),\"from\":rn.get(rid,f\"R{rid}\")} for pid,rid in drops.items()],\n                \"picks\":[{\"round\":dp.get(\"round\"),\"season\":dp.get(\"season\"),\"from\":rn.get(dp.get(\"previous_owner_id\"),\"?\"),\"to\":rn.get(dp.get(\"owner_id\"),\"?\")} for dp in dps],\n            })\n    return txns\n\ndef esc(s): return str(s).replace('\"','\\\\\"').replace('\\n',' ')\n\nall_txns={}\nfor season,lid in sorted(DD_LEAGUE_IDS.items()):\n    print(f\"\\nDD {season}...\",file=sys.stderr)\n    rn,pn=build_maps(lid)\n    txns=fetch_txns(lid,rn,pn)\n    all_txns[season]=txns\n    print(f\"  {len(txns)} transactions\",file=sys.stderr)\n\nmgr_stats={}\ndef ensure(n):\n    if n not in mgr_stats: mgr_stats[n]={\"trades\":0,\"waivers\":0,\"freeAgents\":0,\"totalMoves\":0,\"playersAdded\":0}\nfor s,txns in all_txns.items():\n    for t in txns:\n        for m in t[\"managers\"]:\n            ensure(m)\n            if t[\"type\"]==\"trade\": mgr_stats[m][\"trades\"]+=1\n            elif t[\"type\"]==\"waiver\": mgr_stats[m][\"waivers\"]+=1\n            elif t[\"type\"]==\"free_agent\": mgr_stats[m][\"freeAgents\"]+=1\n            mgr_stats[m][\"totalMoves\"]+=1\n        for a in t[\"adds\"]: ensure(a[\"to\"]); mgr_stats[a[\"to\"]][\"playersAdded\"]+=1\nfor m in mgr_stats: mgr_stats[m][\"trades\"]=mgr_stats[m][\"trades\"]//2 if mgr_stats[m][\"trades\"]>1 else mgr_stats[m][\"trades\"]\n\nlines=[\"const DD_TRANSACTIONS = {\"]\nfor s in sorted(all_txns):\n    lines.append(f\"  {s}: [\")\n    for t in all_txns[s]:\n        ms=\"[\"+\",\".join(f'\"{esc(m)}\"' for m in t[\"managers\"])+\"]\"\n        ad=\"[\"+\",\".join(f'{{player:\"{esc(a[\"player\"])}\",to:\"{esc(a[\"to\"])}\"}}' for a in t[\"adds\"])+\"]\"\n        dr=\"[\"+\",\".join(f'{{player:\"{esc(d[\"player\"])}\",from:\"{esc(d[\"from\"])}\"}}' for d in t[\"drops\"])+\"]\"\n        pk=\"[\"+\",\".join(f'{{round:{p.get(\"round\",\"?\")},season:{p.get(\"season\",\"?\")},from:\"{esc(p[\"from\"])}\",to:\"{esc(p[\"to\"])}\"}}' for p in t[\"picks\"])+\"]\"\n        lines.append(f'    {{week:{t[\"week\"]},type:\"{t[\"type\"]}\",managers:{ms},adds:{ad},drops:{dr},picks:{pk}}},')\n    lines.append(\"  ],\")\nlines.append(\"};\")\nlines.append(\"\")\nlines.append(\"const DD_TRANSACTION_SUMMARY = {\")\nfor m,s in sorted(mgr_stats.items(),key=lambda x:-x[1][\"totalMoves\"]):\n    lines.append(f'  \"{esc(m)}\":{{trades:{s[\"trades\"]},waivers:{s[\"waivers\"]},freeAgents:{s[\"freeAgents\"]},totalMoves:{s[\"totalMoves\"]},playersAdded:{s[\"playersAdded\"]}}},')\nlines.append(\"};\")\nprint(\"\\n\".join(lines))\n",d:"Pulls all DD trades, waivers and FA moves.",w:"January \u2014 Step 2 of annual update"},'dd_lineup_efficiency.py':{e:"\"\"\"\ndd_lineup_efficiency.py \u2014 no external dependencies\nRUN AFTER MAY 8TH once dd_player_scores.py has been re-run.\nRun: python dd_lineup_efficiency.py > dd_lineup_efficiency_output.txt\nTakes 10-15 minutes.\n\"\"\"\nimport urllib.request, urllib.error, json, time, sys, ssl\n\nBASE = \"https://api.sleeper.app/v1\"\nCTX  = ssl._create_unverified_context()\n\nDD_LEAGUE_IDS = {2023:\"987773503715741696\",2024:\"1055318745977061376\",2025:\"1180599430784786432\"}\nNAME_MAP = {\n    \"fourputtbogey\":\"Ross Van Groningen\",\"grgmldr\":\"Greg Mulder\",\n    \"TylerGoslinga\":\"Tyler Goslinga\",\"jbeuk\":\"Jake Beukelman\",\n    \"jaredstuit\":\"Jared Stuit\",\"cmanes3\":\"Christian Manes\",\n    \"ChiefsKingdom92\":\"Trey Hugen\",\"JamesL81\":\"James Lazette\",\n    \"svandermolen\":\"Steve Vander Molen\",\"VSipma77\":\"Vance Sipma\",\n    \"uclafay22\":\"Aaron Fay\",\"willhoekstra\":\"Will Hoekstra\",\n    \"matthewvg92\":\"Matthew Van Groningen\",\n}\nSTARTERS  = {\"QB\":1,\"RB\":2,\"WR\":2,\"TE\":1,\"FLEX\":1,\"SFLEX\":1,\"K\":1}\nFLEX_POS  = {\"RB\",\"WR\",\"TE\"}\nSFLEX_POS = {\"QB\",\"RB\",\"WR\",\"TE\"}\n\ndef get(url):\n    for _ in range(3):\n        try:\n            with urllib.request.urlopen(url,timeout=20,context=CTX) as r:\n                return json.loads(r.read().decode(\"utf-8\"))\n        except urllib.error.HTTPError as e:\n            if e.code==429: print(\"  Rate limited...\",file=sys.stderr); time.sleep(5)\n            else: print(f\"  HTTP {e.code}\",file=sys.stderr); return None\n        except Exception as e: print(f\"  Error: {e}\",file=sys.stderr); return None\n    return None\n\ndef roster_map(league_id):\n    rosters=get(f\"{BASE}/league/{league_id}/rosters\") or []\n    users=get(f\"{BASE}/league/{league_id}/users\") or []\n    time.sleep(0.4)\n    un={u[\"user_id\"]:NAME_MAP.get(u.get(\"display_name\",\"\"),u.get(\"display_name\",\"\")) for u in users}\n    return {r[\"roster_id\"]:un.get(r.get(\"owner_id\",\"\"),f\"R{r['roster_id']}\") for r in rosters}\n\ndef player_stats(season,week):\n    url=f\"{BASE}/stats/nfl/regular/{season}/{week}?season_type=regular&position[]=QB&position[]=RB&position[]=WR&position[]=TE&position[]=K\"\n    data=get(url) or {}; time.sleep(0.4)\n    return {pid:round(float(s.get(\"pts_half_ppr\") or 0),2) for pid,s in data.items()}\n\ndef matchup_rosters(league_id,week):\n    data=get(f\"{BASE}/league/{league_id}/matchups/{week}\") or []; time.sleep(0.3)\n    return {e[\"roster_id\"]:{\"players\":e.get(\"players\",[]),\"points\":e.get(\"points\",0)} for e in data}\n\ndef max_lineup(pids,scores,positions):\n    pool=sorted([(p,scores.get(p,0),positions.get(p,\"\")) for p in pids],key=lambda x:-x[1])\n    used=set(); total=0.0\n    for pos,count in [(\"QB\",1),(\"RB\",2),(\"WR\",2),(\"TE\",1),(\"K\",1)]:\n        filled=0\n        for pid,pts,p in pool:\n            if pid not in used and p==pos and filled<count:\n                used.add(pid); total+=pts; filled+=1\n    for pid,pts,p in pool:\n        if pid not in used and p in FLEX_POS: used.add(pid); total+=pts; break\n    for pid,pts,p in pool:\n        if pid not in used and p in SFLEX_POS: used.add(pid); total+=pts; break\n    return round(total,2)\n\nprint(\"Fetching player registry...\",file=sys.stderr)\nplayers_raw=get(f\"{BASE}/players/nfl\") or {}; time.sleep(2.0)\npositions={pid:p.get(\"position\",\"\") for pid,p in players_raw.items()}\nprint(f\"  {len(positions)} players\",file=sys.stderr)\n\nall_eff={}\nfor season,lid in sorted(DD_LEAGUE_IDS.items()):\n    print(f\"\\nDD {season}...\",file=sys.stderr)\n    rm=roster_map(lid)\n    sd={n:[] for n in rm.values()}\n    for week in range(1,15):\n        print(f\"  Week {week}...\",file=sys.stderr)\n        stats=player_stats(season,week)\n        rosters=matchup_rosters(lid,week)\n        for rid,data in rosters.items():\n            mgr=rm.get(rid,f\"R{rid}\")\n            actual=round(float(data.get(\"points\",0)),2)\n            mx=max_lineup(data.get(\"players\",[]),stats,positions)\n            eff=round(actual/mx*100,1) if mx>0 else 0.0\n            sd[mgr].append({\"week\":week,\"actual\":actual,\"max\":mx,\"eff\":eff,\"bench\":round(mx-actual,2)})\n    all_eff[season]=sd\n\nlines=[\"const DD_LINEUP_EFFICIENCY = {\"]\nfor season in sorted(all_eff):\n    lines.append(f\"  {season}: {{\")\n    for mgr,weeks in sorted(all_eff[season].items()):\n        if not weeks: continue\n        avg_eff=round(sum(w[\"eff\"] for w in weeks)/len(weeks),1)\n        avg_bench=round(sum(w[\"bench\"] for w in weeks)/len(weeks),2)\n        wk_str=\"[\"+\",\".join(f'{{week:{w[\"week\"]},actual:{w[\"actual\"]},max:{w[\"max\"]},eff:{w[\"eff\"]},bench:{w[\"bench\"]}}}' for w in weeks)+\"]\"\n        lines.append(f'    \"{mgr}\":{{avgEff:{avg_eff},avgBench:{avg_bench},weeks:{wk_str}}},')\n    lines.append(\"  },\")\nlines.append(\"};\")\nprint(\"\\n\".join(lines))\n",d:"Calculates optimal vs actual lineup efficiency (~15 min).",w:"January \u2014 after dd_player_scores.py"},'dd_roster_snapshot.py':{e:"\"\"\"\nDuck Dynasty \u2014 Roster Snapshot + Player Meta Puller\n=====================================================\nOutputs DD_PLAYER_META and DD_ROSTER_HISTORY for all 4 seasons.\n\nRUN FROM ANYWHERE (no cd needed):\n  python %USERPROFILE%\\Downloads\\dd_roster_snapshot.py\n\nPaste the output into App.jsx, replacing:\n  const DD_PLAYER_META = { ... };\n  const DD_ROSTER_HISTORY = { ... };\n\"\"\"\n\nimport json, ssl, urllib.request, os, sys\n\n# \u2500\u2500 Auto-navigate to Downloads \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nDOWNLOADS = os.path.join(os.path.expanduser(\"~\"), \"Downloads\")\nos.chdir(DOWNLOADS)\n\nssl_ctx = ssl.create_default_context()\nssl_ctx.check_hostname = False\nssl_ctx.verify_mode = ssl.CERT_NONE\n\nLEAGUE_IDS = {\n    2023: \"987773503715741696\",\n    2024: \"1055318745977061376\",\n    2025: \"1180599430784786432\",\n    2026: \"1315072924524220416\",\n}\n\nNAME_MAP = {\n    \"jbeuk\":           \"Jake Beukelman\",\n    \"jaredstuit\":      \"Jared Stuit\",\n    \"cmanes3\":         \"Christian Manes\",\n    \"willhoekstra\":    \"Will Hoekstra\",\n    \"fourputtbogey\":   \"Ross Van Groningen\",\n    \"ChiefsKingdom92\": \"Trey Hugen\",\n    \"uclafay22\":       \"Aaron Fay\",\n    \"JamesL81\":        \"James Lazette\",\n    \"svandermolen\":    \"Steve Vander Molen\",\n    \"grgmldr\":         \"Greg Mulder\",\n    \"VSipma77\":        \"Vance Sipma\",\n    \"TylerGoslinga\":   \"Tyler Goslinga\",\n    \"matthewvg92\":     \"Matthew Van Groningen\",\n}\n\nBASE = \"https://api.sleeper.app/v1\"\n\ndef get(url):\n    with urllib.request.urlopen(url, context=ssl_ctx, timeout=30) as r:\n        return json.loads(r.read())\n\n# \u2500\u2500 Fetch all rosters \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nprint(\"Fetching rosters for all 4 seasons...\", file=sys.stderr)\nroster_history = {}\nall_player_ids = set()\n\nfor year, lid in sorted(LEAGUE_IDS.items()):\n    print(f\"  {year}...\", file=sys.stderr)\n    users   = get(f\"{BASE}/league/{lid}/users\")\n    rosters = get(f\"{BASE}/league/{lid}/rosters\")\n\n    uid_to_name = {}\n    for u in users:\n        n = (NAME_MAP.get(u.get(\"display_name\", \"\"))\n             or NAME_MAP.get(u.get(\"username\", \"\"))\n             or u.get(\"display_name\", \"Unknown\"))\n        uid_to_name[u[\"user_id\"]] = n\n\n    year_map = {}\n    for r in rosters:\n        owner_id = r.get(\"owner_id\", \"\")\n        mgr      = uid_to_name.get(owner_id, f\"Unknown({owner_id})\")\n        players  = sorted(r.get(\"players\") or [])\n        year_map[mgr] = players\n        all_player_ids.update(players)\n\n    roster_history[year] = dict(sorted(year_map.items()))\n\n# \u2500\u2500 Fetch player metadata \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nprint(f\"Fetching Sleeper player database \u2014 this takes ~10 seconds...\", file=sys.stderr)\nall_players = get(f\"{BASE}/players/nfl\")\nprint(f\"  Done. {len(all_players)} players loaded, {len(all_player_ids)} on DD rosters.\", file=sys.stderr)\n\n# \u2500\u2500 Build DD_PLAYER_META \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nplayer_meta_lines = {}\nfor pid in sorted(all_player_ids):\n    p = all_players.get(pid)\n    if not p:\n        continue\n    fn      = p.get(\"first_name\", \"\") or \"\"\n    ln      = p.get(\"last_name\", \"\") or \"\"\n    name    = (fn + \" \" + ln).strip() or p.get(\"full_name\", \"\") or f\"Player {pid}\"\n    pos     = p.get(\"position\", \"\") or \"?\"\n    team    = p.get(\"team\", \"\") or \"FA\"\n    age     = p.get(\"age\") or 0\n    yexp    = p.get(\"years_exp\") if p.get(\"years_exp\") is not None else 0\n    college = (p.get(\"college\", \"\") or \"\").replace('\"', \"'\")\n    inj     = p.get(\"injury_status\", \"\") or \"\"\n\n    line = f'  \"{pid}\": {{name:\"{name}\",pos:\"{pos}\",team:\"{team}\",age:{age},yearsExp:{yexp},college:\"{college}\"'\n    if inj:\n        line += f',injStatus:\"{inj}\"'\n    line += \",},\"\n    player_meta_lines[pid] = line\n\n# \u2500\u2500 Print output \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nprint()\nprint(\"// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\")\nprint(\"// PASTE BLOCK START \u2014 replace const DD_PLAYER_META = {\")\nprint(\"// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\")\nprint(\"const DD_PLAYER_META = {\")\nfor pid in sorted(player_meta_lines.keys(), key=lambda x: x.zfill(10)):\n    print(player_meta_lines[pid])\nprint(\"};\")\nprint()\nprint(\"const DD_ROSTER_HISTORY = {\")\nfor year, mgr_map in sorted(roster_history.items()):\n    print(f\"  {year}: {{\")\n    for mgr, pids in sorted(mgr_map.items()):\n        ids_str = \",\".join(f'\"{p}\"' for p in pids)\n        print(f'    \"{mgr}\": [{ids_str}],')\n    print(\"  },\")\nprint(\"};\")\nprint(\"// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\")\nprint(\"// PASTE BLOCK END\")\nprint(\"// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\")\nprint()\nprint(\"Done! Paste everything between the PASTE BLOCK markers into App.jsx.\", file=sys.stderr)\n",d:"Updates DD_PLAYER_META and DD_ROSTER_HISTORY.",w:"Pre-season + after major trades"}};
-const _DD_C={'dd_player_scores.py':{e:"\"\"\"\nDuck Dynasty \u2014 Player Scores Puller\n=====================================\nOutputs DD_PLAYER_SCORES and DD_MGR_ROSTER_SCORES for all DD seasons.\n\nRUN FROM ANYWHERE (no cd needed):\n  python %USERPROFILE%\\Downloads\\dd_player_scores.py\n\nPaste the output into App.jsx, replacing:\n  const DD_PLAYER_SCORES = { ... };\n  Add after it:  const DD_MGR_ROSTER_SCORES = { ... };\n\"\"\"\n\nimport json, ssl, urllib.request, os, sys\n\n# \u2500\u2500 Auto-navigate to Downloads \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nDOWNLOADS = os.path.join(os.path.expanduser(\"~\"), \"Downloads\")\nos.chdir(DOWNLOADS)\n\nssl_ctx = ssl.create_default_context()\nssl_ctx.check_hostname = False\nssl_ctx.verify_mode = ssl.CERT_NONE\n\nLEAGUE_IDS = {\n    2023: \"987773503715741696\",\n    2024: \"1055318745977061376\",\n    2025: \"1180599430784786432\",\n    # 2026 not included \u2014 season hasn't started yet\n}\n\nNAME_MAP = {\n    \"jbeuk\":           \"Jake Beukelman\",\n    \"jaredstuit\":      \"Jared Stuit\",\n    \"cmanes3\":         \"Christian Manes\",\n    \"willhoekstra\":    \"Will Hoekstra\",\n    \"fourputtbogey\":   \"Ross Van Groningen\",\n    \"ChiefsKingdom92\": \"Trey Hugen\",\n    \"uclafay22\":       \"Aaron Fay\",\n    \"JamesL81\":        \"James Lazette\",\n    \"svandermolen\":    \"Steve Vander Molen\",\n    \"grgmldr\":         \"Greg Mulder\",\n    \"VSipma77\":        \"Vance Sipma\",\n    \"TylerGoslinga\":   \"Tyler Goslinga\",\n    \"matthewvg92\":     \"Matthew Van Groningen\",\n}\n\nBASE = \"https://api.sleeper.app/v1\"\nMAX_WEEK = 17\n\ndef get(url):\n    with urllib.request.urlopen(url, context=ssl_ctx, timeout=30) as r:\n        return json.loads(r.read())\n\n# \u2500\u2500 Fetch scoring settings from most recent league \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nprint(\"Fetching league scoring settings...\", file=sys.stderr)\nleague_info = get(f\"{BASE}/league/1180599430784786432\")  # 2025 DD league\nscoring = league_info.get(\"scoring_settings\", {})\nprint(f\"  {len(scoring)} scoring rules loaded.\", file=sys.stderr)\n\ndef calc_pts(player_stats):\n    \"\"\"Apply league scoring settings to raw player stats.\"\"\"\n    pts = 0.0\n    for stat, mult in scoring.items():\n        val = player_stats.get(stat, 0) or 0\n        pts += val * mult\n    return round(pts, 2)\n\n# \u2500\u2500 Pull weekly stats and build player scores \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n# player_scores[pid][year][week] = pts\nplayer_scores = {}\n# mgr_roster_scores[year][mgr][week] = total_pts from their whole roster\nmgr_roster_scores = {}\n# roster snapshots per season (end-of-season rosters from DD_ROSTER_HISTORY)\n# We'll build this from the Sleeper roster API per season\n\nfor year, lid in sorted(LEAGUE_IDS.items()):\n    print(f\"\\n\u2500\u2500 {year} (league {lid}) \u2500\u2500\", file=sys.stderr)\n\n    # Get users and rosters for this season\n    users   = get(f\"{BASE}/league/{lid}/users\")\n    rosters = get(f\"{BASE}/league/{lid}/rosters\")\n\n    uid_to_name = {}\n    for u in users:\n        n = (NAME_MAP.get(u.get(\"display_name\", \"\"))\n             or NAME_MAP.get(u.get(\"username\", \"\"))\n             or u.get(\"display_name\", \"Unknown\"))\n        uid_to_name[u[\"user_id\"]] = n\n\n    # roster_id \u2192 manager name\n    rid_to_mgr = {}\n    # roster_id \u2192 set of player IDs (their dynasty roster)\n    rid_to_players = {}\n    for r in rosters:\n        owner_id = r.get(\"owner_id\", \"\")\n        mgr      = uid_to_name.get(owner_id, f\"Unknown({owner_id})\")\n        rid      = r[\"roster_id\"]\n        rid_to_mgr[rid] = mgr\n        rid_to_players[rid] = set(r.get(\"players\") or [])\n\n    mgr_roster_scores[year] = {mgr: {} for mgr in rid_to_mgr.values()}\n\n    for week in range(1, MAX_WEEK + 1):\n        # Get matchups for this week to find which players were active\n        try:\n            matchups = get(f\"{BASE}/league/{lid}/matchups/{week}\")\n        except Exception:\n            continue\n        if not matchups:\n            continue\n\n        # Collect all player_points from matchups (active lineup scores)\n        week_player_pts = {}  # pid \u2192 pts (active players only from matchup)\n        for m in matchups:\n            pp = m.get(\"players_points\") or {}\n            for pid, pts in pp.items():\n                if pts and pts != 0:\n                    week_player_pts[pid] = round(pts, 2)\n\n        if not week_player_pts:\n            continue\n\n        # Also pull raw stats for this week to get ALL player scores (incl bench)\n        try:\n            raw_stats = get(f\"{BASE}/stats/nfl/regular/{year}/{week}\")\n        except Exception:\n            raw_stats = {}\n\n        # Build full week scores: prefer matchup points, fall back to calculated\n        all_week_pts = {}\n        for pid, stats in raw_stats.items():\n            if not stats:\n                continue\n            if pid in week_player_pts:\n                # Use the exact matchup score for active players\n                all_week_pts[pid] = week_player_pts[pid]\n            else:\n                # Calculate from raw stats for bench players\n                pts = calc_pts(stats)\n                if pts != 0:\n                    all_week_pts[pid] = pts\n\n        # Store individual player scores\n        for pid, pts in all_week_pts.items():\n            if pid not in player_scores:\n                player_scores[pid] = {}\n            if year not in player_scores[pid]:\n                player_scores[pid][year] = {}\n            player_scores[pid][year][week] = pts\n\n        # Build manager roster totals for this week\n        for rid, mgr in rid_to_mgr.items():\n            roster_pids = rid_to_players.get(rid, set())\n            total = sum(all_week_pts.get(pid, 0) for pid in roster_pids)\n            if total > 0:\n                mgr_roster_scores[year][mgr][week] = round(total, 2)\n\n        active_count = len(week_player_pts)\n        print(f\"  Week {week:2d}: {active_count} active player scores\", file=sys.stderr)\n\n# \u2500\u2500 Print DD_PLAYER_SCORES \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nprint()\nprint(\"// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\")\nprint(\"// DD_PLAYER_SCORES \u2014 replace existing const in App.jsx\")\nprint(\"// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\")\nprint(\"const DD_PLAYER_SCORES = {\")\n\nfor pid in sorted(player_scores.keys(), key=lambda x: x.zfill(10)):\n    year_data = player_scores[pid]\n    # Format: \"pid\": {2023:{1:10.5,2:6.2,...}, 2024:{...}}\n    year_parts = []\n    for yr in sorted(year_data.keys()):\n        wk_data = year_data[yr]\n        wk_parts = \",\".join(f\"{w}:{v}\" for w, v in sorted(wk_data.items()))\n        year_parts.append(f\"{yr}:{{{wk_parts}}}\")\n    print(f'  \"{pid}\": {{{\",\".join(year_parts)}}},')\n\nprint(\"};\")\nprint()\n\n# \u2500\u2500 Print DD_MGR_ROSTER_SCORES \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nprint(\"// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\")\nprint(\"// DD_MGR_ROSTER_SCORES \u2014 add after DD_PLAYER_SCORES in App.jsx\")\nprint(\"// Format: year \u2192 manager \u2192 week \u2192 total pts from their dynasty roster\")\nprint(\"// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\")\nprint(\"const DD_MGR_ROSTER_SCORES = {\")\n\nfor year in sorted(mgr_roster_scores.keys()):\n    print(f\"  {year}: {{\")\n    for mgr in sorted(mgr_roster_scores[year].keys()):\n        wk_data = mgr_roster_scores[year][mgr]\n        if not wk_data:\n            continue\n        wk_parts = \",\".join(f\"{w}:{v}\" for w, v in sorted(wk_data.items()))\n        print(f'    \"{mgr}\": {{{wk_parts}}},')\n    print(\"  },\")\n\nprint(\"};\")\nprint()\nprint(\"Done! Paste both constants into App.jsx.\", file=sys.stderr)\n",d:"Fetches weekly player scores for DD_PLAYER_SCORES.",w:"January \u2014 after season ends"},'dd_generate_franchise_reports.py':{e:"\"\"\"\ndd_generate_franchise_reports.py\n=================================\nRegenerates the DD_FRANCHISE_REPORTS constant in App.jsx using the Anthropic API.\nRun this when:\n  - A significant trade changes a manager's pick capital or roster\n  - A new season ends and weighted win% shifts meaningfully\n  - You want to refresh the narrative voice\n\nUsage:\n    python dd_generate_franchise_reports.py\n\nRequires:\n    pip install anthropic\n    Set ANTHROPIC_API_KEY environment variable OR paste key into API_KEY below.\n\nAfter running, the script prints the updated DD_FRANCHISE_REPORTS constant.\nCopy-paste it into App.jsx, replacing the existing one (search: DD_FRANCHISE_REPORTS).\n\"\"\"\n\nimport os, time, json\nimport anthropic\n\nAPI_KEY = os.environ.get(\"ANTHROPIC_API_KEY\") or \"paste-your-key-here\"\n\n# \u2500\u2500 Update these when trades happen \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nCONTEXT = {\n    \"Ross Van Groningen\": \"Ross holds three 2027 first-round picks (his own at 1.10, plus James Lazette's at 1.09 and Steve Vander Molen's at 1.08) \u2014 mid-round depth rather than elite upside. He also picked up Steve's 2028 2nd. He's the pond's top pick capital holder and came off an 11-3 regular season in 2025. His capital haul is depth, not stars.\",\n    \"Tyler Goslinga\": \"Tyler sent Joe Burrow and Tyler Warren to Aaron Fay this offseason, going full rebuild. He holds two 2027 firsts (projected 1.02 and 1.07 from Trey Hugen) and Aaron's 2028/2029 4th rounders. Youngest roster in the pond at 24.0 avg age and second-most pick capital. Win rate is rock bottom at 21.7% after going 3-11 in 2025, but the asset base is real.\",\n    \"Jake Beukelman\": \"Jake is the reigning 2025 champion (11-3, #1 seed). His only 2027 first is the late 1.12 \u2014 the byproduct of winning. He picked up an extra 2027 4th via trade. Young roster at 24.5 avg age. His challenge is that late picks don't produce stars.\",\n    \"Greg Mulder\": \"The 2024 champion. Holds two 2027 firsts: his own at 1.06, plus Christian Manes's projected 1.01 \u2014 the best pick in the class. Roster average age of 26.5 drags his youth score despite the capital. Trying to win now AND reload simultaneously.\",\n    \"Trey Hugen\": \"The 2023 champion. Traded away his own 2027 first but acquired Jared Stuit's late 1.11, plus extra 2027 2nds and 3rds from Vance Sipma. Volume bet rather than stars bet. Went 8-6 in 2025 (6th place).\",\n    \"James Lazette\": \"Traded his 2027 first (1.09) and 2028 second to Ross Van Groningen. Despite a 66.3% weighted win rate and 4th-place finish in 2025, hasn't won a title. Roster avg age 26.0. The window is open but closing.\",\n    \"Jared Stuit\": \"Most dramatic turnaround in DD history: 1-13 in 2024, 11-3 runner-up in 2025. Despite the bounce-back, traded away his 2027 first. Weighted win rate sits at exactly 50.0%.\",\n    \"Aaron Fay\": \"Acquired Joe Burrow and Tyler Warren from Tyler Goslinga, giving up 2028 and 2029 4th round picks. Oldest roster in the pond at 27.0 avg age. No 2027 first. Weighted win rate 23.3% after going 3-11 in 2025.\",\n    \"Vance Sipma\": \"Gave away his 2027 second and third to Trey Hugen in a trade. Has one 2027 first (projected 1.05) and extra 4th rounders. Went 7-7 in 2025. Roster avg age 26.5. On the wrong side of average.\",\n    \"Steve Vander Molen\": \"Best regular season record in 2025 (13-1) but lost in the playoffs. Sold his 2027 first and 2028 second to Ross Van Groningen. Weighted win rate 52.3%. Roster avg age 26.4. No first-round picks in 2027.\",\n    \"Will Hoekstra\": \"Finished 9th, 9th, 8th across three DD seasons. All own-picks capital, no trades either direction. Weighted win rate 33.3% after a 5-9 2025 finish. The pond's most consistent mediocrity.\",\n    \"Christian Manes\": \"Went 9-5 in 2024 then collapsed to 1-13 (last place) in 2025. Traded away his projected 1.01 pick \u2014 the best in the 2027 class \u2014 to Greg Mulder. No first-round capital in 2027. Roster avg age 25.0 is the only silver lining.\",\n}\n\nSTATS = {\n    \"Ross Van Groningen\": {\"wPct\":73.7,\"fv\":88,\"age\":24.9,\"cap\":\"46.3\",\"nC\":100,\"nY\":70,\"quad\":\"Winning + Future\"},\n    \"Tyler Goslinga\":     {\"wPct\":21.7,\"fv\":84.7,\"age\":24.0,\"cap\":\"40.9\",\"nC\":74,\"nY\":100,\"quad\":\"True Rebuild\"},\n    \"Jake Beukelman\":     {\"wPct\":73.0,\"fv\":60,\"age\":24.5,\"cap\":\"34.5\",\"nC\":44,\"nY\":83,\"quad\":\"Winning + Future\"},\n    \"Greg Mulder\":        {\"wPct\":59.5,\"fv\":45.7,\"age\":26.5,\"cap\":\"38.9\",\"nC\":65,\"nY\":17,\"quad\":\"Win Now\"},\n    \"Trey Hugen\":         {\"wPct\":62.7,\"fv\":44,\"age\":26.3,\"cap\":\"37.3\",\"nC\":57,\"nY\":23,\"quad\":\"Win Now\"},\n    \"James Lazette\":      {\"wPct\":66.3,\"fv\":15,\"age\":26.0,\"cap\":\"28.2\",\"nC\":14,\"nY\":33,\"quad\":\"Win Now\"},\n    \"Jared Stuit\":        {\"wPct\":50.0,\"fv\":40.7,\"age\":24.6,\"cap\":\"28.2\",\"nC\":14,\"nY\":80,\"quad\":\"Win Now\"},\n    \"Aaron Fay\":          {\"wPct\":23.3,\"fv\":19,\"age\":27.0,\"cap\":\"31.5\",\"nC\":30,\"nY\":0,\"quad\":\"Danger Zone\"},\n    \"Vance Sipma\":        {\"wPct\":50.8,\"fv\":29.7,\"age\":26.5,\"cap\":\"29.7\",\"nC\":21,\"nY\":17,\"quad\":\"Stuck\"},\n    \"Steve Vander Molen\": {\"wPct\":52.3,\"fv\":12,\"age\":26.4,\"cap\":\"28.2\",\"nC\":0,\"nY\":20,\"quad\":\"Stuck\"},\n    \"Will Hoekstra\":      {\"wPct\":33.3,\"fv\":39.8,\"age\":25.8,\"cap\":\"33.5\",\"nC\":40,\"nY\":40,\"quad\":\"Danger Zone\"},\n    \"Christian Manes\":    {\"wPct\":13.3,\"fv\":28,\"age\":25.0,\"cap\":\"28.2\",\"nC\":14,\"nY\":60,\"quad\":\"Danger Zone\"},\n}\n\ndef generate_report(client, mgr):\n    s = STATS[mgr]\n    ctx = CONTEXT[mgr]\n    prompt = (\n        f\"You are writing a dynasty fantasy football scouting report for Duck Dynasty, a Sleeper dynasty league.\\n\\n\"\n        f\"Manager: {mgr}\\n\"\n        f\"Quadrant: {s['quad']}\\n\"\n        f\"Weighted Win% (2025=50%, 2024=33%, 2023=17%): {s['wPct']}%\\n\"\n        f\"Future Value Score: {s['fv']}/100 (60% draft capital + 40% roster youth)\\n\"\n        f\"Avg Roster Age: {s['age']} | Draft Capital: {s['cap']} units (1.75x round multiplier)\\n\"\n        f\"Capital Score: {s['nC']}/100 | Youth Score: {s['nY']}/100\\n\\n\"\n        f\"Franchise context (use specific details from this):\\n{ctx}\\n\\n\"\n        f\"Write 3 sentences max. Mention actual picks, trades, and records from the context. \"\n        f\"GM-level dynasty language. End with one concrete recommendation. No generic filler.\"\n    )\n    message = client.messages.create(\n        model=\"claude-sonnet-4-5\",\n        max_tokens=1000,\n        messages=[{\"role\": \"user\", \"content\": prompt}]\n    )\n    return message.content[0].text.strip()\n\ndef main():\n    client = anthropic.Anthropic(api_key=API_KEY)\n    reports = {}\n\n    print(\"Generating DD franchise scouting reports...\\n\")\n    for mgr in CONTEXT:\n        print(f\"  {mgr}...\", end=\" \", flush=True)\n        try:\n            reports[mgr] = generate_report(client, mgr)\n            print(\"\u2713\")\n        except Exception as e:\n            print(f\"\u2717  {e}\")\n            reports[mgr] = \"\"\n        time.sleep(0.5)\n\n    # Output the JS constant\n    print(\"\\n\\n\" + \"=\"*60)\n    print(\"Copy everything below into App.jsx,\")\n    print(\"replacing the existing DD_FRANCHISE_REPORTS block:\")\n    print(\"=\"*60 + \"\\n\")\n\n    lines = [\"// DD Franchise Scouting Reports \u2014 pre-generated. Re-run dd_generate_franchise_reports.py to refresh.\",\n             \"const DD_FRANCHISE_REPORTS = {\"]\n    for mgr, text in reports.items():\n        escaped = text.replace(\"\\\\\", \"\\\\\\\\\").replace(\"`\", \"\\\\`\").replace(\"${\", \"\\\\${\")\n        lines.append(f'  {json.dumps(mgr)}: `{escaped}`,')\n    lines.append(\"};\")\n    print(\"\\n\".join(lines))\n\nif __name__ == \"__main__\":\n    main()\n",d:"Re-generates AI scouting reports. Needs ANTHROPIC_API_KEY.",w:"After trades change pick capital"}};
+const _DD_A={'dd_recalculate_h2h.py':{e:"\"\"\"\nDuck Dynasty \u2014 H2H & Stats Recalculator\n\"\"\"\n\nimport json, ssl, urllib.request\nfrom collections import defaultdict\n\nssl_ctx = ssl.create_default_context()\nssl_ctx.check_hostname = False\nssl_ctx.verify_mode = ssl.CERT_NONE\n\nLEAGUE_IDS = {\n    2023: \"987773503715741696\",\n    2024: \"1055318745977061376\",\n    2025: \"1180599430784786432\",\n}\n\nNAME_MAP = {\n    \"jbeuk\":\"Jake Beukelman\",\"jaredstuit\":\"Jared Stuit\",\"cmanes3\":\"Christian Manes\",\n    \"willhoekstra\":\"Will Hoekstra\",\"fourputtbogey\":\"Ross Van Groningen\",\n    \"ChiefsKingdom92\":\"Trey Hugen\",\"uclafay22\":\"Aaron Fay\",\"JamesL81\":\"James Lazette\",\n    \"svandermolen\":\"Steve Vander Molen\",\"grgmldr\":\"Greg Mulder\",\"VSipma77\":\"Vance Sipma\",\n    \"TylerGoslinga\":\"Tyler Goslinga\",\"matthewvg92\":\"Christian Manes\",\n    \"Jake Beukelman\":\"Jake Beukelman\",\"Jared Stuit\":\"Jared Stuit\",\n    \"Christian Manes\":\"Christian Manes\",\"Will Hoekstra\":\"Will Hoekstra\",\n    \"Ross Van Groningen\":\"Ross Van Groningen\",\"Trey Hugen\":\"Trey Hugen\",\n    \"Aaron Fay\":\"Aaron Fay\",\"James Lazette\":\"James Lazette\",\n    \"Steve Vander Molen\":\"Steve Vander Molen\",\"Greg Mulder\":\"Greg Mulder\",\n    \"Vance Sipma\":\"Vance Sipma\",\"Tyler Goslinga\":\"Tyler Goslinga\",\n    \"Christian Manes\":\"Christian Manes\",\n}\n\nBASE = \"https://api.sleeper.app/v1\"\n\ndef get(url):\n    with urllib.request.urlopen(url, context=ssl_ctx) as r:\n        return json.loads(r.read())\n\ndef fetch_users(lid):\n    rosters = get(f\"{BASE}/league/{lid}/rosters\")\n    users   = get(f\"{BASE}/league/{lid}/users\")\n    uid_map = {}\n    for u in users:\n        n = NAME_MAP.get(u.get(\"display_name\",\"\")) or NAME_MAP.get(u.get(\"username\",\"\")) or u.get(\"display_name\",\"\")\n        uid_map[u[\"user_id\"]] = n\n    return {r[\"roster_id\"]: uid_map.get(r.get(\"owner_id\"),\"\") for r in rosters}\n\ndef fetch_playoff_start(lid):\n    return get(f\"{BASE}/league/{lid}\").get(\"settings\",{}).get(\"playoff_week_start\",15)\n\ndef fetch_matchups(lid, weeks):\n    games = []\n    for wk in range(1, weeks+1):\n        data = get(f\"{BASE}/league/{lid}/matchups/{wk}\")\n        if not data: break\n        by_id = defaultdict(list)\n        for e in data: by_id[e[\"matchup_id\"]].append(e)\n        for mid, entries in by_id.items():\n            if len(entries)==2:\n                a,b = entries\n                games.append({\"week\":wk,\"rid_a\":a[\"roster_id\"],\"pts_a\":round(a.get(\"points\",0) or 0,2),\n                               \"rid_b\":b[\"roster_id\"],\"pts_b\":round(b.get(\"points\",0) or 0,2)})\n    return games\n\nh2h = defaultdict(lambda: defaultdict(lambda: {\"W\":0,\"L\":0,\"PF\":0.0,\"PA\":0.0}))\nall_games = []\nunique_scores = []\nseen_scores = set()\n\nfor year, lid in sorted(LEAGUE_IDS.items()):\n    print(f\"Fetching {year}...\")\n    rm = fetch_users(lid)\n    ps = fetch_playoff_start(lid)\n    ms = fetch_matchups(lid, ps-1)\n    print(f\"  {len(ms)} games\")\n    for g in ms:\n        na = rm.get(g[\"rid_a\"],\"\"); nb = rm.get(g[\"rid_b\"],\"\")\n        pa = g[\"pts_a\"]; pb = g[\"pts_b\"]\n        if not na or not nb or \"Unknown\" in na or \"Unknown\" in nb: continue\n        a_won = pa > pb\n        if a_won:\n            h2h[na][nb][\"W\"]+=1; h2h[nb][na][\"L\"]+=1; w,l,wp,lp = na,nb,pa,pb\n        elif pb > pa:\n            h2h[nb][na][\"W\"]+=1; h2h[na][nb][\"L\"]+=1; w,l,wp,lp = nb,na,pb,pa\n        else:\n            w,l,wp,lp = na,nb,pa,pb\n        h2h[na][nb][\"PF\"]=round(h2h[na][nb][\"PF\"]+pa,2); h2h[na][nb][\"PA\"]=round(h2h[na][nb][\"PA\"]+pb,2)\n        h2h[nb][na][\"PF\"]=round(h2h[nb][na][\"PF\"]+pb,2); h2h[nb][na][\"PA\"]=round(h2h[nb][na][\"PA\"]+pa,2)\n        margin = round(abs(wp-lp),2)\n        all_games.append({\"year\":year,\"week\":g[\"week\"],\"winner\":w,\"loser\":l,\"winPts\":wp,\"losePts\":lp,\"margin\":margin,\"na\":na,\"nb\":nb,\"pa\":pa,\"pb\":pb})\n        for nm,pts in [(na,pa),(nb,pb)]:\n            k=(year,g[\"week\"],nm)\n            if k not in seen_scores:\n                seen_scores.add(k)\n                unique_scores.append({\"year\":year,\"week\":g[\"week\"],\"name\":nm,\"pts\":pts})\n\n# Rivalries\nrivalries=[]; seen_p=set()\nfor a in h2h:\n    for b in h2h[a]:\n        k=tuple(sorted([a,b]))\n        if k in seen_p: continue\n        seen_p.add(k)\n        aW=h2h[a][b][\"W\"]; aL=h2h[a][b][\"L\"]; tot=aW+aL\n        if tot==0: continue\n        bal=1.0-abs(aW-aL)/tot\n        rivalries.append({\"a\":a,\"b\":b,\"aW\":aW,\"aL\":aL,\"total\":tot,\"score\":round(tot*bal,4)})\nrivalries.sort(key=lambda r:r[\"score\"],reverse=True)\n\n# Ownage\nownage=[]; seen_p=set()\nfor a in h2h:\n    for b in h2h[a]:\n        k=tuple(sorted([a,b]))\n        if k in seen_p: continue\n        seen_p.add(k)\n        aW=h2h[a][b][\"W\"]; aL=h2h[a][b][\"L\"]\n        if aW==aL: continue\n        if aW>aL: wn,ln,w,l=a,b,aW,aL\n        else: wn,ln,w,l=b,a,aL,aW\n        tot=w+l; wpct=round(w/tot,4)\n        if wpct>=0.6 and tot>=3:\n            ownage.append({\"Winner\":wn,\"Loser\":ln,\"W\":w,\"L\":l,\"Total\":tot,\"WPct\":wpct})\nownage.sort(key=lambda o:(o[\"WPct\"],o[\"W\"]),reverse=True)\n\n# Streaks \u2014 build ordered W/L sequence per manager\nmgr_seq = defaultdict(list)\nfor g in all_games:\n    mgr_seq[g[\"na\"]].append((g[\"year\"],g[\"week\"],g[\"pa\"]>g[\"pb\"]))\n    mgr_seq[g[\"nb\"]].append((g[\"year\"],g[\"week\"],g[\"pb\"]>g[\"pa\"]))\n# Deduplicate and sort\nfor nm in mgr_seq:\n    seen_wk=set(); dedup=[]\n    for tup in sorted(mgr_seq[nm], key=lambda t:(t[0],t[1])):\n        k=(tup[0],tup[1])\n        if k not in seen_wk: seen_wk.add(k); dedup.append(tup)\n    mgr_seq[nm]=dedup\n\nwin_streaks=[]; loss_streaks=[]\nfor name, seq in mgr_seq.items():\n    bw=0; cw=0; bws=None; bwe=None; ws=None\n    bl=0; cl=0; bls=None; ble=None; ls=None\n    for yr,wk,won in seq:\n        if won:\n            if cw==0: ws=(yr,wk)\n            cw+=1; cl=0\n            if cw>bw: bw=cw; bws=ws; bwe=(yr,wk)\n        else:\n            if cl==0: ls=(yr,wk)\n            cl+=1; cw=0\n            if cl>bl: bl=cl; bls=ls; ble=(yr,wk)\n    if bw>=3 and bws: win_streaks.append({\"Manager\":name,\"Streak\":bw,\"StartYear\":bws[0],\"StartWeek\":bws[1],\"EndYear\":bwe[0],\"EndWeek\":bwe[1]})\n    if bl>=3 and bls: loss_streaks.append({\"Manager\":name,\"Streak\":bl,\"StartYear\":bls[0],\"StartWeek\":bls[1],\"EndYear\":ble[0],\"EndWeek\":ble[1]})\nwin_streaks.sort(key=lambda s:s[\"Streak\"],reverse=True)\nloss_streaks.sort(key=lambda s:s[\"Streak\"],reverse=True)\n\n# Luck \u2014 build winner map from all_games\nwinner_map = {}\nfor g in all_games:\n    winner_map[(g[\"year\"],g[\"week\"],g[\"winner\"])]=True\n    winner_map[(g[\"year\"],g[\"week\"],g[\"loser\"])]=False\n\nweeks_data = defaultdict(list)\nfor s in unique_scores: weeks_data[(s[\"year\"],s[\"week\"])].append(s)\n\nluck_acc = defaultdict(lambda:{\"actual\":0,\"expected\":0.0,\"games\":0})\nfor (yr,wk), scores in weeks_data.items():\n    n=len(scores)\n    if n<2: continue\n    for s in scores:\n        nm=s[\"name\"]; pts=s[\"pts\"]\n        beats=sum(1 for o in scores if o[\"name\"]!=nm and pts>o[\"pts\"])\n        exp=beats/(n-1)\n        act=1 if winner_map.get((yr,wk,nm),False) else 0\n        luck_acc[nm][\"expected\"]=round(luck_acc[nm][\"expected\"]+exp,4)\n        luck_acc[nm][\"actual\"]+=act\n        luck_acc[nm][\"games\"]+=1\n\nluck_list=[]\nfor name,v in luck_acc.items():\n    exp=round(v[\"expected\"],2); act=v[\"actual\"]\n    luck_list.append({\"Manager\":name,\"ActualW\":act,\"ExpectedW\":exp,\"LuckDelta\":round(act-exp,2),\"Games\":v[\"games\"]})\nluck_list.sort(key=lambda l:l[\"LuckDelta\"],reverse=True)\n\nblowouts=sorted(all_games,key=lambda g:g[\"margin\"],reverse=True)[:20]\nclosest=sorted(all_games,key=lambda g:g[\"margin\"])[:20]\ntop_scores=sorted(unique_scores,key=lambda s:s[\"pts\"],reverse=True)[:20]\nbottom_scores=sorted(unique_scores,key=lambda s:s[\"pts\"])[:20]\n\n# OUTPUT\nprint(\"\\n\\n// PASTE THIS INTO App.jsx as DD_POND_DATA (after DD_HISTORICAL)\\n\")\nprint(\"const DD_POND_DATA = {\")\nprint(\"  h2h: {\")\nfor a in sorted(h2h.keys()):\n    inner=\", \".join(f'\"{b}\":{{W:{v[\"W\"]},L:{v[\"L\"]},PF:{round(v[\"PF\"],2)},PA:{round(v[\"PA\"],2)}}}' for b,v in sorted(h2h[a].items()))\n    print(f'    \"{a}\": {{ {inner} }},')\nprint(\"  },\")\nprint(\"  rivalries: [\")\nfor r in rivalries[:20]: print(f'    {{a:\"{r[\"a\"]}\",b:\"{r[\"b\"]}\",aW:{r[\"aW\"]},aL:{r[\"aL\"]},total:{r[\"total\"]},score:{r[\"score\"]}}},')\nprint(\"  ],\")\nprint(\"  ownage: [\")\nfor o in ownage[:20]: print(f'    {{Winner:\"{o[\"Winner\"]}\",Loser:\"{o[\"Loser\"]}\",W:{o[\"W\"]},L:{o[\"L\"]},Total:{o[\"Total\"]},WPct:{o[\"WPct\"]}}},')\nprint(\"  ],\")\nprint(\"  biggestBlowouts: [\")\nfor g in blowouts: print(f'    {{year:{g[\"year\"]},week:{g[\"week\"]},winner:\"{g[\"winner\"]}\",loser:\"{g[\"loser\"]}\",winPts:{g[\"winPts\"]},losePts:{g[\"losePts\"]},margin:{g[\"margin\"]}}},')\nprint(\"  ],\")\nprint(\"  closestGames: [\")\nfor g in closest: print(f'    {{year:{g[\"year\"]},week:{g[\"week\"]},winner:\"{g[\"winner\"]}\",loser:\"{g[\"loser\"]}\",winPts:{g[\"winPts\"]},losePts:{g[\"losePts\"]},margin:{g[\"margin\"]}}},')\nprint(\"  ],\")\nprint(\"  topScores: [\")\nfor s in top_scores: print(f'    {{year:{s[\"year\"]},week:{s[\"week\"]},name:\"{s[\"name\"]}\",pts:{s[\"pts\"]}}},')\nprint(\"  ],\")\nprint(\"  bottomScores: [\")\nfor s in bottom_scores: print(f'    {{year:{s[\"year\"]},week:{s[\"week\"]},name:\"{s[\"name\"]}\",pts:{s[\"pts\"]}}},')\nprint(\"  ],\")\nprint(\"  winStreaks: [\")\nfor s in win_streaks: print(f'    {{Manager:\"{s[\"Manager\"]}\",Streak:{s[\"Streak\"]},StartYear:{s[\"StartYear\"]},StartWeek:{s[\"StartWeek\"]},EndYear:{s[\"EndYear\"]},EndWeek:{s[\"EndWeek\"]}}},')\nprint(\"  ],\")\nprint(\"  lossStreaks: [\")\nfor s in loss_streaks: print(f'    {{Manager:\"{s[\"Manager\"]}\",Streak:{s[\"Streak\"]},StartYear:{s[\"StartYear\"]},StartWeek:{s[\"StartWeek\"]},EndYear:{s[\"EndYear\"]},EndWeek:{s[\"EndWeek\"]}}},')\nprint(\"  ],\")\nprint(\"  luck: [\")\nfor l in luck_list: print(f'    {{Manager:\"{l[\"Manager\"]}\",ActualW:{l[\"ActualW\"]},ExpectedW:{l[\"ExpectedW\"]},LuckDelta:{l[\"LuckDelta\"]},Games:{l[\"Games\"]}}},')\nprint(\"  ],\")\nprint(\"};\")\nprint(f\"\\n// Games: {len(all_games)} | Scores: {len(unique_scores)} | Rivalries: {len(rivalries)} | Ownage: {len(ownage)}\")\n",d:"Recalculates DD H2H records, rivalries, streaks and luck.",w:"January \u2014 Step 2 of annual update"},'dd_rookie_drafts.py':{e:"\"\"\"\nDuck Dynasty \u2014 Rookie Draft Data Puller\n========================================\nPulls the 2024 and 2025 rookie draft picks from Sleeper.\nRun this, paste the output back to Claude.\n\nUSAGE:\n  python3 dd_rookie_drafts.py\n\"\"\"\n\nimport json, ssl, urllib.request\n\nssl_ctx = ssl.create_default_context()\nssl_ctx.check_hostname = False\nssl_ctx.verify_mode = ssl.CERT_NONE\n\nLEAGUE_IDS = {\n    2024: \"1055318745977061376\",\n    2025: \"1180599430784786432\",\n    2026: \"1315072924524220416\",\n\n}\n\nNAME_MAP = {\n    \"jbeuk\":\"Jake Beukelman\",\"jaredstuit\":\"Jared Stuit\",\"cmanes3\":\"Christian Manes\",\n    \"willhoekstra\":\"Will Hoekstra\",\"fourputtbogey\":\"Ross Van Groningen\",\n    \"ChiefsKingdom92\":\"Trey Hugen\",\"uclafay22\":\"Aaron Fay\",\"JamesL81\":\"James Lazette\",\n    \"svandermolen\":\"Steve Vander Molen\",\"grgmldr\":\"Greg Mulder\",\"VSipma77\":\"Vance Sipma\",\n    \"TylerGoslinga\":\"Tyler Goslinga\",\"matthewvg92\":\"Christian Manes\",\n    \"Jake Beukelman\":\"Jake Beukelman\",\"Jared Stuit\":\"Jared Stuit\",\n    \"Christian Manes\":\"Christian Manes\",\"Will Hoekstra\":\"Will Hoekstra\",\n    \"Ross Van Groningen\":\"Ross Van Groningen\",\"Trey Hugen\":\"Trey Hugen\",\n    \"Aaron Fay\":\"Aaron Fay\",\"James Lazette\":\"James Lazette\",\n    \"Steve Vander Molen\":\"Steve Vander Molen\",\"Greg Mulder\":\"Greg Mulder\",\n    \"Vance Sipma\":\"Vance Sipma\",\"Tyler Goslinga\":\"Tyler Goslinga\",\n    \"Christian Manes\":\"Christian Manes\",\n}\n\nBASE = \"https://api.sleeper.app/v1\"\n\ndef get(url):\n    with urllib.request.urlopen(url, context=ssl_ctx) as r:\n        return json.loads(r.read())\n\ndef resolve_name(uid, users):\n    for u in users:\n        if u[\"user_id\"] == uid:\n            n = NAME_MAP.get(u.get(\"display_name\",\"\")) or NAME_MAP.get(u.get(\"username\",\"\")) or u.get(\"display_name\",\"\")\n            return n\n    return f\"Unknown({uid})\"\n\nfor year, lid in sorted(LEAGUE_IDS.items()):\n    print(f\"\\nFetching {year} drafts for league {lid}...\")\n    drafts = get(f\"{BASE}/league/{lid}/drafts\")\n    users  = get(f\"{BASE}/league/{lid}/users\")\n\n    # Build user_id \u2192 name\n    uid_to_name = {}\n    for u in users:\n        n = NAME_MAP.get(u.get(\"display_name\",\"\")) or NAME_MAP.get(u.get(\"username\",\"\")) or u.get(\"display_name\",\"\")\n        uid_to_name[u[\"user_id\"]] = n\n\n    print(f\"  Found {len(drafts)} draft(s)\")\n    for d in drafts:\n        print(f\"  Draft ID: {d['draft_id']} | Type: {d.get('type','?')} | Status: {d.get('status','?')} | Season: {d.get('season','?')} | Rounds: {d.get('settings',{}).get('rounds','?')}\")\n\n    # Get picks for each draft\n    for d in drafts:\n        draft_id = d[\"draft_id\"]\n        dtype    = d.get(\"type\",\"\")\n        status   = d.get(\"status\",\"\")\n        rounds   = d.get(\"settings\",{}).get(\"rounds\",3)\n\n        print(f\"\\n  Pulling picks for draft {draft_id} ({dtype}, {rounds} rounds, {status})...\")\n        picks = get(f\"{BASE}/draft/{draft_id}/picks\")\n        print(f\"  {len(picks)} picks returned\")\n\n        if not picks:\n            print(\"  (no picks yet)\")\n            continue\n\n        # Print first few picks to verify data shape\n        print(f\"  Sample pick: {json.dumps(picks[0], indent=2)[:300]}\")\n        print(f\"\\n  All picks:\")\n        for p in picks:\n            pid     = p.get(\"player_id\",\"\")\n            meta    = p.get(\"metadata\",{})\n            name    = meta.get(\"first_name\",\"\") + \" \" + meta.get(\"last_name\",\"\")\n            pos     = meta.get(\"position\",\"\")\n            team    = meta.get(\"team\",\"\")\n            rd      = p.get(\"round\",0)\n            pick_no = p.get(\"pick_no\",0)\n            slot    = p.get(\"draft_slot\",0)\n            uid     = p.get(\"picked_by\",\"\")\n            mgr     = uid_to_name.get(uid, f\"Unknown({uid})\")\n            print(f\"    Rd{rd} Pk{pick_no} (Slot{slot}) | {mgr:25} | {pos:4} | {name} ({team})\")\n\n",d:"Pulls DD rookie draft picks from Sleeper.",w:"After each rookie draft"},'dd_playoff_scores.py':{e:"\"\"\"\ndd_playoff_scores.py \u2014 no external dependencies\nRun: python dd_playoff_scores.py > dd_playoff_scores_output.txt\n\"\"\"\nimport urllib.request, urllib.error, json, time, sys, ssl\n\nBASE = \"https://api.sleeper.app/v1\"\nCTX  = ssl._create_unverified_context()  # bypass SSL cert check\n\nDD_LEAGUE_IDS = {2023:\"987773503715741696\",2024:\"1055318745977061376\",2025:\"1180599430784786432\"}\nNAME_MAP = {\n    \"fourputtbogey\":\"Ross Van Groningen\",\"grgmldr\":\"Greg Mulder\",\n    \"TylerGoslinga\":\"Tyler Goslinga\",\"jbeuk\":\"Jake Beukelman\",\n    \"jaredstuit\":\"Jared Stuit\",\"cmanes3\":\"Christian Manes\",\n    \"ChiefsKingdom92\":\"Trey Hugen\",\"JamesL81\":\"James Lazette\",\n    \"svandermolen\":\"Steve Vander Molen\",\"VSipma77\":\"Vance Sipma\",\n    \"uclafay22\":\"Aaron Fay\",\"willhoekstra\":\"Will Hoekstra\",\n    \"matthewvg92\":\"Christian Manes\",\n}\nROUND_TO_WEEK  = {1:15,2:16,3:17}\nWINNERS_LABELS = {1:\"Round 1\",2:\"Semifinal\",3:\"Championship\"}\nLOSERS_LABELS  = {1:\"Round 1\",2:\"Semifinal\",3:\"Toilet Bowl\"}\n\ndef get(url):\n    for _ in range(3):\n        try:\n            with urllib.request.urlopen(url,timeout=15,context=CTX) as r:\n                return json.loads(r.read().decode(\"utf-8\"))\n        except urllib.error.HTTPError as e:\n            if e.code==429: print(\"  Rate limited...\",file=sys.stderr); time.sleep(5)\n            else: print(f\"  HTTP {e.code}\",file=sys.stderr); return None\n        except Exception as e: print(f\"  Error: {e}\",file=sys.stderr); return None\n    return None\n\ndef roster_map(league_id):\n    rosters=get(f\"{BASE}/league/{league_id}/rosters\") or []\n    users=get(f\"{BASE}/league/{league_id}/users\") or []\n    time.sleep(0.4)\n    un={u[\"user_id\"]:NAME_MAP.get(u.get(\"display_name\",\"\"),u.get(\"display_name\",\"\")) for u in users}\n    return {r[\"roster_id\"]:un.get(r.get(\"owner_id\",\"\"),f\"Roster {r['roster_id']}\") for r in rosters}\n\ndef week_scores(league_id,week):\n    data=get(f\"{BASE}/league/{league_id}/matchups/{week}\") or []\n    time.sleep(0.3)\n    return {e[\"roster_id\"]:round(e.get(\"points\",0.0),2) for e in data}\n\ndef process(bracket,rm,ws,labels):\n    games=[]\n    for e in bracket:\n        r,t1,t2,w=e.get(\"r\"),e.get(\"t1\"),e.get(\"t2\"),e.get(\"w\")\n        if t1 is None or t2 is None: continue\n        sc=ws.get(ROUND_TO_WEEK.get(r),{})\n        n1,n2=rm.get(t1,f\"R{t1}\"),rm.get(t2,f\"R{t2}\")\n        p1,p2=sc.get(t1,0.0),sc.get(t2,0.0)\n        win=rm.get(w,f\"R{w}\") if w else (n1 if p1>=p2 else n2)\n        lbl=labels.get(r,f\"Round {r}\")\n        if r==3 and len([x for x in bracket if x.get(\"r\")==3])==2:\n            same=sorted([x for x in bracket if x.get(\"r\")==3],key=lambda x:x.get(\"p\",99))\n            lbl=labels.get(3,\"Championship\") if e is same[0] else \"3rd Place\"\n        games.append({\"round\":r,\"label\":lbl,\"t1\":n1,\"t1pts\":p1,\"t2\":n2,\"t2pts\":p2,\"winner\":win,\"margin\":round(abs(p1-p2),2)})\n    return sorted(games,key=lambda g:(g[\"round\"],g[\"t1\"]))\n\nall_s={}\nfor season,lid in sorted(DD_LEAGUE_IDS.items()):\n    print(f\"\\nFetching {season}...\",file=sys.stderr)\n    rm=roster_map(lid)\n    ws={w:week_scores(lid,w) for w in [15,16,17]}\n    wb=get(f\"{BASE}/league/{lid}/winners_bracket\") or []; time.sleep(0.4)\n    lb=get(f\"{BASE}/league/{lid}/losers_bracket\") or []; time.sleep(0.4)\n    all_s[season]={\"winners\":process(wb,rm,ws,WINNERS_LABELS),\"losers\":process(lb,rm,ws,LOSERS_LABELS)}\n    print(f\"  {len(all_s[season]['winners'])} playoff + {len(all_s[season]['losers'])} toilet bowl games\",file=sys.stderr)\n\ndef fmt(g): return f'      {{round:{g[\"round\"]},label:\"{g[\"label\"]}\",t1:\"{g[\"t1\"]}\",t1pts:{g[\"t1pts\"]},t2:\"{g[\"t2\"]}\",t2pts:{g[\"t2pts\"]},winner:\"{g[\"winner\"]}\",margin:{g[\"margin\"]}}}'\nlines=[\"const DD_PLAYOFF_SCORES = {\"]\nfor s in sorted(all_s):\n    lines+=[f\"  {s}: {{\",\"    winners: [\"]+[fmt(g)+\",\" for g in all_s[s][\"winners\"]]+[\"    ],\",\"    losers: [\"]+[fmt(g)+\",\" for g in all_s[s][\"losers\"]]+[\"    ],\",\"  },\"]\nlines.append(\"};\")\nprint(\"\\n\".join(lines))\n",d:"Pulls DD playoff game scores from Sleeper.",w:"January \u2014 after playoffs end"}};
+const _DD_B={'dd_transactions.py':{e:"\"\"\"\ndd_transactions.py \u2014 no external dependencies\nRun: python dd_transactions.py > dd_transactions_output.txt\nTakes 3-5 minutes.\n\"\"\"\nimport urllib.request, urllib.error, json, time, sys, ssl\n\nBASE = \"https://api.sleeper.app/v1\"\nCTX  = ssl._create_unverified_context()\n\nDD_LEAGUE_IDS = {2023:\"987773503715741696\",2024:\"1055318745977061376\",2025:\"1180599430784786432\"}\nNAME_MAP = {\n    \"fourputtbogey\":\"Ross Van Groningen\",\"grgmldr\":\"Greg Mulder\",\n    \"TylerGoslinga\":\"Tyler Goslinga\",\"jbeuk\":\"Jake Beukelman\",\n    \"jaredstuit\":\"Jared Stuit\",\"cmanes3\":\"Christian Manes\",\n    \"ChiefsKingdom92\":\"Trey Hugen\",\"JamesL81\":\"James Lazette\",\n    \"svandermolen\":\"Steve Vander Molen\",\"VSipma77\":\"Vance Sipma\",\n    \"uclafay22\":\"Aaron Fay\",\"willhoekstra\":\"Will Hoekstra\",\n    \"matthewvg92\":\"Christian Manes\",\n}\n\ndef get(url):\n    for _ in range(3):\n        try:\n            with urllib.request.urlopen(url,timeout=20,context=CTX) as r:\n                return json.loads(r.read().decode(\"utf-8\"))\n        except urllib.error.HTTPError as e:\n            if e.code==429: print(\"  Rate limited...\",file=sys.stderr); time.sleep(5)\n            else: print(f\"  HTTP {e.code}\",file=sys.stderr); return None\n        except Exception as e: print(f\"  Error: {e}\",file=sys.stderr); return None\n    return None\n\ndef build_maps(league_id):\n    rosters=get(f\"{BASE}/league/{league_id}/rosters\") or []\n    users=get(f\"{BASE}/league/{league_id}/users\") or []\n    time.sleep(0.4)\n    un={u[\"user_id\"]:NAME_MAP.get(u.get(\"display_name\",\"\"),u.get(\"display_name\",\"\")) for u in users}\n    rn={r[\"roster_id\"]:un.get(r.get(\"owner_id\",\"\"),f\"R{r['roster_id']}\") for r in rosters}\n    print(\"  Fetching player registry...\",file=sys.stderr)\n    players=get(f\"{BASE}/players/nfl\") or {}\n    time.sleep(1.5)\n    pn={pid:(f\"{p.get('first_name','')} {p.get('last_name','')}\".strip() or pid) for pid,p in players.items()}\n    return rn,pn\n\ndef fetch_txns(league_id,rn,pn):\n    txns=[]\n    for week in range(1,18):\n        wt=get(f\"{BASE}/league/{league_id}/transactions/{week}\") or []\n        time.sleep(0.25)\n        for t in wt:\n            if t.get(\"status\")!=\"complete\": continue\n            rids=t.get(\"roster_ids\",[])\n            adds=t.get(\"adds\") or {}\n            drops=t.get(\"drops\") or {}\n            dps=t.get(\"draft_picks\") or []\n            mgrs=list({rn.get(r,f\"R{r}\") for r in rids})\n            txns.append({\"week\":week,\"type\":t.get(\"type\",\"\"),\"managers\":mgrs,\n                \"adds\":[{\"player\":pn.get(pid,pid),\"to\":rn.get(rid,f\"R{rid}\")} for pid,rid in adds.items()],\n                \"drops\":[{\"player\":pn.get(pid,pid),\"from\":rn.get(rid,f\"R{rid}\")} for pid,rid in drops.items()],\n                \"picks\":[{\"round\":dp.get(\"round\"),\"season\":dp.get(\"season\"),\"from\":rn.get(dp.get(\"previous_owner_id\"),\"?\"),\"to\":rn.get(dp.get(\"owner_id\"),\"?\")} for dp in dps],\n            })\n    return txns\n\ndef esc(s): return str(s).replace('\"','\\\\\"').replace('\\n',' ')\n\nall_txns={}\nfor season,lid in sorted(DD_LEAGUE_IDS.items()):\n    print(f\"\\nDD {season}...\",file=sys.stderr)\n    rn,pn=build_maps(lid)\n    txns=fetch_txns(lid,rn,pn)\n    all_txns[season]=txns\n    print(f\"  {len(txns)} transactions\",file=sys.stderr)\n\nmgr_stats={}\ndef ensure(n):\n    if n not in mgr_stats: mgr_stats[n]={\"trades\":0,\"waivers\":0,\"freeAgents\":0,\"totalMoves\":0,\"playersAdded\":0}\nfor s,txns in all_txns.items():\n    for t in txns:\n        for m in t[\"managers\"]:\n            ensure(m)\n            if t[\"type\"]==\"trade\": mgr_stats[m][\"trades\"]+=1\n            elif t[\"type\"]==\"waiver\": mgr_stats[m][\"waivers\"]+=1\n            elif t[\"type\"]==\"free_agent\": mgr_stats[m][\"freeAgents\"]+=1\n            mgr_stats[m][\"totalMoves\"]+=1\n        for a in t[\"adds\"]: ensure(a[\"to\"]); mgr_stats[a[\"to\"]][\"playersAdded\"]+=1\nfor m in mgr_stats: mgr_stats[m][\"trades\"]=mgr_stats[m][\"trades\"]//2 if mgr_stats[m][\"trades\"]>1 else mgr_stats[m][\"trades\"]\n\nlines=[\"const DD_TRANSACTIONS = {\"]\nfor s in sorted(all_txns):\n    lines.append(f\"  {s}: [\")\n    for t in all_txns[s]:\n        ms=\"[\"+\",\".join(f'\"{esc(m)}\"' for m in t[\"managers\"])+\"]\"\n        ad=\"[\"+\",\".join(f'{{player:\"{esc(a[\"player\"])}\",to:\"{esc(a[\"to\"])}\"}}' for a in t[\"adds\"])+\"]\"\n        dr=\"[\"+\",\".join(f'{{player:\"{esc(d[\"player\"])}\",from:\"{esc(d[\"from\"])}\"}}' for d in t[\"drops\"])+\"]\"\n        pk=\"[\"+\",\".join(f'{{round:{p.get(\"round\",\"?\")},season:{p.get(\"season\",\"?\")},from:\"{esc(p[\"from\"])}\",to:\"{esc(p[\"to\"])}\"}}' for p in t[\"picks\"])+\"]\"\n        lines.append(f'    {{week:{t[\"week\"]},type:\"{t[\"type\"]}\",managers:{ms},adds:{ad},drops:{dr},picks:{pk}}},')\n    lines.append(\"  ],\")\nlines.append(\"};\")\nlines.append(\"\")\nlines.append(\"const DD_TRANSACTION_SUMMARY = {\")\nfor m,s in sorted(mgr_stats.items(),key=lambda x:-x[1][\"totalMoves\"]):\n    lines.append(f'  \"{esc(m)}\":{{trades:{s[\"trades\"]},waivers:{s[\"waivers\"]},freeAgents:{s[\"freeAgents\"]},totalMoves:{s[\"totalMoves\"]},playersAdded:{s[\"playersAdded\"]}}},')\nlines.append(\"};\")\nprint(\"\\n\".join(lines))\n",d:"Pulls all DD trades, waivers and FA moves.",w:"January \u2014 Step 2 of annual update"},'dd_lineup_efficiency.py':{e:"\"\"\"\ndd_lineup_efficiency.py \u2014 no external dependencies\nRUN AFTER MAY 8TH once dd_player_scores.py has been re-run.\nRun: python dd_lineup_efficiency.py > dd_lineup_efficiency_output.txt\nTakes 10-15 minutes.\n\"\"\"\nimport urllib.request, urllib.error, json, time, sys, ssl\n\nBASE = \"https://api.sleeper.app/v1\"\nCTX  = ssl._create_unverified_context()\n\nDD_LEAGUE_IDS = {2023:\"987773503715741696\",2024:\"1055318745977061376\",2025:\"1180599430784786432\"}\nNAME_MAP = {\n    \"fourputtbogey\":\"Ross Van Groningen\",\"grgmldr\":\"Greg Mulder\",\n    \"TylerGoslinga\":\"Tyler Goslinga\",\"jbeuk\":\"Jake Beukelman\",\n    \"jaredstuit\":\"Jared Stuit\",\"cmanes3\":\"Christian Manes\",\n    \"ChiefsKingdom92\":\"Trey Hugen\",\"JamesL81\":\"James Lazette\",\n    \"svandermolen\":\"Steve Vander Molen\",\"VSipma77\":\"Vance Sipma\",\n    \"uclafay22\":\"Aaron Fay\",\"willhoekstra\":\"Will Hoekstra\",\n    \"matthewvg92\":\"Christian Manes\",\n}\nSTARTERS  = {\"QB\":1,\"RB\":2,\"WR\":2,\"TE\":1,\"FLEX\":1,\"SFLEX\":1,\"K\":1}\nFLEX_POS  = {\"RB\",\"WR\",\"TE\"}\nSFLEX_POS = {\"QB\",\"RB\",\"WR\",\"TE\"}\n\ndef get(url):\n    for _ in range(3):\n        try:\n            with urllib.request.urlopen(url,timeout=20,context=CTX) as r:\n                return json.loads(r.read().decode(\"utf-8\"))\n        except urllib.error.HTTPError as e:\n            if e.code==429: print(\"  Rate limited...\",file=sys.stderr); time.sleep(5)\n            else: print(f\"  HTTP {e.code}\",file=sys.stderr); return None\n        except Exception as e: print(f\"  Error: {e}\",file=sys.stderr); return None\n    return None\n\ndef roster_map(league_id):\n    rosters=get(f\"{BASE}/league/{league_id}/rosters\") or []\n    users=get(f\"{BASE}/league/{league_id}/users\") or []\n    time.sleep(0.4)\n    un={u[\"user_id\"]:NAME_MAP.get(u.get(\"display_name\",\"\"),u.get(\"display_name\",\"\")) for u in users}\n    return {r[\"roster_id\"]:un.get(r.get(\"owner_id\",\"\"),f\"R{r['roster_id']}\") for r in rosters}\n\ndef player_stats(season,week):\n    url=f\"{BASE}/stats/nfl/regular/{season}/{week}?season_type=regular&position[]=QB&position[]=RB&position[]=WR&position[]=TE&position[]=K\"\n    data=get(url) or {}; time.sleep(0.4)\n    return {pid:round(float(s.get(\"pts_half_ppr\") or 0),2) for pid,s in data.items()}\n\ndef matchup_rosters(league_id,week):\n    data=get(f\"{BASE}/league/{league_id}/matchups/{week}\") or []; time.sleep(0.3)\n    return {e[\"roster_id\"]:{\"players\":e.get(\"players\",[]),\"points\":e.get(\"points\",0)} for e in data}\n\ndef max_lineup(pids,scores,positions):\n    pool=sorted([(p,scores.get(p,0),positions.get(p,\"\")) for p in pids],key=lambda x:-x[1])\n    used=set(); total=0.0\n    for pos,count in [(\"QB\",1),(\"RB\",2),(\"WR\",2),(\"TE\",1),(\"K\",1)]:\n        filled=0\n        for pid,pts,p in pool:\n            if pid not in used and p==pos and filled<count:\n                used.add(pid); total+=pts; filled+=1\n    for pid,pts,p in pool:\n        if pid not in used and p in FLEX_POS: used.add(pid); total+=pts; break\n    for pid,pts,p in pool:\n        if pid not in used and p in SFLEX_POS: used.add(pid); total+=pts; break\n    return round(total,2)\n\nprint(\"Fetching player registry...\",file=sys.stderr)\nplayers_raw=get(f\"{BASE}/players/nfl\") or {}; time.sleep(2.0)\npositions={pid:p.get(\"position\",\"\") for pid,p in players_raw.items()}\nprint(f\"  {len(positions)} players\",file=sys.stderr)\n\nall_eff={}\nfor season,lid in sorted(DD_LEAGUE_IDS.items()):\n    print(f\"\\nDD {season}...\",file=sys.stderr)\n    rm=roster_map(lid)\n    sd={n:[] for n in rm.values()}\n    for week in range(1,15):\n        print(f\"  Week {week}...\",file=sys.stderr)\n        stats=player_stats(season,week)\n        rosters=matchup_rosters(lid,week)\n        for rid,data in rosters.items():\n            mgr=rm.get(rid,f\"R{rid}\")\n            actual=round(float(data.get(\"points\",0)),2)\n            mx=max_lineup(data.get(\"players\",[]),stats,positions)\n            eff=round(actual/mx*100,1) if mx>0 else 0.0\n            sd[mgr].append({\"week\":week,\"actual\":actual,\"max\":mx,\"eff\":eff,\"bench\":round(mx-actual,2)})\n    all_eff[season]=sd\n\nlines=[\"const DD_LINEUP_EFFICIENCY = {\"]\nfor season in sorted(all_eff):\n    lines.append(f\"  {season}: {{\")\n    for mgr,weeks in sorted(all_eff[season].items()):\n        if not weeks: continue\n        avg_eff=round(sum(w[\"eff\"] for w in weeks)/len(weeks),1)\n        avg_bench=round(sum(w[\"bench\"] for w in weeks)/len(weeks),2)\n        wk_str=\"[\"+\",\".join(f'{{week:{w[\"week\"]},actual:{w[\"actual\"]},max:{w[\"max\"]},eff:{w[\"eff\"]},bench:{w[\"bench\"]}}}' for w in weeks)+\"]\"\n        lines.append(f'    \"{mgr}\":{{avgEff:{avg_eff},avgBench:{avg_bench},weeks:{wk_str}}},')\n    lines.append(\"  },\")\nlines.append(\"};\")\nprint(\"\\n\".join(lines))\n",d:"Calculates optimal vs actual lineup efficiency (~15 min).",w:"January \u2014 after dd_player_scores.py"},'dd_roster_snapshot.py':{e:"\"\"\"\nDuck Dynasty \u2014 Roster Snapshot + Player Meta Puller\n=====================================================\nOutputs DD_PLAYER_META and DD_ROSTER_HISTORY for all 4 seasons.\n\nRUN FROM ANYWHERE (no cd needed):\n  python %USERPROFILE%\\Downloads\\dd_roster_snapshot.py\n\nPaste the output into App.jsx, replacing:\n  const DD_PLAYER_META = { ... };\n  const DD_ROSTER_HISTORY = { ... };\n\"\"\"\n\nimport json, ssl, urllib.request, os, sys\n\n# \u2500\u2500 Auto-navigate to Downloads \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nDOWNLOADS = os.path.join(os.path.expanduser(\"~\"), \"Downloads\")\nos.chdir(DOWNLOADS)\n\nssl_ctx = ssl.create_default_context()\nssl_ctx.check_hostname = False\nssl_ctx.verify_mode = ssl.CERT_NONE\n\nLEAGUE_IDS = {\n    2023: \"987773503715741696\",\n    2024: \"1055318745977061376\",\n    2025: \"1180599430784786432\",\n    2026: \"1315072924524220416\",\n}\n\nNAME_MAP = {\n    \"jbeuk\":           \"Jake Beukelman\",\n    \"jaredstuit\":      \"Jared Stuit\",\n    \"cmanes3\":         \"Christian Manes\",\n    \"willhoekstra\":    \"Will Hoekstra\",\n    \"fourputtbogey\":   \"Ross Van Groningen\",\n    \"ChiefsKingdom92\": \"Trey Hugen\",\n    \"uclafay22\":       \"Aaron Fay\",\n    \"JamesL81\":        \"James Lazette\",\n    \"svandermolen\":    \"Steve Vander Molen\",\n    \"grgmldr\":         \"Greg Mulder\",\n    \"VSipma77\":        \"Vance Sipma\",\n    \"TylerGoslinga\":   \"Tyler Goslinga\",\n    \"matthewvg92\":     \"Christian Manes\",\n}\n\nBASE = \"https://api.sleeper.app/v1\"\n\ndef get(url):\n    with urllib.request.urlopen(url, context=ssl_ctx, timeout=30) as r:\n        return json.loads(r.read())\n\n# \u2500\u2500 Fetch all rosters \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nprint(\"Fetching rosters for all 4 seasons...\", file=sys.stderr)\nroster_history = {}\nall_player_ids = set()\n\nfor year, lid in sorted(LEAGUE_IDS.items()):\n    print(f\"  {year}...\", file=sys.stderr)\n    users   = get(f\"{BASE}/league/{lid}/users\")\n    rosters = get(f\"{BASE}/league/{lid}/rosters\")\n\n    uid_to_name = {}\n    for u in users:\n        n = (NAME_MAP.get(u.get(\"display_name\", \"\"))\n             or NAME_MAP.get(u.get(\"username\", \"\"))\n             or u.get(\"display_name\", \"Unknown\"))\n        uid_to_name[u[\"user_id\"]] = n\n\n    year_map = {}\n    for r in rosters:\n        owner_id = r.get(\"owner_id\", \"\")\n        mgr      = uid_to_name.get(owner_id, f\"Unknown({owner_id})\")\n        players  = sorted(r.get(\"players\") or [])\n        year_map[mgr] = players\n        all_player_ids.update(players)\n\n    roster_history[year] = dict(sorted(year_map.items()))\n\n# \u2500\u2500 Fetch player metadata \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nprint(f\"Fetching Sleeper player database \u2014 this takes ~10 seconds...\", file=sys.stderr)\nall_players = get(f\"{BASE}/players/nfl\")\nprint(f\"  Done. {len(all_players)} players loaded, {len(all_player_ids)} on DD rosters.\", file=sys.stderr)\n\n# \u2500\u2500 Build DD_PLAYER_META \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nplayer_meta_lines = {}\nfor pid in sorted(all_player_ids):\n    p = all_players.get(pid)\n    if not p:\n        continue\n    fn      = p.get(\"first_name\", \"\") or \"\"\n    ln      = p.get(\"last_name\", \"\") or \"\"\n    name    = (fn + \" \" + ln).strip() or p.get(\"full_name\", \"\") or f\"Player {pid}\"\n    pos     = p.get(\"position\", \"\") or \"?\"\n    team    = p.get(\"team\", \"\") or \"FA\"\n    age     = p.get(\"age\") or 0\n    yexp    = p.get(\"years_exp\") if p.get(\"years_exp\") is not None else 0\n    college = (p.get(\"college\", \"\") or \"\").replace('\"', \"'\")\n    inj     = p.get(\"injury_status\", \"\") or \"\"\n\n    line = f'  \"{pid}\": {{name:\"{name}\",pos:\"{pos}\",team:\"{team}\",age:{age},yearsExp:{yexp},college:\"{college}\"'\n    if inj:\n        line += f',injStatus:\"{inj}\"'\n    line += \",},\"\n    player_meta_lines[pid] = line\n\n# \u2500\u2500 Print output \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nprint()\nprint(\"// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\")\nprint(\"// PASTE BLOCK START \u2014 replace const DD_PLAYER_META = {\")\nprint(\"// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\")\nprint(\"const DD_PLAYER_META = {\")\nfor pid in sorted(player_meta_lines.keys(), key=lambda x: x.zfill(10)):\n    print(player_meta_lines[pid])\nprint(\"};\")\nprint()\nprint(\"const DD_ROSTER_HISTORY = {\")\nfor year, mgr_map in sorted(roster_history.items()):\n    print(f\"  {year}: {{\")\n    for mgr, pids in sorted(mgr_map.items()):\n        ids_str = \",\".join(f'\"{p}\"' for p in pids)\n        print(f'    \"{mgr}\": [{ids_str}],')\n    print(\"  },\")\nprint(\"};\")\nprint(\"// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\")\nprint(\"// PASTE BLOCK END\")\nprint(\"// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\")\nprint()\nprint(\"Done! Paste everything between the PASTE BLOCK markers into App.jsx.\", file=sys.stderr)\n",d:"Updates DD_PLAYER_META and DD_ROSTER_HISTORY.",w:"Pre-season + after major trades"}};
+const _DD_C={'dd_player_scores.py':{e:"\"\"\"\nDuck Dynasty \u2014 Player Scores Puller\n=====================================\nOutputs DD_PLAYER_SCORES and DD_MGR_ROSTER_SCORES for all DD seasons.\n\nRUN FROM ANYWHERE (no cd needed):\n  python %USERPROFILE%\\Downloads\\dd_player_scores.py\n\nPaste the output into App.jsx, replacing:\n  const DD_PLAYER_SCORES = { ... };\n  Add after it:  const DD_MGR_ROSTER_SCORES = { ... };\n\"\"\"\n\nimport json, ssl, urllib.request, os, sys\n\n# \u2500\u2500 Auto-navigate to Downloads \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nDOWNLOADS = os.path.join(os.path.expanduser(\"~\"), \"Downloads\")\nos.chdir(DOWNLOADS)\n\nssl_ctx = ssl.create_default_context()\nssl_ctx.check_hostname = False\nssl_ctx.verify_mode = ssl.CERT_NONE\n\nLEAGUE_IDS = {\n    2023: \"987773503715741696\",\n    2024: \"1055318745977061376\",\n    2025: \"1180599430784786432\",\n    # 2026 not included \u2014 season hasn't started yet\n}\n\nNAME_MAP = {\n    \"jbeuk\":           \"Jake Beukelman\",\n    \"jaredstuit\":      \"Jared Stuit\",\n    \"cmanes3\":         \"Christian Manes\",\n    \"willhoekstra\":    \"Will Hoekstra\",\n    \"fourputtbogey\":   \"Ross Van Groningen\",\n    \"ChiefsKingdom92\": \"Trey Hugen\",\n    \"uclafay22\":       \"Aaron Fay\",\n    \"JamesL81\":        \"James Lazette\",\n    \"svandermolen\":    \"Steve Vander Molen\",\n    \"grgmldr\":         \"Greg Mulder\",\n    \"VSipma77\":        \"Vance Sipma\",\n    \"TylerGoslinga\":   \"Tyler Goslinga\",\n    \"matthewvg92\":     \"Christian Manes\",\n}\n\nBASE = \"https://api.sleeper.app/v1\"\nMAX_WEEK = 17\n\ndef get(url):\n    with urllib.request.urlopen(url, context=ssl_ctx, timeout=30) as r:\n        return json.loads(r.read())\n\n# \u2500\u2500 Fetch scoring settings from most recent league \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nprint(\"Fetching league scoring settings...\", file=sys.stderr)\nleague_info = get(f\"{BASE}/league/1180599430784786432\")  # 2025 DD league\nscoring = league_info.get(\"scoring_settings\", {})\nprint(f\"  {len(scoring)} scoring rules loaded.\", file=sys.stderr)\n\ndef calc_pts(player_stats):\n    \"\"\"Apply league scoring settings to raw player stats.\"\"\"\n    pts = 0.0\n    for stat, mult in scoring.items():\n        val = player_stats.get(stat, 0) or 0\n        pts += val * mult\n    return round(pts, 2)\n\n# \u2500\u2500 Pull weekly stats and build player scores \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n# player_scores[pid][year][week] = pts\nplayer_scores = {}\n# mgr_roster_scores[year][mgr][week] = total_pts from their whole roster\nmgr_roster_scores = {}\n# roster snapshots per season (end-of-season rosters from DD_ROSTER_HISTORY)\n# We'll build this from the Sleeper roster API per season\n\nfor year, lid in sorted(LEAGUE_IDS.items()):\n    print(f\"\\n\u2500\u2500 {year} (league {lid}) \u2500\u2500\", file=sys.stderr)\n\n    # Get users and rosters for this season\n    users   = get(f\"{BASE}/league/{lid}/users\")\n    rosters = get(f\"{BASE}/league/{lid}/rosters\")\n\n    uid_to_name = {}\n    for u in users:\n        n = (NAME_MAP.get(u.get(\"display_name\", \"\"))\n             or NAME_MAP.get(u.get(\"username\", \"\"))\n             or u.get(\"display_name\", \"Unknown\"))\n        uid_to_name[u[\"user_id\"]] = n\n\n    # roster_id \u2192 manager name\n    rid_to_mgr = {}\n    # roster_id \u2192 set of player IDs (their dynasty roster)\n    rid_to_players = {}\n    for r in rosters:\n        owner_id = r.get(\"owner_id\", \"\")\n        mgr      = uid_to_name.get(owner_id, f\"Unknown({owner_id})\")\n        rid      = r[\"roster_id\"]\n        rid_to_mgr[rid] = mgr\n        rid_to_players[rid] = set(r.get(\"players\") or [])\n\n    mgr_roster_scores[year] = {mgr: {} for mgr in rid_to_mgr.values()}\n\n    for week in range(1, MAX_WEEK + 1):\n        # Get matchups for this week to find which players were active\n        try:\n            matchups = get(f\"{BASE}/league/{lid}/matchups/{week}\")\n        except Exception:\n            continue\n        if not matchups:\n            continue\n\n        # Collect all player_points from matchups (active lineup scores)\n        week_player_pts = {}  # pid \u2192 pts (active players only from matchup)\n        for m in matchups:\n            pp = m.get(\"players_points\") or {}\n            for pid, pts in pp.items():\n                if pts and pts != 0:\n                    week_player_pts[pid] = round(pts, 2)\n\n        if not week_player_pts:\n            continue\n\n        # Also pull raw stats for this week to get ALL player scores (incl bench)\n        try:\n            raw_stats = get(f\"{BASE}/stats/nfl/regular/{year}/{week}\")\n        except Exception:\n            raw_stats = {}\n\n        # Build full week scores: prefer matchup points, fall back to calculated\n        all_week_pts = {}\n        for pid, stats in raw_stats.items():\n            if not stats:\n                continue\n            if pid in week_player_pts:\n                # Use the exact matchup score for active players\n                all_week_pts[pid] = week_player_pts[pid]\n            else:\n                # Calculate from raw stats for bench players\n                pts = calc_pts(stats)\n                if pts != 0:\n                    all_week_pts[pid] = pts\n\n        # Store individual player scores\n        for pid, pts in all_week_pts.items():\n            if pid not in player_scores:\n                player_scores[pid] = {}\n            if year not in player_scores[pid]:\n                player_scores[pid][year] = {}\n            player_scores[pid][year][week] = pts\n\n        # Build manager roster totals for this week\n        for rid, mgr in rid_to_mgr.items():\n            roster_pids = rid_to_players.get(rid, set())\n            total = sum(all_week_pts.get(pid, 0) for pid in roster_pids)\n            if total > 0:\n                mgr_roster_scores[year][mgr][week] = round(total, 2)\n\n        active_count = len(week_player_pts)\n        print(f\"  Week {week:2d}: {active_count} active player scores\", file=sys.stderr)\n\n# \u2500\u2500 Print DD_PLAYER_SCORES \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nprint()\nprint(\"// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\")\nprint(\"// DD_PLAYER_SCORES \u2014 replace existing const in App.jsx\")\nprint(\"// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\")\nprint(\"const DD_PLAYER_SCORES = {\")\n\nfor pid in sorted(player_scores.keys(), key=lambda x: x.zfill(10)):\n    year_data = player_scores[pid]\n    # Format: \"pid\": {2023:{1:10.5,2:6.2,...}, 2024:{...}}\n    year_parts = []\n    for yr in sorted(year_data.keys()):\n        wk_data = year_data[yr]\n        wk_parts = \",\".join(f\"{w}:{v}\" for w, v in sorted(wk_data.items()))\n        year_parts.append(f\"{yr}:{{{wk_parts}}}\")\n    print(f'  \"{pid}\": {{{\",\".join(year_parts)}}},')\n\nprint(\"};\")\nprint()\n\n# \u2500\u2500 Print DD_MGR_ROSTER_SCORES \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nprint(\"// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\")\nprint(\"// DD_MGR_ROSTER_SCORES \u2014 add after DD_PLAYER_SCORES in App.jsx\")\nprint(\"// Format: year \u2192 manager \u2192 week \u2192 total pts from their dynasty roster\")\nprint(\"// \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\")\nprint(\"const DD_MGR_ROSTER_SCORES = {\")\n\nfor year in sorted(mgr_roster_scores.keys()):\n    print(f\"  {year}: {{\")\n    for mgr in sorted(mgr_roster_scores[year].keys()):\n        wk_data = mgr_roster_scores[year][mgr]\n        if not wk_data:\n            continue\n        wk_parts = \",\".join(f\"{w}:{v}\" for w, v in sorted(wk_data.items()))\n        print(f'    \"{mgr}\": {{{wk_parts}}},')\n    print(\"  },\")\n\nprint(\"};\")\nprint()\nprint(\"Done! Paste both constants into App.jsx.\", file=sys.stderr)\n",d:"Fetches weekly player scores for DD_PLAYER_SCORES.",w:"January \u2014 after season ends"},'dd_generate_franchise_reports.py':{e:"\"\"\"\ndd_generate_franchise_reports.py\n=================================\nRegenerates the DD_FRANCHISE_REPORTS constant in App.jsx using the Anthropic API.\nRun this when:\n  - A significant trade changes a manager's pick capital or roster\n  - A new season ends and weighted win% shifts meaningfully\n  - You want to refresh the narrative voice\n\nUsage:\n    python dd_generate_franchise_reports.py\n\nRequires:\n    pip install anthropic\n    Set ANTHROPIC_API_KEY environment variable OR paste key into API_KEY below.\n\nAfter running, the script prints the updated DD_FRANCHISE_REPORTS constant.\nCopy-paste it into App.jsx, replacing the existing one (search: DD_FRANCHISE_REPORTS).\n\"\"\"\n\nimport os, time, json\nimport anthropic\n\nAPI_KEY = os.environ.get(\"ANTHROPIC_API_KEY\") or \"paste-your-key-here\"\n\n# \u2500\u2500 Update these when trades happen \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nCONTEXT = {\n    \"Ross Van Groningen\": \"Ross holds three 2027 first-round picks (his own at 1.10, plus James Lazette's at 1.09 and Steve Vander Molen's at 1.08) \u2014 mid-round depth rather than elite upside. He also picked up Steve's 2028 2nd. He's the pond's top pick capital holder and came off an 11-3 regular season in 2025. His capital haul is depth, not stars.\",\n    \"Tyler Goslinga\": \"Tyler sent Joe Burrow and Tyler Warren to Aaron Fay this offseason, going full rebuild. He holds two 2027 firsts (projected 1.02 and 1.07 from Trey Hugen) and Aaron's 2028/2029 4th rounders. Youngest roster in the pond at 24.0 avg age and second-most pick capital. Win rate is rock bottom at 21.7% after going 3-11 in 2025, but the asset base is real.\",\n    \"Jake Beukelman\": \"Jake is the reigning 2025 champion (11-3, #1 seed). His only 2027 first is the late 1.12 \u2014 the byproduct of winning. He picked up an extra 2027 4th via trade. Young roster at 24.5 avg age. His challenge is that late picks don't produce stars.\",\n    \"Greg Mulder\": \"The 2024 champion. Holds two 2027 firsts: his own at 1.06, plus Christian Manes's projected 1.01 \u2014 the best pick in the class. Roster average age of 26.5 drags his youth score despite the capital. Trying to win now AND reload simultaneously.\",\n    \"Trey Hugen\": \"The 2023 champion. Traded away his own 2027 first but acquired Jared Stuit's late 1.11, plus extra 2027 2nds and 3rds from Vance Sipma. Volume bet rather than stars bet. Went 8-6 in 2025 (6th place).\",\n    \"James Lazette\": \"Traded his 2027 first (1.09) and 2028 second to Ross Van Groningen. Despite a 66.3% weighted win rate and 4th-place finish in 2025, hasn't won a title. Roster avg age 26.0. The window is open but closing.\",\n    \"Jared Stuit\": \"Most dramatic turnaround in DD history: 1-13 in 2024, 11-3 runner-up in 2025. Despite the bounce-back, traded away his 2027 first. Weighted win rate sits at exactly 50.0%.\",\n    \"Aaron Fay\": \"Acquired Joe Burrow and Tyler Warren from Tyler Goslinga, giving up 2028 and 2029 4th round picks. Oldest roster in the pond at 27.0 avg age. No 2027 first. Weighted win rate 23.3% after going 3-11 in 2025.\",\n    \"Vance Sipma\": \"Gave away his 2027 second and third to Trey Hugen in a trade. Has one 2027 first (projected 1.05) and extra 4th rounders. Went 7-7 in 2025. Roster avg age 26.5. On the wrong side of average.\",\n    \"Steve Vander Molen\": \"Best regular season record in 2025 (13-1) but lost in the playoffs. Sold his 2027 first and 2028 second to Ross Van Groningen. Weighted win rate 52.3%. Roster avg age 26.4. No first-round picks in 2027.\",\n    \"Will Hoekstra\": \"Finished 9th, 9th, 8th across three DD seasons. All own-picks capital, no trades either direction. Weighted win rate 33.3% after a 5-9 2025 finish. The pond's most consistent mediocrity.\",\n    \"Christian Manes\": \"Went 9-5 in 2024 then collapsed to 1-13 (last place) in 2025. Traded away his projected 1.01 pick \u2014 the best in the 2027 class \u2014 to Greg Mulder. No first-round capital in 2027. Roster avg age 25.0 is the only silver lining.\",\n}\n\nSTATS = {\n    \"Ross Van Groningen\": {\"wPct\":73.7,\"fv\":88,\"age\":24.9,\"cap\":\"46.3\",\"nC\":100,\"nY\":70,\"quad\":\"Winning + Future\"},\n    \"Tyler Goslinga\":     {\"wPct\":21.7,\"fv\":84.7,\"age\":24.0,\"cap\":\"40.9\",\"nC\":74,\"nY\":100,\"quad\":\"True Rebuild\"},\n    \"Jake Beukelman\":     {\"wPct\":73.0,\"fv\":60,\"age\":24.5,\"cap\":\"34.5\",\"nC\":44,\"nY\":83,\"quad\":\"Winning + Future\"},\n    \"Greg Mulder\":        {\"wPct\":59.5,\"fv\":45.7,\"age\":26.5,\"cap\":\"38.9\",\"nC\":65,\"nY\":17,\"quad\":\"Win Now\"},\n    \"Trey Hugen\":         {\"wPct\":62.7,\"fv\":44,\"age\":26.3,\"cap\":\"37.3\",\"nC\":57,\"nY\":23,\"quad\":\"Win Now\"},\n    \"James Lazette\":      {\"wPct\":66.3,\"fv\":15,\"age\":26.0,\"cap\":\"28.2\",\"nC\":14,\"nY\":33,\"quad\":\"Win Now\"},\n    \"Jared Stuit\":        {\"wPct\":50.0,\"fv\":40.7,\"age\":24.6,\"cap\":\"28.2\",\"nC\":14,\"nY\":80,\"quad\":\"Win Now\"},\n    \"Aaron Fay\":          {\"wPct\":23.3,\"fv\":19,\"age\":27.0,\"cap\":\"31.5\",\"nC\":30,\"nY\":0,\"quad\":\"Danger Zone\"},\n    \"Vance Sipma\":        {\"wPct\":50.8,\"fv\":29.7,\"age\":26.5,\"cap\":\"29.7\",\"nC\":21,\"nY\":17,\"quad\":\"Stuck\"},\n    \"Steve Vander Molen\": {\"wPct\":52.3,\"fv\":12,\"age\":26.4,\"cap\":\"28.2\",\"nC\":0,\"nY\":20,\"quad\":\"Stuck\"},\n    \"Will Hoekstra\":      {\"wPct\":33.3,\"fv\":39.8,\"age\":25.8,\"cap\":\"33.5\",\"nC\":40,\"nY\":40,\"quad\":\"Danger Zone\"},\n    \"Christian Manes\":    {\"wPct\":13.3,\"fv\":28,\"age\":25.0,\"cap\":\"28.2\",\"nC\":14,\"nY\":60,\"quad\":\"Danger Zone\"},\n}\n\ndef generate_report(client, mgr):\n    s = STATS[mgr]\n    ctx = CONTEXT[mgr]\n    prompt = (\n        f\"You are writing a dynasty fantasy football scouting report for Duck Dynasty, a Sleeper dynasty league.\\n\\n\"\n        f\"Manager: {mgr}\\n\"\n        f\"Quadrant: {s['quad']}\\n\"\n        f\"Weighted Win% (2025=50%, 2024=33%, 2023=17%): {s['wPct']}%\\n\"\n        f\"Future Value Score: {s['fv']}/100 (60% draft capital + 40% roster youth)\\n\"\n        f\"Avg Roster Age: {s['age']} | Draft Capital: {s['cap']} units (1.75x round multiplier)\\n\"\n        f\"Capital Score: {s['nC']}/100 | Youth Score: {s['nY']}/100\\n\\n\"\n        f\"Franchise context (use specific details from this):\\n{ctx}\\n\\n\"\n        f\"Write 3 sentences max. Mention actual picks, trades, and records from the context. \"\n        f\"GM-level dynasty language. End with one concrete recommendation. No generic filler.\"\n    )\n    message = client.messages.create(\n        model=\"claude-sonnet-4-5\",\n        max_tokens=1000,\n        messages=[{\"role\": \"user\", \"content\": prompt}]\n    )\n    return message.content[0].text.strip()\n\ndef main():\n    client = anthropic.Anthropic(api_key=API_KEY)\n    reports = {}\n\n    print(\"Generating DD franchise scouting reports...\\n\")\n    for mgr in CONTEXT:\n        print(f\"  {mgr}...\", end=\" \", flush=True)\n        try:\n            reports[mgr] = generate_report(client, mgr)\n            print(\"\u2713\")\n        except Exception as e:\n            print(f\"\u2717  {e}\")\n            reports[mgr] = \"\"\n        time.sleep(0.5)\n\n    # Output the JS constant\n    print(\"\\n\\n\" + \"=\"*60)\n    print(\"Copy everything below into App.jsx,\")\n    print(\"replacing the existing DD_FRANCHISE_REPORTS block:\")\n    print(\"=\"*60 + \"\\n\")\n\n    lines = [\"// DD Franchise Scouting Reports \u2014 pre-generated. Re-run dd_generate_franchise_reports.py to refresh.\",\n             \"const DD_FRANCHISE_REPORTS = {\"]\n    for mgr, text in reports.items():\n        escaped = text.replace(\"\\\\\", \"\\\\\\\\\").replace(\"`\", \"\\\\`\").replace(\"${\", \"\\\\${\")\n        lines.append(f'  {json.dumps(mgr)}: `{escaped}`,')\n    lines.append(\"};\")\n    print(\"\\n\".join(lines))\n\nif __name__ == \"__main__\":\n    main()\n",d:"Re-generates AI scouting reports. Needs ANTHROPIC_API_KEY.",w:"After trades change pick capital"}};
 const DD_VAULT_SCRIPTS={..._DD_A,..._DD_B,..._DD_C};
 
 function DDLeagueHQTab() {
@@ -60272,19 +61072,18 @@ function DDLeagueHQTab() {
 
 const DD_POND_DATA = {
   h2h: {
-    "Aaron Fay": { "Christian Manes":{W:1,L:1,PF:189.06,PA:265.18}, "Greg Mulder":{W:1,L:3,PF:378.34,PA:498.72}, "Jake Beukelman":{W:4,L:0,PF:460.12,PA:412.82}, "James Lazette":{W:3,L:1,PF:543.32,PA:444.1}, "Jared Stuit":{W:3,L:1,PF:470.86,PA:349.86}, "Matthew Van Groningen":{W:1,L:0,PF:102.22,PA:93.14}, "Ross Van Groningen":{W:1,L:3,PF:446.54,PA:464.9}, "Steve Vander Molen":{W:3,L:1,PF:550.98,PA:514.62}, "Trey Hugen":{W:0,L:3,PF:358.06,PA:390.14}, "Tyler Goslinga":{W:3,L:1,PF:398.98,PA:283.6}, "Vance Sipma":{W:1,L:3,PF:410.04,PA:418.96}, "Will Hoekstra":{W:3,L:1,PF:487.24,PA:427.26} },
-    "Christian Manes": { "Aaron Fay":{W:1,L:1,PF:265.18,PA:189.06}, "Greg Mulder":{W:0,L:2,PF:144.74,PA:209.76}, "Jake Beukelman":{W:0,L:3,PF:225.68,PA:349.46}, "James Lazette":{W:1,L:1,PF:165.26,PA:226.92}, "Jared Stuit":{W:1,L:2,PF:281.86,PA:265.08}, "Ross Van Groningen":{W:1,L:2,PF:301.06,PA:399.3}, "Steve Vander Molen":{W:1,L:2,PF:264.98,PA:400.1}, "Trey Hugen":{W:2,L:2,PF:430.56,PA:429.92}, "Tyler Goslinga":{W:2,L:0,PF:192.64,PA:138.02}, "Vance Sipma":{W:0,L:2,PF:146.92,PA:188.24}, "Will Hoekstra":{W:1,L:1,PF:211.78,PA:218.56} },
-    "Greg Mulder": { "Aaron Fay":{W:3,L:1,PF:498.72,PA:378.34}, "Christian Manes":{W:2,L:0,PF:209.76,PA:144.74}, "Jake Beukelman":{W:2,L:3,PF:577.04,PA:641.92}, "James Lazette":{W:3,L:1,PF:534.5,PA:441.2}, "Jared Stuit":{W:2,L:2,PF:437.1,PA:414.8}, "Matthew Van Groningen":{W:0,L:1,PF:93.34,PA:105.54}, "Ross Van Groningen":{W:2,L:1,PF:344.6,PA:274.12}, "Steve Vander Molen":{W:2,L:1,PF:360.04,PA:342.88}, "Trey Hugen":{W:1,L:2,PF:339.74,PA:450.96}, "Tyler Goslinga":{W:6,L:0,PF:769.64,PA:513.14}, "Vance Sipma":{W:2,L:1,PF:392.62,PA:315.14}, "Will Hoekstra":{W:1,L:3,PF:402.82,PA:456.92} },
-    "Jake Beukelman": { "Aaron Fay":{W:0,L:4,PF:412.82,PA:460.12}, "Christian Manes":{W:3,L:0,PF:349.46,PA:225.68}, "Greg Mulder":{W:3,L:2,PF:641.92,PA:577.04}, "James Lazette":{W:2,L:1,PF:411.16,PA:387.14}, "Jared Stuit":{W:1,L:2,PF:373.3,PA:347.98}, "Matthew Van Groningen":{W:1,L:0,PF:146.42,PA:100.92}, "Ross Van Groningen":{W:1,L:2,PF:340.22,PA:352.84}, "Steve Vander Molen":{W:2,L:2,PF:412.42,PA:449.44}, "Trey Hugen":{W:3,L:1,PF:516.28,PA:419.74}, "Tyler Goslinga":{W:3,L:2,PF:542.64,PA:478.4}, "Vance Sipma":{W:2,L:1,PF:369.36,PA:374.22}, "Will Hoekstra":{W:4,L:0,PF:484.0,PA:403.3} },
-    "James Lazette": { "Aaron Fay":{W:1,L:3,PF:444.1,PA:543.32}, "Christian Manes":{W:1,L:1,PF:226.92,PA:165.26}, "Greg Mulder":{W:1,L:3,PF:441.2,PA:534.5}, "Jake Beukelman":{W:1,L:2,PF:387.14,PA:411.16}, "Jared Stuit":{W:4,L:1,PF:656.06,PA:555.82}, "Matthew Van Groningen":{W:0,L:1,PF:114.8,PA:127.82}, "Ross Van Groningen":{W:1,L:2,PF:317.04,PA:324.54}, "Steve Vander Molen":{W:3,L:2,PF:605.6,PA:600.86}, "Trey Hugen":{W:3,L:0,PF:472.92,PA:283.14}, "Tyler Goslinga":{W:3,L:1,PF:382.1,PA:346.72}, "Vance Sipma":{W:2,L:2,PF:501.72,PA:447.06}, "Will Hoekstra":{W:3,L:1,PF:496.02,PA:477.16} },
-    "Jared Stuit": { "Aaron Fay":{W:1,L:3,PF:349.86,PA:470.86}, "Christian Manes":{W:2,L:1,PF:265.08,PA:281.86}, "Greg Mulder":{W:2,L:2,PF:414.8,PA:437.1}, "Jake Beukelman":{W:2,L:1,PF:347.98,PA:373.3}, "James Lazette":{W:1,L:4,PF:555.82,PA:656.06}, "Matthew Van Groningen":{W:0,L:1,PF:83.64,PA:159.42}, "Ross Van Groningen":{W:1,L:3,PF:329.62,PA:495.48}, "Steve Vander Molen":{W:2,L:2,PF:414.84,PA:460.0}, "Trey Hugen":{W:1,L:3,PF:389.72,PA:507.8}, "Tyler Goslinga":{W:2,L:2,PF:384.2,PA:396.76}, "Vance Sipma":{W:1,L:2,PF:338.72,PA:390.0}, "Will Hoekstra":{W:1,L:2,PF:315.44,PA:412.18} },
-    "Matthew Van Groningen": { "Aaron Fay":{W:0,L:1,PF:93.14,PA:102.22}, "Greg Mulder":{W:1,L:0,PF:105.54,PA:93.34}, "Jake Beukelman":{W:0,L:1,PF:100.92,PA:146.42}, "James Lazette":{W:1,L:0,PF:127.82,PA:114.8}, "Jared Stuit":{W:1,L:0,PF:159.42,PA:83.64}, "Ross Van Groningen":{W:1,L:1,PF:231.16,PA:245.34}, "Steve Vander Molen":{W:0,L:1,PF:93.92,PA:99.3}, "Trey Hugen":{W:1,L:1,PF:185.06,PA:204.76}, "Tyler Goslinga":{W:1,L:0,PF:111.6,PA:110.96}, "Vance Sipma":{W:2,L:0,PF:271.58,PA:205.48}, "Will Hoekstra":{W:0,L:1,PF:88.42,PA:89.4} },
-    "Ross Van Groningen": { "Aaron Fay":{W:3,L:1,PF:464.9,PA:446.54}, "Christian Manes":{W:2,L:1,PF:399.3,PA:301.06}, "Greg Mulder":{W:1,L:2,PF:274.12,PA:344.6}, "Jake Beukelman":{W:2,L:1,PF:352.84,PA:340.22}, "James Lazette":{W:2,L:1,PF:324.54,PA:317.04}, "Jared Stuit":{W:3,L:1,PF:495.48,PA:329.62}, "Matthew Van Groningen":{W:1,L:1,PF:245.34,PA:231.16}, "Steve Vander Molen":{W:2,L:1,PF:349.88,PA:283.96}, "Trey Hugen":{W:2,L:3,PF:552.24,PA:573.92}, "Tyler Goslinga":{W:3,L:0,PF:375.44,PA:227.78}, "Vance Sipma":{W:1,L:4,PF:458.22,PA:557.88}, "Will Hoekstra":{W:4,L:0,PF:564.2,PA:369.7} },
-    "Steve Vander Molen": { "Aaron Fay":{W:1,L:3,PF:514.62,PA:550.98}, "Christian Manes":{W:2,L:1,PF:400.1,PA:264.98}, "Greg Mulder":{W:1,L:2,PF:342.88,PA:360.04}, "Jake Beukelman":{W:2,L:2,PF:449.44,PA:412.42}, "James Lazette":{W:2,L:3,PF:600.86,PA:605.6}, "Jared Stuit":{W:2,L:2,PF:460.0,PA:414.84}, "Matthew Van Groningen":{W:1,L:0,PF:99.3,PA:93.92}, "Ross Van Groningen":{W:1,L:2,PF:283.96,PA:349.88}, "Trey Hugen":{W:1,L:3,PF:444.8,PA:486.06}, "Tyler Goslinga":{W:2,L:1,PF:378.52,PA:257.32}, "Vance Sipma":{W:1,L:3,PF:388.48,PA:446.76}, "Will Hoekstra":{W:2,L:2,PF:468.2,PA:436.48} },
-    "Trey Hugen": { "Aaron Fay":{W:3,L:0,PF:390.14,PA:358.06}, "Christian Manes":{W:2,L:2,PF:429.92,PA:430.56}, "Greg Mulder":{W:2,L:1,PF:450.96,PA:339.74}, "Jake Beukelman":{W:1,L:3,PF:419.74,PA:516.28}, "James Lazette":{W:0,L:3,PF:283.14,PA:472.92}, "Jared Stuit":{W:3,L:1,PF:507.8,PA:389.72}, "Matthew Van Groningen":{W:1,L:1,PF:204.76,PA:185.06}, "Ross Van Groningen":{W:3,L:2,PF:573.92,PA:552.24}, "Steve Vander Molen":{W:3,L:1,PF:486.06,PA:444.8}, "Tyler Goslinga":{W:3,L:0,PF:360.02,PA:251.68}, "Vance Sipma":{W:3,L:1,PF:532.16,PA:408.16}, "Will Hoekstra":{W:3,L:0,PF:376.7,PA:277.18} },
-    "Tyler Goslinga": { "Aaron Fay":{W:1,L:3,PF:283.6,PA:398.98}, "Christian Manes":{W:0,L:2,PF:138.02,PA:192.64}, "Greg Mulder":{W:0,L:6,PF:513.14,PA:769.64}, "Jake Beukelman":{W:2,L:3,PF:478.4,PA:542.64}, "James Lazette":{W:1,L:3,PF:346.72,PA:382.1}, "Jared Stuit":{W:2,L:2,PF:396.76,PA:384.2}, "Matthew Van Groningen":{W:0,L:1,PF:110.96,PA:111.6}, "Ross Van Groningen":{W:0,L:3,PF:227.78,PA:375.44}, "Steve Vander Molen":{W:1,L:2,PF:257.32,PA:378.52}, "Trey Hugen":{W:0,L:3,PF:251.68,PA:360.02}, "Vance Sipma":{W:0,L:3,PF:289.62,PA:357.2}, "Will Hoekstra":{W:2,L:2,PF:337.6,PA:342.2} },
-    "Vance Sipma": { "Aaron Fay":{W:3,L:1,PF:418.96,PA:410.04}, "Christian Manes":{W:2,L:0,PF:188.24,PA:146.92}, "Greg Mulder":{W:1,L:2,PF:315.14,PA:392.62}, "Jake Beukelman":{W:1,L:2,PF:374.22,PA:369.36}, "James Lazette":{W:2,L:2,PF:447.06,PA:501.72}, "Jared Stuit":{W:2,L:1,PF:390.0,PA:338.72}, "Matthew Van Groningen":{W:0,L:2,PF:205.48,PA:271.58}, "Ross Van Groningen":{W:4,L:1,PF:557.88,PA:458.22}, "Steve Vander Molen":{W:3,L:1,PF:446.76,PA:388.48}, "Trey Hugen":{W:1,L:3,PF:408.16,PA:532.16}, "Tyler Goslinga":{W:3,L:0,PF:357.2,PA:289.62}, "Will Hoekstra":{W:1,L:4,PF:451.96,PA:520.7} },
-    "Will Hoekstra": { "Aaron Fay":{W:1,L:3,PF:427.26,PA:487.24}, "Christian Manes":{W:1,L:1,PF:218.56,PA:211.78}, "Greg Mulder":{W:3,L:1,PF:456.92,PA:402.82}, "Jake Beukelman":{W:0,L:4,PF:403.3,PA:484.0}, "James Lazette":{W:1,L:3,PF:477.16,PA:496.02}, "Jared Stuit":{W:2,L:1,PF:412.18,PA:315.44}, "Matthew Van Groningen":{W:1,L:0,PF:89.4,PA:88.42}, "Ross Van Groningen":{W:0,L:4,PF:369.7,PA:564.2}, "Steve Vander Molen":{W:2,L:2,PF:436.48,PA:468.2}, "Trey Hugen":{W:0,L:3,PF:277.18,PA:376.7}, "Tyler Goslinga":{W:2,L:2,PF:342.2,PA:337.6}, "Vance Sipma":{W:4,L:1,PF:520.7,PA:451.96} },
+    "Aaron Fay": { "Christian Manes":{W:2,L:1,PF:291.28,PA:358.32}, "Greg Mulder":{W:1,L:3,PF:378.34,PA:498.72}, "Jake Beukelman":{W:4,L:0,PF:460.12,PA:412.82}, "James Lazette":{W:3,L:1,PF:543.32,PA:444.1}, "Jared Stuit":{W:3,L:1,PF:470.86,PA:349.86}, "Ross Van Groningen":{W:1,L:3,PF:446.54,PA:464.9}, "Steve Vander Molen":{W:3,L:1,PF:550.98,PA:514.62}, "Trey Hugen":{W:0,L:3,PF:358.06,PA:390.14}, "Tyler Goslinga":{W:3,L:1,PF:398.98,PA:283.6}, "Vance Sipma":{W:1,L:3,PF:410.04,PA:418.96}, "Will Hoekstra":{W:3,L:1,PF:487.24,PA:427.26} },
+    "Christian Manes": { "Aaron Fay":{W:1,L:2,PF:358.32,PA:291.28}, "Greg Mulder":{W:1,L:2,PF:250.28,PA:303.1}, "Jake Beukelman":{W:0,L:4,PF:326.6,PA:495.88}, "James Lazette":{W:2,L:1,PF:293.08,PA:341.72}, "Jared Stuit":{W:2,L:2,PF:441.28,PA:348.72}, "Ross Van Groningen":{W:2,L:3,PF:532.22,PA:644.64}, "Steve Vander Molen":{W:1,L:3,PF:358.9,PA:499.4}, "Trey Hugen":{W:3,L:3,PF:615.62,PA:634.68}, "Tyler Goslinga":{W:3,L:0,PF:304.24,PA:248.98}, "Vance Sipma":{W:2,L:2,PF:418.5,PA:393.72}, "Will Hoekstra":{W:1,L:2,PF:300.2,PA:307.96} },
+    "Greg Mulder": { "Aaron Fay":{W:3,L:1,PF:498.72,PA:378.34}, "Christian Manes":{W:2,L:1,PF:303.1,PA:250.28}, "Jake Beukelman":{W:2,L:3,PF:577.04,PA:641.92}, "James Lazette":{W:3,L:1,PF:534.5,PA:441.2}, "Jared Stuit":{W:2,L:2,PF:437.1,PA:414.8}, "Ross Van Groningen":{W:2,L:1,PF:344.6,PA:274.12}, "Steve Vander Molen":{W:2,L:1,PF:360.04,PA:342.88}, "Trey Hugen":{W:2,L:1,PF:450.96,PA:339.74}, "Tyler Goslinga":{W:6,L:0,PF:769.64,PA:513.14}, "Vance Sipma":{W:2,L:1,PF:392.62,PA:315.14}, "Will Hoekstra":{W:1,L:3,PF:402.82,PA:456.92} },
+    "Jake Beukelman": { "Aaron Fay":{W:0,L:4,PF:412.82,PA:460.12}, "Christian Manes":{W:4,L:0,PF:495.88,PA:326.6}, "Greg Mulder":{W:3,L:2,PF:641.92,PA:577.04}, "James Lazette":{W:2,L:1,PF:411.16,PA:387.14}, "Jared Stuit":{W:1,L:2,PF:373.3,PA:347.98}, "Ross Van Groningen":{W:1,L:2,PF:340.22,PA:352.84}, "Steve Vander Molen":{W:2,L:2,PF:412.42,PA:449.44}, "Trey Hugen":{W:3,L:1,PF:516.28,PA:419.74}, "Tyler Goslinga":{W:3,L:2,PF:542.64,PA:478.4}, "Vance Sipma":{W:2,L:1,PF:369.36,PA:374.22}, "Will Hoekstra":{W:4,L:0,PF:484.0,PA:403.3} },
+    "James Lazette": { "Aaron Fay":{W:1,L:3,PF:444.1,PA:543.32}, "Christian Manes":{W:1,L:2,PF:341.72,PA:293.08}, "Greg Mulder":{W:1,L:3,PF:441.2,PA:534.5}, "Jake Beukelman":{W:1,L:2,PF:387.14,PA:411.16}, "Jared Stuit":{W:4,L:1,PF:656.06,PA:555.82}, "Ross Van Groningen":{W:1,L:2,PF:317.04,PA:324.54}, "Steve Vander Molen":{W:3,L:2,PF:605.6,PA:600.86}, "Trey Hugen":{W:3,L:0,PF:472.92,PA:283.14}, "Tyler Goslinga":{W:3,L:1,PF:382.1,PA:346.72}, "Vance Sipma":{W:2,L:2,PF:501.72,PA:447.06}, "Will Hoekstra":{W:3,L:1,PF:496.02,PA:477.16} },
+    "Jared Stuit": { "Aaron Fay":{W:1,L:3,PF:349.86,PA:470.86}, "Christian Manes":{W:2,L:2,PF:348.72,PA:441.28}, "Greg Mulder":{W:2,L:2,PF:414.8,PA:437.1}, "Jake Beukelman":{W:2,L:1,PF:347.98,PA:373.3}, "James Lazette":{W:1,L:4,PF:555.82,PA:656.06}, "Ross Van Groningen":{W:1,L:3,PF:329.62,PA:495.48}, "Steve Vander Molen":{W:2,L:2,PF:414.84,PA:460.0}, "Trey Hugen":{W:1,L:3,PF:389.72,PA:507.8}, "Tyler Goslinga":{W:2,L:2,PF:384.2,PA:396.76}, "Vance Sipma":{W:1,L:2,PF:338.72,PA:390.0}, "Will Hoekstra":{W:1,L:2,PF:315.44,PA:412.18} },
+    "Ross Van Groningen": { "Aaron Fay":{W:3,L:1,PF:464.9,PA:446.54}, "Christian Manes":{W:3,L:2,PF:644.64,PA:532.22}, "Greg Mulder":{W:1,L:2,PF:274.12,PA:344.6}, "Jake Beukelman":{W:2,L:1,PF:352.84,PA:340.22}, "James Lazette":{W:2,L:1,PF:324.54,PA:317.04}, "Jared Stuit":{W:3,L:1,PF:495.48,PA:329.62}, "Steve Vander Molen":{W:2,L:1,PF:349.88,PA:283.96}, "Trey Hugen":{W:2,L:3,PF:552.24,PA:573.92}, "Tyler Goslinga":{W:3,L:0,PF:375.44,PA:227.78}, "Vance Sipma":{W:1,L:4,PF:458.22,PA:557.88}, "Will Hoekstra":{W:4,L:0,PF:564.2,PA:369.7} },
+    "Steve Vander Molen": { "Aaron Fay":{W:1,L:3,PF:514.62,PA:550.98}, "Christian Manes":{W:3,L:1,PF:499.4,PA:358.9}, "Greg Mulder":{W:1,L:2,PF:342.88,PA:360.04}, "Jake Beukelman":{W:2,L:2,PF:449.44,PA:412.42}, "James Lazette":{W:2,L:3,PF:600.86,PA:605.6}, "Jared Stuit":{W:2,L:2,PF:460.0,PA:414.84}, "Ross Van Groningen":{W:1,L:2,PF:283.96,PA:349.88}, "Trey Hugen":{W:1,L:3,PF:444.8,PA:486.06}, "Tyler Goslinga":{W:2,L:1,PF:378.52,PA:257.32}, "Vance Sipma":{W:1,L:3,PF:388.48,PA:446.76}, "Will Hoekstra":{W:2,L:2,PF:468.2,PA:436.48} },
+    "Trey Hugen": { "Aaron Fay":{W:3,L:0,PF:390.14,PA:358.06}, "Christian Manes":{W:3,L:3,PF:634.68,PA:615.62}, "Greg Mulder":{W:2,L:1,PF:450.96,PA:339.74}, "Jake Beukelman":{W:1,L:3,PF:419.74,PA:516.28}, "James Lazette":{W:0,L:3,PF:283.14,PA:472.92}, "Jared Stuit":{W:3,L:1,PF:507.8,PA:389.72}, "Ross Van Groningen":{W:3,L:2,PF:573.92,PA:552.24}, "Steve Vander Molen":{W:3,L:1,PF:486.06,PA:444.8}, "Tyler Goslinga":{W:3,L:0,PF:360.02,PA:251.68}, "Vance Sipma":{W:3,L:1,PF:532.16,PA:408.16}, "Will Hoekstra":{W:3,L:0,PF:376.7,PA:277.18} },
+    "Tyler Goslinga": { "Aaron Fay":{W:1,L:3,PF:283.6,PA:398.98}, "Christian Manes":{W:0,L:3,PF:248.98,PA:304.24}, "Greg Mulder":{W:0,L:6,PF:513.14,PA:769.64}, "Jake Beukelman":{W:2,L:3,PF:478.4,PA:542.64}, "James Lazette":{W:1,L:3,PF:346.72,PA:382.1}, "Jared Stuit":{W:2,L:2,PF:396.76,PA:384.2}, "Ross Van Groningen":{W:0,L:3,PF:227.78,PA:375.44}, "Steve Vander Molen":{W:1,L:2,PF:257.32,PA:378.52}, "Trey Hugen":{W:0,L:3,PF:251.68,PA:360.02}, "Vance Sipma":{W:0,L:3,PF:289.62,PA:357.2}, "Will Hoekstra":{W:2,L:2,PF:337.6,PA:342.2} },
+    "Vance Sipma": { "Aaron Fay":{W:3,L:1,PF:418.96,PA:410.04}, "Christian Manes":{W:2,L:2,PF:393.72,PA:418.5}, "Greg Mulder":{W:1,L:2,PF:315.14,PA:392.62}, "Jake Beukelman":{W:1,L:2,PF:374.22,PA:369.36}, "James Lazette":{W:2,L:2,PF:447.06,PA:501.72}, "Jared Stuit":{W:2,L:1,PF:390.0,PA:338.72}, "Ross Van Groningen":{W:4,L:1,PF:557.88,PA:458.22}, "Steve Vander Molen":{W:3,L:1,PF:446.76,PA:388.48}, "Trey Hugen":{W:1,L:3,PF:408.16,PA:532.16}, "Tyler Goslinga":{W:3,L:0,PF:357.2,PA:289.62}, "Will Hoekstra":{W:1,L:4,PF:451.96,PA:520.7} },
+    "Will Hoekstra": { "Aaron Fay":{W:1,L:3,PF:427.26,PA:487.24}, "Christian Manes":{W:2,L:1,PF:307.96,PA:300.2}, "Greg Mulder":{W:3,L:1,PF:456.92,PA:402.82}, "Jake Beukelman":{W:0,L:4,PF:403.3,PA:484.0}, "James Lazette":{W:1,L:3,PF:477.16,PA:496.02}, "Jared Stuit":{W:2,L:1,PF:412.18,PA:315.44}, "Ross Van Groningen":{W:0,L:4,PF:369.7,PA:564.2}, "Steve Vander Molen":{W:2,L:2,PF:436.48,PA:468.2}, "Trey Hugen":{W:0,L:3,PF:277.18,PA:376.7}, "Tyler Goslinga":{W:2,L:2,PF:342.2,PA:337.6}, "Vance Sipma":{W:4,L:1,PF:520.7,PA:451.96} },
   },
   rivalries: [
     {a:"Vance Sipma",b:"James Lazette",aW:2,aL:2,total:4,score:4.0},
@@ -60339,7 +61138,7 @@ const DD_POND_DATA = {
     {year:2025,week:12,winner:"Greg Mulder",loser:"Tyler Goslinga",winPts:127.02,losePts:46.86,margin:80.16},
     {year:2024,week:8,winner:"Steve Vander Molen",loser:"Tyler Goslinga",winPts:161.4,losePts:81.56,margin:79.84},
     {year:2025,week:8,winner:"Steve Vander Molen",loser:"Aaron Fay",winPts:177.74,losePts:100.82,margin:76.92},
-    {year:2023,week:8,winner:"Matthew Van Groningen",loser:"Jared Stuit",winPts:159.42,losePts:83.64,margin:75.78},
+    {year:2023,week:8,winner:"Christian Manes",loser:"Jared Stuit",winPts:159.42,losePts:83.64,margin:75.78},
     {year:2025,week:14,winner:"Ross Van Groningen",loser:"Will Hoekstra",winPts:153.24,losePts:81.82,margin:71.42},
     {year:2025,week:9,winner:"James Lazette",loser:"Christian Manes",winPts:122.44,losePts:52.32,margin:70.12},
     {year:2024,week:3,winner:"Ross Van Groningen",loser:"Jared Stuit",winPts:140.94,losePts:72.22,margin:68.72},
@@ -60347,9 +61146,9 @@ const DD_POND_DATA = {
   closestGames: [
     {year:2025,week:12,winner:"Jake Beukelman",loser:"Steve Vander Molen",winPts:104.2,losePts:104.16,margin:0.04},
     {year:2024,week:7,winner:"Greg Mulder",loser:"James Lazette",winPts:112.18,losePts:112.06,margin:0.12},
-    {year:2023,week:14,winner:"Matthew Van Groningen",loser:"Vance Sipma",winPts:115.5,losePts:115.14,margin:0.36},
-    {year:2023,week:7,winner:"Matthew Van Groningen",loser:"Tyler Goslinga",winPts:111.6,losePts:110.96,margin:0.64},
-    {year:2023,week:6,winner:"Will Hoekstra",loser:"Matthew Van Groningen",winPts:89.4,losePts:88.42,margin:0.98},
+    {year:2023,week:14,winner:"Christian Manes",loser:"Vance Sipma",winPts:115.5,losePts:115.14,margin:0.36},
+    {year:2023,week:7,winner:"Christian Manes",loser:"Tyler Goslinga",winPts:111.6,losePts:110.96,margin:0.64},
+    {year:2023,week:6,winner:"Will Hoekstra",loser:"Christian Manes",winPts:89.4,losePts:88.42,margin:0.98},
     {year:2025,week:4,winner:"Tyler Goslinga",loser:"Steve Vander Molen",winPts:101.74,losePts:100.74,margin:1.0},
     {year:2024,week:11,winner:"Tyler Goslinga",loser:"Jared Stuit",winPts:94.94,losePts:93.72,margin:1.22},
     {year:2024,week:10,winner:"Ross Van Groningen",loser:"James Lazette",winPts:106.16,losePts:104.92,margin:1.24},
@@ -60421,7 +61220,7 @@ const DD_POND_DATA = {
     {Manager:"Jake Beukelman",Streak:5,StartYear:2025,StartWeek:2,EndYear:2025,EndWeek:6},
     {Manager:"Will Hoekstra",Streak:4,StartYear:2023,StartWeek:3,EndYear:2023,EndWeek:6},
     {Manager:"Christian Manes",Streak:4,StartYear:2024,StartWeek:8,EndYear:2024,EndWeek:11},
-    {Manager:"Matthew Van Groningen",Streak:3,StartYear:2023,StartWeek:1,EndYear:2023,EndWeek:3},
+    {Manager:"Christian Manes",Streak:3,StartYear:2023,StartWeek:1,EndYear:2023,EndWeek:3},
     {Manager:"Steve Vander Molen",Streak:3,StartYear:2024,StartWeek:14,EndYear:2025,EndWeek:2},
   ],
   lossStreaks: [
@@ -60433,7 +61232,7 @@ const DD_POND_DATA = {
     {Manager:"Jake Beukelman",Streak:4,StartYear:2023,StartWeek:8,EndYear:2023,EndWeek:11},
     {Manager:"Will Hoekstra",Streak:4,StartYear:2023,StartWeek:10,EndYear:2023,EndWeek:13},
     {Manager:"James Lazette",Streak:4,StartYear:2023,StartWeek:3,EndYear:2023,EndWeek:6},
-    {Manager:"Matthew Van Groningen",Streak:4,StartYear:2023,StartWeek:10,EndYear:2023,EndWeek:13},
+    {Manager:"Christian Manes",Streak:4,StartYear:2023,StartWeek:10,EndYear:2023,EndWeek:13},
     {Manager:"Steve Vander Molen",Streak:4,StartYear:2023,StartWeek:1,EndYear:2023,EndWeek:4},
     {Manager:"Aaron Fay",Streak:4,StartYear:2025,StartWeek:5,EndYear:2025,EndWeek:8},
     {Manager:"Vance Sipma",Streak:3,StartYear:2023,StartWeek:12,EndYear:2023,EndWeek:14},
@@ -60445,7 +61244,7 @@ const DD_POND_DATA = {
     {Manager:"Trey Hugen",ActualW:27,ExpectedW:25.55,LuckDelta:1.45,Games:42},
     {Manager:"Greg Mulder",ActualW:26,ExpectedW:24.64,LuckDelta:1.36,Games:42},
     {Manager:"Christian Manes",ActualW:10,ExpectedW:8.82,LuckDelta:1.18,Games:28},
-    {Manager:"Matthew Van Groningen",ActualW:8,ExpectedW:6.91,LuckDelta:1.09,Games:14},
+    {Manager:"Christian Manes",ActualW:8,ExpectedW:6.91,LuckDelta:1.09,Games:14},
     {Manager:"Jared Stuit",ActualW:16,ExpectedW:15.55,LuckDelta:0.45,Games:42},
     {Manager:"Tyler Goslinga",ActualW:9,ExpectedW:9.64,LuckDelta:-0.64,Games:42},
     {Manager:"Jake Beukelman",ActualW:25,ExpectedW:26.45,LuckDelta:-1.45,Games:42},
@@ -60471,6 +61270,37 @@ function DDPondTab() {
   const [closeSortDir, setCloseSortDir] = React.useState("asc");
   const [luckSortKey, setLuckSortKey] = React.useState("LuckDelta");
   const [luckSortDir, setLuckSortDir] = React.useState("desc");
+  const [luckTab, setLuckTab] = React.useState("career");
+  const [luckMgr, setLuckMgr] = React.useState("Ross Van Groningen");
+  const [ddTxSortKey, setDdTxSortKey] = React.useState("totalMoves");
+  const [ddTxSortDir, setDdTxSortDir] = React.useState("desc");
+  const [twSortKey, setTwSortKey] = React.useState("pts");
+  const [twSortDir, setTwSortDir] = React.useState("desc");
+  const [lwSortKey, setLwSortKey] = React.useState("pts");
+  const [lwSortDir, setLwSortDir] = React.useState("asc");
+  const [wsSortKey, setWsSortKey] = React.useState("Streak");
+  const [wsSortDir, setWsSortDir] = React.useState("desc");
+  const [ulTab, setUlTab] = React.useState("unlucky");
+  const [ulSortKey, setUlSortKey] = React.useState("rank");
+  const [ulSortDir, setUlSortDir] = React.useState("asc");
+  const [ulSumSortKey, setUlSumSortKey] = React.useState("unlucky");
+  const [ulSumSortDir, setUlSumSortDir] = React.useState("desc");
+  const [sdTab, setSdTab] = React.useState("distribution");
+  const [sdMgr, setSdMgr] = React.useState("ALL");
+  const [sdSort, setSdSort] = React.useState("stdev");
+  const [sdSortDir, setSdSortDir] = React.useState("asc");
+  const [sdCmpA, setSdCmpA] = React.useState("Ross Van Groningen");
+  const [sdCmpB, setSdCmpB] = React.useState("Trey Hugen");
+
+  // ── DD Lineup Efficiency state ──
+  const [ddLeTab, setDdLeTab] = React.useState("rankings");
+  const [ddLeSortKey, setDdLeSortKey] = React.useState("avgEff");
+  const [ddLeSortDir, setDdLeSortDir] = React.useState("desc");
+  const [ddLeMgr, setDdLeMgr] = React.useState("Ross Van Groningen");
+
+  // ── DD Manager Compare state ──
+  const [cmpA, setCmpA] = React.useState("Ross Van Groningen");
+  const [cmpB, setCmpB] = React.useState("Trey Hugen");
 
   const DD_POND_TILES = [
     { key:"h2h",       emoji:"⚔️",  label:"H2H Records",      sub:"Head-to-head records between every manager pair",  color:"#2176d2" },
@@ -60484,6 +61314,10 @@ function DDPondTab() {
     { key:"luck",      emoji:"🍀",  label:"Luck Index",        sub:"Actual wins vs expected wins over 3 seasons",       color:"#2ecc71" },
     { key:"txns",      emoji:"🤝",  label:"Transaction History",sub:"Trade kings, waiver wire activity & FA adds",       color:"#64b5f6" },
     { key:"topbottom", emoji:"🎯",  label:"Top/Bottom Weeks",  sub:"Who scored the most or least each week, all-time",  color:"#9b5de5" },
+    { key:"unluckylucky", emoji:"🎲", label:"Unlucky Losses / Lucky Wins", sub:"Games where the fantasy gods smiled or frowned", color:"#f4a261" },
+    { key:"scoredist", emoji:"📈", label:"Score Distribution", sub:"Histogram, boom/bust rates & consistency rankings", color:"#e9c46a" },
+    { key:"lineupeff", emoji:"🎯", label:"Lineup Efficiency", sub:"Who maximizes their roster vs who leaves pts on the bench", color:"#2ecc71" },
+    { key:"compare", emoji:"🆚", label:"Manager Compare", sub:"Side-by-side comparison of any two Duck Dynasty managers", color:"#9b5de5" },
   ];
 
   const firstName = n => n ? n.split(" ")[0] : "—";
@@ -60886,63 +61720,135 @@ function DDPondTab() {
         })()}
 
         {/* TOP WEEKS */}
-        {section === "topweeks" && (
-          <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-            {DD_POND_DATA.topScores.map((s,i) => (
-              <div key={i} style={{ display:"flex", alignItems:"center", gap:10, background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
-                <span style={{ fontSize:12, color:"#E07B20", width:24, flexShrink:0 }}>#{i+1}</span>
-                <DDManagerLogo name={s.name} size={20} />
-                <span style={{ fontSize:13, fontWeight:500, color:"#fff", flex:1 }}>{s.name.split(" ")[0]}</span>
-                <span style={{ fontSize:11, color:"#555" }}>{s.year} Wk {s.week}</span>
-                <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:18, color:"#E07B20" }}>{s.pts}</span>
-              </div>
-            ))}
-          </div>
-        )}
+        {section === "topweeks" && (() => {
+          const handleTwSort = (key) => { if (twSortKey === key) setTwSortDir(d => d === "asc" ? "desc" : "asc"); else { setTwSortKey(key); setTwSortDir(key === "name" ? "asc" : "desc"); } };
+          const twArrow = (key) => twSortKey === key ? (twSortDir === "asc" ? " ↑" : " ↓") : "";
+          const twData = [...DD_POND_DATA.topScores].sort((a, b) => {
+            let r = 0;
+            if (twSortKey === "name") r = a.name.localeCompare(b.name);
+            else if (twSortKey === "pts") r = a.pts - b.pts;
+            else if (twSortKey === "year") r = a.year - b.year || a.week - b.week;
+            return twSortDir === "asc" ? r : -r;
+          });
+          const TwTh = ({ label, sortK, color }) => (
+            <th onClick={() => handleTwSort(sortK)} style={{ padding:"8px 10px", textAlign: sortK === "name" ? "left" : "center", color: twSortKey === sortK ? "#fff" : (color || "#888"), fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"2px solid #333" }}>{label}{twArrow(sortK)}</th>
+          );
+          return (
+            <div style={{ overflowX:"auto" }}>
+              <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                <thead><tr>
+                  <th style={{ padding:"8px 10px", textAlign:"left", color:"#E07B20", fontFamily:"'Cooper Black',Georgia,serif", fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
+                  <TwTh label="Manager" sortK="name" color="#888" />
+                  <TwTh label="Score" sortK="pts" color="#E07B20" />
+                  <TwTh label="When" sortK="year" color="#888" />
+                </tr></thead>
+                <tbody>
+                  {twData.map((s, i) => (
+                    <tr key={i} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                      <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color: i<3?"#E07B20":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>#{i+1}</td>
+                      <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}><span style={{ display:"inline-flex", alignItems:"center", gap:6 }}><DDManagerLogo name={s.name} size={18} /><span style={{ color:"#fff", fontWeight:500 }}>{s.name}</span></span></td>
+                      <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#E07B20", fontWeight:700, fontFamily:"'Cooper Black',Georgia,serif", fontSize:16 }}>{s.pts}</td>
+                      <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#555" }}>{s.year} Wk{s.week}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        })()}
 
         {/* LOW WEEKS */}
-        {section === "lowweeks" && (
-          <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-            {DD_POND_DATA.bottomScores.map((s,i) => (
-              <div key={i} style={{ display:"flex", alignItems:"center", gap:10, background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
-                <span style={{ fontSize:12, color:"#555", width:24, flexShrink:0 }}>#{i+1}</span>
-                <DDManagerLogo name={s.name} size={20} />
-                <span style={{ fontSize:13, fontWeight:500, color:"#555", flex:1 }}>{s.name.split(" ")[0]}</span>
-                <span style={{ fontSize:11, color:"#333" }}>{s.year} Wk {s.week}</span>
-                <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:18, color:"#d42b2b" }}>{s.pts}</span>
-              </div>
-            ))}
-          </div>
-        )}
+        {section === "lowweeks" && (() => {
+          const handleLwSort = (key) => { if (lwSortKey === key) setLwSortDir(d => d === "asc" ? "desc" : "asc"); else { setLwSortKey(key); setLwSortDir(key === "name" ? "asc" : "asc"); } };
+          const lwArrow = (key) => lwSortKey === key ? (lwSortDir === "asc" ? " ↑" : " ↓") : "";
+          const lwData = [...DD_POND_DATA.bottomScores].sort((a, b) => {
+            let r = 0;
+            if (lwSortKey === "name") r = a.name.localeCompare(b.name);
+            else if (lwSortKey === "pts") r = a.pts - b.pts;
+            else if (lwSortKey === "year") r = a.year - b.year || a.week - b.week;
+            return lwSortDir === "asc" ? r : -r;
+          });
+          const LwTh = ({ label, sortK, color }) => (
+            <th onClick={() => handleLwSort(sortK)} style={{ padding:"8px 10px", textAlign: sortK === "name" ? "left" : "center", color: lwSortKey === sortK ? "#fff" : (color || "#888"), fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"2px solid #333" }}>{label}{lwArrow(sortK)}</th>
+          );
+          return (
+            <div style={{ overflowX:"auto" }}>
+              <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                <thead><tr>
+                  <th style={{ padding:"8px 10px", textAlign:"left", color:"#d42b2b", fontFamily:"'Cooper Black',Georgia,serif", fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
+                  <LwTh label="Manager" sortK="name" color="#888" />
+                  <LwTh label="Score" sortK="pts" color="#d42b2b" />
+                  <LwTh label="When" sortK="year" color="#888" />
+                </tr></thead>
+                <tbody>
+                  {lwData.map((s, i) => (
+                    <tr key={i} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                      <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color: i<3?"#d42b2b":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>#{i+1}</td>
+                      <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}><span style={{ display:"inline-flex", alignItems:"center", gap:6 }}><DDManagerLogo name={s.name} size={18} /><span style={{ color:"#555", fontWeight:500 }}>{s.name}</span></span></td>
+                      <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#d42b2b", fontWeight:700, fontFamily:"'Cooper Black',Georgia,serif", fontSize:16 }}>{s.pts}</td>
+                      <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#333" }}>{s.year} Wk{s.week}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        })()}
 
         {/* STREAKS */}
-        {section === "streaks" && (
-          <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
-            <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:14, color:"#2ecc71", letterSpacing:1, borderBottom:"1px solid #222", paddingBottom:6 }}>📈 Win Streaks</div>
-            {DD_POND_DATA.winStreaks.map((s,i) => (
-              <div key={i} style={{ display:"flex", alignItems:"center", gap:10, background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
-                <span style={{ fontSize:12, color:"#2ecc71", width:24, flexShrink:0 }}>#{i+1}</span>
-                <DDManagerLogo name={s.Manager} size={20} />
-                <span style={{ fontSize:13, fontWeight:500, color:"#fff", flex:1 }}>{s.Manager.split(" ")[0]}</span>
-                <span style={{ fontSize:11, color:"#555" }}>{s.StartYear} Wk{s.StartWeek} → {s.EndYear} Wk{s.EndWeek}</span>
-                <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:18, color:"#2ecc71" }}>{s.Streak}W</span>
+        {section === "streaks" && (() => {
+          const handleWsSort = (key) => { if (wsSortKey === key) setWsSortDir(d => d === "asc" ? "desc" : "asc"); else { setWsSortKey(key); setWsSortDir(key === "Manager" ? "asc" : "desc"); } };
+          const wsArrow = (key) => wsSortKey === key ? (wsSortDir === "asc" ? " ↑" : " ↓") : "";
+          const sortStreaks = (data) => [...data].sort((a, b) => {
+            let r = 0;
+            if (wsSortKey === "Manager") r = a.Manager.localeCompare(b.Manager);
+            else if (wsSortKey === "Streak") r = a.Streak - b.Streak;
+            else if (wsSortKey === "Start") r = a.StartYear - b.StartYear || a.StartWeek - b.StartWeek;
+            return wsSortDir === "asc" ? r : -r;
+          });
+          const WsTh = ({ label, sortK, color }) => (
+            <th onClick={() => handleWsSort(sortK)} style={{ padding:"8px 10px", textAlign: sortK === "Manager" ? "left" : "center", color: wsSortKey === sortK ? "#fff" : (color || "#888"), fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"2px solid #333" }}>{label}{wsArrow(sortK)}</th>
+          );
+          const StreakTable = ({ data, title, titleColor, suffix }) => (
+            <div>
+              <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:14, color:titleColor, letterSpacing:1, borderBottom:"1px solid #222", paddingBottom:6, marginBottom:8 }}>{title}</div>
+              <div style={{ overflowX:"auto" }}>
+                <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                  <thead><tr>
+                    <th style={{ padding:"8px 10px", textAlign:"left", color:titleColor, fontFamily:"'Cooper Black',Georgia,serif", fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
+                    <WsTh label="Manager" sortK="Manager" color="#888" />
+                    <WsTh label="Streak" sortK="Streak" color={titleColor} />
+                    <WsTh label="Started" sortK="Start" color="#888" />
+                    <th style={{ padding:"8px 10px", textAlign:"center", color:"#888", fontSize:11, borderBottom:"2px solid #333" }}>Ended</th>
+                  </tr></thead>
+                  <tbody>
+                    {sortStreaks(data).map((s, i) => (
+                      <tr key={i} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color: i<3?titleColor:"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>#{i+1}</td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}><span style={{ display:"inline-flex", alignItems:"center", gap:6 }}><DDManagerLogo name={s.Manager} size={18} /><span style={{ color:"#fff", fontWeight:500 }}>{s.Manager}</span></span></td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:titleColor, fontWeight:700, fontFamily:"'Cooper Black',Georgia,serif", fontSize:16 }}>{s.Streak}{suffix}</td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#555" }}>{s.StartYear} Wk{s.StartWeek}</td>
+                        <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#555" }}>{s.EndYear} Wk{s.EndWeek}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
-            ))}
-            <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:14, color:"#d42b2b", letterSpacing:1, borderBottom:"1px solid #222", paddingBottom:6, marginTop:8 }}>📉 Loss Streaks</div>
-            {DD_POND_DATA.lossStreaks.map((s,i) => (
-              <div key={i} style={{ display:"flex", alignItems:"center", gap:10, background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
-                <span style={{ fontSize:12, color:"#d42b2b", width:24, flexShrink:0 }}>#{i+1}</span>
-                <DDManagerLogo name={s.Manager} size={20} />
-                <span style={{ fontSize:13, fontWeight:500, color:"#555", flex:1 }}>{s.Manager.split(" ")[0]}</span>
-                <span style={{ fontSize:11, color:"#333" }}>{s.StartYear} Wk{s.StartWeek} → {s.EndYear} Wk{s.EndWeek}</span>
-                <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:18, color:"#d42b2b" }}>{s.Streak}L</span>
-              </div>
-            ))}
-          </div>
-        )}
+            </div>
+          );
+          return (
+            <div style={{ display:"flex", flexDirection:"column", gap:24 }}>
+              <StreakTable data={DD_POND_DATA.winStreaks} title="📈 Win Streaks" titleColor="#2ecc71" suffix="W" />
+              <StreakTable data={DD_POND_DATA.lossStreaks} title="📉 Loss Streaks" titleColor="#d42b2b" suffix="L" />
+            </div>
+          );
+        })()}
 
         {/* LUCK */}
         {section === "luck" && (() => {
+          const { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, ReferenceLine } = Recharts;
+
+          // Career luck data from DD_POND_DATA
           const handleLuckSort = (key) => {
             if (luckSortKey === key) setLuckSortDir(d => d === "asc" ? "desc" : "asc");
             else { setLuckSortKey(key); setLuckSortDir(key === "Manager" ? "asc" : "desc"); }
@@ -60963,68 +61869,318 @@ function DDPondTab() {
           );
           const maxAbs = Math.max(...DD_POND_DATA.luck.map(x => Math.abs(x.LuckDelta)));
 
+          // Compute per-season luck from DD_LINEUP_EFFICIENCY + DD_HISTORICAL
+          const seasonLuck = [];
+          [2023, 2024, 2025].forEach(yr => {
+            const yearData = DD_LINEUP_EFFICIENCY[yr];
+            if (!yearData) return;
+            const season = DD_HISTORICAL.seasons[yr];
+            if (!season) return;
+            const weekScores = {};
+            Object.entries(yearData).forEach(([name, mgr]) => {
+              (mgr.weeks || []).forEach(w => {
+                if (!weekScores[w.week]) weekScores[w.week] = [];
+                if (w.actual > 0) weekScores[w.week].push({ name, pts: w.actual });
+              });
+            });
+            const mgrExp = {};
+            Object.entries(weekScores).forEach(([wk, scores]) => {
+              if (scores.length < 6) return;
+              scores.forEach(s => {
+                const beaten = scores.filter(o => o.name !== s.name && s.pts > o.pts).length;
+                mgrExp[s.name] = (mgrExp[s.name] || 0) + beaten / (scores.length - 1);
+              });
+            });
+            season.regular.forEach(m => {
+              const exp = mgrExp[m.name] || 0;
+              seasonLuck.push({ Manager: m.name, Year: yr, ActualW: m.wins, ExpectedW: parseFloat(exp.toFixed(1)), LuckDiff: parseFloat((m.wins - exp).toFixed(1)), PF: m.pf });
+            });
+          });
+
+          const luckiestSeason = [...seasonLuck].sort((a,b) => b.LuckDiff - a.LuckDiff)[0];
+          const unluckiestSeason = [...seasonLuck].sort((a,b) => a.LuckDiff - b.LuckDiff)[0];
+          const luckiest = [...DD_POND_DATA.luck].sort((a,b) => b.LuckDelta - a.LuckDelta)[0];
+          const unluckiest = [...DD_POND_DATA.luck].sort((a,b) => a.LuckDelta - b.LuckDelta)[0];
+
+          const allMgrs = DD_POND_DATA.luck.map(l => l.Manager).sort();
+          const mgrSeasons = seasonLuck.filter(s => s.Manager === luckMgr).sort((a,b) => a.Year - b.Year);
+
           return (
-            <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+            <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
+              <div style={{ fontSize:11, color:"#555", background:"#111", borderRadius:6, padding:"6px 12px" }}>
+                Expected wins = how many opponents you'd beat each week based on score. Positive Δ = lucky.
+              </div>
+
+              {/* Sub-tabs */}
+              <div style={{ display:"flex", gap:6, flexWrap:"nowrap", overflowX:"auto", scrollbarWidth:"none" }}>
+                {[["career","📈 Career"],["season","📅 By Season"],["spotlight","🎰 My Luck"]].map(([k,l]) => (
+                  <button key={k} onClick={() => setLuckTab(k)} style={{
+                    background: luckTab===k ? "#2176d2" : "#1a1a1a",
+                    color: luckTab===k ? "#fff" : "#aaa",
+                    border:`1px solid ${luckTab===k ? "#2176d2" : "#333"}`,
+                    borderRadius:6, padding:mobile?"6px 10px":"7px 16px",
+                    cursor:"pointer", fontSize:mobile?11:13, whiteSpace:"nowrap", flexShrink:0,
+                  }}>{l}</button>
+                ))}
+              </div>
+
+              {/* CAREER TAB */}
+              {luckTab === "career" && (
+                <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
+                  {/* Callout cards */}
+                  <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
+                    {luckiest && (
+                      <div style={{ flex:1, minWidth:mobile?"100%":180, background:"#0a1a0a", border:"1px solid #1a3a1a", borderLeft:"4px solid #2176d2", borderRadius:8, padding:"12px 14px" }}>
+                        <div style={{ fontSize:10, color:"#2176d2", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:2, marginBottom:4 }}>☘️ LUCKIEST CAREER</div>
+                        <div style={{ display:"flex", alignItems:"center", gap:5 }}><DDManagerLogo name={luckiest.Manager} size={22} /><span style={{ color:"#fff", fontWeight:600, fontSize:13 }}>{firstName(luckiest.Manager)}</span></div>
+                        <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:22, color:"#2176d2", marginTop:4 }}>+{luckiest.LuckDelta}</div>
+                      </div>
+                    )}
+                    {unluckiest && (
+                      <div style={{ flex:1, minWidth:mobile?"100%":180, background:"#1a0a0a", border:"1px solid #3a1a1a", borderLeft:"4px solid #d42b2b", borderRadius:8, padding:"12px 14px" }}>
+                        <div style={{ fontSize:10, color:"#d42b2b", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:2, marginBottom:4 }}>😭 UNLUCKIEST CAREER</div>
+                        <div style={{ display:"flex", alignItems:"center", gap:5 }}><DDManagerLogo name={unluckiest.Manager} size={22} /><span style={{ color:"#fff", fontWeight:600, fontSize:13 }}>{firstName(unluckiest.Manager)}</span></div>
+                        <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:22, color:"#d42b2b", marginTop:4 }}>{unluckiest.LuckDelta}</div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Career table */}
+                  <div style={{ overflowX:"auto" }}>
+                    <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                      <thead><tr>
+                        <th style={{ padding:"8px 10px", textAlign:"left", color:"#2176d2", fontFamily:"'Cooper Black',Georgia,serif", fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
+                        <LuckTh label="Manager" sortK="Manager" color="#888" />
+                        <LuckTh label="Luck Δ" sortK="LuckDelta" color="#2176d2" />
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#555", fontSize:11, borderBottom:"2px solid #333" }}>Visual</th>
+                        <LuckTh label="Actual W" sortK="ActualW" color="#2ecc71" />
+                        <LuckTh label="Expected W" sortK="ExpectedW" color="#e9c46a" />
+                      </tr></thead>
+                      <tbody>
+                        {luckData.map((l, i) => {
+                          const pct = Math.abs(l.LuckDelta) / maxAbs * 48;
+                          const lucky = l.LuckDelta >= 0;
+                          return (
+                            <tr key={i} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a", cursor:"pointer" }} onClick={() => { setLuckMgr(l.Manager); setLuckTab("spotlight"); }}>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color: i<3?"#2176d2":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>#{i+1}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}>
+                                <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
+                                  <DDManagerLogo name={l.Manager} size={18} />
+                                  <span style={{ color:"#fff", fontWeight:500 }}>{l.Manager}</span>
+                                </span>
+                              </td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:lucky?"#2176d2":"#d42b2b", fontWeight:700, fontSize:15 }}>{lucky?"+":""}{l.LuckDelta}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", width:120 }}>
+                                <div style={{ background:"#1a1a1a", borderRadius:3, height:8, position:"relative" }}>
+                                  <div style={{ position:"absolute", left:"50%", top:0, bottom:0, width:1.5, background:"#333" }} />
+                                  {lucky
+                                    ? <div style={{ position:"absolute", left:"50%", width:`${pct}%`, height:8, background:"#2176d2", borderRadius:"0 3px 3px 0" }} />
+                                    : <div style={{ position:"absolute", right:"50%", width:`${pct}%`, height:8, background:"#d42b2b", borderRadius:"3px 0 0 3px" }} />}
+                                </div>
+                              </td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2ecc71" }}>{l.ActualW}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#e9c46a" }}>{l.ExpectedW}</td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                  <div style={{ fontSize:11, color:"#444" }}>Click any row to see year-by-year breakdown</div>
+                </div>
+              )}
+
+              {/* BY SEASON TAB */}
+              {luckTab === "season" && (
+                <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
+                  <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
+                    {luckiestSeason && (
+                      <div style={{ flex:1, minWidth:mobile?"100%":180, background:"#0a1a0a", border:"1px solid #1a3a1a", borderLeft:"4px solid #2176d2", borderRadius:8, padding:"10px 12px" }}>
+                        <div style={{ fontSize:10, color:"#2176d2", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:2, marginBottom:4 }}>☘️ LUCKIEST SEASON</div>
+                        <div style={{ display:"flex", alignItems:"center", gap:5 }}><DDManagerLogo name={luckiestSeason.Manager} size={18} /><span style={{ color:"#fff", fontWeight:600, fontSize:12 }}>{firstName(luckiestSeason.Manager)} {luckiestSeason.Year}</span></div>
+                        <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:20, color:"#2176d2", marginTop:2 }}>+{luckiestSeason.LuckDiff}</div>
+                        <div style={{ fontSize:10, color:"#555" }}>{luckiestSeason.ActualW}W actual · {luckiestSeason.ExpectedW} expected</div>
+                      </div>
+                    )}
+                    {unluckiestSeason && (
+                      <div style={{ flex:1, minWidth:mobile?"100%":180, background:"#1a0a0a", border:"1px solid #3a1a1a", borderLeft:"4px solid #d42b2b", borderRadius:8, padding:"10px 12px" }}>
+                        <div style={{ fontSize:10, color:"#d42b2b", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:2, marginBottom:4 }}>😤 UNLUCKIEST SEASON</div>
+                        <div style={{ display:"flex", alignItems:"center", gap:5 }}><DDManagerLogo name={unluckiestSeason.Manager} size={18} /><span style={{ color:"#fff", fontWeight:600, fontSize:12 }}>{firstName(unluckiestSeason.Manager)} {unluckiestSeason.Year}</span></div>
+                        <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:20, color:"#d42b2b", marginTop:2 }}>{unluckiestSeason.LuckDiff}</div>
+                        <div style={{ fontSize:10, color:"#555" }}>{unluckiestSeason.ActualW}W actual · {unluckiestSeason.ExpectedW} expected</div>
+                      </div>
+                    )}
+                  </div>
+                  <div style={{ overflowX:"auto" }}>
+                    <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                      <thead><tr>
+                        <th style={{ padding:"8px 10px", textAlign:"left", color:"#888", fontSize:11, borderBottom:"2px solid #333" }}>Manager</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#888", fontSize:11, borderBottom:"2px solid #333" }}>Year</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#2176d2", fontSize:11, borderBottom:"2px solid #333" }}>Luck Δ</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#2ecc71", fontSize:11, borderBottom:"2px solid #333" }}>Actual W</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#e9c46a", fontSize:11, borderBottom:"2px solid #333" }}>Expected W</th>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#f4a261", fontSize:11, borderBottom:"2px solid #333" }}>PF</th>
+                      </tr></thead>
+                      <tbody>
+                        {[...seasonLuck].sort((a,b) => a.LuckDiff - b.LuckDiff).map((s, i) => (
+                          <tr key={`${s.Manager}-${s.Year}`} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}>
+                              <span style={{ display:"inline-flex", alignItems:"center", gap:5 }}><DDManagerLogo name={s.Manager} size={16} /><span style={{ color:"#fff", fontWeight:500 }}>{firstName(s.Manager)}</span></span>
+                            </td>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2176d2", fontFamily:"'Cooper Black',Georgia,serif" }}>{s.Year}</td>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:s.LuckDiff>=0?"#2176d2":"#d42b2b", fontWeight:700, fontFamily:"'Cooper Black',Georgia,serif", fontSize:15 }}>{s.LuckDiff>=0?"+":""}{s.LuckDiff}</td>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2ecc71" }}>{s.ActualW}</td>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#e9c46a" }}>{s.ExpectedW}</td>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#f4a261" }}>{s.PF.toFixed(1)}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+
+              {/* MANAGER SPOTLIGHT TAB */}
+              {luckTab === "spotlight" && (
+                <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
+                  <div style={{ display:"flex", alignItems:"center", gap:12, flexWrap:"wrap" }}>
+                    <span style={{ color:"#aaa", fontSize:13 }}>Select Manager:</span>
+                    <div style={{ position:"relative" }}>
+                      <select value={luckMgr} onChange={e => setLuckMgr(e.target.value)} style={{
+                        background:"#1a1a1a", color:"#fff", border:"1px solid #333", borderRadius:6,
+                        padding:"7px 32px 7px 12px", fontSize:14, cursor:"pointer", appearance:"none", WebkitAppearance:"none", outline:"none",
+                      }}>
+                        {allMgrs.map(m => <option key={m} value={m}>{m}</option>)}
+                      </select>
+                      <span style={{ position:"absolute", right:10, top:"50%", transform:"translateY(-50%)", color:"#2176d2", pointerEvents:"none", fontSize:11 }}>▼</span>
+                    </div>
+                  </div>
+
+                  {/* Summary cards */}
+                  {(() => {
+                    const career = DD_POND_DATA.luck.find(l => l.Manager === luckMgr);
+                    const best = mgrSeasons.length ? mgrSeasons.reduce((b,s) => s.LuckDiff > b.LuckDiff ? s : b, mgrSeasons[0]) : null;
+                    const worst = mgrSeasons.length ? mgrSeasons.reduce((b,s) => s.LuckDiff < b.LuckDiff ? s : b, mgrSeasons[0]) : null;
+                    return (
+                      <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
+                        {[
+                          { label:"Career Luck", value: career ? `${career.LuckDelta > 0 ? "+" : ""}${career.LuckDelta}` : "—", color: career && career.LuckDelta>=0 ? "#2176d2" : "#d42b2b", sub: career ? `${career.ActualW}W actual / ${career.ExpectedW} exp` : "" },
+                          { label:"Luckiest Season", value: best ? `+${best.LuckDiff}` : "—", color:"#2176d2", sub: best ? `${best.Year} (${best.ActualW}W / ${best.ExpectedW} exp)` : "" },
+                          { label:"Unluckiest Season", value: worst ? `${worst.LuckDiff}` : "—", color:"#d42b2b", sub: worst ? `${worst.Year} (${worst.ActualW}W / ${worst.ExpectedW} exp)` : "" },
+                        ].map(({label,value,color,sub}) => (
+                          <div key={label} style={{ flex:1, minWidth:mobile?100:140, background:"#0a0a0a", borderRadius:8, padding:"10px 12px" }}>
+                            <div style={{ fontSize:10, color:"#555", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1.5, marginBottom:3 }}>{label}</div>
+                            <div style={{ color, fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?16:20 }}>{value}</div>
+                            <div style={{ fontSize:10, color:"#444", marginTop:2 }}>{sub}</div>
+                          </div>
+                        ))}
+                      </div>
+                    );
+                  })()}
+
+                  {/* Year-by-year */}
+                  <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
+                    {mgrSeasons.map((s, i) => {
+                      const barW = Math.abs(s.LuckDiff) / 4 * 100;
+                      const col = s.LuckDiff >= 0 ? "#2176d2" : "#d42b2b";
+                      return (
+                        <div key={s.Year} style={{ background:i%2===0?"#0d0d0d":"#1a1a1a", borderRadius:6, padding:"8px 12px", display:"flex", alignItems:"center", gap:12 }}>
+                          <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:15, color:"#2176d2", minWidth:36, flexShrink:0 }}>{s.Year}</span>
+                          <div style={{ flex:1 }}>
+                            <div style={{ display:"flex", alignItems:"center", gap:6 }}>
+                              <div style={{ flex:1, height:5, background:"#181818", borderRadius:3, overflow:"hidden" }}>
+                                <div style={{ width:`${Math.min(barW,100)}%`, height:"100%", background:col, borderRadius:3 }} />
+                              </div>
+                              <span style={{ color:col, fontFamily:"'Cooper Black',Georgia,serif", fontSize:15, minWidth:40, textAlign:"right" }}>
+                                {s.LuckDiff > 0 ? "+" : ""}{s.LuckDiff}
+                              </span>
+                            </div>
+                            <div style={{ fontSize:10, color:"#444", marginTop:2 }}>{s.ActualW}W actual · {s.ExpectedW} expected · {s.PF.toFixed(1)} PF</div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })()}
+
+        {section === "txns" && (() => {
+          const summary = DD_TRANSACTION_SUMMARY || {};
+          const maxMoves = Math.max(...Object.values(summary).map(s => s.totalMoves), 1);
+
+          const handleDdTxSort = (key) => {
+            if (ddTxSortKey === key) setDdTxSortDir(d => d === "asc" ? "desc" : "asc");
+            else { setDdTxSortKey(key); setDdTxSortDir(key === "mgr" ? "asc" : "desc"); }
+          };
+          const ddTxArrow = (key) => ddTxSortKey === key ? (ddTxSortDir === "asc" ? " ↑" : " ↓") : "";
+
+          const rows = Object.entries(summary).map(([mgr, s]) => ({ mgr, ...s })).sort((a, b) => {
+            let result = 0;
+            if (ddTxSortKey === "mgr") result = a.mgr.localeCompare(b.mgr);
+            else result = (a[ddTxSortKey] || 0) - (b[ddTxSortKey] || 0);
+            return ddTxSortDir === "asc" ? result : -result;
+          });
+
+          const DdTxTh = ({ label, sortK, color }) => (
+            <th onClick={() => handleDdTxSort(sortK)} style={{ padding:"8px 10px", textAlign: sortK === "mgr" ? "left" : "center", color: ddTxSortKey === sortK ? "#fff" : (color || "#888"), fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"2px solid #333" }}>
+              {label}{ddTxArrow(sortK)}
+            </th>
+          );
+
+          return (
+            <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
               <div style={{ fontSize:11, color:"#555", background:"#111", borderRadius:6, padding:"6px 12px", marginBottom:4 }}>
-                Actual wins minus expected wins (based on weekly PF rank) · 3-season total · click headers to sort
+                All transactions across 2023–2025 · trades, waiver claims and free agent adds · Click headers to sort
               </div>
               {mobile ? (
                 <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
-                  {luckData.map((l, i) => {
-                    const pct = Math.abs(l.LuckDelta) / maxAbs * 48;
-                    const lucky = l.LuckDelta >= 0;
-                    return (
-                      <div key={i} style={{ display:"flex", alignItems:"center", gap:8, background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"9px 12px" }}>
-                        <DDManagerLogo name={l.Manager} size={20} />
-                        <span style={{ fontSize:13, fontWeight:500, color:"#fff", width:70, flexShrink:0 }}>{firstName(l.Manager)}</span>
-                        <div style={{ flex:1, minWidth:0, position:"relative" }}>
-                          <div style={{ background:"#1a1a1a", borderRadius:3, height:8, position:"relative" }}>
-                            <div style={{ position:"absolute", left:"50%", top:0, bottom:0, width:1.5, background:"#333" }} />
-                            {lucky
-                              ? <div style={{ position:"absolute", left:"50%", width:`${pct}%`, height:8, background:"#2176d2", borderRadius:"0 3px 3px 0" }} />
-                              : <div style={{ position:"absolute", right:"50%", width:`${pct}%`, height:8, background:"#d42b2b", borderRadius:"3px 0 0 3px" }} />}
-                          </div>
-                        </div>
-                        <span style={{ fontSize:13, fontWeight:500, color:lucky?"#2176d2":"#d42b2b", width:40, textAlign:"right", flexShrink:0 }}>{lucky?"+":""}{l.LuckDelta}</span>
-                      </div>
-                    );
-                  })}
+                  {rows.map((m, i) => (
+                    <div key={m.mgr} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a", borderRadius:6, padding:"8px 10px", display:"flex", alignItems:"center", gap:8 }}>
+                      <span style={{ color:i<3?"#64b5f6":"#555", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14, width:24, textAlign:"center" }}>#{i+1}</span>
+                      <DDManagerLogo name={m.mgr} size={18} />
+                      <span style={{ fontSize:13, color:"#fff", fontWeight:600, flex:1 }}>{firstName(m.mgr)}</span>
+                      <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:15, color:"#64b5f6" }}>{m.totalMoves}</span>
+                    </div>
+                  ))}
                 </div>
               ) : (
                 <div style={{ overflowX:"auto" }}>
                   <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
                     <thead><tr>
-                      <th style={{ padding:"8px 10px", textAlign:"left", color:"#2176d2", fontFamily:"'Cooper Black',Georgia,serif", fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
-                      <LuckTh label="Manager" sortK="Manager" color="#888" />
-                      <LuckTh label="Luck Δ" sortK="LuckDelta" color="#2176d2" />
-                      <th style={{ padding:"8px 10px", textAlign:"center", color:"#555", fontSize:11, borderBottom:"2px solid #333" }}>Visual</th>
-                      <LuckTh label="Actual W" sortK="ActualW" color="#2ecc71" />
-                      <LuckTh label="Expected W" sortK="ExpectedW" color="#e9c46a" />
+                      <th style={{ padding:"8px 10px", textAlign:"left", color:"#64b5f6", fontFamily:"'Cooper Black',Georgia,serif", fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
+                      <DdTxTh label="Manager" sortK="mgr" color="#888" />
+                      <DdTxTh label="Total Moves" sortK="totalMoves" color="#64b5f6" />
+                      <th style={{ padding:"8px 10px", textAlign:"center", color:"#555", fontSize:11, borderBottom:"2px solid #333" }}>Activity</th>
+                      <DdTxTh label="Trades" sortK="trades" color="#E07B20" />
+                      <DdTxTh label="Waivers" sortK="waivers" color="#2ecc71" />
+                      <DdTxTh label="FA Adds" sortK="freeAgents" color="#aaa" />
+                      <DdTxTh label="Players Added" sortK="playersAdded" color="#f4a261" />
                     </tr></thead>
                     <tbody>
-                      {luckData.map((l, i) => {
-                        const pct = Math.abs(l.LuckDelta) / maxAbs * 48;
-                        const lucky = l.LuckDelta >= 0;
+                      {rows.map((m, i) => {
+                        const barW = Math.round(m.totalMoves / maxMoves * 100);
                         return (
-                          <tr key={i} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
-                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color: i<3?"#2176d2":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>#{i+1}</td>
+                          <tr key={m.mgr} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color: i<3?"#64b5f6":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>{i===0?"🥇":i===1?"🥈":i===2?"🥉":`#${i+1}`}</td>
                             <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}>
                               <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
-                                <DDManagerLogo name={l.Manager} size={18} />
-                                <span style={{ color:"#fff", fontWeight:500 }}>{l.Manager}</span>
+                                <DDManagerLogo name={m.mgr} size={18} />
+                                <span style={{ color:"#fff", fontWeight:500 }}>{m.mgr}</span>
                               </span>
                             </td>
-                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:lucky?"#2176d2":"#d42b2b", fontWeight:700, fontSize:15 }}>{lucky?"+":""}{l.LuckDelta}</td>
-                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", width:120 }}>
-                              <div style={{ background:"#1a1a1a", borderRadius:3, height:8, position:"relative" }}>
-                                <div style={{ position:"absolute", left:"50%", top:0, bottom:0, width:1.5, background:"#333" }} />
-                                {lucky
-                                  ? <div style={{ position:"absolute", left:"50%", width:`${pct}%`, height:8, background:"#2176d2", borderRadius:"0 3px 3px 0" }} />
-                                  : <div style={{ position:"absolute", right:"50%", width:`${pct}%`, height:8, background:"#d42b2b", borderRadius:"3px 0 0 3px" }} />}
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#64b5f6", fontWeight:700, fontFamily:"'Cooper Black',Georgia,serif", fontSize:15 }}>{m.totalMoves}</td>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", width:80 }}>
+                              <div style={{ background:"#181818", borderRadius:3, height:6 }}>
+                                <div style={{ height:6, borderRadius:3, width:`${barW}%`, background:"#64b5f6" }} />
                               </div>
                             </td>
-                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2ecc71" }}>{l.ActualW}</td>
-                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#e9c46a" }}>{l.ExpectedW}</td>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#E07B20", fontWeight:600 }}>{m.trades}</td>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2ecc71" }}>{m.waivers}</td>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#aaa" }}>{m.freeAgents}</td>
+                            <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#f4a261" }}>{m.playersAdded}</td>
                           </tr>
                         );
                       })}
@@ -61036,35 +62192,683 @@ function DDPondTab() {
           );
         })()}
 
-        {section === "txns" && (() => {
-          const summary = DD_TRANSACTION_SUMMARY || {};
-          const sorted  = Object.entries(summary).sort((a,b)=>b[1].totalMoves - a[1].totalMoves);
-          const maxMoves = sorted[0]?.[1]?.totalMoves || 1;
+        {section === "unluckylucky" && (() => {
+          // Compute unlucky losses and lucky wins using all-play method
+          // For each week: count how many opponents each manager outscored
+          // Compare to actual season W-L from DD_HISTORICAL
+          // Unlucky = outscored majority but lost; Lucky = outscored minority but won
+
+          const unluckyLosses = [];
+          const luckyWins = [];
+
+          [2023, 2024, 2025].forEach(yr => {
+            const yearData = DD_LINEUP_EFFICIENCY[yr];
+            if (!yearData) return;
+            const season = DD_HISTORICAL.seasons[yr];
+            if (!season) return;
+
+            // Get all weeks and all scores
+            const weekScores = {};
+            Object.entries(yearData).forEach(([name, mgr]) => {
+              (mgr.weeks || []).forEach(w => {
+                if (!weekScores[w.week]) weekScores[w.week] = [];
+                if (w.actual > 0) weekScores[w.week].push({ name, pts: w.actual });
+              });
+            });
+
+            // For each manager, compute expected wins per week using all-play
+            const mgrExpected = {};
+            const mgrWeeklyBeats = {};
+            Object.keys(yearData).forEach(name => { mgrExpected[name] = 0; mgrWeeklyBeats[name] = []; });
+
+            Object.entries(weekScores).forEach(([wk, scores]) => {
+              if (scores.length < 6) return;
+              const n = scores.length;
+              const sorted = [...scores].sort((a, b) => a.pts - b.pts);
+              const mid = Math.floor(n / 2);
+              const median = n % 2 === 0 ? (sorted[mid-1].pts + sorted[mid].pts) / 2 : sorted[mid].pts;
+
+              scores.forEach(s => {
+                const beaten = scores.filter(o => o.name !== s.name && s.pts > o.pts).length;
+                const expWin = beaten / (n - 1);
+                if (mgrExpected[s.name] !== undefined) {
+                  mgrExpected[s.name] += expWin;
+                  mgrWeeklyBeats[s.name].push({ week: parseInt(wk), beaten, total: n - 1, pts: s.pts, median });
+                }
+              });
+            });
+
+            // Get actual wins from DD_HISTORICAL
+            season.regular.forEach(m => {
+              const weeklyData = mgrWeeklyBeats[m.name];
+              if (!weeklyData || weeklyData.length === 0) return;
+
+              const expectedWins = mgrExpected[m.name] || 0;
+              const luckDeficit = Math.round(expectedWins - m.wins);
+
+              if (luckDeficit > 0) {
+                // Unlucky: best weeks (most opponents beaten) that should have been wins
+                const aboveMedianWeeks = [...weeklyData].sort((a, b) => b.beaten - a.beaten).filter(w => w.beaten >= 6);
+                aboveMedianWeeks.slice(0, Math.min(luckDeficit, aboveMedianWeeks.length)).forEach(w => {
+                  unluckyLosses.push({
+                    name: m.name, year: yr, week: w.week, pts: w.pts,
+                    median: w.median.toFixed(1), beaten: w.beaten, total: w.total,
+                    diff: (w.pts - w.median).toFixed(1)
+                  });
+                });
+              }
+
+              const luckSurplus = Math.round(m.wins - expectedWins);
+              if (luckSurplus > 0) {
+                // Lucky: worst weeks (fewest opponents beaten) that should have been losses
+                const belowMedianWeeks = [...weeklyData].sort((a, b) => a.beaten - b.beaten).filter(w => w.beaten <= 5);
+                belowMedianWeeks.slice(0, Math.min(luckSurplus, belowMedianWeeks.length)).forEach(w => {
+                  luckyWins.push({
+                    name: m.name, year: yr, week: w.week, pts: w.pts,
+                    median: w.median.toFixed(1), beaten: w.beaten, total: w.total,
+                    diff: (w.median - w.pts).toFixed(1)
+                  });
+                });
+              }
+            });
+          });
+
+          unluckyLosses.sort((a, b) => parseFloat(b.diff) - parseFloat(a.diff));
+          luckyWins.sort((a, b) => parseFloat(b.diff) - parseFloat(a.diff));
+
+          // Summary per manager
+          const ulSummary = {};
+          unluckyLosses.forEach(g => {
+            if (!ulSummary[g.name]) ulSummary[g.name] = { unlucky: 0, lucky: 0 };
+            ulSummary[g.name].unlucky++;
+          });
+          luckyWins.forEach(g => {
+            if (!ulSummary[g.name]) ulSummary[g.name] = { unlucky: 0, lucky: 0 };
+            ulSummary[g.name].lucky++;
+          });
+          const summaryList = Object.entries(ulSummary).map(([name, s]) => ({
+            name, ...s, net: s.lucky - s.unlucky
+          }));
+
+          const handleUlSort = (key) => {
+            if (ulSortKey === key) setUlSortDir(d => d === "asc" ? "desc" : "asc");
+            else { setUlSortKey(key); setUlSortDir(key === "name" || key === "rank" ? "asc" : "desc"); }
+          };
+          const ulArrow = (key) => ulSortKey === key ? (ulSortDir === "asc" ? " ↑" : " ↓") : "";
+
+          const handleUlSumSort = (key) => {
+            if (ulSumSortKey === key) setUlSumSortDir(d => d === "asc" ? "desc" : "asc");
+            else { setUlSumSortKey(key); setUlSumSortDir(key === "name" ? "asc" : "desc"); }
+          };
+          const ulSumArrow = (key) => ulSumSortKey === key ? (ulSumSortDir === "asc" ? " ↑" : " ↓") : "";
+
+          const activeList = ulTab === "unlucky" ? unluckyLosses : ulTab === "lucky" ? luckyWins : null;
+          const sortedList = activeList ? [...activeList].map((g, i) => ({ ...g, rank: i + 1 })).sort((a, b) => {
+            let result = 0;
+            if (ulSortKey === "rank") result = a.rank - b.rank;
+            else if (ulSortKey === "name") result = a.name.localeCompare(b.name);
+            else if (ulSortKey === "pts") result = a.pts - b.pts;
+            else if (ulSortKey === "diff") result = parseFloat(a.diff) - parseFloat(b.diff);
+            else if (ulSortKey === "year") result = a.year - b.year || a.week - b.week;
+            else if (ulSortKey === "beaten") result = a.beaten - b.beaten;
+            return ulSortDir === "asc" ? result : -result;
+          }) : null;
+
+          const sortedSummary = [...summaryList].sort((a, b) => {
+            let result = 0;
+            if (ulSumSortKey === "name") result = a.name.localeCompare(b.name);
+            else if (ulSumSortKey === "unlucky") result = a.unlucky - b.unlucky;
+            else if (ulSumSortKey === "lucky") result = a.lucky - b.lucky;
+            else if (ulSumSortKey === "net") result = a.net - b.net;
+            return ulSumSortDir === "asc" ? result : -result;
+          });
+
+          const UlTh = ({ label, sortK, color }) => (
+            <th onClick={() => handleUlSort(sortK)} style={{ padding:"8px 10px", textAlign: sortK === "name" ? "left" : "center", color: ulSortKey === sortK ? "#fff" : (color || "#888"), fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"2px solid #333" }}>
+              {label}{ulArrow(sortK)}
+            </th>
+          );
+          const SumTh = ({ label, sortK, color }) => (
+            <th onClick={() => handleUlSumSort(sortK)} style={{ padding:"8px 10px", textAlign: sortK === "name" ? "left" : "center", color: ulSumSortKey === sortK ? "#fff" : (color || "#888"), fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"2px solid #333" }}>
+              {label}{ulSumArrow(sortK)}
+            </th>
+          );
+
           return (
-            <div style={{ display:"flex", flexDirection:"column", gap:10 }}>
+            <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
               <div style={{ fontSize:11, color:"#555", background:"#111", borderRadius:6, padding:"6px 12px", marginBottom:4 }}>
-                All transactions across 2023–2025 · trades, waiver claims and free agent adds
+                Unlucky Loss = outscored 6+ of 11 opponents that week but still lost · Lucky Win = outscored 5 or fewer but still won · Based on all-play expected wins vs actual record
               </div>
-              {sorted.map(([mgr, s], i) => (
-                <div key={mgr} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 14px" }}>
-                  <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:8 }}>
-                    <div style={{ width:22, textAlign:"center", fontSize:12, color:i<3?"#64b5f6":"#555", flexShrink:0 }}>#{i+1}</div>
-                    <DDManagerLogo name={mgr} size={20} />
-                    <span style={{ fontSize:mobile?12:14, fontWeight:600, color:"#fff", flex:1 }}>{mgr.split(" ")[0]}</span>
-                    <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:16, color:"#64b5f6", flexShrink:0 }}>{s.totalMoves}</span>
-                    <span style={{ fontSize:10, color:"#555" }}>moves</span>
+
+              <div style={{ display:"flex", gap:6, flexWrap:"nowrap", overflowX:"auto", scrollbarWidth:"none" }}>
+                {[["unlucky","😤 Unlucky Losses"],["lucky","☘️ Lucky Wins"],["summary","📊 Summary"]].map(([k,l]) => (
+                  <button key={k} onClick={() => { setUlTab(k); setUlSortKey("rank"); setUlSortDir("asc"); }} style={{
+                    background: ulTab===k ? "#f4a261" : "#1a1a1a",
+                    color: ulTab===k ? "#000" : "#aaa",
+                    border:`1px solid ${ulTab===k ? "#f4a261" : "#333"}`,
+                    borderRadius:6, padding:mobile?"6px 10px":"7px 16px",
+                    cursor:"pointer", fontSize:mobile?11:13, whiteSpace:"nowrap", flexShrink:0, fontWeight: ulTab===k ? 700 : 400,
+                  }}>{l}</button>
+                ))}
+              </div>
+
+              {(ulTab === "unlucky" || ulTab === "lucky") && sortedList && sortedList.length > 0 && (
+                <div>
+                  <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:14, color: ulTab === "unlucky" ? "#d42b2b" : "#2ecc71", letterSpacing:1, marginBottom:8 }}>
+                    {ulTab === "unlucky" ? `😤 ${unluckyLosses.length} Unlucky Losses (2023–2025)` : `☘️ ${luckyWins.length} Lucky Wins (2023–2025)`}
                   </div>
-                  <div style={{ background:"#111", borderRadius:3, height:4, marginBottom:8 }}>
-                    <div style={{ height:4, borderRadius:3, width:`${s.totalMoves/maxMoves*100}%`, background:"#64b5f6" }} />
+                  {mobile ? (
+                    <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
+                      {sortedList.slice(0, 25).map((g, i) => (
+                        <div key={i} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 12px" }}>
+                          <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
+                            <span style={{ fontSize:11, color: ulTab === "unlucky" ? "#d42b2b" : "#2ecc71", width:22, flexShrink:0 }}>#{g.rank}</span>
+                            <DDManagerLogo name={g.name} size={18} />
+                            <span style={{ fontSize:13, fontWeight:500, color:"#fff", flex:1 }}>{firstName(g.name)}</span>
+                            <span style={{ fontSize:14, fontWeight:700, color: ulTab === "unlucky" ? "#d42b2b" : "#2ecc71" }}>{g.pts}</span>
+                          </div>
+                          <div style={{ fontSize:11, color:"#555", paddingLeft:30 }}>
+                            {g.year} Wk {g.week} · Beat {g.beaten}/{g.total} · Median: {g.median}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div style={{ overflowX:"auto" }}>
+                      <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                        <thead><tr>
+                          <th style={{ padding:"8px 10px", textAlign:"left", color:"#f4a261", fontFamily:"'Cooper Black',Georgia,serif", fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
+                          <UlTh label="Manager" sortK="name" color="#888" />
+                          <UlTh label="Score" sortK="pts" color={ulTab === "unlucky" ? "#d42b2b" : "#2ecc71"} />
+                          <UlTh label="Beat" sortK="beaten" color="#f4a261" />
+                          <th style={{ padding:"8px 10px", textAlign:"center", color:"#888", fontSize:11, borderBottom:"2px solid #333" }}>Median</th>
+                          <UlTh label={ulTab === "unlucky" ? "Above Median" : "Below Median"} sortK="diff" color="#f4a261" />
+                          <UlTh label="When" sortK="year" color="#888" />
+                        </tr></thead>
+                        <tbody>
+                          {sortedList.slice(0, 40).map((g, i) => (
+                            <tr key={i} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color: i<3?"#f4a261":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>#{g.rank}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}>
+                                <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
+                                  <DDManagerLogo name={g.name} size={18} />
+                                  <span style={{ color:"#fff", fontWeight:500 }}>{g.name}</span>
+                                </span>
+                              </td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color: ulTab === "unlucky" ? "#d42b2b" : "#2ecc71", fontWeight:700, fontSize:15 }}>{g.pts}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#f4a261", fontWeight:600 }}>{g.beaten}/{g.total}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#555" }}>{g.median}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#f4a261", fontWeight:700 }}>{ulTab === "unlucky" ? "+" : ""}{g.diff}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#555" }}>{g.year} Wk{g.week}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                </div>
+              )}
+              {(ulTab === "unlucky" || ulTab === "lucky") && sortedList && sortedList.length === 0 && (
+                <div style={{ color:"#555", fontSize:13, padding:16, textAlign:"center" }}>No {ulTab === "unlucky" ? "unlucky losses" : "lucky wins"} found.</div>
+              )}
+
+              {ulTab === "summary" && (
+                <div>
+                  <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:14, color:"#f4a261", letterSpacing:1, marginBottom:8 }}>
+                    📊 Luck Summary by Manager (2023–2025)
                   </div>
-                  <div style={{ display:"flex", gap:mobile?8:16, fontSize:10, color:"#555", flexWrap:"wrap" }}>
-                    <span>🤝 <span style={{ color:"#E07B20" }}>{s.trades}</span> trades</span>
-                    <span>📡 <span style={{ color:"#2ecc71" }}>{s.waivers}</span> waivers</span>
-                    <span>🆓 <span style={{ color:"#aaa" }}>{s.freeAgents}</span> FA adds</span>
-                    <span>👤 <span style={{ color:"#aaa" }}>{s.playersAdded}</span> players added</span>
+                  {mobile ? (
+                    <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
+                      {sortedSummary.map((m, i) => (
+                        <div key={m.name} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:"10px 12px", display:"flex", alignItems:"center", gap:8 }}>
+                          <DDManagerLogo name={m.name} size={20} />
+                          <span style={{ fontSize:13, fontWeight:500, color:"#fff", flex:1 }}>{firstName(m.name)}</span>
+                          <div style={{ display:"flex", gap:12, flexShrink:0 }}>
+                            <span style={{ fontSize:12 }}>😤 <b style={{ color:"#d42b2b" }}>{m.unlucky}</b></span>
+                            <span style={{ fontSize:12 }}>☘️ <b style={{ color:"#2ecc71" }}>{m.lucky}</b></span>
+                            <span style={{ fontSize:12, color: m.net > 0 ? "#2ecc71" : m.net < 0 ? "#d42b2b" : "#555", fontWeight:700 }}>{m.net > 0 ? "+" : ""}{m.net}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div style={{ overflowX:"auto" }}>
+                      <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                        <thead><tr>
+                          <SumTh label="Manager" sortK="name" color="#888" />
+                          <SumTh label="😤 Unlucky Losses" sortK="unlucky" color="#d42b2b" />
+                          <SumTh label="☘️ Lucky Wins" sortK="lucky" color="#2ecc71" />
+                          <SumTh label="Net Luck" sortK="net" color="#f4a261" />
+                        </tr></thead>
+                        <tbody>
+                          {sortedSummary.map((m, i) => (
+                            <tr key={m.name} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}>
+                                <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
+                                  <DDManagerLogo name={m.name} size={18} />
+                                  <span style={{ color:"#fff", fontWeight:500 }}>{m.name}</span>
+                                </span>
+                              </td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#d42b2b", fontWeight:700, fontSize:15 }}>{m.unlucky}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2ecc71", fontWeight:700, fontSize:15 }}>{m.lucky}</td>
+                              <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", fontWeight:700, fontSize:15, color: m.net > 0 ? "#2ecc71" : m.net < 0 ? "#d42b2b" : "#555" }}>{m.net > 0 ? "+" : ""}{m.net}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+
+                  {(() => {
+                    const mostScrewed = [...summaryList].sort((a,b) => b.unlucky - a.unlucky)[0];
+                    const mostBlessed = [...summaryList].sort((a,b) => b.lucky - a.lucky)[0];
+                    return mostScrewed || mostBlessed ? (
+                      <div style={{ display:"flex", gap:12, flexWrap:"wrap", marginTop:16 }}>
+                        {mostScrewed && (
+                          <div style={{ flex:1, minWidth: mobile?"100%":200, background:"#1a0a0a", border:"1px solid #3a1a1a", borderLeft:"4px solid #d42b2b", borderRadius:8, padding:"14px 16px" }}>
+                            <div style={{ fontSize:11, color:"#d42b2b", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:2, marginBottom:6 }}>😤 MOST SCREWED</div>
+                            <div style={{ display:"flex", alignItems:"center", gap:6 }}><DDManagerLogo name={mostScrewed.name} size={28} /><span style={{ fontWeight:700, fontSize:15, color:"#fff" }}>{mostScrewed.name}</span></div>
+                            <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:26, color:"#d42b2b", marginTop:6 }}>{mostScrewed.unlucky} unlucky L's</div>
+                            <div style={{ color:"#555", fontSize:11, marginTop:3 }}>Outscored the majority but still lost {mostScrewed.unlucky} times</div>
+                          </div>
+                        )}
+                        {mostBlessed && (
+                          <div style={{ flex:1, minWidth: mobile?"100%":200, background:"#0a1a0a", border:"1px solid #1a3a1a", borderLeft:"4px solid #2ecc71", borderRadius:8, padding:"14px 16px" }}>
+                            <div style={{ fontSize:11, color:"#2ecc71", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:2, marginBottom:6 }}>☘️ MOST BLESSED</div>
+                            <div style={{ display:"flex", alignItems:"center", gap:6 }}><DDManagerLogo name={mostBlessed.name} size={28} /><span style={{ fontWeight:700, fontSize:15, color:"#fff" }}>{mostBlessed.name}</span></div>
+                            <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:26, color:"#2ecc71", marginTop:6 }}>{mostBlessed.lucky} lucky W's</div>
+                            <div style={{ color:"#555", fontSize:11, marginTop:3 }}>Outscored by the majority but still won {mostBlessed.lucky} times</div>
+                          </div>
+                        )}
+                      </div>
+                    ) : null;
+                  })()}
+                </div>
+              )}
+            </div>
+          );
+        })()}
+
+        {section === "scoredist" && (() => {
+          const { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, ReferenceLine } = Recharts;
+          const BOOM = 130, BUST = 80;
+
+          // Collect all weekly scores from DD_LINEUP_EFFICIENCY
+          const allScores = [];
+          const mgrScores = {};
+          [2023, 2024, 2025].forEach(yr => {
+            const yearData = DD_LINEUP_EFFICIENCY[yr];
+            if (!yearData) return;
+            Object.entries(yearData).forEach(([name, mgr]) => {
+              if (!mgrScores[name]) mgrScores[name] = [];
+              (mgr.weeks || []).forEach(w => {
+                if (w.actual > 0) {
+                  allScores.push(w.actual);
+                  mgrScores[name].push(w.actual);
+                }
+              });
+            });
+          });
+
+          const calcStats = (scores) => {
+            if (scores.length === 0) return { mean:0, stdev:0, max:0, min:0, count:0, scores:[] };
+            const n = scores.length;
+            const mean = parseFloat((scores.reduce((s,v) => s+v, 0) / n).toFixed(1));
+            const variance = scores.reduce((s,v) => s + (v - mean) ** 2, 0) / n;
+            const stdev = parseFloat(Math.sqrt(variance).toFixed(1));
+            const max = Math.max(...scores);
+            const min = Math.min(...scores);
+            return { mean, stdev, max, min, count: n, scores };
+          };
+
+          const leagueStats = calcStats(allScores);
+          const mgrStats = {};
+          Object.entries(mgrScores).forEach(([name, scores]) => { mgrStats[name] = calcStats(scores); });
+
+          const buildHist = (scores) => {
+            const MIN = 35, STEP = 10, COUNT = 16;
+            const buckets = Array.from({ length: COUNT }, (_, i) => ({
+              label: `${MIN + i * STEP}`, lo: MIN + i * STEP, hi: MIN + (i + 1) * STEP, count: 0,
+            }));
+            scores.forEach(s => {
+              const idx = Math.min(Math.floor((s - MIN) / STEP), COUNT - 1);
+              if (idx >= 0) buckets[idx].count++;
+            });
+            return buckets;
+          };
+
+          const activeMgrs = Object.keys(mgrStats).sort();
+          const distScores = sdMgr === "ALL" ? allScores : (mgrScores[sdMgr] || []);
+          const distStats = sdMgr === "ALL" ? leagueStats : (mgrStats[sdMgr] || leagueStats);
+          const distHist = buildHist(distScores);
+          const distColor = sdMgr === "ALL" ? "#E07B20" : (getColor(sdMgr) || "#E07B20");
+          const maxDistCount = Math.max(...distHist.map(b => b.count), 1);
+
+          // Consistency table
+          const consistencyRows = activeMgrs.map(name => {
+            const d = mgrStats[name];
+            const sorted = [...d.scores].sort((a, b) => a - b);
+            const median = sorted[Math.floor(sorted.length / 2)] || 0;
+            const boom = d.scores.filter(s => s >= BOOM).length;
+            const bust = d.scores.filter(s => s < BUST).length;
+            return {
+              name, mean: d.mean, stdev: d.stdev, median: parseFloat(median.toFixed(1)),
+              max: d.max, min: d.min, count: d.count,
+              boomPct: parseFloat((boom / d.count * 100).toFixed(1)),
+              bustPct: parseFloat((bust / d.count * 100).toFixed(1)),
+            };
+          });
+
+          const handleSdSort = (key) => {
+            if (sdSort === key) setSdSortDir(d => d === "asc" ? "desc" : "asc");
+            else { setSdSort(key); setSdSortDir(key === "name" ? "asc" : key === "stdev" ? "asc" : "desc"); }
+          };
+          const sdArrow = (key) => sdSort === key ? (sdSortDir === "asc" ? " ↑" : " ↓") : "";
+
+          const sortedConsistency = [...consistencyRows].sort((a, b) => {
+            let result = 0;
+            if (sdSort === "name") result = a.name.localeCompare(b.name);
+            else if (sdSort === "stdev") result = a.stdev - b.stdev;
+            else if (sdSort === "mean") result = a.mean - b.mean;
+            else if (sdSort === "boomPct") result = a.boomPct - b.boomPct;
+            else if (sdSort === "bustPct") result = a.bustPct - b.bustPct;
+            else if (sdSort === "median") result = a.median - b.median;
+            return sdSortDir === "asc" ? result : -result;
+          });
+
+          const SdTh = ({ label, sortK, color }) => (
+            <th onClick={() => handleSdSort(sortK)} style={{ padding:"8px 10px", textAlign: sortK === "name" ? "left" : "center", color: sdSort === sortK ? "#fff" : (color || "#888"), fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"2px solid #333" }}>
+              {label}{sdArrow(sortK)}
+            </th>
+          );
+
+          return (
+            <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
+              {/* Sub-tabs */}
+              <div style={{ display:"flex", gap:6, flexWrap:"nowrap", overflowX:"auto", scrollbarWidth:"none" }}>
+                {[["distribution","📉 Distribution"],["consistency","📏 Consistency"],["compare","🔍 Compare"]].map(([k,l]) => (
+                  <button key={k} onClick={() => setSdTab(k)} style={{
+                    background: sdTab===k ? "#e9c46a" : "#1a1a1a",
+                    color: sdTab===k ? "#000" : "#aaa",
+                    border:`1px solid ${sdTab===k ? "#e9c46a" : "#333"}`,
+                    borderRadius:6, padding:mobile?"6px 10px":"7px 16px",
+                    cursor:"pointer", fontSize:mobile?11:13, whiteSpace:"nowrap", flexShrink:0, fontWeight: sdTab===k ? 700 : 400,
+                  }}>{l}</button>
+                ))}
+              </div>
+
+              {/* DISTRIBUTION TAB */}
+              {sdTab === "distribution" && (
+                <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
+                  {/* Manager selector */}
+                  <div style={{ position:"relative", display:"inline-block" }}>
+                    <select value={sdMgr} onChange={e => setSdMgr(e.target.value)} style={{
+                      background:"#1a1a1a", color:"#fff", border:"1px solid #333", borderRadius:6,
+                      padding:"7px 32px 7px 12px", fontSize:14, cursor:"pointer",
+                      appearance:"none", WebkitAppearance:"none", outline:"none",
+                    }}>
+                      <option value="ALL">🌐 Entire League</option>
+                      {activeMgrs.map(m => <option key={m} value={m}>{m}</option>)}
+                    </select>
+                    <span style={{ position:"absolute", right:10, top:"50%", transform:"translateY(-50%)", color:"#E07B20", pointerEvents:"none", fontSize:11 }}>▼</span>
+                  </div>
+
+                  {/* Stat pills */}
+                  <div style={{ display:"flex", gap:mobile?10:20, flexWrap:"wrap" }}>
+                    {[
+                      ["Avg", distStats.mean.toFixed(1), "#e9c46a"],
+                      ["Std Dev", distStats.stdev.toFixed(1), "#f4a261"],
+                      ["High", distStats.max.toFixed(1), "#2ecc71"],
+                      ["Low", distStats.min.toFixed(1), "#d42b2b"],
+                      ["Boom%", `${(distScores.filter(s=>s>=BOOM).length/distScores.length*100).toFixed(0)}%`, "#2ecc71"],
+                      ["Bust%", `${(distScores.filter(s=>s<BUST).length/distScores.length*100).toFixed(0)}%`, "#d42b2b"],
+                      ["Weeks", distStats.count, "#555"],
+                    ].map(([l, v, col]) => (
+                      <div key={l} style={{ textAlign:"center" }}>
+                        <div style={{ fontSize:11, color:"#555", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1.5 }}>{l}</div>
+                        <div style={{ color:col, fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?16:20 }}>{v}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Histogram */}
+                  <div style={{ height:240 }}>
+                    <ResponsiveContainer width="100%" height="100%">
+                      <BarChart data={distHist} margin={{ top:4, right:8, left:0, bottom:8 }}>
+                        <CartesianGrid strokeDasharray="3 3" stroke="#1e2040" vertical={false} />
+                        <XAxis dataKey="label" tick={{ fill:"#666", fontSize:11 }} />
+                        <YAxis tick={{ fill:"#666", fontSize:11 }} />
+                        <Tooltip contentStyle={{ background:"#0d0d0d", border:"1px solid #333", borderRadius:6 }}
+                          formatter={v => [v, "Weeks"]}
+                          labelFormatter={v => `${v}–${parseInt(v)+10} pts`} />
+                        <Bar dataKey="count" radius={[3,3,0,0]}>
+                          {distHist.map((b, i) => (
+                            <Cell key={i}
+                              fill={b.lo >= BOOM ? "#2ecc71" : b.hi <= BUST ? "#d42b2b" : distColor}
+                              opacity={0.5 + 0.5 * (b.count / maxDistCount)} />
+                          ))}
+                        </Bar>
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </div>
+                  <div style={{ display:"flex", gap:16, justifyContent:"center", fontSize:11, color:"#555" }}>
+                    <span><span style={{ color:"#2ecc71" }}>■</span> Boom (≥{BOOM})</span>
+                    <span><span style={{ color:distColor }}>■</span> Normal</span>
+                    <span><span style={{ color:"#d42b2b" }}>■</span> Bust (&lt;{BUST})</span>
                   </div>
                 </div>
-              ))}
+              )}
+
+              {/* CONSISTENCY TAB */}
+              {sdTab === "consistency" && (
+                <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
+                  {/* Callout cards */}
+                  {(() => {
+                    const bySd = [...consistencyRows].sort((a,b) => a.stdev - b.stdev);
+                    const mostC = bySd[0], leastC = bySd[bySd.length - 1];
+                    const mostBoom = [...consistencyRows].sort((a,b) => b.boomPct - a.boomPct)[0];
+                    const mostBust = [...consistencyRows].sort((a,b) => b.bustPct - a.bustPct)[0];
+                    return (
+                      <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
+                        {[
+                          { label:"🧭 Most Consistent", d:mostC, accent:"#2ecc71", stat:`σ = ${mostC?.stdev}` },
+                          { label:"🎲 Most Volatile", d:leastC, accent:"#f4a261", stat:`σ = ${leastC?.stdev}` },
+                          { label:"💣 Most Boom Weeks", d:mostBoom, accent:"#2ecc71", stat:`${mostBoom?.boomPct}%` },
+                          { label:"😰 Most Bust Weeks", d:mostBust, accent:"#d42b2b", stat:`${mostBust?.bustPct}%` },
+                        ].map(({ label, d, accent, stat }) => d ? (
+                          <div key={label} style={{ flex:1, minWidth:mobile?"calc(50% - 4px)":140, background:"#0a0a0a", border:`1px solid ${accent}44`, borderLeft:`4px solid ${accent}`, borderRadius:8, padding:"10px 12px" }}>
+                            <div style={{ fontSize:10, color:accent, fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1.5, marginBottom:4 }}>{label}</div>
+                            <div style={{ display:"flex", alignItems:"center", gap:4 }}><DDManagerLogo name={d.name} size={18} /><span style={{ color:"#fff", fontWeight:600, fontSize:12 }}>{firstName(d.name)}</span></div>
+                            <div style={{ color:accent, fontFamily:"'Cooper Black',Georgia,serif", fontSize:20, marginTop:2 }}>{stat}</div>
+                          </div>
+                        ) : null)}
+                      </div>
+                    );
+                  })()}
+
+                  <div style={{ fontSize:11, color:"#555" }}>
+                    Boom = scored ≥{BOOM} · Bust = scored &lt;{BUST} · Click headers to sort
+                  </div>
+
+                  {mobile ? (
+                    <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
+                      {sortedConsistency.map((d, i) => (
+                        <div key={d.name} style={{ background:i%2===0?"#0d0d0d":"#1a1a1a", borderRadius:6, padding:"8px 10px" }}>
+                          <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
+                            <DDManagerLogo name={d.name} size={18} />
+                            <span style={{ fontSize:13, color:"#fff", fontWeight:600, flex:1 }}>{firstName(d.name)}</span>
+                            <span style={{ color:"#e9c46a", fontFamily:"'Cooper Black',Georgia,serif", fontSize:15 }}>{d.mean}</span>
+                            <span style={{ color:"#555", fontSize:11 }}>σ{d.stdev}</span>
+                          </div>
+                          <div style={{ display:"flex", gap:8, fontSize:11, color:"#555" }}>
+                            <span style={{ color:"#2ecc71" }}>💥 {d.boomPct}%</span>
+                            <span style={{ color:"#d42b2b" }}>😰 {d.bustPct}%</span>
+                            <span>med {d.median}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div style={{ overflowX:"auto" }}>
+                      <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                        <thead><tr>
+                          <th style={{ padding:"8px 10px", textAlign:"left", color:"#e9c46a", fontFamily:"'Cooper Black',Georgia,serif", fontSize:12, borderBottom:"2px solid #333" }}>Rank</th>
+                          <SdTh label="Manager" sortK="name" color="#888" />
+                          <SdTh label="Avg" sortK="mean" color="#e9c46a" />
+                          <SdTh label="Median" sortK="median" color="#aaa" />
+                          <SdTh label="Std Dev" sortK="stdev" color="#f4a261" />
+                          <th style={{ padding:"8px 10px", textAlign:"center", color:"#2ecc71", fontSize:11, borderBottom:"2px solid #333" }}>High</th>
+                          <th style={{ padding:"8px 10px", textAlign:"center", color:"#d42b2b", fontSize:11, borderBottom:"2px solid #333" }}>Low</th>
+                          <SdTh label="💣 Boom%" sortK="boomPct" color="#2ecc71" />
+                          <SdTh label="😰 Bust%" sortK="bustPct" color="#d42b2b" />
+                        </tr></thead>
+                        <tbody>
+                          {sortedConsistency.map((d, i) => {
+                            const sdBar = Math.min((d.stdev / 30) * 100, 100);
+                            return (
+                              <tr key={d.name} style={{ background:i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", color:i<3?"#e9c46a":"#666", fontFamily:"'Cooper Black',Georgia,serif", fontSize:14 }}>{i===0?"🥇":i===1?"🥈":i===2?"🥉":`#${i+1}`}</td>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a" }}>
+                                  <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
+                                    <DDManagerLogo name={d.name} size={18} />
+                                    <span style={{ color:"#fff", fontWeight:500 }}>{d.name}</span>
+                                  </span>
+                                </td>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#e9c46a", fontWeight:700, fontFamily:"'Cooper Black',Georgia,serif", fontSize:15 }}>{d.mean}</td>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#aaa" }}>{d.median}</td>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center" }}>
+                                  <div style={{ display:"flex", alignItems:"center", gap:6, justifyContent:"center" }}>
+                                    <div style={{ width:50, height:5, background:"#181818", borderRadius:3, overflow:"hidden" }}>
+                                      <div style={{ width:`${sdBar}%`, height:"100%", background:"#f4a261", borderRadius:3 }} />
+                                    </div>
+                                    <span style={{ color:"#f4a261", fontFamily:"'Cooper Black',Georgia,serif", fontSize:13 }}>{d.stdev}</span>
+                                  </div>
+                                </td>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#2ecc71" }}>{d.max.toFixed(1)}</td>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center", color:"#d42b2b" }}>{d.min.toFixed(1)}</td>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center" }}>
+                                  <span style={{ color:"#2ecc71", fontWeight:600 }}>{d.boomPct}%</span>
+                                </td>
+                                <td style={{ padding:"9px 10px", borderBottom:"1px solid #1a1a1a", textAlign:"center" }}>
+                                  <span style={{ color:"#d42b2b", fontWeight:600 }}>{d.bustPct}%</span>
+                                </td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* COMPARE TAB */}
+              {sdTab === "compare" && (() => {
+                const aStats = mgrStats[sdCmpA] || leagueStats;
+                const bStats = mgrStats[sdCmpB] || leagueStats;
+                const aHist = buildHist(aStats.scores || []);
+                const bHist = buildHist(bStats.scores || []);
+                const aN = aStats.count || 1;
+                const bN = bStats.count || 1;
+
+                const overlayData = aHist.map((b, i) => ({
+                  label: b.label,
+                  managerA: parseFloat((aHist[i].count / aN * 100).toFixed(1)),
+                  managerB: parseFloat((bHist[i].count / bN * 100).toFixed(1)),
+                }));
+
+                const aColor = getColor(sdCmpA) || "#E07B20";
+                const bColor = getColor(sdCmpB) || "#2176d2";
+
+                const getSorted = d => [...(d.scores||[])].sort((a,b)=>a-b);
+                const getMedian = d => { const s=getSorted(d); return s.length ? s[Math.floor(s.length/2)] : 0; };
+                const getBoom = d => d.count ? (d.scores.filter(s=>s>=BOOM).length / d.count * 100).toFixed(1) : "0";
+                const getBust = d => d.count ? (d.scores.filter(s=>s<BUST).length / d.count * 100).toFixed(1) : "0";
+
+                const rows = [
+                  { label:"Avg Score", a: aStats.mean.toFixed(1), b: bStats.mean.toFixed(1), aWins: aStats.mean > bStats.mean },
+                  { label:"Median", a: getMedian(aStats).toFixed(1), b: getMedian(bStats).toFixed(1), aWins: getMedian(aStats) > getMedian(bStats) },
+                  { label:"Std Dev", a: aStats.stdev.toFixed(1), b: bStats.stdev.toFixed(1), aWins: aStats.stdev < bStats.stdev },
+                  { label:"High", a: aStats.max.toFixed(1), b: bStats.max.toFixed(1), aWins: aStats.max > bStats.max },
+                  { label:"Low", a: aStats.min.toFixed(1), b: bStats.min.toFixed(1), aWins: aStats.min > bStats.min },
+                  { label:"Boom%", a: `${getBoom(aStats)}%`, b: `${getBoom(bStats)}%`, aWins: parseFloat(getBoom(aStats)) > parseFloat(getBoom(bStats)) },
+                  { label:"Bust%", a: `${getBust(aStats)}%`, b: `${getBust(bStats)}%`, aWins: parseFloat(getBust(aStats)) < parseFloat(getBust(bStats)) },
+                  { label:"Weeks", a: aStats.count, b: bStats.count, aWins: null },
+                ];
+
+                return (
+                  <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
+                    {/* Manager selectors */}
+                    <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
+                      <div style={{ position:"relative" }}>
+                        <select value={sdCmpA} onChange={e => setSdCmpA(e.target.value)} style={{
+                          background:"#1a1a1a", color:aColor, border:`1px solid ${aColor}66`, borderRadius:6,
+                          padding:"7px 32px 7px 12px", fontSize:14, cursor:"pointer", appearance:"none", WebkitAppearance:"none", outline:"none", fontWeight:600,
+                        }}>
+                          {activeMgrs.map(m => <option key={m} value={m}>{m}</option>)}
+                        </select>
+                        <span style={{ position:"absolute", right:10, top:"50%", transform:"translateY(-50%)", color:aColor, pointerEvents:"none", fontSize:11 }}>▼</span>
+                      </div>
+                      <span style={{ color:"#555", fontSize:13 }}>vs.</span>
+                      <div style={{ position:"relative" }}>
+                        <select value={sdCmpB} onChange={e => setSdCmpB(e.target.value)} style={{
+                          background:"#1a1a1a", color:bColor, border:`1px solid ${bColor}66`, borderRadius:6,
+                          padding:"7px 32px 7px 12px", fontSize:14, cursor:"pointer", appearance:"none", WebkitAppearance:"none", outline:"none", fontWeight:600,
+                        }}>
+                          {activeMgrs.map(m => <option key={m} value={m}>{m}</option>)}
+                        </select>
+                        <span style={{ position:"absolute", right:10, top:"50%", transform:"translateY(-50%)", color:bColor, pointerEvents:"none", fontSize:11 }}>▼</span>
+                      </div>
+                    </div>
+
+                    {/* Stats comparison table */}
+                    <div style={{ overflowX:"auto" }}>
+                      <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                        <thead><tr>
+                          <th style={{ textAlign:"left", padding:"6px 8px", borderBottom:"1px solid #333", color:"#555", fontSize:12 }}>Stat</th>
+                          <th style={{ textAlign:"right", padding:"6px 8px", borderBottom:"1px solid #333", color:aColor, fontWeight:700, fontSize:12 }}>{firstName(sdCmpA)}</th>
+                          <th style={{ textAlign:"center", padding:"6px 8px", borderBottom:"1px solid #333", color:"#444", fontSize:12 }}>Edge</th>
+                          <th style={{ textAlign:"left", padding:"6px 8px", borderBottom:"1px solid #333", color:bColor, fontWeight:700, fontSize:12 }}>{firstName(sdCmpB)}</th>
+                        </tr></thead>
+                        <tbody>
+                          {rows.map((r, i) => (
+                            <tr key={r.label} style={{ background: i%2===0?"#0d0d0d":"#1a1a1a" }}>
+                              <td style={{ padding:"8px", borderBottom:"1px solid #1a1a1a", color:"#666", fontSize:12 }}>{r.label}</td>
+                              <td style={{ padding:"8px", borderBottom:"1px solid #1a1a1a", textAlign:"right", color: r.aWins===true ? aColor : "#444", fontWeight: r.aWins===true ? 700 : 400, fontFamily:"'Cooper Black',Georgia,serif", fontSize:15 }}>{r.a}</td>
+                              <td style={{ padding:"8px", borderBottom:"1px solid #1a1a1a", textAlign:"center", fontSize:14 }}>{r.aWins === true ? "✅" : r.aWins === false ? "❌" : "—"}</td>
+                              <td style={{ padding:"8px", borderBottom:"1px solid #1a1a1a", textAlign:"left", color: r.aWins===false ? bColor : "#444", fontWeight: r.aWins===false ? 700 : 400, fontFamily:"'Cooper Black',Georgia,serif", fontSize:15 }}>{r.b}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+
+                    {/* Overlay histogram */}
+                    <div>
+                      <div style={{ fontSize:11, color:"#555", marginBottom:8 }}>Score distribution overlay (normalized to % of weeks)</div>
+                      <div style={{ height:220 }}>
+                        <ResponsiveContainer width="100%" height="100%">
+                          <BarChart data={overlayData} margin={{ top:4, right:8, left:0, bottom:8 }} barCategoryGap="15%">
+                            <CartesianGrid strokeDasharray="3 3" stroke="#1e2040" vertical={false} />
+                            <XAxis dataKey="label" tick={{ fill:"#666", fontSize:11 }} />
+                            <YAxis tick={{ fill:"#666", fontSize:11 }} unit="%" />
+                            <Tooltip contentStyle={{ background:"#0d0d0d", border:"1px solid #333", borderRadius:6 }}
+                              formatter={(v, n) => [`${v}%`, n === "managerA" ? firstName(sdCmpA) : firstName(sdCmpB)]}
+                              labelFormatter={v => `${v}–${parseInt(v)+10} pts`} />
+                            <Bar dataKey="managerA" name={firstName(sdCmpA)} fill={aColor} opacity={0.8} radius={[2,2,0,0]} />
+                            <Bar dataKey="managerB" name={firstName(sdCmpB)} fill={bColor} opacity={0.55} radius={[2,2,0,0]} />
+                          </BarChart>
+                        </ResponsiveContainer>
+                      </div>
+                      <div style={{ display:"flex", gap:16, justifyContent:"center", marginTop:8, fontSize:11, color:"#555" }}>
+                        <span><span style={{ color:aColor }}>■</span> {firstName(sdCmpA)}</span>
+                        <span><span style={{ color:bColor }}>■</span> {firstName(sdCmpB)}</span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })()}
+
             </div>
           );
         })()}
@@ -61197,6 +63001,471 @@ function DDPondTab() {
               <div style={{ color:"#444", fontSize:11, marginTop:8, paddingTop:8, borderTop:"1px solid #1a1a1a" }}>
                 🔥 Top Week = scored the highest of all managers that week · 💀 Low Week = lowest scorer · Ties count for both · Click headers to sort · Will auto-update with 2026 live data during the season.
               </div>
+            </div>
+          );
+        })()}
+
+        {section === "lineupeff" && (() => {
+          // ── DD Lineup Efficiency — 4 tabs matching NFL format ──
+          const data = DD_LINEUP_EFFICIENCY;
+          const years = Object.keys(data).map(Number).sort();
+          const DD_MANAGERS = Object.keys(data[years[0]] || {}).sort();
+
+          // Build career summaries
+          const careerData = {};
+          DD_MANAGERS.forEach(mgr => {
+            const byYear = {};
+            let tEff = 0, tBench = 0, tSeasons = 0;
+            years.forEach(yr => {
+              const d = data[yr]?.[mgr];
+              if (!d) return;
+              byYear[yr] = { avgEff: d.avgEff, avgBench: d.avgBench, weeks: d.weeks.length };
+              tEff += d.avgEff; tBench += d.avgBench; tSeasons++;
+            });
+            if (tSeasons > 0) {
+              careerData[mgr] = { avgEff: parseFloat((tEff / tSeasons).toFixed(1)), avgBench: parseFloat((tBench / tSeasons).toFixed(2)), seasons: tSeasons, byYear };
+            }
+          });
+
+          const getGrade = (eff) => eff >= 97 ? { label:"👑 Elite", color:"#FFD700" } : eff >= 95 ? { label:"🎯 Sharp", color:"#2ecc71" } : eff >= 92 ? { label:"✅ Solid", color:"#64b5f6" } : eff >= 89 ? { label:"⚠️ Leaky", color:"#f4a261" } : { label:"❌ Leaving pts", color:"#d42b2b" };
+
+          const allMgrs = Object.keys(careerData).sort();
+          const handleDdLeSort = (key) => {
+            if (ddLeSortKey === key) setDdLeSortDir(d => d === "asc" ? "desc" : "asc");
+            else { setDdLeSortKey(key); setDdLeSortDir(key === "mgr" ? "asc" : "desc"); }
+          };
+          const ddLeArrow = (key) => ddLeSortKey === key ? (ddLeSortDir === "asc" ? " ↑" : " ↓") : "";
+
+          const sortedRows = allMgrs.map(mgr => ({ mgr, ...careerData[mgr] })).sort((a, b) => {
+            let r = 0;
+            if (ddLeSortKey === "mgr") r = a.mgr.localeCompare(b.mgr);
+            else if (ddLeSortKey === "avgEff") r = a.avgEff - b.avgEff;
+            else if (ddLeSortKey === "avgBench") r = a.avgBench - b.avgBench;
+            else if (ddLeSortKey === "seasons") r = a.seasons - b.seasons;
+            return ddLeSortDir === "asc" ? r : -r;
+          });
+
+          // Best/worst individual seasons
+          const allSeasons = [];
+          Object.entries(careerData).forEach(([mgr, cd]) => {
+            Object.entries(cd.byYear).forEach(([yr, yd]) => {
+              allSeasons.push({ mgr, year: parseInt(yr), avgEff: yd.avgEff, avgBench: yd.avgBench, weeks: yd.weeks });
+            });
+          });
+          const bestSeasons = [...allSeasons].sort((a, b) => b.avgEff - a.avgEff).slice(0, 15);
+          const worstSeasons = [...allSeasons].sort((a, b) => a.avgEff - b.avgEff).slice(0, 15);
+
+          // Manager deep-dive data
+          const mgrData = careerData[ddLeMgr];
+          const mgrYears = mgrData ? Object.entries(mgrData.byYear).sort((a, b) => parseInt(a[0]) - parseInt(b[0])) : [];
+
+          const DdLeTh = ({ label, sortK }) => (
+            <th onClick={() => handleDdLeSort(sortK)} style={{ padding:"8px 10px", textAlign: sortK === "mgr" ? "left" : "center", color: ddLeSortKey === sortK ? "#fff" : "#888", fontWeight:700, fontSize:11, cursor:"pointer", userSelect:"none", whiteSpace:"nowrap", borderBottom:"2px solid #333" }}>
+              {label}{ddLeArrow(sortK)}
+            </th>
+          );
+
+          const DD_LE_TABS = [
+            { key: "rankings", label: "🏆 Rankings" },
+            { key: "deepdive", label: "🔍 Deep Dive" },
+            { key: "best",     label: "🔥 Best Seasons" },
+            { key: "worst",    label: "💀 Worst Seasons" },
+          ];
+
+          return (
+            <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
+              {/* Tabs */}
+              <div style={{ display:"flex", gap:6, flexWrap:"wrap" }}>
+                {DD_LE_TABS.map(t => (
+                  <button key={t.key} onClick={() => setDdLeTab(t.key)}
+                    style={{ padding:"6px 14px", borderRadius:8, border: ddLeTab === t.key ? "1px solid #2ecc71" : "1px solid #333", background: ddLeTab === t.key ? "#2ecc7122" : "transparent", color: ddLeTab === t.key ? "#2ecc71" : "#888", cursor:"pointer", fontSize:12, fontWeight:600 }}>
+                    {t.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Rankings */}
+              {ddLeTab === "rankings" && (
+                <div style={{ overflowX:"auto" }}>
+                  <table style={{ width:"100%", borderCollapse:"collapse", fontSize:mobile?11:13 }}>
+                    <thead>
+                      <tr style={{ background:"#0a0a0a" }}>
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#555", fontSize:11, borderBottom:"2px solid #333" }}>#</th>
+                        <DdLeTh label="Manager" sortK="mgr" />
+                        <DdLeTh label="Efficiency%" sortK="avgEff" />
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#888", fontSize:11, borderBottom:"2px solid #333" }}>Visual</th>
+                        <DdLeTh label="Bench/Wk" sortK="avgBench" />
+                        <DdLeTh label="Seasons" sortK="seasons" />
+                        <th style={{ padding:"8px 10px", textAlign:"center", color:"#888", fontSize:11, borderBottom:"2px solid #333" }}>Grade</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {sortedRows.map((m, i) => {
+                        const grade = getGrade(m.avgEff);
+                        const barW = Math.min(100, Math.max(0, (m.avgEff - 80) * 5));
+                        return (
+                          <tr key={m.mgr} onClick={() => { setDdLeMgr(m.mgr); setDdLeTab("deepdive"); }} style={{ background: i % 2 === 0 ? "#050505" : "#0a0a0a", cursor:"pointer" }}>
+                            <td style={{ padding:"8px 10px", textAlign:"center", color: i < 3 ? "#2ecc71" : "#555", fontWeight: i < 3 ? 700 : 400, borderBottom:"1px solid #1a1a1a" }}>{i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : i + 1}</td>
+                            <td style={{ padding:"8px 10px", color:"#eee", fontWeight:600, borderBottom:"1px solid #1a1a1a", whiteSpace:"nowrap" }}>
+                              <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
+                                <DDManagerLogo name={m.mgr} size={20} />
+                                {mobile ? m.mgr.split(" ")[0] : m.mgr}
+                              </span>
+                            </td>
+                            <td style={{ padding:"8px 10px", textAlign:"center", color:"#2ecc71", fontWeight:700, fontFamily:"'Cooper Black',Georgia,serif", fontSize:15, borderBottom:"1px solid #1a1a1a" }}>{m.avgEff.toFixed(1)}%</td>
+                            <td style={{ padding:"8px 10px", borderBottom:"1px solid #1a1a1a", width:80 }}>
+                              <div style={{ background:"#181818", borderRadius:3, height:8 }}>
+                                <div style={{ height:8, borderRadius:3, width:`${barW}%`, background: grade.color }} />
+                              </div>
+                            </td>
+                            <td style={{ padding:"8px 10px", textAlign:"center", color:"#f4a261", borderBottom:"1px solid #1a1a1a" }}>{m.avgBench.toFixed(1)}</td>
+                            <td style={{ padding:"8px 10px", textAlign:"center", color:"#aaa", borderBottom:"1px solid #1a1a1a" }}>{m.seasons}</td>
+                            <td style={{ padding:"8px 10px", textAlign:"center", borderBottom:"1px solid #1a1a1a" }}><span style={{ color: grade.color, fontSize:11, fontWeight:600 }}>{grade.label}</span></td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                  <div style={{ fontSize:11, color:"#444", marginTop:8 }}>
+                    🎯 Efficiency = (actual starter points / optimal lineup points) × 100. Click any row to see their deep dive.
+                  </div>
+                </div>
+              )}
+
+              {/* Deep Dive */}
+              {ddLeTab === "deepdive" && mgrData && (
+                <div style={{ display:"flex", flexDirection:"column", gap:14 }}>
+                  <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
+                    <select value={ddLeMgr} onChange={e => setDdLeMgr(e.target.value)} style={{ background:"#1a1a1a", color:"#2ecc71", border:"1px solid #2ecc7166", borderRadius:6, padding:"7px 12px", fontSize:14, cursor:"pointer" }}>
+                      {allMgrs.map(m => <option key={m} value={m}>{m}</option>)}
+                    </select>
+                  </div>
+
+                  {/* Summary cards */}
+                  <div style={{ display:"grid", gridTemplateColumns: mobile ? "1fr 1fr" : "1fr 1fr 1fr 1fr", gap:10 }}>
+                    {[
+                      { label:"Career Eff", value:`${mgrData.avgEff.toFixed(1)}%`, color:"#2ecc71" },
+                      { label:"Bench/Wk", value:mgrData.avgBench.toFixed(1), color:"#f4a261" },
+                      { label:"Seasons", value:mgrData.seasons, color:"#64b5f6" },
+                      { label:"Grade", value:getGrade(mgrData.avgEff).label, color:getGrade(mgrData.avgEff).color },
+                    ].map(c => (
+                      <div key={c.label} style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8, padding:12, textAlign:"center" }}>
+                        <div style={{ fontSize:10, color:"#555", marginBottom:4, textTransform:"uppercase" }}>{c.label}</div>
+                        <div style={{ fontSize:16, color:c.color, fontFamily:"'Cooper Black',Georgia,serif" }}>{c.value}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Year-by-year */}
+                  <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12 }}>
+                    <thead>
+                      <tr style={{ borderBottom:"2px solid #333" }}>
+                        <th style={{ padding:"6px 10px", textAlign:"center", color:"#888", fontSize:11 }}>Year</th>
+                        <th style={{ padding:"6px 10px", textAlign:"center", color:"#888", fontSize:11 }}>Eff%</th>
+                        <th style={{ padding:"6px 10px", textAlign:"left", color:"#888", fontSize:11 }}>Visual</th>
+                        <th style={{ padding:"6px 10px", textAlign:"center", color:"#888", fontSize:11 }}>Bench/Wk</th>
+                        <th style={{ padding:"6px 10px", textAlign:"center", color:"#888", fontSize:11 }}>Weeks</th>
+                        <th style={{ padding:"6px 10px", textAlign:"center", color:"#888", fontSize:11 }}>Grade</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {mgrYears.map(([yr, yd]) => {
+                        const g = getGrade(yd.avgEff);
+                        const bW = Math.min(100, Math.max(0, (yd.avgEff - 80) * 5));
+                        return (
+                          <tr key={yr} style={{ background:"#0a0a0a" }}>
+                            <td style={{ padding:"6px 10px", textAlign:"center", color:"#aaa", borderBottom:"1px solid #1a1a1a" }}>{yr}</td>
+                            <td style={{ padding:"6px 10px", textAlign:"center", color:"#2ecc71", fontWeight:700, borderBottom:"1px solid #1a1a1a" }}>{yd.avgEff.toFixed(1)}%</td>
+                            <td style={{ padding:"6px 10px", borderBottom:"1px solid #1a1a1a", width:80 }}>
+                              <div style={{ background:"#181818", borderRadius:3, height:6 }}>
+                                <div style={{ height:6, borderRadius:3, width:`${bW}%`, background:g.color }} />
+                              </div>
+                            </td>
+                            <td style={{ padding:"6px 10px", textAlign:"center", color:"#f4a261", borderBottom:"1px solid #1a1a1a" }}>{yd.avgBench.toFixed(1)}</td>
+                            <td style={{ padding:"6px 10px", textAlign:"center", color:"#888", borderBottom:"1px solid #1a1a1a" }}>{yd.weeks}</td>
+                            <td style={{ padding:"6px 10px", textAlign:"center", borderBottom:"1px solid #1a1a1a" }}><span style={{ color:g.color, fontSize:11 }}>{g.label}</span></td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {/* Best Seasons */}
+              {ddLeTab === "best" && (
+                <div style={{ overflowX:"auto" }}>
+                  <div style={{ fontSize:11, color:"#555", marginBottom:8 }}>Top 15 most efficient individual seasons in Duck Dynasty history (2023–2025).</div>
+                  <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12 }}>
+                    <thead>
+                      <tr style={{ borderBottom:"2px solid #333" }}>
+                        <th style={{ padding:"6px 10px", textAlign:"center", color:"#555", fontSize:11 }}>#</th>
+                        <th style={{ padding:"6px 10px", textAlign:"left", color:"#888", fontSize:11 }}>Manager</th>
+                        <th style={{ padding:"6px 10px", textAlign:"center", color:"#888", fontSize:11 }}>Year</th>
+                        <th style={{ padding:"6px 10px", textAlign:"center", color:"#888", fontSize:11 }}>Eff%</th>
+                        <th style={{ padding:"6px 10px", textAlign:"left", color:"#888", fontSize:11 }}>Visual</th>
+                        <th style={{ padding:"6px 10px", textAlign:"center", color:"#888", fontSize:11 }}>Bench/Wk</th>
+                        <th style={{ padding:"6px 10px", textAlign:"center", color:"#888", fontSize:11 }}>Grade</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {bestSeasons.map((s, i) => {
+                        const g = getGrade(s.avgEff);
+                        const bW = Math.min(100, Math.max(0, (s.avgEff - 80) * 5));
+                        return (
+                          <tr key={`${s.mgr}-${s.year}`} style={{ background: i % 2 === 0 ? "#050505" : "#0a0a0a" }}>
+                            <td style={{ padding:"6px 10px", textAlign:"center", color: i < 3 ? "#2ecc71" : "#555", fontWeight: i < 3 ? 700 : 400, borderBottom:"1px solid #1a1a1a" }}>{i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : i + 1}</td>
+                            <td style={{ padding:"6px 10px", color:"#eee", fontWeight:600, borderBottom:"1px solid #1a1a1a" }}>{mobile ? s.mgr.split(" ")[0] : s.mgr}</td>
+                            <td style={{ padding:"6px 10px", textAlign:"center", color:"#aaa", borderBottom:"1px solid #1a1a1a" }}>{s.year}</td>
+                            <td style={{ padding:"6px 10px", textAlign:"center", color:"#2ecc71", fontWeight:700, borderBottom:"1px solid #1a1a1a" }}>{s.avgEff.toFixed(1)}%</td>
+                            <td style={{ padding:"6px 10px", borderBottom:"1px solid #1a1a1a", width:70 }}>
+                              <div style={{ background:"#181818", borderRadius:3, height:6 }}>
+                                <div style={{ height:6, borderRadius:3, width:`${bW}%`, background:g.color }} />
+                              </div>
+                            </td>
+                            <td style={{ padding:"6px 10px", textAlign:"center", color:"#f4a261", borderBottom:"1px solid #1a1a1a" }}>{s.avgBench.toFixed(1)}</td>
+                            <td style={{ padding:"6px 10px", textAlign:"center", borderBottom:"1px solid #1a1a1a" }}><span style={{ color:g.color, fontSize:11 }}>{g.label}</span></td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {/* Worst Seasons */}
+              {ddLeTab === "worst" && (
+                <div style={{ overflowX:"auto" }}>
+                  <div style={{ fontSize:11, color:"#555", marginBottom:8 }}>Top 15 least efficient individual seasons in Duck Dynasty history (2023–2025).</div>
+                  <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12 }}>
+                    <thead>
+                      <tr style={{ borderBottom:"2px solid #333" }}>
+                        <th style={{ padding:"6px 10px", textAlign:"center", color:"#555", fontSize:11 }}>#</th>
+                        <th style={{ padding:"6px 10px", textAlign:"left", color:"#888", fontSize:11 }}>Manager</th>
+                        <th style={{ padding:"6px 10px", textAlign:"center", color:"#888", fontSize:11 }}>Year</th>
+                        <th style={{ padding:"6px 10px", textAlign:"center", color:"#888", fontSize:11 }}>Eff%</th>
+                        <th style={{ padding:"6px 10px", textAlign:"left", color:"#888", fontSize:11 }}>Visual</th>
+                        <th style={{ padding:"6px 10px", textAlign:"center", color:"#888", fontSize:11 }}>Bench/Wk</th>
+                        <th style={{ padding:"6px 10px", textAlign:"center", color:"#888", fontSize:11 }}>Grade</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {worstSeasons.map((s, i) => {
+                        const g = getGrade(s.avgEff);
+                        const bW = Math.min(100, Math.max(0, (s.avgEff - 80) * 5));
+                        return (
+                          <tr key={`${s.mgr}-${s.year}`} style={{ background: i % 2 === 0 ? "#050505" : "#0a0a0a" }}>
+                            <td style={{ padding:"6px 10px", textAlign:"center", color: i < 3 ? "#d42b2b" : "#555", fontWeight: i < 3 ? 700 : 400, borderBottom:"1px solid #1a1a1a" }}>{i === 0 ? "💀" : i === 1 ? "💀" : i === 2 ? "💀" : i + 1}</td>
+                            <td style={{ padding:"6px 10px", color:"#eee", fontWeight:600, borderBottom:"1px solid #1a1a1a" }}>{mobile ? s.mgr.split(" ")[0] : s.mgr}</td>
+                            <td style={{ padding:"6px 10px", textAlign:"center", color:"#aaa", borderBottom:"1px solid #1a1a1a" }}>{s.year}</td>
+                            <td style={{ padding:"6px 10px", textAlign:"center", color:"#d42b2b", fontWeight:700, borderBottom:"1px solid #1a1a1a" }}>{s.avgEff.toFixed(1)}%</td>
+                            <td style={{ padding:"6px 10px", borderBottom:"1px solid #1a1a1a", width:70 }}>
+                              <div style={{ background:"#181818", borderRadius:3, height:6 }}>
+                                <div style={{ height:6, borderRadius:3, width:`${bW}%`, background:g.color }} />
+                              </div>
+                            </td>
+                            <td style={{ padding:"6px 10px", textAlign:"center", color:"#f4a261", borderBottom:"1px solid #1a1a1a" }}>{s.avgBench.toFixed(1)}</td>
+                            <td style={{ padding:"6px 10px", textAlign:"center", borderBottom:"1px solid #1a1a1a" }}><span style={{ color:g.color, fontSize:11 }}>{g.label}</span></td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
+          );
+        })()}
+
+        {section === "compare" && (() => {
+          // ── DD Manager Compare — side-by-side two managers ──
+          // Build allManagers from DD_HISTORICAL.seasons (same pattern as Leaderboard)
+          const cmpAllManagers = {};
+          [2023,2024,2025].forEach(yr => {
+            const s = DD_HISTORICAL.seasons[yr];
+            if (!s) return;
+            s.regular.forEach(m => {
+              if (!cmpAllManagers[m.name]) cmpAllManagers[m.name] = { name:m.name, teams:[], wins:0, losses:0, pf:0, pa:0, seasons:0, championships:0 };
+              cmpAllManagers[m.name].teams.push({ year:yr, team:m.team, wins:m.wins, losses:m.losses, pf:m.pf, rank:m.rank });
+              cmpAllManagers[m.name].wins += m.wins;
+              cmpAllManagers[m.name].losses += m.losses;
+              cmpAllManagers[m.name].pf += m.pf;
+              cmpAllManagers[m.name].pa += m.pa;
+              cmpAllManagers[m.name].seasons++;
+            });
+            const p = s.playoffs;
+            if (p.champion && cmpAllManagers[p.champion]) cmpAllManagers[p.champion].championships++;
+          });
+          const DD_ALL_MGRS = Object.keys(cmpAllManagers).sort();
+          const mA = cmpAllManagers[cmpA];
+          const mB = cmpAllManagers[cmpB];
+          if (!mA || !mB) return <div style={{ color:"#666" }}>Select two managers to compare.</div>;
+
+          const gpA = mA.wins + mA.losses;
+          const gpB = mB.wins + mB.losses;
+          const wpA = gpA ? (mA.wins / gpA * 100).toFixed(1) : "0.0";
+          const wpB = gpB ? (mB.wins / gpB * 100).toFixed(1) : "0.0";
+          const ppwA = gpA ? (mA.pf / gpA).toFixed(1) : "0.0";
+          const ppwB = gpB ? (mB.pf / gpB).toFixed(1) : "0.0";
+
+          // H2H between them
+          const h2h = DD_POND_DATA.h2h[cmpA]?.[cmpB] || { W: 0, L: 0, PF: 0, PA: 0 };
+
+          // Lineup efficiency comparison
+          const leA = (() => {
+            const yrs = Object.keys(DD_LINEUP_EFFICIENCY).map(Number);
+            let tEff = 0, cnt = 0;
+            yrs.forEach(yr => { const d = DD_LINEUP_EFFICIENCY[yr]?.[cmpA]; if (d) { tEff += d.avgEff; cnt++; } });
+            return cnt > 0 ? (tEff / cnt).toFixed(1) : "—";
+          })();
+          const leB = (() => {
+            const yrs = Object.keys(DD_LINEUP_EFFICIENCY).map(Number);
+            let tEff = 0, cnt = 0;
+            yrs.forEach(yr => { const d = DD_LINEUP_EFFICIENCY[yr]?.[cmpB]; if (d) { tEff += d.avgEff; cnt++; } });
+            return cnt > 0 ? (tEff / cnt).toFixed(1) : "—";
+          })();
+
+          // Luck data
+          const luckA = DD_POND_DATA.luck.find(l => l.Manager === cmpA);
+          const luckB = DD_POND_DATA.luck.find(l => l.Manager === cmpB);
+
+          // Transactions
+          const txA = DD_TRANSACTION_SUMMARY[cmpA] || {};
+          const txB = DD_TRANSACTION_SUMMARY[cmpB] || {};
+
+          // Season-by-season comparison
+          const seasonsA = mA.teams || [];
+          const seasonsB = mB.teams || [];
+
+          const stats = [
+            ["Record", `${mA.wins}-${mA.losses}`, `${mB.wins}-${mB.losses}`, mA.wins, mB.wins],
+            ["Win%", wpA + "%", wpB + "%", parseFloat(wpA), parseFloat(wpB)],
+            ["Pts/Week", ppwA, ppwB, parseFloat(ppwA), parseFloat(ppwB)],
+            ["Total PF", mA.pf.toFixed(0), mB.pf.toFixed(0), mA.pf, mB.pf],
+            ["Total PA", mA.pa.toFixed(0), mB.pa.toFixed(0), mB.pa, mA.pa],
+            ["Seasons", `${seasonsA.length}`, `${seasonsB.length}`, seasonsA.length, seasonsB.length],
+            ["Championships", `${mA.championships || 0}`, `${mB.championships || 0}`, mA.championships || 0, mB.championships || 0],
+            ["Lineup Eff%", leA + "%", leB + "%", parseFloat(leA) || 0, parseFloat(leB) || 0],
+            ["Luck Delta", luckA ? luckA.LuckDelta.toFixed(1) : "—", luckB ? luckB.LuckDelta.toFixed(1) : "—", luckA?.LuckDelta || 0, luckB?.LuckDelta || 0],
+            ["Trades", `${txA.trades || 0}`, `${txB.trades || 0}`, txA.trades || 0, txB.trades || 0],
+            ["Total Moves", `${txA.totalMoves || 0}`, `${txB.totalMoves || 0}`, txA.totalMoves || 0, txB.totalMoves || 0],
+          ];
+
+          const aColor = "#9b5de5";
+          const bColor = "#E07B20";
+
+          return (
+            <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
+              {/* Manager selectors */}
+              <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap", justifyContent:"center" }}>
+                <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+                  <DDManagerLogo name={cmpA} size={32} />
+                  <select value={cmpA} onChange={e => setCmpA(e.target.value)} style={{ background:"#1a1a1a", color:aColor, border:`1px solid ${aColor}66`, borderRadius:6, padding:"7px 12px", fontSize:14, cursor:"pointer", fontWeight:600 }}>
+                    {DD_ALL_MGRS.map(m => <option key={m} value={m}>{m}</option>)}
+                  </select>
+                </div>
+                <div style={{ fontSize:20, color:"#555", fontFamily:"'Cooper Black',Georgia,serif" }}>vs</div>
+                <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+                  <DDManagerLogo name={cmpB} size={32} />
+                  <select value={cmpB} onChange={e => setCmpB(e.target.value)} style={{ background:"#1a1a1a", color:bColor, border:`1px solid ${bColor}66`, borderRadius:6, padding:"7px 12px", fontSize:14, cursor:"pointer", fontWeight:600 }}>
+                    {DD_ALL_MGRS.map(m => <option key={m} value={m}>{m}</option>)}
+                  </select>
+                </div>
+              </div>
+
+              {/* H2H card */}
+              <div style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:10, padding:16, textAlign:"center" }}>
+                <div style={{ fontSize:12, color:"#555", marginBottom:8, textTransform:"uppercase", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1 }}>Head-to-Head</div>
+                <div style={{ display:"flex", justifyContent:"center", alignItems:"center", gap:20 }}>
+                  <div>
+                    <div style={{ fontSize:28, fontFamily:"'Cooper Black',Georgia,serif", color: h2h.W > h2h.L ? aColor : h2h.W < h2h.L ? "#666" : "#aaa" }}>{h2h.W}</div>
+                    <div style={{ fontSize:11, color:"#555" }}>{cmpA.split(" ")[0]} wins</div>
+                  </div>
+                  <div style={{ fontSize:20, color:"#333" }}>—</div>
+                  <div>
+                    <div style={{ fontSize:28, fontFamily:"'Cooper Black',Georgia,serif", color: h2h.L > h2h.W ? bColor : h2h.L < h2h.W ? "#666" : "#aaa" }}>{h2h.L}</div>
+                    <div style={{ fontSize:11, color:"#555" }}>{cmpB.split(" ")[0]} wins</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Stat comparison table */}
+              <div style={{ overflowX:"auto" }}>
+                <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+                  <thead>
+                    <tr style={{ borderBottom:"2px solid #333" }}>
+                      <th style={{ padding:"8px 12px", textAlign:"left", color:"#888", fontSize:11 }}>Stat</th>
+                      <th style={{ padding:"8px 12px", textAlign:"center", color:aColor, fontSize:11, fontWeight:700 }}>{mobile ? cmpA.split(" ")[0] : cmpA}</th>
+                      <th style={{ padding:"8px 12px", textAlign:"center", color:bColor, fontSize:11, fontWeight:700 }}>{mobile ? cmpB.split(" ")[0] : cmpB}</th>
+                      <th style={{ padding:"8px 12px", textAlign:"center", color:"#555", fontSize:11 }}>Edge</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {stats.map(([label, valA, valB, numA, numB]) => {
+                      const edge = numA > numB ? "A" : numB > numA ? "B" : "—";
+                      return (
+                        <tr key={label} style={{ background:"#0a0a0a" }}>
+                          <td style={{ padding:"8px 12px", color:"#aaa", fontWeight:600, borderBottom:"1px solid #1a1a1a" }}>{label}</td>
+                          <td style={{ padding:"8px 12px", textAlign:"center", color: edge === "A" ? aColor : "#666", fontWeight: edge === "A" ? 700 : 400, borderBottom:"1px solid #1a1a1a" }}>{valA}</td>
+                          <td style={{ padding:"8px 12px", textAlign:"center", color: edge === "B" ? bColor : "#666", fontWeight: edge === "B" ? 700 : 400, borderBottom:"1px solid #1a1a1a" }}>{valB}</td>
+                          <td style={{ padding:"8px 12px", textAlign:"center", borderBottom:"1px solid #1a1a1a" }}>
+                            {edge === "A" && <span style={{ color:aColor }}>✅</span>}
+                            {edge === "B" && <span style={{ color:bColor }}>✅</span>}
+                            {edge === "—" && <span style={{ color:"#333" }}>—</span>}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Season-by-season */}
+              <div style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:10, padding:14 }}>
+                <div style={{ fontSize:12, color:"#555", marginBottom:10, textTransform:"uppercase", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1 }}>Season-by-Season</div>
+                <table style={{ width:"100%", borderCollapse:"collapse", fontSize:12 }}>
+                  <thead>
+                    <tr style={{ borderBottom:"1px solid #333" }}>
+                      <th style={{ padding:"4px 8px", textAlign:"center", color:"#555", fontSize:10 }}>Year</th>
+                      <th style={{ padding:"4px 8px", textAlign:"center", color:aColor, fontSize:10 }}>{cmpA.split(" ")[0]} W-L</th>
+                      <th style={{ padding:"4px 8px", textAlign:"center", color:bColor, fontSize:10 }}>{cmpB.split(" ")[0]} W-L</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[2023, 2024, 2025].map(yr => {
+                      const sA = seasonsA.find(s => s.year === yr);
+                      const sB = seasonsB.find(s => s.year === yr);
+                      return (
+                        <tr key={yr}>
+                          <td style={{ padding:"4px 8px", textAlign:"center", color:"#aaa", borderBottom:"1px solid #111" }}>{yr}</td>
+                          <td style={{ padding:"4px 8px", textAlign:"center", color: sA ? (sA.wins > sA.losses ? "#2ecc71" : "#d42b2b") : "#333", borderBottom:"1px solid #111" }}>
+                            {sA ? `${sA.wins}-${sA.losses}` : "—"}
+                          </td>
+                          <td style={{ padding:"4px 8px", textAlign:"center", color: sB ? (sB.wins > sB.losses ? "#2ecc71" : "#d42b2b") : "#333", borderBottom:"1px solid #111" }}>
+                            {sB ? `${sB.wins}-${sB.losses}` : "—"}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Verdict */}
+              {(() => {
+                const aEdges = stats.filter(([_l,_a,_b,a,b]) => a > b).length;
+                const bEdges = stats.filter(([_l,_a,_b,a,b]) => b > a).length;
+                const winner = aEdges > bEdges ? cmpA : bEdges > aEdges ? cmpB : "Tie";
+                const wColor = aEdges > bEdges ? aColor : bEdges > aEdges ? bColor : "#888";
+                return (
+                  <div style={{ textAlign:"center", padding:14, background:"#0a0a0a", border:`1px solid ${wColor}44`, borderRadius:10 }}>
+                    <div style={{ fontSize:11, color:"#555", marginBottom:6 }}>OVERALL EDGE ({aEdges}–{bEdges})</div>
+                    <div style={{ fontSize:18, fontFamily:"'Cooper Black',Georgia,serif", color:wColor }}>
+                      {winner === "Tie" ? "Dead Even" : `${winner} takes it`}
+                    </div>
+                  </div>
+                );
+              })()}
             </div>
           );
         })()}
@@ -64067,7 +66336,7 @@ const DD_ROSTER_HISTORY = {
     "Jake Beukelman": ["2078","4039","5844","5947","5973","5995","6790","6819","6845","7523","7527","7538","7562","7608","8146","8148","8172","827","9486","9493","9497","9501","9758"],
     "James Lazette": ["10857","10859","2197","4866","4983","5185","5937","6803","6804","6886","6904","7600","7607","7611","8126","8131","8134","8155","9224","9504","9505","96"],
     "Jared Stuit": ["10225","10444","10863","10866","11439","1479","4951","4981","5850","6151","6185","6797","6828","8110","8159","8160","8167","8168","8171","8225","8408","9487","9488"],
-    "Matthew Van Groningen": ["10216","10221","1689","3225","4018","4035","4066","4089","4144","4149","4381","4663","4950","4984","5086","5890","6783","7090","9228","947","9489","9511","9999"],
+    "Christian Manes": ["10216","10221","1689","3225","4018","4035","4066","4089","4144","4149","4381","4663","4950","4984","5086","5890","6783","7090","9228","947","9489","9511","9999"],
     "Ross Van Groningen": ["1339","1837","2711","3294","3969","4454","5284","5846","5906","6943","7526","7547","7567","7571","7588","8129","8130","8132","8137","8153","8183","8210","9221"],
     "Steve Vander Molen": ["10228","10229","10232","1234","4179","4988","5000","5849","6659","6806","6813","6820","6824","7525","7553","7564","9226","9479","9481","9484","9500","9502","9997"],
     "Trey Hugen": ["10222","10862","4881","4892","5012","5045","5248","5848","5967","6801","7002","7021","7561","7569","7591","8119","8135","8136","8144","8150","8154","8157","8228"],
@@ -64123,9 +66392,9 @@ const DD_PLAYOFF_SCORES = {
   2023: {
     winners: [
       {round:1,label:"Round 1",t1:"James Lazette",t1pts:102.08,t2:"Greg Mulder",t2pts:134.24,winner:"Greg Mulder",margin:32.16},
-      {round:1,label:"Round 1",t1:"Matthew Van Groningen",t1pts:81.52,t2:"Jake Beukelman",t2pts:84.9,winner:"Jake Beukelman",margin:3.38},
+      {round:1,label:"Round 1",t1:"Christian Manes",t1pts:81.52,t2:"Jake Beukelman",t2pts:84.9,winner:"Jake Beukelman",margin:3.38},
       {round:2,label:"Semifinal",t1:"Aaron Fay",t1pts:131.54,t2:"Jake Beukelman",t2pts:90.42,winner:"Aaron Fay",margin:41.12},
-      {round:2,label:"5th Place",t1:"Matthew Van Groningen",t1pts:108.26,t2:"James Lazette",t2pts:130.8,winner:"James Lazette",margin:22.54},
+      {round:2,label:"5th Place",t1:"Christian Manes",t1pts:108.26,t2:"James Lazette",t2pts:130.8,winner:"James Lazette",margin:22.54},
       {round:2,label:"Semifinal",t1:"Trey Hugen",t1pts:151.48,t2:"Greg Mulder",t2pts:89.02,winner:"Trey Hugen",margin:62.46},
       {round:3,label:"Championship",t1:"Aaron Fay",t1pts:103.28,t2:"Trey Hugen",t2pts:146.36,winner:"Trey Hugen",margin:43.08},
       {round:3,label:"3rd Place",t1:"Jake Beukelman",t1pts:104.78,t2:"Greg Mulder",t2pts:146.04,winner:"Greg Mulder",margin:41.26},
@@ -64225,11 +66494,11 @@ const DD_TRANSACTIONS = {
     {week:4,type:"trade",managers:["Tyler Goslinga","Trey Hugen"],adds:[{player:"Chris Olave",to:"Trey Hugen"}],drops:[{player:"Chris Olave",from:"Tyler Goslinga"}],picks:[{round:1,season:2024,from:"Trey Hugen",to:"Tyler Goslinga"}]},
     {week:4,type:"trade",managers:["Ross Van Groningen","Tyler Goslinga"],adds:[{player:"Dak Prescott",to:"Ross Van Groningen"},{player:"Joe Burrow",to:"Tyler Goslinga"},{player:"Amon-Ra St. Brown",to:"Ross Van Groningen"},{player:"Joshua Palmer",to:"Tyler Goslinga"}],drops:[{player:"Dak Prescott",from:"Tyler Goslinga"},{player:"Joe Burrow",from:"Ross Van Groningen"},{player:"Amon-Ra St. Brown",from:"Tyler Goslinga"},{player:"Joshua Palmer",from:"Ross Van Groningen"}],picks:[{round:3,season:2024,from:"Ross Van Groningen",to:"Tyler Goslinga"},{round:1,season:2024,from:"Tyler Goslinga",to:"Ross Van Groningen"},{round:2,season:2025,from:"Tyler Goslinga",to:"Ross Van Groningen"}]},
     {week:4,type:"trade",managers:["Jake Beukelman","Ross Van Groningen"],adds:[{player:"Jameson Williams",to:"Jake Beukelman"}],drops:[{player:"Jameson Williams",from:"Ross Van Groningen"}],picks:[{round:2,season:2024,from:"Jake Beukelman",to:"Ross Van Groningen"}]},
-    {week:4,type:"waiver",managers:["Matthew Van Groningen"],adds:[{player:"Ronnie Bell",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:4,type:"waiver",managers:["Christian Manes"],adds:[{player:"Ronnie Bell",to:"Christian Manes"}],drops:[],picks:[]},
     {week:4,type:"free_agent",managers:["Vance Sipma"],adds:[],drops:[{player:"Ty Chandler",from:"Vance Sipma"}],picks:[]},
     {week:4,type:"free_agent",managers:["Will Hoekstra"],adds:[{player:"Donald Parham",to:"Will Hoekstra"}],drops:[{player:"Tony Jones",from:"Will Hoekstra"}],picks:[]},
     {week:4,type:"waiver",managers:["Greg Mulder"],adds:[{player:"Mike Williams",to:"Greg Mulder"}],drops:[{player:"Tyrion Davis-Price",from:"Greg Mulder"}],picks:[]},
-    {week:4,type:"free_agent",managers:["Matthew Van Groningen"],adds:[],drops:[{player:"Mike Williams",from:"Matthew Van Groningen"}],picks:[]},
+    {week:4,type:"free_agent",managers:["Christian Manes"],adds:[],drops:[{player:"Mike Williams",from:"Christian Manes"}],picks:[]},
     {week:4,type:"free_agent",managers:["Aaron Fay"],adds:[{player:"Nelson Agholor",to:"Aaron Fay"}],drops:[],picks:[]},
     {week:5,type:"waiver",managers:["Trey Hugen"],adds:[{player:"Emari Demercado",to:"Trey Hugen"}],drops:[],picks:[]},
     {week:5,type:"waiver",managers:["Jake Beukelman"],adds:[{player:"D'Onta Foreman",to:"Jake Beukelman"}],drops:[{player:"Justyn Ross",from:"Jake Beukelman"}],picks:[]},
@@ -64237,11 +66506,11 @@ const DD_TRANSACTIONS = {
     {week:5,type:"trade",managers:["James Lazette","Jake Beukelman"],adds:[{player:"DJ Moore",to:"James Lazette"},{player:"Jordan Love",to:"James Lazette"},{player:"Michael Pittman",to:"Jake Beukelman"},{player:"Mac Jones",to:"Jake Beukelman"}],drops:[{player:"DJ Moore",from:"Jake Beukelman"},{player:"Jordan Love",from:"Jake Beukelman"},{player:"Michael Pittman",from:"James Lazette"},{player:"Mac Jones",from:"James Lazette"}],picks:[{round:3,season:2024,from:"Jake Beukelman",to:"James Lazette"},{round:1,season:2024,from:"James Lazette",to:"Jake Beukelman"}]},
     {week:5,type:"free_agent",managers:["Vance Sipma"],adds:[{player:"Patrick Taylor",to:"Vance Sipma"}],drops:[],picks:[]},
     {week:5,type:"free_agent",managers:["James Lazette"],adds:[{player:"Chase Claypool",to:"James Lazette"}],drops:[],picks:[]},
-    {week:5,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Jonnu Smith",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:5,type:"free_agent",managers:["Christian Manes"],adds:[{player:"Jonnu Smith",to:"Christian Manes"}],drops:[],picks:[]},
     {week:5,type:"free_agent",managers:["Trey Hugen"],adds:[],drops:[{player:"Deven Thompkins",from:"Trey Hugen"}],picks:[]},
     {week:5,type:"free_agent",managers:["Tyler Goslinga"],adds:[],drops:[{player:"Hunter Renfrow",from:"Tyler Goslinga"}],picks:[]},
     {week:6,type:"waiver",managers:["Aaron Fay"],adds:[{player:"Jordan Mason",to:"Aaron Fay"}],drops:[{player:"Nelson Agholor",from:"Aaron Fay"}],picks:[]},
-    {week:6,type:"trade",managers:["Will Hoekstra","Matthew Van Groningen"],adds:[{player:"Kirk Cousins",to:"Will Hoekstra"},{player:"Alvin Kamara",to:"Matthew Van Groningen"},{player:"Austin Ekeler",to:"Matthew Van Groningen"},{player:"Josh Allen",to:"Matthew Van Groningen"},{player:"Justin Jefferson",to:"Will Hoekstra"},{player:"Kenneth Walker",to:"Will Hoekstra"},{player:"Zach Charbonnet",to:"Will Hoekstra"}],drops:[{player:"Kirk Cousins",from:"Matthew Van Groningen"},{player:"Alvin Kamara",from:"Will Hoekstra"},{player:"Austin Ekeler",from:"Will Hoekstra"},{player:"Josh Allen",from:"Will Hoekstra"},{player:"Justin Jefferson",from:"Matthew Van Groningen"},{player:"Kenneth Walker",from:"Matthew Van Groningen"},{player:"Zach Charbonnet",from:"Matthew Van Groningen"}],picks:[]},
+    {week:6,type:"trade",managers:["Will Hoekstra","Christian Manes"],adds:[{player:"Kirk Cousins",to:"Will Hoekstra"},{player:"Alvin Kamara",to:"Christian Manes"},{player:"Austin Ekeler",to:"Christian Manes"},{player:"Josh Allen",to:"Christian Manes"},{player:"Justin Jefferson",to:"Will Hoekstra"},{player:"Kenneth Walker",to:"Will Hoekstra"},{player:"Zach Charbonnet",to:"Will Hoekstra"}],drops:[{player:"Kirk Cousins",from:"Christian Manes"},{player:"Alvin Kamara",from:"Will Hoekstra"},{player:"Austin Ekeler",from:"Will Hoekstra"},{player:"Josh Allen",from:"Will Hoekstra"},{player:"Justin Jefferson",from:"Christian Manes"},{player:"Kenneth Walker",from:"Christian Manes"},{player:"Zach Charbonnet",from:"Christian Manes"}],picks:[]},
     {week:6,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Malik Cunningham",to:"Greg Mulder"}],drops:[{player:"Parker Washington",from:"Greg Mulder"}],picks:[]},
     {week:6,type:"free_agent",managers:["Jake Beukelman"],adds:[{player:"Zach Evans",to:"Jake Beukelman"}],drops:[],picks:[]},
     {week:6,type:"free_agent",managers:["Jake Beukelman"],adds:[],drops:[{player:"DeMario Douglas",from:"Jake Beukelman"}],picks:[]},
@@ -64257,7 +66526,7 @@ const DD_TRANSACTIONS = {
     {week:7,type:"free_agent",managers:["Trey Hugen"],adds:[{player:"Darrell Henderson",to:"Trey Hugen"}],drops:[{player:"Andy Dalton",from:"Trey Hugen"}],picks:[]},
     {week:7,type:"free_agent",managers:["Greg Mulder"],adds:[{player:"Allen Robinson",to:"Greg Mulder"}],drops:[{player:"Isaiah Hodgins",from:"Greg Mulder"}],picks:[]},
     {week:7,type:"free_agent",managers:["Jake Beukelman"],adds:[{player:"C.J. Beathard",to:"Jake Beukelman"}],drops:[],picks:[]},
-    {week:7,type:"free_agent",managers:["Matthew Van Groningen"],adds:[{player:"Julio Jones",to:"Matthew Van Groningen"}],drops:[],picks:[]},
+    {week:7,type:"free_agent",managers:["Christian Manes"],adds:[{player:"Julio Jones",to:"Christian Manes"}],drops:[],picks:[]},
     {week:7,type:"free_agent",managers:["Jake Beukelman"],adds:[],drops:[{player:"Ronnie Rivers",from:"Jake Beukelman"}],picks:[]},
     {week:7,type:"free_agent",managers:["Ross Van Groningen"],adds:[{player:"Mecole Hardman",to:"Ross Van Groningen"}],drops:[{player:"Sam Darnold",from:"Ross Van Groningen"}],picks:[]},
     {week:7,type:"trade",managers:["Jake Beukelman","Tyler Goslinga"],adds:[{player:"D'Andre Swift",to:"Jake Beukelman"},{player:"Keaontay Ingram",to:"Tyler Goslinga"}],drops:[{player:"D'Andre Swift",from:"Tyler Goslinga"},{player:"Keaontay Ingram",from:"Jake Beukelman"}],picks:[{round:2,season:2024,from:"Tyler Goslinga",to:"Jake Beukelman"},{round:1,season:2024,from:"Jake Beukelman",to:"Tyler Goslinga"}]},
@@ -64778,10 +67047,9 @@ const DD_TRANSACTION_SUMMARY = {
   "Greg Mulder":{trades:3,waivers:13,freeAgents:27,totalMoves:46,playersAdded:41},
   "Trey Hugen":{trades:4,waivers:8,freeAgents:26,totalMoves:43,playersAdded:26},
   "Vance Sipma":{trades:3,waivers:10,freeAgents:21,totalMoves:38,playersAdded:30},
-  "Christian Manes":{trades:1,waivers:11,freeAgents:24,totalMoves:38,playersAdded:25},
+  "Christian Manes":{trades:2,waivers:12,freeAgents:27,totalMoves:43,playersAdded:31},
   "James Lazette":{trades:3,waivers:7,freeAgents:19,totalMoves:33,playersAdded:24},
   "Steve Vander Molen":{trades:1,waivers:3,freeAgents:17,totalMoves:21,playersAdded:12},
-  "Matthew Van Groningen":{trades:1,waivers:1,freeAgents:3,totalMoves:5,playersAdded:6},
 };
 
 const DD_LINEUP_EFFICIENCY = {
@@ -64791,7 +67059,7 @@ const DD_LINEUP_EFFICIENCY = {
     "Jake Beukelman":{avgEff:94.3,avgBench:8.13,weeks:[{week:1,actual:115.24,max:128.94,eff:89.4,bench:13.7},{week:2,actual:140.48,max:146.6,eff:95.8,bench:6.12},{week:3,actual:118.72,max:132.26,eff:89.8,bench:13.54},{week:4,actual:146.42,max:162.28,eff:90.2,bench:15.86},{week:5,actual:156.76,max:170.1,eff:92.2,bench:13.34},{week:6,actual:116.4,max:114.2,eff:101.9,bench:-2.2},{week:7,actual:126.34,max:117.44,eff:107.6,bench:-8.9},{week:8,actual:110.18,max:112.52,eff:97.9,bench:2.34},{week:9,actual:111.2,max:118.6,eff:93.8,bench:7.4},{week:10,actual:106.54,max:110.84,eff:96.1,bench:4.3},{week:11,actual:118.62,max:134.22,eff:88.4,bench:15.6},{week:12,actual:126.22,max:139.22,eff:90.7,bench:13.0},{week:13,actual:118.18,max:110.18,eff:107.3,bench:-8.0},{week:14,actual:105.42,max:133.08,eff:79.2,bench:27.66}]},
     "James Lazette":{avgEff:92.4,avgBench:8.79,weeks:[{week:1,actual:93.6,max:127.94,eff:73.2,bench:34.34},{week:2,actual:94.96,max:110.46,eff:86.0,bench:15.5},{week:3,actual:83.32,max:92.72,eff:89.9,bench:9.4},{week:4,actual:82.56,max:88.46,eff:93.3,bench:5.9},{week:5,actual:100.42,max:105.4,eff:95.3,bench:4.98},{week:6,actual:99.3,max:106.4,eff:93.3,bench:7.1},{week:7,actual:108.76,max:105.56,eff:103.0,bench:-3.2},{week:8,actual:135.62,max:129.82,eff:104.5,bench:-5.8},{week:9,actual:114.8,max:117.6,eff:97.6,bench:2.8},{week:10,actual:77.96,max:101.16,eff:77.1,bench:23.2},{week:11,actual:141.38,max:152.08,eff:93.0,bench:10.7},{week:12,actual:151.52,max:153.52,eff:98.7,bench:2.0},{week:13,actual:127.8,max:124.6,eff:102.6,bench:-3.2},{week:14,actual:121.5,max:140.82,eff:86.3,bench:19.32}]},
     "Jared Stuit":{avgEff:85.6,avgBench:14.84,weeks:[{week:1,actual:90.84,max:95.14,eff:95.5,bench:4.3},{week:2,actual:115.68,max:128.38,eff:90.1,bench:12.7},{week:3,actual:181.36,max:177.16,eff:102.4,bench:-4.2},{week:4,actual:105.44,max:108.0,eff:97.6,bench:2.56},{week:5,actual:115.82,max:132.42,eff:87.5,bench:16.6},{week:6,actual:102.46,max:98.66,eff:103.9,bench:-3.8},{week:7,actual:85.16,max:97.0,eff:87.8,bench:11.84},{week:8,actual:83.64,max:99.92,eff:83.7,bench:16.28},{week:9,actual:74.34,max:92.06,eff:80.8,bench:17.72},{week:10,actual:113.64,max:119.64,eff:95.0,bench:6.0},{week:11,actual:71.94,max:116.34,eff:61.8,bench:44.4},{week:12,actual:86.2,max:115.3,eff:74.8,bench:29.1},{week:13,actual:63.82,max:90.24,eff:70.7,bench:26.42},{week:14,actual:55.28,max:83.12,eff:66.5,bench:27.84}]},
-    "Matthew Van Groningen":{avgEff:94.0,avgBench:7.4,weeks:[{week:1,actual:81.4,max:91.2,eff:89.3,bench:9.8},{week:2,actual:120.08,max:132.94,eff:90.3,bench:12.86},{week:3,actual:156.08,max:164.88,eff:94.7,bench:8.8},{week:4,actual:100.92,max:97.72,eff:103.3,bench:-3.2},{week:5,actual:105.54,max:102.14,eff:103.3,bench:-3.4},{week:6,actual:88.42,max:106.38,eff:83.1,bench:17.96},{week:7,actual:111.6,max:119.4,eff:93.5,bench:7.8},{week:8,actual:159.42,max:166.04,eff:96.0,bench:6.62},{week:9,actual:127.82,max:135.84,eff:94.1,bench:8.02},{week:10,actual:93.14,max:105.88,eff:88.0,bench:12.74},{week:11,actual:93.92,max:91.42,eff:102.7,bench:-2.5},{week:12,actual:103.66,max:106.92,eff:97.0,bench:3.26},{week:13,actual:111.08,max:119.58,eff:92.9,bench:8.5},{week:14,actual:115.5,max:131.9,eff:87.6,bench:16.4}]},
+    "Christian Manes":{avgEff:94.0,avgBench:7.4,weeks:[{week:1,actual:81.4,max:91.2,eff:89.3,bench:9.8},{week:2,actual:120.08,max:132.94,eff:90.3,bench:12.86},{week:3,actual:156.08,max:164.88,eff:94.7,bench:8.8},{week:4,actual:100.92,max:97.72,eff:103.3,bench:-3.2},{week:5,actual:105.54,max:102.14,eff:103.3,bench:-3.4},{week:6,actual:88.42,max:106.38,eff:83.1,bench:17.96},{week:7,actual:111.6,max:119.4,eff:93.5,bench:7.8},{week:8,actual:159.42,max:166.04,eff:96.0,bench:6.62},{week:9,actual:127.82,max:135.84,eff:94.1,bench:8.02},{week:10,actual:93.14,max:105.88,eff:88.0,bench:12.74},{week:11,actual:93.92,max:91.42,eff:102.7,bench:-2.5},{week:12,actual:103.66,max:106.92,eff:97.0,bench:3.26},{week:13,actual:111.08,max:119.58,eff:92.9,bench:8.5},{week:14,actual:115.5,max:131.9,eff:87.6,bench:16.4}]},
     "Ross Van Groningen":{avgEff:93.2,avgBench:7.39,weeks:[{week:1,actual:63.18,max:98.2,eff:64.3,bench:35.02},{week:2,actual:82.72,max:101.92,eff:81.2,bench:19.2},{week:3,actual:92.26,max:101.86,eff:90.6,bench:9.6},{week:4,actual:81.32,max:84.42,eff:96.3,bench:3.1},{week:5,actual:107.4,max:112.9,eff:95.1,bench:5.5},{week:6,actual:94.48,max:103.16,eff:91.6,bench:8.68},{week:7,actual:94.18,max:105.28,eff:89.5,bench:11.1},{week:8,actual:135.5,max:169.16,eff:80.1,bench:33.66},{week:9,actual:78.38,max:84.88,eff:92.3,bench:6.5},{week:10,actual:168.46,max:171.9,eff:98.0,bench:3.44},{week:11,actual:122.58,max:117.58,eff:104.3,bench:-5.0},{week:12,actual:132.2,max:120.2,eff:110.0,bench:-12.0},{week:13,actual:162.62,max:152.12,eff:106.9,bench:-10.5},{week:14,actual:112.86,max:107.96,eff:104.5,bench:-4.9}]},
     "Steve Vander Molen":{avgEff:92.3,avgBench:8.58,weeks:[{week:1,actual:88.58,max:91.18,eff:97.1,bench:2.6},{week:2,actual:92.12,max:93.22,eff:98.8,bench:1.1},{week:3,actual:162.4,max:154.5,eff:105.1,bench:-7.9},{week:4,actual:113.02,max:121.22,eff:93.2,bench:8.2},{week:5,actual:125.98,max:142.58,eff:88.4,bench:16.6},{week:6,actual:70.4,max:82.6,eff:85.2,bench:12.2},{week:7,actual:110.1,max:103.8,eff:106.1,bench:-6.3},{week:8,actual:116.38,max:115.08,eff:101.1,bench:-1.3},{week:9,actual:53.4,max:108.42,eff:49.3,bench:55.02},{week:10,actual:114.18,max:113.04,eff:101.0,bench:-1.14},{week:11,actual:99.3,max:95.8,eff:103.7,bench:-3.5},{week:12,actual:111.64,max:129.4,eff:86.3,bench:17.76},{week:13,actual:95.16,max:120.06,eff:79.3,bench:24.9},{week:14,actual:93.08,max:94.96,eff:98.0,bench:1.88}]},
     "Trey Hugen":{avgEff:88.7,avgBench:14.58,weeks:[{week:1,actual:73.6,max:110.56,eff:66.6,bench:36.96},{week:2,actual:154.52,max:174.96,eff:88.3,bench:20.44},{week:3,actual:83.24,max:120.42,eff:69.1,bench:37.18},{week:4,actual:176.24,max:173.94,eff:101.3,bench:-2.3},{week:5,actual:100.02,max:98.22,eff:101.8,bench:-1.8},{week:6,actual:107.34,max:112.12,eff:95.7,bench:4.78},{week:7,actual:131.58,max:144.48,eff:91.1,bench:12.9},{week:8,actual:104.06,max:131.56,eff:79.1,bench:27.5},{week:9,actual:128.38,max:131.0,eff:98.0,bench:2.62},{week:10,actual:90.04,max:134.54,eff:66.9,bench:44.5},{week:11,actual:132.62,max:138.92,eff:95.5,bench:6.3},{week:12,actual:131.16,max:131.84,eff:99.5,bench:0.68},{week:13,actual:114.98,max:122.18,eff:94.1,bench:7.2},{week:14,actual:128.86,max:135.96,eff:94.8,bench:7.1}]},
@@ -64857,7 +67125,7 @@ const DD_MANAGER_PROFILES = {
 
   "Christian Manes": {
     headline: `Inherited a Mess, Still Looking for the Exit`,
-    narrative: `Context matters here. Christian Manes took over a roster that Matthew Van Groningen ran for one season in 2023, going 4-10 before leaving the league. That's not a foundation — that's a reconstruction project. Christian has been in the league for two seasons and is still clearly in the process of figuring out what this team is. The 2024 season was genuinely encouraging: he made the playoffs, pulled off an upset win over Ross Van Groningen in the first round, and then ran into the Greg Mulder buzzsaw in the semifinal and got demolished 71.46 to 144.30. Brutal. 2025 was a step back — missed the playoffs and made it all the way to the toilet bowl final, where Tyler Goslinga beat him 68.56 to 87.92. Christian scored 87.92 and still couldn't avoid finishing 11th. Cold comfort. Lineup efficiency sits at roughly 88%, meaning he's leaving meaningful points on the bench most weeks. The Arizona Cardinals comp is apt: still searching for an identity, flashes of competitiveness, but not yet a consistent threat. The good news is he's young in this league and the roster can be rebuilt through the draft. 2026 needs to show growth.`,
+    narrative: `Context matters here. Christian Manes took over a roster that Christian Manes ran for one season in 2023, going 4-10 before leaving the league. That's not a foundation — that's a reconstruction project. Christian has been in the league for two seasons and is still clearly in the process of figuring out what this team is. The 2024 season was genuinely encouraging: he made the playoffs, pulled off an upset win over Ross Van Groningen in the first round, and then ran into the Greg Mulder buzzsaw in the semifinal and got demolished 71.46 to 144.30. Brutal. 2025 was a step back — missed the playoffs and made it all the way to the toilet bowl final, where Tyler Goslinga beat him 68.56 to 87.92. Christian scored 87.92 and still couldn't avoid finishing 11th. Cold comfort. Lineup efficiency sits at roughly 88%, meaning he's leaving meaningful points on the bench most weeks. The Arizona Cardinals comp is apt: still searching for an identity, flashes of competitiveness, but not yet a consistent threat. The good news is he's young in this league and the roster can be rebuilt through the draft. 2026 needs to show growth.`,
   },
 
   "Ross Van Groningen": {
