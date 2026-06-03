@@ -44307,20 +44307,21 @@ const NFL_TRANSACTIONS = {
 };
 
 const NFL_TRANSACTION_SUMMARY = {
-  "Greg Cady":{trades:7,waivers:50,freeAgents:135,totalMoves:192,playersAdded:149,yahooTrades:6,sleeperTrades:1},
-  "Joshua Van Groningen":{trades:15,waivers:76,freeAgents:85,totalMoves:179,playersAdded:144,yahooTrades:13,sleeperTrades:2},
-  "Eric Graef":{trades:17,waivers:31,freeAgents:76,totalMoves:125,playersAdded:86,yahooTrades:16,sleeperTrades:1},
-  "Greg Mulder":{trades:12,waivers:42,freeAgents:74,totalMoves:134,playersAdded:115,yahooTrades:9,sleeperTrades:3},
-  "Matthew Van Groningen":{trades:5,waivers:42,freeAgents:75,totalMoves:127,playersAdded:111,yahooTrades:3,sleeperTrades:2},
-  "Trey Hugen":{trades:10,waivers:47,freeAgents:69,totalMoves:128,playersAdded:105,yahooTrades:8,sleeperTrades:2},
-  "Aaron Fay":{trades:4,waivers:54,freeAgents:52,totalMoves:112,playersAdded:106,yahooTrades:3,sleeperTrades:1},
-  "James Lazette":{trades:7,waivers:39,freeAgents:63,totalMoves:112,playersAdded:91,yahooTrades:4,sleeperTrades:3},
-  "Ross Van Groningen":{trades:13,waivers:35,freeAgents:55,totalMoves:108,playersAdded:99,yahooTrades:8,sleeperTrades:5},
-  "Vance Sipma":{trades:8,waivers:27,freeAgents:67,totalMoves:103,playersAdded:81,yahooTrades:7,sleeperTrades:1},
+  "Greg Cady":{trades:12,waivers:50,freeAgents:135,totalMoves:197,playersAdded:149,yahooTrades:11,sleeperTrades:1},
+  "Joshua Van Groningen":{trades:8,waivers:76,freeAgents:85,totalMoves:172,playersAdded:144,yahooTrades:3,sleeperTrades:5},
+  "Eric Graef":{trades:9,waivers:31,freeAgents:76,totalMoves:117,playersAdded:86,yahooTrades:7,sleeperTrades:2},
+  "Greg Mulder":{trades:14,waivers:42,freeAgents:74,totalMoves:136,playersAdded:115,yahooTrades:7,sleeperTrades:7},
+  "Matthew Van Groningen":{trades:8,waivers:42,freeAgents:75,totalMoves:130,playersAdded:111,yahooTrades:4,sleeperTrades:4},
+  "Trey Hugen":{trades:12,waivers:47,freeAgents:69,totalMoves:130,playersAdded:105,yahooTrades:8,sleeperTrades:4},
+  "Aaron Fay":{trades:5,waivers:54,freeAgents:52,totalMoves:113,playersAdded:106,yahooTrades:2,sleeperTrades:3},
+  "James Lazette":{trades:10,waivers:39,freeAgents:63,totalMoves:115,playersAdded:91,yahooTrades:4,sleeperTrades:6},
+  "Ross Van Groningen":{trades:21,waivers:35,freeAgents:55,totalMoves:116,playersAdded:99,yahooTrades:12,sleeperTrades:9},
+  "Vance Sipma":{trades:3,waivers:27,freeAgents:67,totalMoves:98,playersAdded:81,yahooTrades:1,sleeperTrades:2},
   "Steve Vander Molen":{trades:5,waivers:27,freeAgents:64,totalMoves:97,playersAdded:84,yahooTrades:4,sleeperTrades:1},
-  "Tyler Goslinga":{trades:5,waivers:29,freeAgents:53,totalMoves:87,playersAdded:73,yahooTrades:4,sleeperTrades:1},
-  "Ben de Ruiter":{trades:10,waivers:0,freeAgents:0,totalMoves:10,playersAdded:0,yahooTrades:10,sleeperTrades:0},
-  "Spencer Hower":{trades:1,waivers:0,freeAgents:0,totalMoves:1,playersAdded:0,yahooTrades:1,sleeperTrades:0},
+  "Tyler Goslinga":{trades:7,waivers:29,freeAgents:53,totalMoves:89,playersAdded:73,yahooTrades:6,sleeperTrades:1},
+  "Ben de Ruiter":{trades:9,waivers:0,freeAgents:0,totalMoves:9,playersAdded:0,yahooTrades:9,sleeperTrades:0},
+  "Spencer Hower":{trades:4,waivers:0,freeAgents:0,totalMoves:4,playersAdded:0,yahooTrades:4,sleeperTrades:0},
+  "Zac Dewey":{trades:2,waivers:0,freeAgents:0,totalMoves:2,playersAdded:0,yahooTrades:2,sleeperTrades:0},
 };
 
 // ══════════════════════════════════════════════════════════════════════════════
@@ -57281,24 +57282,27 @@ function MostContested() {
     premium: p.price - (lgAvg[p.year+"_"+normPos(p.position)] || 0),
   })), [lgAvg]);
 
-  // Player career map
+  // Player career map — group by playerName (not playerId) to merge Yahoo/Sleeper eras
   const playerMap = React.useMemo(() => {
     const t = {};
     enriched.forEach(p => {
-      if (!t[p.playerId]) t[p.playerId] = { name:p.playerName, pos:p.pos, picks:[] };
-      t[p.playerId].picks.push(p);
+      const key = p.playerName + "|" + normPos(p.position); // name+pos to avoid same-name different-position collisions
+      if (!t[key]) t[key] = { name:p.playerName, pos:normPos(p.position), picks:[], ids:new Set() };
+      t[key].picks.push(p);
+      t[key].ids.add(p.playerId);
     });
     return t;
   }, [enriched]);
 
   // Perennial favorites — most appearances (seasons on any roster)
   const perennials = React.useMemo(() => {
-    return Object.entries(playerMap).map(([id,v]) => {
+    return Object.entries(playerMap).map(([key,v]) => {
       const yrs      = [...new Set(v.picks.map(p=>p.year))].sort((a,b)=>a-b);
       const mgrs     = [...new Set(v.picks.map(p=>p.manager))];
       const avgPrice = +(v.picks.reduce((s,p)=>s+p.price,0)/v.picks.length).toFixed(1);
-      const nflTeam = (DATA.playerData.players||{})[id]?.nflTeam || null;
-      return { id, name:v.name, pos:v.pos, nflTeam, appearances:yrs.length, uniqueMgrs:mgrs.length,
+      const firstId  = [...v.ids][0];
+      const nflTeam  = (DATA.playerData.players||{})[firstId]?.nflTeam || null;
+      return { id:key, name:v.name, pos:v.pos, nflTeam, appearances:yrs.length, uniqueMgrs:mgrs.length,
                years:yrs, avgPrice, picks:v.picks };
     })
     .filter(p => p.appearances >= 3)
@@ -57308,14 +57312,15 @@ function MostContested() {
 
   // Most coveted — highest avg price premium (skill pos, 2+ appearances)
   const coveted = React.useMemo(() => {
-    return Object.entries(playerMap).map(([id,v]) => {
+    return Object.entries(playerMap).map(([key,v]) => {
       const sp = v.picks.filter(p=>SKILL.includes(p.pos));
       if (sp.length < 2) return null;
       const avgPrem = +(sp.reduce((s,p)=>s+p.premium,0)/sp.length).toFixed(1);
       const maxPrem = +Math.max(...sp.map(p=>p.premium)).toFixed(1);
       const totalSpent = sp.reduce((s,p)=>s+p.price,0);
-      const nflTeam = (DATA.playerData.players||{})[id]?.nflTeam || null;
-      return { id, name:v.name, pos:v.pos, nflTeam, appearances:sp.length,
+      const firstId = [...v.ids][0];
+      const nflTeam = (DATA.playerData.players||{})[firstId]?.nflTeam || null;
+      return { id:key, name:v.name, pos:v.pos, nflTeam, appearances:sp.length,
                avgPremium:avgPrem, maxPremium:maxPrem, totalSpent, picks:sp };
     })
     .filter(Boolean)
@@ -57331,9 +57336,11 @@ function MostContested() {
         const yrPos = enriched.filter(p=>p.year===yr&&p.pos===pos);
         if (!yrPos.length) return;
         const top = [...yrPos].sort((a,b)=>b.price-a.price)[0];
-        if (!t[top.playerId]) t[top.playerId] = { playerId:top.playerId, name:top.playerName, pos:top.pos, nflTeam:(DATA.playerData.players||{})[top.playerId]?.nflTeam||null, seasons:[], prices:[] };
-        t[top.playerId].seasons.push(yr);
-        t[top.playerId].prices.push(top.price);
+        const key = top.playerName + "|" + top.pos;
+        if (!t[key]) t[key] = { name:top.playerName, pos:top.pos, nflTeam:(DATA.playerData.players||{})[top.playerId]?.nflTeam||null, seasons:[], prices:[], managers:[] };
+        t[key].seasons.push(yr);
+        t[key].prices.push(top.price);
+        t[key].managers.push(top.manager);
       });
     });
     return Object.values(t)
@@ -57418,7 +57425,6 @@ function MostContested() {
                                   color:i<3?"#e9c46a":"#444",minWidth:28,textAlign:"center"}}>
                       #{i+1}
                     </span>
-                    <PosTag pos={p.pos} />
                     <span style={{fontWeight:700,fontSize:mobile?13:14,color:"#e9e9f0",flex:1,
                                   minWidth:0,overflow:"hidden"}}>
                       <PlayerChip playerId={p.id} playerName={p.name} position={p.pos} size="md" style={{overflow:"hidden"}} />
@@ -57469,7 +57475,6 @@ function MostContested() {
                                 color:i<3?"#e9c46a":"#444",minWidth:28,textAlign:"center"}}>
                     #{i+1}
                   </span>
-                  <PosTag pos={p.pos} />
                   <span style={{fontWeight:700,fontSize:mobile?13:14,color:"#e9e9f0",flex:1,
                                 minWidth:0,overflow:"hidden"}}>
                     <PlayerChip playerId={p.id} playerName={p.name} position={p.pos} size="md" style={{overflow:"hidden"}} />
@@ -57532,7 +57537,6 @@ function MostContested() {
                                 color:i<3?"#e9c46a":"#444",minWidth:28,textAlign:"center"}}>
                     #{i+1}
                   </span>
-                  <PosTag pos={p.pos} />
                   <span style={{fontWeight:700,fontSize:mobile?14:16,color:"#e9e9f0",flex:1,minWidth:0,overflow:"hidden"}}>
                     <PlayerChip playerId={p.playerId} playerName={p.name} position={p.pos} size="lg" style={{overflow:"hidden"}} />
                   </span>
@@ -57556,6 +57560,7 @@ function MostContested() {
                                    fontSize:mobile?16:18,color:"#e9c46a",letterSpacing:1}}>
                         ${p.prices[si]}
                       </div>
+                      <div style={{fontSize:9,color:"#888",marginTop:2}}>{p.managers[si] ? p.managers[si].split(" ")[0] : ""}</div>
                     </div>
                   ))}
                 </div>
@@ -58665,14 +58670,18 @@ function ScoringLeaderboards() {
     }).filter(e => e.pos !== "OTH" && e.name !== "Unknown");
   }, [playerLookup]);
 
-  // Career totals (sum across all seasons in league)
+  // Career totals (sum across all seasons in league — merge Yahoo/Sleeper IDs by name+pos)
   const careerTotals = React.useMemo(() => {
     const t = {};
     seasonTotals.forEach(e => {
-      if (!t[e.playerId]) t[e.playerId] = { playerId:e.playerId, name:e.name, pos:e.pos, nflTeam:e.nflTeam||null, pts:0, seasons:0, years:[] };
-      t[e.playerId].pts     += e.pts;
-      t[e.playerId].seasons += 1;
-      t[e.playerId].years.push(e.year);
+      const key = e.name + "|" + e.pos;
+      if (!t[key]) t[key] = { playerId:e.playerId, name:e.name, pos:e.pos, nflTeam:e.nflTeam||null, pts:0, seasons:0, years:[] };
+      t[key].pts     += e.pts;
+      t[key].seasons += 1;
+      t[key].years.push(e.year);
+      // Keep the most recent playerId for nflTeam lookup
+      if (e.nflTeam) t[key].nflTeam = e.nflTeam;
+      t[key].playerId = e.playerId;
     });
     return Object.values(t).map(e => ({ ...e, pts:+e.pts.toFixed(1) }));
   }, [seasonTotals]);
@@ -59002,16 +59011,19 @@ function PlayerCareerCards() {
     const map = {};
     picks.forEach(p => {
       const pos = normPos(p.position);
-      if (!map[p.playerId]) map[p.playerId] = {
+      const key = p.playerName + "|" + pos; // group by name+pos to merge Yahoo/Sleeper IDs
+      if (!map[key]) map[key] = {
         id: p.playerId, name: p.playerName, pos, seasons: [],
       };
-      map[p.playerId].seasons.push({
+      map[key].seasons.push({
         year:     p.year,
         manager:  p.manager,
         price:    p.price,
         isKeeper: p.isKeeper,
         pts:      +(ptsByKey[p.year+"_"+p.playerId]||0).toFixed(1),
       });
+      // Keep most recent playerId for nflTeam lookup
+      map[key].id = p.playerId;
     });
     return Object.values(map).map(p => {
       p.seasons.sort((a,b) => a.year - b.year);
