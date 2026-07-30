@@ -67172,7 +67172,7 @@ const DD_MANAGER_PROFILES = {
 };
 
 // ── DD DATA CONSTANTS ─────────────────────────────────────────────────────────
-// DD Pick Capital — update when picks are traded. Last updated: May 2026
+// DD Pick Capital — update when picks are traded. Last updated: July 2026
 // [27_1st,27_2nd,27_3rd,27_4th, 28_1st,28_2nd,28_3rd,28_4th, 29_1st,29_2nd,29_3rd,29_4th]
 const DD_PICK_CAPITAL = {
   "Aaron Fay":          [1,1,1,1, 1,1,1,0, 1,1,1,0],
@@ -67181,10 +67181,10 @@ const DD_PICK_CAPITAL = {
   "Jake Beukelman":     [1,1,1,2, 1,1,1,1, 1,1,1,1],
   "James Lazette":      [0,1,1,1, 1,0,1,1, 1,1,1,1],
   "Jared Stuit":        [0,1,1,1, 1,1,1,1, 1,1,1,1],
-  "Ross Van Groningen": [3,1,1,0, 1,2,1,1, 1,1,1,1],
+  "Ross Van Groningen": [2,1,1,0, 1,2,1,1, 2,1,1,1],
   "Steve Vander Molen": [0,1,1,1, 1,0,1,1, 1,1,1,1],
   "Trey Hugen":         [1,2,2,0, 1,1,1,1, 1,1,1,1],
-  "Tyler Goslinga":     [2,1,1,1, 1,1,1,2, 1,1,1,2],
+  "Tyler Goslinga":     [3,2,1,1, 1,1,1,2, 0,1,1,2],
   "Vance Sipma":        [1,0,0,2, 1,1,1,1, 1,1,1,1],
   "Will Hoekstra":      [1,1,1,1, 1,1,1,1, 1,1,1,1],
 };
