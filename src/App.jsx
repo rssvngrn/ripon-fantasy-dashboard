@@ -64703,21 +64703,37 @@ function DDDynastyTab() {
   }, []);
 
   // ── Dynasty Trade Value ──────────────────────────────────────────
+  // Model: Production × Youth × Confidence × Recency + Position Premium
+  // Calibrated against FantasyPros dynasty rankings (superflex, half-PPR)
   const tradeValueData = React.useMemo(() => {
     return Object.keys(DD_PLAYER_META).map(pid => {
       const meta   = DD_PLAYER_META[pid];
       const scores = DD_PLAYER_SCORES[pid] || {};
+      // Use most recent season with 3+ scored games
       const recentYr = ["2025","2024","2023"].find(yr => {
         const wks = scores[yr] ? Object.values(scores[yr]).filter(v=>v>0) : [];
         return wks.length >= 3;
       });
       const recentWks  = recentYr ? Object.values(scores[recentYr]).filter(v=>v>0) : [];
       const recentAvg  = recentWks.length ? recentWks.reduce((s,v)=>s+v,0)/recentWks.length : 0;
+      // Total games played across all seasons (sample size)
+      const totalGP = Object.values(scores).reduce((sum, yr) => {
+        return sum + Object.values(yr).filter(v => v > 0).length;
+      }, 0);
       const age        = meta.age || 27;
-      const ageScore   = Math.max(0, Math.min(1, (32 - age) / 12));
-      const perfScore  = Math.min(1, recentAvg / 28);
-      const posBonus   = { WR:0.06, TE:0.04, QB:0.02, RB:-0.04 }[meta.pos] || 0;
-      const tv         = parseFloat(((ageScore * 0.45 + perfScore * 0.5 + posBonus) * 100).toFixed(1));
+      // Production base: ppg relative to 22 (elite threshold in half-PPR SF)
+      const perfBase   = Math.min(1, recentAvg / 22);
+      // Youth multiplier: young + productive = elite, youth alone can't carry
+      const youthMult  = age <= 22 ? 1.10 : age <= 24 ? 1.05 : age <= 26 ? 1.00
+                       : age <= 28 ? 0.93 : age <= 30 ? 0.85 : 0.72;
+      // Sample confidence: soft floor at 0.6 with sqrt ramp to 1.0 at 28 games
+      const confidence = totalGP >= 3 ? Math.min(1, 0.6 + 0.4 * Math.sqrt(totalGP / 28)) : 0;
+      // Recency: penalize players whose best data is 1-2 seasons stale
+      const recency    = recentYr === "2025" ? 1.0 : recentYr === "2024" ? 0.85 : 0.65;
+      // Position premium (superflex: QBs are king)
+      const posBonus   = { QB:0.10, WR:0.03, TE:0.02, RB:0.0 }[meta.pos] || 0;
+      // Final TV: production × youth × confidence × recency + position
+      const tv         = parseFloat(((perfBase * youthMult * confidence * recency + posBonus) * 100).toFixed(1));
       return {
         pid, name:meta.name, pos:meta.pos, team:meta.team||"FA", age,
         recentAvg:parseFloat(recentAvg.toFixed(1)), recentYr:recentYr?parseInt(recentYr):null,
@@ -64912,7 +64928,7 @@ function DDDynastyTab() {
               <span style={{ fontSize:11, color:"#555", marginLeft:4 }}>{filtered.length} players</span>
             </div>
             <div style={{ fontSize:11, color:"#555", background:"#111", borderRadius:6, padding:"6px 12px" }}>
-              TV = Age score (45%) + Recent scoring (50%) + Position bonus (5%) · top 40 shown per filter
+              TV = PPG × Youth × Confidence × Recency + Position (calibrated to FantasyPros dynasty) · top 40 per filter
             </div>
             {filtered.slice(0, 40).map((p, i) => (
               <div key={p.pid} style={{ display:"flex", alignItems:"center", gap:8, padding:mobile?"8px 10px":"9px 14px", background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:8 }}>
