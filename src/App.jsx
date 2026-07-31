@@ -63665,7 +63665,7 @@ function DDPickHoldings({ mobile }) {
 
 function DDDraftTab() {
   const mobile = useMobile();
-  const [year, setYear] = React.useState(2025);
+  const [year, setYear] = React.useState(2026);
   const [section, setSection] = React.useState("home");
   const [selectedMgr, setSelectedMgr] = React.useState(null);
   const draft = DD_DRAFT_DATA[year];
@@ -63701,7 +63701,7 @@ function DDDraftTab() {
       <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:10 }}>
         <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?16:20, color:"#E07B20", letterSpacing:2 }}>🎯 Rookie Draft History</div>
         <div style={{ display:"flex", gap:6 }}>
-          {[2024,2025].map(y => (
+          {[2024,2025,2026].map(y => (
             <button key={y} onClick={() => { setYear(y); setSelectedMgr(null); }}
               style={{ padding:"5px 14px", borderRadius:8, border:`1px solid ${year===y?"#E07B20":"#222"}`, background:year===y?"#E07B20":"#111", color:year===y?"#fff":"#555", fontSize:13, cursor:"pointer", fontWeight:year===y?700:400 }}>
               {y}
@@ -64058,9 +64058,6 @@ function DDDraftTab() {
 
       {section === "pickhold" && <DDPickHoldings mobile={mobile} />}
 
-      <div style={{ background:"#0a0f06", border:"1px solid #E07B2044", borderRadius:8, padding:"10px 14px", fontSize:12, color:"#888", textAlign:"center", marginTop:4 }}>
-        🦆 2026 Rookie Draft starting May 8th — results will be added after the draft
-      </div>
     </div>
   );
 }
@@ -64374,18 +64371,18 @@ function DDPlayersTab() {
 
 // DD Franchise Scouting Reports — pre-generated. Re-run dd_generate_franchise_reports.py to refresh.
 const DD_FRANCHISE_REPORTS = {
-  "Ross Van Groningen": `The only manager in Winning + Future, Ross combines an 11-3 2025 record with the highest pick capital in the pond — three 2027 firsts at 1.08, 1.09, and 1.10 plus Steve's 2028 2nd. His capital haul is mid-round depth rather than elite upside; none of those slots produce the franchise-altering talent of a top-4 pick. The move: package two of those three firsts in a trade for a proven top-tier starter and stop playing for depth.`,
-  "Tyler Goslinga": `Tyler made the boldest offseason bet in the pond, trading Joe Burrow and Tyler Warren to Aaron Fay and going full rebuild — the result is the second-highest future value score in the league, with two 2027 firsts (projected 1.02 and 1.07) and the youngest roster at 24.0 avg age. His 21.7% weighted win rate reflects three years of losing, but the asset base is genuinely real. The move: don't rush back into win-now mode — let those 2027 firsts land, evaluate the class, and only pivot if a true difference-maker becomes available.`,
-  "Jake Beukelman": `Jake is the reigning 2025 champion (11-3, #1 seed) and sits in Winning + Future with a 24.5 avg roster age and solid capital, though his only 2027 first is the late 1.12 — a byproduct of winning. He picked up an extra 2027 4th in a trade, but late picks won't move the needle for a contender. The move: trade that late first for proven depth now and ride the championship core — the 2025 window is still open.`,
-  "Greg Mulder": `The 2024 champion and the most dangerous Win Now franchise in the pond — Greg holds two 2027 firsts including the projected 1.01 acquired from Christian Manes, alongside his own 1.06. The catch: at 26.5 avg roster age he's trying to win now and reload simultaneously, and the 1.01 only becomes elite capital if Christian finishes last in 2026. The move: don't let the 1.01 make you complacent — the aging roster means the win-now window is 1-2 years, not five.`,
-  "Trey Hugen": `The 2023 champion sits in Win Now at 62.7% weighted win rate but made a curious capital move: traded his own 2027 first away, acquired Jared's late 1.11, and stacked extra 2027 seconds and thirds from Vance — a volume bet rather than a stars bet. Coming off an 8-6 regular season in 2025, he's competitive but not a clear title threat, and his supporting picks are dart throws. The move: use the extra 2nd-round volume to consolidate into one proven starter rather than rostering depth.`,
-  "James Lazette": `James sold more future capital than almost anyone — his 2027 first (1.09) and 2028 second are both in Ross's account — and despite a 66.3% weighted win rate and 4th-place finish in 2025, he still hasn't won a Duck Dynasty title. With a 26.0 avg roster age and no first-round pick in the next class, the window is open but closing. The move: this is a must-win season in 2026 — the capital is spent and the roster won't get younger.`,
-  "Jared Stuit": `Jared pulled off the most dramatic turnaround in Duck Dynasty history — from 1-13 and last place in 2024 to 11-3 runner-up in 2025 — but inexplicably traded away his 2027 first after the bounce-back, leaving zero first-round capital in the next class. At exactly 50.0% weighted win rate, he's caught between contender and pretender, and the open question is whether 2025 was a real leap or a one-year spike. The move: prove the 2025 season wasn't a fluke before committing to any more win-now trades.`,
-  "Aaron Fay": `Aaron is making a desperate charge out of Danger Zone: he acquired Joe Burrow and Tyler Warren from Tyler Goslinga, transforming his roster paper value overnight while giving up only 2028 and 2029 4th rounders. The catch is brutal — he's the oldest roster in the pond at 27.0 avg age, has no 2027 first, and carries a 23.3% weighted win rate after going 3-11 in 2025. The move: Burrow and Warren need to produce immediately, because the roster window with aging stars is short and the capital cupboard is bare.`,
-  "Vance Sipma": `Vance gave away his 2027 second and third to Trey Hugen and finds himself with middling assets — one 2027 first at the projected 1.05 slot and extra 4th rounders — paired with a 50.8% weighted win rate and 7-7 finish in 2025 that puts him in stuck territory. At 26.5 avg roster age he's neither young enough to rebuild patiently nor dominant enough to contend. The move: the 1.05 pick is real value — target it as the centerpiece of a package for a proven starter rather than drafting another developmental piece.`,
-  "Steve Vander Molen": `Steve had the best regular season record in 2025 at 13-1 then lost in the playoffs, having already traded his 2027 first and 2028 second to Ross Van Groningen. He's now stuck: 52.3% weighted win rate across all three seasons, no first-round picks in 2027, and a 26.4 avg roster age that won't improve on its own. The move: with no future capital to trade, he has to win with the core he has in 2026 — this is a season-defining year.`,
-  "Will Hoekstra": `Will has finished 9th, 9th, and 8th across three Duck Dynasty seasons — the pond's most reliable mediocrity — and his all-own-picks capital structure means he's never made a bold move in either direction. His 33.3% weighted win rate was pulled down hard by a 5-9 2025 finish, and continuing to draft into the middle of the pack isn't working. The move: the baseline all-own-picks capital is actually tradeable — use it to consolidate into one real difference-maker instead of rostering committee depth.`,
-  "Christian Manes": `Christian fell from 9-5 in 2024 to 1-13 and last place in 2025, then compounded the damage by trading what projects as the 1.01 pick — the best in the 2027 class — to Greg Mulder. With no first-round capital in 2027, a 13.3% weighted win rate, and a roster that clearly needs a reset, he's the clearest Danger Zone franchise in the pond. The silver lining is a 25.0 avg roster age; the move is to commit fully to the rebuild and treat 2026 as a development year rather than a false contention push.`,
+  "Ross Van Groningen": `Ross holds two 2027 firsts (his own + James's), Tyler's 2027 2nd, Christian's 2028 2nd, and two 2029 firsts (his own + Tyler's) — the deepest capital portfolio in the pond across all three draft years. Combined with a 67.8% weighted win rate, he's the only franchise genuinely competing now AND stacking for later. The Bryce Young trade (swapped Steve's 2027 1st + own 2027 2nd to Tyler for Young + Tyler's 2027 2nd + 2029 1st) upgraded the 2029 class while adding a QB with top-5 upside.`,
+  "Tyler Goslinga": `Tyler is building the most aggressive capital stockpile in Duck Dynasty history. Three 2027 firsts (his own + Ross's traded Steve pick + Aaron's), two 2028 firsts (own + Aaron's), two 2028 seconds — all acquired through the Burrow/Warren trade with Aaron and the Bryce Young deal with Ross. Six total premium picks across the next two draft classes. The rebuild is patient and calculated: let the 2027 draft class restock the roster wholesale rather than chasing incremental wins now.`,
+  "Jake Beukelman": `The reigning 2025 champion drafted conservatively in 2026 (Denzel Boston at 1.12, four late-round picks) and holds standard capital plus an extra 2027 4th from Ross. At the top of the standings with a championship roster, the strategy is clear: defend the title with proven players, not rookie lottery tickets. The 2026 draft class adds depth without mortgaging anything.`,
+  "Greg Mulder": `The 2024 champion holds two 2027 firsts — his own plus Christian's (projected early) — making him the most dangerous win-now franchise with reload potential. Only took two picks in the 2026 draft (Stribling and Bryce Lance), saving his powder for 2027 when that premium Christian pick should deliver a franchise-altering prospect. The patience is strategic, not passive.`,
+  "Trey Hugen": `Trey assembled a volume haul for 2027: two firsts (own + Christian's via earlier trade), two seconds (own + Vance's), and two thirds (own + Vance's). Six picks in the first three rounds of 2027 — more than any other manager. Whether the volume approach outperforms Tyler's premium-pick strategy depends on the 2027 class depth. The 2023 champion is betting on hitting multiple contributors rather than one star.`,
+  "James Lazette": `James has no 2027 first (traded to Ross) but recovered to standard capital everywhere else. The Carson Beck pick at 2.08 in the 2026 draft is a QB swing for the future, but the roster is built to compete now — 2026 is the year where the current core has to deliver because the capital spent won't regenerate on its own.`,
+  "Jared Stuit": `No 2027 first (traded away after the 2025 bounce-back) leaves Jared relying entirely on the current roster. The 2026 draft was QB-heavy (Drew Allar + Cade Klubnik) — a smart SuperFlex play that hedges whether 2025's 11-3 was real or a spike. If the QBs develop, the lack of first-round capital becomes irrelevant. If they don't, there's no easy way to reload.`,
+  "Aaron Fay": `Aaron went all-in: traded his 2027 1st, 2028 1st, 2028 2nd, AND 2029 1st to Tyler for Joe Burrow and Tyler Warren. That's four premium picks for two players — the most capital-intensive trade in Duck Dynasty history. The cupboard is truly bare: no first-round pick until 2029 at the earliest, no second-round pick until 2028. Burrow and Warren must deliver a championship or this becomes the most expensive failed gamble in the pond.`,
+  "Vance Sipma": `Vance used his 1.05 on Jadarian Price and added Kenyon Sadiq at 1.10 — addressing RB and TE needs directly. He traded his 2027 2nd and 3rd to Trey, leaving a single first plus extra 4ths as his only 2027 capital. The TE investment in a SuperFlex league is a luxury pick for a 50% win-rate franchise, but Sadiq's ceiling justifies the bet. Needs these rookies to hit immediately to break out of the middle.`,
+  "Steve Vander Molen": `Steve's 2027 first was traded to Ross (and later to Tyler), leaving no first-round pick in the next class. Despite the 2025 regular season dominance (13-1), the playoff exit and lack of future capital creates urgency: this is a win-now roster with no reload mechanism. Added Jonah Coleman (RB) at 1.09 and Garrett Nussmeier (QB) in the 2026 draft. If 2026 doesn't produce a championship, the window has likely closed.`,
+  "Will Hoekstra": `Will made the boldest move of his Duck Dynasty career in the 2026 draft: six picks including two first-rounders (Makai Lemon, Eli Stowers) and a QB (Taylen Green). Three seasons of 9th/9th/8th finishes finally prompted action. All own picks remain for 2027-2029, meaning the capital is intact for another aggressive move if the 2026 class doesn't break through. The question shifts from "will he do something?" to "was this enough?"`,
+  "Christian Manes": `Christian's rebuild is fully underway: six 2026 draft picks (Love, Concepcion, Simpson headlining) injected youth into a 1-13 roster, and while the 2027 1st was traded to Greg, he still holds all other future capital. The 25.0 avg roster age means time is on his side — if the 2026 rookies develop through a likely losing 2026 season, the 2027 and 2028 classes can complete the rebuild. Patience is the only viable strategy.`,
 };
 
 function DDFranchiseMatrix({ careerStats, rosterAges, mobile }) {
@@ -64434,16 +64431,27 @@ function DDFranchiseMatrix({ careerStats, rosterAges, mobile }) {
   const fvArr=points.map(p=>p.fv);
   const minFV=Math.min(...fvArr), maxFV=Math.max(...fvArr);
   const fvR=maxFV-minFV||1, medFV=(minFV+maxFV)/2;
-  const qC=(fv,w)=>fv>=medFV&&w>=0.5?"#2ecc71":fv<medFV&&w>=0.5?"#e9c46a":fv>=medFV?"#2176d2":"#d42b2b";
+  const wpArr=points.map(p=>p.winPct);
+  const wpLo=0.10, wpHi=0.80;
+  const wpR=wpHi-wpLo, medWP=(wpLo+wpHi)/2;
+  const qC=(fv,w)=>fv>=medFV&&w>=medWP?"#2ecc71":fv<medFV&&w>=medWP?"#e9c46a":fv>=medFV?"#2176d2":"#d42b2b";
   const qL=(fv,w)=>{
-    if(fv>=medFV&&w>=0.5) return "🟢 Winning + Future";
-    if(fv<medFV&&w>=0.5)  return "🟡 Win Now";
+    if(fv>=medFV&&w>=medWP) return "🟢 Winning + Future";
+    if(fv<medFV&&w>=medWP)  return "🟡 Win Now";
     if(fv>=medFV)          return "🔵 True Rebuild";
     return "🔴 Danger Zone";
   };
-  const Wsv=mobile?300:460, Hsv=260, PD=32, PW=Wsv-PD*2, PH=Hsv-PD*2;
+  const Wsv=mobile?320:560, Hsv=mobile?280:360, PD=36, PW=Wsv-PD*2, PH=Hsv-PD*2;
   const fetchWriteup = async (p) => {
     setSelected(p); setWriteup(null); setLoading(true);
+    // Use pre-generated static report if available
+    const staticReport = DD_FRANCHISE_REPORTS[p.mgr];
+    if (staticReport) {
+      setWriteup(staticReport);
+      setLoading(false);
+      return;
+    }
+    // Fallback: try API (requires ANTHROPIC_API_KEY in headers — will fail without one)
     const prompt = `Dynasty scouting report for Duck Dynasty (Sleeper dynasty league).\n\nManager: ${p.mgr}\nQuadrant: ${qL(p.fv,p.winPct)}\nWeighted Win% (2025=50%,2024=33%,2023=17%): ${(p.winPct*100).toFixed(1)}%\nFuture Value Score: ${(p.fv*100).toFixed(0)}/100 (60% draft capital + 40% roster youth)\nAvg Roster Age: ${p.age}\nDraft Capital: ${p.cap} units 2027-2029 (1.75x round multiplier)\nCapital: ${p.nC}/100 | Youth: ${p.nY}/100\n\nWrite 2-3 sentences. Direct, GM-level dynasty language. Reference quadrant, trajectory, one concrete strategic recommendation. No filler.`;
     try {
       const res = await fetch("https://api.anthropic.com/v1/messages",{
@@ -64467,30 +64475,50 @@ function DDFranchiseMatrix({ careerStats, rosterAges, mobile }) {
           <rect x={PD+PW/2} y={PD} width={PW/2} height={PH/2} fill="#0a1a0a" />
           <rect x={PD} y={PD+PH/2} width={PW/2} height={PH/2} fill="#1a0a0a" />
           <rect x={PD+PW/2} y={PD+PH/2} width={PW/2} height={PH/2} fill="#0a0a1a" />
-          <text x={PD+PW/4}   y={PD+12}    textAnchor="middle" fill="#e9c46a" fontSize="9" fontWeight="600">Win Now</text>
-          <text x={PD+PW*3/4} y={PD+12}    textAnchor="middle" fill="#2ecc71" fontSize="9" fontWeight="600">Winning + Future</text>
-          <text x={PD+PW/4}   y={Hsv-PD-4} textAnchor="middle" fill="#d42b2b" fontSize="9" fontWeight="600">Danger Zone</text>
-          <text x={PD+PW*3/4} y={Hsv-PD-4} textAnchor="middle" fill="#2176d2" fontSize="9" fontWeight="600">True Rebuild</text>
+          <text x={PD+PW/4}   y={PD+14}    textAnchor="middle" fill="#e9c46a" fontSize="10" fontWeight="600">Win Now</text>
+          <text x={PD+PW*3/4} y={PD+14}    textAnchor="middle" fill="#2ecc71" fontSize="10" fontWeight="600">Winning + Future</text>
+          <text x={PD+PW/4}   y={Hsv-PD-4} textAnchor="middle" fill="#d42b2b" fontSize="10" fontWeight="600">Danger Zone</text>
+          <text x={PD+PW*3/4} y={Hsv-PD-4} textAnchor="middle" fill="#2176d2" fontSize="10" fontWeight="600">True Rebuild</text>
           <line x1={PD+PW/2} y1={PD} x2={PD+PW/2} y2={PD+PH} stroke="#333" strokeWidth="1" strokeDasharray="4 3" />
           <line x1={PD} y1={PD+PH/2} x2={PD+PW} y2={PD+PH/2} stroke="#333" strokeWidth="1" strokeDasharray="4 3" />
           <rect x={PD} y={PD} width={PW} height={PH} fill="none" stroke="#222" strokeWidth="1" />
-          {points.map(p => {
-            const x=PD+((p.fv-minFV)/fvR)*PW;
-            const y=PD+(1-p.winPct)*PH;
-            const col=qC(p.fv,p.winPct);
-            const sel=selected?.mgr===p.mgr;
-            return (
-              <g key={p.mgr} onClick={()=>fetchWriteup(p)} style={{ cursor:"pointer" }}>
-                <circle cx={x} cy={y} r={sel?9:6} fill={col}
-                  fillOpacity={sel?1:0.82} stroke={sel?"#fff":"none"} strokeWidth="1.5" />
-                <text x={x} y={y-11} textAnchor="middle" fill={col} fontSize="8" fontWeight="600">{p.mgr.split(" ")[0]}</text>
-              </g>
-            );
-          })}
+          {(() => {
+            // Compute positions, then detect overlaps to flip labels below
+            const positioned = points.map(p => ({
+              ...p,
+              x: PD+((p.fv-minFV)/fvR)*PW,
+              y: PD+(1-(p.winPct-wpLo)/wpR)*PH,
+              col: qC(p.fv,p.winPct),
+            }));
+            // Determine which labels go below: if another label is within 18px vertically and 40px horizontally, flip the lower one
+            const labelBelow = {};
+            positioned.sort((a,b) => a.y - b.y); // sort top to bottom
+            for (let i = 0; i < positioned.length; i++) {
+              for (let j = i+1; j < positioned.length; j++) {
+                const dy = Math.abs(positioned[i].y - positioned[j].y);
+                const dx = Math.abs(positioned[i].x - positioned[j].x);
+                if (dy < 22 && dx < 44) {
+                  // Flip the lower one (j) to below its dot
+                  labelBelow[positioned[j].mgr] = true;
+                }
+              }
+            }
+            return positioned.map(p => {
+              const sel = selected?.mgr===p.mgr;
+              const below = labelBelow[p.mgr];
+              return (
+                <g key={p.mgr} onClick={()=>fetchWriteup(p)} style={{ cursor:"pointer" }}>
+                  <circle cx={p.x} cy={p.y} r={sel?10:7} fill={p.col}
+                    fillOpacity={sel?1:0.82} stroke={sel?"#fff":"none"} strokeWidth="1.5" />
+                  <text x={p.x} y={below ? p.y+18 : p.y-13} textAnchor="middle" fill={p.col} fontSize="9" fontWeight="600" stroke="#000" strokeWidth="2.5" paintOrder="stroke">{p.mgr.split(" ")[0]}</text>
+                </g>
+              );
+            });
+          })()}
           <text x={PD}    y={Hsv-3} fill="#444" fontSize="8">Low Future</text>
           <text x={PD+PW} y={Hsv-3} textAnchor="end" fill="#444" fontSize="8">High Future</text>
-          <text x={2} y={PD+4}  fill="#444" fontSize="8">100%</text>
-          <text x={2} y={PD+PH} fill="#444" fontSize="8">0%</text>
+          <text x={2} y={PD+4}  fill="#444" fontSize="8">{Math.round(wpHi*100)}%</text>
+          <text x={2} y={PD+PH} fill="#444" fontSize="8">{Math.round(wpLo*100)}%</text>
         </svg>
       </div>
       {selected && (
@@ -67172,19 +67200,19 @@ const DD_MANAGER_PROFILES = {
 };
 
 // ── DD DATA CONSTANTS ─────────────────────────────────────────────────────────
-// DD Pick Capital — update when picks are traded. Last updated: July 2026
+// DD Pick Capital — update when picks are traded. Last updated: July 31, 2026 (pulled from Sleeper traded_picks API)
 // [27_1st,27_2nd,27_3rd,27_4th, 28_1st,28_2nd,28_3rd,28_4th, 29_1st,29_2nd,29_3rd,29_4th]
 const DD_PICK_CAPITAL = {
-  "Aaron Fay":          [1,1,1,1, 1,1,1,0, 1,1,1,0],
-  "Christian Manes":    [0,1,1,1, 1,1,1,1, 1,1,1,1],
+  "Aaron Fay":          [0,1,1,1, 0,0,1,1, 0,1,1,1],
+  "Christian Manes":    [0,1,1,1, 1,0,1,1, 1,1,1,1],
   "Greg Mulder":        [2,1,1,1, 1,1,1,1, 1,1,1,1],
   "Jake Beukelman":     [1,1,1,2, 1,1,1,1, 1,1,1,1],
-  "James Lazette":      [0,1,1,1, 1,0,1,1, 1,1,1,1],
+  "James Lazette":      [0,1,1,1, 1,1,1,1, 1,1,1,1],
   "Jared Stuit":        [0,1,1,1, 1,1,1,1, 1,1,1,1],
   "Ross Van Groningen": [2,1,1,0, 1,2,1,1, 2,1,1,1],
-  "Steve Vander Molen": [0,1,1,1, 1,0,1,1, 1,1,1,1],
-  "Trey Hugen":         [1,2,2,0, 1,1,1,1, 1,1,1,1],
-  "Tyler Goslinga":     [3,2,1,1, 1,1,1,2, 0,1,1,2],
+  "Steve Vander Molen": [0,1,1,1, 1,1,1,1, 1,1,1,1],
+  "Trey Hugen":         [2,2,2,0, 1,1,1,1, 1,1,1,1],
+  "Tyler Goslinga":     [3,1,1,1, 2,2,1,1, 1,1,1,1],
   "Vance Sipma":        [1,0,0,2, 1,1,1,1, 1,1,1,1],
   "Will Hoekstra":      [1,1,1,1, 1,1,1,1, 1,1,1,1],
 };
@@ -67282,6 +67310,59 @@ const DD_DRAFT_DATA = {
       {rd:4,pk:46,slot:10,mgr:'Tyler Goslinga',pos:'RB',player:'DJ Giddens',team:'IND'},
       {rd:4,pk:47,slot:11,mgr:'Vance Sipma',pos:'TE',player:'Oronde Gadsden II',team:'LAC'},
       {rd:4,pk:48,slot:12,mgr:'Greg Mulder',pos:'TE',player:'Gunnar Helm',team:'TEN'},
+    ],
+  },
+  2026: {
+    rounds: 4, type: 'linear',
+    picks: [
+      {rd:1,pk:1,slot:1,mgr:'Tyler Goslinga',pos:'QB',player:'Fernando Mendoza',team:'LV'},
+      {rd:1,pk:2,slot:2,mgr:'Christian Manes',pos:'RB',player:'Jeremiyah Love',team:'ARI'},
+      {rd:1,pk:3,slot:3,mgr:'Tyler Goslinga',pos:'WR',player:'Carnell Tate',team:'TEN'},
+      {rd:1,pk:4,slot:4,mgr:'Ross Van Groningen',pos:'WR',player:'Jordyn Tyson',team:'NO'},
+      {rd:1,pk:5,slot:5,mgr:'Vance Sipma',pos:'RB',player:'Jadarian Price',team:'SEA'},
+      {rd:1,pk:6,slot:6,mgr:'Will Hoekstra',pos:'WR',player:'Makai Lemon',team:'PHI'},
+      {rd:1,pk:7,slot:7,mgr:'Christian Manes',pos:'WR',player:'KC Concepcion',team:'CLE'},
+      {rd:1,pk:8,slot:8,mgr:'Christian Manes',pos:'QB',player:'Ty Simpson',team:'LAR'},
+      {rd:1,pk:9,slot:9,mgr:'Steve Vander Molen',pos:'RB',player:'Jonah Coleman',team:'DEN'},
+      {rd:1,pk:10,slot:10,mgr:'Vance Sipma',pos:'TE',player:'Kenyon Sadiq',team:'NYJ'},
+      {rd:1,pk:11,slot:11,mgr:'Will Hoekstra',pos:'TE',player:'Eli Stowers',team:'PHI'},
+      {rd:1,pk:12,slot:12,mgr:'Jake Beukelman',pos:'WR',player:'Denzel Boston',team:'CLE'},
+      {rd:2,pk:13,slot:1,mgr:'Trey Hugen',pos:'WR',player:'Omar Cooper',team:'NYJ'},
+      {rd:2,pk:14,slot:2,mgr:'Trey Hugen',pos:'RB',player:'Nicholas Singleton',team:'TEN'},
+      {rd:2,pk:15,slot:3,mgr:'Tyler Goslinga',pos:'WR',player:'Chris Bell',team:'MIA'},
+      {rd:2,pk:16,slot:4,mgr:'Aaron Fay',pos:'WR',player:'Elijah Sarratt',team:'BAL'},
+      {rd:2,pk:17,slot:5,mgr:'Ross Van Groningen',pos:'RB',player:'Emmett Johnson',team:'KC'},
+      {rd:2,pk:18,slot:6,mgr:'Greg Mulder',pos:'WR',player:"De'Zhaun Stribling",team:'SF'},
+      {rd:2,pk:19,slot:7,mgr:'Ross Van Groningen',pos:'WR',player:'Antonio Williams',team:'WAS'},
+      {rd:2,pk:20,slot:8,mgr:'James Lazette',pos:'QB',player:'Carson Beck',team:'ARI'},
+      {rd:2,pk:21,slot:9,mgr:'Jake Beukelman',pos:'WR',player:'Germie Bernard',team:'PIT'},
+      {rd:2,pk:22,slot:10,mgr:'Jared Stuit',pos:'QB',player:'Drew Allar',team:'PIT'},
+      {rd:2,pk:23,slot:11,mgr:'Jared Stuit',pos:'RB',player:'Kaelon Black',team:'SF'},
+      {rd:2,pk:24,slot:12,mgr:'Jake Beukelman',pos:'RB',player:'Kaytron Allen',team:'WAS'},
+      {rd:3,pk:25,slot:1,mgr:'Tyler Goslinga',pos:'WR',player:'Chris Brazzell',team:'CAR'},
+      {rd:3,pk:26,slot:2,mgr:'Christian Manes',pos:'WR',player:'Malachi Fields',team:'NYG'},
+      {rd:3,pk:27,slot:3,mgr:'Will Hoekstra',pos:'WR',player:'Zachariah Branch',team:'ATL'},
+      {rd:3,pk:28,slot:4,mgr:'Aaron Fay',pos:'RB',player:'Mike Washington',team:'LV'},
+      {rd:3,pk:29,slot:5,mgr:'James Lazette',pos:'WR',player:'Skyler Bell',team:'BUF'},
+      {rd:3,pk:30,slot:6,mgr:'Will Hoekstra',pos:'WR',player:"Ja'Kobi Lane",team:'BAL'},
+      {rd:3,pk:31,slot:7,mgr:'Jake Beukelman',pos:'TE',player:'Max Klare',team:'LAR'},
+      {rd:3,pk:32,slot:8,mgr:'Tyler Goslinga',pos:'RB',player:'Demond Claiborne',team:'MIN'},
+      {rd:3,pk:33,slot:9,mgr:'Steve Vander Molen',pos:'QB',player:'Garrett Nussmeier',team:'KC'},
+      {rd:3,pk:34,slot:10,mgr:'Christian Manes',pos:'WR',player:'Ted Hurst',team:'TB'},
+      {rd:3,pk:35,slot:11,mgr:'Jared Stuit',pos:'QB',player:'Cade Klubnik',team:'NYJ'},
+      {rd:3,pk:36,slot:12,mgr:'Will Hoekstra',pos:'RB',player:'Adam Randall',team:'BAL'},
+      {rd:4,pk:37,slot:1,mgr:'Trey Hugen',pos:'WR',player:'Brenen Thompson',team:'LAC'},
+      {rd:4,pk:38,slot:2,mgr:'Christian Manes',pos:'TE',player:'Oscar Delp',team:'NO'},
+      {rd:4,pk:39,slot:3,mgr:'Will Hoekstra',pos:'QB',player:'Taylen Green',team:'CLE'},
+      {rd:4,pk:40,slot:4,mgr:'Aaron Fay',pos:'WR',player:'CJ Daniels',team:'LAR'},
+      {rd:4,pk:41,slot:5,mgr:'Vance Sipma',pos:'WR',player:'Caleb Douglas',team:'MIA'},
+      {rd:4,pk:42,slot:6,mgr:'Greg Mulder',pos:'WR',player:'Bryce Lance',team:'NO'},
+      {rd:4,pk:43,slot:7,mgr:'Ross Van Groningen',pos:'WR',player:'Kevin Coleman',team:'MIA'},
+      {rd:4,pk:44,slot:8,mgr:'James Lazette',pos:'TE',player:'John Michael Gyllenborg',team:'KC'},
+      {rd:4,pk:45,slot:9,mgr:'Steve Vander Molen',pos:'RB',player:"Le'Veon Moss",team:'MIA'},
+      {rd:4,pk:46,slot:10,mgr:'Tyler Goslinga',pos:'RB',player:'Seth McGowan',team:'IND'},
+      {rd:4,pk:47,slot:11,mgr:'Jared Stuit',pos:'TE',player:'Michael Trigg',team:'DAL'},
+      {rd:4,pk:48,slot:12,mgr:'Jake Beukelman',pos:'RB',player:"J'Mari Taylor",team:'JAX'},
     ],
   },
 };
