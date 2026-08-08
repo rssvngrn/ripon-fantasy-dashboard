@@ -58901,6 +58901,22 @@ const CANNED_MESSAGES = {
    "text": "Those Mountain Dew cocktail things were ahead of their time. I stand by them."
   },
   {
+   "trigger": "general",
+   "text": "Yo who needs another 805? I'm doing a fridge run."
+  },
+  {
+   "trigger": "general",
+   "text": "I'm grabbing a plate of nachos. Anyone want anything while I'm up?"
+  },
+  {
+   "trigger": "general",
+   "text": "This 805 is hitting different tonight. Must be the draft energy."
+  },
+  {
+   "trigger": "general",
+   "text": "Pass me one of those wings. The buffalo ones, not the lemon pepper."
+  },
+  {
    "trigger": "late_draft",
    "text": "Alright I'm getting reckless. Who's left that has a pulse?"
   },
@@ -59237,6 +59253,14 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "Pass me a Lagunitas if there's one left."
+  },
+  {
+   "trigger": "general",
+   "text": "One more Sierra Nevada and then I'm cutting myself off. 7am service tomorrow."
+  },
+  {
+   "trigger": "general",
+   "text": "Anyone else want pizza before I grab the last slice? Going once. Going twice."
   },
   {
    "trigger": "general",
@@ -59759,6 +59783,18 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "Being aggressively average in the regular season is actually my strategy."
+  },
+  {
+   "trigger": "general",
+   "text": "I need a refill. Anyone else running low? I'll grab from the cooler."
+  },
+  {
+   "trigger": "general",
+   "text": "My spreadsheet says I should eat more pizza to fuel better draft decisions."
+  },
+  {
+   "trigger": "general",
+   "text": "Three championships and this beer. Life is good. Cheers, boys."
   },
   {
    "trigger": "late_draft",
@@ -60531,6 +60567,22 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "If you want a beer, it's in the cooler. If you want a trade, come talk to me."
+  },
+  {
+   "trigger": "general",
+   "text": "Who's hungry? I'm firing up the grill. Burgers in 20."
+  },
+  {
+   "trigger": "general",
+   "text": "The tri-tip is almost done. Someone watch the smoker while I draft."
+  },
+  {
+   "trigger": "general",
+   "text": "Cooler's running low. Trey, you're closest — grab the backup case from the garage."
+  },
+  {
+   "trigger": "general",
+   "text": "Draft snacks tier list: wings S-tier, pizza A-tier, whatever Matthew brought C-tier."
   },
   {
    "trigger": "general",
@@ -61326,6 +61378,18 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
+   "text": "Anyone want to try my closet beer? New batch. It's... an acquired taste."
+  },
+  {
+   "trigger": "general",
+   "text": "I'm sneaking a sip of my homebrew under the desk. Don't tell Ross."
+  },
+  {
+   "trigger": "general",
+   "text": "Pepperoni and olive pizza is the GOAT combo. Someone fight me on this."
+  },
+  {
+   "trigger": "general",
    "text": "I went on a walk last night and listened to 3 hours of FF pods. I'm prepared."
   },
   {
@@ -62029,6 +62093,30 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "Imagine having a license plate punishment on your car for a full year. Motivation to not finish last."
+  },
+  {
+   "trigger": "general",
+   "text": "Alright who wants another beer? I'm getting up. Pliny for me, obviously."
+  },
+  {
+   "trigger": "general",
+   "text": "Pizza's getting cold. Someone grab a slice before Tyler eats the whole thing."
+  },
+  {
+   "trigger": "general",
+   "text": "I'm grabbing another Pliny. Anyone need anything from the kitchen?"
+  },
+  {
+   "trigger": "general",
+   "text": "Who brought the buffalo wings? These are elite. Almost as good as my draft strategy."
+  },
+  {
+   "trigger": "general",
+   "text": "The scotch is coming out. That means we're past pick 100. Tradition."
+  },
+  {
+   "trigger": "general",
+   "text": "Trey, stop hoarding the chips. There's 12 of us in here."
   }
  ],
  "Steve Vander Molen": [
@@ -62303,6 +62391,22 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "Tyler and I have vintage Champion bass boats. We're basically boat twins."
+  },
+  {
+   "trigger": "general",
+   "text": "Hold on, I'm grabbing a hazy IPA. Anyone else? I've got plenty in the cooler."
+  },
+  {
+   "trigger": "general",
+   "text": "The brisket's been on the Traeger since 6am. It'll be ready by pick 80."
+  },
+  {
+   "trigger": "general",
+   "text": "Yo someone pass me a plate. That pulled pork isn't going to eat itself."
+  },
+  {
+   "trigger": "general",
+   "text": "Tyler, you want another hazy? I'm up. These Cask & Barrel ones are elite."
   },
   {
    "trigger": "late_draft",
@@ -62769,6 +62873,22 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "Being cheap isn't a weakness. It's a superpower in auction formats."
+  },
+  {
+   "trigger": "general",
+   "text": "I'm running to Jack in the Box. Anyone want tacos? 99 cents. Best deal in Ripon."
+  },
+  {
+   "trigger": "general",
+   "text": "Cracking another Busch Latte. The official beer of fiscal discipline."
+  },
+  {
+   "trigger": "general",
+   "text": "Someone pass the chips. Stars and scrubs applies to snacks too — I eat the cheap stuff."
+  },
+  {
+   "trigger": "general",
+   "text": "Save money on beer, save money on draft picks, spend it all at Jack in the Box. The Trey Hugen way."
   },
   {
    "trigger": "late_draft",
@@ -63616,6 +63736,14 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
+   "text": "Someone toss me another Miller Lite. Almond harvest season means I earned it."
+  },
+  {
+   "trigger": "general",
+   "text": "I'm running to grab some jerky from the truck. Anyone want anything?"
+  },
+  {
+   "trigger": "general",
    "text": "I fashioned this 'stache after Alan Jackson. It's a lifestyle."
   },
   {
@@ -64130,7 +64258,7 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "league_lore",
-   "text": "Future HANDOFF.md material happening live."
+   "text": "Future group chat screenshot material happening live."
   },
   {
    "trigger": "league_lore",
@@ -64465,7 +64593,7 @@ function generateChatMessages(player, price, winner, nominator, allRosters, allB
     }
   }
 
-  // General chatter (15% chance)
+  // General chatter (15% chance — complements the between-pick ambient chat system)
   if (Math.random() < 0.15) {
     const chatterers = managers.filter(m => m !== userTeam).sort(() => Math.random() - 0.5);
     for (const m of chatterers.slice(0, 1)) {
@@ -65166,6 +65294,169 @@ const BOT_PERSONALITY_TRAITS = {
   "Vance Sipma": { budgetBlower: false, earlyAggression: 0.8, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0.15, mobileQBBonus: 0.35, depthHunter: false, recklessLate: true, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
 };
 
+// ── DYNAMIC NOMINATION ALGORITHM ──
+// Weighted, probabilistic nomination strategy that simulates realistic draft phases.
+// Early = stars & top talent, Mid = starters & depth, Late = fillers & K/DEF
+function pickNominationTarget(nominator, available, currentRosters, currentBudgets, allRosters, order, botProfiles) {
+  if (available.length === 0) return null;
+  const bot = botProfiles[nominator];
+  const personality = BOT_PERSONALITY_TRAITS[nominator] || {};
+  const roster = currentRosters[nominator] || [];
+  const slotsLeft = 15 - roster.length;
+  const budget = currentBudgets[nominator] || 0;
+
+  // Determine draft phase based on total picks made across all teams
+  const totalPicked = Object.values(allRosters).reduce((sum, r) => sum + (r || []).length, 0);
+  const totalSlots = order.length * 15; // 12 teams × 15 = 180
+  const draftProgress = totalPicked / totalSlots; // 0.0 → 1.0
+
+  // Phase thresholds
+  const isEarly = draftProgress < 0.35;
+  const isMid = draftProgress >= 0.35 && draftProgress < 0.70;
+  const isLate = draftProgress >= 0.70;
+
+  // Starter slots still open for nominator
+  const starterNeeds = { QB:1, RB:2, WR:2, TE:1, K:1, DEF:1 };
+  const filled = {};
+  roster.forEach(p => { filled[p.pos] = (filled[p.pos] || 0) + 1; });
+  const needsStarter = (pos) => (filled[pos] || 0) < (starterNeeds[pos] || 0);
+
+  // Tier classification by value
+  const tier1 = available.filter(p => p.value >= 40); // elite
+  const tier2 = available.filter(p => p.value >= 20 && p.value < 40); // starters
+  const tier3 = available.filter(p => p.value >= 8 && p.value < 20); // depth
+  const tier4 = available.filter(p => p.value < 8 && p.pos !== "K" && p.pos !== "DEF"); // bench
+  const kickers = available.filter(p => p.pos === "K");
+  const defenses = available.filter(p => p.pos === "DEF");
+  const kDef = [...kickers, ...defenses];
+
+  // Gaussian jitter: Box-Muller transform for slight randomness in value perception
+  const gaussianJitter = () => {
+    const u1 = Math.random();
+    const u2 = Math.random();
+    return Math.sqrt(-2 * Math.log(u1 || 0.001)) * Math.cos(2 * Math.PI * u2);
+  };
+
+  // Build nomination pool based on phase
+  let candidatePool = [];
+  const roll = Math.random();
+
+  if (isEarly) {
+    // EARLY PHASE: 85% top talent, 15% wildcard
+    if (roll < 0.85) {
+      // Primary: Tier 1 + top Tier 2 skill positions (QB/RB/WR/TE)
+      candidatePool = [...tier1, ...tier2.filter(p => p.pos !== "K" && p.pos !== "DEF")];
+      if (candidatePool.length === 0) candidatePool = available.filter(p => p.pos !== "K" && p.pos !== "DEF");
+    } else {
+      // Wildcard: mid-tier starter, high-upside sleeper, or a top K/DEF to burn budgets
+      const wildcardOptions = [
+        ...tier3.slice(0, 10), // mid-tier sleeper
+        ...(kDef.length > 0 && personality.kDefBait ? kDef.slice(0, 3) : []), // K/DEF bait
+        ...tier2.filter(p => p.pos === "TE" || p.pos === "QB").slice(0, 3), // positional scarcity
+      ];
+      candidatePool = wildcardOptions.length > 0 ? wildcardOptions : tier2;
+    }
+  } else if (isMid) {
+    // MID PHASE: Focus Tier 2/3, occasional K/DEF
+    // First check: if nominator has empty starter slots and is getting low on picks, prioritize those
+    const midUrgentPositions = Object.entries(starterNeeds).filter(([pos, need]) => (filled[pos] || 0) < need && pos !== "K" && pos !== "DEF").map(([pos]) => pos);
+    const kDefRoll = Math.random();
+    if (midUrgentPositions.length > 0 && slotsLeft <= midUrgentPositions.length + 4) {
+      // Mid-draft urgency: nominate for unfilled skill position starters
+      candidatePool = available.filter(p => midUrgentPositions.includes(p.pos));
+      if (candidatePool.length === 0) candidatePool = [...tier2, ...tier3].filter(p => p.pos !== "K" && p.pos !== "DEF");
+    } else if (kDefRoll < 0.12 && kDef.length > 0 && (needsStarter("K") || needsStarter("DEF"))) {
+      // 10-15% chance: nominate K or DEF
+      candidatePool = kDef;
+    } else {
+      // Primary: Tier 2 and Tier 3 skill positions
+      candidatePool = [...tier2, ...tier3].filter(p => p.pos !== "K" && p.pos !== "DEF");
+      // Include Tier 1 leftovers if any (they absolutely get nominated)
+      if (tier1.length > 0) candidatePool = [...tier1, ...candidatePool];
+      if (candidatePool.length === 0) candidatePool = available.filter(p => p.pos !== "K" && p.pos !== "DEF");
+    }
+  } else {
+    // LATE PHASE: Bench, fillers, remaining K/DEF
+    // CRITICAL: If nominator has empty starter slots, ALWAYS target those positions first.
+    // This ensures every team fills their starting lineup before drafting bench depth.
+    const urgentPositions = Object.entries(starterNeeds).filter(([pos, need]) => (filled[pos] || 0) < need).map(([pos]) => pos);
+    // Also check FLEX (need 6 total RB/WR/TE)
+    const flexCount = roster.filter(p => p.pos === "RB" || p.pos === "WR" || p.pos === "TE").length;
+    if (flexCount < 6 && !urgentPositions.includes("RB")) urgentPositions.push("RB", "WR", "TE"); // FLEX-eligible
+
+    const urgentPlayers = available.filter(p => urgentPositions.includes(p.pos));
+
+    if (urgentPlayers.length > 0 && urgentPositions.length > 0) {
+      // ALWAYS nominate for unfilled starter positions in late phase — no exceptions
+      candidatePool = urgentPlayers;
+    } else {
+      candidatePool = [...tier3, ...tier4, ...kDef];
+      // Still grab any remaining tier 2+ if they fell
+      if (tier2.length > 0) candidatePool = [...tier2, ...candidatePool];
+      if (tier1.length > 0) candidatePool = [...tier1, ...candidatePool];
+      if (candidatePool.length === 0) candidatePool = [...available];
+    }
+  }
+
+  // Fallback: if pool is empty somehow, use all available
+  if (candidatePool.length === 0) candidatePool = [...available];
+
+  // Score each candidate with jitter and context-aware weighting
+  let bestPlayer = candidatePool[0];
+  let bestScore = -Infinity;
+
+  candidatePool.forEach(p => {
+    let score = p.value;
+
+    // Gaussian jitter on value perception (±3-5 points)
+    score += gaussianJitter() * (isEarly ? 3 : isMid ? 4 : 5);
+
+    // Positional allocation preference from bot profile
+    const posW = bot ? (bot.posAlloc[p.pos] || 0.1) * 3 : 1;
+    score *= posW;
+
+    // Positional need bonus: unfilled starter slot = big bonus
+    if (needsStarter(p.pos)) {
+      score *= 1.6;
+    } else if (slotsLeft <= 5) {
+      // Late draft: penalize positions already filled beyond starters
+      score *= 0.5;
+    }
+
+    // Manager personality biases
+    if (personality.earlyAggression > 1.0 && isEarly) {
+      // Aggressive early nominators target the best available
+      score += p.value * (personality.earlyAggression - 1.0) * 0.5;
+    }
+    if (personality.kDefBait && (p.pos === "K" || p.pos === "DEF") && !isLate) {
+      // K/DEF baiters occasionally throw them up early to drain budgets
+      score += 8 + Math.random() * 10;
+    }
+    if (personality.depthHunter && tier3.includes(p)) {
+      // Depth hunters slightly favor mid-tier over stars
+      score += 5;
+    }
+    if (personality.mobileQBBonus > 0 && p.pos === "QB") {
+      score += personality.mobileQBBonus * 12;
+    }
+
+    // Budget context: if nominator is budget-constrained, nominate expensive players
+    // to drain OTHER teams' budgets (can't buy them yourself, so put them up)
+    if (budget < 30 && slotsLeft > 3 && p.value > 25) {
+      score += 10; // "budget drain" strategy — nominate what you can't afford
+    }
+
+    // Avoid nominating K/DEF in early phase unless wildcard or bait
+    if (isEarly && (p.pos === "K" || p.pos === "DEF") && !personality.kDefBait) {
+      score -= 30;
+    }
+
+    if (score > bestScore) { bestScore = score; bestPlayer = p; }
+  });
+
+  return bestPlayer;
+}
+
 // Manager avatar URLs (served from public/avatars/)
 const MOCK_DRAFT_AVATAR_URL = (name) => `./avatars/${name}.jpg`;
 
@@ -65424,7 +65715,13 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
   // Early vs late draft phase (based on roster fill %)
   const draftProgress = rosterSoFar.length / 15;
   if (draftProgress < 0.4) {
-    perceivedValue *= (traits.earlyAggression || 1.0);
+    // Passive managers still compete for starter positions they need — floor at 0.85
+    const STARTER_NEEDS = { QB:1, RB:2, WR:2, TE:1, K:1, DEF:1 };
+    const posFilledCount = rosterSoFar.filter(p => p.pos === pos).length;
+    const posNeeded = STARTER_NEEDS[pos] || 0;
+    const needsStarter = posFilledCount < posNeeded;
+    const earlyMod = traits.earlyAggression || 1.0;
+    perceivedValue *= needsStarter ? Math.max(earlyMod, 0.85) : earlyMod;
   } else if (draftProgress > 0.7) {
     perceivedValue *= (traits.latePassivity || 1.0);
   }
@@ -65446,8 +65743,15 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
   }
 
   // Lurker/sniper (Trey, Greg C) — patient, waits for value, doesn't jump early
+  // Exception: still competes for positions they need to fill their starting lineup
   if (traits.lurkerSniper && draftProgress < 0.3 && baseValue > 30) {
-    perceivedValue *= 0.85; // less likely to get in early bidding wars on studs
+    const STARTER_SLOTS = { QB:1, RB:2, WR:2, TE:1, K:1, DEF:1 };
+    const posHave = rosterSoFar.filter(p => p.pos === pos).length;
+    const posNeed = STARTER_SLOTS[pos] || 0;
+    if (posHave >= posNeed) {
+      perceivedValue *= 0.85; // only lurk on positions already filled
+    }
+    // If they still need a starter here, don't penalize — they'll compete
   }
 
   // Late draft bully (Trey) — has budget left when others don't, dominates bench picks
@@ -65461,14 +65765,50 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
   }
 
   // Depth hunter (Trey) — sweet spot for mid-tier value plays
+  // Exception: won't penalize elite players at positions still needed for starting lineup
   if (traits.depthHunter) {
     if (baseValue >= 8 && baseValue <= 20) perceivedValue *= 1.15;
-    if (baseValue > 40) perceivedValue *= 0.8;
+    if (baseValue > 40) {
+      const DH_SLOTS = { QB:1, RB:2, WR:2, TE:1, K:1, DEF:1 };
+      const dhFilled = rosterSoFar.filter(p => p.pos === pos).length;
+      const dhNeeded = DH_SLOTS[pos] || 0;
+      if (dhFilled >= dhNeeded) {
+        perceivedValue *= 0.8; // only penalize if starter slot is already filled
+      }
+    }
   }
 
-  // K/DEF baitable (Greg Cady) — will bid above $1 on kickers/defenses
+  // K/DEF baitable (Greg Cady) — will occasionally bid $2-3 on kickers/defenses
   if (traits.kDefBait && (pos === "K" || pos === "DEF")) {
-    perceivedValue = Math.max(perceivedValue, 2 + Math.random() * 2);
+    perceivedValue = Math.max(perceivedValue, 2 + Math.random() * 1); // cap at $3 max
+  }
+
+  // ── KICKER HARD CAP ──
+  // Most kickers should go for $1. Only 1-2 per draft go $2-3 max.
+  // Josh bids up kickers to troll Greg C (~30% chance), everyone else refuses to bid over $1.
+  // Managers who need a kicker will nominate one when they have to — no need to overbid.
+  if (pos === "K") {
+    if (traits.kDefBait) {
+      // Greg Cady — gets baited up to $3 max
+      perceivedValue = Math.min(perceivedValue, 3);
+    } else if (bot.name === "Joshua Van Groningen" && Math.random() < 0.30) {
+      // Josh trolls Greg C's kickers — pushes to $2-3
+      perceivedValue = Math.max(perceivedValue, 2 + Math.floor(Math.random() * 2));
+      perceivedValue = Math.min(perceivedValue, 3);
+    } else {
+      // Everyone else: $1 kickers, period.
+      perceivedValue = Math.min(perceivedValue, 1);
+    }
+  }
+
+  // ── DEF HARD CAP ──
+  // Defenses go for $1. Managers who need one will nominate one when they have to.
+  if (pos === "DEF") {
+    if (traits.kDefBait) {
+      perceivedValue = Math.min(perceivedValue, 3); // Greg C baitable
+    } else {
+      perceivedValue = Math.min(perceivedValue, 1); // $1 defenses, period.
+    }
   }
 
   // Mobile QB bonus (Vance) — overpays for running QBs, Josh Allen loyalty
@@ -65502,16 +65842,44 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
   const needed = SLOTS[pos] || 0;
   const flexNeeded = pos === "RB" || pos === "WR" || pos === "TE";
   const flexFilled = rosterSoFar.filter(p => p.pos === "RB" || p.pos === "WR" || p.pos === "TE").length >= 6;
+
+  // Budget constraint
+  const slotsRemaining = 15 - rosterSoFar.length;
+  const maxBid = budgetLeft - (slotsRemaining - 1);
+
+  // ── STARTER URGENCY: must fill starting lineup before bench ──
+  // Count how many starter slots are still open
+  const openStarterSlots = Object.entries(SLOTS).reduce((sum, [p, need]) => {
+    const have = rosterSoFar.filter(r => r.pos === p).length;
+    return sum + Math.max(0, need - have);
+  }, 0);
+  // Include FLEX slot (needs RB/WR/TE total >= 6)
+  const flexSlotOpen = rosterSoFar.filter(p => p.pos === "RB" || p.pos === "WR" || p.pos === "TE").length < 6 ? 1 : 0;
+  const totalOpenStarters = openStarterSlots + flexSlotOpen;
+
+  // If this player fills an EMPTY starter slot and we're running out of picks, massive boost
+  // (Does NOT apply to K/DEF — those have hard $1 caps and managers will nominate them when needed)
+  const needsThisPos = filled < needed;
+  const urgency = (totalOpenStarters > 0 && slotsRemaining <= totalOpenStarters + 3);
+  const isKDef = pos === "K" || pos === "DEF";
+
+  if (urgency && needsThisPos && !isKDef) {
+    // Critical: we MUST fill this slot — boost valuation hard so we don't get outbid
+    perceivedValue *= 2.5 + (totalOpenStarters / slotsRemaining) * 0.5;
+  } else if (needsThisPos && slotsRemaining <= 9 && !isKDef) {
+    // Moderate urgency: starter slot still open with ≤9 picks left — override personality passivity
+    perceivedValue *= 1.6;
+  } else if (needsThisPos && slotsRemaining <= 12 && !isKDef) {
+    // Mild urgency: getting late, should be more aggressive on needed starters
+    perceivedValue *= 1.25;
+  }
+
   if (filled >= needed && !flexNeeded) perceivedValue *= 0.3;
   else if (filled >= needed && flexNeeded && !flexFilled) perceivedValue *= 0.7;
   else if (filled >= needed && flexFilled) perceivedValue *= 0.4;
 
   // Bench spots
   if (rosterSoFar.length >= 13) perceivedValue *= 0.5;
-
-  // Budget constraint
-  const slotsRemaining = 15 - rosterSoFar.length;
-  const maxBid = budgetLeft - (slotsRemaining - 1);
 
   // ── BUDGET PRESSURE: force bots to spend their money ──
   // If a bot has way more budget than needed, boost their valuations
@@ -65539,6 +65907,16 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
   const finalValue = Math.min(Math.floor(cappedValue), maxBid);
 
   // Will they bid?
+  // ── STARTER-LOCK RULE: if remaining picks <= open starter slots, ONLY bid on needed starters ──
+  // This prevents managers from wasting their last picks on bench players when they still need K/DEF/TE/etc.
+  // A player "fills a starter need" if it's at a position with an empty starter slot OR fills the FLEX
+  const fillsFlexNeed = (flexSlotOpen > 0 && (pos === "RB" || pos === "WR" || pos === "TE"));
+  const fillsStarterNeed = needsThisPos || fillsFlexNeed;
+  const starterLocked = (totalOpenStarters > 0 && slotsRemaining <= totalOpenStarters);
+  if (starterLocked && !fillsStarterNeed) {
+    return { willBid: false, maxBid: 0, bidTo: 0, delay: 0 };
+  }
+
   const willBid = currentBid < finalValue && currentBid < maxBid;
 
   // Bid increment: aggressive bots jump more, patient bots go $1 at a time
@@ -65715,6 +66093,35 @@ function MockDraftTab() {
 
   // Nomination logic
   const triggerNomination = (order, idx, currentRosters, currentBudgets, pool) => {
+    // ── BETWEEN-PICK AMBIENT CHAT ──
+    // ~35% chance of a random idle message firing BEFORE the next nomination
+    // This creates the "guys chatting between picks" feel
+    if (idx > 0 && Math.random() < 0.35) {
+      const chatterers = order.filter(m => m !== userTeam).sort(() => Math.random() - 0.5);
+      for (const m of chatterers.slice(0, 1)) {
+        const vibe = VIBE_MAP[m] || "any";
+        if (Math.random() < (VIBE_FREQUENCY[vibe] || 0.3)) {
+          const msgPool = (CANNED_MESSAGES[m] || []).filter(msg => msg.trigger === "general" && !usedMessagesRef.current.has(m + "|" + msg.text));
+          if (msgPool.length > 0) {
+            const msg = msgPool[Math.floor(Math.random() * msgPool.length)];
+            usedMessagesRef.current.add(m + "|" + msg.text);
+            const msgId = Date.now() + Math.random();
+            setChatMessages(prev => [...prev, { manager: m, text: msg.text, trigger: "general", id: msgId }]);
+            // Show bubble above avatar
+            const bubbleId = Date.now() + Math.random();
+            setActiveBubbles(prev => ({ ...prev, [m]: { text: msg.text, id: bubbleId } }));
+            setTimeout(() => {
+              setActiveBubbles(prev => {
+                const copy = { ...prev };
+                if (copy[m] && copy[m].id === bubbleId) delete copy[m];
+                return copy;
+              });
+            }, 5000);
+          }
+        }
+      }
+    }
+
     const nominator = order[idx % order.length];
     if ((currentRosters[nominator] || []).length >= TOTAL_ROSTER) {
       const nextIdx = idx + 1;
@@ -65727,17 +66134,9 @@ function MockDraftTab() {
       DraftSounds.yourTurn();
       return;
     }
-    const bot = botProfiles[nominator];
     const available = pool.filter(p => p !== null);
     if (available.length === 0) { setPhase("complete"); return; }
-    let bestPlayer = available[0];
-    let bestScore = -1;
-    available.slice(0, 40).forEach(p => {
-      const posW = bot ? (bot.posAlloc[p.pos] || 0.1) * 4 : 1;
-      const needed = (currentRosters[nominator] || []).filter(r => r.pos === p.pos).length < ({ QB:1, RB:2, WR:2, TE:1, K:1, DEF:1 }[p.pos] || 0);
-      const score = p.value * posW * (needed ? 1.5 : 0.8) + Math.random() * 5;
-      if (score > bestScore) { bestScore = score; bestPlayer = p; }
-    });
+    const bestPlayer = pickNominationTarget(nominator, available, currentRosters, currentBudgets, currentRosters, order, botProfiles);
     // Smart opening bid: high-value players open at ~40-60% of value, cheap players at $1
     const openBid = bestPlayer.value >= 25 ? Math.floor(bestPlayer.value * (0.4 + Math.random() * 0.2)) : bestPlayer.value >= 10 ? Math.floor(bestPlayer.value * 0.3) : 1;
     setLog(prev => [...prev, `📢 ${nominator} nominates ${bestPlayer.name} (${bestPlayer.pos}) — opening bid $${openBid}`]);
@@ -65926,18 +66325,10 @@ function MockDraftTab() {
       }
       if (!nominator || curPool.length === 0) break;
 
-      // Pick best player for nominator (same logic as bot nomination)
-      const bot = botProfiles[nominator];
+      // Pick best player for nominator (dynamic phase-based nomination)
       const available = curPool.filter(p => p !== null);
       if (available.length === 0) break;
-      let bestPlayer = available[0];
-      let bestScore = -1;
-      available.slice(0, 40).forEach(p => {
-        const posW = bot ? (bot.posAlloc[p.pos] || 0.1) * 4 : 1;
-        const needed = (curRosters[nominator] || []).filter(r => r.pos === p.pos).length < ({ QB:1, RB:2, WR:2, TE:1, K:1, DEF:1 }[p.pos] || 0);
-        const score = p.value * posW * (needed ? 1.5 : 0.8) + Math.random() * 5;
-        if (score > bestScore) { bestScore = score; bestPlayer = p; }
-      });
+      const bestPlayer = pickNominationTarget(nominator, available, curRosters, curBudgets, curRosters, order, botProfiles);
 
       // Opening bid
       const openBid = bestPlayer.value >= 25 ? Math.floor(bestPlayer.value * (0.4 + Math.random() * 0.2)) : bestPlayer.value >= 10 ? Math.floor(bestPlayer.value * 0.3) : 1;
@@ -66212,28 +66603,34 @@ function MockDraftTab() {
     const userMaxBid = userBudget - (userSlotsLeft - 1);
 
     // Roster slot layout (rows)
-    const SLOT_ROWS = ["QB","RB","RB","WR","WR","TE","FLEX","K","DEF"];
+    const SLOT_ROWS = ["QB","RB","RB","WR","WR","TE","FLEX","K","DEF","BN","BN","BN","BN","BN","BN"];
 
     // Build roster grid data: for each manager, which player is in each slot
     const getRosterSlots = (manager) => {
       const r = rosters[manager] || [];
       const slots = SLOT_ROWS.map(slot => null);
       const used = new Set();
-      // Fill required positions first
+      // Fill required positions first (QB, RB×2, WR×2, TE, K, DEF)
       r.forEach(p => {
         if (used.has(p.id || p.name)) return;
-        for (let i = 0; i < SLOT_ROWS.length; i++) {
+        for (let i = 0; i < 9; i++) {
           if (slots[i]) continue;
+          if (i === 6) continue; // skip FLEX for now
           if (SLOT_ROWS[i] === p.pos) { slots[i] = p; used.add(p.id || p.name); break; }
         }
       });
       // Fill FLEX with remaining RB/WR/TE
       r.forEach(p => {
         if (used.has(p.id || p.name)) return;
-        const flexIdx = SLOT_ROWS.indexOf("FLEX");
-        if (!slots[flexIdx] && (p.pos === "RB" || p.pos === "WR" || p.pos === "TE")) {
-          slots[flexIdx] = p; used.add(p.id || p.name);
+        if (!slots[6] && (p.pos === "RB" || p.pos === "WR" || p.pos === "TE")) {
+          slots[6] = p; used.add(p.id || p.name);
         }
+      });
+      // Fill bench with remaining players
+      const benchPlayers = r.filter(p => !used.has(p.id || p.name));
+      let benchIdx = 9; // BN slots start at index 9
+      benchPlayers.forEach(p => {
+        if (benchIdx < 15) { slots[benchIdx] = p; benchIdx++; }
       });
       return slots;
     };
@@ -66294,13 +66691,19 @@ function MockDraftTab() {
             {/* Header row — slot labels */}
             {SLOT_ROWS.map((slot, rowIdx) => (
               <React.Fragment key={rowIdx}>
-                <div style={{ padding:"4px 8px", fontSize:10, color:"#8b949e", fontWeight:700, borderBottom:"1px solid #1e2a3a", borderRight:"1px solid #1e2a3a", display:"flex", alignItems:"center", background:"#161b22", position:"sticky", left:0, zIndex:2 }}>{slot}</div>
+                <div style={{ padding:"4px 8px", fontSize:10, color: POS_COLOR[slot] || "#8b949e", fontWeight:700, borderBottom:"1px solid #1e2a3a", borderRight:"1px solid #1e2a3a", display:"flex", alignItems:"center", background:"#161b22", position:"sticky", left:0, zIndex:2 }}>{slot}</div>
                 {nomOrder.map(m => {
                   const slots = getRosterSlots(m);
                   const player = slots[rowIdx];
                   const isUser = m === userTeam;
+                  const slotPos = player ? player.pos : SLOT_ROWS[rowIdx];
+                  const posAccent = POS_COLOR[slotPos] || POS_COLOR[SLOT_ROWS[rowIdx]] || "#333";
+                  // Position-tinted background for filled cells (Sleeper-style)
+                  const cellBg = player
+                    ? (isUser ? posAccent + "30" : posAccent + "18")
+                    : "#0d1117";
                   return (
-                    <div key={m+rowIdx} style={{ padding:"3px 6px", fontSize:10, borderBottom:"1px solid #1e2a3a", borderRight:"1px solid #141a22", background: player ? (isUser ? "#1c2d4a" : "#161b22") : "transparent", minHeight:28, display:"flex", alignItems:"center" }}>
+                    <div key={m+rowIdx} style={{ padding:"3px 6px", fontSize:10, borderBottom:"1px solid #1e2a3a", borderRight:"1px solid #141a22", background: cellBg, minHeight:28, display:"flex", alignItems:"center", borderLeft: player ? `2px solid ${posAccent}66` : "2px solid transparent" }}>
                       {player ? (
                         <div>
                           <span style={{ color: isUser ? "#6bb3ff" : "#c9d1d9", fontWeight:600, fontSize:10 }}>{player.name.length > 14 ? player.name.substring(0,12)+"…" : player.name}</span>
