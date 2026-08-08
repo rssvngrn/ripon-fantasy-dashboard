@@ -64475,7 +64475,7 @@ function addEmojiReactions(messages, managers, userTeam, spokenManagers) {
   const totalScore = scored.reduce((s, x) => s + x.score, 0);
 
   // Managers who haven't spoken can react
-  const silentManagers = managers.filter(m => m !== userTeam && !spokenManagers.has(m));
+  const silentManagers = managers.filter(m => !spokenManagers.has(m));
   // Each silent manager has a chance to react to ONE message with ONE emoji
   for (const m of silentManagers) {
     const vibe = VIBE_MAP[m] || "any";
@@ -64503,7 +64503,7 @@ function addEmojiReactions(messages, managers, userTeam, spokenManagers) {
   const hotTakes = messages.filter(m => m.isHotTake);
   for (const ht of hotTakes) {
     if (!ht.reactions) ht.reactions = [];
-    const allManagers = managers.filter(m => m !== userTeam && m !== ht.manager);
+    const allManagers = managers.filter(m => m !== ht.manager);
     while (ht.reactions.length < 9) {
       const reactor = allManagers[Math.floor(Math.random() * allManagers.length)];
       const emojiPool = REACTION_EMOJIS[ht.trigger] || REACTION_EMOJIS.general;
@@ -64556,7 +64556,7 @@ function generateChatMessages(player, price, winner, nominator, allRosters, allB
 
   // Check each trigger and pick reactors
   for (const trigger of triggers) {
-    const reactors = managers.filter(m => m !== winner && m !== userTeam);
+    const reactors = managers.filter(m => m !== winner);
     for (const m of reactors) {
       const vibe = VIBE_MAP[m] || "any";
       let freq = VIBE_FREQUENCY[vibe] || 0.3;
@@ -64584,7 +64584,7 @@ function generateChatMessages(player, price, winner, nominator, allRosters, allB
 
   // Outbid messages
   if (triggers.length > 0) {
-    const losers = managers.filter(m => m !== winner && m !== userTeam);
+    const losers = managers.filter(m => m !== winner);
     const outbidCandidates = losers.sort(() => Math.random() - 0.5).slice(0, 2);
     for (const m of outbidCandidates) {
       if (Math.random() > 0.3) continue;
@@ -64595,7 +64595,7 @@ function generateChatMessages(player, price, winner, nominator, allRosters, allB
 
   // General chatter (15% chance — complements the between-pick ambient chat system)
   if (Math.random() < 0.15) {
-    const chatterers = managers.filter(m => m !== userTeam).sort(() => Math.random() - 0.5);
+    const chatterers = managers.sort(() => Math.random() - 0.5);
     for (const m of chatterers.slice(0, 1)) {
       const vibe = VIBE_MAP[m] || "any";
       if (Math.random() < (VIBE_FREQUENCY[vibe] || 0.3)) {
@@ -64629,7 +64629,7 @@ function generateChatMessages(player, price, winner, nominator, allRosters, allB
     if (!msg.text) continue;
 
     // For rival_pick messages, the rival is always the winner — auto-thread to winner
-    if (msg.trigger === "rival_pick" && winner !== userTeam && winner !== msg.manager) {
+    if (msg.trigger === "rival_pick" && winner !== msg.manager) {
       if (Math.random() < 0.6) {
         const replyPool = (CANNED_MESSAGES[winner] || []).filter(m => m.trigger === "reply_to_mention" && !usedMessages.has(winner + "|" + m.text));
         if (replyPool.length > 0) {
@@ -64643,7 +64643,7 @@ function generateChatMessages(player, price, winner, nominator, allRosters, allB
 
     // Check for name mentions in message text
     for (const [nameRef, fullName] of Object.entries(nameToManager)) {
-      if (fullName === msg.manager || fullName === userTeam) continue;
+      if (fullName === msg.manager) continue;
       if (msg.text.includes(nameRef)) {
         if (Math.random() < 0.6) {
           const replyPool = (CANNED_MESSAGES[fullName] || []).filter(m => m.trigger === "reply_to_mention" && !usedMessages.has(fullName + "|" + m.text));
@@ -65209,6 +65209,7 @@ const MOCK_DRAFT_KEEPERS_2026 = [
   { manager:"Matthew Van Groningen",  name:"Justin Jefferson",    pos:"WR", team:"MIN", price:31 },
   { manager:"Aaron Fay",              name:"Ladd McConkey",       pos:"WR", team:"LAC", price:13 },
   { manager:"Greg Mulder",            name:"Brock Bowers",        pos:"TE", team:"LV",  price:12 },
+  { manager:"Steve Vander Molen",     name:"George Pickens",      pos:"WR", team:"DAL", price:19 },
 ];
 
 // Bot profile builder — computes tendencies from real draft history
@@ -65310,20 +65311,130 @@ function pickNominationTarget(nominator, available, currentRosters, currentBudge
   const totalSlots = order.length * 15; // 12 teams × 15 = 180
   const draftProgress = totalPicked / totalSlots; // 0.0 → 1.0
 
-  // Phase thresholds
-  const isEarly = draftProgress < 0.35;
-  const isMid = draftProgress >= 0.35 && draftProgress < 0.70;
-  const isLate = draftProgress >= 0.70;
+  // ── GLOBAL SAFETY NET: Force-nominate high-value players still in the pool ──
+  // In a real draft, if stud players are sitting there, SOMEONE puts them up. No elite
+  // player goes undrafted while bench scrubs are being nominated.
+  const tier1 = available.filter(p => p.value >= 40); // elite
+  const tier2 = available.filter(p => p.value >= 20 && p.value < 40); // starters
 
-  // Starter slots still open for nominator
+  // ── STARTER SLOT URGENCY: override everything if nominator needs K/DEF/etc. ──
+  // If the nominator has fewer remaining slots than unfilled starter positions,
+  // they MUST nominate for their empty starter spots (especially K/DEF which won't
+  // get nominated by the value-based safety net since they're cheap).
   const starterNeeds = { QB:1, RB:2, WR:2, TE:1, K:1, DEF:1 };
   const filled = {};
   roster.forEach(p => { filled[p.pos] = (filled[p.pos] || 0) + 1; });
   const needsStarter = (pos) => (filled[pos] || 0) < (starterNeeds[pos] || 0);
 
-  // Tier classification by value
-  const tier1 = available.filter(p => p.value >= 40); // elite
-  const tier2 = available.filter(p => p.value >= 20 && p.value < 40); // starters
+  // Count this nominator's unfilled starter slots
+  const emptyStarterSlots = Object.entries(starterNeeds)
+    .filter(([pos, need]) => (filled[pos] || 0) < need)
+    .map(([pos]) => pos);
+  // Include FLEX (need 6 total RB/WR/TE starters)
+  const flexCount = roster.filter(p => p.pos === "RB" || p.pos === "WR" || p.pos === "TE").length;
+  const needsFlex = flexCount < 6;
+
+  // If remaining picks <= unfilled starter slots + 2 buffer, prioritize unfilled starters
+  // This ensures K/DEF get nominated when teams are running out of picks
+  if (slotsLeft <= emptyStarterSlots.length + 2 && emptyStarterSlots.length > 0) {
+    // Prioritize K/DEF first since they won't get nominated any other way
+    const kDefNeeded = emptyStarterSlots.filter(pos => pos === "K" || pos === "DEF");
+    if (kDefNeeded.length > 0) {
+      const kDefAvailable = available.filter(p => kDefNeeded.includes(p.pos));
+      if (kDefAvailable.length > 0) {
+        // Pick the best available K or DEF
+        const sorted = [...kDefAvailable].sort((a, b) => b.value - a.value);
+        return sorted[0];
+      }
+    }
+    // Then other unfilled starter positions
+    const urgentPlayers = available.filter(p => emptyStarterSlots.includes(p.pos));
+    if (urgentPlayers.length > 0 && Math.random() < 0.85) {
+      const sorted = [...urgentPlayers].sort((a, b) => b.value - a.value);
+      return sorted[Math.floor(Math.random() * Math.min(3, sorted.length))];
+    }
+  }
+
+  // ── LEAGUE-WIDE K/DEF CHECK: if we're past 75% and multiple teams need K/DEF, force one up ──
+  if (draftProgress >= 0.75) {
+    const teamsNeedingKDef = order.filter(m => {
+      const mRoster = currentRosters[m] || [];
+      const hasK = mRoster.some(p => p.pos === "K");
+      const hasDef = mRoster.some(p => p.pos === "DEF");
+      return !hasK || !hasDef;
+    });
+    // If 4+ teams still need K/DEF, start nominating them
+    if (teamsNeedingKDef.length >= 4 && Math.random() < 0.60) {
+      const kDefAvailable = available.filter(p => p.pos === "K" || p.pos === "DEF");
+      if (kDefAvailable.length > 0) {
+        const sorted = [...kDefAvailable].sort((a, b) => b.value - a.value);
+        return sorted[0];
+      }
+    }
+    // If 2+ teams need K/DEF and we're past 85%, higher chance
+    if (teamsNeedingKDef.length >= 2 && draftProgress >= 0.85 && Math.random() < 0.80) {
+      const kDefAvailable = available.filter(p => p.pos === "K" || p.pos === "DEF");
+      if (kDefAvailable.length > 0) {
+        const sorted = [...kDefAvailable].sort((a, b) => b.value - a.value);
+        return sorted[0];
+      }
+    }
+  }
+
+  // After the early phase, if Tier 1 players are still available, ALWAYS nominate one
+  if (draftProgress >= 0.25 && tier1.length > 0) {
+    // Highest-value player gets nominated — this is non-negotiable
+    const sorted = [...tier1].sort((a, b) => b.value - a.value);
+    // Small amount of randomness: pick from top 3 if available
+    const topPicks = sorted.slice(0, Math.min(3, sorted.length));
+    return topPicks[Math.floor(Math.random() * topPicks.length)];
+  }
+
+  // After mid-phase, if Tier 2 skill players are still available and pool has bench/K/DEF
+  // dominating, force-nominate a Tier 2 player instead of letting scrubs get picked
+  if (draftProgress >= 0.50 && tier2.length > 0) {
+    const tier2Skill = tier2.filter(p => p.pos !== "K" && p.pos !== "DEF");
+    if (tier2Skill.length > 0) {
+      // 90% chance to nominate a Tier 2 skill player over whatever the phase logic would pick
+      if (Math.random() < 0.90) {
+        const sorted = [...tier2Skill].sort((a, b) => b.value - a.value);
+        const topPicks = sorted.slice(0, Math.min(5, sorted.length));
+        return topPicks[Math.floor(Math.random() * topPicks.length)];
+      }
+    }
+  }
+
+  // Phase thresholds
+  const isEarly = draftProgress < 0.35;
+  const isMid = draftProgress >= 0.35 && draftProgress < 0.70;
+  const isLate = draftProgress >= 0.70;
+
+  // ── OPENING DRAFT VARIETY ──
+  // In real drafts, the #1 overall player rarely goes first. Managers throw out
+  // other Tier 1 bait to drain budgets before putting the crown jewel up.
+  // For the first ~15 picks (one round), randomize heavily among Tier 1 + top Tier 2
+  // so it's not always Gibbs → Chase → Robinson in predictable order.
+  if (draftProgress < 0.08 && tier1.length >= 3) {
+    // First round: pick randomly from Tier 1 + top Tier 2, weighted by bot's
+    // positional preference but NOT strictly by value
+    const earlyPool = [...tier1, ...tier2.filter(p => p.value >= 30 && p.pos !== "K" && p.pos !== "DEF")];
+    const weighted = earlyPool.map(p => {
+      const posW = bot ? (bot.posAlloc[p.pos] || 0.1) / 0.25 : 1;
+      // Base weight: diminish the value advantage so top guys don't always win
+      const weight = (p.value * 0.3 + 15) * posW * (0.7 + Math.random() * 0.6);
+      return { player: p, weight };
+    });
+    // Weighted random selection
+    const totalWeight = weighted.reduce((s, w) => s + w.weight, 0);
+    let roll = Math.random() * totalWeight;
+    for (const w of weighted) {
+      roll -= w.weight;
+      if (roll <= 0) return w.player;
+    }
+    return weighted[weighted.length - 1].player;
+  }
+
+  // Tier classification by value (tier1 and tier2 already declared above in safety net)
   const tier3 = available.filter(p => p.value >= 8 && p.value < 20); // depth
   const tier4 = available.filter(p => p.value < 8 && p.pos !== "K" && p.pos !== "DEF"); // bench
   const kickers = available.filter(p => p.pos === "K");
@@ -65535,82 +65646,114 @@ function generateDraftGrades(nominations, rosters, budgets, playerPool) {
     const starPower = roster.filter(p => !p.isKeeper).sort((a, b) => (b.price || 0) - (a.price || 0)).slice(0, 3);
     const starTotal = starPower.reduce((s, p) => s + (p.price || 0), 0);
 
-    // Final grade calculation
-    // valueRatio: 1.0 = average (C+), 1.15 = B+, 1.3+ = A, 0.85 = D, <0.75 = F
-    let gradeNum = (valueRatio - 0.75) / 0.55 * 100; // 0.75->0, 1.3->100
-    // Balance bonus
-    gradeNum += (balanceScore - 2) * 5;
-    // Steal bonus
-    gradeNum += steals * 3;
-    // Overpay penalty
-    gradeNum -= overpays * 4;
-    // Clamp
-    gradeNum = Math.max(0, Math.min(100, gradeNum));
+    // Calculate unspent budget
+    const keeperCost = keepers.reduce((s, k) => s + (k.price || 0), 0);
+    const auctionBudget = 200 - keeperCost;
+    const auctionSpent = auctionPicks.reduce((s, p) => s + p.price, 0);
+    const unspent = auctionBudget - auctionSpent;
 
-    // Letter grade
-    const letter = gradeNum >= 95 ? "A+" : gradeNum >= 88 ? "A" : gradeNum >= 82 ? "A-" :
-      gradeNum >= 76 ? "B+" : gradeNum >= 70 ? "B" : gradeNum >= 64 ? "B-" :
-      gradeNum >= 58 ? "C+" : gradeNum >= 50 ? "C" : gradeNum >= 42 ? "C-" :
-      gradeNum >= 35 ? "D+" : gradeNum >= 28 ? "D" : gradeNum >= 20 ? "D-" : "F";
-
-    // Generate write-up — varied, punchy, never repetitive
-    let writeup = "";
-    const firstName = manager.split(" ")[0];
-    const surplus = totalValue - totalSpent;
-
-    if (gradeNum >= 82) {
-      // Great draft — celebrate differently each time
-      const templates = [
-        `${firstName} found value everywhere. ${steals} steals, +$${surplus} surplus value, and a roster that looks playoff-ready on paper.`,
-        biggestSteal ? `${biggestSteal.player.name} at $${biggestSteal.price} (worth $${biggestSteal.player.value}) headlines a class where ${firstName} consistently paid below market.` : `${firstName} stayed disciplined all night and it paid off across the board.`,
-        `+$${surplus} total surplus. ${firstName} built a top-tier roster without chasing a single price. That's composure.`,
-        steals >= 5 ? `${steals} steals in one draft. ${firstName} basically robbed the room blind and nobody noticed until now.` : `${firstName} executed a near-flawless auction strategy. The math backs it up.`,
-      ];
-      writeup = templates[Math.floor(Math.random() * templates.length)];
-    } else if (gradeNum >= 58) {
-      // Decent draft — mix of good and bad
-      const templates = [
-        biggestSteal && biggestOverpay ? `${firstName} had highs (${biggestSteal.player.name} at $${biggestSteal.price}) and lows (${biggestOverpay.player.name} at $${biggestOverpay.price}). Net result: a competitive but imperfect roster.` : `${firstName} built something solid without any splash picks. Steady, not spectacular.`,
-        surplus >= 0 ? `+$${surplus} surplus overall. ${firstName} found enough value to offset ${overpays} overpay${overpays !== 1 ? "s" : ""}. Could've been better, could've been worse.` : `$${Math.abs(surplus)} in the hole on value. ${firstName} overpaid in spots but compensated with ${steals} steal${steals !== 1 ? "s" : ""} elsewhere.`,
-        `${steals} steals vs ${overpays} overpays. ${firstName}'s draft was a mixed bag — some great instincts, some questionable aggression.`,
-        balanceScore >= 3 ? `Positionally balanced with playable depth. ${firstName} won't dominate but won't embarrass either.` : `A few positional gaps could hurt ${firstName} come bye weeks. The top-end talent is there though.`,
-      ];
-      writeup = templates[Math.floor(Math.random() * templates.length)];
-    } else if (gradeNum >= 35) {
-      // Below average — point out the problems
-      const templates = [
-        biggestOverpay ? `${biggestOverpay.player.name} at $${biggestOverpay.price} (ADP $${biggestOverpay.player.value}) set the tone for a rough night. ${overpays} overpays dragged ${firstName} into the red.` : `${firstName} spent aggressively early and paid for it in the back half of the draft.`,
-        `$${Math.abs(surplus)} in negative value. ${firstName} chased too many players and won too many bidding wars he shouldn't have.`,
-        overpays >= 3 ? `${overpays} overpays. ${firstName} was either the second-highest bidder on everyone or the winner at prices nobody else wanted.` : `Not enough steals to offset the damage. ${firstName} needed 2-3 more values and didn't find them.`,
-        `${firstName} spent like a contender but drafted like a rebuilder. The budget math doesn't add up.`,
-      ];
-      writeup = templates[Math.floor(Math.random() * templates.length)];
-    } else {
-      // Terrible draft — harsh but fair
-      const templates = [
-        biggestOverpay ? `$${biggestOverpay.price} for ${biggestOverpay.player.name} (ADP $${biggestOverpay.player.value}). That one pick encapsulates the whole night for ${firstName}.` : `${firstName} lost this draft in the middle rounds where overpay after overpay piled up.`,
-        `$${Math.abs(surplus)} underwater on value. ${firstName} won every bidding war — and that was the problem.`,
-        `${overpays} overpays, $${Math.abs(surplus)} in the hole, and a roster with no clear path to the playoffs. Rebuild year.`,
-        `${firstName} spent $${totalSpent} and acquired $${totalValue} in value. That's the kind of math that ends seasons before they start.`,
-      ];
-      writeup = templates[Math.floor(Math.random() * templates.length)];
-    }
-
+    // Final grade calculation — field-relative total ADP value approach
+    // The #1 factor is: how much total roster value did you acquire vs the field?
+    // A manager who walks away with $230 in ADP value has a better team than one with $170,
+    // regardless of what they paid for it.
+    // We compute grades AFTER collecting all managers, so for now store raw data.
     grades.push({
       manager,
-      grade: letter,
-      gradeNum: Math.round(gradeNum),
+      grade: "", // computed after all managers collected
+      gradeNum: 0,
       valueRatio: Math.round(valueRatio * 100) / 100,
       totalValue,
       totalSpent,
+      unspent: Math.max(0, unspent),
       steals,
       overpays,
       biggestSteal,
       biggestOverpay,
-      writeup,
+      writeup: "", // computed after grading
       starPower,
       keepers,
+      balanceScore,
     });
+
+    // Letter grade — computed below after all managers collected
+    // Write-up — computed below after grading
+  });
+
+  // ── FIELD-RELATIVE GRADING ──
+  // Grade primarily on total ADP value acquired, ranked against the field.
+  // Then apply modifiers for steals, balance, and the "stupidity tax" for unspent $.
+  const allValues = grades.map(g => g.totalValue);
+  const avgValue = allValues.reduce((a, b) => a + b, 0) / allValues.length;
+  const maxValue = Math.max(...allValues);
+  const minValue = Math.min(...allValues);
+  const valueRange = maxValue - minValue || 1;
+
+  grades.forEach(g => {
+    // Primary: where does this manager's total value rank in the field? (0-100 scale)
+    // Top of field = 85-90 pts base, average = 60 pts, bottom = 30-35 pts
+    const fieldPosition = (g.totalValue - minValue) / valueRange; // 0.0 (worst) to 1.0 (best)
+    let gradeNum = 35 + fieldPosition * 55; // 35 (worst) to 90 (best)
+
+    // Steal bonus: finding value is a skill (small bump, +1.5 per steal)
+    gradeNum += g.steals * 1.5;
+
+    // Positional balance bonus
+    gradeNum += (g.balanceScore - 2) * 3;
+
+    // ── STUPIDITY TAX: unspent budget penalty ──
+    // You had money and didn't use it — that's value you voluntarily left on the board.
+    // Not about efficiency, about the stupidity of not spending available dollars.
+    if (g.unspent > 3) {
+      gradeNum -= Math.min(15, (g.unspent - 3) * 0.7);
+    }
+
+    // Clamp
+    gradeNum = Math.max(0, Math.min(100, gradeNum));
+    g.gradeNum = Math.round(gradeNum);
+
+    // Letter grade
+    g.grade = gradeNum >= 95 ? "A+" : gradeNum >= 88 ? "A" : gradeNum >= 82 ? "A-" :
+      gradeNum >= 76 ? "B+" : gradeNum >= 70 ? "B" : gradeNum >= 64 ? "B-" :
+      gradeNum >= 58 ? "C+" : gradeNum >= 50 ? "C" : gradeNum >= 42 ? "C-" :
+      gradeNum >= 35 ? "D+" : gradeNum >= 28 ? "D" : gradeNum >= 20 ? "D-" : "F";
+
+    // Generate write-up
+    const firstName = g.manager.split(" ")[0];
+    const surplus = g.totalValue - g.totalSpent;
+
+    if (gradeNum >= 82) {
+      const templates = [
+        `${firstName} found value everywhere. ${g.steals} steals, +$${surplus} surplus value, and a roster that looks playoff-ready on paper.`,
+        g.biggestSteal ? `${g.biggestSteal.player.name} at $${g.biggestSteal.price} (worth $${g.biggestSteal.player.value}) headlines a class where ${firstName} consistently paid below market.` : `${firstName} stayed disciplined all night and it paid off across the board.`,
+        `+$${surplus} total surplus. ${firstName} built a top-tier roster without chasing a single price. That's composure.`,
+        g.steals >= 5 ? `${g.steals} steals in one draft. ${firstName} basically robbed the room blind and nobody noticed until now.` : `${firstName} executed a near-flawless auction strategy. The math backs it up.`,
+      ];
+      g.writeup = templates[Math.floor(Math.random() * templates.length)];
+    } else if (gradeNum >= 58) {
+      const templates = [
+        g.biggestSteal && g.biggestOverpay ? `${firstName} had highs (${g.biggestSteal.player.name} at $${g.biggestSteal.price}) and lows (${g.biggestOverpay.player.name} at $${g.biggestOverpay.price}). Net result: a competitive but imperfect roster.` : `${firstName} built something solid without any splash picks. Steady, not spectacular.`,
+        surplus >= 0 ? `+$${surplus} surplus overall. ${firstName} found enough value to offset ${g.overpays} overpay${g.overpays !== 1 ? "s" : ""}. Could've been better, could've been worse.` : `$${Math.abs(surplus)} in the hole on value. ${firstName} overpaid in spots but compensated with ${g.steals} steal${g.steals !== 1 ? "s" : ""} elsewhere.`,
+        `${g.steals} steals vs ${g.overpays} overpays. ${firstName}'s draft was a mixed bag — some great instincts, some questionable aggression.`,
+        g.balanceScore >= 3 ? `Positionally balanced with playable depth. ${firstName} won't dominate but won't embarrass either.` : `A few positional gaps could hurt ${firstName} come bye weeks. The top-end talent is there though.`,
+      ];
+      g.writeup = templates[Math.floor(Math.random() * templates.length)];
+    } else if (gradeNum >= 35) {
+      const templates = [
+        g.biggestOverpay ? `${g.biggestOverpay.player.name} at $${g.biggestOverpay.price} (ADP $${g.biggestOverpay.player.value}) set the tone for a rough night. ${g.overpays} overpays dragged ${firstName} into the red.` : `${firstName} spent aggressively early and paid for it in the back half of the draft.`,
+        `$${Math.abs(surplus)} in negative value. ${firstName} chased too many players and won too many bidding wars he shouldn't have.`,
+        g.overpays >= 3 ? `${g.overpays} overpays. ${firstName} was either the second-highest bidder on everyone or the winner at prices nobody else wanted.` : `Not enough steals to offset the damage. ${firstName} needed 2-3 more values and didn't find them.`,
+        g.unspent > 5 ? `${firstName} left $${g.unspent} on the table. That's $${g.unspent} of roster value voluntarily abandoned.` : `${firstName} spent like a contender but drafted like a rebuilder. The budget math doesn't add up.`,
+      ];
+      g.writeup = templates[Math.floor(Math.random() * templates.length)];
+    } else {
+      const templates = [
+        g.biggestOverpay ? `$${g.biggestOverpay.price} for ${g.biggestOverpay.player.name} (ADP $${g.biggestOverpay.player.value}). That one pick encapsulates the whole night for ${firstName}.` : `${firstName} lost this draft in the middle rounds where overpay after overpay piled up.`,
+        `$${Math.abs(surplus)} underwater on value. ${firstName} won every bidding war — and that was the problem.`,
+        g.unspent > 10 ? `${firstName} left $${g.unspent} unspent AND acquired the least value in the room. That's a special kind of bad.` : `${g.overpays} overpays, $${Math.abs(surplus)} in the hole, and a roster with no clear path to the playoffs. Rebuild year.`,
+        `${firstName} spent $${g.totalSpent} and acquired $${g.totalValue} in value. That's the kind of math that ends seasons before they start.`,
+      ];
+      g.writeup = templates[Math.floor(Math.random() * templates.length)];
+    }
   });
 
   // Sort by grade (best first)
@@ -65681,7 +65824,7 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
   let perceivedValue = baseValue * (0.7 + 0.6 * posBonus);
 
   // Stars & scrubs bots overpay for studs, underpay for mid-tier
-  if (bot.starsAndScrubs > 0.6 && baseValue > 35) perceivedValue *= 1.15;
+  if (bot.starsAndScrubs > 0.6 && baseValue > 35) perceivedValue *= 1.08;
   if (bot.starsAndScrubs > 0.6 && baseValue < 15) perceivedValue *= 0.75;
 
   // Aggression factor
@@ -65726,19 +65869,18 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
     perceivedValue *= (traits.latePassivity || 1.0);
   }
 
-  // Budget blower (Tyler) — massively overpay for top-tier early, then go silent
+  // Budget blower (Tyler) — overpay for top-tier early, then go silent
   if (traits.budgetBlower && baseValue > 40 && draftProgress < 0.35) {
-    perceivedValue *= 1.3;
+    perceivedValue *= 1.15;
   }
   if (traits.budgetBlower && budgetLeft < 40) {
     perceivedValue *= 0.4; // Tyler with no money = PokemonGo + beer + color commentary
   }
 
-  // Stubborn on targets — won't let go easily, overpays for last-tier options
+  // Stubborn on targets — won't let go easily, pushes slightly past value
   if (traits.stubbornOnTargets && currentBid > 0) {
-    // If they already decided they want this player and bid is close to their max, push harder
     if (currentBid >= baseValue * 0.7 && currentBid < baseValue * 1.3) {
-      perceivedValue *= 1.15; // will stretch above value for "their guy"
+      perceivedValue *= 1.08; // will stretch a bit above value for "their guy"
     }
   }
 
@@ -65787,8 +65929,15 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
   // Most kickers should go for $1. Only 1-2 per draft go $2-3 max.
   // Josh bids up kickers to troll Greg C (~30% chance), everyone else refuses to bid over $1.
   // Managers who need a kicker will nominate one when they have to — no need to overbid.
+  // EXCEPTION: If a bot still needs a kicker and is running low on slots, they'll bid up to $3
+  // to make sure they actually get one.
   if (pos === "K") {
-    if (traits.kDefBait) {
+    const botNeedsK = rosterSoFar.filter(p => p.pos === "K").length < 1;
+    const slotsUrgent = (15 - rosterSoFar.length) <= 4;
+    if (botNeedsK && slotsUrgent) {
+      // Urgently needs a kicker — will pay up to $3-4
+      perceivedValue = Math.max(perceivedValue, 3 + Math.floor(Math.random() * 2));
+    } else if (traits.kDefBait) {
       // Greg Cady — gets baited up to $3 max
       perceivedValue = Math.min(perceivedValue, 3);
     } else if (bot.name === "Joshua Van Groningen" && Math.random() < 0.30) {
@@ -65803,8 +65952,13 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
 
   // ── DEF HARD CAP ──
   // Defenses go for $1. Managers who need one will nominate one when they have to.
+  // EXCEPTION: If a bot urgently needs a DEF, they'll pay up to $3.
   if (pos === "DEF") {
-    if (traits.kDefBait) {
+    const botNeedsDef = rosterSoFar.filter(p => p.pos === "DEF").length < 1;
+    const slotsUrgent = (15 - rosterSoFar.length) <= 4;
+    if (botNeedsDef && slotsUrgent) {
+      perceivedValue = Math.max(perceivedValue, 3 + Math.floor(Math.random() * 2));
+    } else if (traits.kDefBait) {
       perceivedValue = Math.min(perceivedValue, 3); // Greg C baitable
     } else {
       perceivedValue = Math.min(perceivedValue, 1); // $1 defenses, period.
@@ -65843,6 +65997,15 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
   const flexNeeded = pos === "RB" || pos === "WR" || pos === "TE";
   const flexFilled = rosterSoFar.filter(p => p.pos === "RB" || p.pos === "WR" || p.pos === "TE").length >= 6;
 
+  // ── K/DEF HARD ROSTER LIMITS: max 2 K, max 2 DEF, max 3 combined ──
+  // No manager would ever carry 3+ kickers or 4 defenses. This is non-negotiable.
+  const kCount = rosterSoFar.filter(p => p.pos === "K").length;
+  const defCount = rosterSoFar.filter(p => p.pos === "DEF").length;
+  const kDefTotal = kCount + defCount;
+  if (pos === "K" && kCount >= 2) return { willBid: false, maxBid: 0, bidTo: 0, delay: 0 };
+  if (pos === "DEF" && defCount >= 2) return { willBid: false, maxBid: 0, bidTo: 0, delay: 0 };
+  if ((pos === "K" || pos === "DEF") && kDefTotal >= 3) return { willBid: false, maxBid: 0, bidTo: 0, delay: 0 };
+
   // Budget constraint
   const slotsRemaining = 15 - rosterSoFar.length;
   const maxBid = budgetLeft - (slotsRemaining - 1);
@@ -65878,30 +66041,45 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
   else if (filled >= needed && flexNeeded && !flexFilled) perceivedValue *= 0.7;
   else if (filled >= needed && flexFilled) perceivedValue *= 0.4;
 
-  // Bench spots
-  if (rosterSoFar.length >= 13) perceivedValue *= 0.5;
+  // Bench spots — mild penalty, not severe (we still want bots to SPEND their money)
+  if (rosterSoFar.length >= 13) perceivedValue *= 0.7;
 
   // ── BUDGET PRESSURE: force bots to spend their money ──
-  // If a bot has way more budget than needed, boost their valuations
-  // Target: spend at least $190 of $200. Minimum spend per remaining slot = budgetLeft / slotsRemaining
-  // If avg remaining > $5 per slot, they need to be more aggressive
-  if (slotsRemaining > 0 && slotsRemaining <= 5) {
+  // Target: spend at least $195 of $200. No one should leave $20+ on the table.
+  // Pressure scales with how much money they have relative to slots remaining.
+  if (slotsRemaining > 0) {
     const avgPerSlot = budgetLeft / slotsRemaining;
-    if (avgPerSlot > 8) {
-      // Strong pressure: they have way too much money left for few slots
-      perceivedValue *= 1 + (avgPerSlot - 8) * 0.06; // e.g., $20/slot → 1.72x boost
-    } else if (avgPerSlot > 5) {
-      perceivedValue *= 1 + (avgPerSlot - 5) * 0.03;
+    if (slotsRemaining <= 3 && avgPerSlot > 5) {
+      // CRITICAL: 1-3 slots left with excess cash — bid aggressively on ANYTHING
+      perceivedValue *= 1 + (avgPerSlot - 3) * 0.12; // e.g., $15/slot → 2.44x boost
+    } else if (slotsRemaining <= 5 && avgPerSlot > 6) {
+      // Strong pressure: 4-5 slots left with too much money
+      perceivedValue *= 1 + (avgPerSlot - 6) * 0.08; // e.g., $20/slot → 2.12x boost
+    } else if (slotsRemaining <= 8 && avgPerSlot > 10) {
+      // Moderate pressure: mid-draft, avg per slot is getting too high
+      perceivedValue *= 1 + (avgPerSlot - 10) * 0.04; // e.g., $18/slot → 1.32x boost
+    } else if (slotsRemaining <= 11 && avgPerSlot > 15) {
+      // Mild early pressure: if avg is way above normal ($13/slot), start spending
+      perceivedValue *= 1 + (avgPerSlot - 15) * 0.02;
     }
   }
 
   // Random variance (+/- 15%)
   const variance = 0.85 + Math.random() * 0.3;
-  // Tiered value cap based on real 2025 draft data (ADP vs actual paid analysis)
-  // $40+ → 1.20x, $25-39 → 1.40x, $10-24 → 1.65x, $5-9 → 1.80x, $1-4 → 3.0x
-  // Plus flat dollar wiggle so caps aren't predictable
-  const baseCap = baseValue >= 40 ? 1.20 : baseValue >= 25 ? 1.40 : baseValue >= 10 ? 1.65 : baseValue >= 5 ? 1.80 : 3.0;
-  const wiggle = baseValue >= 40 ? Math.ceil(Math.random() * 7) : baseValue >= 25 ? Math.ceil(Math.random() * 5) : baseValue >= 10 ? Math.ceil(Math.random() * 4) : baseValue >= 5 ? Math.ceil(Math.random() * 3) : Math.ceil(Math.random() * 2);
+  // Tiered value cap calibrated to REAL NFL league auction history (2015-2025):
+  // - $70+ happened TWICE in 11 years (0.2/yr). $65+ ~1/yr. $60+ ~3/yr. $50+ ~8-9/yr.
+  // - RB1 median=$46, P90=$63, max=$71. WR1 median=$35, P90=$57, max=$65.
+  // Cap formula ensures realistic top-end: most expensive picks land $55-63, with
+  // a rare $65+ outlier requiring perfect storm of high ADP + aggressive bot + variance.
+  // $55+ ADP → 1.03x cap (max ~$63-65 for the very top guys)
+  // $45-54 ADP → 1.08x cap (max ~$52-58)
+  // $35-44 ADP → 1.15x cap (max ~$44-51)
+  // $25-34 ADP → 1.25x cap (max ~$34-43)
+  // $10-24 ADP → 1.45x cap (max ~$19-35)
+  // $5-9 ADP → 1.80x cap
+  // $1-4 ADP → 3.0x cap
+  const baseCap = baseValue >= 55 ? 1.03 : baseValue >= 45 ? 1.08 : baseValue >= 35 ? 1.15 : baseValue >= 25 ? 1.25 : baseValue >= 10 ? 1.45 : baseValue >= 5 ? 1.80 : 3.0;
+  const wiggle = baseValue >= 55 ? Math.ceil(Math.random() * 3) : baseValue >= 45 ? Math.ceil(Math.random() * 4) : baseValue >= 35 ? Math.ceil(Math.random() * 4) : baseValue >= 25 ? Math.ceil(Math.random() * 3) : baseValue >= 10 ? Math.ceil(Math.random() * 3) : baseValue >= 5 ? Math.ceil(Math.random() * 2) : Math.ceil(Math.random() * 2);
   const valueCap = Math.floor(baseValue * baseCap) + wiggle;
   const cappedValue = Math.min(perceivedValue * variance, valueCap);
   const finalValue = Math.min(Math.floor(cappedValue), maxBid);
@@ -65967,6 +66145,15 @@ function MockDraftTab() {
   const [searchText, setSearchText] = useState("");
   const [view, setView] = useState("board"); // board | pool | profiles
   const [reportTab, setReportTab] = useState("grades"); // grades | highlights (draft report card)
+  const [draftGrades, setDraftGrades] = useState(null); // cached grades after draft completes
+
+  // Cache draft grades when draft completes (prevents re-computation on re-renders)
+  React.useEffect(() => {
+    if (phase === "complete" && !draftGrades && nominations.length > 0) {
+      setDraftGrades(generateDraftGrades(nominations, rosters, budgets, playerPool));
+    }
+    if (phase !== "complete") setDraftGrades(null); // reset when going back to drafting/setup
+  }, [phase, nominations.length]);
   const [countdown, setCountdown] = useState(0); // visible countdown timer
   const timerRef = useRef(null); // award timer (fires when countdown hits 0)
   const countdownRef = useRef(null); // 1-second tick interval
@@ -65981,6 +66168,14 @@ function MockDraftTab() {
   // Bottom panel state (Sleeper-style)
   const [panelOpen, setPanelOpen] = useState(true);
   const [panelTab, setPanelTab] = useState("pool"); // pool | results | chat
+  // Results tab filter/sort state
+  const [resultsFilterMgr, setResultsFilterMgr] = useState("ALL");
+  const [resultsFilterPos, setResultsFilterPos] = useState("ALL");
+  const [resultsSortKey, setResultsSortKey] = useState("pickNo"); // pickNo | price | pos | name | manager
+  const [resultsSortDir, setResultsSortDir] = useState("desc"); // asc | desc
+  // Players (pool) tab sort state
+  const [poolSortKey, setPoolSortKey] = useState("value"); // value | name | pos | team
+  const [poolSortDir, setPoolSortDir] = useState("desc"); // asc | desc
   // Chat bubble state — which managers currently have a visible bubble
   const [activeBubbles, setActiveBubbles] = useState({}); // { managerName: { text, id } }
   // User nomination price
@@ -65989,6 +66184,10 @@ function MockDraftTab() {
   const [soundMuted, setSoundMuted] = useState(false);
   // Simulate state
   const [simulating, setSimulating] = useState(false);
+  // Pause state
+  const [paused, setPaused] = useState(false);
+  const pauseDataRef = useRef(null); // stores remaining time when paused
+  const [draftStarted, setDraftStarted] = useState(false); // tracks whether the draft has ever been unpaused
 
   // Derived
   const TOTAL_ROSTER = 15;
@@ -65999,6 +66198,43 @@ function MockDraftTab() {
   const clearBotQueue = () => {
     botQueueRef.current.forEach(t => clearTimeout(t));
     botQueueRef.current = [];
+  };
+
+  // Pause draft — freezes countdown, kills bot timers, stores remaining seconds
+  const pauseDraft = () => {
+    if (paused || phase !== "drafting" || !currentNom) return;
+    if (timerRef.current) clearTimeout(timerRef.current);
+    if (countdownRef.current) clearInterval(countdownRef.current);
+    clearBotQueue();
+    pauseDataRef.current = { remainingSeconds: countdown };
+    setPaused(true);
+    setLog(prev => [...prev, `⏸ Draft paused`]);
+  };
+
+  // Resume draft — restarts countdown from where it left off and reschedules bots
+  // If draftStarted is false, this is the initial "Start Draft" action — fire first nomination
+  const resumeDraft = () => {
+    if (!paused) return;
+    if (!draftStarted) {
+      // First-ever unpause — kick off the draft
+      setPaused(false);
+      setDraftStarted(true);
+      pauseDataRef.current = null;
+      setLog(prev => [...prev, `▶ Draft started — let's go!`]);
+      const { rosters: r, budgets: b, pool: p, order } = auctionRef.current;
+      setTimeout(() => triggerNomination(order, 0, r, b, p), 500);
+      return;
+    }
+    if (!pauseDataRef.current) return;
+    const { remainingSeconds } = pauseDataRef.current;
+    pauseDataRef.current = null;
+    setPaused(false);
+    setLog(prev => [...prev, `▶ Draft resumed`]);
+    if (remainingSeconds > 0 && currentNom) {
+      resetCountdown(remainingSeconds);
+      const { player, bid, bidder, rosters: r, budgets: b, pool: p, order } = auctionRef.current;
+      if (player) scheduleBotBids(player, bid, bidder, order, r, b, p);
+    }
   };
 
   // Reset the countdown timer (called on every new bid)
@@ -66087,8 +66323,11 @@ function MockDraftTab() {
     usedMessagesRef.current = new Set();
     const keeperLog = editKeepers.map(k => `🔒 ${k.manager} keeps ${k.name} (${k.pos}) for $${k.price}`);
     setLog([`🎰 Draft started! ${order.length} teams, $200 each. Keepers locked in.`, ...keeperLog, `📢 ${order[0]} nominates first.`]);
+    auctionRef.current = { bid: 0, bidder: null, player: null, rosters: initRosters, budgets: initBudgets, pool, order, idx: 0 };
     setPhase("drafting");
-    setTimeout(() => triggerNomination(order, 0, initRosters, initBudgets, pool), 500);
+    setPaused(true);
+    setDraftStarted(false);
+    pauseDataRef.current = { remainingSeconds: timerSeconds };
   };
 
   // Nomination logic
@@ -66097,7 +66336,7 @@ function MockDraftTab() {
     // ~35% chance of a random idle message firing BEFORE the next nomination
     // This creates the "guys chatting between picks" feel
     if (idx > 0 && Math.random() < 0.35) {
-      const chatterers = order.filter(m => m !== userTeam).sort(() => Math.random() - 0.5);
+      const chatterers = order.sort(() => Math.random() - 0.5);
       for (const m of chatterers.slice(0, 1)) {
         const vibe = VIBE_MAP[m] || "any";
         if (Math.random() < (VIBE_FREQUENCY[vibe] || 0.3)) {
@@ -66274,7 +66513,7 @@ function MockDraftTab() {
     setTimeout(() => triggerNomination(order, nextIdx, newRosters, newBudgets, newPool), 1000);
   };
 
-  // User passes (award immediately to current high bidder)
+  // User passes — simulate remaining bot bidding behind the scenes, then award at realistic price
   const userPass = () => {
     if (!currentNom || !currentNom.player) return;
     if (timerRef.current) clearTimeout(timerRef.current);
@@ -66282,7 +66521,42 @@ function MockDraftTab() {
     clearBotQueue();
     setCountdown(0);
     const { bid, bidder, player, rosters: r, budgets: b, pool: p, order, idx } = auctionRef.current;
-    awardPlayer(player, bid, bidder, order, idx, r, b, p);
+
+    // Run a quick synchronous bot bidding war to find realistic final price
+    let currentBid = bid;
+    let currentBidder = bidder;
+    let biddingActive = true;
+    let rounds = 0;
+    while (biddingActive && rounds < 50) {
+      biddingActive = false;
+      rounds++;
+      const bidders = order.filter(m => m !== userTeam && m !== currentBidder && (r[m] || []).length < TOTAL_ROSTER);
+      const shuffled = [...bidders].sort(() => Math.random() - 0.5);
+      for (const m of shuffled) {
+        const mBot = botProfiles[m] || { posAlloc: { QB:0.15, RB:0.35, WR:0.35, TE:0.10, K:0.02, DEF:0.03 }, aggression: 0.5, starsAndScrubs: 0.5 };
+        const mBudget = b[m] || 0;
+        const mSlotsLeft = TOTAL_ROSTER - (r[m] || []).length;
+        const mMaxBid = mBudget - (mSlotsLeft - 1);
+        if (mMaxBid <= currentBid) continue;
+        const decision = botDecision(mBot, player, currentBid, r[m] || [], mBudget, p.length);
+        if (decision.willBid && decision.bidTo > currentBid) {
+          const newBid = Math.min(currentBid + Math.ceil(Math.random() * 3 + 1), decision.maxBid, mMaxBid);
+          if (newBid > currentBid) {
+            currentBid = newBid;
+            currentBidder = m;
+            biddingActive = true;
+          }
+        }
+      }
+    }
+
+    // Update auctionRef with the simulated final price so awardPlayer uses it
+    auctionRef.current.bid = currentBid;
+    auctionRef.current.bidder = currentBidder;
+    // Show final bid in UI briefly before awarding
+    setCurrentNom(prev => prev ? { ...prev, currentBid, currentBidder } : prev);
+    setLog(prev => [...prev, `⏩ Bidding simulated — ${currentBidder.split(" ")[0]} wins at $${currentBid}`]);
+    awardPlayer(player, currentBid, currentBidder, order, idx, r, b, p);
   };
 
   // ── SIMULATE PICKS ──
@@ -66595,7 +66869,14 @@ function MockDraftTab() {
       if (posFilter !== "ALL" && p.pos !== posFilter) return false;
       if (searchText && !p.name.toLowerCase().includes(searchText.toLowerCase())) return false;
       return true;
-    }).sort((a,b) => b.value - a.value);
+    }).sort((a, b) => {
+      let cmp = 0;
+      if (poolSortKey === "value") cmp = a.value - b.value;
+      else if (poolSortKey === "name") cmp = a.name.localeCompare(b.name);
+      else if (poolSortKey === "pos") cmp = a.pos.localeCompare(b.pos);
+      else if (poolSortKey === "team") cmp = (a.team || "").localeCompare(b.team || "");
+      return poolSortDir === "asc" ? cmp : -cmp;
+    });
 
     const userRoster = rosters[userTeam] || [];
     const userBudget = budgets[userTeam] || 0;
@@ -66641,7 +66922,7 @@ function MockDraftTab() {
         {/* ─── TOP BAR: Title + Exit ─── */}
         <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", padding:"6px 16px", borderBottom:"1px solid #1e2a3a", flexShrink:0, background:"#0d1117" }}>
           <div style={{ display:"flex", alignItems:"center", gap:12 }}>
-            <button onClick={() => { if(timerRef.current)clearTimeout(timerRef.current);if(countdownRef.current)clearInterval(countdownRef.current);clearBotQueue();setPhase("setup");setLog([]);setChatMessages([]);usedMessagesRef.current=new Set(); }} style={{ background:"none", border:"none", color:"#8b949e", cursor:"pointer", fontSize:18, padding:"4px 8px" }}>←</button>
+            <button onClick={() => { if(timerRef.current)clearTimeout(timerRef.current);if(countdownRef.current)clearInterval(countdownRef.current);clearBotQueue();setPaused(false);setDraftStarted(false);pauseDataRef.current=null;setPhase("setup");setLog([]);setChatMessages([]);usedMessagesRef.current=new Set(); }} style={{ background:"none", border:"none", color:"#8b949e", cursor:"pointer", fontSize:18, padding:"4px 8px" }}>←</button>
             <img src={"data:image/jpeg;base64," + NFL_LOGO_B64} alt="NFL" style={{ width:32, height:32, borderRadius:4, objectFit:"contain" }} />
             <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:18, color:"#e9c46a", letterSpacing:1 }}>
               {phase === "complete" ? "🏁 Draft Complete" : "No Fun League"}
@@ -66650,10 +66931,13 @@ function MockDraftTab() {
           </div>
           <div style={{ display:"flex", alignItems:"center", gap:8 }}>
             <button onClick={() => { const m = !soundMuted; setSoundMuted(m); DraftSounds.setMuted(m); }} style={{ background:"none", border:"1px solid #30363d", borderRadius:4, color: soundMuted ? "#484f58" : "#e9c46a", cursor:"pointer", fontSize:14, padding:"3px 8px" }}>{soundMuted ? "🔇" : "🔊"}</button>
+            {phase === "drafting" && (
+              <button onClick={paused ? resumeDraft : pauseDraft} disabled={simulating} style={{ background: paused ? "#1a3a1a" : "#21262d", border: paused ? "1px solid #2ecc71" : "1px solid #30363d", borderRadius:4, color: paused ? "#2ecc71" : "#e5a00d", cursor: simulating ? "not-allowed" : "pointer", fontSize:10, fontWeight:600, padding:"3px 8px" }}>{paused ? (draftStarted ? "▶ Resume" : "▶ Start Draft") : "⏸ Pause"}</button>
+            )}
             {phase !== "complete" && (
               <>
-                <button onClick={() => simulatePicks(10)} disabled={simulating} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#6bb3ff", cursor: simulating ? "not-allowed" : "pointer", fontSize:10, fontWeight:600, padding:"3px 8px" }}>⚡ Sim 10</button>
-                <button onClick={() => simulatePicks("all")} disabled={simulating} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#e9c46a", cursor: simulating ? "not-allowed" : "pointer", fontSize:10, fontWeight:600, padding:"3px 8px" }}>⚡ Sim All</button>
+                <button onClick={() => simulatePicks(10)} disabled={simulating || paused} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#6bb3ff", cursor: (simulating || paused) ? "not-allowed" : "pointer", fontSize:10, fontWeight:600, padding:"3px 8px" }}>⚡ Sim 10</button>
+                <button onClick={() => simulatePicks("all")} disabled={simulating || paused} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#e9c46a", cursor: (simulating || paused) ? "not-allowed" : "pointer", fontSize:10, fontWeight:600, padding:"3px 8px" }}>⚡ Sim All</button>
               </>
             )}
             {phase === "complete" && <div style={{ fontSize:12, color:"#2ecc71", fontWeight:700 }}>✓ Complete</div>}
@@ -66742,9 +67026,10 @@ function MockDraftTab() {
                   <div style={{ fontSize:20, fontWeight:700, color:"#2ecc71", fontFamily:"monospace" }}>${currentNom.currentBid}</div>
                   <div style={{ fontSize:9, color:"#8b949e" }}>High: {currentNom.currentBidder === "Greg Mulder" ? "Greg M" : currentNom.currentBidder === "Greg Cady" ? "Greg C" : currentNom.currentBidder?.split(" ")[0]}</div>
                 </div>
-                {countdown > 0 && <div style={{ fontSize:16, color: countdown <= 5 ? "#f85149" : "#e9c46a", fontWeight:700, fontFamily:"monospace", marginLeft:8 }}>⏱{countdown}s</div>}
+                {countdown > 0 && !paused && <div style={{ fontSize:16, color: countdown <= 5 ? "#f85149" : "#e9c46a", fontWeight:700, fontFamily:"monospace", marginLeft:8 }}>⏱{countdown}s</div>}
+                {paused && <div style={{ fontSize:14, color:"#2ecc71", fontWeight:700, fontFamily:"monospace", marginLeft:8, display:"flex", alignItems:"center", gap:4 }}>⏸ PAUSED</div>}
               </div>
-              {phase !== "complete" && countdown > 0 && (
+              {phase !== "complete" && countdown > 0 && !paused && (
                 <div style={{ display:"flex", gap:6 }}>
                   <button onClick={userBid} disabled={currentNom.currentBidder === userTeam || bidAmount <= currentNom.currentBid || bidAmount > userMaxBid} style={{ background: currentNom.currentBidder !== userTeam && bidAmount > currentNom.currentBid && bidAmount <= userMaxBid ? "#238636" : "#21262d", border:"1px solid #30363d", borderRadius:6, color: currentNom.currentBidder === userTeam ? "#484f58" : "#fff", fontSize:12, fontWeight:700, padding:"6px 16px", cursor: currentNom.currentBidder !== userTeam && bidAmount > currentNom.currentBid ? "pointer" : "not-allowed" }}>{currentNom.currentBidder === userTeam ? "LEADING" : `BID $${bidAmount}`}</button>
                   <button onClick={userPass} disabled={currentNom.currentBidder === userTeam} style={{ background: currentNom.currentBidder === userTeam ? "#21262d" : "#da3633", border:"1px solid #30363d", borderRadius:6, color: currentNom.currentBidder === userTeam ? "#484f58" : "#fff", fontSize:12, padding:"6px 12px", cursor: currentNom.currentBidder === userTeam ? "not-allowed" : "pointer" }}>{currentNom.currentBidder === userTeam ? "LEADING" : "PASS"}</button>
@@ -66754,7 +67039,7 @@ function MockDraftTab() {
           ) : currentNom && currentNom.waitingForUser ? (
             <div style={{ fontSize:13, color:"#6bb3ff", fontWeight:600 }}>Your turn to nominate — select a player below</div>
           ) : (
-            <div style={{ fontSize:12, color:"#484f58" }}>{phase === "complete" ? "Draft complete!" : "Waiting for nomination..."}</div>
+            <div style={{ fontSize:12, color: paused && !draftStarted ? "#2ecc71" : "#484f58" }}>{phase === "complete" ? "Draft complete!" : paused && !draftStarted ? "Ready to draft — press Start Draft to begin" : "Waiting for nomination..."}</div>
           )}
         </div>
 
@@ -66787,10 +67072,16 @@ function MockDraftTab() {
                     <table style={{ width:"100%", borderCollapse:"collapse", fontSize:11 }}>
                       <thead>
                         <tr style={{ borderBottom:"1px solid #1e2a3a" }}>
-                          <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"left", width:"40%" }}>Player</th>
-                          <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"center", width:"15%" }}>Pos</th>
-                          <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"center", width:"15%" }}>Team</th>
-                          <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"right", width:"15%" }}>$</th>
+                          {[
+                            { key:"name", label:"Player", align:"left", width:"40%" },
+                            { key:"pos", label:"Pos", align:"center", width:"15%" },
+                            { key:"team", label:"Team", align:"center", width:"15%" },
+                            { key:"value", label:"$", align:"right", width:"15%" },
+                          ].map(col => (
+                            <th key={col.key} onClick={() => { if (poolSortKey === col.key) { setPoolSortDir(d => d === "asc" ? "desc" : "asc"); } else { setPoolSortKey(col.key); setPoolSortDir(col.key === "value" ? "desc" : "asc"); } }} style={{ padding:"2px 4px", color: poolSortKey === col.key ? "#e9c46a" : "#8b949e", textAlign:col.align, width:col.width, cursor:"pointer", userSelect:"none" }}>
+                              {col.label}{poolSortKey === col.key ? (poolSortDir === "asc" ? " ▲" : " ▼") : ""}
+                            </th>
+                          ))}
                           {currentNom && currentNom.waitingForUser && <th style={{ padding:"2px 4px", width:"15%" }}></th>}
                         </tr>
                       </thead>
@@ -66816,29 +67107,62 @@ function MockDraftTab() {
 
                 {/* RESULTS */}
                 {panelTab === "results" && (
-                  <table style={{ width:"100%", borderCollapse:"collapse", fontSize:11 }}>
-                    <thead>
-                      <tr style={{ borderBottom:"1px solid #1e2a3a" }}>
-                        <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"left" }}>#</th>
-                        <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"left" }}>Player</th>
-                        <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"center" }}>Pos</th>
-                        <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"right" }}>$</th>
-                        <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"left" }}>Manager</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {nominations.slice().reverse().map((n, i) => (
-                        <tr key={i} style={{ borderBottom:"1px solid #141a22", background: n.winner === userTeam ? "#1c2d4a22" : "transparent" }}>
-                          <td style={{ padding:"2px 4px", color:"#484f58" }}>{nominations.length - i}</td>
-                          <td style={{ padding:"2px 4px", color:"#c9d1d9" }}>{n.player.name}</td>
-                          <td style={{ padding:"2px 4px", textAlign:"center" }}><span style={{ color:POS_COLOR[n.player.pos], fontWeight:600 }}>{n.player.pos}</span></td>
-                          <td style={{ padding:"2px 4px", color:"#2ecc71", textAlign:"right", fontWeight:700 }}>${n.price}</td>
-                          <td style={{ padding:"2px 4px", color: n.winner === userTeam ? "#6bb3ff" : "#8b949e" }}>{n.winner === "Greg Mulder" ? "Greg M" : n.winner === "Greg Cady" ? "Greg C" : n.winner.split(" ")[0]}</td>
+                  <div>
+                    {/* Filter controls */}
+                    <div style={{ display:"flex", gap:6, padding:"4px 0 6px", flexWrap:"wrap", alignItems:"center" }}>
+                      <select value={resultsFilterMgr} onChange={e => setResultsFilterMgr(e.target.value)} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#c9d1d9", fontSize:10, padding:"2px 4px" }}>
+                        <option value="ALL">All Managers</option>
+                        {nomOrder.map(m => <option key={m} value={m}>{m === "Greg Mulder" ? "Greg M" : m === "Greg Cady" ? "Greg C" : m.split(" ")[0]}</option>)}
+                      </select>
+                      <select value={resultsFilterPos} onChange={e => setResultsFilterPos(e.target.value)} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#c9d1d9", fontSize:10, padding:"2px 4px" }}>
+                        <option value="ALL">All Positions</option>
+                        {["QB","RB","WR","TE","K","DEF"].map(p => <option key={p} value={p}>{p}</option>)}
+                      </select>
+                    </div>
+                    <table style={{ width:"100%", borderCollapse:"collapse", fontSize:11 }}>
+                      <thead>
+                        <tr style={{ borderBottom:"1px solid #1e2a3a" }}>
+                          {[
+                            { key:"pickNo", label:"#", align:"left" },
+                            { key:"name", label:"Player", align:"left" },
+                            { key:"pos", label:"Pos", align:"center" },
+                            { key:"price", label:"$", align:"right" },
+                            { key:"manager", label:"Manager", align:"left" },
+                          ].map(col => (
+                            <th key={col.key} onClick={() => { if (resultsSortKey === col.key) { setResultsSortDir(d => d === "asc" ? "desc" : "asc"); } else { setResultsSortKey(col.key); setResultsSortDir(col.key === "price" || col.key === "pickNo" ? "desc" : "asc"); } }} style={{ padding:"2px 4px", color: resultsSortKey === col.key ? "#e9c46a" : "#8b949e", textAlign:col.align, cursor:"pointer", userSelect:"none" }}>
+                              {col.label}{resultsSortKey === col.key ? (resultsSortDir === "asc" ? " ▲" : " ▼") : ""}
+                            </th>
+                          ))}
                         </tr>
-                      ))}
-                      {nominations.length === 0 && <tr><td colSpan={5} style={{ padding:16, color:"#30363d", textAlign:"center" }}>Picks will appear here...</td></tr>}
-                    </tbody>
-                  </table>
+                      </thead>
+                      <tbody>
+                        {(() => {
+                          let filtered = nominations.map((n, i) => ({ ...n, pickNo: i + 1 }));
+                          if (resultsFilterMgr !== "ALL") filtered = filtered.filter(n => n.winner === resultsFilterMgr);
+                          if (resultsFilterPos !== "ALL") filtered = filtered.filter(n => n.player.pos === resultsFilterPos);
+                          const sorted = [...filtered].sort((a, b) => {
+                            let cmp = 0;
+                            if (resultsSortKey === "pickNo") cmp = a.pickNo - b.pickNo;
+                            else if (resultsSortKey === "price") cmp = a.price - b.price;
+                            else if (resultsSortKey === "pos") cmp = a.player.pos.localeCompare(b.player.pos);
+                            else if (resultsSortKey === "name") cmp = a.player.name.localeCompare(b.player.name);
+                            else if (resultsSortKey === "manager") cmp = a.winner.localeCompare(b.winner);
+                            return resultsSortDir === "asc" ? cmp : -cmp;
+                          });
+                          if (sorted.length === 0) return <tr><td colSpan={5} style={{ padding:16, color:"#30363d", textAlign:"center" }}>{nominations.length === 0 ? "Picks will appear here..." : "No results match filters"}</td></tr>;
+                          return sorted.map(n => (
+                            <tr key={n.pickNo} style={{ borderBottom:"1px solid #141a22", background: n.winner === userTeam ? "#1c2d4a22" : "transparent" }}>
+                              <td style={{ padding:"2px 4px", color:"#484f58" }}>{n.pickNo}</td>
+                              <td style={{ padding:"2px 4px", color:"#c9d1d9" }}>{n.player.name}</td>
+                              <td style={{ padding:"2px 4px", textAlign:"center" }}><span style={{ color:POS_COLOR[n.player.pos], fontWeight:600 }}>{n.player.pos}</span></td>
+                              <td style={{ padding:"2px 4px", color:"#2ecc71", textAlign:"right", fontWeight:700 }}>${n.price}</td>
+                              <td style={{ padding:"2px 4px", color: n.winner === userTeam ? "#6bb3ff" : "#8b949e" }}>{n.winner === "Greg Mulder" ? "Greg M" : n.winner === "Greg Cady" ? "Greg C" : n.winner.split(" ")[0]}</td>
+                            </tr>
+                          ));
+                        })()}
+                      </tbody>
+                    </table>
+                  </div>
                 )}
               </div>
 
@@ -66884,8 +67208,8 @@ function MockDraftTab() {
 
 
         {/* Draft complete overlay — Draft Report Card */}
-        {phase === "complete" && (() => {
-          const grades = generateDraftGrades(nominations, rosters, budgets, playerPool);
+        {phase === "complete" && draftGrades && (() => {
+          const grades = draftGrades;
           const gradeColor = (g) => g.startsWith("A") ? "#2ecc71" : g.startsWith("B") ? "#6bb3ff" : g.startsWith("C") ? "#e9c46a" : g.startsWith("D") ? "#e67e22" : "#e74c3c";
 
           // ── HIGHLIGHTS DATA ──
@@ -66954,6 +67278,7 @@ function MockDraftTab() {
                               <span style={{ color: g.totalValue > g.totalSpent ? "#2ecc71" : "#e74c3c" }}>{g.totalValue > g.totalSpent ? "📈" : "📉"} {g.totalValue > g.totalSpent ? "+" : ""}${g.totalValue - g.totalSpent} surplus</span>
                               <span style={{ color:"#2ecc71" }}>🎯 Steals: {g.steals}</span>
                               <span style={{ color:"#e67e22" }}>📈 Overpays: {g.overpays}</span>
+                              {g.unspent > 2 && <span style={{ color:"#f85149" }}>💰 ${g.unspent} unspent</span>}
                             </div>
                           </div>
                         </div>
@@ -67072,7 +67397,7 @@ function MockDraftTab() {
               </div>
 
               <div style={{ display:"flex", gap:12, justifyContent:"center", marginTop:20 }}>
-                <button onClick={() => { setPhase("setup"); setLog([]); setNominations([]); setChatMessages([]); usedMessagesRef.current = new Set(); }} style={{ background:"#238636", border:"none", borderRadius:8, color:"#fff", fontSize:14, fontWeight:600, padding:"10px 24px", cursor:"pointer" }}>Draft Again</button>
+                <button onClick={() => { setPaused(false); setDraftStarted(false); pauseDataRef.current=null; setPhase("setup"); setLog([]); setNominations([]); setChatMessages([]); usedMessagesRef.current = new Set(); }} style={{ background:"#238636", border:"none", borderRadius:8, color:"#fff", fontSize:14, fontWeight:600, padding:"10px 24px", cursor:"pointer" }}>Draft Again</button>
                 <button onClick={() => { setPhase("drafting"); setReportTab("grades"); }} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:8, color:"#c9d1d9", fontSize:14, fontWeight:600, padding:"10px 24px", cursor:"pointer" }}>Back to Board</button>
               </div>
             </div>
