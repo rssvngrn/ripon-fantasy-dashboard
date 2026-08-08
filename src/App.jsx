@@ -65680,31 +65680,41 @@ function generateDraftGrades(nominations, rosters, budgets, playerPool) {
   });
 
   // ── FIELD-RELATIVE GRADING ──
-  // Grade primarily on total ADP value acquired, ranked against the field.
-  // Then apply modifiers for steals, balance, and the "stupidity tax" for unspent $.
-  const allValues = grades.map(g => g.totalValue);
-  const avgValue = allValues.reduce((a, b) => a + b, 0) / allValues.length;
-  const maxValue = Math.max(...allValues);
-  const minValue = Math.min(...allValues);
-  const valueRange = maxValue - minValue || 1;
+  // Grade based on RANK in the field, not raw value spread.
+  // This forces a real distribution: #1 gets A+, #12 gets C-/D, middle gets B-range.
+  // Rank-based ensures separation even when values are clustered.
+  const sorted = [...grades].sort((a, b) => b.totalValue - a.totalValue);
+  const rankMap = {};
+  sorted.forEach((g, i) => { rankMap[g.manager] = i; }); // 0 = best, 11 = worst
+
+  // Target grade distribution for 12 teams:
+  // Rank 0 (best): ~92 pts (A)
+  // Rank 1: ~85 (A-)
+  // Rank 2: ~79 (B+)
+  // Rank 3: ~74 (B)
+  // Rank 4: ~69 (B-)
+  // Rank 5: ~64 (B-)
+  // Rank 6: ~59 (C+)
+  // Rank 7: ~54 (C)
+  // Rank 8: ~49 (C)
+  // Rank 9: ~44 (C-)
+  // Rank 10: ~39 (D+)
+  // Rank 11 (worst): ~34 (D+)
+  const rankGrades = [92, 85, 79, 74, 69, 64, 59, 54, 49, 44, 39, 34];
 
   grades.forEach(g => {
-    // Primary: where does this manager's total value rank in the field? (0-100 scale)
-    // Top of field = 85-90 pts base, average = 60 pts, bottom = 30-35 pts
-    const fieldPosition = (g.totalValue - minValue) / valueRange; // 0.0 (worst) to 1.0 (best)
-    let gradeNum = 35 + fieldPosition * 55; // 35 (worst) to 90 (best)
+    const rank = rankMap[g.manager];
+    let gradeNum = rankGrades[rank] || 50;
 
-    // Steal bonus: finding value is a skill (small bump, +1.5 per steal)
-    gradeNum += g.steals * 1.5;
+    // Small steal bonus: +1 per steal above 3 (reward smart buying, but don't inflate)
+    if (g.steals > 3) gradeNum += (g.steals - 3) * 1;
 
-    // Positional balance bonus
-    gradeNum += (g.balanceScore - 2) * 3;
+    // Small overpay penalty: -1 per overpay above 4
+    if (g.overpays > 4) gradeNum -= (g.overpays - 4) * 1;
 
     // ── STUPIDITY TAX: unspent budget penalty ──
-    // You had money and didn't use it — that's value you voluntarily left on the board.
-    // Not about efficiency, about the stupidity of not spending available dollars.
     if (g.unspent > 3) {
-      gradeNum -= Math.min(15, (g.unspent - 3) * 0.7);
+      gradeNum -= Math.min(12, (g.unspent - 3) * 0.6);
     }
 
     // Clamp
@@ -66146,13 +66156,19 @@ function MockDraftTab() {
   const [view, setView] = useState("board"); // board | pool | profiles
   const [reportTab, setReportTab] = useState("grades"); // grades | highlights (draft report card)
   const [draftGrades, setDraftGrades] = useState(null); // cached grades after draft completes
+  const [gradesLoading, setGradesLoading] = useState(false); // loading spinner before grades show
 
-  // Cache draft grades when draft completes (prevents re-computation on re-renders)
+  // Cache draft grades when draft completes (with loading delay for dramatic effect)
   React.useEffect(() => {
-    if (phase === "complete" && !draftGrades && nominations.length > 0) {
-      setDraftGrades(generateDraftGrades(nominations, rosters, budgets, playerPool));
+    if (phase === "complete" && !draftGrades && !gradesLoading && nominations.length > 0) {
+      setGradesLoading(true);
+      const timer = setTimeout(() => {
+        setDraftGrades(generateDraftGrades(nominations, rosters, budgets, playerPool));
+        setGradesLoading(false);
+      }, 2500); // 2.5 second "calculating" animation
+      return () => clearTimeout(timer);
     }
-    if (phase !== "complete") setDraftGrades(null); // reset when going back to drafting/setup
+    if (phase !== "complete") { setDraftGrades(null); setGradesLoading(false); }
   }, [phase, nominations.length]);
   const [countdown, setCountdown] = useState(0); // visible countdown timer
   const timerRef = useRef(null); // award timer (fires when countdown hits 0)
@@ -67206,6 +67222,16 @@ function MockDraftTab() {
           )}
         </div>
 
+
+        {/* Draft complete overlay — Loading spinner */}
+        {phase === "complete" && gradesLoading && (
+          <div style={{ position:"absolute", top:0, left:0, right:0, bottom:0, background:"rgba(0,0,0,0.92)", zIndex:100, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center" }}>
+            <div style={{ fontSize:40, marginBottom:16, animation:"spin 1.5s linear infinite" }}>📊</div>
+            <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:22, color:"#e9c46a", marginBottom:8 }}>Calculating Grades...</div>
+            <div style={{ fontSize:12, color:"#8b949e" }}>Analyzing rosters, steals, and value acquired</div>
+            <style>{`@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }`}</style>
+          </div>
+        )}
 
         {/* Draft complete overlay — Draft Report Card */}
         {phase === "complete" && draftGrades && (() => {
