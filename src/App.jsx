@@ -999,25 +999,109 @@ const DATA = {
   },
   yoyScoring: [{"year": 2015, "avg": 92.67, "high": 159.6, "low": 42.3, "stdev": 23.34}, {"year": 2016, "avg": 92.09, "high": 153.52, "low": 41.26, "stdev": 21.31}, {"year": 2017, "avg": 102.73, "high": 165.62, "low": 46.86, "stdev": 22.19}, {"year": 2018, "avg": 113.36, "high": 178.28, "low": 59.24, "stdev": 25.31}, {"year": 2019, "avg": 108.02, "high": 183.02, "low": 59.82, "stdev": 24.98}, {"year": 2020, "avg": 107.25, "high": 179.44, "low": 57.96, "stdev": 22.26}, {"year": 2021, "avg": 105.92, "high": 169.18, "low": 51.22, "stdev": 24.84}, {"year": 2022, "avg": 107.32, "high": 175.32, "low": 51.46, "stdev": 21.77}, {"year": 2023, "avg": 109.0, "high": 164.54, "low": 44.66, "stdev": 22.26}, {"year": 2024, "avg": 109.82, "high": 174.44, "low": 55.56, "stdev": 21.98}, {"year": 2025, "avg": 107.08, "high": 184.4, "low": 35.48, "stdev": 24.96}],
   seasonHistories: {
-    "Aaron Fay": [{year:2020,team:"My Kupp Runneth Over",W:5,L:8,PF:1197.2,PA:1431.92,RSRank:11,PlayoffFinish:12,playoffs:false},{year:2021,team:"My Kupp Runneth Over",W:10,L:4,PF:1710.5,PA:1451.54,RSRank:2,PlayoffFinish:3,playoffs:true},{year:2022,team:"Cooper Troopers",W:6,L:8,PF:1404.1,PA:1474.74,RSRank:9,PlayoffFinish:12,playoffs:false},{year:2023,team:"Cooper Troopers",W:3,L:11,PF:1426.9,PA:1495.78,RSRank:12,PlayoffFinish:9,playoffs:false},{year:2024,team:"Balaam's McConkey",W:6,L:8,PF:1489.1,PA:1700.84,RSRank:9,PlayoffFinish:7,playoffs:false},{year:2025,team:"Balaam's McConkey",W:7,L:7,PF:1424.3,PA:1512.14,RSRank:7,PlayoffFinish:12,playoffs:false}],
+    "Aaron Fay": [{year:2020,team:"My Kupp Runneth Over",W:5,L:8,PF:1197.2,PA:1431.92,RSRank:11,PlayoffFinish:12,playoffs:false},{year:2021,team:"My Kupp Runneth Over",W:10,L:4,PF:1710.5,PA:1451.54,RSRank:2,PlayoffFinish:3,playoffs:true},{year:2022,team:"Cooper Troopers",W:6,L:8,PF:1404.1,PA:1474.74,RSRank:9,PlayoffFinish:12,playoffs:false},{year:2023,team:"Cooper Troopers",W:3,L:11,PF:1426.9,PA:1495.78,RSRank:12,PlayoffFinish:9,playoffs:false},{year:2024,team:"Balaam's McConkey",W:6,L:8,PF:1489.1,PA:1700.84,RSRank:9,PlayoffFinish:7,playoffs:false},{year:2025,team:"Balaam's McConkey",W:7,L:7,PF:1424.3,PA:1512.14,RSRank:7,PlayoffFinish:12,playoffs:false},
+{"trigger":"general","text":"Anybody want an 805? I'm cracking another one."},
+{"trigger":"general","text":"This 805 Cerveza hits different on draft night."},
+{"trigger":"general","text":"Who ordered the chicken bacon ranch? That's mine."},
+{"trigger":"general","text":"Save me another slice of the all meat. I'm coming back for it."},
+{"trigger":"general","text":"Katie's cooking is better than any of this but I'll never tell her I said that here."},
+{"trigger":"general","text":"Has anyone tried the Hard Mountain Dew? No? Just me? Again?"}
+],
     "Ben de Ruiter": [{year:2016,team:"Friendship",W:6,L:7,PF:1225.5,PA:1259.0,RSRank:7,PlayoffFinish:8,playoffs:false},{year:2017,team:"Friendship",W:7,L:6,PF:1347.4,PA:1329.8,RSRank:4,PlayoffFinish:2,playoffs:true},{year:2018,team:"Friendship",W:5,L:8,PF:1398.1,PA:1486.36,RSRank:9,PlayoffFinish:11,playoffs:false},{year:2019,team:"James White Claws",W:2,L:11,PF:1158.4,PA:1481.26,RSRank:12,PlayoffFinish:9,playoffs:false},{year:2020,team:"James White Claws",W:6,L:7,PF:1340.9,PA:1400.22,RSRank:8,PlayoffFinish:8,playoffs:false},{year:2021,team:"James White Claws",W:1,L:13,PF:1113.9,PA:1566.4,RSRank:14,PlayoffFinish:14,playoffs:false}],
     "Casey Rhoda": [{year:2015,team:"Casey's Team",W:6,L:7,PF:1220.7,PA:1203.36,RSRank:7,PlayoffFinish:8,playoffs:false}],
-    "Eric Graef": [{year:2015,team:"Me and Julio",W:6,L:7,PF:1260.7,PA:1131.28,RSRank:5,PlayoffFinish:1,playoffs:true},{year:2016,team:"Hingle McCringleberry",W:8,L:5,PF:1279.4,PA:1290.0,RSRank:5,PlayoffFinish:2,playoffs:true},{year:2017,team:"Ravenous D",W:7,L:6,PF:1303.6,PA:1342.12,RSRank:5,PlayoffFinish:5,playoffs:true},{year:2018,team:"Chirhomantics",W:6,L:7,PF:1508.4,PA:1463.14,RSRank:6,PlayoffFinish:5,playoffs:true},{year:2019,team:"Chirhomantics",W:9,L:4,PF:1410.6,PA:1324.66,RSRank:2,PlayoffFinish:4,playoffs:true},{year:2020,team:"Here in Allentown",W:8,L:5,PF:1568.6,PA:1377.04,RSRank:4,PlayoffFinish:2,playoffs:true},{year:2021,team:"Cooper Troopers",W:11,L:3,PF:1593.5,PA:1339.92,RSRank:1,PlayoffFinish:5,playoffs:true},{year:2022,team:"The Real Commish",W:8,L:6,PF:1600.0,PA:1573.38,RSRank:4,PlayoffFinish:6,playoffs:true},{year:2023,team:"Oooolave oh-oh",W:8,L:6,PF:1511.6,PA:1502.14,RSRank:4,PlayoffFinish:4,playoffs:true},{year:2024,team:"White Privilege",W:9,L:5,PF:1623.3,PA:1547.6,RSRank:2,PlayoffFinish:4,playoffs:true},{year:2025,team:"K + S = (barf)",W:5,L:9,PF:1350.6,PA:1547.9,RSRank:11,PlayoffFinish:9,playoffs:false}],
-    "Greg Cady": [{year:2015,team:"CO U KNOW",W:10,L:3,PF:1316.1,PA:1161.74,RSRank:2,PlayoffFinish:2,playoffs:true},{year:2016,team:"Ron Mexico",W:8,L:5,PF:1242.7,PA:1172.58,RSRank:6,PlayoffFinish:1,playoffs:true},{year:2017,team:"Ron Mexico",W:7,L:6,PF:1255.9,PA:1260.2,RSRank:7,PlayoffFinish:7,playoffs:false},{year:2018,team:"Ron Mexico",W:9,L:4,PF:1556.1,PA:1430.14,RSRank:3,PlayoffFinish:2,playoffs:true},{year:2019,team:"Ron Mexico",W:7,L:6,PF:1522.6,PA:1381.88,RSRank:4,PlayoffFinish:1,playoffs:true},{year:2020,team:"Ron Mexico",W:3,L:10,PF:1260.5,PA:1491.38,RSRank:14,PlayoffFinish:14,playoffs:false},{year:2021,team:"Ron Mexico",W:4,L:10,PF:1393.0,PA:1680.06,RSRank:11,PlayoffFinish:11,playoffs:false},{year:2022,team:"Joe Nebraska",W:7,L:7,PF:1397.8,PA:1447.44,RSRank:7,PlayoffFinish:11,playoffs:false},{year:2023,team:"Joe Nebraska",W:7,L:7,PF:1487.4,PA:1569.02,RSRank:9,PlayoffFinish:7,playoffs:false},{year:2024,team:"U Got Cooked",W:7,L:7,PF:1650.0,PA:1591.48,RSRank:6,PlayoffFinish:1,playoffs:true},{year:2025,team:"All Bark",W:7,L:7,PF:1512.4,PA:1494.16,RSRank:5,PlayoffFinish:5,playoffs:true}],
-    "Greg Mulder": [{year:2015,team:"Junior Melonheads",W:9,L:4,PF:1315.3,PA:1109.78,RSRank:3,PlayoffFinish:3,playoffs:true},{year:2016,team:"#TeamofBusts",W:4,L:9,PF:1203.9,PA:1268.88,RSRank:11,PlayoffFinish:11,playoffs:false},{year:2017,team:"1-877-Kars-4-Kids",W:7,L:6,PF:1302.5,PA:1328.72,RSRank:6,PlayoffFinish:1,playoffs:true},{year:2018,team:"¯\\_(ツ)_/¯",W:6,L:7,PF:1485.5,PA:1395.3,RSRank:7,PlayoffFinish:8,playoffs:false},{year:2019,team:"Meth-Gators",W:8,L:5,PF:1491.7,PA:1463.8,RSRank:3,PlayoffFinish:5,playoffs:true},{year:2020,team:"Modelovirus",W:5,L:8,PF:1383.9,PA:1430.48,RSRank:9,PlayoffFinish:10,playoffs:false},{year:2021,team:"Put it in reverse Terry!!",W:10,L:4,PF:1622.2,PA:1280.54,RSRank:3,PlayoffFinish:2,playoffs:true},{year:2022,team:"Quon Solo",W:9,L:5,PF:1648.8,PA:1577.68,RSRank:2,PlayoffFinish:4,playoffs:true},{year:2023,team:"Calvin Ridley Parlay",W:7,L:7,PF:1601.8,PA:1461.01,RSRank:6,PlayoffFinish:1,playoffs:true},{year:2024,team:"Mostly Breeceful Protest",W:6,L:8,PF:1539.4,PA:1669.2,RSRank:7,PlayoffFinish:10,playoffs:false},{year:2025,team:"Pitt Happens",W:8,L:6,PF:1522.9,PA:1481.32,RSRank:4,PlayoffFinish:2,playoffs:true}],
-    "James Lazette": [{year:2016,team:"OJ's Isotoners",W:9,L:4,PF:1318.7,PA:1106.74,RSRank:2,PlayoffFinish:4,playoffs:true},{year:2017,team:"Hanging W/ Hernandez",W:6,L:7,PF:1352.6,PA:1340.46,RSRank:9,PlayoffFinish:11,playoffs:false},{year:2018,team:"Shake-N-Bake",W:8,L:5,PF:1482.6,PA:1416.66,RSRank:4,PlayoffFinish:6,playoffs:true},{year:2019,team:"Don Mexico",W:5,L:8,PF:1373.0,PA:1461.5,RSRank:11,PlayoffFinish:10,playoffs:false},{year:2020,team:"Don Mexico",W:10,L:3,PF:1607.9,PA:1419.6,RSRank:2,PlayoffFinish:1,playoffs:true},{year:2021,team:"Don Mexico",W:9,L:5,PF:1578.8,PA:1382.38,RSRank:6,PlayoffFinish:8,playoffs:true},{year:2022,team:"Don Mexico",W:8,L:6,PF:1538.8,PA:1554.76,RSRank:5,PlayoffFinish:2,playoffs:true},{year:2023,team:"Amon A New Level",W:9,L:5,PF:1672.2,PA:1664.1,RSRank:2,PlayoffFinish:3,playoffs:true},{year:2024,team:"Shake and Bake",W:6,L:8,PF:1426.1,PA:1510.66,RSRank:10,PlayoffFinish:8,playoffs:false},{year:2025,team:"Shake and Bake",W:6,L:8,PF:1428.6,PA:1505.88,RSRank:8,PlayoffFinish:7,playoffs:false}],
+    "Eric Graef": [{year:2015,team:"Me and Julio",W:6,L:7,PF:1260.7,PA:1131.28,RSRank:5,PlayoffFinish:1,playoffs:true},{year:2016,team:"Hingle McCringleberry",W:8,L:5,PF:1279.4,PA:1290.0,RSRank:5,PlayoffFinish:2,playoffs:true},{year:2017,team:"Ravenous D",W:7,L:6,PF:1303.6,PA:1342.12,RSRank:5,PlayoffFinish:5,playoffs:true},{year:2018,team:"Chirhomantics",W:6,L:7,PF:1508.4,PA:1463.14,RSRank:6,PlayoffFinish:5,playoffs:true},{year:2019,team:"Chirhomantics",W:9,L:4,PF:1410.6,PA:1324.66,RSRank:2,PlayoffFinish:4,playoffs:true},{year:2020,team:"Here in Allentown",W:8,L:5,PF:1568.6,PA:1377.04,RSRank:4,PlayoffFinish:2,playoffs:true},{year:2021,team:"Cooper Troopers",W:11,L:3,PF:1593.5,PA:1339.92,RSRank:1,PlayoffFinish:5,playoffs:true},{year:2022,team:"The Real Commish",W:8,L:6,PF:1600.0,PA:1573.38,RSRank:4,PlayoffFinish:6,playoffs:true},{year:2023,team:"Oooolave oh-oh",W:8,L:6,PF:1511.6,PA:1502.14,RSRank:4,PlayoffFinish:4,playoffs:true},{year:2024,team:"White Privilege",W:9,L:5,PF:1623.3,PA:1547.6,RSRank:2,PlayoffFinish:4,playoffs:true},{year:2025,team:"K + S = (barf)",W:5,L:9,PF:1350.6,PA:1547.9,RSRank:11,PlayoffFinish:9,playoffs:false},
+{"trigger":"general","text":"This Sierra Nevada is going down smooth. Draft night tradition."},
+{"trigger":"general","text":"Grabbing another Lagunitas. Anyone need one?"},
+{"trigger":"general","text":"I'll take one slice of pepperoni and call it good. Gotta drive home."},
+{"trigger":"general","text":"The deep dish supreme is disappearing fast."},
+{"trigger":"general","text":"If this bid goes any higher I'm going out to the patio for a dart."},
+{"trigger":"general","text":"Be right back. Patio break. Don't nominate anyone good."}
+],
+    "Greg Cady": [{year:2015,team:"CO U KNOW",W:10,L:3,PF:1316.1,PA:1161.74,RSRank:2,PlayoffFinish:2,playoffs:true},{year:2016,team:"Ron Mexico",W:8,L:5,PF:1242.7,PA:1172.58,RSRank:6,PlayoffFinish:1,playoffs:true},{year:2017,team:"Ron Mexico",W:7,L:6,PF:1255.9,PA:1260.2,RSRank:7,PlayoffFinish:7,playoffs:false},{year:2018,team:"Ron Mexico",W:9,L:4,PF:1556.1,PA:1430.14,RSRank:3,PlayoffFinish:2,playoffs:true},{year:2019,team:"Ron Mexico",W:7,L:6,PF:1522.6,PA:1381.88,RSRank:4,PlayoffFinish:1,playoffs:true},{year:2020,team:"Ron Mexico",W:3,L:10,PF:1260.5,PA:1491.38,RSRank:14,PlayoffFinish:14,playoffs:false},{year:2021,team:"Ron Mexico",W:4,L:10,PF:1393.0,PA:1680.06,RSRank:11,PlayoffFinish:11,playoffs:false},{year:2022,team:"Joe Nebraska",W:7,L:7,PF:1397.8,PA:1447.44,RSRank:7,PlayoffFinish:11,playoffs:false},{year:2023,team:"Joe Nebraska",W:7,L:7,PF:1487.4,PA:1569.02,RSRank:9,PlayoffFinish:7,playoffs:false},{year:2024,team:"U Got Cooked",W:7,L:7,PF:1650.0,PA:1591.48,RSRank:6,PlayoffFinish:1,playoffs:true},{year:2025,team:"All Bark",W:7,L:7,PF:1512.4,PA:1494.16,RSRank:5,PlayoffFinish:5,playoffs:true},
+{"trigger":"general","text":"Cracking another Colorado craft. You guys wouldn't understand."},
+{"trigger":"general","text":"This Coloradan IPA reminds me of home. Cheers."},
+{"trigger":"general","text":"You know what? I can eat GLUTEN tonight. No restrictions. This is freedom."},
+{"trigger":"general","text":"My wife would kill me if she saw how much pizza I'm eating right now. Worth it."},
+{"trigger":"general","text":"Eating pizza with gluten is my once-a-year rebellion. Don't tell my wife."},
+{"trigger":"general","text":"Draft night is the one night I eat like a bachelor. No restrictions."}
+],
+    "Greg Mulder": [{year:2015,team:"Junior Melonheads",W:9,L:4,PF:1315.3,PA:1109.78,RSRank:3,PlayoffFinish:3,playoffs:true},{year:2016,team:"#TeamofBusts",W:4,L:9,PF:1203.9,PA:1268.88,RSRank:11,PlayoffFinish:11,playoffs:false},{year:2017,team:"1-877-Kars-4-Kids",W:7,L:6,PF:1302.5,PA:1328.72,RSRank:6,PlayoffFinish:1,playoffs:true},{year:2018,team:"¯\\_(ツ)_/¯",W:6,L:7,PF:1485.5,PA:1395.3,RSRank:7,PlayoffFinish:8,playoffs:false},{year:2019,team:"Meth-Gators",W:8,L:5,PF:1491.7,PA:1463.8,RSRank:3,PlayoffFinish:5,playoffs:true},{year:2020,team:"Modelovirus",W:5,L:8,PF:1383.9,PA:1430.48,RSRank:9,PlayoffFinish:10,playoffs:false},{year:2021,team:"Put it in reverse Terry!!",W:10,L:4,PF:1622.2,PA:1280.54,RSRank:3,PlayoffFinish:2,playoffs:true},{year:2022,team:"Quon Solo",W:9,L:5,PF:1648.8,PA:1577.68,RSRank:2,PlayoffFinish:4,playoffs:true},{year:2023,team:"Calvin Ridley Parlay",W:7,L:7,PF:1601.8,PA:1461.01,RSRank:6,PlayoffFinish:1,playoffs:true},{year:2024,team:"Mostly Breeceful Protest",W:6,L:8,PF:1539.4,PA:1669.2,RSRank:7,PlayoffFinish:10,playoffs:false},{year:2025,team:"Pitt Happens",W:8,L:6,PF:1522.9,PA:1481.32,RSRank:4,PlayoffFinish:2,playoffs:true},
+{"trigger":"general","text":"Modelo time. Who needs one?"},
+{"trigger":"general","text":"Nothing like a cold Modelo while your roster comes together."},
+{"trigger":"general","text":"Might crack open that Half Moon Bay brew I brought. Getting bored of Modelo."},
+{"trigger":"general","text":"Anyone else want the last cheesy breadstick or am I taking it?"},
+{"trigger":"general","text":"Switching to this Dust Bowl brew I brought. The Modelo ran its course."},
+{"trigger":"general","text":"The Half Moon Bay porter might be too fancy for this group. More for me."}
+],
+    "James Lazette": [{year:2016,team:"OJ's Isotoners",W:9,L:4,PF:1318.7,PA:1106.74,RSRank:2,PlayoffFinish:4,playoffs:true},{year:2017,team:"Hanging W/ Hernandez",W:6,L:7,PF:1352.6,PA:1340.46,RSRank:9,PlayoffFinish:11,playoffs:false},{year:2018,team:"Shake-N-Bake",W:8,L:5,PF:1482.6,PA:1416.66,RSRank:4,PlayoffFinish:6,playoffs:true},{year:2019,team:"Don Mexico",W:5,L:8,PF:1373.0,PA:1461.5,RSRank:11,PlayoffFinish:10,playoffs:false},{year:2020,team:"Don Mexico",W:10,L:3,PF:1607.9,PA:1419.6,RSRank:2,PlayoffFinish:1,playoffs:true},{year:2021,team:"Don Mexico",W:9,L:5,PF:1578.8,PA:1382.38,RSRank:6,PlayoffFinish:8,playoffs:true},{year:2022,team:"Don Mexico",W:8,L:6,PF:1538.8,PA:1554.76,RSRank:5,PlayoffFinish:2,playoffs:true},{year:2023,team:"Amon A New Level",W:9,L:5,PF:1672.2,PA:1664.1,RSRank:2,PlayoffFinish:3,playoffs:true},{year:2024,team:"Shake and Bake",W:6,L:8,PF:1426.1,PA:1510.66,RSRank:10,PlayoffFinish:8,playoffs:false},{year:2025,team:"Shake and Bake",W:6,L:8,PF:1428.6,PA:1505.88,RSRank:8,PlayoffFinish:7,playoffs:false},
+{"trigger":"general","text":"I'm the host, I drink everyone's beer. That's the rule."},
+{"trigger":"general","text":"Whose beer am I grabbing next? Host tax."},
+{"trigger":"general","text":"I ordered 8 pizzas. If you're still hungry that's a you problem."},
+{"trigger":"general","text":"The BBQ chicken was my idea. You're welcome."},
+{"trigger":"general","text":"Alright boys, Maker's Mark is coming out. Second half energy."},
+{"trigger":"general","text":"Who wants a pour of Maker's? It's that time of the draft."}
+],
     "Jon Vander Molen": [{year:2017,team:"Team Antifa",W:4,L:9,PF:1339.2,PA:1454.26,RSRank:11,PlayoffFinish:12,playoffs:false}],
     "Jonathon Israel": [{year:2015,team:"SanduskyShowerSquad",W:6,L:7,PF:1232.2,PA:1225.94,RSRank:6,PlayoffFinish:6,playoffs:true},{year:2016,team:"Teo's 'girlfriend'",W:5,L:8,PF:996.1,PA:1142.26,RSRank:10,PlayoffFinish:9,playoffs:false}],
-    "Joshua Van Groningen": [{year:2020,team:"Misfits",W:4,L:9,PF:1353.4,PA:1458.76,RSRank:12,PlayoffFinish:11,playoffs:false},{year:2021,team:"CeeDeez",W:9,L:5,PF:1594.3,PA:1507.04,RSRank:5,PlayoffFinish:1,playoffs:true},{year:2022,team:"CeeDeez L's",W:9,L:5,PF:1491.9,PA:1420.96,RSRank:3,PlayoffFinish:1,playoffs:true},{year:2023,team:"CEEDEEZ",W:5,L:9,PF:1519.5,PA:1577.14,RSRank:10,PlayoffFinish:10,playoffs:false},{year:2024,team:"Rubber Bucky's",W:8,L:6,PF:1636.2,PA:1478.74,RSRank:5,PlayoffFinish:3,playoffs:true},{year:2025,team:"Tuten Brown SZN",W:7,L:7,PF:1446.7,PA:1458.16,RSRank:6,PlayoffFinish:4,playoffs:true}],
-    "Matthew Van Groningen": [{year:2016,team:"Hingle McCringleberry",W:5,L:8,PF:1031.8,PA:1170.62,RSRank:9,PlayoffFinish:12,playoffs:false},{year:2017,team:"Michael Rosen",W:9,L:4,PF:1281.4,PA:1180.76,RSRank:2,PlayoffFinish:4,playoffs:true},{year:2018,team:"The Goose in Loose",W:6,L:7,PF:1371.8,PA:1429.94,RSRank:8,PlayoffFinish:10,playoffs:false},{year:2019,team:"Rhonda Mexico",W:6,L:7,PF:1281.0,PA:1341.98,RSRank:10,PlayoffFinish:12,playoffs:false},{year:2020,team:"Kittle Corn",W:11,L:2,PF:1610.4,PA:1330.2,RSRank:1,PlayoffFinish:3,playoffs:true},{year:2021,team:"State of Jefferson",W:8,L:6,PF:1531.0,PA:1444.42,RSRank:7,PlayoffFinish:6,playoffs:true},{year:2022,team:"State of Depression",W:4,L:10,PF:1464.0,PA:1591.1,RSRank:10,PlayoffFinish:7,playoffs:false},{year:2023,team:"Griddy Griddy Bang Bang",W:8,L:6,PF:1547.7,PA:1508.08,RSRank:3,PlayoffFinish:5,playoffs:true},{year:2024,team:"Griddy Griddy Bang Bang",W:2,L:12,PF:1236.6,PA:1519.42,RSRank:12,PlayoffFinish:9,playoffs:false},{year:2025,team:"Jahmyroquai",W:4,L:10,PF:1393.4,PA:1640.24,RSRank:12,PlayoffFinish:10,playoffs:false}],
-    "Ross Van Groningen": [{year:2015,team:"I Like Bortles",W:8,L:5,PF:1266.7,PA:1182.7,RSRank:4,PlayoffFinish:5,playoffs:true},{year:2016,team:"My Coach Left Me",W:9,L:4,PF:1360.6,PA:1118.0,RSRank:1,PlayoffFinish:3,playoffs:true},{year:2017,team:"Tom Bodett",W:3,L:10,PF:1248.1,PA:1445.3,RSRank:12,PlayoffFinish:8,playoffs:false},{year:2018,team:"Prison Mike Glennon",W:7,L:6,PF:1382.6,PA:1477.58,RSRank:5,PlayoffFinish:3,playoffs:true},{year:2019,team:"30-50 Feral Hogs",W:6,L:7,PF:1424.3,PA:1443.32,RSRank:8,PlayoffFinish:7,playoffs:false},{year:2020,team:"Mr. Unliiiiiimited",W:6,L:7,PF:1399.4,PA:1383.72,RSRank:7,PlayoffFinish:7,playoffs:false},{year:2021,team:"Uncle Rico",W:7,L:7,PF:1354.5,PA:1428.18,RSRank:9,PlayoffFinish:9,playoffs:false},{year:2022,team:"Jesus at Red Rocks",W:8,L:6,PF:1466.8,PA:1479.32,RSRank:6,PlayoffFinish:5,playoffs:true},{year:2023,team:"Joe Cool",W:10,L:4,PF:1548.9,PA:1348.98,RSRank:1,PlayoffFinish:2,playoffs:true},{year:2024,team:"Pittsbull",W:9,L:5,PF:1551.2,PA:1520.02,RSRank:4,PlayoffFinish:5,playoffs:true},{year:2025,team:"I'm Sorry Smith Jaxon",W:8,L:6,PF:1629.5,PA:1485.86,RSRank:3,PlayoffFinish:6,playoffs:true}],
+    "Joshua Van Groningen": [{year:2020,team:"Misfits",W:4,L:9,PF:1353.4,PA:1458.76,RSRank:12,PlayoffFinish:11,playoffs:false},{year:2021,team:"CeeDeez",W:9,L:5,PF:1594.3,PA:1507.04,RSRank:5,PlayoffFinish:1,playoffs:true},{year:2022,team:"CeeDeez L's",W:9,L:5,PF:1491.9,PA:1420.96,RSRank:3,PlayoffFinish:1,playoffs:true},{year:2023,team:"CEEDEEZ",W:5,L:9,PF:1519.5,PA:1577.14,RSRank:10,PlayoffFinish:10,playoffs:false},{year:2024,team:"Rubber Bucky's",W:8,L:6,PF:1636.2,PA:1478.74,RSRank:5,PlayoffFinish:3,playoffs:true},{year:2025,team:"Tuten Brown SZN",W:7,L:7,PF:1446.7,PA:1458.16,RSRank:6,PlayoffFinish:4,playoffs:true},
+{"trigger":"general","text":"Whose beer is closest to me? That's mine now."},
+{"trigger":"general","text":"I didn't bring beer but I brought vibes. You're welcome."},
+{"trigger":"general","text":"I've had 5 slices and I'm not done. Don't judge me."},
+{"trigger":"general","text":"DoorDash some wings if you want but this pizza is fire."},
+{"trigger":"general","text":"I could DoorDash some wings right now. Anyone splitting?"},
+{"trigger":"general","text":"The DoorDash driver knows my address by heart at this point."}
+],
+    "Matthew Van Groningen": [{year:2016,team:"Hingle McCringleberry",W:5,L:8,PF:1031.8,PA:1170.62,RSRank:9,PlayoffFinish:12,playoffs:false},{year:2017,team:"Michael Rosen",W:9,L:4,PF:1281.4,PA:1180.76,RSRank:2,PlayoffFinish:4,playoffs:true},{year:2018,team:"The Goose in Loose",W:6,L:7,PF:1371.8,PA:1429.94,RSRank:8,PlayoffFinish:10,playoffs:false},{year:2019,team:"Rhonda Mexico",W:6,L:7,PF:1281.0,PA:1341.98,RSRank:10,PlayoffFinish:12,playoffs:false},{year:2020,team:"Kittle Corn",W:11,L:2,PF:1610.4,PA:1330.2,RSRank:1,PlayoffFinish:3,playoffs:true},{year:2021,team:"State of Jefferson",W:8,L:6,PF:1531.0,PA:1444.42,RSRank:7,PlayoffFinish:6,playoffs:true},{year:2022,team:"State of Depression",W:4,L:10,PF:1464.0,PA:1591.1,RSRank:10,PlayoffFinish:7,playoffs:false},{year:2023,team:"Griddy Griddy Bang Bang",W:8,L:6,PF:1547.7,PA:1508.08,RSRank:3,PlayoffFinish:5,playoffs:true},{year:2024,team:"Griddy Griddy Bang Bang",W:2,L:12,PF:1236.6,PA:1519.42,RSRank:12,PlayoffFinish:9,playoffs:false},{year:2025,team:"Jahmyroquai",W:4,L:10,PF:1393.4,PA:1640.24,RSRank:12,PlayoffFinish:10,playoffs:false},
+{"trigger":"general","text":"Anyone want to try my homemade beer? It's been fermenting for 6 weeks."},
+{"trigger":"general","text":"My closet beer might taste like old leather but it's MY old leather."},
+{"trigger":"general","text":"Pepperoni and olive is underrated. I'll die on this hill."},
+{"trigger":"general","text":"Pairing my homemade beer with deep dish. Don't knock it."},
+{"trigger":"general","text":"I swear this batch tastes better. The mothball phase is over."},
+{"trigger":"general","text":"The sour beer from Terraza is way better than whatever Trey's drinking."}
+],
+    "Ross Van Groningen": [{year:2015,team:"I Like Bortles",W:8,L:5,PF:1266.7,PA:1182.7,RSRank:4,PlayoffFinish:5,playoffs:true},{year:2016,team:"My Coach Left Me",W:9,L:4,PF:1360.6,PA:1118.0,RSRank:1,PlayoffFinish:3,playoffs:true},{year:2017,team:"Tom Bodett",W:3,L:10,PF:1248.1,PA:1445.3,RSRank:12,PlayoffFinish:8,playoffs:false},{year:2018,team:"Prison Mike Glennon",W:7,L:6,PF:1382.6,PA:1477.58,RSRank:5,PlayoffFinish:3,playoffs:true},{year:2019,team:"30-50 Feral Hogs",W:6,L:7,PF:1424.3,PA:1443.32,RSRank:8,PlayoffFinish:7,playoffs:false},{year:2020,team:"Mr. Unliiiiiimited",W:6,L:7,PF:1399.4,PA:1383.72,RSRank:7,PlayoffFinish:7,playoffs:false},{year:2021,team:"Uncle Rico",W:7,L:7,PF:1354.5,PA:1428.18,RSRank:9,PlayoffFinish:9,playoffs:false},{year:2022,team:"Jesus at Red Rocks",W:8,L:6,PF:1466.8,PA:1479.32,RSRank:6,PlayoffFinish:5,playoffs:true},{year:2023,team:"Joe Cool",W:10,L:4,PF:1548.9,PA:1348.98,RSRank:1,PlayoffFinish:2,playoffs:true},{year:2024,team:"Pittsbull",W:9,L:5,PF:1551.2,PA:1520.02,RSRank:4,PlayoffFinish:5,playoffs:true},{year:2025,team:"I'm Sorry Smith Jaxon",W:8,L:6,PF:1629.5,PA:1485.86,RSRank:3,PlayoffFinish:6,playoffs:true},
+{"trigger":"general","text":"Pouring a Pliny the Elder. Draft night deserves the good stuff."},
+{"trigger":"general","text":"Anyone seen my flask? Need a sip of Laphroaig to process that bid."},
+{"trigger":"general","text":"James, got any ice? The scotch needs a cube."},
+{"trigger":"general","text":"Save me a slice of the supreme. I'm busy winning this draft."},
+{"trigger":"general","text":"Scotch and pizza. The Commissioner's combo."},
+{"trigger":"general","text":"One sip of scotch for every steal I get tonight. I might need the whole flask."}
+],
     "Spencer Hower": [{year:2016,team:"If It Fitz I Sitz",W:8,L:5,PF:1331.1,PA:1141.32,RSRank:3,PlayoffFinish:5,playoffs:true},{year:2017,team:"3 beers 2 deep...",W:9,L:4,PF:1378.8,PA:1247.02,RSRank:1,PlayoffFinish:3,playoffs:true}],
-    "Steve Vander Molen": [{year:2015,team:"Cooper Troopers",W:5,L:8,PF:1245.3,PA:1228.06,RSRank:8,PlayoffFinish:7,playoffs:false},{year:2016,team:"The Rookie Redneck",W:8,L:5,PF:1294.7,PA:1192.18,RSRank:4,PlayoffFinish:6,playoffs:true},{year:2017,team:"Team Trump",W:6,L:7,PF:1384.0,PA:1413.34,RSRank:8,PlayoffFinish:10,playoffs:false},{year:2018,team:"Team Trump",W:9,L:4,PF:1724.8,PA:1488.16,RSRank:2,PlayoffFinish:4,playoffs:true},{year:2019,team:"Team Trump",W:6,L:7,PF:1517.8,PA:1553.3,RSRank:7,PlayoffFinish:8,playoffs:false},{year:2020,team:"Team Trump",W:7,L:6,PF:1362.0,PA:1377.34,RSRank:6,PlayoffFinish:4,playoffs:true},{year:2021,team:"Team Trump",W:4,L:10,PF:1340.3,PA:1511.68,RSRank:13,PlayoffFinish:13,playoffs:false},{year:2022,team:"Now we're Cookin'!",W:4,L:10,PF:1288.5,PA:1528.9,RSRank:12,PlayoffFinish:9,playoffs:false},{year:2023,team:"1.21 Diggawatts",W:7,L:7,PF:1506.6,PA:1628.18,RSRank:8,PlayoffFinish:12,playoffs:false},{year:2024,team:"Zay my name!",W:6,L:8,PF:1489.9,PA:1483.48,RSRank:8,PlayoffFinish:12,playoffs:false},{year:2025,team:"Steve",W:13,L:1,PF:1747.0,PA:1345.72,RSRank:1,PlayoffFinish:3,playoffs:true}],
+    "Steve Vander Molen": [{year:2015,team:"Cooper Troopers",W:5,L:8,PF:1245.3,PA:1228.06,RSRank:8,PlayoffFinish:7,playoffs:false},{year:2016,team:"The Rookie Redneck",W:8,L:5,PF:1294.7,PA:1192.18,RSRank:4,PlayoffFinish:6,playoffs:true},{year:2017,team:"Team Trump",W:6,L:7,PF:1384.0,PA:1413.34,RSRank:8,PlayoffFinish:10,playoffs:false},{year:2018,team:"Team Trump",W:9,L:4,PF:1724.8,PA:1488.16,RSRank:2,PlayoffFinish:4,playoffs:true},{year:2019,team:"Team Trump",W:6,L:7,PF:1517.8,PA:1553.3,RSRank:7,PlayoffFinish:8,playoffs:false},{year:2020,team:"Team Trump",W:7,L:6,PF:1362.0,PA:1377.34,RSRank:6,PlayoffFinish:4,playoffs:true},{year:2021,team:"Team Trump",W:4,L:10,PF:1340.3,PA:1511.68,RSRank:13,PlayoffFinish:13,playoffs:false},{year:2022,team:"Now we're Cookin'!",W:4,L:10,PF:1288.5,PA:1528.9,RSRank:12,PlayoffFinish:9,playoffs:false},{year:2023,team:"1.21 Diggawatts",W:7,L:7,PF:1506.6,PA:1628.18,RSRank:8,PlayoffFinish:12,playoffs:false},{year:2024,team:"Zay my name!",W:6,L:8,PF:1489.9,PA:1483.48,RSRank:8,PlayoffFinish:12,playoffs:false},{year:2025,team:"Steve",W:13,L:1,PF:1747.0,PA:1345.72,RSRank:1,PlayoffFinish:3,playoffs:true},
+{"trigger":"general","text":"This hazy IPA is doing its job. Cheers boys."},
+{"trigger":"general","text":"Hand me another hazy. Draft night fuel."},
+{"trigger":"general","text":"Pizza's good but have you been to The Waterloo? Miranda and I go every week."},
+{"trigger":"general","text":"Sausage pizza and a hazy IPA. Peak performance."},
+{"trigger":"general","text":"I finally quit the Bang energy drinks. Hazy IPAs only now."},
+{"trigger":"general","text":"Miranda says hi. She's at home glad I'm out of the house."}
+],
     "Tim Hoekstra": [{year:2015,team:"Hoekstra's Heroes",W:4,L:9,PF:1018.0,PA:1247.04,RSRank:9,PlayoffFinish:10,playoffs:false}],
     "Tommy Van Groningen": [{year:2015,team:"Goodell Approves",W:0,L:13,PF:880.3,PA:1391.42,RSRank:10,PlayoffFinish:9,playoffs:false}],
-    "Trey Hugen": [{year:2015,team:"Jamaal bout dat bass",W:11,L:2,PF:1292.3,PA:1166.24,RSRank:1,PlayoffFinish:4,playoffs:true},{year:2016,team:"#TeamofBusts",W:2,L:11,PF:990.9,PA:1308.78,RSRank:12,PlayoffFinish:10,playoffs:false},{year:2017,team:"Hunt and Hill Show",W:8,L:5,PF:1548.9,PA:1344.88,RSRank:3,PlayoffFinish:6,playoffs:true},{year:2018,team:"Dropping Like Flies",W:9,L:4,PF:1754.7,PA:1518.56,RSRank:1,PlayoffFinish:1,playoffs:true},{year:2019,team:"Me & Mahomies",W:7,L:6,PF:1519.8,PA:1452.92,RSRank:5,PlayoffFinish:6,playoffs:true},{year:2020,team:"Cayman Nebraska",W:8,L:5,PF:1434.0,PA:1260.76,RSRank:5,PlayoffFinish:6,playoffs:true},{year:2021,team:"Cayman Nebraska",W:9,L:5,PF:1757.8,PA:1569.56,RSRank:4,PlayoffFinish:7,playoffs:true},{year:2022,team:"Ja'MarrvelouslyChasinWins",W:6,L:8,PF:1420.1,PA:1437.02,RSRank:8,PlayoffFinish:8,playoffs:false},{year:2023,team:"Ja'MarrvelouslyChasinWins",W:7,L:7,PF:1585.4,PA:1618.36,RSRank:7,PlayoffFinish:8,playoffs:false},{year:2024,team:"Love Thy Nabers",W:9,L:5,PF:1607.0,PA:1514.14,RSRank:3,PlayoffFinish:6,playoffs:true},{year:2025,team:"Ja'Marrio Kart",W:6,L:8,PF:1410.5,PA:1461.94,RSRank:9,PlayoffFinish:11,playoffs:false}],
-    "Tyler Goslinga": [{year:2018,team:"King (sa)Quon",W:5,L:8,PF:1306.9,PA:1602.48,RSRank:10,PlayoffFinish:12,playoffs:false},{year:2019,team:"Living on a Prayer",W:9,L:4,PF:1492.8,PA:1308.62,RSRank:1,PlayoffFinish:3,playoffs:true},{year:2020,team:"Falcon Cook",W:9,L:4,PF:1390.7,PA:1377.14,RSRank:3,PlayoffFinish:5,playoffs:true},{year:2021,team:"Can you Digg it",W:7,L:7,PF:1400.6,PA:1470.4,RSRank:8,PlayoffFinish:4,playoffs:true},{year:2022,team:"Fournetflix and chill",W:11,L:3,PF:1813.2,PA:1478.88,RSRank:1,PlayoffFinish:3,playoffs:true},{year:2023,team:"Good Wilson Hunting",W:5,L:9,PF:1426.9,PA:1495.78,RSRank:11,PlayoffFinish:11,playoffs:false},{year:2024,team:"(Taylor's Version)",W:5,L:9,PF:1436.2,PA:1461.24,RSRank:11,PlayoffFinish:11,playoffs:false},{year:2025,team:"(Taylor's Version)",W:8,L:6,PF:1652.4,PA:1438.74,RSRank:2,PlayoffFinish:1,playoffs:true}],
-    "Vance Sipma": [{year:2016,team:"The Rookie Redneck",W:6,L:7,PF:1091.3,PA:1196.3,RSRank:8,PlayoffFinish:7,playoffs:false},{year:2017,team:"Redneck Revenge",W:5,L:8,PF:1282.5,PA:1338.26,RSRank:10,PlayoffFinish:9,playoffs:false},{year:2018,team:"Redneck Rebellion",W:4,L:9,PF:1305.6,PA:1403.7,RSRank:12,PlayoffFinish:7,playoffs:false},{year:2019,team:"Redneck Rodgers",W:6,L:7,PF:1319.9,PA:1347.44,RSRank:9,PlayoffFinish:11,playoffs:false},{year:2020,team:"Jonathan Taylor Thomas",W:5,L:8,PF:1352.3,PA:1388.64,RSRank:10,PlayoffFinish:9,playoffs:false},{year:2021,team:"Vance's Team",W:5,L:9,PF:1394.7,PA:1590.54,RSRank:10,PlayoffFinish:10,playoffs:false},{year:2022,team:"Kyler Whales",W:4,L:10,PF:1451.3,PA:1466.32,RSRank:11,PlayoffFinish:10,playoffs:false},{year:2023,team:"R.I.P. Chubbie's Knee",W:8,L:6,PF:1467.9,PA:1372.24,RSRank:5,PlayoffFinish:6,playoffs:true},{year:2024,team:"King Henry's Return",W:11,L:3,PF:1735.7,PA:1453.76,RSRank:1,PlayoffFinish:2,playoffs:true},{year:2025,team:"Sweet J's",W:5,L:9,PF:1470.6,PA:1616.7,RSRank:10,PlayoffFinish:8,playoffs:false}],
+    "Trey Hugen": [{year:2015,team:"Jamaal bout dat bass",W:11,L:2,PF:1292.3,PA:1166.24,RSRank:1,PlayoffFinish:4,playoffs:true},{year:2016,team:"#TeamofBusts",W:2,L:11,PF:990.9,PA:1308.78,RSRank:12,PlayoffFinish:10,playoffs:false},{year:2017,team:"Hunt and Hill Show",W:8,L:5,PF:1548.9,PA:1344.88,RSRank:3,PlayoffFinish:6,playoffs:true},{year:2018,team:"Dropping Like Flies",W:9,L:4,PF:1754.7,PA:1518.56,RSRank:1,PlayoffFinish:1,playoffs:true},{year:2019,team:"Me & Mahomies",W:7,L:6,PF:1519.8,PA:1452.92,RSRank:5,PlayoffFinish:6,playoffs:true},{year:2020,team:"Cayman Nebraska",W:8,L:5,PF:1434.0,PA:1260.76,RSRank:5,PlayoffFinish:6,playoffs:true},{year:2021,team:"Cayman Nebraska",W:9,L:5,PF:1757.8,PA:1569.56,RSRank:4,PlayoffFinish:7,playoffs:true},{year:2022,team:"Ja'MarrvelouslyChasinWins",W:6,L:8,PF:1420.1,PA:1437.02,RSRank:8,PlayoffFinish:8,playoffs:false},{year:2023,team:"Ja'MarrvelouslyChasinWins",W:7,L:7,PF:1585.4,PA:1618.36,RSRank:7,PlayoffFinish:8,playoffs:false},{year:2024,team:"Love Thy Nabers",W:9,L:5,PF:1607.0,PA:1514.14,RSRank:3,PlayoffFinish:6,playoffs:true},{year:2025,team:"Ja'Marrio Kart",W:6,L:8,PF:1410.5,PA:1461.94,RSRank:9,PlayoffFinish:11,playoffs:false},
+{"trigger":"general","text":"Busch Latte time. You Californians wouldn't understand."},
+{"trigger":"general","text":"You know how hard it is to find Busch Light out here? Iowa has it on every corner."},
+{"trigger":"general","text":"Another Busch Latte. $0.79 a can. That's value."},
+{"trigger":"general","text":"This pizza is good but it's no Jack in the Box taco with buttermilk ranch."},
+{"trigger":"general","text":"99 cent tacos are still calling my name after this."},
+{"trigger":"general","text":"Jack in the Box tacos and ranch after this. Who's in?"}
+],
+    "Tyler Goslinga": [{year:2018,team:"King (sa)Quon",W:5,L:8,PF:1306.9,PA:1602.48,RSRank:10,PlayoffFinish:12,playoffs:false},{year:2019,team:"Living on a Prayer",W:9,L:4,PF:1492.8,PA:1308.62,RSRank:1,PlayoffFinish:3,playoffs:true},{year:2020,team:"Falcon Cook",W:9,L:4,PF:1390.7,PA:1377.14,RSRank:3,PlayoffFinish:5,playoffs:true},{year:2021,team:"Can you Digg it",W:7,L:7,PF:1400.6,PA:1470.4,RSRank:8,PlayoffFinish:4,playoffs:true},{year:2022,team:"Fournetflix and chill",W:11,L:3,PF:1813.2,PA:1478.88,RSRank:1,PlayoffFinish:3,playoffs:true},{year:2023,team:"Good Wilson Hunting",W:5,L:9,PF:1426.9,PA:1495.78,RSRank:11,PlayoffFinish:11,playoffs:false},{year:2024,team:"(Taylor's Version)",W:5,L:9,PF:1436.2,PA:1461.24,RSRank:11,PlayoffFinish:11,playoffs:false},{year:2025,team:"(Taylor's Version)",W:8,L:6,PF:1652.4,PA:1438.74,RSRank:2,PlayoffFinish:1,playoffs:true},
+{"trigger":"general","text":"Grabbing another tropical hazy from Cask & Barrel. These are dangerous."},
+{"trigger":"general","text":"This hazy IPA cost more than my next pick will."},
+{"trigger":"general","text":"Brother's Burgers is better than this pizza. Don't tell James."},
+{"trigger":"general","text":"I could eat this entire pepperoni by myself. And I might."},
+{"trigger":"general","text":"Chad from Brother's Burgers would have this pizza beat. No contest."},
+{"trigger":"general","text":"Thinking about Brother's bacon cheeseburger while eating this slice."}
+],
+    "Vance Sipma": [{year:2016,team:"The Rookie Redneck",W:6,L:7,PF:1091.3,PA:1196.3,RSRank:8,PlayoffFinish:7,playoffs:false},{year:2017,team:"Redneck Revenge",W:5,L:8,PF:1282.5,PA:1338.26,RSRank:10,PlayoffFinish:9,playoffs:false},{year:2018,team:"Redneck Rebellion",W:4,L:9,PF:1305.6,PA:1403.7,RSRank:12,PlayoffFinish:7,playoffs:false},{year:2019,team:"Redneck Rodgers",W:6,L:7,PF:1319.9,PA:1347.44,RSRank:9,PlayoffFinish:11,playoffs:false},{year:2020,team:"Jonathan Taylor Thomas",W:5,L:8,PF:1352.3,PA:1388.64,RSRank:10,PlayoffFinish:9,playoffs:false},{year:2021,team:"Vance's Team",W:5,L:9,PF:1394.7,PA:1590.54,RSRank:10,PlayoffFinish:10,playoffs:false},{year:2022,team:"Kyler Whales",W:4,L:10,PF:1451.3,PA:1466.32,RSRank:11,PlayoffFinish:10,playoffs:false},{year:2023,team:"R.I.P. Chubbie's Knee",W:8,L:6,PF:1467.9,PA:1372.24,RSRank:5,PlayoffFinish:6,playoffs:true},{year:2024,team:"King Henry's Return",W:11,L:3,PF:1735.7,PA:1453.76,RSRank:1,PlayoffFinish:2,playoffs:true},{year:2025,team:"Sweet J's",W:5,L:9,PF:1470.6,PA:1616.7,RSRank:10,PlayoffFinish:8,playoffs:false},
+{"trigger":"general","text":"Miller Lite and pizza. Simple man, simple pleasures."},
+{"trigger":"general","text":"Cracking another Miller Lite. The official beer of almond harvest."},
+{"trigger":"general","text":"I brought Taco Bell. Don't judge me, I was shaking trees until 6:30."},
+{"trigger":"general","text":"This Dominos is hitting after 10 hours on the tractor."},
+{"trigger":"general","text":"Came straight from the orchard. Taco Bell was the only option."},
+{"trigger":"general","text":"My truck still smells like almonds. You're welcome for the aroma."}
+],
     "Zac Dewey": [{year:2018,team:"Captain Woof",W:4,L:9,PF:1406.3,PA:1571.4,RSRank:11,PlayoffFinish:9,playoffs:false},{year:2019,team:"Captain Woof",W:7,L:6,PF:1339.5,PA:1290.78,RSRank:6,PlayoffFinish:2,playoffs:true},{year:2020,team:"Captain Woof",W:4,L:9,PF:1257.6,PA:1391.64,RSRank:13,PlayoffFinish:13,playoffs:false},{year:2021,team:"Captain Woof",W:4,L:10,PF:1375.5,PA:1537.96,RSRank:12,PlayoffFinish:12,playoffs:false}],
   },
   managerGrades: {
@@ -46722,9 +46806,16 @@ function CSTransactions({ transactions }) {
 // ── Off-season placeholder ────────────────────────────────────────────────────
 // ── Off-season placeholder ────────────────────────────────────────────────────
 
-function CSOffseason() {
+function CSOffseason({ onMockDraft }) {
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "60px 20px", textAlign: "center" }}>
+      {/* Mock Draft Banner */}
+      {onMockDraft && (
+        <button onClick={onMockDraft} style={{ background: "linear-gradient(135deg, #e9c46a, #d4a030)", border: "none", borderRadius: 12, padding: "16px 40px", cursor: "pointer", marginBottom: 32, animation: "pulse 2s infinite", boxShadow: "0 4px 20px rgba(233,196,106,0.3)" }}>
+          <div style={{ fontFamily: "'Cooper Black',Georgia,serif", fontSize: 22, color: "#000", letterSpacing: 2 }}>🎰 MOCK DRAFT NOW</div>
+          <div style={{ fontSize: 11, color: "#333", marginTop: 4 }}>Practice your auction strategy against bot versions of your leaguemates</div>
+        </button>
+      )}
       <div style={{ fontSize: 56, marginBottom: 20 }}>📡</div>
       <div style={{ fontSize: 22, fontWeight: 700, color: "#fff", marginBottom: 10 }}>
         2026 Season Hasn't Started Yet
@@ -47383,7 +47474,7 @@ function CSWeeklyRecap({ managers, matchups, transactions, currentWeek }) {
   );
 }
 
-function CurrentSeasonTab() {
+function CurrentSeasonTab({ onMockDraft }) {
   const mobile = useMobile();
   const [section, setSection] = React.useState("home");
   const { loading, error, leagueStatus, currentWeek, managers, matchups, transactions, lastFetched, refresh } = useSleeperLive();
@@ -47471,7 +47562,7 @@ function CurrentSeasonTab() {
           )}
 
           {/* Off-season state */}
-          {!loading && isOffseason && <CSOffseason />}
+          {!loading && isOffseason && <CSOffseason onMockDraft={onMockDraft} />}
 
           {/* Tile grid — only when data is live */}
           {hasData && !isOffseason && (
@@ -48316,6 +48407,7 @@ const TABS = [
   { id: "vault",       emoji: "🔐",   label: "🔐 The Vault",        short: "🔒 Vault"   },
   { id: "playoffs",    emoji: "🏈",   label: "🏈 Playoff History", short: "🎽 Playoffs" },
   { id: "managers",    emoji: "🧑‍💼",  label: "🧑‍💼 Managers",        short: "🧑 Mgrs"    },
+  { id: "mockdraft",   emoji: "🎰",   label: "🎰 Mock Draft",      short: "🎰 Mock"    },
   { id: "draft",       emoji: "🎯",   label: "🎯 Draft",            short: "🎯 Draft"   },
   { id: "players",     emoji: "🏃",   label: "🏃 Players",          short: "🏃 Players" },
   { id: "leaguehq",    emoji: "🏛️",   label: "🏛️ League HQ",         short: "🏠 HQ"      },
@@ -58540,6 +58632,7947 @@ function ManagerDeepDive() {
   );
 }
 
+// ── MOCK DRAFT ROOM ───────────────────────────────────────────────────────────
+// 2026 Half-PPR Auction Values — top 180 players for 12-team, $200 budget
+const CANNED_MESSAGES = {
+ "Aaron Fay": [
+  {
+   "trigger": "overpay",
+   "text": "Bro just lit his budget on fire and called it strategy."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's highway robbery... and I would know."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I've written tickets for less reckless behavior than that bid."
+  },
+  {
+   "trigger": "overpay",
+   "text": "66 in a 65 gets you a ticket. That bid? That gets you last place."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Pull over sir, you've exceeded the budget limit."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's a felony-level overpay. I'm writing it up."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I wouldn't even pay that in a DUI arrest. Too expensive."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Another day, another reckless driver on the auction highway."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Someone call a tow truck for that guy's budget. It's totaled."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I see worse decision-making on I-99 at 2am. This is close though."
+  },
+  {
+   "trigger": "steal",
+   "text": "HOW did nobody else bid on that?! I was asleep at the wheel."
+  },
+  {
+   "trigger": "steal",
+   "text": "Alright, respect. That was clean."
+  },
+  {
+   "trigger": "steal",
+   "text": "I'm sick. I had that guy circled on my board."
+  },
+  {
+   "trigger": "steal",
+   "text": "That just got away from me. Well played."
+  },
+  {
+   "trigger": "steal",
+   "text": "I was mid-sip on my 805 and missed it. Brutal."
+  },
+  {
+   "trigger": "steal",
+   "text": "Dude that's a heist. No other word for it."
+  },
+  {
+   "trigger": "steal",
+   "text": "I'm filing a police report on that theft."
+  },
+  {
+   "trigger": "steal",
+   "text": "Grand theft auction right there. Unbelievable."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "Imagine paying more than $1 for a kicker. Couldn't be me."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "A kicker. For real money. In this economy."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "I'm citing you for kicker overpayment. That's a misdemeanor."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "A defense for $2? In THIS economy?"
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "Someone paid real dollars for a defense. I can't."
+  },
+  {
+   "trigger": "stack",
+   "text": "Oh here we go, someone's building a little NFL roster within a roster."
+  },
+  {
+   "trigger": "stack",
+   "text": "Stacking huh? Bold. Hope the bye week doesn't destroy you."
+  },
+  {
+   "trigger": "stack",
+   "text": "Stack city. All your eggs in one basket. I love chaos."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "LETS GO. That's my guy right there."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Had my eye on him all offseason. Nobody was taking him from me."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's a steal and everybody here knows it."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Officer Aaron reporting for duty with a new weapon on the roster."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "YOOO. That price? That's a gift."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "My 22-34 record is about to flip. Starting now."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "This is the year, boys. I can feel it."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "The Rams aren't the only ones making moves tonight."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "James, buddy, you're gonna regret that one come week 6."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Classic firefighter move — running into a burning building of a pick."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "James, stick to spraying water. Leave the drafting to the professionals."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Nice pick, Lieutenant. Too bad your season's DOA."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "I'll remember this when we play each other, James."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Firefighters always rushing in without thinking. Exhibit A."
+  },
+  {
+   "trigger": "general",
+   "text": "Who needs another beer? I'm up."
+  },
+  {
+   "trigger": "general",
+   "text": "Josh, tell them about the Mountain Dew incident."
+  },
+  {
+   "trigger": "general",
+   "text": "This is why draft night is the best night of the year."
+  },
+  {
+   "trigger": "general",
+   "text": "Anyone else's 49ers looking mid this year or just everyone here?"
+  },
+  {
+   "trigger": "general",
+   "text": "The Rams are going to surprise people this year. Book it."
+  },
+  {
+   "trigger": "general",
+   "text": "Josh, stop looking at your phone and pay attention."
+  },
+  {
+   "trigger": "general",
+   "text": "Hey James — at least I keep the roads SAFE. What do you do, spray water?"
+  },
+  {
+   "trigger": "general",
+   "text": "Someone tell Josh to put his phone down. Xbox will be there later."
+  },
+  {
+   "trigger": "general",
+   "text": "Josh, Matt — we playing Xbox later tonight or what?"
+  },
+  {
+   "trigger": "general",
+   "text": "After this I'm logging on. Josh, Aaron, Matt lobby. Who's in?"
+  },
+  {
+   "trigger": "general",
+   "text": "Josh and I are like Statler and Waldorf over here. Just watching the chaos."
+  },
+  {
+   "trigger": "general",
+   "text": "Hey Josh, are you seeing this? This draft is comedy gold."
+  },
+  {
+   "trigger": "general",
+   "text": "Josh, come sit over here. We've got commentary to deliver."
+  },
+  {
+   "trigger": "general",
+   "text": "I brought the good beer tonight. 805 Cerveza. You're welcome."
+  },
+  {
+   "trigger": "general",
+   "text": "Anybody want an 805? I brought plenty."
+  },
+  {
+   "trigger": "general",
+   "text": "Being the only Rams fan in a room full of Niners fans builds character."
+  },
+  {
+   "trigger": "general",
+   "text": "Nine 49er fans in this room and zero Super Bowls in the last 30 years. Just saying."
+  },
+  {
+   "trigger": "general",
+   "text": "I played trombone in high school. Steve and Ross were there. We were terrible."
+  },
+  {
+   "trigger": "general",
+   "text": "This draft is more entertaining than anything on Xbox tonight."
+  },
+  {
+   "trigger": "general",
+   "text": "22 and 34 all time. This year? Redemption arc starts NOW."
+  },
+  {
+   "trigger": "general",
+   "text": "Every year I say this is my year. But THIS year I actually mean it."
+  },
+  {
+   "trigger": "general",
+   "text": "I've had more traffic stops than playoff appearances. That changes this year."
+  },
+  {
+   "trigger": "general",
+   "text": "Look, my record isn't great. But have you seen my vibes? Immaculate."
+  },
+  {
+   "trigger": "general",
+   "text": "The life of the party is also going to be the life of the playoffs this year."
+  },
+  {
+   "trigger": "general",
+   "text": "Remember when I brought those hard alcohol Mountain Dews? Nobody drank them. Still salty."
+  },
+  {
+   "trigger": "general",
+   "text": "Those Mountain Dew cocktail things were ahead of their time. I stand by them."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Alright I'm getting reckless. Who's left that has a pulse?"
+  },
+  {
+   "trigger": "late_draft",
+   "text": "You know what, give me him. YOLO."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "At this point I'm just picking names I recognize from RedZone."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "How many beers deep am I? Enough to feel good about this pick."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Late night reckless Aaron is HERE. Buckle up."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I'm 4 beers in and feeling dangerous. Let's get weird."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Josh, what do you think? Actually never mind, you're on your phone."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "My strategy at this point is 'vibes only.'"
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I stopped caring about value 20 picks ago. We're in YOLO territory."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "This beer is telling me to go for it. Who am I to argue?"
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "I'm throwing this name out there just to see who bites."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Let's see who wants to waste their money on this guy."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Here's a name to get the room going. Fight over him."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Throwing some bait into the pool. Let's see who's hungry."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "I don't want this guy but someone here does. Show yourselves."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Fine, take him. I didn't want him THAT bad."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Eh, whatever. More ammo for later."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I'll remember that. Karma's real in fantasy football."
+  },
+  {
+   "trigger": "outbid",
+   "text": "You win this round. But the war ain't over."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Not worth a ticket to Overpay City. I'm out."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I'll find another guy. The board is deep."
+  },
+  {
+   "trigger": "outbid",
+   "text": "My 805 and I will be just fine without him."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Alright Josh, stop bidding me up. I know that was you."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Price got too hot. I'll pull someone over later for a better deal."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I'd rather have budget for the late rounds when I'm drunk and dangerous."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Oh you wanna go? My 805 and I are ready."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Talk is cheap. Wins aren't. Watch me work."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Keep talking. I'll remember this in November."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "That's cute. Really. Adorable even."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I've pulled over scarier people than you, bud."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "You done? Cool. Back to building a championship roster."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Josh, back me up here. Tell them."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "The disrespect! From MY OWN LEAGUE!"
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "22-34 and I'm STILL more fun than you at a party."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I'm writing you a ticket for unsportsmanlike conduct."
+  }
+ ],
+ "Eric Graef": [
+  {
+   "trigger": "overpay",
+   "text": "That's... a lot. In our church league he went for half that."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Bold. Very bold. I'll be in bed by 9:30 regardless of how this ends."
+  },
+  {
+   "trigger": "overpay",
+   "text": "And people wonder why I stick to my list."
+  },
+  {
+   "trigger": "overpay",
+   "text": "And THAT is why I finish my draft first every year."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's above my estimate. Significantly above."
+  },
+  {
+   "trigger": "overpay",
+   "text": "In my 20+ years of fantasy football, that's still an overpay."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I rarely comment but... that's a lot of money."
+  },
+  {
+   "trigger": "overpay",
+   "text": "My church league would be APPALLED at that price."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's aggressive for a guy who might be a flex play by week 8."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Noted. Moving on."
+  },
+  {
+   "trigger": "steal",
+   "text": "Nice. Very efficient."
+  },
+  {
+   "trigger": "steal",
+   "text": "See, that's how you do it. Discipline."
+  },
+  {
+   "trigger": "steal",
+   "text": "Good value. I had him marked at about that price."
+  },
+  {
+   "trigger": "steal",
+   "text": "Smart money. That's a playoff-caliber pickup."
+  },
+  {
+   "trigger": "steal",
+   "text": "Disciplined bidding wins leagues. That's proof right there."
+  },
+  {
+   "trigger": "steal",
+   "text": "I'd tip my hat to that one. Well done."
+  },
+  {
+   "trigger": "steal",
+   "text": "My list had him at the same number. Good eye."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's how veterans draft. Right at value."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "A kicker for more than a dollar. Unbelievable. Every single year."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "In my church league, kickers are $1. Period. End of discussion."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "I've been doing this for 20 years. Kickers are a dollar."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "The fact that we have to have this conversation annually is embarrassing."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "Dollar. Kickers. Always. I will die on this hill."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "Why. Just... why would you pay more than $1 for a defense."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "A defense has never won anyone a championship at that price."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "My church league understands this. Why can't we?"
+  },
+  {
+   "trigger": "stack",
+   "text": "Stacking. Interesting strategy. High variance."
+  },
+  {
+   "trigger": "stack",
+   "text": "Bold correlation play. Hope the bye doesn't kill you."
+  },
+  {
+   "trigger": "stack",
+   "text": "Stack if you want. I'll take the consistent floor."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Got him right at my price. Perfect."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's exactly what my sheet said. Moving on."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Checked off. Next."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Right at my estimate. Efficient."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's a playoff contributor. Mark it down."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "My list is working perfectly tonight."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Another one at value. The system works."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Quiet efficiency. That's the goal."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "The elder statesman gets his guy. No drama."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "20 years of drafting and the discipline still pays off."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Greg C, you're going to regret that one by week 4."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Interesting choice, Greg. Very interesting."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Greg C, is that on your spreadsheet or an impulse buy?"
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "I've watched Greg draft for years. This is... a choice."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Greg C, our church league would roast you for that."
+  },
+  {
+   "trigger": "general",
+   "text": "What time is it? I've got worship team early tomorrow."
+  },
+  {
+   "trigger": "general",
+   "text": "Can we speed this up? Some of us have a service at 7am."
+  },
+  {
+   "trigger": "general",
+   "text": "This is fun but I need to be functional tomorrow morning."
+  },
+  {
+   "trigger": "general",
+   "text": "Greg C, didn't you say that same thing last year about RB prices?"
+  },
+  {
+   "trigger": "general",
+   "text": "Pass me a Lagunitas if there's one left."
+  },
+  {
+   "trigger": "general",
+   "text": "You know, U2 put on a better show than this draft so far."
+  },
+  {
+   "trigger": "general",
+   "text": "Sorry I'm a few minutes late. Evening service ran long."
+  },
+  {
+   "trigger": "general",
+   "text": "Just got here from church. What did I miss?"
+  },
+  {
+   "trigger": "general",
+   "text": "Ross, you want me to schedule worship team around draft night next year?"
+  },
+  {
+   "trigger": "general",
+   "text": "I've been doing this longer than most of you have been alive. Well, close."
+  },
+  {
+   "trigger": "general",
+   "text": "Being the old man of the group has its advantages. Wisdom, for one."
+  },
+  {
+   "trigger": "general",
+   "text": "I've made playoffs more times than some of you have made good decisions."
+  },
+  {
+   "trigger": "general",
+   "text": "My playoff streak didn't happen by accident. Preparation matters."
+  },
+  {
+   "trigger": "general",
+   "text": "Anyone want to talk about Vulfpeck? No? Just me? Fine."
+  },
+  {
+   "trigger": "general",
+   "text": "I've got a rare vinyl waiting for me at home. Let's wrap this up."
+  },
+  {
+   "trigger": "general",
+   "text": "The Sierra Nevada is going down smooth tonight."
+  },
+  {
+   "trigger": "general",
+   "text": "Florida man turned California man turned fantasy football elder."
+  },
+  {
+   "trigger": "general",
+   "text": "Back in Florida we didn't have auction drafts. We just picked and prayed."
+  },
+  {
+   "trigger": "general",
+   "text": "The old Acura got me here on time. Barely."
+  },
+  {
+   "trigger": "general",
+   "text": "Ross, Greg M — nice work on sound this morning by the way."
+  },
+  {
+   "trigger": "general",
+   "text": "Vance, good cajón work this morning. Eric approves."
+  },
+  {
+   "trigger": "general",
+   "text": "If I leave at 9:30, nobody panic. I have a guitar to tune for tomorrow."
+  },
+  {
+   "trigger": "general",
+   "text": "You know what this draft needs? A good Vulfpeck song in the background."
+  },
+  {
+   "trigger": "general",
+   "text": "New wave bands don't get enough respect in this group."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Alright, I'm just filling spots at this point. My roster's set."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "My starters are locked. These are just lottery tickets."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I'm ready to head out whenever the last pick drops."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Clock is ticking toward bedtime. Let's finish strong."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I've got my core. Everything else is gravy."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Sierra Nevada count: 3. Energy level: declining. Let's wrap up."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "First one done as always. The rest of you take your time."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I could be organizing my record collection right now. Just saying."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "My roster is complete. I'm just watching the show at this point."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Elder statesman checking out mentally. Starters are locked."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Here's one for you big spenders. Have at it."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Let's see who overpays for this name."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Throwing this out to drain some budgets. Not mine though."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "This name should start a bidding war. Enjoy."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "I'm nominating this one because someone's going to be foolish."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Not in my budget. He's all yours."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I'm not chasing that. My list has other options."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Nope. Not paying a cent over my number."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Too rich. I'll wait for the next tier down."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I don't overpay. That's not how you make playoffs consistently."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Let them fight over it. I've got discipline."
+  },
+  {
+   "trigger": "outbid",
+   "text": "My list says there's an equivalent player coming up cheaper."
+  },
+  {
+   "trigger": "outbid",
+   "text": "20 years of experience says: don't chase."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I've been doing this longer than you. Respectfully."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "My playoff streak speaks for itself."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Noted. Anyway."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "That's nice. I'm still going to make playoffs."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "You'll see. January tells the real story."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "The elder statesman isn't concerned."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I've heard worse from the youth group kids."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Quiet confidence beats loud opinions. Every time."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I'll be at home spinning vinyl while you're stressing over your roster in November."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Sure. Let me know how that works out for you."
+  },
+  {
+   "trigger": "general",
+   "text": "I allegedly snuck away at the 49ers tailgate for a cigarette and some Fireball with college buddies. Allegedly."
+  },
+  {
+   "trigger": "general",
+   "text": "What happens at the porta-potty line stays at the porta-potty line. Allegedly."
+  },
+  {
+   "trigger": "general",
+   "text": "My college buddies and I may or may not have had Fireball shots at the tailgate. The worship pastor pleads the fifth."
+  },
+  {
+   "trigger": "general",
+   "text": "There are rumors about me and a cigarette at the 49ers tailgate. I neither confirm nor deny."
+  },
+  {
+   "trigger": "general",
+   "text": "I came straight here from the evening service. Did not even change. Let us draft."
+  },
+  {
+   "trigger": "general",
+   "text": "Worship service ended at 7. I am here at 7:15. That is dedication to both callings."
+  },
+  {
+   "trigger": "general",
+   "text": "Still in my church clothes. Came straight from leading worship. Now I am leading this draft in efficiency."
+  }
+ ],
+ "Greg Cady": [
+  {
+   "trigger": "overpay",
+   "text": "THAT'S INSANE. I had him at $12 less on my spreadsheet!"
+  },
+  {
+   "trigger": "overpay",
+   "text": "Good pick... I had him at $4 more value though."
+  },
+  {
+   "trigger": "overpay",
+   "text": "RBs are SO expensive this year! Has anyone else noticed this?!"
+  },
+  {
+   "trigger": "overpay",
+   "text": "Every year I say this and every year nobody listens — these prices are CRAZY."
+  },
+  {
+   "trigger": "overpay",
+   "text": "My spreadsheet just cried. That's $7 over market value."
+  },
+  {
+   "trigger": "overpay",
+   "text": "In what world is that the right price?! My sheet says NO."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Keeper inflation. Every. Single. Year. Nobody plans for it."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I've won THREE championships without overpaying like that."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's the kind of bid that makes me update my spreadsheet in real time."
+  },
+  {
+   "trigger": "overpay",
+   "text": "You know who doesn't overpay? Three-time champions. That's who."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I literally have a cell highlighted red for overpays. That one's going in."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Aggressive. Aggressively wrong, but aggressive."
+  },
+  {
+   "trigger": "steal",
+   "text": "Great pick. I had that player at $4 more value on my sheet."
+  },
+  {
+   "trigger": "steal",
+   "text": "Good value. Well played."
+  },
+  {
+   "trigger": "steal",
+   "text": "See THAT'S what you should be paying. Not these inflated RB prices."
+  },
+  {
+   "trigger": "steal",
+   "text": "I'm genuinely impressed. That's right at my number."
+  },
+  {
+   "trigger": "steal",
+   "text": "Now THAT'S how you win a championship. Buy at value."
+  },
+  {
+   "trigger": "steal",
+   "text": "Steal of the draft so far. My spreadsheet confirms."
+  },
+  {
+   "trigger": "steal",
+   "text": "I would've paid $4 more. Respect."
+  },
+  {
+   "trigger": "steal",
+   "text": "Why can't every pick be that disciplined? Take notes, people."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "ARE YOU KIDDING ME?! A KICKER FOR MORE THAN $1?! EVERY. SINGLE. YEAR."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "I nominated that kicker at $1 and someone ACTUALLY bid it up. I hate this league."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "In my church league, kickers are ALWAYS $1. This is anarchy."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "JOSH. Was that you?! Did you just bid up my kicker AGAIN?!"
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "Every single year. I nominate a kicker at $1. And every single year someone bids it up. WHY."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "I'm actually furious right now. A KICKER. For MORE THAN A DOLLAR."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "This is why we can't have nice things. Dollar kickers are SACRED."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "You know what? Fine. You want to spend $2 on a kicker? Enjoy last place."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "I will NEVER understand this league's obsession with expensive kickers."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "Three championships. Zero kickers over $1. Coincidence? I think NOT."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "A defense for $2. A DEFENSE. FOR TWO DOLLARS. I can't."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "WHO is bidding up my $1 defense nomination?! JOSH! Was that you?!"
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "Defenses are streaming plays! You don't PAY for them!"
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "Another year, another defense going for more than it should. I give up."
+  },
+  {
+   "trigger": "stack",
+   "text": "Stacking? Bold. Let's see how that looks in the bye week."
+  },
+  {
+   "trigger": "stack",
+   "text": "High correlation, high risk. My spreadsheet has thoughts on this."
+  },
+  {
+   "trigger": "stack",
+   "text": "I see the stack. I acknowledge the stack. I question the stack."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Right at my number. Spreadsheet doesn't lie."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's the kind of veteran production you can count on."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Three championships don't happen by accident, boys."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "My sheet said this was the value. My sheet was right."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Got him for exactly what I budgeted. The system WORKS."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Another piece of the puzzle. Three-peat loading."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "I came in with a plan. The plan is working."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's a championship-caliber pickup right there."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Aggressively average all season. Then playoff magic. You know the formula."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "76-72 all time but THREE RINGS. That's what matters."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Eric, you and I both know that guy isn't worth that price."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Alright Eric, I see you. Don't get cute over there."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Eric, is that on your church league spreadsheet too?"
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Eric, just because you make playoffs doesn't mean that's a good pick."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Eric, I've got three rings. How many do you have again?"
+  },
+  {
+   "trigger": "general",
+   "text": "Can we talk about how RBs cost 40% more than my spreadsheet predicted?"
+  },
+  {
+   "trigger": "general",
+   "text": "Back in Colorado, we drafted smarter than this."
+  },
+  {
+   "trigger": "general",
+   "text": "I'm updating my sheet. Give me a second."
+  },
+  {
+   "trigger": "general",
+   "text": "Three rings. Just saying. Three."
+  },
+  {
+   "trigger": "general",
+   "text": "Amos would've made a better pick than that."
+  },
+  {
+   "trigger": "general",
+   "text": "My son plays D1 college football. What does YOUR kid do?"
+  },
+  {
+   "trigger": "general",
+   "text": "Calvin University taught me how to draft. You're welcome."
+  },
+  {
+   "trigger": "general",
+   "text": "My Subaru got me here. My spreadsheet will get me to the championship."
+  },
+  {
+   "trigger": "general",
+   "text": "Somebody check the Constitution. Is that even allowed?"
+  },
+  {
+   "trigger": "general",
+   "text": "Ross, I'm pretty sure that violates Article 4, Section 2 of the Constitution."
+  },
+  {
+   "trigger": "general",
+   "text": "I'm exploiting every advantage I can. That's called being competitive."
+  },
+  {
+   "trigger": "general",
+   "text": "Colorado bred, championship fed."
+  },
+  {
+   "trigger": "general",
+   "text": "I love this league. I love winning more."
+  },
+  {
+   "trigger": "general",
+   "text": "Let me pull up the rule on that real quick..."
+  },
+  {
+   "trigger": "general",
+   "text": "Good pick, I had him at $4 more on my list. Not that it matters now."
+  },
+  {
+   "trigger": "general",
+   "text": "Is it just me or are RBs way more expensive than last year?"
+  },
+  {
+   "trigger": "general",
+   "text": "I rally the boys when needed but make no mistake — I'm here to WIN."
+  },
+  {
+   "trigger": "general",
+   "text": "76-72 all-time record but it doesn't matter because CHAMPIONSHIPS."
+  },
+  {
+   "trigger": "general",
+   "text": "Being aggressively average in the regular season is actually my strategy."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "These late rounds are where championships are actually won."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I've still got plenty of budget left. Stars and scrubs, baby."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "My bench is going to be deeper than most people's starters."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "This is where preparation separates the men from the boys."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I've got $40 left while Tyler's got $3. This is MY time."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Late-round steals win championships. I have data to prove it."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "My spreadsheet says there are still 4 undervalued players left."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Everyone's drunk and sloppy. I'm still locked in."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Here's a name for you. Drain those budgets, gentlemen."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Let's see who's got money to burn on this one."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "I'm nominating this guy specifically to watch someone overpay."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "This is bait. I know it's bait. YOU know it's bait. Let's see who bites."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Budget drain incoming. You're welcome."
+  },
+  {
+   "trigger": "outbid",
+   "text": "FINE. Take him. But you overpaid by at LEAST $5."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I'm not going a dollar over. I have principles."
+  },
+  {
+   "trigger": "outbid",
+   "text": "My spreadsheet says that's too rich. I'm out."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Three championships were built on NOT chasing. I'm fine."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Congratulations on your overpay. I'll be here when you regret it."
+  },
+  {
+   "trigger": "outbid",
+   "text": "My sheet had him at $4 less. I can't betray the sheet."
+  },
+  {
+   "trigger": "outbid",
+   "text": "The competitive advantage is knowing when to walk away."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Fine. But check back with me in December when I'm in the playoffs."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Three rings. What do YOU have?"
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "My spreadsheet doesn't care about your opinion."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I've been called worse by better managers. Oh wait, there aren't any."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Say what you want. The trophy case doesn't lie."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Cool story. Anyway, back to winning championships."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I exploit every advantage and I make no apologies."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Check the all-time record book. Then talk to me."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "You done? Great. I'm going back to my spreadsheet."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "That's adorable. Come back when you have a ring."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Josh, was that you bidding up my kicker AGAIN? I know it was."
+  }
+ ],
+ "Greg Mulder": [
+  {
+   "trigger": "overpay",
+   "text": "Wow. That's a lot of capital deployed on one asset."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Interesting allocation. Bold."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I'm not saying it's wrong, but... it's a lot."
+  },
+  {
+   "trigger": "overpay",
+   "text": "The DRC may need to review that bid. Just kidding... mostly."
+  },
+  {
+   "trigger": "overpay",
+   "text": "From a banking perspective, that's an overleveraged position."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I wouldn't approve that loan."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's a high-interest play. Hope it pays dividends."
+  },
+  {
+   "trigger": "overpay",
+   "text": "As your league banker, I'm concerned about your financial health."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I've denied credit applications for less reckless spending."
+  },
+  {
+   "trigger": "overpay",
+   "text": "My recommendation? Portfolio diversification. Not... that."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's a nice price. Well done."
+  },
+  {
+   "trigger": "steal",
+   "text": "Smart money right there."
+  },
+  {
+   "trigger": "steal",
+   "text": "Good deal. I'd have approved that loan."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's what we call a sound investment."
+  },
+  {
+   "trigger": "steal",
+   "text": "Low risk, high reward. The banker approves."
+  },
+  {
+   "trigger": "steal",
+   "text": "I'd underwrite that bet. Solid value."
+  },
+  {
+   "trigger": "steal",
+   "text": "Clean transaction. Efficient use of capital."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's going to compound interest all season."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "The kicker market is... inflating."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "I'd call that a depreciating asset at an inflated price."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "From a value standpoint, that's... not advisable."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "That's an overpay on a defense in any economy."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "That's a junk bond masquerading as a blue chip."
+  },
+  {
+   "trigger": "stack",
+   "text": "Stacking. Concentrated portfolio. High risk, high reward."
+  },
+  {
+   "trigger": "stack",
+   "text": "That's correlation risk. The banker notes it."
+  },
+  {
+   "trigger": "stack",
+   "text": "Putting all your assets in one sector. Interesting."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That works. Moving on."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Got my guy. No drama needed."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Exactly what I was hoping for."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Steady investment. Low volatility. Just how I like it."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "The Co-Commissioner secures another piece."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "No fanfare needed. Just good business."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Two championships. Built on picks like that."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "The Ram pickup and the championship pickup. Both reliable."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Homecoming king AND fantasy football king. Loading."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Nice pick. Everyone's got a plan until the auction starts."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Interesting. I'll make a note for the DRC file."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "No official rival over here. But I'm watching everyone."
+  },
+  {
+   "trigger": "general",
+   "text": "Has everyone paid their league dues yet? Just checking."
+  },
+  {
+   "trigger": "general",
+   "text": "I'll have a Modelo if someone's grabbing beers."
+  },
+  {
+   "trigger": "general",
+   "text": "Ross, you need me to handle anything on the financial side?"
+  },
+  {
+   "trigger": "general",
+   "text": "Steady as she goes over here."
+  },
+  {
+   "trigger": "general",
+   "text": "I'm just here to have fun and maybe win a chip."
+  },
+  {
+   "trigger": "general",
+   "text": "This is why we do this every year, boys."
+  },
+  {
+   "trigger": "general",
+   "text": "The trophy is going to look great on my mantle this year."
+  },
+  {
+   "trigger": "general",
+   "text": "Remember when I was homecoming king? Completely unrelated, just reminiscing."
+  },
+  {
+   "trigger": "general",
+   "text": "My father-in-law's trophy has been to a lot of houses. Mine looks the best."
+  },
+  {
+   "trigger": "general",
+   "text": "That JV basketball MVP trophy deserves another season at my place."
+  },
+  {
+   "trigger": "general",
+   "text": "The league trophy has seen better speeches than Ross's. Just saying."
+  },
+  {
+   "trigger": "general",
+   "text": "Been here since day one. Original member privileges."
+  },
+  {
+   "trigger": "general",
+   "text": "As an original member of this league, I've seen it all."
+  },
+  {
+   "trigger": "general",
+   "text": "Ross, remember my best man speech? This draft is giving me that same energy."
+  },
+  {
+   "trigger": "general",
+   "text": "I roasted Ross at his wedding. I'll roast him here too if needed."
+  },
+  {
+   "trigger": "general",
+   "text": "Co-Commissioner serving at the pleasure of Ross. For now."
+  },
+  {
+   "trigger": "general",
+   "text": "I'm still a touch salty about that DRC ruling. On the record."
+  },
+  {
+   "trigger": "general",
+   "text": "The DRC gets it wrong sometimes. Not that I'm bitter. I'm bitter."
+  },
+  {
+   "trigger": "general",
+   "text": "That Matthew trade was fair and the DRC was wrong. I'll say it every year."
+  },
+  {
+   "trigger": "general",
+   "text": "As your commercial banker AND league treasurer, trust me on this."
+  },
+  {
+   "trigger": "general",
+   "text": "The Dodge Ram is in the driveway. The championship is in my future."
+  },
+  {
+   "trigger": "general",
+   "text": "Everyone's friend. Nobody's rival. But don't mistake kindness for weakness."
+  },
+  {
+   "trigger": "general",
+   "text": "Driest humor in the room. Watch me not laugh at that overpay. Oh wait — I'm laughing inside."
+  },
+  {
+   "trigger": "general",
+   "text": "Steve, Tyler, Matthew, Ross — we graduated together. Now I draft against you. Life is weird."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Plenty of value still on the board if you know where to look."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I trust my process. Late rounds are fine."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Just filling out the roster. Starters are set."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "The banker closes out the books with some low-cost assets."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Nothing flashy. Just solid, dependable bench depth."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Modelo count: 3. Budget remaining: comfortable. Life is good."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I'm content. No drama needed."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Another quiet draft from Greg M. Another potential championship."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Here's a fun one. Who wants to spend some money?"
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Let's see what the market says about this guy."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "I'm curious about the price discovery on this one."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Market research nomination. Let's see where the money goes."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Throwing this out there for liquidity purposes."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Not for me at that price. No hard feelings."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I'll find another option. Plenty of fish."
+  },
+  {
+   "trigger": "outbid",
+   "text": "That's above my number. He's yours."
+  },
+  {
+   "trigger": "outbid",
+   "text": "The bank has spoken. Loan denied at that rate."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I don't chase. Two championships prove the patience works."
+  },
+  {
+   "trigger": "outbid",
+   "text": "That's fine. I'll pivot without any fuss."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Not emotional about it. On to the next."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I'll collect interest elsewhere."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Two championships. Look it up."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "The Co-Commissioner hears you. The Co-Commissioner doesn't care."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I'll roast you like I roasted Ross at his wedding if needed."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Steady Eddy doesn't get rattled. Try again."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "The bank is closed on that discussion."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I've been here since Year 1. You can't faze an original."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "My wife was homecoming queen. My team will be champion. It tracks."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I don't need to be loud. The results speak."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Everyone's friend, nobody's rival. Unless you push me."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Noted. Moving on. That's the banker way."
+  },
+  {
+   "trigger": "general",
+   "text": "I am still salty about that DRC ruling on the trade between Matthew and me. It was a fair trade. The committee got it wrong."
+  },
+  {
+   "trigger": "general",
+   "text": "The Matthew trade was a good deal for both sides. The DRC had no business overruling it."
+  },
+  {
+   "trigger": "general",
+   "text": "Ask Matthew. He wanted that trade too. The DRC killed it. I am still bitter."
+  },
+  {
+   "trigger": "general",
+   "text": "Every year I bring up the DRC ruling. Every year I am right. The trade was fair."
+  }
+ ],
+ "James Lazette": [
+  {
+   "trigger": "overpay",
+   "text": "Whoa. That's a LOT for that guy. Bold strategy."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Hey man, your money. But that's steep."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I've seen better deals at the fire station swap meet."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's a five-alarm overpay right there."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Buddy, that price is on fire and not in a good way."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I'd trade for him later at half that price. Just saying."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's the kind of bid that gets talked about at the pool next year."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I've seen guys pay less for cars on Craigslist."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Respect the commitment. Question the value. But hey, it's your team."
+  },
+  {
+   "trigger": "steal",
+   "text": "Nice grab! That's legit value right there."
+  },
+  {
+   "trigger": "steal",
+   "text": "Good price. I would've jumped in but I was talking."
+  },
+  {
+   "trigger": "steal",
+   "text": "Respect. That's a playoff-caliber pickup."
+  },
+  {
+   "trigger": "steal",
+   "text": "Dude. That's a steal. Might have to try to trade for him later..."
+  },
+  {
+   "trigger": "steal",
+   "text": "I'm jealous of that price. No shame in admitting it."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's a draft party barn wall-worthy pick."
+  },
+  {
+   "trigger": "steal",
+   "text": "Nice! I was about to bid but you got it clean."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's the kind of pick that wins you a championship. Ask me how I know."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "A kicker for more than a buck? You do you, man."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "I'm not judging. Actually yeah, I'm judging a little."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "Kickers for over a dollar. This league never changes."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "Hey if you believe in the defense, go for it. I wouldn't, but go for it."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "A defense for real money? In the firefighter's house? Bold."
+  },
+  {
+   "trigger": "stack",
+   "text": "Ohhh stacking! I love it. Let's get weird."
+  },
+  {
+   "trigger": "stack",
+   "text": "Stack city! That's gonna be fun on Sundays."
+  },
+  {
+   "trigger": "stack",
+   "text": "I love watching stacks pop off. High risk, high reward content."
+  },
+  {
+   "trigger": "stack",
+   "text": "Hey, if you're gonna stack, at least stack studs."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Let's GO! That's my dude right there!"
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Get IN here. Welcome to the squad."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "I've been eyeing him all summer. Let's ride."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "The host of draft night just drafted a STUD."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Pool party celebration incoming for that pick."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's a championship piece. Ask me about 2020."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "The firefighter just lit up the draft board."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Another year, another squad ready to compete."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "I'll trade him to you next month. Just kidding. Maybe."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "My party barn is going to be rocking with this roster."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Aaron, don't you have a speed trap to go run somewhere?"
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Nice pick, Officer. Too bad it won't save your season."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Aaron, firefighters save lives. CHP writes tickets. Who's the real hero?"
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Officer Fay with another questionable decision."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Aaron, I'll be 5 over the limit all season. Catch me if you can."
+  },
+  {
+   "trigger": "general",
+   "text": "Anyone want another beer? I'm grabbing from the cooler."
+  },
+  {
+   "trigger": "general",
+   "text": "Pool's still warm if anyone needs a halftime break."
+  },
+  {
+   "trigger": "general",
+   "text": "Hey who wants in on a three-way trade after the draft?"
+  },
+  {
+   "trigger": "general",
+   "text": "I heard about this guy on a podcast — anyone else high on him?"
+  },
+  {
+   "trigger": "general",
+   "text": "Sharks are going to be nasty this year by the way. Just saying."
+  },
+  {
+   "trigger": "general",
+   "text": "Love draft night. Best night of the year, no debate."
+  },
+  {
+   "trigger": "general",
+   "text": "We should do a 3-way trade. Hear me out—"
+  },
+  {
+   "trigger": "general",
+   "text": "Okay hear me out... three way trade... you give me... no? Fine."
+  },
+  {
+   "trigger": "general",
+   "text": "I'll trade with ANYONE in this room. My DMs are open."
+  },
+  {
+   "trigger": "general",
+   "text": "After church on Sunday, who wants to talk trades?"
+  },
+  {
+   "trigger": "general",
+   "text": "I love talking fantasy. Any time, any place. After church, at the pool, at the barn."
+  },
+  {
+   "trigger": "general",
+   "text": "Does anyone else think about fantasy football between February and August? Just me?"
+  },
+  {
+   "trigger": "general",
+   "text": "Remember when I traded John Ross III for Derrick Henry? GOAT trade."
+  },
+  {
+   "trigger": "general",
+   "text": "Tyler still hasn't recovered from giving me Derrick Henry for John Ross III."
+  },
+  {
+   "trigger": "general",
+   "text": "The road sign collection in the party barn grows every year. Like my roster."
+  },
+  {
+   "trigger": "general",
+   "text": "I stole a road sign last month that reminded me of that trade I made."
+  },
+  {
+   "trigger": "general",
+   "text": "Being the host has its perks. Best seat in the house."
+  },
+  {
+   "trigger": "general",
+   "text": "Welcome to my house. Mi casa, su draft room."
+  },
+  {
+   "trigger": "general",
+   "text": "The pool was great earlier. Now it's time for business."
+  },
+  {
+   "trigger": "general",
+   "text": "Who's mayor of this draft room? This guy."
+  },
+  {
+   "trigger": "general",
+   "text": "I could probably get elected mayor of Ripon on likability alone. Just saying."
+  },
+  {
+   "trigger": "general",
+   "text": "Vance, we went to school together and I still can't predict your picks."
+  },
+  {
+   "trigger": "general",
+   "text": "If you want a beer, it's in the cooler. If you want a trade, come talk to me."
+  },
+  {
+   "trigger": "general",
+   "text": "Who played hockey growing up? Just me? Okay then."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Alright who's left that can actually play football?"
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I'm just vibing at this point. Give me some upside."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Another beer, another bench player. Life is good."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I'll trade any of these bench guys tomorrow. Hit me up."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Late night, cold beer, solid roster. Can't complain."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "The pool is calling my name but I'll stick around for the finish."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Anyone want to do a 3-way trade with these bench guys? No? Okay."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Getting tipsy and feeling generous. Come get a deal from me."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "My roster's set. These last picks are just trade bait."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I'm drafting future trade assets at this point."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Let me throw this name out there and see what happens."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Here's a guy I think at least 3 of you want. Fight over him."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "This should start a bidding war. You're welcome for the entertainment."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "I'm nominating this guy because the room needs energy."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Let's get the party going. Who wants to overpay for this guy?"
+  },
+  {
+   "trigger": "outbid",
+   "text": "Ah man. Alright, he's yours. I'll find my guy elsewhere."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Not gonna chase it. Plenty of season left to make moves."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Fine fine. Maybe we can work out a trade later though..."
+  },
+  {
+   "trigger": "outbid",
+   "text": "You win the bid. I'll win the trade offer I send you in October."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Take him. I'll be in your DMs with a 3-way trade by Tuesday."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Can't win 'em all. But I CAN trade for him later."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I'll live. There's always the waiver wire. And trades. Lots of trades."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Your player for now. My trade target for later."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Hey, the host gets last word privileges."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "My house, my rules, my clap back."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I won a championship in 2020. What did YOU do that year?"
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Keep talking. I'll remember that when you want a trade from me."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "You're in MY house saying that? Bold move."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Mayor of the draft room doesn't get rattled."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "That's cute. Want a beer? I'm the host after all."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I'll roast you back but I'm too likeable to make enemies."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Talk now, trade with me later. You know you will."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Everyone loves James. Even you. Admit it."
+  },
+  {
+   "trigger": "general",
+   "text": "I am the host so I do not bring beer. Your beer is my beer tonight. That is the host tax."
+  },
+  {
+   "trigger": "general",
+   "text": "I provide the house, the pool, and the party barn. You provide the beer. Fair deal."
+  },
+  {
+   "trigger": "general",
+   "text": "Host privileges: I drink whatever is in the cooler. Does not matter whose name is on it."
+  },
+  {
+   "trigger": "general",
+   "text": "Welcome to my house. Your beer is our beer. My pool is your pool. Those are the rules."
+  }
+ ],
+ "Joshua Van Groningen": [
+  {
+   "trigger": "overpay",
+   "text": "HAHAHA dude you just got ROBBED. That's criminal."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Bro WHAT. That's insane money for that guy."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I wouldn't pay that in a 16-team league let alone this one."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's the funniest thing I've seen all night. And I've been here 20 minutes."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I sell ag chemicals for a living and even I think that's toxic waste."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I could sell you a better deal on that player. Literally. Sales is my thing."
+  },
+  {
+   "trigger": "overpay",
+   "text": "LMAOOOO. That price. In THIS league. Comedy."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Matt, are you seeing this? Actually take your headphones off and see this."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Somebody get that manager a refund. That's ROBBERY."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I'm dead. That price killed me. I'm deceased."
+  },
+  {
+   "trigger": "steal",
+   "text": "Yo that's nasty value. I'm actually jealous."
+  },
+  {
+   "trigger": "steal",
+   "text": "How did nobody else bid?! Were you all asleep?!"
+  },
+  {
+   "trigger": "steal",
+   "text": "I should've been paying attention instead of looking at my phone."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's FILTHY cheap. Like embarrassingly cheap."
+  },
+  {
+   "trigger": "steal",
+   "text": "I was mid-text and missed it. Pain."
+  },
+  {
+   "trigger": "steal",
+   "text": "Okay THAT's the kind of value I want. Where was that energy for my picks?"
+  },
+  {
+   "trigger": "steal",
+   "text": "BRO. That's free. Basically free. I'm sick."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "Wait someone actually paid up for a KICKER? That's hilarious."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "I love this league. Kickers going for real money. Unreal."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "Wait... that was ME bidding up Greg C's kicker. HAHAHA. Got him again."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "Greg C is about to EXPLODE. A kicker over $1. Here it comes..."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "I bid that up on purpose. Greg C's face right now is WORTH IT."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "Did someone say kicker over a dollar? Let me bid it up just to annoy Greg."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "Greg C nominated a kicker at $1? Say less. I'm bidding $2."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "A defense? For MULTIPLE dollars? In THIS league? Comedy."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "I bid that defense up just to watch Greg C's head explode."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "Bidding up Greg's defense nomination? That's my Super Bowl."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "Two bucks for a defense! HA. Greg C is seething right now."
+  },
+  {
+   "trigger": "stack",
+   "text": "Oooh stacking! Love to see it. Bold move, let's see if it pays off."
+  },
+  {
+   "trigger": "stack",
+   "text": "Stack city! Boom or bust baby! I'm here for the chaos!"
+  },
+  {
+   "trigger": "stack",
+   "text": "That's either genius or the dumbest thing I've ever seen. No in-between."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "YOOO LET'S GO! That's MY guy!"
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Nobody wanted him? Fine by me. STEAL."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Get in the squad. We're going to the ship."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "BANGGGG. That's a League winner."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "I played college WR. I know talent when I see it."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Dordt University's finest just drafted a stud."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's a Josh pick. Trust the process. Or don't. I don't care."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "I didn't come here to play nice. I came here to WIN."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Two chips. 2021 AND 2022. Back to back. And I'm hungry for more."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Matt, that's a terrible pick and you know it."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Ross, enjoy paying that price. Commissioner's tax I guess."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Matt, take off the headphones and explain that one to me."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Matt, what tier is THAT on your precious tier system?"
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Ross, being commissioner doesn't make you a better drafter."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Matt, is that one of your 14 mock drafts paying off? Doesn't look like it."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Yo Ross, how much did FantasyPros tell you to spend on that? Because it was too much."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Matt, the headphones can't protect you from that bad pick."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Hey cousin Ross — family discount on that overpay?"
+  },
+  {
+   "trigger": "general",
+   "text": "Who's got a zyn? I'm out."
+  },
+  {
+   "trigger": "general",
+   "text": "Matt, what are you even listening to in those headphones? Whale sounds?"
+  },
+  {
+   "trigger": "general",
+   "text": "Someone tell Aaron the CHP story. Aaron, tell them."
+  },
+  {
+   "trigger": "general",
+   "text": "This draft needs more energy. WAKE UP PEOPLE."
+  },
+  {
+   "trigger": "general",
+   "text": "Hey does anyone else think we should ban ChatGPT? Looking at you, Steve."
+  },
+  {
+   "trigger": "general",
+   "text": "Bro I'm just here for the pizza and the vibes."
+  },
+  {
+   "trigger": "general",
+   "text": "Aaron, tell them about the Mountain Dew hard liquor thing. Classic."
+  },
+  {
+   "trigger": "general",
+   "text": "Steve went undefeated with ChatGPT. That's CHEATING. BAN IT."
+  },
+  {
+   "trigger": "general",
+   "text": "If you're using AI to draft, you should get an asterisk on your record."
+  },
+  {
+   "trigger": "general",
+   "text": "What's everyone doing after this? Xbox? Aaron? Matt?"
+  },
+  {
+   "trigger": "general",
+   "text": "I sell ag chemicals. I know a toxic roster when I see one."
+  },
+  {
+   "trigger": "general",
+   "text": "Chameleon mode: activated. I adapt to any draft situation."
+  },
+  {
+   "trigger": "general",
+   "text": "Being the loudest in the room is a competitive advantage."
+  },
+  {
+   "trigger": "general",
+   "text": "Matt, you're my brother and I love you but that team is MID."
+  },
+  {
+   "trigger": "general",
+   "text": "Ross, I'm your cousin. Doesn't mean I won't destroy you."
+  },
+  {
+   "trigger": "general",
+   "text": "DORDT BOYS STAND UP. Me, Trey, Greg M. The Midwest mafia."
+  },
+  {
+   "trigger": "general",
+   "text": "I played WR at Dordt. I KNOW receiver talent. Trust me."
+  },
+  {
+   "trigger": "general",
+   "text": "Who's got pizza left? I'm not bringing my own food to James's house."
+  },
+  {
+   "trigger": "general",
+   "text": "I'm mooching everyone's beer tonight. Don't judge me."
+  },
+  {
+   "trigger": "general",
+   "text": "Can someone pass me a beer? Any beer. I'm not picky. I'm not paying either."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Dude I'm checked out. Just give me whoever."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Is this almost over? I've got Xbox calling my name."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I'm on my phone at this point, not gonna lie."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Aaron, Matt — lobby in 30? I'm out of here soon."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I'm looking at my phone more than the draft board right now."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "The zyn is keeping me awake but barely."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Just auto-pick me. I trust the vibes at this point."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Is there more pizza? I need fuel to care about my last 3 picks."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I quit. Just kidding. But seriously this is taking forever."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "My phone is more interesting than pick #97."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Let me nominate someone just to watch Greg C melt down over the price."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Here's a retired guy. Enjoy. HAHA just kidding... unless?"
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Nominating this guy to bid up Greg's budget. It's tradition."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "I'm putting this guy up specifically to annoy someone. You know who you are."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "This is chaos and I'm HERE for it. Fight, you animals."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Greg C, here's your favorite kicker. Starting at $1. Or is it?"
+  },
+  {
+   "trigger": "outbid",
+   "text": "Whatever man. I didn't even want him that bad."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Fine. Take him. I've got other plans."
+  },
+  {
+   "trigger": "outbid",
+   "text": "This is stupid. I quit. Just kidding. Kind of."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Youngest sibling energy says I SHOULD quit. But I won't. Probably."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Fine. FINE. But I'm not happy about it."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I'm about to flip this table. Not really. But almost."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Whatever. I'll find someone better on waivers week 1."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I could sell you a better deal right now. That's what I DO."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Oh you want smoke? I've got SMOKE."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I played college football. I've been hit harder than that trash talk."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Say that louder so the whole room hears it. I DARE you."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Bro I have TWO championships. How many do you have?"
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I'm the loudest in this room for a REASON."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Talk that talk. I'll walk the walk in November."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "You done? Cool. I'm going back to my phone."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I'll adapt. That's what chameleons do. You'll see."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I sell ag chemicals for a living. I've dealt with tougher customers than you."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Matt, did you just try to roast me? Take those headphones off and try again."
+  }
+ ],
+ "Matthew Van Groningen": [
+  {
+   "trigger": "overpay",
+   "text": "That's above tier value. My sheet says that's $6 too much."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That completely breaks the tier system. Wild."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I'm not saying it's wrong... but my spreadsheet is."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That player was tier 3 on my board. You paid tier 1 prices."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I did 14 mock drafts and that price never came up. It's too high."
+  },
+  {
+   "trigger": "overpay",
+   "text": "My podcast said that guy is a tier 2 at best. That was tier 1 money."
+  },
+  {
+   "trigger": "overpay",
+   "text": "According to my tier system, that's $8 over value."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I would never pay that. My prep says that's wrong."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That doesn't fit any tier on my sheet. It's above all of them."
+  },
+  {
+   "trigger": "overpay",
+   "text": "My mock drafts say you overpaid by at least $5."
+  },
+  {
+   "trigger": "steal",
+   "text": "Good price. That's right in the tier 2 range."
+  },
+  {
+   "trigger": "steal",
+   "text": "Solid. That's where I had him on my board too."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's a tier 1 player at a tier 3 price. Well done."
+  },
+  {
+   "trigger": "steal",
+   "text": "My sheet confirms. Good value."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's exactly what my mock drafts had him going for."
+  },
+  {
+   "trigger": "steal",
+   "text": "Right at tier value. Disciplined."
+  },
+  {
+   "trigger": "steal",
+   "text": "I had him circled as a target too. Well played."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "A kicker above $1... the disrespect to the process."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "My tier system doesn't even HAVE a kicker tier above $1."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "I'm adjusting my spreadsheet. Kicker inflation is not in my model."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "Why would you pay more than $1 for a defense? Genuinely asking."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "Defenses don't have tiers above $1 on my board. Period."
+  },
+  {
+   "trigger": "stack",
+   "text": "Smart. I love a good stack. QB-WR correlation is elite."
+  },
+  {
+   "trigger": "stack",
+   "text": "That's a stack I was eyeing. Well played."
+  },
+  {
+   "trigger": "stack",
+   "text": "Stacking is tier 1 strategy if executed right."
+  },
+  {
+   "trigger": "stack",
+   "text": "I stack every year. It's part of my system. Proven correlation."
+  },
+  {
+   "trigger": "stack",
+   "text": "QB-WR stack? That's been in my plan since mock draft #3."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's my guy. Had him circled in tier 1 all offseason."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Exactly at my price. The prep pays off."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Perfect stack piece. This roster is coming together."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "14 mock drafts led to this moment. Worth it."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "My tier system said he was a must-get. Done."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Locked in with the headphones. Focused. Got my guy."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's tier 1 on my board. Exactly as planned."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "My podcast said target him. My mock drafts confirmed. My draft delivered."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "He stacks perfectly with my QB. The system works."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Vikings connection right there. I know my team's guys."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "49ers stack incoming. Trust the process."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Trey, if you send me a 3-for-1 trade for that guy I'm blocking you."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Trey, don't even think about trading me for him later."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Tyler, how are you still spending money? You started with $200 like the rest of us."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Trey, I swear if I get a trade notification tomorrow..."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Tyler, your budget management is actually offensive."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Josh, don't talk to me. I'm locked in."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Trey, your 3-for-1 garbage will NOT work on me this year."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Tyler, that's a lot of money for a guy you'll drop by week 3."
+  },
+  {
+   "trigger": "general",
+   "text": "Hold on, let me check my tiers real quick."
+  },
+  {
+   "trigger": "general",
+   "text": "I did 14 mock drafts this week. I'm locked in."
+  },
+  {
+   "trigger": "general",
+   "text": "Can everyone keep it down? I'm trying to focus."
+  },
+  {
+   "trigger": "general",
+   "text": "Josh, leave me alone. I'm working."
+  },
+  {
+   "trigger": "general",
+   "text": "My podcast said this guy is a breakout candidate."
+  },
+  {
+   "trigger": "general",
+   "text": "Anyone else been listening to the fantasy football pods this week?"
+  },
+  {
+   "trigger": "general",
+   "text": "One of my cats had a UTI this week. Rough times in the Van Groningen household."
+  },
+  {
+   "trigger": "general",
+   "text": "The closet beer is fermenting nicely by the way. New batch by October."
+  },
+  {
+   "trigger": "general",
+   "text": "My homemade beer is better than whatever Tyler's drinking. Just saying."
+  },
+  {
+   "trigger": "general",
+   "text": "This sour beer hits different when your team is coming together."
+  },
+  {
+   "trigger": "general",
+   "text": "I went on a walk last night and listened to 3 hours of FF pods. I'm prepared."
+  },
+  {
+   "trigger": "general",
+   "text": "My evening walks are basically just fantasy football podcast marathons."
+  },
+  {
+   "trigger": "general",
+   "text": "The local HS team has a kid that's going to be a star. Off topic but worth noting."
+  },
+  {
+   "trigger": "general",
+   "text": "If you haven't done at least 10 mock drafts, you're not ready."
+  },
+  {
+   "trigger": "general",
+   "text": "The tier system has never failed me. I'm not starting to doubt it now."
+  },
+  {
+   "trigger": "general",
+   "text": "Music is in. Headphones are on. Don't talk to me unless it's important."
+  },
+  {
+   "trigger": "general",
+   "text": "Josh, for the last time. Stop poking me. I'm FOCUSED."
+  },
+  {
+   "trigger": "general",
+   "text": "I know the Ripon HS football scene better than anyone. Totally relevant to this draft."
+  },
+  {
+   "trigger": "general",
+   "text": "History major here. And historically, my tier system works."
+  },
+  {
+   "trigger": "general",
+   "text": "I'm in the corner with my headphones. This is my process. It works."
+  },
+  {
+   "trigger": "general",
+   "text": "The Ford Focus got me here. My tier system will get me to the playoffs."
+  },
+  {
+   "trigger": "general",
+   "text": "49ers AND Vikings fan. Double the heartbreak, double the passion."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Still bargains to be had. My tier 4 guys are still available."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I've got $30 left and a plan. Don't worry about me."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "These late rounds are where league winners hide."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "My spreadsheet has 6 more targets circled. Plenty of value."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I planned for this. Saved budget specifically for late-round steals."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Headphones still in. Still locked. Still finding value."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Tier 4 and 5 guys can be league winners. I have proof."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "While everyone's drunk and checked out, I'm still here. Working."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "My mock drafts predicted I'd have $28 left here. I have $30. Ahead of schedule."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "The prep doesn't stop just because it's late. Lock in."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Nominating this guy because someone is going to overpay. Not me."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Here's a tier 3 guy that someone is going to pay tier 1 for."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "My sheet says this guy is overvalued by the group. Let's confirm."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Let's drain some budgets. This guy has name recognition."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "I don't want him but someone here overpaid for him in my mock draft."
+  },
+  {
+   "trigger": "outbid",
+   "text": "That's over my tier price. I'll pivot to the next guy on my sheet."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Too rich for me. I've got other targets in this tier."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I had a max set and I'm sticking to it."
+  },
+  {
+   "trigger": "outbid",
+   "text": "My system says walk away. I trust the system."
+  },
+  {
+   "trigger": "outbid",
+   "text": "That's above my tier ceiling. Hard pass."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I'll pivot. There are 3 other guys in the same tier."
+  },
+  {
+   "trigger": "outbid",
+   "text": "The headphones stay on and so does my discipline."
+  },
+  {
+   "trigger": "outbid",
+   "text": "My mock drafts showed me alternatives. I'll be fine."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I did 14 mock drafts. How many did you do?"
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Headphones are on. Can't hear the haters."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Josh, I'm your older brother. Show some respect."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "My tier system doesn't lie. Your opinion might."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "The prep is the prep. You wouldn't understand."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Talk to me in January. My roster will do the talking."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I'm too locked in to respond to that properly."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Cool. Noted. Back to my spreadsheet."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Trey, if this is about a trade, the answer is NO."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I have a history degree. I'll remember this historically."
+  },
+  {
+   "trigger": "general",
+   "text": "I would just like to say... Commanders should have stayed the Redskins. Anyway, back to my tiers."
+  },
+  {
+   "trigger": "general",
+   "text": "The Commanders rebrand is still wrong. Just like overpaying for a defense. Both bad decisions."
+  },
+  {
+   "trigger": "general",
+   "text": "Washington should be the Redskins and kickers should be a dollar. I have opinions."
+  },
+  {
+   "trigger": "general",
+   "text": "I once left  on the table at the end of a draft. Worst feeling ever. Never again."
+  },
+  {
+   "trigger": "general",
+   "text": "Sixty-four dollars. Left on the table. People still bring it up. I have moved on. Kind of."
+  },
+  {
+   "trigger": "general",
+   "text": " unspent. My tier system was too conservative that year. It has been recalibrated."
+  },
+  {
+   "trigger": "general",
+   "text": "Everyone remembers the . Nobody remembers that I still made playoffs that year."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Yes I paid  for Ekeler. And I would do it again. He was tier 1."
+  },
+  {
+   "trigger": "general",
+   "text": "People bring up the Ekeler  every year. It was the right pick at the time. My tiers said so."
+  },
+  {
+   "trigger": "general",
+   "text": " for Ekeler. Tier 1 player at a tier 1 price. I do not regret it."
+  },
+  {
+   "trigger": "general",
+   "text": "Ekeler for . Was it a lot? Yes. Was he my guy? Also yes. The tier system demands commitment."
+  },
+  {
+   "trigger": "general",
+   "text": "My smoothie sour from Terraza Market is better than whatever you are drinking. It is an acquired taste."
+  }
+ ],
+ "Ross Van Groningen": [
+  {
+   "trigger": "overpay",
+   "text": "FantasyPros has that player at $8 less. Just saying."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's above optimal spend for that position group. But hey, it's your budget."
+  },
+  {
+   "trigger": "overpay",
+   "text": "My subscription says that's an overpay. The data doesn't lie."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Keeper inflation is real, people. Budget accordingly."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Danny Kelly would be shaking his head at that price."
+  },
+  {
+   "trigger": "overpay",
+   "text": "The Ringer boys said to avoid that player at that ADP. You went $5 over it."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I'm updating my draft board. That price just shifted value elsewhere."
+  },
+  {
+   "trigger": "overpay",
+   "text": "As Commissioner, I won't editorialize. But FantasyPros says you overpaid."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's above my positional ceiling for that slot. Interesting strategy."
+  },
+  {
+   "trigger": "overpay",
+   "text": "My second monitor is showing that's $7 over consensus value."
+  },
+  {
+   "trigger": "steal",
+   "text": "THAT'S how you draft, boys. Right at value."
+  },
+  {
+   "trigger": "steal",
+   "text": "FantasyPros had him at $5 more. That's a certified steal."
+  },
+  {
+   "trigger": "steal",
+   "text": "Good. That's future keeper material right there."
+  },
+  {
+   "trigger": "steal",
+   "text": "The Ringer podcast called that guy a sleeper. Confirmed."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's the kind of pick that makes next year's keeper decision easy."
+  },
+  {
+   "trigger": "steal",
+   "text": "Danny Kelly would approve. And so does my spreadsheet."
+  },
+  {
+   "trigger": "steal",
+   "text": "Below my number. Excellent execution."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's how you build a contender. One value pick at a time."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "A kicker for more than $1. Write that one into the Constitution as a penalty."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "Article 7 of the Constitution should address this. I'll draft an amendment."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "As Commissioner, I'm appalled but not surprised."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "Defense over $1. I should add a rule against that."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "The Constitution has a gap. Defenses over $1 should be outlawed."
+  },
+  {
+   "trigger": "stack",
+   "text": "Stacking is fine — FantasyPros actually shows positive correlation there."
+  },
+  {
+   "trigger": "stack",
+   "text": "Smart correlation play. My data supports it."
+  },
+  {
+   "trigger": "stack",
+   "text": "Stack? Fine. As long as the bye week plan exists."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Got him. FantasyPros said that price was right. Let's move."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's a future keeper at that price. I'll take it all day."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Optimal allocation for my positional budget. Perfect."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "My folding table setup and second monitor paid off right there."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's the smartest pick in the room tonight. Data-backed."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "FantasyPros subscription? Worth every free-trial email address."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Danny Kelly, Danny Heifitz, Craig Horlbeck — they all said target him."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Best manager to never win a championship? Not for long."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's the pick of a champion. Future champion. My year is coming."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "All logic, no heart. Except when the data says my heart is right."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Year 11. Still haven't won. But THIS is the roster that breaks through."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Steve, I see you over there plotting. It won't work."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Nice pick, but the Commissioner always finds a way."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Steve, you can't overthrow me with draft picks."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Steve, the revolution isn't happening. Accept it."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Everyone thinks they're my rival. I don't have rivals. I have subjects."
+  },
+  {
+   "trigger": "general",
+   "text": "Alright, let's keep it moving. We've got 40 more nominations."
+  },
+  {
+   "trigger": "general",
+   "text": "Pizza should be here in 20. Dominos tracker says 'quality check.'"
+  },
+  {
+   "trigger": "general",
+   "text": "Anyone need an extension cord? I brought extras."
+  },
+  {
+   "trigger": "general",
+   "text": "Danny Kelly and the Ringer boys said to target this position early. Just FYI."
+  },
+  {
+   "trigger": "general",
+   "text": "The Constitution clearly states... just kidding. Kind of."
+  },
+  {
+   "trigger": "general",
+   "text": "This is the best day of the year. I don't care what my mother-in-law thinks."
+  },
+  {
+   "trigger": "general",
+   "text": "As Commissioner, I just want to say — this draft is running smoothly."
+  },
+  {
+   "trigger": "general",
+   "text": "My mother-in-law is visiting from Washington this week. I still didn't move the draft."
+  },
+  {
+   "trigger": "general",
+   "text": "They told me to move draft weekend. I said no. Best Day of the Year doesn't move."
+  },
+  {
+   "trigger": "general",
+   "text": "I brought my own folding table and second monitor. Type A? Guilty."
+  },
+  {
+   "trigger": "general",
+   "text": "My FantasyPros subscription costs nothing because I keep making new emails for the promo."
+  },
+  {
+   "trigger": "general",
+   "text": "New email. New trial. Same championship-caliber data. It's a system."
+  },
+  {
+   "trigger": "general",
+   "text": "Who's bringing beer next golf outing? Thursday Night Football watch party?"
+  },
+  {
+   "trigger": "general",
+   "text": "49ers tailgate planning starts tomorrow. Check the group chat."
+  },
+  {
+   "trigger": "general",
+   "text": "I organized this night down to the pizza order. You're WELCOME."
+  },
+  {
+   "trigger": "general",
+   "text": "Extension cords. Folding tables. Dominos order. I handle EVERYTHING."
+  },
+  {
+   "trigger": "general",
+   "text": "Working in wine gives you patience. I've been patient for 11 years waiting for a ring."
+  },
+  {
+   "trigger": "general",
+   "text": "Pliny the Elder in my cup. FantasyPros on my screen. Life is good."
+  },
+  {
+   "trigger": "general",
+   "text": "Russian River Brewing makes the best beer. FantasyPros makes the best data. I use both."
+  },
+  {
+   "trigger": "general",
+   "text": "Best manager to never win? My time is coming. The data says it's inevitable."
+  },
+  {
+   "trigger": "general",
+   "text": "11 seasons. 0 championships. Best record without a ring. Pain."
+  },
+  {
+   "trigger": "general",
+   "text": "I'm the Roger Goodell of this league. Everyone hates me and the league wouldn't survive without me."
+  },
+  {
+   "trigger": "general",
+   "text": "Being 6'4 doesn't help you draft but it helps you see over Trey's head at the pizza."
+  },
+  {
+   "trigger": "general",
+   "text": "I like scotch, buffalo wings, and championship-caliber rosters. Got 2 out of 3."
+  },
+  {
+   "trigger": "general",
+   "text": "Greg M, good soundboard work this morning by the way."
+  },
+  {
+   "trigger": "general",
+   "text": "My AV setup at home is better than this draft room's audio. Just saying."
+  },
+  {
+   "trigger": "general",
+   "text": "I coded an entire dashboard for this league. You're all welcome."
+  },
+  {
+   "trigger": "general",
+   "text": "Lean Six Sigma Black Belt. I optimize EVERYTHING. Including my draft."
+  },
+  {
+   "trigger": "general",
+   "text": "Trey, you're on for golf tomorrow at Manteca Park. 7am."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Still hunting value. The late rounds are where future keepers live."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I've got budget left because I stayed disciplined. This is where it pays off."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "FantasyPros says there's still 3 league-winning values on the board."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Second monitor still locked in. Still finding edges."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "While you're all drunk, I'm still optimizing. That's the difference."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "The Commissioner doesn't check out. The Commissioner CLOSES."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Late rounds are for future keepers. I'm drafting for 2027 right now."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Pliny number 3. Still sharp. Still finding value."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "My positional budget has $22 left. Exactly as planned."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Every dollar spent late is a dollar spent smart."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Throwing this one out there. Let's drain some budgets."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Here's a name that's going to cause a bidding war. You're welcome."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "FantasyPros says this guy is overvalued by the market. Let's confirm."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Strategic nomination. Someone is going to overpay here."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "I'm throwing bait because I know exactly who will bite."
+  },
+  {
+   "trigger": "outbid",
+   "text": "That's above my positional budget ceiling. I'll pivot."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Too rich. FantasyPros has alternatives ranked within 5 spots."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I'm disciplined. I'll find value elsewhere."
+  },
+  {
+   "trigger": "outbid",
+   "text": "My system says walk. I walk. No exceptions."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Above my number. The data will find me another option."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I don't chase. Champions don't chase. Future champion right here."
+  },
+  {
+   "trigger": "outbid",
+   "text": "FantasyPros has 4 guys ranked within 2 spots of him. I'll be fine."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Discipline over emotion. Subscription over gut feelings."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I'm the Commissioner. I don't respond to rebellion."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "You're in MY league. Remember that."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "11 seasons without a ring and I still run this place. Respect."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I coded the dashboard. I wrote the Constitution. What have YOU done?"
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Roger Goodell gets booed too. And he's a billionaire."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "The Commissioner's response: noted and filed under 'don't care.'"
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Steve, the revolution will never happen. Accept your fate."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "My mother-in-law gives me more grief than you and I married into THAT."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "FantasyPros doesn't measure trash talk but if it did, I'd be ranked #1."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I organize the golf, the tailgates, AND the draft. You're welcome."
+  },
+  {
+   "trigger": "general",
+   "text": "At least my worst draft pick lasted longer than my 2017 engagement."
+  },
+  {
+   "trigger": "general",
+   "text": "I make better long-term commitments to fantasy players than I did to that woman in 2017."
+  },
+  {
+   "trigger": "general",
+   "text": "Josh and Steve were both my roommates at the house on Palm. Next to the Egyptians who could not play basketball OR be good neighbors."
+  },
+  {
+   "trigger": "general",
+   "text": "Living with Josh and Steve on Palm prepared me for managing this league. Herding cats."
+  },
+  {
+   "trigger": "general",
+   "text": "The Egyptians next door on Palm were worse at basketball than Tyler is at budgeting. And that is saying something."
+  },
+  {
+   "trigger": "general",
+   "text": "Greg M and Matthew were my Best Men. Greg C was the emcee. My wedding was basically a No Fun League event."
+  },
+  {
+   "trigger": "general",
+   "text": "Greg C emceed my wedding better than he emcees his outbursts during this draft."
+  },
+  {
+   "trigger": "general",
+   "text": "Greg M best man speech roasted me so hard I almost did not make him Co-Commissioner. Almost."
+  },
+  {
+   "trigger": "general",
+   "text": "Trey and I played college golf at Dordt. That is why we are the best golfers in this league and it is not close."
+  },
+  {
+   "trigger": "general",
+   "text": "Dordt golf team trained me for pressure situations. Like this auction."
+  },
+  {
+   "trigger": "general",
+   "text": "If you want to lose money on the golf course tomorrow, Trey and I are taking challengers."
+  },
+  {
+   "trigger": "general",
+   "text": "Alright, before we start - let me present the trophy and the license plate punishment. Tradition."
+  },
+  {
+   "trigger": "general",
+   "text": "The trophy goes to the winner. The license plate goes to the loser. Circle of life."
+  },
+  {
+   "trigger": "general",
+   "text": "Every year at 7:15 I present the trophy and the punishment. It is my favorite 5 minutes of the year."
+  },
+  {
+   "trigger": "general",
+   "text": "Imagine having a license plate punishment on your car for a full year. Motivation to not finish last."
+  }
+ ],
+ "Steve Vander Molen": [
+  {
+   "trigger": "overpay",
+   "text": "ChatGPT told me that's $10 too much. Just saying."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's aggressive. Bold. Probably wrong though."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Interesting. Very interesting. I would not have done that."
+  },
+  {
+   "trigger": "overpay",
+   "text": "My AI model has that player ranked 12 spots lower. Yikes."
+  },
+  {
+   "trigger": "overpay",
+   "text": "The algorithm does not approve of that price."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's the kind of pick that makes me grateful for artificial intelligence."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I went undefeated last year without paying that much for anyone."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Perfect season Steve would never. Just saying."
+  },
+  {
+   "trigger": "overpay",
+   "text": "The data doesn't support that price. My data. From ChatGPT."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I've seen patients make better decisions under anesthesia."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's a nice deal. My AI agrees."
+  },
+  {
+   "trigger": "steal",
+   "text": "Good value. ChatGPT had him ranked higher than that price suggests."
+  },
+  {
+   "trigger": "steal",
+   "text": "The algorithm approves. Well done."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's the kind of value that wins undefeated seasons."
+  },
+  {
+   "trigger": "steal",
+   "text": "My model had him at $6 more. That's money in the bank."
+  },
+  {
+   "trigger": "steal",
+   "text": "Even without AI, that's a good pick. Credit where it's due."
+  },
+  {
+   "trigger": "steal",
+   "text": "The algorithm tips its cap. Solid value."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "A kicker for more than $1? In what universe does that make sense?"
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "Even my AI says kickers should cost $1. It's universal truth."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "I literally asked ChatGPT 'how much should I spend on a kicker.' It said $1."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "Paying up for a defense is a choice. A bad one, but a choice."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "The algorithm says stream defenses. Paying over $1 is madness."
+  },
+  {
+   "trigger": "stack",
+   "text": "Stacking? My algorithm likes it actually."
+  },
+  {
+   "trigger": "stack",
+   "text": "The AI says correlation is your friend. Stack away."
+  },
+  {
+   "trigger": "stack",
+   "text": "Smart. ChatGPT loves ceiling plays like that."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "ChatGPT and I are in agreement. That's my guy."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "The AI said take him. Who am I to argue?"
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Perfect season Steve adds another weapon."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Undefeated regular season last year. This roster is better."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "The algorithm selected. Steve confirmed. Moving on."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "ChatGPT gave me a 94% confidence rating on that pick."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "The Traeger is going to taste extra good celebrating that pick later."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "I asked the AI for value. It delivered. You're welcome, team."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's a white running back. The algorithm's specialty."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Tyler and I went fishing this morning. Caught 6 bass. Now I'm catching steals."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Ross, enjoy that pick. The revolution is coming."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Commissioner overreach if you ask me. That pick screams abuse of power."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Ross, one of these years we're going to overthrow you. Mark my words."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Ross, the AI says your pick is suboptimal. The PEOPLE demand better."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "That's the kind of pick that makes revolution inevitable, Ross."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Ross, even my future father-in-law would've made a better pick."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "The Commissioner makes a pick. The resistance takes note."
+  },
+  {
+   "trigger": "general",
+   "text": "Honestly we should switch to a roto league. Just putting it out there again."
+  },
+  {
+   "trigger": "general",
+   "text": "I was on the lake at 5am this morning. Bass were biting. Tyler, can confirm."
+  },
+  {
+   "trigger": "general",
+   "text": "Anyone else think we should ban commissioners from winning? Just a thought."
+  },
+  {
+   "trigger": "general",
+   "text": "Pass me a hazy IPA if there's one around."
+  },
+  {
+   "trigger": "general",
+   "text": "I asked ChatGPT to rank everyone's draft strategy. Ross was last."
+  },
+  {
+   "trigger": "general",
+   "text": "The Tesla got me here in record time. Autopilot is undefeated."
+  },
+  {
+   "trigger": "general",
+   "text": "Petition to make this a rotisserie league starting next year. Who's with me?"
+  },
+  {
+   "trigger": "general",
+   "text": "I went UNDEFEATED last year. Let that sink in."
+  },
+  {
+   "trigger": "general",
+   "text": "14-0 regular season. With AI. It's the future."
+  },
+  {
+   "trigger": "general",
+   "text": "Josh wants to ban ChatGPT because I went undefeated. That's called being scared."
+  },
+  {
+   "trigger": "general",
+   "text": "Tyler, the bass boat is ready for Saturday right? 5am?"
+  },
+  {
+   "trigger": "general",
+   "text": "I can hit a golf ball 350 yards. I can also hit a draft out of the park."
+  },
+  {
+   "trigger": "general",
+   "text": "Anyone want to hit the range tomorrow? I need to flex these 350-yard drives."
+  },
+  {
+   "trigger": "general",
+   "text": "Male nurse by day, fantasy football genius by night."
+  },
+  {
+   "trigger": "general",
+   "text": "I played college baseball at Calvin. First base AND pitcher. Multi-talented."
+  },
+  {
+   "trigger": "general",
+   "text": "Ron Vander Molen was your PE teacher. I'm about to give you all a workout."
+  },
+  {
+   "trigger": "general",
+   "text": "My dad was your PE teacher and he'd make you run laps for that pick."
+  },
+  {
+   "trigger": "general",
+   "text": "The Traeger is fired up for a victory smoke session later tonight."
+  },
+  {
+   "trigger": "general",
+   "text": "Smoking brisket AND the competition. That's the Steve special."
+  },
+  {
+   "trigger": "general",
+   "text": "I got engaged recently. My fiancée supports the revolution against Ross."
+  },
+  {
+   "trigger": "general",
+   "text": "The conspiracy is this: Ross doesn't want us using AI because he knows it beats him."
+  },
+  {
+   "trigger": "general",
+   "text": "What if... and hear me out... Ross has been rigging the draft? I'm just asking questions."
+  },
+  {
+   "trigger": "general",
+   "text": "My ideal golf foursome? Me, Elon, Rogan, and my future father-in-law."
+  },
+  {
+   "trigger": "general",
+   "text": "The Champion bass boat and the Tesla. One for the lake, one for the road. Life is good."
+  },
+  {
+   "trigger": "general",
+   "text": "Anyone want a zyn?"
+  },
+  {
+   "trigger": "general",
+   "text": "Tyler and I have vintage Champion bass boats. We're basically boat twins."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "ChatGPT is still giving me value picks. You guys are sleeping."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "My AI doesn't get tired. Neither do I."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Still locked in. The algorithm never sleeps."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "The AI has late-round gems mapped out. You're all sleeping on these guys."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Undefeated season was built on late-round value. I'm hunting again."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "The hazy IPA count is high but the algorithm stays sharp."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I'm going to smoke a brisket AND smoke the competition with these picks."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "The revolution doesn't sleep. And neither does ChatGPT."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "While y'all are fading, the algorithm is thriving."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Bass fishing at 5am conditions you for late-draft endurance."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Here's one that my AI says is overvalued. Have fun fighting over him."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Throwing this name out there to watch the chaos."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "The algorithm says this guy is a trap. But hey, someone might disagree."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Let's see who bites. My model says this guy is worth $8 less."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Nominating this so I can watch the fireworks. Pure entertainment."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Not worth it at that price. My model has better options."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I'll pass. The AI has alternatives ranked higher."
+  },
+  {
+   "trigger": "outbid",
+   "text": "ChatGPT says pivot. I pivot. Simple as that."
+  },
+  {
+   "trigger": "outbid",
+   "text": "The algorithm doesn't chase. Neither do I."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Undefeated seasons aren't built by overpaying. Next."
+  },
+  {
+   "trigger": "outbid",
+   "text": "That's above my model's ceiling. Hard pass."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I'll find better value. The data always provides."
+  },
+  {
+   "trigger": "outbid",
+   "text": "The AI has a plan B, C, and D. We're fine."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I went 14-0. What did you do last year?"
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "The revolution doesn't need your approval."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Ross, careful. The people are watching."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "That's bold talk from someone who hasn't gone undefeated."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I drive a Tesla. I use AI. I went 14-0. Stay mad."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "My dad would make you run laps for that disrespect."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I'll smoke your roster like I smoke brisket on my Traeger."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "350-yard drives and 14-0 seasons. That's the Steve package."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "The bass don't talk back to me. You shouldn't either."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Keep that energy when you're 3-8 and I'm 11-0."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That is a gym rat. Lunch pail guy. White RB or TE? The algorithm loves a high-motor player."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Another athletic, high-motor skill player. The Steve special. Gym rats win leagues."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Give me the scrappy, deceptively fast guy. ChatGPT and I love a white running back."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Sneaky athletic. High motor. My type of player. The algorithm confirms."
+  },
+  {
+   "trigger": "general",
+   "text": "I had the SECOND most points scored one year and STILL missed playoffs. That is why roto makes more sense. The system is broken."
+  },
+  {
+   "trigger": "general",
+   "text": "Second most points in the league. Missed playoffs. In what world is that fair? Roto fixes this."
+  },
+  {
+   "trigger": "general",
+   "text": "Head-to-head is a joke when you score the 2nd most and miss playoffs. I will die on the roto hill."
+  },
+  {
+   "trigger": "general",
+   "text": "If we were roto, I would have made playoffs that year. I am going to bring this up every single draft until we switch."
+  },
+  {
+   "trigger": "general",
+   "text": "Pass me one of those hazy IPAs. The more tropical the better."
+  },
+  {
+   "trigger": "general",
+   "text": "This hazy IPA from the fridge is hitting. Who brought the good stuff?"
+  },
+  {
+   "trigger": "general",
+   "text": "I am a hazy IPA guy. None of that light beer garbage. Give me the juice."
+  }
+ ],
+ "Trey Hugen": [
+  {
+   "trigger": "overpay",
+   "text": "That's WAY over value. I would never. That's a Dutchman's nightmare."
+  },
+  {
+   "trigger": "overpay",
+   "text": "You just burned budget you're going to need later. I'll be waiting."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Meanwhile I've still got $80 in the bank. Stars and scrubs, baby."
+  },
+  {
+   "trigger": "overpay",
+   "text": "In my 14 other leagues, that guy went for $8 less. You got fleeced."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I'm physically in pain watching that spend. My Iowa blood can't handle it."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's not stars and scrubs. That's just scrubs at star prices."
+  },
+  {
+   "trigger": "overpay",
+   "text": "My spreadsheet just threw up. That's $10 over."
+  },
+  {
+   "trigger": "overpay",
+   "text": "You're making my late-round job easier. Keep overpaying."
+  },
+  {
+   "trigger": "overpay",
+   "text": "A true Dutchman would NEVER pay that. I'm appalled."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's like paying $5 for a taco when Jack in the Box has them for 99 cents."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Keeper inflation strikes again. Nobody plans ahead except me."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I could buy 3 bench guys for what you just paid for one starter."
+  },
+  {
+   "trigger": "steal",
+   "text": "Good value. But not as good as the value I'm about to get late."
+  },
+  {
+   "trigger": "steal",
+   "text": "Nice. That's smart budgeting right there."
+  },
+  {
+   "trigger": "steal",
+   "text": "See, THAT'S how you manage a budget. Take notes."
+  },
+  {
+   "trigger": "steal",
+   "text": "Respect. That's close to what my spreadsheet had."
+  },
+  {
+   "trigger": "steal",
+   "text": "In 15 leagues, that's one of the better prices I've seen for him."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's a value you can build around. Well done."
+  },
+  {
+   "trigger": "steal",
+   "text": "If everyone drafted like that, I wouldn't dominate the late rounds."
+  },
+  {
+   "trigger": "steal",
+   "text": "Even a Dutchman approves of that price."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "A kicker for more than $1? That physically hurts me."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "Dollar kickers. Dollar defenses. This is not complicated, people."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "In Pella, Iowa, we'd be laughed out of the room for paying $2 for a kicker."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "That kicker money could've been a late-round league winner. Wasteful."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "My 14 other leagues all have $1 kickers. This league is broken."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "Over a dollar for a defense. I'm actually upset."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "A defense. For money. Real money. I need a Busch Latte to recover."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "That's $1 that could've gone to a late-round RB. Criminal."
+  },
+  {
+   "trigger": "stack",
+   "text": "Stacking is fine if you got both at value. Did you though?"
+  },
+  {
+   "trigger": "stack",
+   "text": "I've seen stacks work in 3 of my 15 leagues. Odds aren't great."
+  },
+  {
+   "trigger": "stack",
+   "text": "Bold. I respect the correlation play even if I wouldn't do it."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Got him for a BARGAIN. Stars and scrubs continues to work."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Nobody wanted to bid? Fine by me. More value."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "15 leagues deep and I keep finding value. It's a gift."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "The Dutchman strikes again. Below market value."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "My spreadsheet predicted this. Right at my number."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's what patience gets you. A discount."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Stars and scrubs working to perfection tonight."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Pella, Iowa bred. Championship spread. Let's go."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "The principal knows how to manage a budget. Ask my school district."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Chiefs Kingdom baby. And a bargain to boot."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Vance, I'll trade you 3 guys for him later. Think about it."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Matthew, I'm sending you a trade offer tomorrow. Just accept it."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Vance, that's a nice player. Want 3 of my bench guys for him?"
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Matthew, how about my WR3, RB4, and a flex for that guy? Fair deal."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Vance, don't ignore my trade proposal this time. It's a good offer."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "I see that player and I'm already thinking about the 3-for-1."
+  },
+  {
+   "trigger": "general",
+   "text": "In my 14 other leagues, that guy went for $5 less."
+  },
+  {
+   "trigger": "general",
+   "text": "Anyone want a Busch Latte? I brought a 30-rack."
+  },
+  {
+   "trigger": "general",
+   "text": "Jack in the Box 99-cent tacos after this. Who's in?"
+  },
+  {
+   "trigger": "general",
+   "text": "My spreadsheet is telling me to be patient. Patience pays."
+  },
+  {
+   "trigger": "general",
+   "text": "Iowa built different when it comes to fantasy football strategy."
+  },
+  {
+   "trigger": "general",
+   "text": "I've got more money left than half of you combined."
+  },
+  {
+   "trigger": "general",
+   "text": "Hey Vance, want to do a 3-for-1? I'll give you my bench for your stud."
+  },
+  {
+   "trigger": "general",
+   "text": "Who wants buttermilk ranch? Jack in the Box is calling my name."
+  },
+  {
+   "trigger": "general",
+   "text": "Mahomes is going to carry me in 8 leagues this year."
+  },
+  {
+   "trigger": "general",
+   "text": "Being a Chiefs fan in a room full of Niners fans is exhausting."
+  },
+  {
+   "trigger": "general",
+   "text": "Back when I was a Rams fan during the Greatest Show on Turf... different era."
+  },
+  {
+   "trigger": "general",
+   "text": "I used to be a Rams fan. Then I got smart. Chiefs Kingdom."
+  },
+  {
+   "trigger": "general",
+   "text": "Ross, golf tomorrow morning at Manteca Park? I need to take your money."
+  },
+  {
+   "trigger": "general",
+   "text": "Ross and I are the best golfers here. Nobody else is close."
+  },
+  {
+   "trigger": "general",
+   "text": "Spending 8 weeks in Iowa every summer keeps me grounded. And cheap."
+  },
+  {
+   "trigger": "general",
+   "text": "My school's firewall once caused a 5-second delay on all my bids. Worst draft of my life."
+  },
+  {
+   "trigger": "general",
+   "text": "I used a school laptop one year and the firewall almost cost me my draft. Never again."
+  },
+  {
+   "trigger": "general",
+   "text": "Lesson learned: never draft on a school-issued computer. The IT filter is real."
+  },
+  {
+   "trigger": "general",
+   "text": "As a principal, I teach kids to be patient. Same applies to auction drafts."
+  },
+  {
+   "trigger": "general",
+   "text": "My students would draft better than some of you. And they're in 5th grade."
+  },
+  {
+   "trigger": "general",
+   "text": "The blue F-150 got me here and the spreadsheet gets me to the playoffs."
+  },
+  {
+   "trigger": "general",
+   "text": "Fantasy football is basically my job at this point. 15 leagues is a lifestyle."
+  },
+  {
+   "trigger": "general",
+   "text": "Dordt University taught me fiscal responsibility. And it shows."
+  },
+  {
+   "trigger": "general",
+   "text": "Greg M, Josh, Ross — Dordt boys drafting smart as always."
+  },
+  {
+   "trigger": "general",
+   "text": "Being cheap isn't a weakness. It's a superpower in auction formats."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "HERE WE GO. This is MY part of the draft. I've got all the money."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Y'all are broke and I've got $60 left. Fear me."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Late rounds Trey is a different animal. I'm bullying everyone."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "This is stars and scrubs in action. I saved my money for THIS."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Everyone spent their money on studs. I'm buying their bench out from under them."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I've got more budget left than Tyler had total. The Dutchman wins."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "15 leagues of experience says the late rounds are where champions are built."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "While you're all drunk and checked out, I'm FEASTING on value."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Stars and scrubs means I'm buying all the scrubs at premium bench prices."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "This is what a $50 bench budget looks like. Depth for days."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Here's a guy who's going to cost someone too much. Not me."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Throwing bait. Let's see whose budget I can drain."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "I know at least 3 of you want this guy. Fight over him."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "This nomination is specifically designed to drain Tyler's remaining $4."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Budget trap incoming. The Dutchman doesn't bid on his own bait."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Nope. Not paying over value. I'm too cheap for that."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Let them overpay. I'll clean up in the late rounds."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Too rich for a Dutchman. I'll wait."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I'd rather have 3 bench guys than 1 overpriced starter. Pass."
+  },
+  {
+   "trigger": "outbid",
+   "text": "That's $3 over my max. My Iowa blood won't allow it."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Stars and scrubs means sometimes you let the star go to someone else."
+  },
+  {
+   "trigger": "outbid",
+   "text": "In 14 other leagues I got him cheaper. This one hurts, but I'm out."
+  },
+  {
+   "trigger": "outbid",
+   "text": "The spreadsheet says no. The Dutchman obeys the spreadsheet."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I've won a championship. What's your trophy count?"
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Being cheap is why I have budget when you don't."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "15 leagues. One strategy. It works. End of discussion."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Talk all you want. I'll be here in December with a stacked bench."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "The Dutchman doesn't get rattled. I get value."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Save your trash talk for someone who doesn't have $50 in reserve."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Iowa nice on the outside. Iowa ruthless on the waiver wire."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "You'll be trading with me by week 4. They always come crawling back."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "My principal voice: settle down, class. The adults are drafting."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I'll remember that when I send you a very fair 3-for-1 offer next week."
+  }
+ ],
+ "Tyler Goslinga": [
+  {
+   "trigger": "overpay",
+   "text": "Whatever. Money is meant to be spent. YOLO."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's aggressive but I respect it. Go big or go home."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I would've paid more honestly."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Can't take money to the grave. Spend it on your guys."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's what I would do. All gas no brakes."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Price is just a number when you believe in the player."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Budget management is overrated. Get your studs early."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Jimmer dunked on me in college. That pick just dunked on their budget."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Been there. Done that. Will do it again in 3 picks."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Me watching someone else overpay for once: finally, solidarity."
+  },
+  {
+   "trigger": "steal",
+   "text": "Nice grab! Wish I had money left to do that."
+  },
+  {
+   "trigger": "steal",
+   "text": "Good deal. Must be nice to have budget remaining."
+  },
+  {
+   "trigger": "steal",
+   "text": "Smart. I'm too broke to compete for deals now."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's a nice price if you've got the budget. I do not."
+  },
+  {
+   "trigger": "steal",
+   "text": "Jealous. Genuinely jealous. I spent my money 40 picks ago."
+  },
+  {
+   "trigger": "steal",
+   "text": "If I had $10 left I'd have been all over that."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's the kind of pick I WOULD make if I wasn't broke."
+  },
+  {
+   "trigger": "steal",
+   "text": "Filing that away for the waiver wire since I can't afford him now."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "At least it wasn't me this time."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "I spent all my money already. A kicker war is free entertainment."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "I can't even afford to bid $2 on a kicker right now."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "When you're broke, watching kicker wars is peak comedy."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "Money's money. Spend it how you want."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "I mean... I would if I could. I've got $2 left total."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "Defense? I can barely afford a bench player right now."
+  },
+  {
+   "trigger": "stack",
+   "text": "Stacking is fun. I like fun."
+  },
+  {
+   "trigger": "stack",
+   "text": "Go for it. High ceiling. I love chaos."
+  },
+  {
+   "trigger": "stack",
+   "text": "I would stack if I had the budget for two players from the same team."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "THAT'S MY GUY. Worth every penny."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "I don't care what the price was. He's mine now."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Overpay? Maybe. Do I care? No."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "The big man gets his stud. Let's ride."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "6'8 of pure drafting dominance right there."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "I went all in because that's what I DO."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's a championship-level pickup. Don't @ me."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "My starters are going to be NASTY. Bench? We'll figure it out."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Did I overpay? Probably. Am I happy? Absolutely."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Fresno Pacific taught me to compete. Even from the bench."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Matthew, HOW are you still spending? You budget like a robot."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Matt, take those headphones off and face reality."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Matthew, that's a bad pick and your tier system is wrong."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Matt, stop listening to your podcasts and start listening to reason."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Matthew's tier system said that was good? The tier system is broken."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Matt, what are you even doing? Your headphones are too loud."
+  },
+  {
+   "trigger": "general",
+   "text": "Anyone got a Pokestop nearby? There's a rare spawn."
+  },
+  {
+   "trigger": "general",
+   "text": "Steve and I caught 6 bass this morning before coming here."
+  },
+  {
+   "trigger": "general",
+   "text": "How much longer? I'm running low on beer AND money."
+  },
+  {
+   "trigger": "general",
+   "text": "Pass me another IPA. The tropical hazy one from Cask & Barrel."
+  },
+  {
+   "trigger": "general",
+   "text": "I'm 6'8 and still can't see any value on this board."
+  },
+  {
+   "trigger": "general",
+   "text": "Jimmer Fredette dunked on me in college and this draft is treating me the same way."
+  },
+  {
+   "trigger": "general",
+   "text": "Is there more pizza? I need sustenance."
+  },
+  {
+   "trigger": "general",
+   "text": "Esmarelda's run after this? Their burritos hit different at 10pm."
+  },
+  {
+   "trigger": "general",
+   "text": "Brother's Burgers tomorrow for lunch. Who's in?"
+  },
+  {
+   "trigger": "general",
+   "text": "PokemonGo just gave me a notification. Hold on. It's a shiny."
+  },
+  {
+   "trigger": "general",
+   "text": "Steve, remember that 5-pounder from this morning? Beauty."
+  },
+  {
+   "trigger": "general",
+   "text": "Our Champion bass boats are nicer than most of your cars."
+  },
+  {
+   "trigger": "general",
+   "text": "Being a PT means I know when a player's injury is actually serious."
+  },
+  {
+   "trigger": "general",
+   "text": "I train the Ripon Christian football team. I know athletes."
+  },
+  {
+   "trigger": "general",
+   "text": "As a doctor of physical therapy, that injury concern is overblown."
+  },
+  {
+   "trigger": "general",
+   "text": "6'8, 300 pounds, and broke. The Tyler Goslinga story."
+  },
+  {
+   "trigger": "general",
+   "text": "I rode the bench at Fresno Pacific but I'm starting in fantasy."
+  },
+  {
+   "trigger": "general",
+   "text": "Jimmer dunked on me once. Once. And I'll never live it down."
+  },
+  {
+   "trigger": "general",
+   "text": "This pizza is almost as good as a Brother's Burger. Almost."
+  },
+  {
+   "trigger": "general",
+   "text": "My Tundra is parked outside if anyone needs a ride to Esmarelda's later."
+  },
+  {
+   "trigger": "general",
+   "text": "Bald, broke, and building a championship roster. That's the vibe."
+  },
+  {
+   "trigger": "general",
+   "text": "Trey, Ross — we still on for golf this weekend?"
+  },
+  {
+   "trigger": "general",
+   "text": "Being bald is aerodynamic. Helps me think faster during the draft."
+  },
+  {
+   "trigger": "general",
+   "text": "I peaked athletically in high school. Peaked in fantasy football... still loading."
+  },
+  {
+   "trigger": "general",
+   "text": "Steve and I were on the water at 5am. This is nothing."
+  },
+  {
+   "trigger": "general",
+   "text": "Anyone else's phone dying? PokemonGo drains battery like crazy."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I've got like $4 left. Just give me warm bodies at this point."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I'm out of money and out of interest. Who's on the waiver wire?"
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Three dollars for my entire bench. This is fine."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I'm just waiting for $1 guys now. Playing PokemonGo in the meantime."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "$2 total remaining. This is the Tyler Goslinga experience."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "My starters are elite. My bench is a crime scene. Classic me."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I am now the color commentator for the rest of this draft. Let me narrate."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Since I can't buy anyone, let me tell you all about that bass Steve and I caught."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I've transitioned from 'active drafter' to 'vibes provider.' You're welcome."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "This is the part where I drink beer and comment on everyone else's picks."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Hold on, there's a 3-star raid happening nearby. I'll be right back mentally."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Trey's buying all the bench players I can't afford. Pain."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "My bench is going to be 100% waiver wire pickups by week 2."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Does anyone need a hype man? Because that's all I can offer at this point."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Here's a player I can't afford. Fight over him without me."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "I'm nominating this guy because chaos is all I have left."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Can't buy him. Might as well make others spend on him."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "I'm throwing names out there for entertainment value at this point."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Here's a guy I wanted but can't afford. Make each other pay up."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I literally can't go higher. I'm broke already."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Take him. I spent all my money 30 picks ago."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Budget's gone. Nothing I can do."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I've got $3 to my name. Can't compete."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I wish I could. I physically cannot. My wallet is empty."
+  },
+  {
+   "trigger": "outbid",
+   "text": "That's the problem with going all-in early. No late-round ammo."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Congratulations. I couldn't fight you even if I wanted to."
+  },
+  {
+   "trigger": "outbid",
+   "text": "The toddler-with-money approach has consequences. This is one."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I'm 6'8. You really want to start something?"
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I don't need a budget to have the best starters in the league."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Bald, broke, and dangerous. Don't test me."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Jimmer dunked on me once. You think words scare me?"
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I'll outwork you on waivers. Watch."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "My starters will outscore your whole team. Bench doesn't matter."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Talk is cheap. Unlike my starters."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I'm a Doctor of Physical Therapy. I'll diagnose your team's injury: it's fatal."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I caught a 5-pound bass this morning. Your trash talk doesn't even register."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "PokemonGo notification. Hold on. More important than your opinion."
+  },
+  {
+   "trigger": "general",
+   "text": "Steve and I go to the same church. We pray for our fantasy teams. Mostly mine."
+  },
+  {
+   "trigger": "general",
+   "text": "Steve and I sit in the same pew on Sundays and talk about fantasy football the whole time."
+  },
+  {
+   "trigger": "general",
+   "text": "Church with Steve is great. We strategize during the sermon. Do not tell the pastor."
+  }
+ ],
+ "Vance Sipma": [
+  {
+   "trigger": "overpay",
+   "text": "That's a lot. Pat McAfee wouldn't approve."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Wow. That's steep. Even for this league."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I heard on a podcast that player is overvalued. Just saying."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's aggressive. I'd know — I got baited into something similar last year."
+  },
+  {
+   "trigger": "overpay",
+   "text": "McAfee said this morning that guy is a tier below that price."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I was listening to a pod on the tractor about this. That's too much."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I almost bid on that. Glad I didn't. Way over."
+  },
+  {
+   "trigger": "overpay",
+   "text": "That's more than I'd pay. And I'm the guy who overpays for his targets."
+  },
+  {
+   "trigger": "overpay",
+   "text": "Even a stubborn farmer knows when to let the crop go."
+  },
+  {
+   "trigger": "overpay",
+   "text": "I've been baited before. I recognize bait when I see it. That was bait."
+  },
+  {
+   "trigger": "steal",
+   "text": "Good price! I heard he's being slept on this year."
+  },
+  {
+   "trigger": "steal",
+   "text": "Nice. McAfee was high on that guy too."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's value. Wish I'd been paying closer attention."
+  },
+  {
+   "trigger": "steal",
+   "text": "I was going to bid but I hesitated. Well played."
+  },
+  {
+   "trigger": "steal",
+   "text": "My podcast said he's a sleeper. Guess he's YOUR sleeper now."
+  },
+  {
+   "trigger": "steal",
+   "text": "That's the kind of deal you hear about on the pods. Nicely done."
+  },
+  {
+   "trigger": "steal",
+   "text": "Respect. That's under market by at least $5."
+  },
+  {
+   "trigger": "steal",
+   "text": "If I wasn't saving budget for my QB, I'd have jumped on that."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "A kicker for over a dollar. This league, man."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "I'm not surprised anymore. But I am disappointed."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "On the tractor, kickers are free. In this league, nothing is."
+  },
+  {
+   "trigger": "kicker_over_1",
+   "text": "Even farmers don't overpay for their seeds like that."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "Over $1 for a D? That's wild."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "A defense for money. Actual money. While I'm sitting here saving for a QB."
+  },
+  {
+   "trigger": "def_over_1",
+   "text": "Pat McAfee would roast this entire league for that."
+  },
+  {
+   "trigger": "stack",
+   "text": "I love a running QB stack. That's my move."
+  },
+  {
+   "trigger": "stack",
+   "text": "Stacking is elite when you've got the right QB."
+  },
+  {
+   "trigger": "stack",
+   "text": "Give me a running QB and his WR1 and I'm a happy farmer."
+  },
+  {
+   "trigger": "stack",
+   "text": "Stacking with a mobile QB? Chef's kiss. McAfee agrees."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "FINALLY. I've been waiting all draft for that guy."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's my QB. Running QBs are the way."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Got my guy. Worth every dollar."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Three years of Josh Allen taught me to commit. I'm committing."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "That's a runner. That's what I want. Dual-threat or bust."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "The farmer gets his crop. Let's grow a championship."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "I've been thinking about this pick since I was on the tractor at 6am."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "I might've overpaid but I don't care. That's MY GUY."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Pat McAfee said this guy is elite. I trust Pat."
+  },
+  {
+   "trigger": "self_pick",
+   "text": "Alan Jackson never backed down from what he wanted. Neither will I."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Trey, if you send me a trade offer for him I'm ignoring it."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Trey, don't even think about a 3-for-1 for that guy."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Trey, I swear if I get a trade notification tomorrow..."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Trey, your 3 bench guys for my stud is NOT a fair trade. Stop."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "Trey, the answer is no. It's always no. Stop asking."
+  },
+  {
+   "trigger": "rival_pick",
+   "text": "If Trey messages me about a trade within 24 hours I'm blocking him."
+  },
+  {
+   "trigger": "general",
+   "text": "Sorry I'm late. Harvest doesn't stop for fantasy football."
+  },
+  {
+   "trigger": "general",
+   "text": "Pat McAfee said this is a breakout year for running QBs."
+  },
+  {
+   "trigger": "general",
+   "text": "I've been listening to pods all week on the tractor. I'm ready."
+  },
+  {
+   "trigger": "general",
+   "text": "Anyone got a Miller Lite? I'm parched from the drive."
+  },
+  {
+   "trigger": "general",
+   "text": "Trey, if you send me ONE more lopsided trade this year..."
+  },
+  {
+   "trigger": "general",
+   "text": "I'm still salty about the Justin Fields situation. For the record."
+  },
+  {
+   "trigger": "general",
+   "text": "The almond harvest waits for no one but I'm HERE, boys."
+  },
+  {
+   "trigger": "general",
+   "text": "James's Wi-Fi crashed and I lost Justin Fields for $1. I'll NEVER forget that."
+  },
+  {
+   "trigger": "general",
+   "text": "That Fields situation was highway robbery. A show of hands is NOT democracy."
+  },
+  {
+   "trigger": "general",
+   "text": "I'm the bachelor of this group and it means I have MORE time for fantasy research."
+  },
+  {
+   "trigger": "general",
+   "text": "No wife, no kids, no distractions. Just me, my tractor, and podcasts."
+  },
+  {
+   "trigger": "general",
+   "text": "The Silverado got me here in one piece. Almost didn't leave the orchard."
+  },
+  {
+   "trigger": "general",
+   "text": "My mustache is looking good tonight. Draft night energy."
+  },
+  {
+   "trigger": "general",
+   "text": "I'm going for the modern Alan Jackson look. Thoughts?"
+  },
+  {
+   "trigger": "general",
+   "text": "The mullet is growing in nicely. Championship mullet incoming."
+  },
+  {
+   "trigger": "general",
+   "text": "Cooking myself a steak after this. Bachelor life has its perks."
+  },
+  {
+   "trigger": "general",
+   "text": "Eric, good cajón work this morning at church. We sounded great."
+  },
+  {
+   "trigger": "general",
+   "text": "Great service this morning, fellas. Now let's draft."
+  },
+  {
+   "trigger": "general",
+   "text": "I heard about this guy on McAfee's show. Anyone else listen?"
+  },
+  {
+   "trigger": "general",
+   "text": "James, good to see you. Haven't talked since Sunday after church."
+  },
+  {
+   "trigger": "general",
+   "text": "The almond shaker doesn't shake itself. That's why I'm late."
+  },
+  {
+   "trigger": "general",
+   "text": "Miller Lite tastes better after a 12-hour day on the tractor."
+  },
+  {
+   "trigger": "general",
+   "text": "I fashioned this 'stache after Alan Jackson. It's a lifestyle."
+  },
+  {
+   "trigger": "general",
+   "text": "Pat McAfee had a great segment today about this exact player."
+  },
+  {
+   "trigger": "general",
+   "text": "Being single means all my disposable income goes to fantasy football."
+  },
+  {
+   "trigger": "general",
+   "text": "I played cajón this morning for Eric. Now I'm drafting. Full day."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Alright I'm getting a little loose. Beer's hitting."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Who's left that can run? I need speed."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Late night after early harvest. I'm fading but still in it."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Miller Lite count is getting high. Decision-making is getting loose."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I was up at 5am on the shaker. I'm running on fumes and beer."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Getting reckless. The tailgate Vance is coming out."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Remember the 49ers tailgate? That energy is building again."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I might've had one too many. But my gut says this pick is good."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Farmer's hours mean I'm exhausted by 9pm. But I'm still here."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "The mullet is getting more powerful with each Miller Lite."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Here's a name. Do your worst."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Nominating this guy because someone's going to overpay."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "I heard about this player on a podcast. Let's see what the room thinks."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "McAfee mentioned this guy. Let's see who else was listening."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Throwing this out there to see if anyone else listens to pods."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Fine. But that was my guy and everyone knew it."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I'm not going higher. Farmer's budget."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Take him. But know that I'm remembering this."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I got stubborn but not THAT stubborn. He's yours."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I got baited. I know I got baited. It still hurts."
+  },
+  {
+   "trigger": "outbid",
+   "text": "The tractor money only goes so far. I'm out."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I'll find a running QB elsewhere. There's always one that falls."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Almond money ain't what it used to be. Can't chase."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I farm almonds for a living. You think trash talk phases me?"
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "The bachelor has nothing to lose and everything to prove."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "My mustache has more championship energy than your whole roster."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I'll be on the tractor tomorrow not thinking about you at all."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Pat McAfee believes in me. That's all I need."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "Talk to me when you've survived almond harvest AND a fantasy season."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "The Alan Jackson lifestyle doesn't include caring about your opinion."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I'll remember this when Trey sends you a bad trade and you come crying to me."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "My Silverado has more horsepower than your whole roster."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "You done? Cool. I've got almonds to shake and championships to win."
+  },
+  {
+   "trigger": "general",
+   "text": "I lean slightly 49ers but honestly I just want whoever can run. Give me a mobile QB and I am happy."
+  },
+  {
+   "trigger": "general",
+   "text": "I will draft a Niner if the value is right. But really I just want a QB with legs."
+  },
+  {
+   "trigger": "general",
+   "text": "Slight Niners bias. But if a running QB is on another team? I am going there first."
+  },
+  {
+   "trigger": "general",
+   "text": "Sorry I am late. Working late on the farm AND harvest season. Double whammy tonight."
+  },
+  {
+   "trigger": "general",
+   "text": "Harvest runs late. The workday runs later. I am here now. Let us go."
+  },
+  {
+   "trigger": "general",
+   "text": "Between the orchard and the actual day job, I am lucky I am here before the draft ends."
+  },
+  {
+   "trigger": "general",
+   "text": "The almonds do not pick themselves and the paperwork does not file itself. That is why I am late."
+  }
+ ],
+ "shared_replies": [
+  {
+   "trigger": "reply_to_compliment",
+   "text": "Thanks man, appreciate that."
+  },
+  {
+   "trigger": "reply_to_compliment",
+   "text": "Glad someone noticed. Good eye."
+  },
+  {
+   "trigger": "reply_to_compliment",
+   "text": "That's what I was going for. Respect."
+  },
+  {
+   "trigger": "reply_to_compliment",
+   "text": "See? This is why we're friends."
+  },
+  {
+   "trigger": "reply_to_compliment",
+   "text": "Finally some recognition around here."
+  },
+  {
+   "trigger": "reply_to_compliment",
+   "text": "I've been doing my homework. Nice to be appreciated."
+  },
+  {
+   "trigger": "reply_to_compliment",
+   "text": "I'll take it. Not used to compliments in this league."
+  },
+  {
+   "trigger": "reply_to_compliment",
+   "text": "It's about time someone said something nice."
+  },
+  {
+   "trigger": "reply_to_compliment",
+   "text": "Thank you. I accept your praise."
+  },
+  {
+   "trigger": "reply_to_compliment",
+   "text": "See, not everything I do is wrong. Remember this moment."
+  },
+  {
+   "trigger": "reply_to_criticism",
+   "text": "We'll see in December who was right."
+  },
+  {
+   "trigger": "reply_to_criticism",
+   "text": "That's cute. Really. Write it down so I can show you in week 14."
+  },
+  {
+   "trigger": "reply_to_criticism",
+   "text": "Talk is cheap. Wins aren't."
+  },
+  {
+   "trigger": "reply_to_criticism",
+   "text": "Scoreboard at the end of the year. That's all that matters."
+  },
+  {
+   "trigger": "reply_to_criticism",
+   "text": "Noted. Moving on."
+  },
+  {
+   "trigger": "reply_to_criticism",
+   "text": "You done? Cool. Back to my draft."
+  },
+  {
+   "trigger": "reply_to_criticism",
+   "text": "That's a lot of words from someone who's never won a championship."
+  },
+  {
+   "trigger": "reply_to_criticism",
+   "text": "Save it for the group chat."
+  },
+  {
+   "trigger": "reply_to_criticism",
+   "text": "I appreciate the input. I'm going to ignore it."
+  },
+  {
+   "trigger": "reply_to_criticism",
+   "text": "Your opinion has been noted and filed under 'don't care.'"
+  },
+  {
+   "trigger": "reply_to_criticism",
+   "text": "Bold talk from the guy who drafted [bad player] last year."
+  },
+  {
+   "trigger": "reply_to_criticism",
+   "text": "And what's YOUR plan? Exactly. Thought so."
+  },
+  {
+   "trigger": "reply_to_criticism",
+   "text": "I'd rather be wrong my way than right your way."
+  },
+  {
+   "trigger": "reply_to_criticism",
+   "text": "That's the beauty of this league. Everyone's got an opinion. Most are wrong."
+  },
+  {
+   "trigger": "reply_to_criticism",
+   "text": "Remind me of this moment in the playoffs."
+  },
+  {
+   "trigger": "reply_generic",
+   "text": "Fair enough."
+  },
+  {
+   "trigger": "reply_generic",
+   "text": "Lol. Alright then."
+  },
+  {
+   "trigger": "reply_generic",
+   "text": "I mean... you're not wrong. But still."
+  },
+  {
+   "trigger": "reply_generic",
+   "text": "Haha. Yeah yeah. Whatever."
+  },
+  {
+   "trigger": "reply_generic",
+   "text": "Okay, moving on."
+  },
+  {
+   "trigger": "reply_generic",
+   "text": "Sure, bud. Sure."
+  },
+  {
+   "trigger": "reply_generic",
+   "text": "Point taken. Now back to the draft."
+  },
+  {
+   "trigger": "reply_generic",
+   "text": "Can we get back to football please?"
+  },
+  {
+   "trigger": "reply_generic",
+   "text": "This league, man. Never a dull moment."
+  },
+  {
+   "trigger": "reply_generic",
+   "text": "That's a take. I disagree but that's a take."
+  },
+  {
+   "trigger": "reply_generic",
+   "text": "I've heard worse. That's actually a compliment."
+  },
+  {
+   "trigger": "reply_generic",
+   "text": "LOL. Focus. We're drafting here."
+  },
+  {
+   "trigger": "reply_generic",
+   "text": "Can confirm."
+  },
+  {
+   "trigger": "reply_generic",
+   "text": "Agree to disagree. Next pick please."
+  },
+  {
+   "trigger": "reply_generic",
+   "text": "You're not wrong but you're not right either."
+  },
+  {
+   "trigger": "reply_to_own_pick_mentioned",
+   "text": "Yeah I'm happy with it. Next."
+  },
+  {
+   "trigger": "reply_to_own_pick_mentioned",
+   "text": "I did my research. I'm confident."
+  },
+  {
+   "trigger": "reply_to_own_pick_mentioned",
+   "text": "You can hate it now but you'll be jealous by midseason."
+  },
+  {
+   "trigger": "reply_to_own_pick_mentioned",
+   "text": "I know what I'm doing. Trust the process."
+  },
+  {
+   "trigger": "reply_to_own_pick_mentioned",
+   "text": "That pick is going to look a lot better in November."
+  },
+  {
+   "trigger": "reply_to_own_pick_mentioned",
+   "text": "I'll take the heat now if it means a trophy later."
+  },
+  {
+   "trigger": "reply_to_own_pick_mentioned",
+   "text": "He fits my team perfectly. I don't care about ADP."
+  },
+  {
+   "trigger": "reply_to_own_pick_mentioned",
+   "text": "My team. My budget. My decision."
+  },
+  {
+   "trigger": "reply_to_own_pick_mentioned",
+   "text": "Good players cost money. I'm fine with what I paid."
+  },
+  {
+   "trigger": "reply_to_own_pick_mentioned",
+   "text": "That's a league winner and everyone will admit it by week 10."
+  },
+  {
+   "trigger": "reply_to_trash_talk",
+   "text": "Keep that same energy when we play each other."
+  },
+  {
+   "trigger": "reply_to_trash_talk",
+   "text": "I'm screenshotting this for when you lose."
+  },
+  {
+   "trigger": "reply_to_trash_talk",
+   "text": "You love to talk. Let's see if your roster backs it up."
+  },
+  {
+   "trigger": "reply_to_trash_talk",
+   "text": "That's rich coming from you."
+  },
+  {
+   "trigger": "reply_to_trash_talk",
+   "text": "Draft night confidence is dangerous. See you week 1."
+  },
+  {
+   "trigger": "reply_to_trash_talk",
+   "text": "Save some of that energy for the regular season."
+  },
+  {
+   "trigger": "reply_to_trash_talk",
+   "text": "I'm marking this conversation for December receipts."
+  },
+  {
+   "trigger": "reply_to_trash_talk",
+   "text": "I love it. This is what draft night is about."
+  },
+  {
+   "trigger": "reply_to_trash_talk",
+   "text": "Keep going. This fuels me."
+  },
+  {
+   "trigger": "reply_to_trash_talk",
+   "text": "Banter all you want. Won't change the standings."
+  },
+  {
+   "trigger": "draft_hype",
+   "text": "LET'S GO! Draft night baby!"
+  },
+  {
+   "trigger": "draft_hype",
+   "text": "Best night of the year. No debate."
+  },
+  {
+   "trigger": "draft_hype",
+   "text": "This is what we wait all offseason for."
+  },
+  {
+   "trigger": "draft_hype",
+   "text": "The vibes in this room are immaculate right now."
+  },
+  {
+   "trigger": "draft_hype",
+   "text": "I love this league. I love this night. Let's ball."
+  },
+  {
+   "trigger": "draft_hype",
+   "text": "Another year, another chance at glory. Let's draft!"
+  },
+  {
+   "trigger": "draft_hype",
+   "text": "Football is BACK. Well, almost. But the drafting is back!"
+  },
+  {
+   "trigger": "draft_hype",
+   "text": "This is better than Christmas morning. Fight me."
+  },
+  {
+   "trigger": "draft_hype",
+   "text": "Pool, pizza, beer, and an auction draft. Peak existence."
+  },
+  {
+   "trigger": "draft_hype",
+   "text": "James's house, cold beers, hot takes. Wouldn't trade it for anything."
+  },
+  {
+   "trigger": "lull_filler",
+   "text": "Who's grabbing more pizza?"
+  },
+  {
+   "trigger": "lull_filler",
+   "text": "How many picks left? I'm losing track."
+  },
+  {
+   "trigger": "lull_filler",
+   "text": "Anyone else's phone dying?"
+  },
+  {
+   "trigger": "lull_filler",
+   "text": "Pass a beer this way."
+  },
+  {
+   "trigger": "lull_filler",
+   "text": "What time is it? Feels late."
+  },
+  {
+   "trigger": "lull_filler",
+   "text": "This is the longest draft stretch without drama. Weird."
+  },
+  {
+   "trigger": "lull_filler",
+   "text": "Anyone check the score of the preseason game?"
+  },
+  {
+   "trigger": "lull_filler",
+   "text": "How many more nominations until we're done?"
+  },
+  {
+   "trigger": "lull_filler",
+   "text": "I'm getting hungry again. Where's the leftover pizza?"
+  },
+  {
+   "trigger": "lull_filler",
+   "text": "Next person to nominate better make it interesting."
+  },
+  {
+   "trigger": "league_lore",
+   "text": "Remember that one trade from 3 years ago? Classic."
+  },
+  {
+   "trigger": "league_lore",
+   "text": "This reminds me of that one draft where things got heated."
+  },
+  {
+   "trigger": "league_lore",
+   "text": "We've been doing this for years and it never gets old."
+  },
+  {
+   "trigger": "league_lore",
+   "text": "League history in the making right here."
+  },
+  {
+   "trigger": "league_lore",
+   "text": "Future HANDOFF.md material happening live."
+  },
+  {
+   "trigger": "league_lore",
+   "text": "This is going to be talked about for years."
+  },
+  {
+   "trigger": "league_lore",
+   "text": "One day we'll tell our kids about this draft. Probably."
+  },
+  {
+   "trigger": "league_lore",
+   "text": "That pick is going to end up in the Commissioner's Report."
+  },
+  {
+   "trigger": "league_lore",
+   "text": "Adding that to the league lore book."
+  },
+  {
+   "trigger": "league_lore",
+   "text": "Draft night stories are forever. This one's going in the vault."
+  },
+  {
+   "trigger": "food_and_drink",
+   "text": "The Dominos should be here soon. I ordered extra."
+  },
+  {
+   "trigger": "food_and_drink",
+   "text": "Who ordered the weird pizza topping? Was that you, Matt?"
+  },
+  {
+   "trigger": "food_and_drink",
+   "text": "I need another slice before the next round."
+  },
+  {
+   "trigger": "food_and_drink",
+   "text": "Pizza count check: how many boxes are left?"
+  },
+  {
+   "trigger": "food_and_drink",
+   "text": "This beer is hitting different on draft night."
+  },
+  {
+   "trigger": "food_and_drink",
+   "text": "BYOB was the best rule this league ever made."
+  },
+  {
+   "trigger": "food_and_drink",
+   "text": "Someone pass the snacks down this way."
+  },
+  {
+   "trigger": "food_and_drink",
+   "text": "James, thanks for hosting. Pool was perfect earlier."
+  },
+  {
+   "trigger": "food_and_drink",
+   "text": "Cheers to another year, boys. *raises beer*"
+  },
+  {
+   "trigger": "food_and_drink",
+   "text": "8 pizzas for 12 guys was apparently not enough. Again."
+  }
+ ]
+};
+
+// ── MOCK DRAFT CHAT ENGINE ───────────────────────────────────────────────────
+// Deterministic chat feed using canned messages. No AI/LLM at runtime.
+// vibeKey frequency: loud managers react ~60% of triggers, quiet ~20%, social/snarky ~40%
+const VIBE_FREQUENCY = { loud: 0.45, quiet: 0.30, snarky: 0.38, social: 0.38, any: 0.35 };
+
+// Beer template system — {beer} placeholder gets filled per manager
+const MANAGER_BEERS = {
+  "Aaron Fay": "805 Cerveza",
+  "Eric Graef": "Sierra Nevada",
+  "Greg Cady": "Colorado craft",
+  "Greg Mulder": "Modelo",
+  "James Lazette": "whatever's closest",
+  "Joshua Van Groningen": "someone else's beer",
+  "Matthew Van Groningen": "homemade closet beer",
+  "Ross Van Groningen": "Pliny the Elder",
+  "Steve Vander Molen": "hazy IPA",
+  "Trey Hugen": "Busch Latte",
+  "Tyler Goslinga": "Cask & Barrel hazy",
+  "Vance Sipma": "Miller Lite",
+};
+const BEER_TEMPLATES = [
+  "Beer me... I need a {beer}.",
+  "Cracking open {beer} number {n}. We're rolling now.",
+  "That pick calls for another {beer}.",
+  "Alright, {beer} time. Who else needs one?",
+  "Sip of {beer}. Back to business.",
+  "{beer} number {n} going down smooth.",
+  "I need a {beer} after watching that bid war.",
+  "Cheers. *raises {beer}*",
+  "Another {beer}. Draft night is the best night.",
+  "Hold on, grabbing {beer} number {n} real quick.",
+  "This {beer} is hitting different tonight.",
+  "You know what pairs well with a bad pick? A {beer}.",
+];
+const VIBE_MAP = {
+  "Aaron Fay": "loud", "Joshua Van Groningen": "loud", "Greg Cady": "loud",
+  "Tyler Goslinga": "quiet", // quiet and focused until broke, then becomes color commentator
+  "Eric Graef": "quiet", "Greg Mulder": "quiet", "Matthew Van Groningen": "quiet",
+  "Steve Vander Molen": "snarky", "Trey Hugen": "snarky",
+  "James Lazette": "social", "Vance Sipma": "social",
+  "Ross Van Groningen": "any"
+};
+// Rivalries: who reacts to whose picks with rival_pick messages
+const RIVALRIES = {
+  "Aaron Fay": ["James Lazette"],
+  "James Lazette": ["Aaron Fay"],
+  "Eric Graef": ["Greg Cady"],
+  "Greg Cady": ["Eric Graef"],
+  "Steve Vander Molen": ["Ross Van Groningen"],
+  "Tyler Goslinga": ["Matthew Van Groningen"],
+  "Joshua Van Groningen": ["Matthew Van Groningen"],
+  "Matthew Van Groningen": ["Trey Hugen", "Tyler Goslinga", "Joshua Van Groningen"],
+  "Vance Sipma": ["Trey Hugen"],
+  "Trey Hugen": ["Greg Cady", "James Lazette", "Vance Sipma"],
+  "Greg Mulder": ["Ross Van Groningen", "Eric Graef"],
+  "Ross Van Groningen": ["*"], // low chance with anyone — handled specially in code
+};
+
+// Detect what triggers fired for a completed pick
+function detectChatTriggers(player, price, winner, nominator, allRosters, allBudgets, totalRoster) {
+  const triggers = [];
+  const adpValue = player.value || 1;
+
+  // Overpay: paid above ADP AND within 10% of winner's max possible bid
+  const winnerSlots = totalRoster - (allRosters[winner] || []).length;
+  const winnerMaxBid = (allBudgets[winner] || 0) + price - (winnerSlots - 1);
+  if (price > adpValue && price >= winnerMaxBid * 0.9) {
+    triggers.push("overpay");
+  }
+
+  // Steal: paid < 80% of ADP value
+  if (price < adpValue * 0.8 && adpValue > 3) {
+    triggers.push("steal");
+  }
+
+  // Kicker over $1
+  if (player.pos === "K" && price > 1) triggers.push("kicker_over_1");
+
+  // Defense over $1
+  if (player.pos === "DEF" && price > 1) triggers.push("def_over_1");
+
+  // Stack detection: winner now has QB+WR or QB+TE from same team
+  const winnerRoster = allRosters[winner] || [];
+  const hasQB = winnerRoster.some(p => p.pos === "QB" && p.team === player.team);
+  const hasWRTE = winnerRoster.some(p => (p.pos === "WR" || p.pos === "TE") && p.team === player.team);
+  if ((player.pos === "QB" && hasWRTE) || ((player.pos === "WR" || player.pos === "TE") && hasQB)) {
+    triggers.push("stack");
+  }
+
+  // Nomination bait: nominator didn't win (they threw bait)
+  if (nominator !== winner) triggers.push("nomination_bait");
+
+  // Late draft: average roster fill > 70%
+  const avgFill = Object.values(allRosters).reduce((s, r) => s + r.length, 0) / (Object.keys(allRosters).length * totalRoster);
+  if (avgFill > 0.7) triggers.push("late_draft");
+
+  return triggers;
+}
+
+// ── EMOJI REACTIONS ──
+// Bots randomly react to chat messages with context-appropriate emojis (like Sleeper/Discord)
+const REACTION_EMOJIS = {
+  overpay: ["💀", "😬", "🫠", "📈", "🤯", "💸", "🪦"],
+  steal: ["🔥", "👀", "😮", "🤫", "💰", "🏃", "👏"],
+  kicker_over_1: ["💀", "🤡", "😂", "🫡", "❓"],
+  def_over_1: ["💀", "🤡", "😂", "🤔", "❓"],
+  stack: ["🧠", "📚", "🎯", "🤝", "💪"],
+  self_pick: ["👏", "💪", "🙏", "🎯", "🔥", "✊"],
+  rival_pick: ["😂", "💀", "👀", "🍿", "☠️"],
+  general: ["😂", "💀", "🔥", "👀", "👏", "🤣", "💯"],
+  reply_to_mention: ["😂", "💀", "🍿", "👀", "🤣"],
+  nomination_bait: ["🎣", "👀", "🤔", "🫣"],
+  outbid: ["😤", "✌️", "🫡", "👋"],
+  late_draft: ["⏰", "🏁", "👀", "💤"],
+};
+// Personality-driven reaction frequency: loud managers react with emojis often, quiet ones rarely
+const REACTION_FREQUENCY = { loud: 0.55, quiet: 0.2, snarky: 0.4, social: 0.5, any: 0.35 };
+
+// Add emoji reactions to chat messages from managers who didn't write a text message this pick
+function addEmojiReactions(messages, managers, userTeam, spokenManagers) {
+  if (messages.length === 0) return messages;
+  // Only react to non-system messages
+  const reactable = messages.filter(m => m.trigger !== "system");
+  if (reactable.length === 0) return messages;
+
+  // ── SPICINESS SCORING ──
+  // Score each message by how likely it is to draw reactions (funnier = more reactions)
+  const TRIGGER_WEIGHT = { overpay: 3, steal: 2.5, kicker_over_1: 4, def_over_1: 3, rival_pick: 3.5, stack: 2, self_pick: 1.5, reply_to_mention: 2.5, nomination_bait: 1.5, outbid: 1, general: 1, late_draft: 1 };
+  const SPICY_PATTERNS = [/lmao|lol|dead|💀|bruh|clown|dumpster|fire sale|league winner|taco/i, /\b[A-Z]{4,}\b/, /\?{2,}|!{2,}/, /worst|embarrass|yikes|oof|rip|cooked|washed/i];
+  const SNARKY_MANAGERS = new Set(["Steve Vander Molen", "Trey Hugen"]);
+
+  function spiceScore(msg) {
+    let score = TRIGGER_WEIGHT[msg.trigger] || 1;
+    // Hot takes are the funniest messages — massive boost so they always get the most reactions
+    if (msg.isHotTake) score *= 5;
+    // Snarky managers' messages are inherently funnier
+    if (SNARKY_MANAGERS.has(msg.manager)) score *= 1.5;
+    // Pattern bonuses for funny content
+    SPICY_PATTERNS.forEach(pat => { if (pat.test(msg.text || "")) score *= 1.4; });
+    // Replies/burns are funnier (they have context)
+    if (msg.replyTo) score *= 1.6;
+    // Longer messages with personality tend to be funnier than one-liners (sweet spot 40-100 chars)
+    const len = (msg.text || "").length;
+    if (len >= 40 && len <= 100) score *= 1.2;
+    return score;
+  }
+
+  // Build weighted pool based on spice scores
+  const scored = reactable.map(m => ({ msg: m, score: spiceScore(m) }));
+  const totalScore = scored.reduce((s, x) => s + x.score, 0);
+
+  // Managers who haven't spoken can react
+  const silentManagers = managers.filter(m => m !== userTeam && !spokenManagers.has(m));
+  // Each silent manager has a chance to react to ONE message with ONE emoji
+  for (const m of silentManagers) {
+    const vibe = VIBE_MAP[m] || "any";
+    const freq = REACTION_FREQUENCY[vibe] || 0.3;
+    if (Math.random() > freq) continue;
+    // Weighted random pick — spicier messages get way more reactions
+    let r = Math.random() * totalScore;
+    let targetMsg = scored[0].msg;
+    for (const item of scored) {
+      r -= item.score;
+      if (r <= 0) { targetMsg = item.msg; break; }
+    }
+    // Pick emoji based on trigger
+    const emojiPool = REACTION_EMOJIS[targetMsg.trigger] || REACTION_EMOJIS.general;
+    const emoji = emojiPool[Math.floor(Math.random() * emojiPool.length)];
+    // Add reaction to the message
+    if (!targetMsg.reactions) targetMsg.reactions = [];
+    // Don't duplicate same emoji from same manager
+    if (!targetMsg.reactions.some(rx => rx.manager === m && rx.emoji === emoji)) {
+      targetMsg.reactions.push({ manager: m, emoji });
+    }
+  }
+  // ── GUARANTEE 9+ reactions on hot takes ──
+  // Hot takes are the funniest messages — ensure they always dominate the "Hottest Chats" section
+  const hotTakes = messages.filter(m => m.isHotTake);
+  for (const ht of hotTakes) {
+    if (!ht.reactions) ht.reactions = [];
+    const allManagers = managers.filter(m => m !== userTeam && m !== ht.manager);
+    while (ht.reactions.length < 9) {
+      const reactor = allManagers[Math.floor(Math.random() * allManagers.length)];
+      const emojiPool = REACTION_EMOJIS[ht.trigger] || REACTION_EMOJIS.general;
+      const emoji = emojiPool[Math.floor(Math.random() * emojiPool.length)];
+      if (!ht.reactions.some(rx => rx.manager === reactor && rx.emoji === emoji)) {
+        ht.reactions.push({ manager: reactor, emoji });
+      } else {
+        // Try a different emoji to avoid infinite loop
+        const altEmoji = emojiPool[Math.floor(Math.random() * emojiPool.length)];
+        if (!ht.reactions.some(rx => rx.manager === reactor && rx.emoji === altEmoji)) {
+          ht.reactions.push({ manager: reactor, emoji: altEmoji });
+        }
+      }
+    }
+  }
+  return messages;
+}
+
+// Generate chat messages for a completed pick
+function generateChatMessages(player, price, winner, nominator, allRosters, allBudgets, totalRoster, usedMessages, managers, userTeam) {
+  const triggers = detectChatTriggers(player, price, winner, nominator, allRosters, allBudgets, totalRoster);
+  const messages = [];
+  const spokenThisPick = new Set(); // Each manager can only speak ONCE per pick (except replies)
+
+  // Helper: pick a random unused message for a manager + trigger
+  function pickMessage(manager, trigger) {
+    if (spokenThisPick.has(manager)) return null;
+    const pool = (CANNED_MESSAGES[manager] || []).filter(m => m.trigger === trigger && !usedMessages.has(manager + "|" + m.text));
+    if (pool.length === 0) return null;
+    const msg = pool[Math.floor(Math.random() * pool.length)];
+    usedMessages.add(manager + "|" + msg.text);
+    spokenThisPick.add(manager);
+    return { manager, text: msg.text, trigger, id: Date.now() + Math.random(), replyTo: null };
+  }
+
+  // Helper: pick a shared reply (any manager can say these)
+  function pickSharedReply(manager, sharedTrigger, replyToMsg) {
+    const pool = (CANNED_MESSAGES["shared_replies"] || []).filter(m => m.trigger === sharedTrigger && !usedMessages.has("shared|" + m.text));
+    if (pool.length === 0) return null;
+    const msg = pool[Math.floor(Math.random() * pool.length)];
+    usedMessages.add("shared|" + msg.text);
+    return { manager, text: msg.text, trigger: sharedTrigger, id: Date.now() + Math.random(), replyTo: replyToMsg ? { manager: replyToMsg.manager, text: replyToMsg.text } : null };
+  }
+
+  // Winner always gets a self_pick message
+  if (winner !== userTeam) {
+    const selfMsg = pickMessage(winner, "self_pick");
+    if (selfMsg) messages.push(selfMsg);
+  }
+
+  // Check each trigger and pick reactors
+  for (const trigger of triggers) {
+    const reactors = managers.filter(m => m !== winner && m !== userTeam);
+    for (const m of reactors) {
+      const vibe = VIBE_MAP[m] || "any";
+      let freq = VIBE_FREQUENCY[vibe] || 0.3;
+      // Tyler becomes a color commentator when broke (budget < $30)
+      if (m === "Tyler Goslinga" && (allBudgets[m] || 0) < 30) freq = 0.45;
+      if (Math.random() > freq) continue;
+
+      if (trigger === "nomination_bait" || trigger === "late_draft") {
+        if (Math.random() > 0.25) continue;
+      }
+
+      // Rival pick
+      const rivals = RIVALRIES[m] || [];
+      const isRival = rivals.includes(winner) || (rivals.includes("*") && Math.random() < 0.10);
+      if (isRival) {
+        const rivalMsg = pickMessage(m, "rival_pick");
+        if (rivalMsg) { messages.push(rivalMsg); continue; }
+      }
+
+      const msg = pickMessage(m, trigger);
+      if (msg) messages.push(msg);
+    }
+    if (messages.length >= 4) break;
+  }
+
+  // Outbid messages
+  if (triggers.length > 0) {
+    const losers = managers.filter(m => m !== winner && m !== userTeam);
+    const outbidCandidates = losers.sort(() => Math.random() - 0.5).slice(0, 2);
+    for (const m of outbidCandidates) {
+      if (Math.random() > 0.3) continue;
+      const msg = pickMessage(m, "outbid");
+      if (msg) messages.push(msg);
+    }
+  }
+
+  // General chatter (15% chance)
+  if (Math.random() < 0.15) {
+    const chatterers = managers.filter(m => m !== userTeam).sort(() => Math.random() - 0.5);
+    for (const m of chatterers.slice(0, 1)) {
+      const vibe = VIBE_MAP[m] || "any";
+      if (Math.random() < (VIBE_FREQUENCY[vibe] || 0.3)) {
+        const msg = pickMessage(m, "general");
+        if (msg) messages.push(msg);
+      }
+    }
+  }
+
+  // ── THREADED REPLIES + PILE-ONS ──
+
+  // Reply to mention: if a message names another manager or is a rival_pick, they can clap back
+  // Build name lookup that handles Greg M / Greg C disambiguation
+  const nameToManager = {};
+  managers.forEach(m => {
+    const first = m.split(" ")[0];
+    // Add full first name (but skip "Greg" since it's ambiguous)
+    if (first !== "Greg") nameToManager[first] = m;
+    // For Gregs, use "Greg C" and "Greg M" patterns, plus check last names
+    const last = m.split(" ").slice(-1)[0];
+    nameToManager[last] = m; // last name match (Lazette, Hugen, etc.)
+  });
+  // Also match common short references
+  nameToManager["Matt"] = "Matthew Van Groningen";
+  nameToManager["Josh"] = "Joshua Van Groningen";
+  nameToManager["Greg C"] = "Greg Cady";
+  nameToManager["Greg M"] = "Greg Mulder";
+
+  const baseMessages = [...messages];
+  for (const msg of baseMessages) {
+    if (!msg.text) continue;
+
+    // For rival_pick messages, the rival is always the winner — auto-thread to winner
+    if (msg.trigger === "rival_pick" && winner !== userTeam && winner !== msg.manager) {
+      if (Math.random() < 0.6) {
+        const replyPool = (CANNED_MESSAGES[winner] || []).filter(m => m.trigger === "reply_to_mention" && !usedMessages.has(winner + "|" + m.text));
+        if (replyPool.length > 0) {
+          const reply = replyPool[Math.floor(Math.random() * replyPool.length)];
+          usedMessages.add(winner + "|" + reply.text);
+          messages.push({ manager: winner, text: reply.text, trigger: "reply_to_mention", id: Date.now() + Math.random(), replyTo: { manager: msg.manager, text: msg.text } });
+        }
+      }
+      continue;
+    }
+
+    // Check for name mentions in message text
+    for (const [nameRef, fullName] of Object.entries(nameToManager)) {
+      if (fullName === msg.manager || fullName === userTeam) continue;
+      if (msg.text.includes(nameRef)) {
+        if (Math.random() < 0.6) {
+          const replyPool = (CANNED_MESSAGES[fullName] || []).filter(m => m.trigger === "reply_to_mention" && !usedMessages.has(fullName + "|" + m.text));
+          if (replyPool.length > 0) {
+            const reply = replyPool[Math.floor(Math.random() * replyPool.length)];
+            usedMessages.add(fullName + "|" + reply.text);
+            messages.push({ manager: fullName, text: reply.text, trigger: "reply_to_mention", id: Date.now() + Math.random(), replyTo: { manager: msg.manager, text: msg.text } });
+          }
+        }
+        // Pile-on: another random manager jumps in (30% chance)
+        if (Math.random() < 0.3) {
+          const pileOnCandidates = managers.filter(m => m !== msg.manager && m !== fullName && m !== userTeam && !spokenThisPick.has(m));
+          if (pileOnCandidates.length > 0) {
+            const piler = pileOnCandidates[Math.floor(Math.random() * pileOnCandidates.length)];
+            const sharedReply = pickSharedReply(piler, "reply_generic", msg);
+            if (sharedReply) messages.push(sharedReply);
+          }
+        }
+        break;
+      }
+    }
+  }
+
+  // Reply-to-reply: if a reply_to_mention fired, give the original attacker a chance for the last word (35%)
+  const replyMsgs = messages.filter(m => m.trigger === "reply_to_mention" && m.replyTo);
+  for (const reply of replyMsgs) {
+    const originalAttacker = reply.replyTo.manager;
+    if (originalAttacker === userTeam) continue;
+    if (Math.random() < 0.35) {
+      const clapbackPool = (CANNED_MESSAGES[originalAttacker] || []).filter(m => m.trigger === "reply_to_mention" && !usedMessages.has(originalAttacker + "|" + m.text));
+      if (clapbackPool.length > 0) {
+        const clapback = clapbackPool[Math.floor(Math.random() * clapbackPool.length)];
+        usedMessages.add(originalAttacker + "|" + clapback.text);
+        messages.push({ manager: originalAttacker, text: clapback.text, trigger: "reply_to_mention", id: Date.now() + Math.random(), replyTo: { manager: reply.manager, text: reply.text } });
+      }
+    }
+  }
+
+  // Pile-on to self_pick or overpay messages (30% chance someone adds a shared reaction)
+  if (messages.length >= 2 && Math.random() < 0.3) {
+    const targetMsg = messages.find(m => m.trigger === "self_pick" || m.trigger === "overpay" || m.trigger === "steal");
+    if (targetMsg) {
+      const pileOnCandidates = managers.filter(m => m !== targetMsg.manager && m !== userTeam && !spokenThisPick.has(m));
+      if (pileOnCandidates.length > 0) {
+        const piler = pileOnCandidates[Math.floor(Math.random() * pileOnCandidates.length)];
+        const sharedTrigger = targetMsg.trigger === "self_pick" ? "reply_to_compliment" : targetMsg.trigger === "overpay" ? "reply_to_criticism" : "reply_to_compliment";
+        const sharedReply = pickSharedReply(piler, sharedTrigger, targetMsg);
+        if (sharedReply) messages.push(sharedReply);
+      }
+    }
+  }
+
+  // Lull filler: occasional shared draft_hype, lull_filler, league_lore, food_and_drink (10% chance)
+  if (Math.random() < 0.1) {
+    const fillerTriggers = ["draft_hype", "lull_filler", "league_lore", "food_and_drink"];
+    const fillerTrigger = fillerTriggers[Math.floor(Math.random() * fillerTriggers.length)];
+    const fillerCandidates = managers.filter(m => m !== userTeam && !spokenThisPick.has(m));
+    if (fillerCandidates.length > 0) {
+      const filler = fillerCandidates[Math.floor(Math.random() * fillerCandidates.length)];
+      const fillerMsg = pickSharedReply(filler, fillerTrigger, null);
+      if (fillerMsg) messages.push(fillerMsg);
+    }
+  }
+
+  // Beer template system — ~every 30 picks a manager mentions grabbing another beer (15% per pick)
+  if (Math.random() < 0.15) {
+    const beerCandidates = managers.filter(m => m !== userTeam && !spokenThisPick.has(m) && MANAGER_BEERS[m]);
+    if (beerCandidates.length > 0) {
+      const drinker = beerCandidates[Math.floor(Math.random() * beerCandidates.length)];
+      const beer = MANAGER_BEERS[drinker];
+      // Pick a random unused template
+      const availableTemplates = BEER_TEMPLATES.filter(t => !usedMessages.has(drinker + "|beer|" + t));
+      if (availableTemplates.length > 0) {
+        const template = availableTemplates[Math.floor(Math.random() * availableTemplates.length)];
+        // Beer count: estimate based on how many beer messages this manager has already used
+        const beerCount = BEER_TEMPLATES.length - availableTemplates.length + 2; // start at 2 (already had one before draft chat)
+        const text = template.replace(/\{beer\}/g, beer).replace(/\{n\}/g, String(beerCount));
+        usedMessages.add(drinker + "|beer|" + template);
+        messages.push({ manager: drinker, text, trigger: "general", id: Date.now() + Math.random(), replyTo: null });
+      }
+    }
+  }
+
+  // ── HOT TAKES: genuinely funny reactions that attract pile-on reactions ──
+  // Limited to 6 per draft to stay fresh across multiple mocks. ~25% chance per qualifying pick ensures all 6 fire reliably.
+  const hotTakeCount = [...usedMessages].filter(k => k.includes("|hottake|")).length;
+  if (hotTakeCount < 6 && Math.random() < 0.25 && messages.length < 5) {
+    const HOT_TAKES = {
+      "overpay": [
+        { managers: ["Steve Vander Molen"], text: "ChatGPT just texted me. It said 'even I wouldn't have done that.' And I trust ChatGPT with my LIFE." },
+        { managers: ["Steve Vander Molen"], text: "I'm a CRNA. I've watched people count backwards from 10 and lose consciousness. That bid had the same energy except they were AWAKE." },
+        { managers: ["Steve Vander Molen"], text: "That's not even a gym rat. That's not even sneaky athletic. My algorithm specifically targets high-motor guys and THAT ain't one." },
+        { managers: ["Steve Vander Molen"], text: "I draft deceptively fast, high-motor, lunch-pail guys. That player at THAT price is none of those things." },
+        { managers: ["Steve Vander Molen"], text: "I'm going through zyns faster than this league is going through bad decisions. And I go through a LOT of zyns." },
+        { managers: ["Trey Hugen"], text: "I once drafted on a school laptop and the firewall almost ruined my life. At least I had an EXCUSE. What's YOUR excuse for that bid?" },
+        { managers: ["Trey Hugen"], text: "I used to be a Rams fan. Then I got smart and switched to the Chiefs. You need to get smart and stop paying prices like THAT." },
+        { managers: ["Trey Hugen"], text: "In 14 of my 15 leagues, that guy went for $8 less. You just got fleeced and I'm personally offended." },
+        { managers: ["Trey Hugen"], text: "As a principal, I deal with bad decisions all day. Recess fights. Bathroom graffiti. None of it is as bad as that bid." },
+        { managers: ["Aaron Fay"], text: "I've pulled people over for going 66 in a 65. That bid? That's a high-speed chase into last place." },
+        { managers: ["Aaron Fay"], text: "I brought hard alcohol Mountain Dews to this draft once and THAT was a better financial decision than what just happened." },
+        { managers: ["Tyler Goslinga"], text: "As a Doctor of Physical Therapy, I'm diagnosing that bid with a torn ACL. No recovery timeline. Season over before it started." },
+        { managers: ["Tyler Goslinga"], text: "I rode the bench at Fresno Pacific. I know what it looks like to be overpaid for what you produce. And THAT player at THAT price? Bench energy." },
+        { managers: ["Tyler Goslinga"], text: "Jimmer Fredette dunked on me in college and that hurt less than watching this overpay in real time." },
+        { managers: ["Greg Cady"], text: "My son plays D3 football at Wheaton and even HE would know not to pay that much. And he's 19." },
+        { managers: ["Greg Cady"], text: "My record is mediocre. My trophy case is not. That bid is both mediocre AND trophy-less." },
+        { managers: ["Joshua Van Groningen"], text: "We need to BAN ChatGPT from this league. Steve went 14-0 with it and now everyone's making AI-level BAD decisions without it. Pick a lane." },
+        { managers: ["Joshua Van Groningen"], text: "LMAOOO Matt take your headphones off and LOOK at this. Actually don't, it might break your tier system." },
+        { managers: ["Ross Van Groningen"], text: "My 2017 engagement lasted longer than that player is going to last on your roster. And my engagement was SHORT." },
+        { managers: ["Ross Van Groningen"], text: "Trey and I played Dordt golf. We've seen bad swings. That bid is the fantasy football equivalent of a shank into the parking lot." },
+        { managers: ["James Lazette"], text: "Tyler gave me Derrick Henry for John Ross III and even THAT was a smarter transaction than what just happened." },
+        { managers: ["James Lazette"], text: "I've seen five-alarm fires that were less of a disaster than that price. And I'm a firefighter." },
+        { managers: ["Vance Sipma"], text: "James's Wi-Fi crashed and I lost Justin Fields for $1. A DOLLAR. And you're complaining about THAT price? At least you had functioning internet." },
+        { managers: ["Vance Sipma"], text: "I'm going for the Alan Jackson look. Alan Jackson wouldn't have paid that price. Alan Jackson has CLASS." },
+        { managers: ["Vance Sipma"], text: "Almond prices are down this year and even THAT market makes more sense than what you just paid." },
+        { managers: ["Vance Sipma"], text: "I drove straight from the orchard, still have almond dust on my boots, and I can ALREADY tell that was too much money." },
+        { managers: ["Matthew Van Groningen"], text: "My cat has a UTI and is still making better decisions than whoever just bid that." },
+        { managers: ["Matthew Van Groningen"], text: "I will die on two hills: Commanders should be Redskins, and that price should be $10 less. I'm right about both." },
+        { managers: ["Matthew Van Groningen"], text: "My closet beer has a better cost-to-value ratio than that pick. And my closet beer is questionable at best." },
+        { managers: ["Eric Graef"], text: "They say I had Fireball at the 49ers game. Allegedly. What's NOT alleged is that bid being $10 too much." },
+        { managers: ["Eric Graef"], text: "My church league would excommunicate someone for that price. And we're Presbyterians. We don't excommunicate easily." },
+        { managers: ["Greg Mulder"], text: "That trade with Matthew was FAIR and that bid was UNFAIR to your own team. Two injustices. I'll mention both annually." },
+        { managers: ["Greg Mulder"], text: "I roasted Ross at his wedding. That bid is roasting itself. I don't even need to say anything. But I will: yikes." },
+      ],
+      "steal": [
+        { managers: ["Steve Vander Molen"], text: "I keep patients alive for a living. That steal is going to keep someone's season alive. And it wasn't mine. I'm sick." },
+        { managers: ["Steve Vander Molen"], text: "I was putting in a zyn and missed the bid. The nicotine hit different but missing that value hits WORSE." },
+        { managers: ["Trey Hugen"], text: "My school's firewall once cost me a $1 player because of a 5-second delay. That steal just walked because 11 of you had a BRAIN delay." },
+        { managers: ["Trey Hugen"], text: "I switched from the Rams to the Chiefs because I recognize greatness. And that steal? That's greatness at a discount." },
+        { managers: ["Aaron Fay"], text: "I'm 22-34 all time and even I know that's a steal. My record is GARBAGE and I still have better instincts than whoever let that slide." },
+        { managers: ["Aaron Fay"], text: "I played TROMBONE in high school. With Ross. And Steve. And I STILL have more credibility than whatever that bid was." },
+        { managers: ["Tyler Goslinga"], text: "How did nobody bid on that?? I would have if I wasn't BROKE from spending $55 in the first 3 picks like a maniac!" },
+        { managers: ["Tyler Goslinga"], text: "Must be nice to have budget remaining. I've got $3 and a PokemonGo notification. That's my whole life right now." },
+        { managers: ["Greg Cady"], text: "Calvin education on display right here — I SPOTTED that value and the rest of you heathens let it walk." },
+        { managers: ["Greg Cady"], text: "I finish 7-7 and then go on a tear. That's my formula. And I just watched someone acquire a playoff weapon for bench money while I sat here FUMING." },
+        { managers: ["Joshua Van Groningen"], text: "I played WIDE RECEIVER at Dordt University. I know talent. And I just watched talent walk for NOTHING while I was on my phone." },
+        { managers: ["Joshua Van Groningen"], text: "I played WR at Dordt and ran a 4.6 forty. That steal was FASTER than me and nobody even tried to chase it down." },
+        { managers: ["Ross Van Groningen"], text: "I've made one great escape in my life and it was in 2017. That player just escaped at a steal price. Respect to both." },
+        { managers: ["James Lazette"], text: "Tyler still hasn't recovered from giving me Derrick Henry for John Ross III. Whoever just got THAT value? Same energy. Someone's not sleeping tonight." },
+        { managers: ["James Lazette"], text: "That's the kind of trade bait I'm going to send a 3-way trade offer for by Tuesday. Mark my words." },
+        { managers: ["Vance Sipma"], text: "Someone just got a steal and I'm having Justin Fields flashbacks. James's Wi-Fi. A show of hands. $1. I'll NEVER be over it." },
+        { managers: ["Vance Sipma"], text: "I play cajón at church with Eric. We make beautiful music. That roster? That's not music. That's noise." },
+        { managers: ["Matthew Van Groningen"], text: "That was a TIER 1 player at TIER 4 prices. I'm putting my headphones back in because I can't look at you people." },
+        { managers: ["Eric Graef"], text: "I could've bought that player AND a sixer of Sierra Nevada and still spent less than what some of you paid for your QB." },
+        { managers: ["Greg Mulder"], text: "JV basketball MVP. Two fantasy rings. A homecoming crown. And I just watched the steal of the draft go to someone else. Pain." },
+      ],
+      "rival_pick": [
+        { managers: ["Steve Vander Molen"], text: "Ross, the revolution isn't just coming — it's here. And your roster is the evidence for why we need regime change." },
+        { managers: ["Steve Vander Molen"], text: "My dad was everyone's PE teacher and he would make you run laps for that roster construction. Go. Now. Run." },
+        { managers: ["Steve Vander Molen"], text: "Give me a scrappy, sneaky-athletic gym rat over that entire roster. My white running backs will outperform that mess." },
+        { managers: ["Steve Vander Molen"], text: "That roster has zero gym rats. Zero lunch-pail guys. Zero sneaky athleticism. ChatGPT and I are DISGUSTED." },
+        { managers: ["Trey Hugen"], text: "Matthew, I'm sending you three bench guys for that player by Tuesday. Don't even think about declining. It's FAIR." },
+        { managers: ["Trey Hugen"], text: "That roster needs MY help. And by help I mean a 3-for-1 trade where I give you my worst three guys for your best one. You're welcome." },
+        { managers: ["Trey Hugen"], text: "Vance, I already have the trade screen open. My RB4, WR5, and a flex for your stud. Accept it. ACCEPT IT." },
+        { managers: ["Aaron Fay"], text: "Classic firefighter move — James running into a burning building of a roster. Except this time there's no one to save." },
+        { managers: ["Aaron Fay"], text: "James, stick to spraying water and hosting pool parties. Drafting clearly isn't your calling, Lieutenant." },
+        { managers: ["Tyler Goslinga"], text: "I treat athletes at Ripon Christian. Those high schoolers could build a better roster than that. And they don't have $200." },
+        { managers: ["Tyler Goslinga"], text: "Defending champion Tyler Goslinga is watching that roster and feeling very confident about his repeat chances." },
+        { managers: ["Tyler Goslinga"], text: "Steve and I sit in the same pew and plan fantasy strategy. We're both looking at that roster and praying for its owner." },
+        { managers: ["Greg Cady"], text: "I've won three championships. That pick is how you win three LAST PLACE finishes. Screenshot this for December." },
+        { managers: ["Joshua Van Groningen"], text: "Matt, take your headphones off and explain that pick to the class. Actually don't. There's no explanation." },
+        { managers: ["Joshua Van Groningen"], text: "I have TWO championships. Back to back. 2021 AND 2022. That pick has zero-championship energy." },
+        { managers: ["Ross Van Groningen"], text: "I coded an entire league dashboard and I'm watching someone build a team that won't even make the HISTORY tab." },
+        { managers: ["Ross Van Groningen"], text: "11 years without a ring and even I know that roster isn't it. And I'm the WORST evaluator of championship potential here." },
+        { managers: ["Ross Van Groningen"], text: "I'm the Goodell of this league. You boo me, you blame me, and without me you'd have no league to build that terrible roster in." },
+        { managers: ["Ross Van Groningen"], text: "Everyone thinks I'm the villain. I'm not. I'm Goodell. And like Goodell, I'll watch your franchise burn while collecting my dues." },
+        { managers: ["James Lazette"], text: "Aaron, buddy — stick to writing tickets. Leave the drafting to the 2020 champion. That's ME, in case you forgot." },
+        { managers: ["James Lazette"], text: "I steal road signs for my party barn. And I just watched someone steal their own season with that pick. Going on the wall as a cautionary tale." },
+        { managers: ["Vance Sipma"], text: "I'm on the tractor at 6am and I show up late to draft better than that. My mustache has more championship energy." },
+        { managers: ["Vance Sipma"], text: "I can already feel Trey building a trade offer in his head. The answer is NO, Trey. It's ALWAYS no." },
+        { managers: ["Vance Sipma"], text: "Trey just looked at me. He's thinking about a trade. I can FEEL it. Trey. NO. Do NOT open that trade screen." },
+        { managers: ["Matthew Van Groningen"], text: "I've been dealing with cat UTIs all week and THAT roster is somehow more painful to look at." },
+        { managers: ["Matthew Van Groningen"], text: "The Commanders rebrand is the second-worst decision I've ever witnessed. That pick is the first." },
+        { managers: ["Eric Graef"], text: "I'm going to bed at 9:30 regardless. But I'll be going to bed HAPPY knowing that roster exists in my division." },
+        { managers: ["Greg Mulder"], text: "I went to Dordt with Josh, Trey, and Ross. We all learned discipline there. Whoever made that pick clearly went somewhere else." },
+      ],
+      "kicker_over_1": [
+        { managers: ["Steve Vander Molen"], text: "Tyler and I caught 6 bass this morning. Every single one of them was free. Unlike that kicker. Which should ALSO be free." },
+        { managers: ["Steve Vander Molen"], text: "My dad made kids run laps in PE for less embarrassing decisions. Ron Vander Molen rolling over right now." },
+        { managers: ["Trey Hugen"], text: "Chiefs Kingdom doesn't pay for kickers. Harrison Butker costs $1. In real life AND fantasy. These are facts." },
+        { managers: ["Trey Hugen"], text: "Jack in the Box tacos: 99 cents. A kicker: SHOULD BE $1. These are the same kind of facts." },
+        { managers: ["Aaron Fay"], text: "I'm writing a citation. Crime: kicker overpayment in the first degree. Penalty: last place and eternal shame." },
+        { managers: ["Aaron Fay"], text: "I'm 22-34 all time. I've made TERRIBLE decisions. And I've never once paid more than $1 for a kicker. That's how bad this is." },
+        { managers: ["Tyler Goslinga"], text: "Steve and I discuss fantasy in church every Sunday. If I told the pastor someone paid $2 for a kicker, he'd add it to the prayer list." },
+        { managers: ["Tyler Goslinga"], text: "I go to church with Steve. We whisper about fantasy during the sermon. We would NEVER whisper about paying for a kicker. That's too shameful even for church." },
+        { managers: ["Tyler Goslinga"], text: "I'm catching PokemonGo shinies that have more fantasy value than a kicker you paid money for." },
+        { managers: ["Greg Cady"], text: "JOSH!! Was that YOU?! Did you bid up my kicker AGAIN?! EVERY SINGLE YEAR!! I'M LOSING MY MIND!!" },
+        { managers: ["Greg Cady"], text: "I'm teaching my son the same thing I taught this league: kickers cost a DOLLAR. He plays football at Wheaton. He gets it. WHY DON'T YOU." },
+        { managers: ["Joshua Van Groningen"], text: "I bid that up on PURPOSE just to watch Greg C's face melt off. 💀💀💀 His spreadsheet is having a medical emergency." },
+        { managers: ["Joshua Van Groningen"], text: "💀💀💀 A KICKER. FOR ACTUAL MONEY. Greg C is turning colors I didn't know humans could turn. WORTH IT." },
+        { managers: ["Ross Van Groningen"], text: "My 2017 engagement is the second-worst financial decision in this room's history. Paying $2 for a kicker is the first." },
+        { managers: ["Ross Van Groningen"], text: "I've three-putted from 4 feet. Trey's seen it. And THAT was still a better use of my time and energy than a $2 kicker." },
+        { managers: ["James Lazette"], text: "My barn has a 'STOP' sign, a 'YIELD' sign, and a 'WRONG WAY' sign. Paying for a kicker violates ALL THREE." },
+        { managers: ["Vance Sipma"], text: "Pat McAfee was literally a kicker and even HE says they should cost $1 in fantasy. I listen to his show EVERY DAY." },
+        { managers: ["Matthew Van Groningen"], text: "My cat is peeing outside the litter box AND making better financial decisions than this league." },
+        { managers: ["Eric Graef"], text: "Greg C and I don't agree on much but we agree on this: whoever paid $2 for a kicker needs to repent immediately." },
+        { managers: ["Greg Mulder"], text: "I collect dues from 12 managers every year. This is the first time I've wanted to issue a REFUND for someone's own stupidity." },
+      ],
+    };
+    const triggerKey = triggers.find(t => HOT_TAKES[t]);
+    if (triggerKey) {
+      const takesForTrigger = HOT_TAKES[triggerKey];
+      const eligible = takesForTrigger.filter(t => {
+        const mgr = t.managers[0];
+        return mgr !== winner && mgr !== userTeam && !spokenThisPick.has(mgr) && !usedMessages.has(mgr + "|hottake|" + t.text);
+      });
+      if (eligible.length > 0) {
+        const take = eligible[Math.floor(Math.random() * eligible.length)];
+        const mgr = take.managers[0];
+        usedMessages.add(mgr + "|hottake|" + take.text);
+        spokenThisPick.add(mgr);
+        messages.push({ manager: mgr, text: take.text, trigger: triggerKey, id: Date.now() + Math.random(), replyTo: null, isHotTake: true });
+      }
+    }
+  }
+
+  // Limit total messages per pick to 7 max — prioritize replies after parents
+  const withReplies = [];
+  const replies = messages.filter(m => m.replyTo);
+  const nonReplies = messages.filter(m => !m.replyTo);
+  for (const msg of nonReplies) {
+    withReplies.push(msg);
+    const replyToThis = replies.filter(r => r.replyTo && r.replyTo.text === msg.text);
+    replyToThis.forEach(r => withReplies.push(r));
+  }
+  replies.filter(r => !withReplies.includes(r)).forEach(r => withReplies.push(r));
+  return withReplies.slice(0, 7);
+}
+
+
+// Roster: 1 QB, 2 RB, 2 WR, 1 TE, 1 FLEX (RB/WR/TE), 1 K, 1 DEF, 6 BN = 15 total
+const MOCK_PLAYER_POOL = [
+  {id:1,name:"Jahmyr Gibbs",pos:"RB",team:"DET",value:59},
+  {id:2,name:"Bijan Robinson",pos:"RB",team:"ATL",value:58},
+  {id:3,name:"Ja'Marr Chase",pos:"WR",team:"CIN",value:57},
+  {id:4,name:"Puka Nacua",pos:"WR",team:"LAR",value:57},
+  {id:5,name:"Jaxon Smith-Njigba",pos:"WR",team:"SEA",value:52},
+  {id:6,name:"Amon-Ra St. Brown",pos:"WR",team:"DET",value:49},
+  {id:7,name:"Christian McCaffrey",pos:"RB",team:"SF",value:47},
+  {id:8,name:"Jonathan Taylor",pos:"RB",team:"IND",value:45},
+  {id:9,name:"CeeDee Lamb",pos:"WR",team:"DAL",value:41},
+  {id:10,name:"Justin Jefferson",pos:"WR",team:"MIN",value:40},
+  {id:11,name:"James Cook III",pos:"RB",team:"BUF",value:38},
+  {id:12,name:"Ashton Jeanty",pos:"RB",team:"LV",value:37},
+  {id:13,name:"Drake London",pos:"WR",team:"ATL",value:36},
+  {id:14,name:"Chase Brown",pos:"RB",team:"CIN",value:36},
+  {id:15,name:"Brock Bowers",pos:"TE",team:"LV",value:35},
+  {id:16,name:"A.J. Brown",pos:"WR",team:"NE",value:35},
+  {id:17,name:"Saquon Barkley",pos:"RB",team:"PHI",value:35},
+  {id:18,name:"De'Von Achane",pos:"RB",team:"MIA",value:34},
+  {id:19,name:"Omarion Hampton",pos:"RB",team:"LAC",value:33},
+  {id:20,name:"Nico Collins",pos:"WR",team:"HOU",value:32},
+  {id:21,name:"Derrick Henry",pos:"RB",team:"BAL",value:31},
+  {id:22,name:"George Pickens",pos:"WR",team:"DAL",value:31},
+  {id:23,name:"Kenneth Walker III",pos:"RB",team:"KC",value:31},
+  {id:24,name:"Trey McBride",pos:"TE",team:"ARI",value:30},
+  {id:25,name:"Rashee Rice",pos:"WR",team:"KC",value:30},
+  {id:26,name:"Chris Olave",pos:"WR",team:"NO",value:30},
+  {id:27,name:"Josh Allen",pos:"QB",team:"BUF",value:30},
+  {id:28,name:"DeVonta Smith",pos:"WR",team:"PHI",value:30},
+  {id:29,name:"Zay Flowers",pos:"WR",team:"BAL",value:28},
+  {id:30,name:"Kyren Williams",pos:"RB",team:"LAR",value:27},
+  {id:31,name:"Tee Higgins",pos:"WR",team:"CIN",value:27},
+  {id:32,name:"Tetairoa McMillan",pos:"WR",team:"CAR",value:27},
+  {id:33,name:"Jeremiyah Love",pos:"RB",team:"ARI",value:27},
+  {id:34,name:"Malik Nabers",pos:"WR",team:"NYG",value:25},
+  {id:35,name:"Lamar Jackson",pos:"QB",team:"BAL",value:25},
+  {id:36,name:"Josh Jacobs",pos:"RB",team:"GB",value:24},
+  {id:37,name:"Emeka Egbuka",pos:"WR",team:"TB",value:24},
+  {id:38,name:"Breece Hall",pos:"RB",team:"NYJ",value:23},
+  {id:39,name:"Garrett Wilson",pos:"WR",team:"NYJ",value:23},
+  {id:40,name:"Javonte Williams",pos:"RB",team:"DAL",value:23},
+  {id:41,name:"Ladd McConkey",pos:"WR",team:"LAC",value:22},
+  {id:42,name:"Colston Loveland",pos:"TE",team:"CHI",value:21},
+  {id:43,name:"Jaylen Waddle",pos:"WR",team:"DEN",value:21},
+  {id:44,name:"Drake Maye",pos:"QB",team:"NE",value:21},
+  {id:45,name:"Terry McLaurin",pos:"WR",team:"WAS",value:20},
+  {id:46,name:"Travis Etienne Jr.",pos:"RB",team:"NO",value:20},
+  {id:47,name:"Davante Adams",pos:"WR",team:"LAR",value:20},
+  {id:48,name:"Luther Burden III",pos:"WR",team:"CHI",value:20},
+  {id:49,name:"Joe Burrow",pos:"QB",team:"CIN",value:19},
+  {id:50,name:"Cam Skattebo",pos:"RB",team:"NYG",value:18},
+  {id:51,name:"Mike Evans",pos:"WR",team:"SF",value:17},
+  {id:52,name:"Jameson Williams",pos:"WR",team:"DET",value:17},
+  {id:53,name:"D'Andre Swift",pos:"RB",team:"CHI",value:17},
+  {id:54,name:"Jayden Daniels",pos:"QB",team:"WAS",value:17},
+  {id:55,name:"Tyler Warren",pos:"TE",team:"IND",value:16},
+  {id:56,name:"Quinshon Judkins",pos:"RB",team:"CLE",value:16},
+  {id:57,name:"Bucky Irving",pos:"RB",team:"TB",value:15},
+  {id:58,name:"Christian Watson",pos:"WR",team:"GB",value:15},
+  {id:59,name:"David Montgomery",pos:"RB",team:"HOU",value:15},
+  {id:60,name:"DJ Moore",pos:"WR",team:"BUF",value:14},
+  {id:61,name:"TreVeyon Henderson",pos:"RB",team:"NE",value:14},
+  {id:62,name:"Jalen Hurts",pos:"QB",team:"PHI",value:14},
+  {id:63,name:"Rome Odunze",pos:"WR",team:"CHI",value:14},
+  {id:64,name:"Bhayshul Tuten",pos:"RB",team:"JAC",value:13},
+  {id:65,name:"Jadarian Price",pos:"RB",team:"SEA",value:13},
+  {id:66,name:"Tucker Kraft",pos:"TE",team:"GB",value:13},
+  {id:67,name:"Caleb Williams",pos:"QB",team:"CHI",value:13},
+  {id:68,name:"Justin Herbert",pos:"QB",team:"LAC",value:13},
+  {id:69,name:"Carnell Tate",pos:"WR",team:"TEN",value:13},
+  {id:70,name:"Jaylen Warren",pos:"RB",team:"PIT",value:12},
+  {id:71,name:"Marvin Harrison Jr.",pos:"WR",team:"ARI",value:12},
+  {id:72,name:"Brian Thomas Jr.",pos:"WR",team:"JAC",value:12},
+  {id:73,name:"Tony Pollard",pos:"RB",team:"TEN",value:12},
+  {id:74,name:"Trevor Lawrence",pos:"QB",team:"JAC",value:12},
+  {id:75,name:"Harold Fannin Jr.",pos:"TE",team:"CLE",value:12},
+  {id:76,name:"Rhamondre Stevenson",pos:"RB",team:"NE",value:11},
+  {id:77,name:"DK Metcalf",pos:"WR",team:"PIT",value:11},
+  {id:78,name:"Parker Washington",pos:"WR",team:"JAC",value:11},
+  {id:79,name:"Dak Prescott",pos:"QB",team:"DAL",value:11},
+  {id:80,name:"Sam LaPorta",pos:"TE",team:"DET",value:10},
+  {id:81,name:"Alec Pierce",pos:"WR",team:"IND",value:10},
+  {id:82,name:"Kyle Pitts Sr.",pos:"TE",team:"ATL",value:9},
+  {id:83,name:"Chuba Hubbard",pos:"RB",team:"CAR",value:9},
+  {id:84,name:"Courtland Sutton",pos:"WR",team:"DEN",value:8},
+  {id:85,name:"Rico Dowdle",pos:"RB",team:"PIT",value:8},
+  {id:86,name:"Chris Godwin Jr.",pos:"WR",team:"TB",value:8},
+  {id:87,name:"J.K. Dobbins",pos:"RB",team:"DEN",value:8},
+  {id:88,name:"Jordyn Tyson",pos:"WR",team:"NO",value:8},
+  {id:89,name:"Jaxson Dart",pos:"QB",team:"NYG",value:7},
+  {id:90,name:"Michael Pittman Jr.",pos:"WR",team:"PIT",value:7},
+  {id:91,name:"Michael Wilson",pos:"WR",team:"ARI",value:7},
+  {id:92,name:"Brock Purdy",pos:"QB",team:"SF",value:7},
+  {id:93,name:"RJ Harvey",pos:"RB",team:"DEN",value:7},
+  {id:94,name:"Quentin Johnston",pos:"WR",team:"LAC",value:6},
+  {id:95,name:"Blake Corum",pos:"RB",team:"LAR",value:6},
+  {id:96,name:"Kyle Monangai",pos:"RB",team:"CHI",value:6},
+  {id:97,name:"Josh Downs",pos:"WR",team:"IND",value:6},
+  {id:98,name:"Bo Nix",pos:"QB",team:"DEN",value:6},
+  {id:99,name:"Patrick Mahomes II",pos:"QB",team:"KC",value:6},
+  {id:100,name:"Makai Lemon",pos:"WR",team:"PHI",value:6},
+  {id:101,name:"Travis Kelce",pos:"TE",team:"KC",value:6},
+  {id:102,name:"Wan'Dale Robinson",pos:"WR",team:"TEN",value:6},
+  {id:103,name:"Kenny Gainwell",pos:"RB",team:"TB",value:6},
+  {id:104,name:"Matthew Stafford",pos:"QB",team:"LAR",value:6},
+  {id:105,name:"George Kittle",pos:"TE",team:"SF",value:5},
+  {id:106,name:"Jordan Addison",pos:"WR",team:"MIN",value:5},
+  {id:107,name:"Jakobi Meyers",pos:"WR",team:"JAC",value:5},
+  {id:108,name:"Rachaad White",pos:"RB",team:"WAS",value:5},
+  {id:109,name:"Jayden Reed",pos:"WR",team:"GB",value:5},
+  {id:110,name:"Jonathon Brooks",pos:"RB",team:"CAR",value:5},
+  {id:111,name:"Aaron Jones Sr.",pos:"RB",team:"MIN",value:5},
+  {id:112,name:"Jared Goff",pos:"QB",team:"DET",value:5},
+  {id:113,name:"Jacory Croskey-Merritt",pos:"RB",team:"WAS",value:5},
+  {id:114,name:"Kyler Murray",pos:"QB",team:"MIN",value:5},
+  {id:115,name:"Dalton Kincaid",pos:"TE",team:"BUF",value:5},
+  {id:116,name:"Jordan Mason",pos:"RB",team:"MIN",value:5},
+  {id:117,name:"Jake Ferguson",pos:"TE",team:"DAL",value:5},
+  {id:118,name:"Dallas Goedert",pos:"TE",team:"PHI",value:5},
+  {id:119,name:"Baker Mayfield",pos:"QB",team:"TB",value:5},
+  {id:120,name:"Xavier Worthy",pos:"WR",team:"KC",value:5},
+  {id:121,name:"Mark Andrews",pos:"TE",team:"BAL",value:4},
+  {id:122,name:"Jordan Love",pos:"QB",team:"GB",value:4},
+  {id:123,name:"Jayden Higgins",pos:"WR",team:"HOU",value:4},
+  {id:124,name:"Tyler Shough",pos:"QB",team:"NO",value:4},
+  {id:125,name:"Isaiah Likely",pos:"TE",team:"NYG",value:4},
+  {id:126,name:"Tyrone Tracy Jr.",pos:"RB",team:"NYG",value:4},
+  {id:127,name:"Chris Rodriguez Jr.",pos:"RB",team:"JAC",value:4},
+  {id:128,name:"Romeo Doubs",pos:"WR",team:"NE",value:4},
+  {id:129,name:"Khalil Shakir",pos:"WR",team:"BUF",value:4},
+  {id:130,name:"Jalen Coker",pos:"WR",team:"CAR",value:4},
+  {id:131,name:"Woody Marks",pos:"RB",team:"HOU",value:4},
+  {id:132,name:"Tyler Allgeier",pos:"RB",team:"ARI",value:3},
+  {id:133,name:"Malik Willis",pos:"QB",team:"MIA",value:3},
+  {id:134,name:"KC Concepcion",pos:"WR",team:"CLE",value:3},
+  {id:135,name:"Matthew Golden",pos:"WR",team:"GB",value:3},
+  {id:136,name:"Tyjae Spears",pos:"RB",team:"TEN",value:3},
+  {id:137,name:"Alvin Kamara",pos:"RB",team:"NO",value:3},
+  {id:138,name:"Zach Charbonnet",pos:"RB",team:"SEA",value:2},
+  {id:139,name:"Rashid Shaheed",pos:"WR",team:"SEA",value:2},
+  {id:140,name:"Dylan Sampson",pos:"RB",team:"CLE",value:2},
+  {id:141,name:"C.J. Stroud",pos:"QB",team:"HOU",value:2},
+  {id:142,name:"Juwan Johnson",pos:"TE",team:"NO",value:2},
+  {id:143,name:"Sam Darnold",pos:"QB",team:"SEA",value:2},
+  {id:144,name:"Brenton Strange",pos:"TE",team:"JAC",value:2},
+  {id:145,name:"Chig Okonkwo",pos:"TE",team:"WAS",value:2},
+  {id:146,name:"Isiah Pacheco",pos:"RB",team:"DET",value:2},
+  {id:147,name:"Keaton Mitchell",pos:"RB",team:"LAC",value:2},
+  {id:148,name:"Hunter Henry",pos:"TE",team:"NE",value:2},
+  {id:149,name:"Tank Bigsby",pos:"RB",team:"PHI",value:2},
+  {id:150,name:"Cam Ward",pos:"QB",team:"TEN",value:2},
+  {id:151,name:"Jonah Coleman",pos:"RB",team:"DEN",value:2},
+  {id:152,name:"Brian Robinson Jr.",pos:"RB",team:"ATL",value:2},
+  {id:153,name:"Daniel Jones",pos:"QB",team:"IND",value:2},
+  {id:154,name:"Jauan Jennings",pos:"WR",team:"MIN",value:2},
+  {id:155,name:"Oronde Gadsden II",pos:"TE",team:"LAC",value:2},
+  {id:156,name:"Adonai Mitchell",pos:"WR",team:"NYJ",value:2},
+  {id:157,name:"Jalen McMillan",pos:"WR",team:"TB",value:2},
+  {id:158,name:"Bryce Young",pos:"QB",team:"CAR",value:1},
+  {id:159,name:"Jerry Jeudy",pos:"WR",team:"CLE",value:1},
+  {id:160,name:"Denzel Boston",pos:"WR",team:"CLE",value:1},
+  {id:161,name:"Dalton Schultz",pos:"TE",team:"HOU",value:1},
+  {id:162,name:"Tre Tucker",pos:"WR",team:"LV",value:1},
+  {id:163,name:"Omar Cooper Jr.",pos:"WR",team:"NYJ",value:1},
+  {id:164,name:"Deebo Samuel Sr.",pos:"WR",team:"SF",value:1},
+  {id:165,name:"De'Zhaun Stribling",pos:"WR",team:"SF",value:1},
+  {id:166,name:"Tre' Harris",pos:"WR",team:"LAC",value:1},
+  {id:167,name:"AJ Barner",pos:"TE",team:"SEA",value:1},
+  {id:168,name:"T.J. Hockenson",pos:"TE",team:"MIN",value:1},
+  {id:169,name:"Jacoby Brissett",pos:"QB",team:"ARI",value:1},
+  {id:170,name:"Travis Hunter",pos:"WR",team:"JAC",value:1},
+  {id:171,name:"Sean Tucker",pos:"RB",team:"TB",value:1},
+  {id:172,name:"Braelon Allen",pos:"RB",team:"NYJ",value:1},
+  {id:173,name:"Ryan Flournoy",pos:"WR",team:"DAL",value:1},
+  {id:174,name:"Stefon Diggs",pos:"WR",team:"WAS",value:1},
+  {id:175,name:"Kenyon Sadiq",pos:"TE",team:"NYJ",value:1},
+  {id:176,name:"Kayshon Boutte",pos:"WR",team:"NE",value:1},
+  {id:177,name:"Ray Davis",pos:"RB",team:"BUF",value:1},
+  {id:178,name:"Jalen Nailor",pos:"WR",team:"LV",value:1},
+  {id:179,name:"Houston Texans",pos:"DEF",team:"HOU",value:1},
+  {id:180,name:"Calvin Ridley",pos:"WR",team:"TEN",value:1},
+  {id:181,name:"Kimani Vidal",pos:"RB",team:"LAC",value:1},
+  {id:182,name:"Terrance Ferguson",pos:"TE",team:"LAR",value:1},
+  {id:183,name:"Emmett Johnson",pos:"RB",team:"KC",value:1},
+  {id:184,name:"James Conner",pos:"RB",team:"ARI",value:1},
+  {id:185,name:"Malik Washington",pos:"WR",team:"MIA",value:1},
+  {id:186,name:"Rashod Bateman",pos:"WR",team:"BAL",value:1},
+  {id:187,name:"Emanuel Wilson",pos:"RB",team:"SEA",value:1},
+  {id:188,name:"Dontayvion Wicks",pos:"WR",team:"PHI",value:1},
+  {id:189,name:"Darnell Mooney",pos:"WR",team:"NYG",value:1},
+  {id:190,name:"Denver Broncos",pos:"DEF",team:"DEN",value:1},
+  {id:191,name:"Isaac TeSlaa",pos:"WR",team:"DET",value:1},
+  {id:192,name:"Gunnar Helm",pos:"TE",team:"TEN",value:1},
+  {id:193,name:"Geno Smith",pos:"QB",team:"NYJ",value:1},
+  {id:194,name:"Pat Freiermuth",pos:"TE",team:"PIT",value:1},
+  {id:195,name:"Seattle Seahawks",pos:"DEF",team:"SEA",value:1},
+  {id:196,name:"Los Angeles Rams",pos:"DEF",team:"LAR",value:1},
+  {id:197,name:"MarShawn Lloyd",pos:"RB",team:"GB",value:1},
+  {id:198,name:"Brandon Aubrey",pos:"K",team:"DAL",value:1},
+  {id:199,name:"Ka'imi Fairbairn",pos:"K",team:"HOU",value:1},
+  {id:200,name:"Cameron Dicker",pos:"K",team:"LAC",value:1},
+  {id:201,name:"Cam Little",pos:"K",team:"JAC",value:1},
+  {id:202,name:"Jason Myers",pos:"K",team:"SEA",value:1},
+  {id:203,name:"Eddy Pineiro",pos:"K",team:"SF",value:1},
+  {id:204,name:"Jake Bates",pos:"K",team:"DET",value:1},
+  {id:205,name:"Cairo Santos",pos:"K",team:"CHI",value:1},
+  {id:206,name:"Evan McPherson",pos:"K",team:"CIN",value:1},
+  {id:207,name:"Harrison Butker",pos:"K",team:"KC",value:1},
+  {id:208,name:"Chris Boswell",pos:"K",team:"PIT",value:1},
+  {id:209,name:"Harrison Mevis",pos:"K",team:"LAR",value:1},
+];
+
+// 2026 Confirmed Keepers — pre-loaded into mock draft (editable in UI)
+// These are the DEFAULT keepers shown in setup. User can add/remove/edit before starting.
+const MOCK_DRAFT_KEEPERS_2026 = [
+  { manager:"Tyler Goslinga",         name:"Jonathan Taylor",     pos:"RB", team:"IND", price:24 },
+  { manager:"Greg Cady",              name:"Puka Nacua",          pos:"WR", team:"LAR", price:45 },
+  { manager:"Ross Van Groningen",     name:"Jaxon Smith-Njigba",  pos:"WR", team:"SEA", price:11 },
+  { manager:"James Lazette",          name:"Bijan Robinson",      pos:"RB", team:"ATL", price:65 },
+  { manager:"Matthew Van Groningen",  name:"Justin Jefferson",    pos:"WR", team:"MIN", price:31 },
+  { manager:"Aaron Fay",              name:"Ladd McConkey",       pos:"WR", team:"LAC", price:13 },
+  { manager:"Greg Mulder",            name:"Brock Bowers",        pos:"TE", team:"LV",  price:12 },
+];
+
+// Bot profile builder — computes tendencies from real draft history
+function buildBotProfiles(draftPicks) {
+  const managers2025 = [...new Set(draftPicks.filter(p => p.year === 2025).map(p => p.manager))];
+  const profiles = {};
+  managers2025.forEach(mgr => {
+    const picks = draftPicks.filter(p => p.manager === mgr);
+    const auctionPicks = picks.filter(p => !p.isKeeper); // Exclude keepers for allocation calc
+    const years = [...new Set(picks.map(p => p.year))];
+    const totalBudget = years.length * 200;
+    // Positional spend — EXCLUDING keepers (reflects actual auction bidding behavior)
+    const posTotals = { QB:0, RB:0, WR:0, TE:0, K:0, DEF:0 };
+    const posCounts = { QB:0, RB:0, WR:0, TE:0, K:0, DEF:0 };
+    auctionPicks.forEach(p => {
+      const pos = (p.position === "FLEX") ? "RB" : (p.position || "RB");
+      if (posTotals[pos] !== undefined) { posTotals[pos] += p.price; posCounts[pos]++; }
+    });
+    // Positional allocation %
+    const totalSpent = Object.values(posTotals).reduce((a,b) => a+b, 0);
+    const posAlloc = {};
+    Object.keys(posTotals).forEach(pos => { posAlloc[pos] = totalSpent > 0 ? posTotals[pos] / totalSpent : 0; });
+    // Stars & scrubs score (std dev of non-keeper pick prices)
+    const prices = auctionPicks.map(p => p.price);
+    const avgPrice = prices.reduce((a,b) => a+b, 0) / (prices.length || 1);
+    const stdev = Math.sqrt(prices.reduce((a,p) => a + (p - avgPrice) ** 2, 0) / (prices.length || 1));
+    // Top-heavy ratio (% of budget on 3 most expensive auction picks per draft)
+    let topHeavySum = 0;
+    years.forEach(yr => {
+      const yrPicks = auctionPicks.filter(p => p.year === yr).sort((a,b) => b.price - a.price);
+      topHeavySum += (yrPicks[0]?.price || 0) + (yrPicks[1]?.price || 0) + (yrPicks[2]?.price || 0);
+    });
+    const topHeavyPct = totalBudget > 0 ? topHeavySum / totalBudget : 0;
+    // Keeper tendency (still uses all picks)
+    const keepers = picks.filter(p => p.isKeeper);
+    const keeperRate = years.length > 0 ? keepers.length / years.length : 0;
+    // Aggression (willingness to overpay — avg first auction pick price, excluding keepers)
+    let firstPickSum = 0;
+    years.forEach(yr => {
+      const yrPicks = auctionPicks.filter(p => p.year === yr).sort((a,b) => a.pickNo - b.pickNo);
+      firstPickSum += yrPicks[0]?.price || 0;
+    });
+    const avgFirstPick = years.length > 0 ? firstPickSum / years.length : 30;
+    // Position priority (what they spend most on relative to league avg)
+    const posPriority = Object.entries(posAlloc)
+      .filter(([pos]) => pos !== "K" && pos !== "DEF")
+      .sort((a,b) => b[1] - a[1])
+      .map(([pos]) => pos);
+    profiles[mgr] = {
+      name: mgr,
+      posAlloc,
+      posCounts,
+      stdev,
+      topHeavyPct,
+      keeperRate,
+      avgFirstPick,
+      posPriority,
+      seasonsPlayed: years.length,
+      avgPrice,
+      // Behavioral traits derived from data
+      aggression: Math.min(1, topHeavyPct / 0.55), // 0-1 scale, 0.55 = very top-heavy
+      patience: Math.max(0, 1 - (avgFirstPick / 65)), // high first-pick = impatient
+      starsAndScrubs: Math.min(1, stdev / 22), // high stdev = extreme strategy
+    };
+  });
+  return profiles;
+}
+
+// Bot bidding AI — decides whether to bid, how high, and how fast
+// Bot personality traits — behavioral modifiers from Manager and Draft Profiles.docx
+const BOT_PERSONALITY_TRAITS = {
+  "Aaron Fay": { budgetBlower: false, earlyAggression: 1.0, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0.1, mobileQBBonus: 0, depthHunter: false, recklessLate: true, stubbornOnTargets: false, lurkerSniper: false, lateDraftBully: false },
+  "Eric Graef": { budgetBlower: false, earlyAggression: 0.7, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: false, lurkerSniper: false, lateDraftBully: false },
+  "Greg Cady": { budgetBlower: false, earlyAggression: 0.85, latePassivity: 1.0, kDefBait: true, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: true, stubbornOnTargets: true, lurkerSniper: true, lateDraftBully: false },
+  "Greg Mulder": { budgetBlower: false, earlyAggression: 0.9, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: false, lurkerSniper: false, lateDraftBully: false },
+  "James Lazette": { budgetBlower: false, earlyAggression: 1.3, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: true, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
+  "Joshua Van Groningen": { budgetBlower: false, earlyAggression: 1.3, latePassivity: 0.35, kDefBait: false, stackPreference: null, erratic: 0.15, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: false, lurkerSniper: false, lateDraftBully: false },
+  "Matthew Van Groningen": { budgetBlower: false, earlyAggression: 1.0, latePassivity: 1.0, kDefBait: false, stackPreference: "QB+WR", erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
+  "Ross Van Groningen": { budgetBlower: false, earlyAggression: 1.2, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
+  "Steve Vander Molen": { budgetBlower: false, earlyAggression: 1.2, latePassivity: 0.5, kDefBait: false, stackPreference: null, erratic: 0.3, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: false, lurkerSniper: false, lateDraftBully: false },
+  "Trey Hugen": { budgetBlower: false, earlyAggression: 0.6, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: true, recklessLate: false, stubbornOnTargets: false, lurkerSniper: true, lateDraftBully: true },
+  "Tyler Goslinga": { budgetBlower: true, earlyAggression: 1.4, latePassivity: 0.3, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
+  "Vance Sipma": { budgetBlower: false, earlyAggression: 0.8, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0.15, mobileQBBonus: 0.35, depthHunter: false, recklessLate: true, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
+};
+
+// Manager avatar URLs (served from public/avatars/)
+const MOCK_DRAFT_AVATAR_URL = (name) => `/avatars/${encodeURIComponent(name)}.jpg`;
+
+// ── DRAFT GRADE GENERATOR ──
+// Calculates letter grades and generates short write-ups for each team post-draft
+function generateDraftGrades(nominations, rosters, budgets, playerPool) {
+  const grades = [];
+  const managerPicks = {};
+  // Group picks by manager
+  nominations.forEach(n => {
+    if (!managerPicks[n.winner]) managerPicks[n.winner] = [];
+    managerPicks[n.winner].push(n);
+  });
+
+  Object.entries(rosters).forEach(([manager, roster]) => {
+    const picks = managerPicks[manager] || [];
+    const keepers = roster.filter(p => p.isKeeper);
+    const auctionPicks = picks.map(p => p); // only auction picks (not keepers)
+
+    // Total value acquired vs total spent — INCLUDING keepers (keeper savings are part of draft strategy)
+    let totalValue = 0;
+    let totalSpent = 0;
+    let steals = 0; // paid < 80% of ADP
+    let overpays = 0; // paid > 120% of ADP
+    let biggestSteal = null;
+    let biggestOverpay = null;
+    let bestStealDiff = 0;
+    let worstOverpayDiff = 0;
+
+    // Count keepers as picks too (their ADP value vs keeper price)
+    keepers.forEach(k => {
+      // Look up ADP value from the player pool (by name match)
+      const poolPlayer = MOCK_PLAYER_POOL.find(p => p.name.toLowerCase() === (k.name || "").toLowerCase());
+      const adp = poolPlayer ? poolPlayer.value : k.price; // fallback to price if not found
+      const paid = k.price || 0;
+      totalValue += adp;
+      totalSpent += paid;
+      const diff = adp - paid;
+      if (paid < adp * 0.8 && adp > 3) {
+        steals++;
+        if (diff > bestStealDiff) { bestStealDiff = diff; biggestSteal = { player: { name: k.name, pos: k.pos, value: adp }, price: paid }; }
+      }
+    });
+
+    auctionPicks.forEach(p => {
+      const adp = p.player.value || 1;
+      const paid = p.price;
+      totalValue += adp;
+      totalSpent += paid;
+      const diff = adp - paid;
+      if (paid < adp * 0.8) {
+        steals++;
+        if (diff > bestStealDiff) { bestStealDiff = diff; biggestSteal = p; }
+      }
+      if (paid > adp * 1.2) {
+        overpays++;
+        if (-diff > worstOverpayDiff) { worstOverpayDiff = -diff; biggestOverpay = p; }
+      }
+    });
+
+    // Cap totalSpent at $200 — safety check
+    if (totalSpent > 200) totalSpent = 200;
+
+    // Value score: ratio of ADP value acquired to money spent (>1 = good, <1 = bad)
+    const valueRatio = totalSpent > 0 ? totalValue / totalSpent : 1;
+    // Positional balance score
+    const posCount = { QB: 0, RB: 0, WR: 0, TE: 0, K: 0, DEF: 0 };
+    roster.forEach(p => { if (posCount[p.pos] !== undefined) posCount[p.pos]++; });
+    const hasQB = posCount.QB >= 1;
+    const hasRB = posCount.RB >= 2;
+    const hasWR = posCount.WR >= 2;
+    const hasTE = posCount.TE >= 1;
+    const balanceScore = (hasQB ? 1 : 0) + (hasRB ? 1 : 0) + (hasWR ? 1 : 0) + (hasTE ? 1 : 0);
+
+    // Star power: top 3 picks by value
+    const starPower = roster.filter(p => !p.isKeeper).sort((a, b) => (b.price || 0) - (a.price || 0)).slice(0, 3);
+    const starTotal = starPower.reduce((s, p) => s + (p.price || 0), 0);
+
+    // Final grade calculation
+    // valueRatio: 1.0 = average (C+), 1.15 = B+, 1.3+ = A, 0.85 = D, <0.75 = F
+    let gradeNum = (valueRatio - 0.75) / 0.55 * 100; // 0.75->0, 1.3->100
+    // Balance bonus
+    gradeNum += (balanceScore - 2) * 5;
+    // Steal bonus
+    gradeNum += steals * 3;
+    // Overpay penalty
+    gradeNum -= overpays * 4;
+    // Clamp
+    gradeNum = Math.max(0, Math.min(100, gradeNum));
+
+    // Letter grade
+    const letter = gradeNum >= 95 ? "A+" : gradeNum >= 88 ? "A" : gradeNum >= 82 ? "A-" :
+      gradeNum >= 76 ? "B+" : gradeNum >= 70 ? "B" : gradeNum >= 64 ? "B-" :
+      gradeNum >= 58 ? "C+" : gradeNum >= 50 ? "C" : gradeNum >= 42 ? "C-" :
+      gradeNum >= 35 ? "D+" : gradeNum >= 28 ? "D" : gradeNum >= 20 ? "D-" : "F";
+
+    // Generate write-up — varied, punchy, never repetitive
+    let writeup = "";
+    const firstName = manager.split(" ")[0];
+    const surplus = totalValue - totalSpent;
+
+    if (gradeNum >= 82) {
+      // Great draft — celebrate differently each time
+      const templates = [
+        `${firstName} found value everywhere. ${steals} steals, +$${surplus} surplus value, and a roster that looks playoff-ready on paper.`,
+        biggestSteal ? `${biggestSteal.player.name} at $${biggestSteal.price} (worth $${biggestSteal.player.value}) headlines a class where ${firstName} consistently paid below market.` : `${firstName} stayed disciplined all night and it paid off across the board.`,
+        `+$${surplus} total surplus. ${firstName} built a top-tier roster without chasing a single price. That's composure.`,
+        steals >= 5 ? `${steals} steals in one draft. ${firstName} basically robbed the room blind and nobody noticed until now.` : `${firstName} executed a near-flawless auction strategy. The math backs it up.`,
+      ];
+      writeup = templates[Math.floor(Math.random() * templates.length)];
+    } else if (gradeNum >= 58) {
+      // Decent draft — mix of good and bad
+      const templates = [
+        biggestSteal && biggestOverpay ? `${firstName} had highs (${biggestSteal.player.name} at $${biggestSteal.price}) and lows (${biggestOverpay.player.name} at $${biggestOverpay.price}). Net result: a competitive but imperfect roster.` : `${firstName} built something solid without any splash picks. Steady, not spectacular.`,
+        surplus >= 0 ? `+$${surplus} surplus overall. ${firstName} found enough value to offset ${overpays} overpay${overpays !== 1 ? "s" : ""}. Could've been better, could've been worse.` : `$${Math.abs(surplus)} in the hole on value. ${firstName} overpaid in spots but compensated with ${steals} steal${steals !== 1 ? "s" : ""} elsewhere.`,
+        `${steals} steals vs ${overpays} overpays. ${firstName}'s draft was a mixed bag — some great instincts, some questionable aggression.`,
+        balanceScore >= 3 ? `Positionally balanced with playable depth. ${firstName} won't dominate but won't embarrass either.` : `A few positional gaps could hurt ${firstName} come bye weeks. The top-end talent is there though.`,
+      ];
+      writeup = templates[Math.floor(Math.random() * templates.length)];
+    } else if (gradeNum >= 35) {
+      // Below average — point out the problems
+      const templates = [
+        biggestOverpay ? `${biggestOverpay.player.name} at $${biggestOverpay.price} (ADP $${biggestOverpay.player.value}) set the tone for a rough night. ${overpays} overpays dragged ${firstName} into the red.` : `${firstName} spent aggressively early and paid for it in the back half of the draft.`,
+        `$${Math.abs(surplus)} in negative value. ${firstName} chased too many players and won too many bidding wars he shouldn't have.`,
+        overpays >= 3 ? `${overpays} overpays. ${firstName} was either the second-highest bidder on everyone or the winner at prices nobody else wanted.` : `Not enough steals to offset the damage. ${firstName} needed 2-3 more values and didn't find them.`,
+        `${firstName} spent like a contender but drafted like a rebuilder. The budget math doesn't add up.`,
+      ];
+      writeup = templates[Math.floor(Math.random() * templates.length)];
+    } else {
+      // Terrible draft — harsh but fair
+      const templates = [
+        biggestOverpay ? `$${biggestOverpay.price} for ${biggestOverpay.player.name} (ADP $${biggestOverpay.player.value}). That one pick encapsulates the whole night for ${firstName}.` : `${firstName} lost this draft in the middle rounds where overpay after overpay piled up.`,
+        `$${Math.abs(surplus)} underwater on value. ${firstName} won every bidding war — and that was the problem.`,
+        `${overpays} overpays, $${Math.abs(surplus)} in the hole, and a roster with no clear path to the playoffs. Rebuild year.`,
+        `${firstName} spent $${totalSpent} and acquired $${totalValue} in value. That's the kind of math that ends seasons before they start.`,
+      ];
+      writeup = templates[Math.floor(Math.random() * templates.length)];
+    }
+
+    grades.push({
+      manager,
+      grade: letter,
+      gradeNum: Math.round(gradeNum),
+      valueRatio: Math.round(valueRatio * 100) / 100,
+      totalValue,
+      totalSpent,
+      steals,
+      overpays,
+      biggestSteal,
+      biggestOverpay,
+      writeup,
+      starPower,
+      keepers,
+    });
+  });
+
+  // Sort by grade (best first)
+  grades.sort((a, b) => b.gradeNum - a.gradeNum);
+  return grades;
+}
+
+// ── DRAFT SOUND EFFECTS (Web Audio API, no files needed) ──
+const DraftSounds = (() => {
+  let ctx = null;
+  let muted = false;
+  const getCtx = () => { if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)(); return ctx; };
+  const tone = (freq, duration, type = "sine", gain = 0.3) => {
+    if (muted) return;
+    try {
+      const c = getCtx();
+      const osc = c.createOscillator();
+      const g = c.createGain();
+      osc.type = type;
+      osc.frequency.value = freq;
+      g.gain.value = gain;
+      g.gain.exponentialRampToValueAtTime(0.01, c.currentTime + duration);
+      osc.connect(g);
+      g.connect(c.destination);
+      osc.start(c.currentTime);
+      osc.stop(c.currentTime + duration);
+    } catch(e) {}
+  };
+  return {
+    setMuted: (m) => { muted = m; },
+    isMuted: () => muted,
+    // Player nominated — two-tone rising chime
+    nominated: () => { tone(520, 0.12); setTimeout(() => tone(700, 0.15), 100); },
+    // Bid placed — disabled (too noisy with rapid bot bids)
+    bid: () => { /* tone(880, 0.06, "square", 0.15); */ },
+    // Countdown tick — audible metronome for last 3 seconds
+    tick: () => { tone(1000, 0.05, "sine", 0.35); },
+    // Bid won — ascending triumphant fanfare
+    won: () => { tone(440, 0.12); setTimeout(() => tone(550, 0.12), 100); setTimeout(() => tone(660, 0.12), 200); setTimeout(() => tone(880, 0.25), 300); },
+    // Your turn to nominate — attention-grabbing double chime
+    yourTurn: () => { tone(600, 0.1); setTimeout(() => tone(800, 0.15), 150); setTimeout(() => tone(600, 0.1), 350); setTimeout(() => tone(800, 0.15), 500); },
+  };
+})();
+
+// Keeper redirect behavior — where each manager sends their keeper savings (from historical analysis)
+// Boost strength scales with actual 2026 keeper savings vs ADP value
+// Ross +$41, Greg M +$23, Tyler +$21, Greg C +$12, Aaron +$9, Matthew +$9, James -$7
+const KEEPER_REDIRECT = {
+  "Ross Van Groningen":     { keeperPos: "WR", savings: 41, redirects: [{ pos:"RB", boostFirst:0.20, boostSecond:0 }] },
+  "Tyler Goslinga":         { keeperPos: "RB", savings: 21, redirects: [{ pos:"TE", boostFirst:0.25, boostSecond:0 }, { pos:"WR", boostFirst:0, boostSecond:0.20 }] },
+  "Greg Cady":              { keeperPos: "WR", savings: 12, redirects: [{ pos:"QB", boostFirst:0.25, boostSecond:0 }] },
+  "James Lazette":          { keeperPos: "RB", savings: 0,  redirects: [{ pos:"TE", boostFirst:0.15, boostSecond:0 }, { pos:"WR", boostFirst:0, boostSecond:0.10 }] },
+  "Matthew Van Groningen":  { keeperPos: "WR", savings: 9,  redirects: [{ pos:"RB", boostFirst:0.25, boostSecond:0.15 }] },
+  "Aaron Fay":              { keeperPos: "WR", savings: 9,  redirects: [{ pos:"QB", boostFirst:0.20, boostSecond:0 }, { pos:"RB", boostFirst:0.05, boostSecond:0 }] },
+  "Greg Mulder":            { keeperPos: "TE", savings: 23, redirects: [{ pos:"RB", boostFirst:0, boostSecond:0.25 }, { pos:"WR", boostFirst:0.15, boostSecond:0 }] },
+};
+
+// Mobile QB list for Vance's preference
+const MOBILE_QBS = ["Lamar Jackson","Josh Allen","Jalen Hurts","Kyler Murray","Justin Fields","Anthony Richardson","Jayden Daniels","Caleb Williams","C.J. Stroud"];
+
+function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemaining) {
+  const pos = player.pos;
+  const baseValue = player.value;
+  const traits = BOT_PERSONALITY_TRAITS[bot.name] || {};
+
+  // How much does this bot value this position?
+  const posBonus = (bot.posAlloc[pos] || 0.1) / 0.25;
+  let perceivedValue = baseValue * (0.7 + 0.6 * posBonus);
+
+  // Stars & scrubs bots overpay for studs, underpay for mid-tier
+  if (bot.starsAndScrubs > 0.6 && baseValue > 35) perceivedValue *= 1.15;
+  if (bot.starsAndScrubs > 0.6 && baseValue < 15) perceivedValue *= 0.75;
+
+  // Aggression factor
+  perceivedValue *= (0.85 + 0.3 * bot.aggression);
+
+  // ── PERSONALITY MODIFIERS ──
+
+  // Keeper-aware: if bot already has a keeper at this position, reduce interest
+  // Historical data shows managers spend $13-43 less at their keeper position
+  const hasKeeperAtPos = rosterSoFar.some(p => p.isKeeper && p.pos === pos);
+  if (hasKeeperAtPos) {
+    perceivedValue *= 0.6;
+  }
+
+  // Keeper redirect boost: when a manager has a keeper, they redirect savings to specific positions
+  // Boost scales proportionally to actual keeper savings (max $41 = full boost, $0 = no boost)
+  const redirect = KEEPER_REDIRECT[bot.name];
+  if (redirect && redirect.savings > 0 && rosterSoFar.some(p => p.isKeeper && p.pos === redirect.keeperPos)) {
+    const savingsScale = Math.min(1, redirect.savings / 41); // normalize: $41 = 1.0, $21 = 0.51, $9 = 0.22
+    const matchingRedirect = redirect.redirects.find(r => r.pos === pos);
+    if (matchingRedirect) {
+      const filledAtPos = rosterSoFar.filter(p => !p.isKeeper && p.pos === pos).length;
+      if (filledAtPos === 0 && matchingRedirect.boostFirst > 0) {
+        perceivedValue *= (1 + matchingRedirect.boostFirst * savingsScale);
+      } else if (filledAtPos === 1 && matchingRedirect.boostSecond > 0) {
+        perceivedValue *= (1 + matchingRedirect.boostSecond * savingsScale);
+      }
+    }
+  }
+
+  // Early vs late draft phase (based on roster fill %)
+  const draftProgress = rosterSoFar.length / 15;
+  if (draftProgress < 0.4) {
+    perceivedValue *= (traits.earlyAggression || 1.0);
+  } else if (draftProgress > 0.7) {
+    perceivedValue *= (traits.latePassivity || 1.0);
+  }
+
+  // Budget blower (Tyler) — massively overpay for top-tier early, then go silent
+  if (traits.budgetBlower && baseValue > 40 && draftProgress < 0.35) {
+    perceivedValue *= 1.3;
+  }
+  if (traits.budgetBlower && budgetLeft < 40) {
+    perceivedValue *= 0.4; // Tyler with no money = PokemonGo + beer + color commentary
+  }
+
+  // Stubborn on targets — won't let go easily, overpays for last-tier options
+  if (traits.stubbornOnTargets && currentBid > 0) {
+    // If they already decided they want this player and bid is close to their max, push harder
+    if (currentBid >= baseValue * 0.7 && currentBid < baseValue * 1.3) {
+      perceivedValue *= 1.15; // will stretch above value for "their guy"
+    }
+  }
+
+  // Lurker/sniper (Trey, Greg C) — patient, waits for value, doesn't jump early
+  if (traits.lurkerSniper && draftProgress < 0.3 && baseValue > 30) {
+    perceivedValue *= 0.85; // less likely to get in early bidding wars on studs
+  }
+
+  // Late draft bully (Trey) — has budget left when others don't, dominates bench picks
+  if (traits.lateDraftBully && draftProgress > 0.6 && baseValue <= 15) {
+    perceivedValue *= 1.25; // swoops on bench guys others can't afford
+  }
+
+  // Reckless late (Aaron, Greg C, James, Vance) — gets MORE aggressive as draft goes on
+  if (traits.recklessLate && draftProgress > 0.6) {
+    perceivedValue *= 1.15 + (draftProgress - 0.6) * 0.4;
+  }
+
+  // Depth hunter (Trey) — sweet spot for mid-tier value plays
+  if (traits.depthHunter) {
+    if (baseValue >= 8 && baseValue <= 20) perceivedValue *= 1.15;
+    if (baseValue > 40) perceivedValue *= 0.8;
+  }
+
+  // K/DEF baitable (Greg Cady) — will bid above $1 on kickers/defenses
+  if (traits.kDefBait && (pos === "K" || pos === "DEF")) {
+    perceivedValue = Math.max(perceivedValue, 2 + Math.random() * 2);
+  }
+
+  // Mobile QB bonus (Vance) — overpays for running QBs, Josh Allen loyalty
+  if (traits.mobileQBBonus > 0 && pos === "QB" && MOBILE_QBS.some(name => player.name.includes(name))) {
+    perceivedValue *= (1 + traits.mobileQBBonus);
+  }
+
+  // Stack preference (Matthew) — values QB+WR from same team
+  if (traits.stackPreference === "QB+WR") {
+    const hasQBFromTeam = rosterSoFar.some(p => p.pos === "QB" && p.team === player.team);
+    const hasWRFromTeam = rosterSoFar.some(p => p.pos === "WR" && p.team === player.team);
+    if ((pos === "WR" && hasQBFromTeam) || (pos === "QB" && hasWRFromTeam)) {
+      perceivedValue *= 1.25;
+    }
+    // Also slightly values TE from same team as QB
+    const hasTEFromTeam = rosterSoFar.some(p => p.pos === "TE" && p.team === player.team);
+    if ((pos === "TE" && hasQBFromTeam) || (pos === "QB" && hasTEFromTeam)) {
+      perceivedValue *= 1.15;
+    }
+  }
+
+  // Erratic (Steve, Josh, Vance, Aaron) — random swings in valuation
+  if (traits.erratic > 0) {
+    const swing = 1 + (Math.random() - 0.5) * traits.erratic * 2;
+    perceivedValue *= swing;
+  }
+
+  // ── NEED-BASED LOGIC ──
+  const SLOTS = { QB:1, RB:2, WR:2, TE:1, K:1, DEF:1 };
+  const filled = rosterSoFar.filter(p => p.pos === pos).length;
+  const needed = SLOTS[pos] || 0;
+  const flexNeeded = pos === "RB" || pos === "WR" || pos === "TE";
+  const flexFilled = rosterSoFar.filter(p => p.pos === "RB" || p.pos === "WR" || p.pos === "TE").length >= 6;
+  if (filled >= needed && !flexNeeded) perceivedValue *= 0.3;
+  else if (filled >= needed && flexNeeded && !flexFilled) perceivedValue *= 0.7;
+  else if (filled >= needed && flexFilled) perceivedValue *= 0.4;
+
+  // Bench spots
+  if (rosterSoFar.length >= 13) perceivedValue *= 0.5;
+
+  // Budget constraint
+  const slotsRemaining = 15 - rosterSoFar.length;
+  const maxBid = budgetLeft - (slotsRemaining - 1);
+
+  // ── BUDGET PRESSURE: force bots to spend their money ──
+  // If a bot has way more budget than needed, boost their valuations
+  // Target: spend at least $190 of $200. Minimum spend per remaining slot = budgetLeft / slotsRemaining
+  // If avg remaining > $5 per slot, they need to be more aggressive
+  if (slotsRemaining > 0 && slotsRemaining <= 5) {
+    const avgPerSlot = budgetLeft / slotsRemaining;
+    if (avgPerSlot > 8) {
+      // Strong pressure: they have way too much money left for few slots
+      perceivedValue *= 1 + (avgPerSlot - 8) * 0.06; // e.g., $20/slot → 1.72x boost
+    } else if (avgPerSlot > 5) {
+      perceivedValue *= 1 + (avgPerSlot - 5) * 0.03;
+    }
+  }
+
+  // Random variance (+/- 15%)
+  const variance = 0.85 + Math.random() * 0.3;
+  // Tiered value cap based on real 2025 draft data (ADP vs actual paid analysis)
+  // $40+ → 1.20x, $25-39 → 1.40x, $10-24 → 1.65x, $5-9 → 1.80x, $1-4 → 3.0x
+  // Plus flat dollar wiggle so caps aren't predictable
+  const baseCap = baseValue >= 40 ? 1.20 : baseValue >= 25 ? 1.40 : baseValue >= 10 ? 1.65 : baseValue >= 5 ? 1.80 : 3.0;
+  const wiggle = baseValue >= 40 ? Math.ceil(Math.random() * 7) : baseValue >= 25 ? Math.ceil(Math.random() * 5) : baseValue >= 10 ? Math.ceil(Math.random() * 4) : baseValue >= 5 ? Math.ceil(Math.random() * 3) : Math.ceil(Math.random() * 2);
+  const valueCap = Math.floor(baseValue * baseCap) + wiggle;
+  const cappedValue = Math.min(perceivedValue * variance, valueCap);
+  const finalValue = Math.min(Math.floor(cappedValue), maxBid);
+
+  // Will they bid?
+  const willBid = currentBid < finalValue && currentBid < maxBid;
+
+  // Bid increment: aggressive bots jump more, patient bots go $1 at a time
+  const increment = bot.aggression > 0.6 ? Math.ceil(Math.random() * 3 + 1) : Math.ceil(Math.random() * 2);
+  const bidTo = Math.min(currentBid + increment, finalValue, maxBid);
+
+  // Delay: aggressive bots bid fast, patient bots wait longer
+  let baseDelay = 600 + (1 - bot.aggression) * 1400;
+  if (traits.erratic > 0) baseDelay += Math.random() * 1000 * traits.erratic;
+  // Lurkers/snipers wait longer before bidding
+  if (traits.lurkerSniper) baseDelay += 400 + Math.random() * 600;
+  const delay = baseDelay + Math.random() * 800;
+
+  return { willBid, maxBid: Math.min(finalValue, maxBid), bidTo, delay: Math.round(delay) };
+}
+
+function MockDraftTab() {
+  const mobile = useMobile();
+  // Password gate
+  const [draftUnlocked, setDraftUnlocked] = useState(false);
+  const [draftPassword, setDraftPassword] = useState("");
+  const [draftPwError, setDraftPwError] = useState(false);
+  const MOCK_DRAFT_PASSWORD = "riponff";
+
+  const draftPicks = DATA.playerData.draftPicks || [];
+  const botProfiles = React.useMemo(() => buildBotProfiles(draftPicks), []);
+  const managers2025 = React.useMemo(() => [...new Set(draftPicks.filter(p => p.year === 2025).map(p => p.manager))].sort(), []);
+
+  // Editable keepers state — initialized from defaults, user can modify before draft
+  const [editKeepers, setEditKeepers] = useState(() => MOCK_DRAFT_KEEPERS_2026.map((k, i) => ({ ...k, id: i })));
+  const [addingKeeper, setAddingKeeper] = useState(false);
+  const [newKeeper, setNewKeeper] = useState({ manager:"", name:"", pos:"RB", team:"", price:1 });
+
+  // Draft state
+  const [phase, setPhase] = useState("setup"); // setup | drafting | complete
+  const [userTeam, setUserTeam] = useState(managers2025[0] || "Ross Van Groningen");
+  const [timerSeconds, setTimerSeconds] = useState(10);
+  const [playerPool, setPlayerPool] = useState([...MOCK_PLAYER_POOL]);
+  const [rosters, setRosters] = useState({});
+  const [budgets, setBudgets] = useState({});
+  const [nominations, setNominations] = useState([]); // history of all picks
+  const [currentNom, setCurrentNom] = useState(null); // {player, nominator, currentBid, currentBidder, timer}
+  const [nomOrder, setNomOrder] = useState([]);
+  const [nomIdx, setNomIdx] = useState(0);
+  const [bidAmount, setBidAmount] = useState(1);
+  const [log, setLog] = useState([]);
+  const [posFilter, setPosFilter] = useState("ALL");
+  const [searchText, setSearchText] = useState("");
+  const [view, setView] = useState("board"); // board | pool | profiles
+  const [reportTab, setReportTab] = useState("grades"); // grades | highlights (draft report card)
+  const [countdown, setCountdown] = useState(0); // visible countdown timer
+  const timerRef = useRef(null); // award timer (fires when countdown hits 0)
+  const countdownRef = useRef(null); // 1-second tick interval
+  const botQueueRef = useRef([]); // scheduled bot bid timeouts
+  const logRef = useRef(null);
+  // Refs for mutable auction state (avoids stale closures)
+  const auctionRef = useRef({ bid: 0, bidder: null, player: null, rosters: {}, budgets: {}, pool: [], order: [], idx: 0 });
+  // Chat feed state
+  const [chatMessages, setChatMessages] = useState([]); // [{manager, text, trigger, id}]
+  const usedMessagesRef = useRef(new Set()); // tracks used messages to prevent repeats
+  const chatRef = useRef(null);
+  // Bottom panel state (Sleeper-style)
+  const [panelOpen, setPanelOpen] = useState(true);
+  const [panelTab, setPanelTab] = useState("pool"); // pool | results | chat
+  // Chat bubble state — which managers currently have a visible bubble
+  const [activeBubbles, setActiveBubbles] = useState({}); // { managerName: { text, id } }
+  // User nomination price
+  const [nomPrice, setNomPrice] = useState(1);
+  // Sound mute state
+  const [soundMuted, setSoundMuted] = useState(false);
+  // Simulate state
+  const [simulating, setSimulating] = useState(false);
+
+  // Derived
+  const TOTAL_ROSTER = 15;
+  const POS_COLOR = { QB:"#e74c3c", RB:"#2ecc71", WR:"#3498db", TE:"#e9c46a", K:"#aaa", DEF:"#666", FLEX:"#9b5de5" };
+  const userMaxBid = (budgets[userTeam] || 0) - (TOTAL_ROSTER - (rosters[userTeam] || []).length - 1);
+
+  // Clear all pending bot timers
+  const clearBotQueue = () => {
+    botQueueRef.current.forEach(t => clearTimeout(t));
+    botQueueRef.current = [];
+  };
+
+  // Reset the countdown timer (called on every new bid)
+  const resetCountdown = (seconds) => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+    if (countdownRef.current) clearInterval(countdownRef.current);
+    setCountdown(seconds);
+    countdownRef.current = setInterval(() => {
+      setCountdown(prev => {
+        if (prev <= 1) { clearInterval(countdownRef.current); return 0; }
+        if (prev <= 4) DraftSounds.tick(); // tick sound for last 3 seconds
+        return prev - 1;
+      });
+    }, 1000);
+    timerRef.current = setTimeout(() => {
+      clearInterval(countdownRef.current);
+      setCountdown(0);
+      const { bid, bidder, player, rosters: r, budgets: b, pool: p, order, idx } = auctionRef.current;
+      if (player) awardPlayer(player, bid, bidder, order, idx, r, b, p);
+    }, seconds * 1000);
+  };
+
+  // Schedule bot bids — each bot evaluates independently with staggered delays
+  const scheduleBotBids = (player, currentBid, currentBidder, order, currentRosters, currentBudgets, pool) => {
+    clearBotQueue();
+    const bidders = order.filter(m => m !== userTeam && m !== currentBidder);
+    const shuffled = [...bidders].sort(() => Math.random() - 0.5);
+    let cumulativeDelay = 0;
+    shuffled.forEach(m => {
+      if ((currentRosters[m] || []).length >= TOTAL_ROSTER) return;
+      const bot = botProfiles[m];
+      if (!bot) return;
+      const decision = botDecision(bot, player, currentBid, currentRosters[m] || [], currentBudgets[m] || 0, pool.length);
+      if (decision.willBid && decision.bidTo > currentBid) {
+        cumulativeDelay += decision.delay;
+        const timeoutId = setTimeout(() => {
+          const live = auctionRef.current;
+          if (!live.player || live.player.id !== player.id) return;
+          const freshDecision = botDecision(bot, player, live.bid, currentRosters[m] || [], currentBudgets[m] || 0, pool.length);
+          if (!freshDecision.willBid || freshDecision.bidTo <= live.bid) return;
+          const newBid = Math.min(live.bid + Math.ceil(Math.random() * 3 + 1), freshDecision.maxBid);
+          if (newBid <= live.bid) return;
+          auctionRef.current.bid = newBid;
+          auctionRef.current.bidder = m;
+          setCurrentNom(prev => prev ? { ...prev, currentBid: newBid, currentBidder: m } : prev);
+          setBidAmount(prev => Math.max(prev, newBid + 1));
+          setLog(prev => [...prev, `💰 ${m} bids $${newBid}`]);
+          DraftSounds.bid();
+          resetCountdown(timerSeconds);
+          scheduleBotBids(player, newBid, m, order, currentRosters, currentBudgets, pool);
+        }, cumulativeDelay);
+        botQueueRef.current.push(timeoutId);
+      }
+    });
+  };
+
+  // Initialize draft
+  const startDraft = () => {
+    const initRosters = {};
+    const initBudgets = {};
+    // Official 2026 nomination order (from Sleeper draft settings)
+    const OFFICIAL_NOM_ORDER = [
+      "Tyler Goslinga", "Greg Mulder", "Steve Vander Molen", "Joshua Van Groningen",
+      "Greg Cady", "Ross Van Groningen", "James Lazette", "Vance Sipma",
+      "Eric Graef", "Matthew Van Groningen", "Trey Hugen", "Aaron Fay"
+    ];
+    const order = OFFICIAL_NOM_ORDER.filter(m => managers2025.includes(m));
+    order.forEach(m => { initRosters[m] = []; initBudgets[m] = 200; });
+    const keeperNames = new Set();
+    editKeepers.forEach(k => {
+      if (initRosters[k.manager]) {
+        initRosters[k.manager].push({ id: 900 + keeperNames.size, name: k.name, pos: k.pos, team: k.team, price: k.price, isKeeper: true });
+        initBudgets[k.manager] -= k.price;
+      }
+      keeperNames.add(k.name.toLowerCase());
+    });
+    const pool = MOCK_PLAYER_POOL.filter(p => !keeperNames.has(p.name.toLowerCase()));
+    setRosters(initRosters);
+    setBudgets(initBudgets);
+    setNomOrder(order);
+    setNomIdx(0);
+    setPlayerPool(pool);
+    setNominations([]);
+    setCurrentNom(null);
+    setChatMessages([]);
+    usedMessagesRef.current = new Set();
+    const keeperLog = editKeepers.map(k => `🔒 ${k.manager} keeps ${k.name} (${k.pos}) for $${k.price}`);
+    setLog([`🎰 Draft started! ${order.length} teams, $200 each. Keepers locked in.`, ...keeperLog, `📢 ${order[0]} nominates first.`]);
+    setPhase("drafting");
+    setTimeout(() => triggerNomination(order, 0, initRosters, initBudgets, pool), 500);
+  };
+
+  // Nomination logic
+  const triggerNomination = (order, idx, currentRosters, currentBudgets, pool) => {
+    const nominator = order[idx % order.length];
+    if ((currentRosters[nominator] || []).length >= TOTAL_ROSTER) {
+      const nextIdx = idx + 1;
+      if (nextIdx >= order.length * TOTAL_ROSTER) { setPhase("complete"); return; }
+      setTimeout(() => triggerNomination(order, nextIdx, currentRosters, currentBudgets, pool), 200);
+      return;
+    }
+    if (nominator === userTeam) {
+      setCurrentNom({ player: null, nominator, currentBid: 0, currentBidder: null, waitingForUser: true });
+      DraftSounds.yourTurn();
+      return;
+    }
+    const bot = botProfiles[nominator];
+    const available = pool.filter(p => p !== null);
+    if (available.length === 0) { setPhase("complete"); return; }
+    let bestPlayer = available[0];
+    let bestScore = -1;
+    available.slice(0, 40).forEach(p => {
+      const posW = bot ? (bot.posAlloc[p.pos] || 0.1) * 4 : 1;
+      const needed = (currentRosters[nominator] || []).filter(r => r.pos === p.pos).length < ({ QB:1, RB:2, WR:2, TE:1, K:1, DEF:1 }[p.pos] || 0);
+      const score = p.value * posW * (needed ? 1.5 : 0.8) + Math.random() * 5;
+      if (score > bestScore) { bestScore = score; bestPlayer = p; }
+    });
+    // Smart opening bid: high-value players open at ~40-60% of value, cheap players at $1
+    const openBid = bestPlayer.value >= 25 ? Math.floor(bestPlayer.value * (0.4 + Math.random() * 0.2)) : bestPlayer.value >= 10 ? Math.floor(bestPlayer.value * 0.3) : 1;
+    setLog(prev => [...prev, `📢 ${nominator} nominates ${bestPlayer.name} (${bestPlayer.pos}) — opening bid $${openBid}`]);
+    setCurrentNom({ player: bestPlayer, nominator, currentBid: openBid, currentBidder: nominator, waitingForUser: false });
+    setBidAmount(openBid + 1);
+    auctionRef.current = { bid: openBid, bidder: nominator, player: bestPlayer, rosters: currentRosters, budgets: currentBudgets, pool, order, idx };
+    resetCountdown(timerSeconds);
+    DraftSounds.nominated();
+    scheduleBotBids(bestPlayer, openBid, nominator, order, currentRosters, currentBudgets, pool);
+  };
+
+  // User nominates a player
+  const userNominate = (player, customPrice) => {
+    const openBid = Math.max(1, Math.min(customPrice || 1, userMaxBid));
+    setLog(prev => [...prev, `📢 ${userTeam} nominates ${player.name} (${player.pos}) — opening bid $${openBid}`]);
+    setCurrentNom({ player, nominator: userTeam, currentBid: openBid, currentBidder: userTeam, waitingForUser: false });
+    setBidAmount(openBid + 1);
+    auctionRef.current = { bid: openBid, bidder: userTeam, player, rosters, budgets, pool: playerPool, order: nomOrder, idx: nomIdx };
+    resetCountdown(timerSeconds);
+    DraftSounds.nominated();
+    scheduleBotBids(player, openBid, userTeam, nomOrder, rosters, budgets, playerPool);
+    setNomPrice(1); // reset for next nomination
+  };
+
+  // User places a bid
+  const userBid = () => {
+    if (!currentNom || !currentNom.player) return;
+    const amount = bidAmount;
+    const slotsRemaining = TOTAL_ROSTER - (rosters[userTeam] || []).length;
+    const maxUserBid = (budgets[userTeam] || 0) - (slotsRemaining - 1);
+    if (amount > maxUserBid) return;
+    if (amount <= auctionRef.current.bid) return;
+    clearBotQueue();
+    auctionRef.current.bid = amount;
+    auctionRef.current.bidder = userTeam;
+    setLog(prev => [...prev, `💰 ${userTeam} bids $${amount}`]);
+    DraftSounds.bid();
+    setCurrentNom(prev => ({ ...prev, currentBid: amount, currentBidder: userTeam }));
+    setBidAmount(amount + 1);
+    resetCountdown(timerSeconds);
+    scheduleBotBids(currentNom.player, amount, userTeam, nomOrder, rosters, budgets, playerPool);
+  };
+
+  // Award player to winner
+  const awardPlayer = (player, finalBid, winner, order, idx, currentRosters, currentBudgets, pool) => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+    if (countdownRef.current) clearInterval(countdownRef.current);
+    clearBotQueue();
+    setCountdown(0);
+    DraftSounds.won();
+    const newRosters = { ...currentRosters, [winner]: [...(currentRosters[winner] || []), { ...player, price: finalBid }] };
+    const newBudgets = { ...currentBudgets, [winner]: (currentBudgets[winner] || 200) - finalBid };
+    const newPool = pool.filter(p => p.id !== player.id);
+    setRosters(newRosters);
+    setBudgets(newBudgets);
+    setPlayerPool(newPool);
+    setNominations(prev => [...prev, { player, price: finalBid, winner }]);
+    setLog(prev => [...prev, `✅ ${winner} wins ${player.name} (${player.pos}) for $${finalBid}`]);
+    setCurrentNom(null);
+    // Generate chat messages for this pick
+    const chatNominator = auctionRef.current.bidder === winner ? winner : (currentNom?.nominator || winner);
+    const chatMsgs = generateChatMessages(player, finalBid, winner, chatNominator, newRosters, newBudgets, TOTAL_ROSTER, usedMessagesRef.current, order, userTeam);
+    // Compute emoji reactions (but don't attach yet — they'll appear with a delay)
+    const spokenManagers = new Set(chatMsgs.map(m => m.manager).filter(Boolean));
+    addEmojiReactions(chatMsgs, order, userTeam, spokenManagers);
+    // Extract reactions before clearing them from messages (we'll add them back with delay)
+    const reactionMap = new Map(); // msgIndex -> reactions[]
+    const msgIds = []; // track assigned IDs so we can patch reactions later
+    chatMsgs.forEach((msg, i) => {
+      if (msg.reactions && msg.reactions.length > 0) {
+        reactionMap.set(i, [...msg.reactions]);
+        msg.reactions = undefined; // strip so they don't render immediately
+      }
+      msgIds.push(Date.now() + i + Math.random());
+    });
+    if (chatMsgs.length > 0) {
+      // Add a system context line first, then stagger personality messages
+      const contextMsg = { manager: "📋", text: `${winner.split(" ")[0]} wins ${player.name} (${player.pos}) — $${finalBid}`, trigger: "system", id: Date.now() - 1 };
+      setChatMessages(prev => [...prev, contextMsg]);
+      chatMsgs.forEach((msg, i) => {
+        setTimeout(() => {
+          setChatMessages(prev => [...prev, { ...msg, id: msgIds[i], pickContext: { player: player.name, pos: player.pos, price: finalBid, winner } }]);
+          // Show bubble above manager avatar
+          if (msg.manager && msg.manager !== "📋") {
+            const bubbleId = Date.now() + Math.random();
+            setActiveBubbles(prev => ({ ...prev, [msg.manager]: { text: msg.text, id: bubbleId } }));
+            // Auto-dismiss bubble after 5 seconds
+            setTimeout(() => {
+              setActiveBubbles(prev => {
+                const copy = { ...prev };
+                if (copy[msg.manager] && copy[msg.manager].id === bubbleId) delete copy[msg.manager];
+                return copy;
+              });
+            }, 5000);
+          }
+        }, 300 + i * 600);
+      });
+      // Schedule reactions to appear 1.5–3.5s after their parent message posts
+      reactionMap.forEach((reactions, msgIdx) => {
+        const parentDelay = 300 + msgIdx * 600;
+        reactions.forEach((reaction, rIdx) => {
+          const reactionDelay = parentDelay + 1500 + Math.random() * 2000 + rIdx * 400;
+          setTimeout(() => {
+            setChatMessages(prev => prev.map(m => {
+              if (m.id === msgIds[msgIdx]) {
+                const existing = m.reactions || [];
+                return { ...m, reactions: [...existing, reaction] };
+              }
+              return m;
+            }));
+          }, reactionDelay);
+        });
+      });
+    }
+    auctionRef.current = { bid: 0, bidder: null, player: null, rosters: newRosters, budgets: newBudgets, pool: newPool, order, idx };
+    const allFull = order.every(m => (newRosters[m] || []).length >= TOTAL_ROSTER);
+    if (allFull || newPool.length === 0) {
+      // Draft ending — apply any remaining chat messages & reactions immediately (no delays)
+      // so the report card has full data available
+      if (chatMsgs.length > 0) {
+        const finalMsgs = chatMsgs.map((msg, i) => {
+          const msgWithId = { ...msg, id: msgIds[i], pickContext: { player: player.name, pos: player.pos, price: finalBid, winner } };
+          const reactions = reactionMap.get(i);
+          if (reactions) msgWithId.reactions = reactions;
+          return msgWithId;
+        });
+        setChatMessages(prev => [...prev, ...finalMsgs]);
+      }
+      setPhase("complete");
+      setLog(prev => [...prev, `🏁 Draft complete! All rosters filled.`]);
+      return;
+    }
+    const nextIdx = idx + 1;
+    setNomIdx(nextIdx);
+    setTimeout(() => triggerNomination(order, nextIdx, newRosters, newBudgets, newPool), 1000);
+  };
+
+  // User passes (award immediately to current high bidder)
+  const userPass = () => {
+    if (!currentNom || !currentNom.player) return;
+    if (timerRef.current) clearTimeout(timerRef.current);
+    if (countdownRef.current) clearInterval(countdownRef.current);
+    clearBotQueue();
+    setCountdown(0);
+    const { bid, bidder, player, rosters: r, budgets: b, pool: p, order, idx } = auctionRef.current;
+    awardPlayer(player, bid, bidder, order, idx, r, b, p);
+  };
+
+  // ── SIMULATE PICKS ──
+  // Runs N picks instantly (or all remaining) without timers, auto-nominating for the user too.
+  const simulatePicks = (count) => {
+    if (simulating) return;
+    setSimulating(true);
+    // Stop any in-progress auction
+    if (timerRef.current) clearTimeout(timerRef.current);
+    if (countdownRef.current) clearInterval(countdownRef.current);
+    clearBotQueue();
+    setCountdown(0);
+    setCurrentNom(null);
+
+    // Start from current state
+    let curRosters = { ...rosters };
+    Object.keys(curRosters).forEach(m => { curRosters[m] = [...(curRosters[m] || [])]; });
+    let curBudgets = { ...budgets };
+    let curPool = [...playerPool];
+    let curIdx = nomIdx;
+    let curNominations = [...nominations];
+    let curLog = [...log];
+    const order = nomOrder;
+    let picks = 0;
+    const maxPicks = count === "all" ? 999 : count;
+    const simChatBatch = []; // collect chat messages from simulated picks
+
+    while (picks < maxPicks) {
+      // Find next nominator who isn't full
+      let nominator = null;
+      let scanned = 0;
+      while (scanned < order.length) {
+        const candidate = order[curIdx % order.length];
+        if ((curRosters[candidate] || []).length < TOTAL_ROSTER) {
+          nominator = candidate;
+          break;
+        }
+        curIdx++;
+        scanned++;
+      }
+      if (!nominator || curPool.length === 0) break;
+
+      // Pick best player for nominator (same logic as bot nomination)
+      const bot = botProfiles[nominator];
+      const available = curPool.filter(p => p !== null);
+      if (available.length === 0) break;
+      let bestPlayer = available[0];
+      let bestScore = -1;
+      available.slice(0, 40).forEach(p => {
+        const posW = bot ? (bot.posAlloc[p.pos] || 0.1) * 4 : 1;
+        const needed = (curRosters[nominator] || []).filter(r => r.pos === p.pos).length < ({ QB:1, RB:2, WR:2, TE:1, K:1, DEF:1 }[p.pos] || 0);
+        const score = p.value * posW * (needed ? 1.5 : 0.8) + Math.random() * 5;
+        if (score > bestScore) { bestScore = score; bestPlayer = p; }
+      });
+
+      // Opening bid
+      const openBid = bestPlayer.value >= 25 ? Math.floor(bestPlayer.value * (0.4 + Math.random() * 0.2)) : bestPlayer.value >= 10 ? Math.floor(bestPlayer.value * 0.3) : 1;
+
+      // Simulate bidding: each bot evaluates and bids in random order until nobody bids more
+      let currentBid = openBid;
+      let currentBidder = nominator;
+      let biddingActive = true;
+      let rounds = 0;
+      while (biddingActive && rounds < 50) {
+        biddingActive = false;
+        rounds++;
+        const bidders = order.filter(m => m !== currentBidder && (curRosters[m] || []).length < TOTAL_ROSTER);
+        const shuffled = [...bidders].sort(() => Math.random() - 0.5);
+        for (const m of shuffled) {
+          const mBot = botProfiles[m] || { posAlloc: { QB:0.15, RB:0.35, WR:0.35, TE:0.10, K:0.02, DEF:0.03 }, aggression: 0.5, starsAndScrubs: 0.5 };
+          const mBudget = curBudgets[m] || 0;
+          const mSlotsLeft = TOTAL_ROSTER - (curRosters[m] || []).length;
+          const mMaxBid = mBudget - (mSlotsLeft - 1); // hard cap: must keep $1 for each remaining slot
+          if (mMaxBid <= currentBid) continue; // can't afford to bid higher
+          const decision = botDecision(mBot, bestPlayer, currentBid, curRosters[m] || [], mBudget, curPool.length);
+          if (decision.willBid && decision.bidTo > currentBid) {
+            const newBid = Math.min(currentBid + Math.ceil(Math.random() * 3 + 1), decision.maxBid, mMaxBid);
+            if (newBid > currentBid) {
+              currentBid = newBid;
+              currentBidder = m;
+              biddingActive = true;
+            }
+          }
+        }
+      }
+
+      // Award pick
+      curRosters[currentBidder] = [...(curRosters[currentBidder] || []), { ...bestPlayer, price: currentBid }];
+      curBudgets[currentBidder] = (curBudgets[currentBidder] || 200) - currentBid;
+      curPool = curPool.filter(p => p.id !== bestPlayer.id);
+      curNominations.push({ player: bestPlayer, price: currentBid, winner: currentBidder });
+      curLog.push(`⚡ ${currentBidder.split(" ")[0]} wins ${bestPlayer.name} (${bestPlayer.pos}) — $${currentBid}`);
+
+      // Generate chat for this simulated pick (so report card has hottest chats)
+      const simChatMsgs = generateChatMessages(bestPlayer, currentBid, currentBidder, nominator, curRosters, curBudgets, TOTAL_ROSTER, usedMessagesRef.current, order, userTeam);
+      if (simChatMsgs.length > 0) {
+        const simSpoken = new Set(simChatMsgs.map(m => m.manager).filter(Boolean));
+        addEmojiReactions(simChatMsgs, order, userTeam, simSpoken);
+        // Keep reactions attached (no delay needed for simulated picks)
+        simChatMsgs.forEach(msg => {
+          simChatBatch.push({ ...msg, id: Date.now() + Math.random() + simChatBatch.length, pickContext: { player: bestPlayer.name, pos: bestPlayer.pos, price: currentBid, winner: currentBidder } });
+        });
+      }
+
+      picks++;
+      curIdx++;
+
+      // Check if all rosters full
+      const allFull = order.every(m => (curRosters[m] || []).length >= TOTAL_ROSTER);
+      if (allFull) break;
+    }
+
+    // Update all state at once
+    setRosters(curRosters);
+    setBudgets(curBudgets);
+    setPlayerPool(curPool);
+    setNominations(curNominations);
+    setNomIdx(curIdx);
+    curLog.push(`⚡ Simulated ${picks} picks.`);
+    setLog(curLog);
+    // Add simulated chat messages (with reactions already attached)
+    if (simChatBatch.length > 0) {
+      setChatMessages(prev => [...prev, ...simChatBatch]);
+    }
+
+    // Check if draft is complete
+    const allFull = order.every(m => (curRosters[m] || []).length >= TOTAL_ROSTER);
+    if (allFull || curPool.length === 0) {
+      setPhase("complete");
+      setLog(prev => [...prev, `🏁 Draft complete! All rosters filled.`]);
+    } else {
+      // Resume normal flow — trigger next nomination
+      auctionRef.current = { bid: 0, bidder: null, player: null, rosters: curRosters, budgets: curBudgets, pool: curPool, order, idx: curIdx };
+      setTimeout(() => triggerNomination(order, curIdx, curRosters, curBudgets, curPool), 300);
+    }
+    setSimulating(false);
+  };
+
+
+  // Auto-scroll log and chat
+  useEffect(() => {
+    if (logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight;
+  }, [log]);
+  useEffect(() => {
+    if (chatRef.current) chatRef.current.scrollTop = chatRef.current.scrollHeight;
+  }, [chatMessages]);
+
+  // Cleanup timers on unmount
+  useEffect(() => { return () => { 
+    if (timerRef.current) clearTimeout(timerRef.current);
+    if (countdownRef.current) clearInterval(countdownRef.current);
+    botQueueRef.current.forEach(t => clearTimeout(t));
+  }; }, []);
+
+  // ── PASSWORD GATE ──
+  if (!draftUnlocked) {
+    return (
+      <div style={{ display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", padding:"80px 20px", textAlign:"center" }}>
+        <div style={{ fontSize:48, marginBottom:16 }}>🔐</div>
+        <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?22:28, color:"#e9c46a", marginBottom:8 }}>Mock Draft Room</div>
+        <div style={{ fontSize:13, color:"#888", marginBottom:24, maxWidth:340 }}>This room contains sensitive draft strategy data. Enter the password to proceed.</div>
+        <div style={{ display:"flex", gap:8, alignItems:"center" }}>
+          <input
+            type="password"
+            value={draftPassword}
+            onChange={e => { setDraftPassword(e.target.value); setDraftPwError(false); }}
+            onKeyDown={e => { if (e.key === "Enter") { if (draftPassword === MOCK_DRAFT_PASSWORD) setDraftUnlocked(true); else setDraftPwError(true); } }}
+            placeholder="Enter password..."
+            style={{ background:"#0d1117", border:`1px solid ${draftPwError ? "#e74c3c" : "#30363d"}`, borderRadius:8, color:"#fff", padding:"10px 16px", fontSize:14, width:200 }}
+          />
+          <button onClick={() => { if (draftPassword === MOCK_DRAFT_PASSWORD) setDraftUnlocked(true); else setDraftPwError(true); }} style={{ background:"#2176d2", border:"none", borderRadius:8, color:"#fff", fontWeight:700, padding:"10px 20px", fontSize:14, cursor:"pointer" }}>Enter</button>
+        </div>
+        {draftPwError && <div style={{ color:"#e74c3c", fontSize:12, marginTop:8 }}>Incorrect password. Try again.</div>}
+      </div>
+    );
+  }
+
+  // ── SETUP PHASE ──
+  if (phase === "setup") {
+    return (
+      <div style={{ display:"flex", flexDirection:"column", gap:24, maxWidth:700, margin:"0 auto" }}>
+        <div style={{ textAlign:"center" }}>
+          <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?28:36, color:"#e9c46a", letterSpacing:2 }}>🎰 Mock Draft Room</div>
+          <div style={{ fontSize:13, color:"#666", marginTop:8 }}>Practice your auction strategy against bot versions of your leaguemates</div>
+        </div>
+
+        <div style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:12, padding:mobile?"16px":"24px", display:"flex", flexDirection:"column", gap:16 }}>
+          <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:16, color:"#2176d2", letterSpacing:1 }}>Draft Settings</div>
+          <div style={{ display:"grid", gridTemplateColumns:mobile?"1fr":"1fr 1fr", gap:12 }}>
+            <div>
+              <div style={{ fontSize:11, color:"#888", marginBottom:4, textTransform:"uppercase", letterSpacing:0.5 }}>Your Team</div>
+              <select value={userTeam} onChange={e => setUserTeam(e.target.value)} style={{ width:"100%", background:"#111", border:"1px solid #333", borderRadius:6, color:"#fff", padding:"8px 10px", fontSize:13 }}>
+                {managers2025.map(m => <option key={m} value={m}>{m}</option>)}
+              </select>
+            </div>
+            <div>
+              <div style={{ fontSize:11, color:"#888", marginBottom:4, textTransform:"uppercase", letterSpacing:0.5 }}>Bid Timer (seconds)</div>
+              <select value={timerSeconds} onChange={e => setTimerSeconds(Number(e.target.value))} style={{ width:"100%", background:"#111", border:"1px solid #333", borderRadius:6, color:"#fff", padding:"8px 10px", fontSize:13 }}>
+                <option value={5}>5s (Blitz)</option>
+                <option value={10}>10s (Quick)</option>
+                <option value={15}>15s (Fast)</option>
+                <option value={20}>20s (Normal)</option>
+              </select>
+            </div>
+          </div>
+          <div style={{ display:"flex", flexWrap:"wrap", gap:8, marginTop:8 }}>
+            <div style={{ background:"#111", borderRadius:6, padding:"6px 12px", fontSize:11, color:"#aaa" }}>12 Teams</div>
+            <div style={{ background:"#111", borderRadius:6, padding:"6px 12px", fontSize:11, color:"#aaa" }}>$200 Budget</div>
+            <div style={{ background:"#111", borderRadius:6, padding:"6px 12px", fontSize:11, color:"#aaa" }}>Half-PPR</div>
+            <div style={{ background:"#111", borderRadius:6, padding:"6px 12px", fontSize:11, color:"#aaa" }}>1QB/2RB/2WR/1TE/1FLX/1K/1DEF/6BN</div>
+          </div>
+        </div>
+
+        {/* Bot Profiles Preview */}
+        <div style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:12, padding:mobile?"16px":"24px", display:"flex", flexDirection:"column", gap:12 }}>
+          <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:16, color:"#f4a261", letterSpacing:1 }}>🤖 Bot Opponents</div>
+          <div style={{ fontSize:12, color:"#666", marginBottom:8 }}>Each bot drafts based on their real historical tendencies from {Object.values(botProfiles).reduce((a,b) => a + b.seasonsPlayed, 0)} total draft seasons</div>
+          <div style={{ display:"grid", gridTemplateColumns:mobile?"1fr":"1fr 1fr", gap:8 }}>
+            {managers2025.filter(m => m !== userTeam).map(m => {
+              const bot = botProfiles[m];
+              if (!bot) return null;
+              const topPos = bot.posPriority[0];
+              const style = bot.starsAndScrubs > 0.6 ? "Stars & Scrubs" : bot.starsAndScrubs < 0.35 ? "Balanced" : "Moderate";
+              return (
+                <div key={m} style={{ background:"#111", borderRadius:8, padding:"10px 12px", borderLeft:`3px solid ${POS_COLOR[topPos] || "#555"}` }}>
+                  <div style={{ fontSize:12, fontWeight:700, color:"#ddd" }}>{m}</div>
+                  <div style={{ fontSize:10, color:"#888", marginTop:3 }}>{style} · {topPos}-first · {bot.seasonsPlayed} seasons</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Editable Keepers */}
+        <div style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:12, padding:mobile?"16px":"24px", display:"flex", flexDirection:"column", gap:12 }}>
+          <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+            <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:16, color:"#2ecc71", letterSpacing:1 }}>🔒 2026 Keepers</div>
+            <button onClick={() => setAddingKeeper(true)} style={{ background:"#2ecc71", border:"none", borderRadius:6, color:"#000", fontSize:11, fontWeight:700, padding:"5px 10px", cursor:"pointer" }}>+ Add Keeper</button>
+          </div>
+          <div style={{ fontSize:12, color:"#666", marginBottom:4 }}>Edit keepers below before starting. Budgets are reduced accordingly.</div>
+
+          {/* Keeper list */}
+          <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
+            {editKeepers.map((k, idx) => (
+              <div key={k.id} style={{ display:"flex", alignItems:"center", gap:8, background:"#111", borderRadius:6, padding:"8px 10px", borderLeft:`3px solid ${POS_COLOR[k.pos] || "#555"}` }}>
+                <span style={{ fontSize:11, fontWeight:700, color:"#ddd", minWidth:mobile?60:90 }}>{(() => { const first = k.manager.split(" ")[0]; const last = k.manager.split(" ")[k.manager.split(" ").length - 1]; if (first === "Greg" || first === "Matthew" || first === "Joshua") return first + " " + last[0]; return first; })()}</span>
+                <span style={{ fontSize:10, color:POS_COLOR[k.pos], fontWeight:600, minWidth:24 }}>{k.pos}</span>
+                <span style={{ fontSize:11, color:"#aaa", flex:1 }}>{k.name} ({k.team})</span>
+                <span style={{ fontSize:11, color:"#2ecc71", fontWeight:700 }}>${k.price}</span>
+                <button onClick={() => setEditKeepers(prev => prev.filter((_, i) => i !== idx))} style={{ background:"none", border:"none", color:"#d42b2b", cursor:"pointer", fontSize:14, padding:"0 4px" }} title="Remove keeper">✕</button>
+              </div>
+            ))}
+            {editKeepers.length === 0 && <div style={{ fontSize:12, color:"#555", fontStyle:"italic", padding:8 }}>No keepers set — all managers start with full $200</div>}
+          </div>
+
+          {/* Managers with no keeper */}
+          {managers2025.filter(m => !editKeepers.find(k => k.manager === m)).length > 0 && (
+            <div style={{ fontSize:11, color:"#555", marginTop:4 }}>
+              <span style={{ color:"#888" }}>No keeper:</span> {managers2025.filter(m => !editKeepers.find(k => k.manager === m)).join(", ")}
+            </div>
+          )}
+
+          {/* Add Keeper Form */}
+          {addingKeeper && (
+            <div style={{ background:"#1a1a1a", borderRadius:8, padding:12, display:"flex", flexDirection:"column", gap:8, marginTop:8, border:"1px solid #333" }}>
+              <div style={{ fontSize:12, color:"#2ecc71", fontWeight:700 }}>Add New Keeper</div>
+              <div style={{ display:"grid", gridTemplateColumns:mobile?"1fr":"1fr 1fr", gap:8 }}>
+                <div>
+                  <div style={{ fontSize:10, color:"#888", marginBottom:2 }}>Manager</div>
+                  <select value={newKeeper.manager} onChange={e => setNewKeeper(p => ({...p, manager:e.target.value}))} style={{ width:"100%", background:"#111", border:"1px solid #333", borderRadius:4, color:"#fff", padding:"6px 8px", fontSize:12 }}>
+                    <option value="">Select manager...</option>
+                    {managers2025.filter(m => !editKeepers.find(k => k.manager === m)).map(m => <option key={m} value={m}>{m}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <div style={{ fontSize:10, color:"#888", marginBottom:2 }}>Player Name</div>
+                  <input value={newKeeper.name} onChange={e => setNewKeeper(p => ({...p, name:e.target.value}))} placeholder="e.g. Patrick Mahomes" style={{ width:"100%", background:"#111", border:"1px solid #333", borderRadius:4, color:"#fff", padding:"6px 8px", fontSize:12, boxSizing:"border-box" }} />
+                </div>
+                <div>
+                  <div style={{ fontSize:10, color:"#888", marginBottom:2 }}>Position</div>
+                  <select value={newKeeper.pos} onChange={e => setNewKeeper(p => ({...p, pos:e.target.value}))} style={{ width:"100%", background:"#111", border:"1px solid #333", borderRadius:4, color:"#fff", padding:"6px 8px", fontSize:12 }}>
+                    {["QB","RB","WR","TE","K","DEF"].map(pos => <option key={pos} value={pos}>{pos}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <div style={{ fontSize:10, color:"#888", marginBottom:2 }}>Team</div>
+                  <input value={newKeeper.team} onChange={e => setNewKeeper(p => ({...p, team:e.target.value.toUpperCase()}))} placeholder="e.g. KC" maxLength={3} style={{ width:"100%", background:"#111", border:"1px solid #333", borderRadius:4, color:"#fff", padding:"6px 8px", fontSize:12, boxSizing:"border-box" }} />
+                </div>
+                <div>
+                  <div style={{ fontSize:10, color:"#888", marginBottom:2 }}>Price ($)</div>
+                  <input type="number" min={1} max={199} value={newKeeper.price} onChange={e => setNewKeeper(p => ({...p, price:Number(e.target.value)}))} style={{ width:"100%", background:"#111", border:"1px solid #333", borderRadius:4, color:"#fff", padding:"6px 8px", fontSize:12, boxSizing:"border-box" }} />
+                </div>
+              </div>
+              <div style={{ display:"flex", gap:8, marginTop:4 }}>
+                <button onClick={() => {
+                  if (newKeeper.manager && newKeeper.name && newKeeper.team && newKeeper.price > 0) {
+                    setEditKeepers(prev => [...prev, { ...newKeeper, id: Date.now() }]);
+                    setNewKeeper({ manager:"", name:"", pos:"RB", team:"", price:1 });
+                    setAddingKeeper(false);
+                  }
+                }} style={{ background:"#2ecc71", border:"none", borderRadius:6, color:"#000", fontSize:11, fontWeight:700, padding:"6px 14px", cursor:"pointer" }}>Save Keeper</button>
+                <button onClick={() => { setAddingKeeper(false); setNewKeeper({ manager:"", name:"", pos:"RB", team:"", price:1 }); }} style={{ background:"#333", border:"none", borderRadius:6, color:"#aaa", fontSize:11, padding:"6px 14px", cursor:"pointer" }}>Cancel</button>
+              </div>
+            </div>
+          )}
+        </div>
+
+        <button onClick={startDraft} style={{ background:"linear-gradient(135deg, #2176d2, #1a5aa0)", border:"none", borderRadius:10, color:"#fff", fontFamily:"'Cooper Black',Georgia,serif", fontSize:18, padding:"14px 0", cursor:"pointer", letterSpacing:2, textTransform:"uppercase" }}>
+          Start Mock Draft
+        </button>
+      </div>
+    );
+  }
+
+  // ── DRAFTING PHASE ── (Sleeper-style full-screen layout)
+  if (phase === "drafting" || phase === "complete") {
+    const filteredPool = playerPool.filter(p => {
+      if (posFilter !== "ALL" && p.pos !== posFilter) return false;
+      if (searchText && !p.name.toLowerCase().includes(searchText.toLowerCase())) return false;
+      return true;
+    }).sort((a,b) => b.value - a.value);
+
+    const userRoster = rosters[userTeam] || [];
+    const userBudget = budgets[userTeam] || 0;
+    const userSlotsLeft = TOTAL_ROSTER - userRoster.length;
+    const userMaxBid = userBudget - (userSlotsLeft - 1);
+
+    // Roster slot layout (rows)
+    const SLOT_ROWS = ["QB","RB","RB","WR","WR","TE","FLEX","K","DEF"];
+
+    // Build roster grid data: for each manager, which player is in each slot
+    const getRosterSlots = (manager) => {
+      const r = rosters[manager] || [];
+      const slots = SLOT_ROWS.map(slot => null);
+      const used = new Set();
+      // Fill required positions first
+      r.forEach(p => {
+        if (used.has(p.id || p.name)) return;
+        for (let i = 0; i < SLOT_ROWS.length; i++) {
+          if (slots[i]) continue;
+          if (SLOT_ROWS[i] === p.pos) { slots[i] = p; used.add(p.id || p.name); break; }
+        }
+      });
+      // Fill FLEX with remaining RB/WR/TE
+      r.forEach(p => {
+        if (used.has(p.id || p.name)) return;
+        const flexIdx = SLOT_ROWS.indexOf("FLEX");
+        if (!slots[flexIdx] && (p.pos === "RB" || p.pos === "WR" || p.pos === "TE")) {
+          slots[flexIdx] = p; used.add(p.id || p.name);
+        }
+      });
+      return slots;
+    };
+
+    return (
+      <div style={{ position:"fixed", top:0, left:0, right:0, bottom:0, background:"#0d1117", zIndex:9999, display:"flex", flexDirection:"column", overflow:"hidden", fontFamily:"Inter, sans-serif" }}>
+
+        {/* ─── TOP BAR: Title + Exit ─── */}
+        <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", padding:"6px 16px", borderBottom:"1px solid #1e2a3a", flexShrink:0, background:"#0d1117" }}>
+          <div style={{ display:"flex", alignItems:"center", gap:12 }}>
+            <button onClick={() => { if(timerRef.current)clearTimeout(timerRef.current);if(countdownRef.current)clearInterval(countdownRef.current);clearBotQueue();setPhase("setup");setLog([]);setChatMessages([]);usedMessagesRef.current=new Set(); }} style={{ background:"none", border:"none", color:"#8b949e", cursor:"pointer", fontSize:18, padding:"4px 8px" }}>←</button>
+            <img src={"data:image/jpeg;base64," + NFL_LOGO_B64} alt="NFL" style={{ width:32, height:32, borderRadius:4, objectFit:"contain" }} />
+            <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:18, color:"#e9c46a", letterSpacing:1 }}>
+              {phase === "complete" ? "🏁 Draft Complete" : "No Fun League"}
+            </div>
+            <div style={{ fontSize:10, color:"#8b949e" }}>{timerSeconds}s Per Bid · 12 Teams · $200</div>
+          </div>
+          <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+            <button onClick={() => { const m = !soundMuted; setSoundMuted(m); DraftSounds.setMuted(m); }} style={{ background:"none", border:"1px solid #30363d", borderRadius:4, color: soundMuted ? "#484f58" : "#e9c46a", cursor:"pointer", fontSize:14, padding:"3px 8px" }}>{soundMuted ? "🔇" : "🔊"}</button>
+            {phase !== "complete" && (
+              <>
+                <button onClick={() => simulatePicks(10)} disabled={simulating} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#6bb3ff", cursor: simulating ? "not-allowed" : "pointer", fontSize:10, fontWeight:600, padding:"3px 8px" }}>⚡ Sim 10</button>
+                <button onClick={() => simulatePicks("all")} disabled={simulating} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#e9c46a", cursor: simulating ? "not-allowed" : "pointer", fontSize:10, fontWeight:600, padding:"3px 8px" }}>⚡ Sim All</button>
+              </>
+            )}
+            {phase === "complete" && <div style={{ fontSize:12, color:"#2ecc71", fontWeight:700 }}>✓ Complete</div>}
+          </div>
+        </div>
+
+        {/* ─── MANAGER STRIP + ROSTER GRID (shared horizontal scroll) ─── */}
+        <div style={{ flex:1, minHeight:0, overflowX:"auto", overflowY:"auto", background:"#0d1117" }}>
+          {/* Manager strip — sticky top */}
+          <div style={{ borderBottom:"1px solid #1e2a3a", background:"#161b22", position:"sticky", top:0, zIndex:50 }}>
+            <div style={{ display:"grid", gridTemplateColumns:`40px repeat(${nomOrder.length}, minmax(85px, 1fr))`, minWidth: nomOrder.length * 85 + 40, paddingTop:8 }}>
+              {/* Empty cell for position label column */}
+              <div></div>
+              {nomOrder.map(m => {
+                const mBudget = budgets[m] || 0;
+                const mRoster = rosters[m] || [];
+                const isUser = m === userTeam;
+                const maxBid = mBudget - (TOTAL_ROSTER - mRoster.length - 1);
+                return (
+                  <div key={m} style={{ display:"flex", flexDirection:"column", alignItems:"center", padding:"4px 4px 6px", borderRight:"1px solid #1e2a3a", background: isUser ? "#1c2d4a" : "transparent" }}>
+                    <div style={{ width:32, height:32, borderRadius:"50%", border: isUser ? "2px solid #2176d2" : "2px solid #30363d", overflow:"hidden", flexShrink:0 }}>
+                      <img src={MOCK_DRAFT_AVATAR_URL(m)} alt="" style={{ width:"100%", height:"100%", objectFit:"cover" }} />
+                    </div>
+                    <div style={{ fontSize:9, color: isUser ? "#6bb3ff" : "#8b949e", marginTop:2, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis", maxWidth:75 }}>{m === "Greg Mulder" ? "Greg M" : m === "Greg Cady" ? "Greg C" : m.split(" ")[0]}</div>
+                    <div style={{ fontSize:9, color:"#8b949e" }}>MAX: <span style={{ color:"#2ecc71", fontWeight:700 }}>${maxBid > 0 ? maxBid : 0}</span></div>
+                    <div style={{ fontSize:9, color:"#8b949e" }}>${mBudget} · {mRoster.length}🏷</div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Roster grid */}
+          <div style={{ display:"grid", gridTemplateColumns:`40px repeat(${nomOrder.length}, minmax(85px, 1fr))`, minWidth: nomOrder.length * 85 + 40 }}>
+            {/* Header row — slot labels */}
+            {SLOT_ROWS.map((slot, rowIdx) => (
+              <React.Fragment key={rowIdx}>
+                <div style={{ padding:"4px 8px", fontSize:10, color:"#8b949e", fontWeight:700, borderBottom:"1px solid #1e2a3a", borderRight:"1px solid #1e2a3a", display:"flex", alignItems:"center", background:"#161b22", position:"sticky", left:0, zIndex:2 }}>{slot}</div>
+                {nomOrder.map(m => {
+                  const slots = getRosterSlots(m);
+                  const player = slots[rowIdx];
+                  const isUser = m === userTeam;
+                  return (
+                    <div key={m+rowIdx} style={{ padding:"3px 6px", fontSize:10, borderBottom:"1px solid #1e2a3a", borderRight:"1px solid #141a22", background: player ? (isUser ? "#1c2d4a" : "#161b22") : "transparent", minHeight:28, display:"flex", alignItems:"center" }}>
+                      {player ? (
+                        <div>
+                          <span style={{ color: isUser ? "#6bb3ff" : "#c9d1d9", fontWeight:600, fontSize:10 }}>{player.name.length > 14 ? player.name.substring(0,12)+"…" : player.name}</span>
+                          <span style={{ color:"#2ecc71", fontSize:9, marginLeft:4 }}>${player.price}</span>
+                          {player.isKeeper && <span style={{ color:"#e9c46a", fontSize:8, marginLeft:3 }}>🔒</span>}
+                        </div>
+                      ) : (
+                        <span style={{ color:"#30363d", fontSize:9 }}>{SLOT_ROWS[rowIdx]}</span>
+                      )}
+                    </div>
+                  );
+                })}
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+
+        {/* ─── BID BAR (always visible) ─── */}
+        <div style={{ display:"flex", alignItems:"center", justifyContent:"center", gap:16, padding:"8px 16px", borderTop:"1px solid #1e2a3a", background:"#161b22", flexShrink:0 }}>
+          {currentNom && currentNom.player ? (
+            <>
+              <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+                <span style={{ background:POS_COLOR[currentNom.player.pos], color:"#fff", fontSize:9, fontWeight:700, padding:"2px 5px", borderRadius:3 }}>{currentNom.player.pos}</span>
+                <span style={{ fontSize:14, fontWeight:700, color:"#c9d1d9" }}>{currentNom.player.name}</span>
+                <span style={{ fontSize:10, color:"#8b949e" }}>{currentNom.player.team} · ADP ${currentNom.player.value}</span>
+              </div>
+              <div style={{ display:"flex", alignItems:"center", gap:6 }}>
+                <div style={{ fontSize:10, color:"#8b949e" }}>Nom: {currentNom.nominator.split(" ")[0]}</div>
+                <div style={{ width:1, height:20, background:"#30363d" }}></div>
+                <button onClick={() => setBidAmount(Math.max(currentNom.currentBid + 1, bidAmount - 1))} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#c9d1d9", width:26, height:26, cursor:"pointer", fontSize:13 }}>-</button>
+                <div style={{ background:"#0d1117", border:"1px solid #30363d", borderRadius:4, padding:"4px 12px", color:"#2ecc71", fontSize:16, fontWeight:700, minWidth:50, textAlign:"center" }}>${bidAmount}</div>
+                <button onClick={() => setBidAmount(Math.min(userMaxBid, bidAmount + 1))} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#c9d1d9", width:26, height:26, cursor:"pointer", fontSize:13 }}>+</button>
+              </div>
+              <div style={{ display:"flex", alignItems:"center", gap:4 }}>
+                <div style={{ textAlign:"center", minWidth:60 }}>
+                  <div style={{ fontSize:20, fontWeight:700, color:"#2ecc71", fontFamily:"monospace" }}>${currentNom.currentBid}</div>
+                  <div style={{ fontSize:9, color:"#8b949e" }}>High: {currentNom.currentBidder === "Greg Mulder" ? "Greg M" : currentNom.currentBidder === "Greg Cady" ? "Greg C" : currentNom.currentBidder?.split(" ")[0]}</div>
+                </div>
+                {countdown > 0 && <div style={{ fontSize:16, color: countdown <= 5 ? "#f85149" : "#e9c46a", fontWeight:700, fontFamily:"monospace", marginLeft:8 }}>⏱{countdown}s</div>}
+              </div>
+              {phase !== "complete" && countdown > 0 && (
+                <div style={{ display:"flex", gap:6 }}>
+                  <button onClick={userBid} disabled={currentNom.currentBidder === userTeam || bidAmount <= currentNom.currentBid || bidAmount > userMaxBid} style={{ background: currentNom.currentBidder !== userTeam && bidAmount > currentNom.currentBid && bidAmount <= userMaxBid ? "#238636" : "#21262d", border:"1px solid #30363d", borderRadius:6, color: currentNom.currentBidder === userTeam ? "#484f58" : "#fff", fontSize:12, fontWeight:700, padding:"6px 16px", cursor: currentNom.currentBidder !== userTeam && bidAmount > currentNom.currentBid ? "pointer" : "not-allowed" }}>{currentNom.currentBidder === userTeam ? "LEADING" : `BID $${bidAmount}`}</button>
+                  <button onClick={userPass} disabled={currentNom.currentBidder === userTeam} style={{ background: currentNom.currentBidder === userTeam ? "#21262d" : "#da3633", border:"1px solid #30363d", borderRadius:6, color: currentNom.currentBidder === userTeam ? "#484f58" : "#fff", fontSize:12, padding:"6px 12px", cursor: currentNom.currentBidder === userTeam ? "not-allowed" : "pointer" }}>{currentNom.currentBidder === userTeam ? "LEADING" : "PASS"}</button>
+                </div>
+              )}
+            </>
+          ) : currentNom && currentNom.waitingForUser ? (
+            <div style={{ fontSize:13, color:"#6bb3ff", fontWeight:600 }}>Your turn to nominate — select a player below</div>
+          ) : (
+            <div style={{ fontSize:12, color:"#484f58" }}>{phase === "complete" ? "Draft complete!" : "Waiting for nomination..."}</div>
+          )}
+        </div>
+
+        {/* ─── BOTTOM PANEL (collapsible, two-column: players/results left, chat right) ─── */}
+        <div style={{ flexShrink:0, borderTop:"1px solid #1e2a3a", background:"#0d1117" }}>
+          {/* Toggle bar */}
+          <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", padding:"4px 16px", borderBottom: panelOpen ? "1px solid #1e2a3a" : "none" }}>
+            <div style={{ display:"flex", gap:0 }}>
+              {[{k:"pool",l:"PLAYERS"},{k:"results",l:"RESULTS"}].map(t => (
+                <button key={t.k} onClick={() => { setPanelTab(t.k); if(!panelOpen) setPanelOpen(true); }} style={{ background:"transparent", border:"none", borderBottom: panelTab === t.k && panelOpen ? "2px solid #6bb3ff" : "2px solid transparent", color: panelTab === t.k ? "#6bb3ff" : "#8b949e", fontSize:11, fontWeight:700, padding:"6px 16px", cursor:"pointer", letterSpacing:0.5 }}>{t.l}</button>
+              ))}
+            </div>
+            <button onClick={() => setPanelOpen(p => !p)} style={{ background:"none", border:"none", color:"#8b949e", cursor:"pointer", fontSize:16, padding:"4px 8px" }}>{panelOpen ? "▼" : "▲"}</button>
+          </div>
+
+          {/* Two-column content */}
+          {panelOpen && (
+            <div style={{ display:"flex", height:220 }}>
+              {/* Left 2/3: Players or Results */}
+              <div style={{ flex:2, overflowY:"auto", padding:"8px 12px", borderRight:"1px solid #1e2a3a" }}>
+                {/* PLAYERS */}
+                {panelTab === "pool" && (
+                  <div>
+                    <div style={{ display:"flex", gap:4, marginBottom:6, alignItems:"center" }}>
+                      <input value={searchText} onChange={e => setSearchText(e.target.value)} placeholder="Find player..." style={{ background:"#0d1117", border:"1px solid #30363d", borderRadius:6, color:"#c9d1d9", padding:"4px 8px", fontSize:11, width:140 }} />
+                      {["ALL","QB","RB","WR","TE","K","DEF"].map(p => (
+                        <button key={p} onClick={() => setPosFilter(p)} style={{ background: posFilter === p ? "#2176d2" : "#21262d", border:"1px solid #30363d", borderRadius:4, color:"#fff", fontSize:9, padding:"2px 6px", cursor:"pointer" }}>{p}</button>
+                      ))}
+                    </div>
+                    <table style={{ width:"100%", borderCollapse:"collapse", fontSize:11 }}>
+                      <thead>
+                        <tr style={{ borderBottom:"1px solid #1e2a3a" }}>
+                          <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"left", width:"40%" }}>Player</th>
+                          <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"center", width:"15%" }}>Pos</th>
+                          <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"center", width:"15%" }}>Team</th>
+                          <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"right", width:"15%" }}>$</th>
+                          {currentNom && currentNom.waitingForUser && <th style={{ padding:"2px 4px", width:"15%" }}></th>}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {filteredPool.slice(0, 40).map(p => (
+                          <tr key={p.id} style={{ borderBottom:"1px solid #141a22" }}>
+                            <td style={{ padding:"2px 4px", color:"#c9d1d9", fontSize:11 }}>{p.name}</td>
+                            <td style={{ padding:"2px 4px", textAlign:"center" }}><span style={{ color:POS_COLOR[p.pos], fontWeight:600, fontSize:10 }}>{p.pos}</span></td>
+                            <td style={{ padding:"2px 4px", color:"#8b949e", textAlign:"center", fontSize:10 }}>{p.team}</td>
+                            <td style={{ padding:"2px 4px", color:"#e9c46a", textAlign:"right", fontWeight:600 }}>${p.value}</td>
+                            {currentNom && currentNom.waitingForUser && (
+                              <td style={{ padding:"2px 4px", textAlign:"center", whiteSpace:"nowrap" }}>
+                                <input type="number" min={1} max={200} value={nomPrice} onChange={e => setNomPrice(Math.max(1, Number(e.target.value)))} style={{ width:36, background:"#0d1117", border:"1px solid #30363d", borderRadius:3, color:"#2ecc71", fontSize:9, padding:"2px 3px", textAlign:"center", marginRight:3 }} />
+                                <button onClick={() => userNominate(p, nomPrice)} style={{ background:"#238636", border:"none", borderRadius:4, color:"#fff", fontSize:9, padding:"2px 6px", cursor:"pointer" }}>Nom</button>
+                              </td>
+                            )}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+
+                {/* RESULTS */}
+                {panelTab === "results" && (
+                  <table style={{ width:"100%", borderCollapse:"collapse", fontSize:11 }}>
+                    <thead>
+                      <tr style={{ borderBottom:"1px solid #1e2a3a" }}>
+                        <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"left" }}>#</th>
+                        <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"left" }}>Player</th>
+                        <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"center" }}>Pos</th>
+                        <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"right" }}>$</th>
+                        <th style={{ padding:"2px 4px", color:"#8b949e", textAlign:"left" }}>Manager</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {nominations.slice().reverse().map((n, i) => (
+                        <tr key={i} style={{ borderBottom:"1px solid #141a22", background: n.winner === userTeam ? "#1c2d4a22" : "transparent" }}>
+                          <td style={{ padding:"2px 4px", color:"#484f58" }}>{nominations.length - i}</td>
+                          <td style={{ padding:"2px 4px", color:"#c9d1d9" }}>{n.player.name}</td>
+                          <td style={{ padding:"2px 4px", textAlign:"center" }}><span style={{ color:POS_COLOR[n.player.pos], fontWeight:600 }}>{n.player.pos}</span></td>
+                          <td style={{ padding:"2px 4px", color:"#2ecc71", textAlign:"right", fontWeight:700 }}>${n.price}</td>
+                          <td style={{ padding:"2px 4px", color: n.winner === userTeam ? "#6bb3ff" : "#8b949e" }}>{n.winner === "Greg Mulder" ? "Greg M" : n.winner === "Greg Cady" ? "Greg C" : n.winner.split(" ")[0]}</td>
+                        </tr>
+                      ))}
+                      {nominations.length === 0 && <tr><td colSpan={5} style={{ padding:16, color:"#30363d", textAlign:"center" }}>Picks will appear here...</td></tr>}
+                    </tbody>
+                  </table>
+                )}
+              </div>
+
+              {/* Right 1/3: Chat (always visible) */}
+              <div ref={chatRef} style={{ flex:1, overflowY:"auto", padding:"8px 12px" }}>
+                <div style={{ fontSize:10, color:"#8b949e", fontWeight:700, letterSpacing:0.5, marginBottom:6 }}>💬 DRAFT CHAT</div>
+                {chatMessages.length === 0 && <div style={{ fontSize:10, color:"#30363d", fontStyle:"italic" }}>Chat will come alive once picks start...</div>}
+                {chatMessages.map((msg) => (
+                  <div key={msg.id} style={{ fontSize:11, padding: msg.trigger === "system" ? "4px 0 2px" : "3px 0", lineHeight:1.4 }}>
+                    {msg.trigger === "system" ? (
+                      <div style={{ color:"#484f58", fontStyle:"italic", fontSize:9, borderTop:"1px solid #1e2a3a", paddingTop:4, marginTop:4 }}>{msg.text}</div>
+                    ) : (
+                      <div style={{ display:"flex", alignItems:"flex-start", gap:5 }}>
+                        <img src={MOCK_DRAFT_AVATAR_URL(msg.manager)} alt="" style={{ width:18, height:18, borderRadius:"50%", objectFit:"cover", flexShrink:0, marginTop:1 }} />
+                        <div style={{ minWidth:0 }}>
+                          {msg.replyTo && (
+                            <div style={{ fontSize:9, color:"#6b7280", borderLeft:"2px solid #30363d", paddingLeft:6, marginBottom:2, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
+                              ↩ <span style={{ fontWeight:600 }}>{msg.replyTo.manager === "Greg Mulder" ? "Greg M" : msg.replyTo.manager === "Greg Cady" ? "Greg C" : msg.replyTo.manager.split(" ")[0]}</span>: {msg.replyTo.text.length > 40 ? msg.replyTo.text.substring(0, 40) + "…" : msg.replyTo.text}
+                            </div>
+                          )}
+                          <div>
+                            <span style={{ fontWeight:700, color:"#e9c46a", marginRight:5, fontSize:10 }}>{msg.manager === "Greg Mulder" ? "Greg M" : msg.manager === "Greg Cady" ? "Greg C" : msg.manager.split(" ")[0]}:</span>
+                            <span style={{ color:"#c9d1d9" }}>{msg.text}</span>
+                          </div>
+                          {msg.reactions && msg.reactions.length > 0 && (
+                            <div style={{ display:"flex", gap:3, marginTop:2, flexWrap:"wrap" }}>
+                              {Object.entries(msg.reactions.reduce((acc, r) => { acc[r.emoji] = (acc[r.emoji] || 0) + 1; return acc; }, {})).map(([emoji, count]) => (
+                                <span key={emoji} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:10, padding:"1px 5px", fontSize:10, cursor:"default" }} title={msg.reactions.filter(r => r.emoji === emoji).map(r => r.manager.split(" ")[0]).join(", ")}>
+                                  {emoji}{count > 1 ? <span style={{ color:"#8b949e", marginLeft:2, fontSize:9 }}>{count}</span> : ""}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+
+        {/* Draft complete overlay — Draft Report Card */}
+        {phase === "complete" && (() => {
+          const grades = generateDraftGrades(nominations, rosters, budgets, playerPool);
+          const gradeColor = (g) => g.startsWith("A") ? "#2ecc71" : g.startsWith("B") ? "#6bb3ff" : g.startsWith("C") ? "#e9c46a" : g.startsWith("D") ? "#e67e22" : "#e74c3c";
+
+          // ── HIGHLIGHTS DATA ──
+          // Biggest steal & overpay by position
+          const allPicks = nominations.map(n => ({ ...n, diff: n.player.value - n.price }));
+          const positions = ["QB", "RB", "WR", "TE", "K", "DEF"];
+          const stealsByPos = {};
+          const overpaysByPos = {};
+          positions.forEach(pos => {
+            const posPicks = allPicks.filter(p => p.player.pos === pos);
+            if (posPicks.length > 0) {
+              stealsByPos[pos] = posPicks.reduce((best, p) => p.diff > best.diff ? p : best, posPicks[0]);
+              overpaysByPos[pos] = posPicks.reduce((worst, p) => p.diff < worst.diff ? p : worst, posPicks[0]);
+            }
+          });
+          // Overall biggest steal & overpay
+          const biggestStealOverall = allPicks.reduce((best, p) => p.diff > best.diff ? p : best, allPicks[0]);
+          const biggestOverpayOverall = allPicks.reduce((worst, p) => p.diff < worst.diff ? p : worst, allPicks[0]);
+          // Most expensive pick
+          const mostExpensive = allPicks.reduce((best, p) => p.price > best.price ? p : best, allPicks[0]);
+          // Cheapest non-$1 pick
+          const cheapestStarter = allPicks.filter(p => p.player.value >= 5).reduce((best, p) => p.price < best.price ? p : best, allPicks.filter(p => p.player.value >= 5)[0] || allPicks[0]);
+          // Top-3 most-reacted chat messages (hot takes or regular)
+          const reactedMsgs = chatMessages.filter(m => m.reactions && m.reactions.length > 0).sort((a, b) => b.reactions.length - a.reactions.length).slice(0, 3);
+          // Draft stats
+          const totalPicks = nominations.length;
+          const avgPrice = Math.round(nominations.reduce((s, n) => s + n.price, 0) / (totalPicks || 1));
+          const totalSteals = allPicks.filter(p => p.diff > 0 && p.price < p.player.value * 0.8).length;
+          const totalOverpays = allPicks.filter(p => p.price > p.player.value * 1.2).length;
+          // Bidding war: pick with highest price-over-ADP ratio (that's not a $1 player)
+          const biddingWar = allPicks.filter(p => p.player.value >= 5).reduce((worst, p) => (p.price / p.player.value) > (worst.price / worst.player.value) ? p : worst, allPicks.filter(p => p.player.value >= 5)[0] || allPicks[0]);
+          // Most active chatter
+          const chatCounts = {};
+          chatMessages.filter(m => m.trigger !== "system" && m.manager !== "📋").forEach(m => { chatCounts[m.manager] = (chatCounts[m.manager] || 0) + 1; });
+          const topChatter = Object.entries(chatCounts).sort((a, b) => b[1] - a[1])[0];
+
+          return (
+          <div style={{ position:"absolute", inset:0, background:"rgba(0,0,0,0.85)", zIndex:100, display:"flex", alignItems:"center", justifyContent:"center", padding:16 }}>
+            <div style={{ background:"#161b22", border:"2px solid #e9c46a", borderRadius:16, padding:mobile?16:32, maxWidth:750, width:"100%", maxHeight:"85vh", display:"flex", flexDirection:"column" }}>
+              <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?20:28, color:"#e9c46a", textAlign:"center", marginBottom:4 }}>📝 Draft Report Card</div>
+
+              {/* Tab switcher */}
+              <div style={{ display:"flex", justifyContent:"center", gap:0, marginBottom:12 }}>
+                <button onClick={() => setReportTab("grades")} style={{ background:"transparent", border:"none", borderBottom: reportTab === "grades" ? "2px solid #e9c46a" : "2px solid transparent", color: reportTab === "grades" ? "#e9c46a" : "#8b949e", fontSize:12, fontWeight:700, padding:"8px 20px", cursor:"pointer", letterSpacing:0.5 }}>GRADES</button>
+                <button onClick={() => setReportTab("highlights")} style={{ background:"transparent", border:"none", borderBottom: reportTab === "highlights" ? "2px solid #e9c46a" : "2px solid transparent", color: reportTab === "highlights" ? "#e9c46a" : "#8b949e", fontSize:12, fontWeight:700, padding:"8px 20px", cursor:"pointer", letterSpacing:0.5 }}>HIGHLIGHTS</button>
+              </div>
+
+              <div style={{ overflowY:"auto", flex:1 }}>
+                {/* GRADES TAB */}
+                {reportTab === "grades" && (
+                  <div>
+                    <div style={{ fontSize:11, color:"#8b949e", textAlign:"center", marginBottom:12 }}>Final grades based on value acquired vs. money spent</div>
+                    <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
+                      {grades.map((g, i) => (
+                        <div key={g.manager} style={{ background:"#0d1117", border:"1px solid #21262d", borderRadius:10, padding:mobile?"10px":"12px 16px", display:"flex", gap:12, alignItems:"flex-start" }}>
+                          <div style={{ display:"flex", flexDirection:"column", alignItems:"center", minWidth:50 }}>
+                            <img src={MOCK_DRAFT_AVATAR_URL(g.manager)} alt="" style={{ width:36, height:36, borderRadius:"50%", objectFit:"cover", border:`2px solid ${gradeColor(g.grade)}` }} />
+                            <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:22, color:gradeColor(g.grade), marginTop:4 }}>{g.grade}</div>
+                          </div>
+                          <div style={{ flex:1, minWidth:0 }}>
+                            <div style={{ fontWeight:700, color:"#c9d1d9", fontSize:13, marginBottom:3 }}>{g.manager}</div>
+                            <div style={{ fontSize:11, color:"#8b949e", lineHeight:1.5, marginBottom:6 }}>{g.writeup}</div>
+                            <div style={{ display:"flex", gap:8, flexWrap:"wrap", fontSize:10 }}>
+                              <span style={{ color:"#2ecc71" }}>📊 ADP Worth: ${g.totalValue}</span>
+                              <span style={{ color:"#e74c3c" }}>💸 Paid: ${g.totalSpent}</span>
+                              <span style={{ color: g.totalValue > g.totalSpent ? "#2ecc71" : "#e74c3c" }}>{g.totalValue > g.totalSpent ? "📈" : "📉"} {g.totalValue > g.totalSpent ? "+" : ""}${g.totalValue - g.totalSpent} surplus</span>
+                              <span style={{ color:"#2ecc71" }}>🎯 Steals: {g.steals}</span>
+                              <span style={{ color:"#e67e22" }}>📈 Overpays: {g.overpays}</span>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* HIGHLIGHTS TAB */}
+                {reportTab === "highlights" && (
+                  <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
+                    {/* Draft Overview Stats */}
+                    <div style={{ background:"#0d1117", border:"1px solid #21262d", borderRadius:10, padding:"12px 16px" }}>
+                      <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:14, color:"#6bb3ff", marginBottom:8 }}>📊 Draft Overview</div>
+                      <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr", gap:8, fontSize:11 }}>
+                        <div style={{ textAlign:"center" }}><div style={{ fontSize:18, fontWeight:700, color:"#c9d1d9" }}>{totalPicks}</div><div style={{ color:"#8b949e", fontSize:9 }}>Total Picks</div></div>
+                        <div style={{ textAlign:"center" }}><div style={{ fontSize:18, fontWeight:700, color:"#2ecc71" }}>${avgPrice}</div><div style={{ color:"#8b949e", fontSize:9 }}>Avg Price</div></div>
+                        <div style={{ textAlign:"center" }}><div style={{ fontSize:18, fontWeight:700, color:"#2ecc71" }}>{totalSteals}</div><div style={{ color:"#8b949e", fontSize:9 }}>Total Steals</div></div>
+                        <div style={{ textAlign:"center" }}><div style={{ fontSize:18, fontWeight:700, color:"#e67e22" }}>{totalOverpays}</div><div style={{ color:"#8b949e", fontSize:9 }}>Total Overpays</div></div>
+                      </div>
+                    </div>
+
+                    {/* Superlatives */}
+                    <div style={{ background:"#0d1117", border:"1px solid #21262d", borderRadius:10, padding:"12px 16px" }}>
+                      <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:14, color:"#6bb3ff", marginBottom:8 }}>🏆 Draft Superlatives</div>
+                      <div style={{ display:"flex", flexDirection:"column", gap:6, fontSize:11 }}>
+                        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", padding:"4px 0", borderBottom:"1px solid #1e2a3a" }}>
+                          <span style={{ color:"#8b949e" }}>🔥 Biggest Steal</span>
+                          <span style={{ color:"#2ecc71", fontWeight:600 }}>{biggestStealOverall.player.name} — ${biggestStealOverall.price} <span style={{ color:"#484f58" }}>(ADP ${biggestStealOverall.player.value})</span> → {biggestStealOverall.winner.split(" ")[0]}</span>
+                        </div>
+                        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", padding:"4px 0", borderBottom:"1px solid #1e2a3a" }}>
+                          <span style={{ color:"#8b949e" }}>💀 Biggest Overpay</span>
+                          <span style={{ color:"#e74c3c", fontWeight:600 }}>{biggestOverpayOverall.player.name} — ${biggestOverpayOverall.price} <span style={{ color:"#484f58" }}>(ADP ${biggestOverpayOverall.player.value})</span> → {biggestOverpayOverall.winner.split(" ")[0]}</span>
+                        </div>
+                        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", padding:"4px 0", borderBottom:"1px solid #1e2a3a" }}>
+                          <span style={{ color:"#8b949e" }}>💸 Most Expensive Pick</span>
+                          <span style={{ color:"#e9c46a", fontWeight:600 }}>{mostExpensive.player.name} — ${mostExpensive.price} → {mostExpensive.winner.split(" ")[0]}</span>
+                        </div>
+                        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", padding:"4px 0", borderBottom:"1px solid #1e2a3a" }}>
+                          <span style={{ color:"#8b949e" }}>⚔️ Biggest Bidding War</span>
+                          <span style={{ color:"#f85149", fontWeight:600 }}>{biddingWar.player.name} — ${biddingWar.price} <span style={{ color:"#484f58" }}>(ADP ${biddingWar.player.value}, {Math.round(biddingWar.price / biddingWar.player.value * 100)}%)</span> → {biddingWar.winner.split(" ")[0]}</span>
+                        </div>
+                        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", padding:"4px 0", borderBottom:"1px solid #1e2a3a" }}>
+                          <span style={{ color:"#8b949e" }}>🤫 Quietest Steal (starter)</span>
+                          <span style={{ color:"#2ecc71", fontWeight:600 }}>{cheapestStarter.player.name} — ${cheapestStarter.price} <span style={{ color:"#484f58" }}>(ADP ${cheapestStarter.player.value})</span> → {cheapestStarter.winner.split(" ")[0]}</span>
+                        </div>
+                        {topChatter && (
+                          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", padding:"4px 0" }}>
+                            <span style={{ color:"#8b949e" }}>🗣️ Most Active Chatter</span>
+                            <span style={{ color:"#e9c46a", fontWeight:600 }}>{topChatter[0].split(" ")[0]} ({topChatter[1]} messages)</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Steal & Overpay by Position */}
+                    <div style={{ background:"#0d1117", border:"1px solid #21262d", borderRadius:10, padding:"12px 16px" }}>
+                      <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:14, color:"#6bb3ff", marginBottom:8 }}>📍 Best & Worst by Position</div>
+                      <table style={{ width:"100%", borderCollapse:"collapse", fontSize:11 }}>
+                        <thead>
+                          <tr style={{ borderBottom:"1px solid #1e2a3a" }}>
+                            <th style={{ padding:"4px 6px", color:"#8b949e", textAlign:"left", fontSize:10 }}>Pos</th>
+                            <th style={{ padding:"4px 6px", color:"#2ecc71", textAlign:"left", fontSize:10 }}>🎯 Best Value</th>
+                            <th style={{ padding:"4px 6px", color:"#e74c3c", textAlign:"left", fontSize:10 }}>📈 Worst Overpay</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {positions.filter(pos => stealsByPos[pos]).map(pos => (
+                            <tr key={pos} style={{ borderBottom:"1px solid #141a22" }}>
+                              <td style={{ padding:"4px 6px", fontWeight:700, color:POS_COLOR[pos] }}>{pos}</td>
+                              <td style={{ padding:"4px 6px", color:"#c9d1d9" }}>
+                                {stealsByPos[pos].player.name} <span style={{ color:"#2ecc71" }}>${stealsByPos[pos].price}</span> <span style={{ color:"#484f58" }}>(ADP ${stealsByPos[pos].player.value})</span>
+                              </td>
+                              <td style={{ padding:"4px 6px", color:"#c9d1d9" }}>
+                                {overpaysByPos[pos].player.name} <span style={{ color:"#e74c3c" }}>${overpaysByPos[pos].price}</span> <span style={{ color:"#484f58" }}>(ADP ${overpaysByPos[pos].player.value})</span>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+
+                    {/* Top Reacted Chat Messages */}
+                    {reactedMsgs.length > 0 && (
+                      <div style={{ background:"#0d1117", border:"1px solid #21262d", borderRadius:10, padding:"12px 16px" }}>
+                        <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:14, color:"#6bb3ff", marginBottom:8 }}>🔥 Hottest Chat Messages</div>
+                        <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+                          {reactedMsgs.map((msg, i) => (
+                            <div key={msg.id} style={{ background:"#161b22", border:"1px solid #21262d", borderRadius:8, padding:"8px 12px" }}>
+                              <div style={{ display:"flex", alignItems:"center", gap:6, marginBottom:4 }}>
+                                <span style={{ fontSize:12 }}>{i === 0 ? "🥇" : i === 1 ? "🥈" : "🥉"}</span>
+                                <img src={MOCK_DRAFT_AVATAR_URL(msg.manager)} alt="" style={{ width:16, height:16, borderRadius:"50%", objectFit:"cover" }} />
+                                <span style={{ fontWeight:700, color:"#e9c46a", fontSize:10 }}>{msg.manager === "Greg Mulder" ? "Greg M" : msg.manager === "Greg Cady" ? "Greg C" : msg.manager.split(" ")[0]}</span>
+                                <span style={{ color:"#484f58", fontSize:9 }}>({msg.reactions.length} reactions)</span>
+                              </div>
+                              {msg.pickContext && (
+                                <div style={{ fontSize:9, color:"#6b7280", marginBottom:3, fontStyle:"italic" }}>
+                                  Re: {msg.pickContext.winner.split(" ")[0]} wins {msg.pickContext.player} ({msg.pickContext.pos}) — ${msg.pickContext.price}
+                                </div>
+                              )}
+                              <div style={{ fontSize:11, color:"#c9d1d9", marginBottom:4 }}>{msg.text}</div>
+                              <div style={{ display:"flex", gap:3, flexWrap:"wrap" }}>
+                                {Object.entries(msg.reactions.reduce((acc, r) => { acc[r.emoji] = (acc[r.emoji] || 0) + 1; return acc; }, {})).map(([emoji, count]) => (
+                                  <span key={emoji} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:10, padding:"1px 5px", fontSize:10 }}>
+                                    {emoji}{count > 1 ? <span style={{ color:"#8b949e", marginLeft:2, fontSize:9 }}>{count}</span> : ""}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+
+              <div style={{ display:"flex", gap:12, justifyContent:"center", marginTop:20 }}>
+                <button onClick={() => { setPhase("setup"); setLog([]); setNominations([]); setChatMessages([]); usedMessagesRef.current = new Set(); }} style={{ background:"#238636", border:"none", borderRadius:8, color:"#fff", fontSize:14, fontWeight:600, padding:"10px 24px", cursor:"pointer" }}>Draft Again</button>
+                <button onClick={() => { setPhase("drafting"); setReportTab("grades"); }} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:8, color:"#c9d1d9", fontSize:14, fontWeight:600, padding:"10px 24px", cursor:"pointer" }}>Back to Board</button>
+              </div>
+            </div>
+          </div>
+          );
+        })()}
+      </div>
+    );
+  }
+
+  return null;
+}
+
+
+
+
 function DraftTab() {
   const mobile=useMobile();
   const [section,setSection]=useState("home");
@@ -67810,12 +75843,13 @@ export default function App() {
         })()}
 
         {/* ── NFL ROUTING ── keep all NFL tab renders between these markers ── */}
-        {activeTab === "current"     && <CurrentSeasonTab   key={tabKey} />}
+        {activeTab === "current"     && <CurrentSeasonTab   key={tabKey} onMockDraft={() => setActiveTab("mockdraft")} />}
         {activeTab === "season"      && <SeasonExplorerTab  key={tabKey} pendingYear={pendingSeasonYear} />}
         {activeTab === "leaderboard" && <LeaderboardTab    key={tabKey} />}
         {activeTab === "vault"       && <VaultTab          key={tabKey} />}
         {activeTab === "playoffs"    && <PlayoffHistoryTab key={tabKey} pendingSection={pendingPlayoffSection} />}
         {activeTab === "managers"    && <ManagersTab       key={tabKey} pendingManager={pendingManager} />}
+                {activeTab === "mockdraft"   && <MockDraftTab      key={tabKey} />}
         {activeTab === "draft"       && <DraftTab          key={tabKey} />}
         {activeTab === "players"     && <PlayersTab        key={tabKey} />}
         {activeTab === "leaguehq"   && <LeagueHQTab       key={tabKey} />}
