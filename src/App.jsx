@@ -64660,7 +64660,7 @@ function generateChatMessages(player, price, winner, nominator, allRosters, allB
 
   // General chatter (15% chance — complements the between-pick ambient chat system)
   if (Math.random() < 0.15) {
-    const chatterers = managers.sort(() => Math.random() - 0.5);
+    const chatterers = [...managers].sort(() => Math.random() - 0.5);
     for (const m of chatterers.slice(0, 1)) {
       const vibe = VIBE_MAP[m] || "any";
       if (Math.random() < (VIBE_FREQUENCY[vibe] || 0.3)) {
@@ -66348,6 +66348,11 @@ function MockDraftTab() {
       if ((currentRosters[m] || []).length >= TOTAL_ROSTER) return;
       const bot = botProfiles[m];
       if (!bot) return;
+      // Hard budget cap: must keep $1 for each remaining slot after this one
+      const mBudget = currentBudgets[m] || 0;
+      const mSlotsLeft = TOTAL_ROSTER - (currentRosters[m] || []).length;
+      const mMaxBid = mBudget - (mSlotsLeft - 1);
+      if (mMaxBid <= currentBid) return;
       const decision = botDecision(bot, player, currentBid, currentRosters[m] || [], currentBudgets[m] || 0, pool.length);
       if (decision.willBid && decision.bidTo > currentBid) {
         cumulativeDelay += decision.delay;
@@ -66356,7 +66361,7 @@ function MockDraftTab() {
           if (!live.player || live.player.id !== player.id) return;
           const freshDecision = botDecision(bot, player, live.bid, currentRosters[m] || [], currentBudgets[m] || 0, pool.length);
           if (!freshDecision.willBid || freshDecision.bidTo <= live.bid) return;
-          const newBid = Math.min(live.bid + Math.ceil(Math.random() * 3 + 1), freshDecision.maxBid);
+          const newBid = Math.min(live.bid + Math.ceil(Math.random() * 3 + 1), freshDecision.maxBid, mMaxBid);
           if (newBid <= live.bid) return;
           auctionRef.current.bid = newBid;
           auctionRef.current.bidder = m;
@@ -66417,7 +66422,7 @@ function MockDraftTab() {
     // ~35% chance of a random idle message firing BEFORE the next nomination
     // This creates the "guys chatting between picks" feel
     if (idx > 0 && Math.random() < 0.35) {
-      const chatterers = order.sort(() => Math.random() - 0.5);
+      const chatterers = [...order].sort(() => Math.random() - 0.5);
       for (const m of chatterers.slice(0, 1)) {
         const vibe = VIBE_MAP[m] || "any";
         if (Math.random() < (VIBE_FREQUENCY[vibe] || 0.3)) {
@@ -66458,7 +66463,11 @@ function MockDraftTab() {
     if (available.length === 0) { setPhase("complete"); return; }
     const bestPlayer = pickNominationTarget(nominator, available, currentRosters, currentBudgets, currentRosters, order, botProfiles);
     // Smart opening bid: high-value players open at ~40-60% of value, cheap players at $1
-    const openBid = bestPlayer.value >= 25 ? Math.floor(bestPlayer.value * (0.4 + Math.random() * 0.2)) : bestPlayer.value >= 10 ? Math.floor(bestPlayer.value * 0.3) : 1;
+    // MUST be capped at nominator's max bid (budget - remaining slots + 1)
+    const nomSlotsLeft = TOTAL_ROSTER - (currentRosters[nominator] || []).length;
+    const nomMaxBid = (currentBudgets[nominator] || 0) - (nomSlotsLeft - 1);
+    const rawOpenBid = bestPlayer.value >= 25 ? Math.floor(bestPlayer.value * (0.4 + Math.random() * 0.2)) : bestPlayer.value >= 10 ? Math.floor(bestPlayer.value * 0.3) : 1;
+    const openBid = Math.max(1, Math.min(rawOpenBid, nomMaxBid));
     setLog(prev => [...prev, `📢 ${nominator} nominates ${bestPlayer.name} (${bestPlayer.pos}) — opening bid $${openBid}`]);
     setCurrentNom({ player: bestPlayer, nominator, currentBid: openBid, currentBidder: nominator, waitingForUser: false });
     setBidAmount(openBid + 1);
@@ -66507,8 +66516,10 @@ function MockDraftTab() {
     clearBotQueue();
     setCountdown(0);
     DraftSounds.won();
-    const newRosters = { ...currentRosters, [winner]: [...(currentRosters[winner] || []), { ...player, price: finalBid }] };
-    const newBudgets = { ...currentBudgets, [winner]: (currentBudgets[winner] || 200) - finalBid };
+    // Safety: cap finalBid at winner's remaining budget (should never trigger, but prevents negative budgets)
+    const safeBid = Math.min(finalBid, currentBudgets[winner] || 0);
+    const newRosters = { ...currentRosters, [winner]: [...(currentRosters[winner] || []), { ...player, price: safeBid }] };
+    const newBudgets = { ...currentBudgets, [winner]: (currentBudgets[winner] || 200) - safeBid };
     const newPool = pool.filter(p => p.id !== player.id);
     setRosters(newRosters);
     setBudgets(newBudgets);
@@ -66685,8 +66696,11 @@ function MockDraftTab() {
       if (available.length === 0) break;
       const bestPlayer = pickNominationTarget(nominator, available, curRosters, curBudgets, curRosters, order, botProfiles);
 
-      // Opening bid
-      const openBid = bestPlayer.value >= 25 ? Math.floor(bestPlayer.value * (0.4 + Math.random() * 0.2)) : bestPlayer.value >= 10 ? Math.floor(bestPlayer.value * 0.3) : 1;
+      // Opening bid — capped at nominator's max affordable bid
+      const nomSlotsLeft = TOTAL_ROSTER - (curRosters[nominator] || []).length;
+      const nomMaxBid = (curBudgets[nominator] || 0) - (nomSlotsLeft - 1);
+      const rawOpenBid = bestPlayer.value >= 25 ? Math.floor(bestPlayer.value * (0.4 + Math.random() * 0.2)) : bestPlayer.value >= 10 ? Math.floor(bestPlayer.value * 0.3) : 1;
+      const openBid = Math.max(1, Math.min(rawOpenBid, nomMaxBid));
 
       // Simulate bidding: each bot evaluates and bids in random order until nobody bids more
       let currentBid = openBid;
