@@ -58650,7 +58650,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "overpay",
-   "text": "66 in a 65 gets you a ticket. That bid? That gets you last place."
+   "text": "66 in a 65 gets you a ticket. That bid? That gets you last place.",
+   "isHotTake": true
   },
   {
    "trigger": "overpay",
@@ -58674,7 +58675,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "overpay",
-   "text": "I see worse decision-making on I-99 at 2am. This is close though."
+   "text": "I see worse decision-making on I-99 at 2am. This is close though.",
+   "isHotTake": true
   },
   {
    "trigger": "steal",
@@ -58694,7 +58696,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "steal",
-   "text": "I was mid-sip on my 805 and missed it. Brutal."
+   "text": "I was mid-sip on my 805 and missed it. Brutal.",
+   "isHotTake": true
   },
   {
    "trigger": "steal",
@@ -58862,7 +58865,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "Nine 49er fans in this room and zero Super Bowls in the last 30 years. Just saying."
+   "text": "Nine 49er fans in this room and zero Super Bowls in the last 30 years. Just saying.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -59050,7 +59054,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "reply_to_mention",
-   "text": "22-34 and I'm STILL more fun than you at a party."
+   "text": "22-34 and I'm STILL more fun than you at a party.",
+   "isHotTake": true
   },
   {
    "trigger": "reply_to_mention",
@@ -59224,7 +59229,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "rival_pick",
-   "text": "Greg C, is that on your spreadsheet or an impulse buy?"
+   "text": "Greg C, is that on your spreadsheet or an impulse buy?",
+   "isHotTake": true
   },
   {
    "trigger": "rival_pick",
@@ -59308,7 +59314,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "Florida man turned California man turned fantasy football elder."
+   "text": "Florida man turned California man turned fantasy football elder.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -59464,7 +59471,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "reply_to_mention",
-   "text": "I'll be at home spinning vinyl while you're stressing over your roster in November."
+   "text": "I'll be at home spinning vinyl while you're stressing over your roster in November.",
+   "isHotTake": true
   },
   {
    "trigger": "reply_to_mention",
@@ -59706,7 +59714,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "rival_pick",
-   "text": "Eric, I've got three rings. How many do you have again?"
+   "text": "Eric, I've got three rings. How many do you have again?",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -59746,7 +59755,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "Ross, I'm pretty sure that violates Article 4, Section 2 of the Constitution."
+   "text": "Ross, I'm pretty sure that violates Article 4, Section 2 of the Constitution.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -59870,7 +59880,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "outbid",
-   "text": "My sheet had him at $4 less. I can't betray the sheet."
+   "text": "My sheet had him at $4 less. I can't betray the sheet.",
+   "isHotTake": true
   },
   {
    "trigger": "outbid",
@@ -59890,7 +59901,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "reply_to_mention",
-   "text": "I've been called worse by better managers. Oh wait, there aren't any."
+   "text": "I've been called worse by better managers. Oh wait, there aren't any.",
+   "isHotTake": true
   },
   {
    "trigger": "reply_to_mention",
@@ -59914,7 +59926,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "reply_to_mention",
-   "text": "That's adorable. Come back when you have a ring."
+   "text": "That's adorable. Come back when you have a ring.",
+   "isHotTake": true
   },
   {
    "trigger": "reply_to_mention",
@@ -59952,7 +59965,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "overpay",
-   "text": "As your league banker, I'm concerned about your financial health."
+   "text": "As your league banker, I'm concerned about your financial health.",
+   "isHotTake": true
   },
   {
    "trigger": "overpay",
@@ -60132,7 +60146,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "I roasted Ross at his wedding. I'll roast him here too if needed."
+   "text": "I roasted Ross at his wedding. I'll roast him here too if needed.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -60144,7 +60159,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "The DRC gets it wrong sometimes. Not that I'm bitter. I'm bitter."
+   "text": "The DRC gets it wrong sometimes. Not that I'm bitter. I'm bitter.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -60192,7 +60208,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "late_draft",
-   "text": "Modelo count: 3. Budget remaining: comfortable. Life is good."
+   "text": "Modelo count: 3. Budget remaining: comfortable. Life is good.",
+   "isHotTake": true
   },
   {
    "trigger": "late_draft",
@@ -60260,7 +60277,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "reply_to_mention",
-   "text": "The Co-Commissioner hears you. The Co-Commissioner doesn't care."
+   "text": "The Co-Commissioner hears you. The Co-Commissioner doesn't care.",
+   "isHotTake": true
   },
   {
    "trigger": "reply_to_mention",
@@ -60466,7 +60484,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "rival_pick",
-   "text": "Aaron, firefighters save lives. CHP writes tickets. Who's the real hero?"
+   "text": "Aaron, firefighters save lives. CHP writes tickets. Who's the real hero?",
+   "isHotTake": true
   },
   {
    "trigger": "rival_pick",
@@ -60506,7 +60525,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "Okay hear me out... three way trade... you give me... no? Fine."
+   "text": "Okay hear me out... three way trade... you give me... no? Fine.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -60530,7 +60550,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "Tyler still hasn't recovered from giving me Derrick Henry for John Ross III."
+   "text": "Tyler still hasn't recovered from giving me Derrick Henry for John Ross III.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -60698,7 +60719,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "reply_to_mention",
-   "text": "You're in MY house saying that? Bold move."
+   "text": "You're in MY house saying that? Bold move.",
+   "isHotTake": true
   },
   {
    "trigger": "reply_to_mention",
@@ -60768,7 +60790,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "overpay",
-   "text": "Matt, are you seeing this? Actually take your headphones off and see this."
+   "text": "Matt, are you seeing this? Actually take your headphones off and see this.",
+   "isHotTake": true
   },
   {
    "trigger": "overpay",
@@ -60816,7 +60839,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "kicker_over_1",
-   "text": "Wait... that was ME bidding up Greg C's kicker. HAHAHA. Got him again."
+   "text": "Wait... that was ME bidding up Greg C's kicker. HAHAHA. Got him again.",
+   "isHotTake": true
   },
   {
    "trigger": "kicker_over_1",
@@ -60832,7 +60856,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "kicker_over_1",
-   "text": "Greg C nominated a kicker at $1? Say less. I'm bidding $2."
+   "text": "Greg C nominated a kicker at $1? Say less. I'm bidding $2.",
+   "isHotTake": true
   },
   {
    "trigger": "def_over_1",
@@ -60912,7 +60937,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "rival_pick",
-   "text": "Matt, what tier is THAT on your precious tier system?"
+   "text": "Matt, what tier is THAT on your precious tier system?",
+   "isHotTake": true
   },
   {
    "trigger": "rival_pick",
@@ -60920,7 +60946,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "rival_pick",
-   "text": "Matt, is that one of your 14 mock drafts paying off? Doesn't look like it."
+   "text": "Matt, is that one of your 14 mock drafts paying off? Doesn't look like it.",
+   "isHotTake": true
   },
   {
    "trigger": "rival_pick",
@@ -60964,7 +60991,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "Steve went undefeated with ChatGPT. That's CHEATING. BAN IT."
+   "text": "Steve went undefeated with ChatGPT. That's CHEATING. BAN IT.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -60996,7 +61024,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "DORDT BOYS STAND UP. Me, Trey, Greg M. The Midwest mafia."
+   "text": "DORDT BOYS STAND UP. Me, Trey, Greg M. The Midwest mafia.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -61100,7 +61129,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "outbid",
-   "text": "I'm about to flip this table. Not really. But almost."
+   "text": "I'm about to flip this table. Not really. But almost.",
+   "isHotTake": true
   },
   {
    "trigger": "outbid",
@@ -61362,7 +61392,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "One of my cats had a UTI this week. Rough times in the Van Groningen household."
+   "text": "One of my cats had a UTI this week. Rough times in the Van Groningen household.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -61414,7 +61445,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "Josh, for the last time. Stop poking me. I'm FOCUSED."
+   "text": "Josh, for the last time. Stop poking me. I'm FOCUSED.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -61430,7 +61462,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "The Ford Focus got me here. My tier system will get me to the playoffs."
+   "text": "The Ford Focus got me here. My tier system will get me to the playoffs.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -61538,7 +61571,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "reply_to_mention",
-   "text": "Josh, I'm your older brother. Show some respect."
+   "text": "Josh, I'm your older brother. Show some respect.",
+   "isHotTake": true
   },
   {
    "trigger": "reply_to_mention",
@@ -61570,7 +61604,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "I would just like to say... Commanders should have stayed the Redskins. Anyway, back to my tiers."
+   "text": "I would just like to say... Commanders should have stayed the Redskins. Anyway, back to my tiers.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -61614,7 +61649,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "My smoothie sour from Terraza Market is better than whatever you are drinking. It is an acquired taste."
+   "text": "My smoothie sour from Terraza Market is better than whatever you are drinking. It is an acquired taste.",
+   "isHotTake": true
   }
  ],
  "Ross Van Groningen": [
@@ -61780,11 +61816,13 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "rival_pick",
-   "text": "Steve, the revolution isn't happening. Accept it."
+   "text": "Steve, the revolution isn't happening. Accept it.",
+   "isHotTake": true
   },
   {
    "trigger": "rival_pick",
-   "text": "Everyone thinks they're my rival. I don't have rivals. I have subjects."
+   "text": "Everyone thinks they're my rival. I don't have rivals. I have subjects.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -61868,11 +61906,13 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "11 seasons. 0 championships. Best record without a ring. Pain."
+   "text": "11 seasons. 0 championships. Best record without a ring. Pain.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
-   "text": "I'm the Roger Goodell of this league. Everyone hates me and the league wouldn't survive without me."
+   "text": "I'm the Roger Goodell of this league. Everyone hates me and the league wouldn't survive without me.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -62008,7 +62048,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "reply_to_mention",
-   "text": "I coded the dashboard. I wrote the Constitution. What have YOU done?"
+   "text": "I coded the dashboard. I wrote the Constitution. What have YOU done?",
+   "isHotTake": true
   },
   {
    "trigger": "reply_to_mention",
@@ -62052,7 +62093,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "The Egyptians next door on Palm were worse at basketball than Tyler is at budgeting. And that is saying something."
+   "text": "The Egyptians next door on Palm were worse at basketball than Tyler is at budgeting. And that is saying something.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -62254,7 +62296,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "self_pick",
-   "text": "That's a white running back. The algorithm's specialty."
+   "text": "That's a white running back. The algorithm's specialty.",
+   "isHotTake": true
   },
   {
    "trigger": "self_pick",
@@ -62306,7 +62349,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "I asked ChatGPT to rank everyone's draft strategy. Ross was last."
+   "text": "I asked ChatGPT to rank everyone's draft strategy. Ross was last.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -62350,7 +62394,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "Ron Vander Molen was your PE teacher. I'm about to give you all a workout."
+   "text": "Ron Vander Molen was your PE teacher. I'm about to give you all a workout.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -62362,7 +62407,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "Smoking brisket AND the competition. That's the Steve special."
+   "text": "Smoking brisket AND the competition. That's the Steve special.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -62374,7 +62420,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "What if... and hear me out... Ross has been rigging the draft? I'm just asking questions."
+   "text": "What if... and hear me out... Ross has been rigging the draft? I'm just asking questions.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -62550,7 +62597,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "self_pick",
-   "text": "Give me the scrappy, deceptively fast guy. ChatGPT and I love a white running back."
+   "text": "Give me the scrappy, deceptively fast guy. ChatGPT and I love a white running back.",
+   "isHotTake": true
   },
   {
    "trigger": "self_pick",
@@ -62692,7 +62740,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "def_over_1",
-   "text": "A defense. For money. Real money. I need a Busch Latte to recover."
+   "text": "A defense. For money. Real money. I need a Busch Latte to recover.",
+   "isHotTake": true
   },
   {
    "trigger": "def_over_1",
@@ -62756,7 +62805,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "rival_pick",
-   "text": "Matthew, I'm sending you a trade offer tomorrow. Just accept it."
+   "text": "Matthew, I'm sending you a trade offer tomorrow. Just accept it.",
+   "isHotTake": true
   },
   {
    "trigger": "rival_pick",
@@ -62820,7 +62870,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "I used to be a Rams fan. Then I got smart. Chiefs Kingdom."
+   "text": "I used to be a Rams fan. Then I got smart. Chiefs Kingdom.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -62852,7 +62903,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "My students would draft better than some of you. And they're in 5th grade."
+   "text": "My students would draft better than some of you. And they're in 5th grade.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -62944,7 +62996,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "nomination_bait",
-   "text": "This nomination is specifically designed to drain Tyler's remaining $4."
+   "text": "This nomination is specifically designed to drain Tyler's remaining $4.",
+   "isHotTake": true
   },
   {
    "trigger": "nomination_bait",
@@ -63008,7 +63061,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "reply_to_mention",
-   "text": "Iowa nice on the outside. Iowa ruthless on the waiver wire."
+   "text": "Iowa nice on the outside. Iowa ruthless on the waiver wire.",
+   "isHotTake": true
   },
   {
    "trigger": "reply_to_mention",
@@ -63054,7 +63108,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "overpay",
-   "text": "Jimmer dunked on me in college. That pick just dunked on their budget."
+   "text": "Jimmer dunked on me in college. That pick just dunked on their budget.",
+   "isHotTake": true
   },
   {
    "trigger": "overpay",
@@ -63166,7 +63221,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "self_pick",
-   "text": "My starters are going to be NASTY. Bench? We'll figure it out."
+   "text": "My starters are going to be NASTY. Bench? We'll figure it out.",
+   "isHotTake": true
   },
   {
    "trigger": "self_pick",
@@ -63450,7 +63506,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "reply_to_mention",
-   "text": "PokemonGo notification. Hold on. More important than your opinion."
+   "text": "PokemonGo notification. Hold on. More important than your opinion.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -63462,7 +63519,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "Church with Steve is great. We strategize during the sermon. Do not tell the pastor."
+   "text": "Church with Steve is great. We strategize during the sermon. Do not tell the pastor.",
+   "isHotTake": true
   }
  ],
  "Vance Sipma": [
@@ -63640,7 +63698,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "rival_pick",
-   "text": "Trey, the answer is no. It's always no. Stop asking."
+   "text": "Trey, the answer is no. It's always no. Stop asking.",
+   "isHotTake": true
   },
   {
    "trigger": "rival_pick",
@@ -63676,7 +63735,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "James's Wi-Fi crashed and I lost Justin Fields for $1. I'll NEVER forget that."
+   "text": "James's Wi-Fi crashed and I lost Justin Fields for $1. I'll NEVER forget that.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -63744,7 +63804,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "I fashioned this 'stache after Alan Jackson. It's a lifestyle."
+   "text": "I fashioned this 'stache after Alan Jackson. It's a lifestyle.",
+   "isHotTake": true
   },
   {
    "trigger": "general",
@@ -63848,7 +63909,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "outbid",
-   "text": "Almond money ain't what it used to be. Can't chase."
+   "text": "Almond money ain't what it used to be. Can't chase.",
+   "isHotTake": true
   },
   {
    "trigger": "reply_to_mention",
@@ -63884,7 +63946,8 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "reply_to_mention",
-   "text": "My Silverado has more horsepower than your whole roster."
+   "text": "My Silverado has more horsepower than your whole roster.",
+   "isHotTake": true
   },
   {
    "trigger": "reply_to_mention",
@@ -64500,11 +64563,13 @@ function addEmojiReactions(messages, managers, userTeam, spokenManagers) {
   }
   // ── GUARANTEE 9+ reactions on hot takes ──
   // Hot takes are the funniest messages — ensure they always dominate the "Hottest Chats" section
+  // Randomize between 9-14 reactions so the top 3 rotates each draft instead of always being the earliest ones
   const hotTakes = messages.filter(m => m.isHotTake);
   for (const ht of hotTakes) {
     if (!ht.reactions) ht.reactions = [];
     const allManagers = managers.filter(m => m !== ht.manager);
-    while (ht.reactions.length < 9) {
+    const targetReactions = 9 + Math.floor(Math.random() * 6); // 9 to 14
+    while (ht.reactions.length < targetReactions) {
       const reactor = allManagers[Math.floor(Math.random() * allManagers.length)];
       const emojiPool = REACTION_EMOJIS[ht.trigger] || REACTION_EMOJIS.general;
       const emoji = emojiPool[Math.floor(Math.random() * emojiPool.length)];
@@ -64536,7 +64601,7 @@ function generateChatMessages(player, price, winner, nominator, allRosters, allB
     const msg = pool[Math.floor(Math.random() * pool.length)];
     usedMessages.add(manager + "|" + msg.text);
     spokenThisPick.add(manager);
-    return { manager, text: msg.text, trigger, id: Date.now() + Math.random(), replyTo: null };
+    return { manager, text: msg.text, trigger, id: Date.now() + Math.random(), replyTo: null, ...(msg.isHotTake && { isHotTake: true }) };
   }
 
   // Helper: pick a shared reply (any manager can say these)
@@ -64728,9 +64793,9 @@ function generateChatMessages(player, price, winner, nominator, allRosters, allB
   }
 
   // ── HOT TAKES: genuinely funny reactions that attract pile-on reactions ──
-  // Limited to 6 per draft to stay fresh across multiple mocks. ~25% chance per qualifying pick ensures all 6 fire reliably.
+  // Limited to 24 per draft to stay fresh across multiple mocks. ~25% chance per qualifying pick spreads them throughout the draft.
   const hotTakeCount = [...usedMessages].filter(k => k.includes("|hottake|")).length;
-  if (hotTakeCount < 6 && Math.random() < 0.25 && messages.length < 5) {
+  if (hotTakeCount < 24 && Math.random() < 0.25 && messages.length < 5) {
     const HOT_TAKES = {
       "overpay": [
         { managers: ["Steve Vander Molen"], text: "ChatGPT just texted me. It said 'even I wouldn't have done that.' And I trust ChatGPT with my LIFE." },
