@@ -65054,7 +65054,7 @@ const BOT_PERSONALITY_TRAITS = {
 };
 
 // Manager avatar URLs (served from public/avatars/)
-const MOCK_DRAFT_AVATAR_URL = (name) => `/avatars/${encodeURIComponent(name)}.jpg`;
+const MOCK_DRAFT_AVATAR_URL = (name) => `./avatars/${name}.jpg`;
 
 // ── DRAFT GRADE GENERATOR ──
 // Calculates letter grades and generates short write-ups for each team post-draft
