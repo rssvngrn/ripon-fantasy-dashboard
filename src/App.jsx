@@ -59060,6 +59060,14 @@ const CANNED_MESSAGES = {
   {
    "trigger": "reply_to_mention",
    "text": "I'm writing you a ticket for unsportsmanlike conduct."
+  },
+  {
+   "trigger": "general",
+   "text": "Ross just proposed $1,000 league dues. Bro, I'm a CHP officer, not a Silicon Valley tech bro. DENIED."
+  },
+  {
+   "trigger": "general",
+   "text": "$500 buy-in?? I have a toddler and a mortgage. I can barely afford the 805 in my hand right now."
   }
  ],
  "Eric Graef": [
@@ -60757,6 +60765,15 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "Welcome to my house. Your beer is our beer. My pool is your pool. Those are the rules."
+  },
+  {
+   "trigger": "general",
+   "text": "Ross wants $1,000 dues? Bro I'm a firefighter. I save lives. I don't HAVE $1,000 for fake football."
+  },
+  {
+   "trigger": "general",
+   "text": "$500 league dues means $500 less for the party barn. And the party barn is SACRED. Hard no, Commissioner.",
+   "isHotTake": true
   }
  ],
  "Joshua Van Groningen": [
@@ -61179,6 +61196,15 @@ const CANNED_MESSAGES = {
   {
    "trigger": "reply_to_mention",
    "text": "Matt, did you just try to roast me? Take those headphones off and try again."
+  },
+  {
+   "trigger": "general",
+   "text": "$1,000 DUES?! Ross, I sell AG CHEMICALS, not cocaine. Where am I getting a thousand dollars for FANTASY FOOTBALL?",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "Ross raised dues AGAIN? This is taxation without representation. I'm staging a Boston Tea Party in the chat."
   }
  ],
  "Matthew Van Groningen": [
@@ -62159,6 +62185,31 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "Trey, stop hoarding the chips. There's 12 of us in here."
+  },
+  {
+   "trigger": "general",
+   "text": "Quick proposal: what if we raised league dues to $500? More skin in the game. Thoughts?",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "Hear me out — $1,000 buy-in next year. Winner takes home $10K. Who says no?",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "I've been thinking... $100 dues isn't enough. $750 minimum to keep people engaged.",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "New proposal for the Constitution: $2,000 league dues. Payout structure TBD. Vote now.",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "What if we made it $5,000 buy-in? Guys with bad teams would actually TRY in November.",
+   "isHotTake": true
   }
  ],
  "Steve Vander Molen": [
@@ -62631,6 +62682,19 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "I am a hazy IPA guy. None of that light beer garbage. Give me the juice."
+  },
+  {
+   "trigger": "general",
+   "text": "Ross wants to raise dues to WHAT?? This is EXACTLY why we need new leadership. The revolution is NOW.",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "$500 dues? $1,000?? Ross, you make wine money. The rest of us have MORTGAGES."
+  },
+  {
+   "trigger": "general",
+   "text": "If Ross raises dues one more dollar I'm staging a coup. Who's with me?"
   }
  ],
  "Trey Hugen": [
@@ -63075,6 +63139,19 @@ const CANNED_MESSAGES = {
   {
    "trigger": "reply_to_mention",
    "text": "I'll remember that when I send you a very fair 3-for-1 offer next week."
+  },
+  {
+   "trigger": "general",
+   "text": "Ross wants $500 dues? I'm in 15 leagues bro. That's $7,500. I'm an elementary principal. Absolutely not.",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "Raise the dues to $1,000?! I eat 99-cent tacos for dinner. Read the room, Commissioner."
+  },
+  {
+   "trigger": "general",
+   "text": "$2,000 buy-in? I'd rather spend that on 2,000 Jack in the Box tacos. At least I'd be full."
   }
  ],
  "Tyler Goslinga": [
@@ -63521,6 +63598,34 @@ const CANNED_MESSAGES = {
    "trigger": "general",
    "text": "Church with Steve is great. We strategize during the sermon. Do not tell the pastor.",
    "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "Disneyland trip next month. The churros alone are gonna cost more than my bench players."
+  },
+  {
+   "trigger": "general",
+   "text": "Disneyland tip: ride Space Mountain first, then draft your RB1. Same adrenaline."
+  },
+  {
+   "trigger": "general",
+   "text": "I budget better at Disneyland than I do in this draft. And that's saying something."
+  },
+  {
+   "trigger": "general",
+   "text": "My kids want to go to Disneyland again. I want to win fantasy football. We compromise: both."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "I'm as broke as a Disneyland churro is overpriced. And those are $8 now."
+  },
+  {
+   "trigger": "general",
+   "text": "Ross wants $1,000 dues?? Bro I'm a DPT with student loans and a Disneyland trip next month. I have $12."
+  },
+  {
+   "trigger": "general",
+   "text": "$500 league dues?! I can't even budget $200 in this fake auction. How would I handle real money?"
   }
  ],
  "Vance Sipma": [
@@ -63980,6 +64085,14 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "The almonds do not pick themselves and the paperwork does not file itself. That is why I am late."
+  },
+  {
+   "trigger": "general",
+   "text": "Ross wants to raise dues?? I farm ALMONDS. You know what almonds pay right now? NOT ENOUGH for $1,000 dues."
+  },
+  {
+   "trigger": "general",
+   "text": "$500 buy-in is more than my monthly diesel bill. And my truck drinks diesel like Tyler drinks IPAs."
   }
  ],
  "shared_replies": [
@@ -65275,6 +65388,8 @@ const MOCK_DRAFT_KEEPERS_2026 = [
   { manager:"Aaron Fay",              name:"Ladd McConkey",       pos:"WR", team:"LAC", price:13 },
   { manager:"Greg Mulder",            name:"Brock Bowers",        pos:"TE", team:"LV",  price:12 },
   { manager:"Steve Vander Molen",     name:"George Pickens",      pos:"WR", team:"DAL", price:19 },
+  { manager:"Vance Sipma",            name:"Emeka Egbuka",        pos:"WR", team:"TB",  price:19 },
+  { manager:"Trey Hugen",             name:"Ja'Marr Chase",       pos:"WR", team:"CIN", price:37 },
 ];
 
 // Bot profile builder — computes tendencies from real draft history
