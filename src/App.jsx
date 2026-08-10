@@ -65053,328 +65053,323 @@ function generateChatMessages(player, price, winner, nominator, allRosters, allB
 
 // Roster: 1 QB, 2 RB, 2 WR, 1 TE, 1 FLEX (RB/WR/TE), 1 K, 1 DEF, 6 BN = 15 total
 const MOCK_PLAYER_POOL = [
-  {id:1,name:"Jahmyr Gibbs",pos:"RB",team:"DET",value:59},
-  {id:2,name:"Bijan Robinson",pos:"RB",team:"ATL",value:58},
-  {id:3,name:"Ja'Marr Chase",pos:"WR",team:"CIN",value:57},
-  {id:4,name:"Puka Nacua",pos:"WR",team:"LAR",value:57},
-  {id:5,name:"Jaxon Smith-Njigba",pos:"WR",team:"SEA",value:52},
-  {id:6,name:"Amon-Ra St. Brown",pos:"WR",team:"DET",value:49},
-  {id:7,name:"Christian McCaffrey",pos:"RB",team:"SF",value:47},
-  {id:8,name:"Jonathan Taylor",pos:"RB",team:"IND",value:45},
-  {id:9,name:"CeeDee Lamb",pos:"WR",team:"DAL",value:41},
-  {id:10,name:"Justin Jefferson",pos:"WR",team:"MIN",value:40},
-  {id:11,name:"James Cook III",pos:"RB",team:"BUF",value:38},
-  {id:12,name:"Ashton Jeanty",pos:"RB",team:"LV",value:37},
-  {id:13,name:"Drake London",pos:"WR",team:"ATL",value:36},
-  {id:14,name:"Chase Brown",pos:"RB",team:"CIN",value:36},
-  {id:15,name:"Brock Bowers",pos:"TE",team:"LV",value:35},
-  {id:16,name:"A.J. Brown",pos:"WR",team:"NE",value:35},
-  {id:17,name:"Saquon Barkley",pos:"RB",team:"PHI",value:35},
-  {id:18,name:"De'Von Achane",pos:"RB",team:"MIA",value:34},
-  {id:19,name:"Omarion Hampton",pos:"RB",team:"LAC",value:33},
-  {id:20,name:"Nico Collins",pos:"WR",team:"HOU",value:32},
-  {id:21,name:"Derrick Henry",pos:"RB",team:"BAL",value:31},
-  {id:22,name:"George Pickens",pos:"WR",team:"DAL",value:31},
-  {id:23,name:"Kenneth Walker III",pos:"RB",team:"KC",value:31},
-  {id:24,name:"Trey McBride",pos:"TE",team:"ARI",value:30},
-  {id:25,name:"Rashee Rice",pos:"WR",team:"KC",value:30},
-  {id:26,name:"Chris Olave",pos:"WR",team:"NO",value:30},
-  {id:27,name:"Josh Allen",pos:"QB",team:"BUF",value:30},
-  {id:28,name:"DeVonta Smith",pos:"WR",team:"PHI",value:30},
-  {id:29,name:"Zay Flowers",pos:"WR",team:"BAL",value:28},
-  {id:30,name:"Kyren Williams",pos:"RB",team:"LAR",value:27},
-  {id:31,name:"Tee Higgins",pos:"WR",team:"CIN",value:27},
-  {id:32,name:"Tetairoa McMillan",pos:"WR",team:"CAR",value:27},
-  {id:33,name:"Jeremiyah Love",pos:"RB",team:"ARI",value:27},
-  {id:34,name:"Malik Nabers",pos:"WR",team:"NYG",value:25},
-  {id:35,name:"Lamar Jackson",pos:"QB",team:"BAL",value:25},
-  {id:36,name:"Josh Jacobs",pos:"RB",team:"GB",value:24},
-  {id:37,name:"Emeka Egbuka",pos:"WR",team:"TB",value:24},
-  {id:38,name:"Breece Hall",pos:"RB",team:"NYJ",value:23},
-  {id:39,name:"Garrett Wilson",pos:"WR",team:"NYJ",value:23},
-  {id:40,name:"Javonte Williams",pos:"RB",team:"DAL",value:23},
-  {id:41,name:"Ladd McConkey",pos:"WR",team:"LAC",value:22},
-  {id:42,name:"Colston Loveland",pos:"TE",team:"CHI",value:21},
-  {id:43,name:"Jaylen Waddle",pos:"WR",team:"DEN",value:21},
-  {id:44,name:"Drake Maye",pos:"QB",team:"NE",value:21},
-  {id:45,name:"Terry McLaurin",pos:"WR",team:"WAS",value:20},
-  {id:46,name:"Travis Etienne Jr.",pos:"RB",team:"NO",value:20},
-  {id:47,name:"Davante Adams",pos:"WR",team:"LAR",value:20},
-  {id:48,name:"Luther Burden III",pos:"WR",team:"CHI",value:20},
-  {id:49,name:"Joe Burrow",pos:"QB",team:"CIN",value:19},
-  {id:50,name:"Cam Skattebo",pos:"RB",team:"NYG",value:18},
-  {id:51,name:"Mike Evans",pos:"WR",team:"SF",value:17},
-  {id:52,name:"Jameson Williams",pos:"WR",team:"DET",value:17},
-  {id:53,name:"D'Andre Swift",pos:"RB",team:"CHI",value:17},
-  {id:54,name:"Jayden Daniels",pos:"QB",team:"WAS",value:17},
-  {id:55,name:"Tyler Warren",pos:"TE",team:"IND",value:16},
-  {id:56,name:"Quinshon Judkins",pos:"RB",team:"CLE",value:16},
-  {id:57,name:"Bucky Irving",pos:"RB",team:"TB",value:15},
-  {id:58,name:"Christian Watson",pos:"WR",team:"GB",value:15},
-  {id:59,name:"David Montgomery",pos:"RB",team:"HOU",value:15},
-  {id:60,name:"DJ Moore",pos:"WR",team:"BUF",value:14},
-  {id:61,name:"TreVeyon Henderson",pos:"RB",team:"NE",value:14},
-  {id:62,name:"Jalen Hurts",pos:"QB",team:"PHI",value:14},
-  {id:63,name:"Rome Odunze",pos:"WR",team:"CHI",value:14},
-  {id:64,name:"Bhayshul Tuten",pos:"RB",team:"JAC",value:13},
-  {id:65,name:"Jadarian Price",pos:"RB",team:"SEA",value:13},
-  {id:66,name:"Tucker Kraft",pos:"TE",team:"GB",value:13},
-  {id:67,name:"Caleb Williams",pos:"QB",team:"CHI",value:13},
-  {id:68,name:"Justin Herbert",pos:"QB",team:"LAC",value:13},
-  {id:69,name:"Carnell Tate",pos:"WR",team:"TEN",value:13},
-  {id:70,name:"Jaylen Warren",pos:"RB",team:"PIT",value:12},
-  {id:71,name:"Marvin Harrison Jr.",pos:"WR",team:"ARI",value:12},
-  {id:72,name:"Brian Thomas Jr.",pos:"WR",team:"JAC",value:12},
-  {id:73,name:"Tony Pollard",pos:"RB",team:"TEN",value:12},
-  {id:74,name:"Trevor Lawrence",pos:"QB",team:"JAC",value:12},
-  {id:75,name:"Harold Fannin Jr.",pos:"TE",team:"CLE",value:12},
-  {id:76,name:"Rhamondre Stevenson",pos:"RB",team:"NE",value:11},
-  {id:77,name:"DK Metcalf",pos:"WR",team:"PIT",value:11},
-  {id:78,name:"Parker Washington",pos:"WR",team:"JAC",value:11},
-  {id:79,name:"Dak Prescott",pos:"QB",team:"DAL",value:11},
-  {id:80,name:"Sam LaPorta",pos:"TE",team:"DET",value:10},
-  {id:81,name:"Alec Pierce",pos:"WR",team:"IND",value:10},
-  {id:82,name:"Kyle Pitts Sr.",pos:"TE",team:"ATL",value:9},
-  {id:83,name:"Chuba Hubbard",pos:"RB",team:"CAR",value:9},
-  {id:84,name:"Courtland Sutton",pos:"WR",team:"DEN",value:8},
-  {id:85,name:"Rico Dowdle",pos:"RB",team:"PIT",value:8},
-  {id:86,name:"Chris Godwin Jr.",pos:"WR",team:"TB",value:8},
-  {id:87,name:"J.K. Dobbins",pos:"RB",team:"DEN",value:8},
-  {id:88,name:"Jordyn Tyson",pos:"WR",team:"NO",value:8},
-  {id:89,name:"Jaxson Dart",pos:"QB",team:"NYG",value:7},
-  {id:90,name:"Michael Pittman Jr.",pos:"WR",team:"PIT",value:7},
-  {id:91,name:"Michael Wilson",pos:"WR",team:"ARI",value:7},
-  {id:92,name:"Brock Purdy",pos:"QB",team:"SF",value:7},
-  {id:93,name:"RJ Harvey",pos:"RB",team:"DEN",value:7},
-  {id:94,name:"Quentin Johnston",pos:"WR",team:"LAC",value:6},
-  {id:95,name:"Blake Corum",pos:"RB",team:"LAR",value:6},
-  {id:96,name:"Kyle Monangai",pos:"RB",team:"CHI",value:6},
-  {id:97,name:"Josh Downs",pos:"WR",team:"IND",value:6},
-  {id:98,name:"Bo Nix",pos:"QB",team:"DEN",value:6},
-  {id:99,name:"Patrick Mahomes II",pos:"QB",team:"KC",value:6},
-  {id:100,name:"Makai Lemon",pos:"WR",team:"PHI",value:6},
-  {id:101,name:"Travis Kelce",pos:"TE",team:"KC",value:6},
-  {id:102,name:"Wan'Dale Robinson",pos:"WR",team:"TEN",value:6},
-  {id:103,name:"Kenny Gainwell",pos:"RB",team:"TB",value:6},
-  {id:104,name:"Matthew Stafford",pos:"QB",team:"LAR",value:6},
-  {id:105,name:"George Kittle",pos:"TE",team:"SF",value:5},
-  {id:106,name:"Jordan Addison",pos:"WR",team:"MIN",value:5},
-  {id:107,name:"Jakobi Meyers",pos:"WR",team:"JAC",value:5},
-  {id:108,name:"Rachaad White",pos:"RB",team:"WAS",value:5},
-  {id:109,name:"Jayden Reed",pos:"WR",team:"GB",value:5},
-  {id:110,name:"Jonathon Brooks",pos:"RB",team:"CAR",value:5},
-  {id:111,name:"Aaron Jones Sr.",pos:"RB",team:"MIN",value:5},
-  {id:112,name:"Jared Goff",pos:"QB",team:"DET",value:5},
-  {id:113,name:"Jacory Croskey-Merritt",pos:"RB",team:"WAS",value:5},
-  {id:114,name:"Kyler Murray",pos:"QB",team:"MIN",value:5},
-  {id:115,name:"Dalton Kincaid",pos:"TE",team:"BUF",value:5},
-  {id:116,name:"Jordan Mason",pos:"RB",team:"MIN",value:5},
-  {id:117,name:"Jake Ferguson",pos:"TE",team:"DAL",value:5},
-  {id:118,name:"Dallas Goedert",pos:"TE",team:"PHI",value:5},
-  {id:119,name:"Baker Mayfield",pos:"QB",team:"TB",value:5},
-  {id:120,name:"Xavier Worthy",pos:"WR",team:"KC",value:5},
-  {id:121,name:"Mark Andrews",pos:"TE",team:"BAL",value:4},
-  {id:122,name:"Jordan Love",pos:"QB",team:"GB",value:4},
-  {id:123,name:"Jayden Higgins",pos:"WR",team:"HOU",value:4},
-  {id:124,name:"Tyler Shough",pos:"QB",team:"NO",value:4},
-  {id:125,name:"Isaiah Likely",pos:"TE",team:"NYG",value:4},
-  {id:126,name:"Tyrone Tracy Jr.",pos:"RB",team:"NYG",value:4},
-  {id:127,name:"Chris Rodriguez Jr.",pos:"RB",team:"JAC",value:4},
-  {id:128,name:"Romeo Doubs",pos:"WR",team:"NE",value:4},
-  {id:129,name:"Khalil Shakir",pos:"WR",team:"BUF",value:4},
-  {id:130,name:"Jalen Coker",pos:"WR",team:"CAR",value:4},
-  {id:131,name:"Woody Marks",pos:"RB",team:"HOU",value:4},
-  {id:132,name:"Tyler Allgeier",pos:"RB",team:"ARI",value:3},
-  {id:133,name:"Malik Willis",pos:"QB",team:"MIA",value:3},
-  {id:134,name:"KC Concepcion",pos:"WR",team:"CLE",value:3},
-  {id:135,name:"Matthew Golden",pos:"WR",team:"GB",value:3},
-  {id:136,name:"Tyjae Spears",pos:"RB",team:"TEN",value:3},
-  {id:137,name:"Alvin Kamara",pos:"RB",team:"NO",value:3},
-  {id:138,name:"Zach Charbonnet",pos:"RB",team:"SEA",value:2},
-  {id:139,name:"Rashid Shaheed",pos:"WR",team:"SEA",value:2},
-  {id:140,name:"Dylan Sampson",pos:"RB",team:"CLE",value:2},
-  {id:141,name:"C.J. Stroud",pos:"QB",team:"HOU",value:2},
-  {id:142,name:"Juwan Johnson",pos:"TE",team:"NO",value:2},
-  {id:143,name:"Sam Darnold",pos:"QB",team:"SEA",value:2},
-  {id:144,name:"Brenton Strange",pos:"TE",team:"JAC",value:2},
-  {id:145,name:"Chig Okonkwo",pos:"TE",team:"WAS",value:2},
-  {id:146,name:"Isiah Pacheco",pos:"RB",team:"DET",value:2},
-  {id:147,name:"Keaton Mitchell",pos:"RB",team:"LAC",value:2},
-  {id:148,name:"Hunter Henry",pos:"TE",team:"NE",value:2},
-  {id:149,name:"Tank Bigsby",pos:"RB",team:"PHI",value:2},
-  {id:150,name:"Cam Ward",pos:"QB",team:"TEN",value:2},
-  {id:151,name:"Jonah Coleman",pos:"RB",team:"DEN",value:2},
-  {id:152,name:"Brian Robinson Jr.",pos:"RB",team:"ATL",value:2},
-  {id:153,name:"Daniel Jones",pos:"QB",team:"IND",value:2},
-  {id:154,name:"Jauan Jennings",pos:"WR",team:"MIN",value:2},
-  {id:155,name:"Oronde Gadsden II",pos:"TE",team:"LAC",value:2},
-  {id:156,name:"Adonai Mitchell",pos:"WR",team:"NYJ",value:2},
-  {id:157,name:"Jalen McMillan",pos:"WR",team:"TB",value:2},
-  {id:158,name:"Bryce Young",pos:"QB",team:"CAR",value:1},
-  {id:159,name:"Jerry Jeudy",pos:"WR",team:"CLE",value:1},
-  {id:160,name:"Denzel Boston",pos:"WR",team:"CLE",value:1},
-  {id:161,name:"Dalton Schultz",pos:"TE",team:"HOU",value:1},
-  {id:162,name:"Tre Tucker",pos:"WR",team:"LV",value:1},
-  {id:163,name:"Omar Cooper Jr.",pos:"WR",team:"NYJ",value:1},
-  {id:164,name:"Deebo Samuel Sr.",pos:"WR",team:"SF",value:1},
-  {id:165,name:"De'Zhaun Stribling",pos:"WR",team:"SF",value:1},
-  {id:166,name:"Tre' Harris",pos:"WR",team:"LAC",value:1},
-  {id:167,name:"AJ Barner",pos:"TE",team:"SEA",value:1},
-  {id:168,name:"T.J. Hockenson",pos:"TE",team:"MIN",value:1},
-  {id:169,name:"Jacoby Brissett",pos:"QB",team:"ARI",value:1},
-  {id:170,name:"Travis Hunter",pos:"WR",team:"JAC",value:1},
-  {id:171,name:"Sean Tucker",pos:"RB",team:"TB",value:1},
-  {id:172,name:"Braelon Allen",pos:"RB",team:"NYJ",value:1},
-  {id:173,name:"Ryan Flournoy",pos:"WR",team:"DAL",value:1},
-  {id:174,name:"Stefon Diggs",pos:"WR",team:"WAS",value:1},
-  {id:175,name:"Kenyon Sadiq",pos:"TE",team:"NYJ",value:1},
-  {id:176,name:"Kayshon Boutte",pos:"WR",team:"NE",value:1},
-  {id:177,name:"Ray Davis",pos:"RB",team:"BUF",value:1},
-  {id:178,name:"Jalen Nailor",pos:"WR",team:"LV",value:1},
-  {id:179,name:"Houston Texans",pos:"DEF",team:"HOU",value:1},
-  {id:180,name:"Calvin Ridley",pos:"WR",team:"TEN",value:1},
-  {id:181,name:"Kimani Vidal",pos:"RB",team:"LAC",value:1},
-  {id:182,name:"Terrance Ferguson",pos:"TE",team:"LAR",value:1},
-  {id:183,name:"Emmett Johnson",pos:"RB",team:"KC",value:1},
-  {id:184,name:"James Conner",pos:"RB",team:"ARI",value:1},
-  {id:185,name:"Malik Washington",pos:"WR",team:"MIA",value:1},
-  {id:186,name:"Rashod Bateman",pos:"WR",team:"BAL",value:1},
-  {id:187,name:"Emanuel Wilson",pos:"RB",team:"SEA",value:1},
-  {id:188,name:"Dontayvion Wicks",pos:"WR",team:"PHI",value:1},
-  {id:189,name:"Darnell Mooney",pos:"WR",team:"NYG",value:1},
-  {id:190,name:"Denver Broncos",pos:"DEF",team:"DEN",value:1},
-  {id:191,name:"Isaac TeSlaa",pos:"WR",team:"DET",value:1},
-  {id:192,name:"Gunnar Helm",pos:"TE",team:"TEN",value:1},
-  {id:193,name:"Geno Smith",pos:"QB",team:"NYJ",value:1},
-  {id:194,name:"Pat Freiermuth",pos:"TE",team:"PIT",value:1},
-  {id:195,name:"Seattle Seahawks",pos:"DEF",team:"SEA",value:1},
-  {id:196,name:"Los Angeles Rams",pos:"DEF",team:"LAR",value:1},
-  {id:210,name:"Pittsburgh Steelers",pos:"DEF",team:"PIT",value:1},
-  {id:211,name:"Minnesota Vikings",pos:"DEF",team:"MIN",value:1},
-  {id:212,name:"Baltimore Ravens",pos:"DEF",team:"BAL",value:1},
-  {id:213,name:"San Francisco 49ers",pos:"DEF",team:"SF",value:1},
-  {id:214,name:"Buffalo Bills",pos:"DEF",team:"BUF",value:1},
-  {id:215,name:"Philadelphia Eagles",pos:"DEF",team:"PHI",value:1},
-  {id:216,name:"Kansas City Chiefs",pos:"DEF",team:"KC",value:1},
-  {id:217,name:"Dallas Cowboys",pos:"DEF",team:"DAL",value:1},
-  {id:218,name:"Jacksonville Jaguars",pos:"DEF",team:"JAC",value:1},
-  {id:219,name:"New England Patriots",pos:"DEF",team:"NE",value:1},
-  {id:220,name:"Los Angeles Chargers",pos:"DEF",team:"LAC",value:1},
-  {id:221,name:"Green Bay Packers",pos:"DEF",team:"GB",value:1},
-  {id:222,name:"Detroit Lions",pos:"DEF",team:"DET",value:1},
-  {id:223,name:"Cleveland Browns",pos:"DEF",team:"CLE",value:1},
-  {id:224,name:"Atlanta Falcons",pos:"DEF",team:"ATL",value:1},
-  {id:225,name:"Indianapolis Colts",pos:"DEF",team:"IND",value:1},
-  {id:226,name:"New Orleans Saints",pos:"DEF",team:"NO",value:1},
-  {id:227,name:"Chicago Bears",pos:"DEF",team:"CHI",value:1},
-  {id:228,name:"Carolina Panthers",pos:"DEF",team:"CAR",value:1},
-  {id:229,name:"Tampa Bay Buccaneers",pos:"DEF",team:"TB",value:1},
-  {id:230,name:"New York Giants",pos:"DEF",team:"NYG",value:1},
-  {id:231,name:"Tennessee Titans",pos:"DEF",team:"TEN",value:1},
-  {id:232,name:"Cincinnati Bengals",pos:"DEF",team:"CIN",value:1},
-  {id:233,name:"Miami Dolphins",pos:"DEF",team:"MIA",value:1},
-  {id:234,name:"Las Vegas Raiders",pos:"DEF",team:"LV",value:1},
-  {id:235,name:"Washington Commanders",pos:"DEF",team:"WAS",value:1},
-  {id:236,name:"New York Jets",pos:"DEF",team:"NYJ",value:1},
-  {id:237,name:"Arizona Cardinals",pos:"DEF",team:"ARI",value:1},
-  // ── Kickers (1 per NFL team, all 32) ──
-  {id:197,name:"MarShawn Lloyd",pos:"RB",team:"GB",value:1},
-  {id:198,name:"Brandon Aubrey",pos:"K",team:"DAL",value:1},
-  {id:199,name:"Ka'imi Fairbairn",pos:"K",team:"HOU",value:1},
-  {id:200,name:"Cameron Dicker",pos:"K",team:"LAC",value:1},
-  {id:201,name:"Cam Little",pos:"K",team:"JAC",value:1},
-  {id:202,name:"Jason Myers",pos:"K",team:"SEA",value:1},
-  {id:203,name:"Eddy Pineiro",pos:"K",team:"SF",value:1},
-  {id:204,name:"Jake Bates",pos:"K",team:"DET",value:1},
-  {id:205,name:"Cairo Santos",pos:"K",team:"CHI",value:1},
-  {id:206,name:"Evan McPherson",pos:"K",team:"CIN",value:1},
-  {id:207,name:"Harrison Butker",pos:"K",team:"KC",value:1},
-  {id:208,name:"Chris Boswell",pos:"K",team:"PIT",value:1},
-  {id:209,name:"Harrison Mevis",pos:"K",team:"LAR",value:1},
-  {id:238,name:"Zane Gonzalez",pos:"K",team:"MIA",value:1},
-  {id:239,name:"Trey Smack",pos:"K",team:"GB",value:1},
-  {id:240,name:"Blake Grupe",pos:"K",team:"IND",value:1},
-  {id:241,name:"Nick Folk",pos:"K",team:"ATL",value:1},
-  {id:242,name:"Jake Moody",pos:"K",team:"WAS",value:1},
-  {id:243,name:"Ben Sauls",pos:"K",team:"NYG",value:1},
-  {id:244,name:"Joey Slye",pos:"K",team:"TEN",value:1},
-  {id:245,name:"Chad Ryland",pos:"K",team:"ARI",value:1},
-  {id:246,name:"Ryan Fitzgerald",pos:"K",team:"CAR",value:1},
-  {id:247,name:"Daniel Carlson",pos:"K",team:"LV",value:1},
-  {id:248,name:"Chase McLaughlin",pos:"K",team:"TB",value:1},
-  {id:249,name:"Wil Lutz",pos:"K",team:"DEN",value:1},
-  {id:250,name:"Will Reichard",pos:"K",team:"MIN",value:1},
-  {id:251,name:"Charlie Smyth",pos:"K",team:"NO",value:1},
-  {id:252,name:"Jake Elliott",pos:"K",team:"PHI",value:1},
-  {id:253,name:"Tyler Bass",pos:"K",team:"BUF",value:1},
-  {id:254,name:"Andy Borregales",pos:"K",team:"NE",value:1},
-  {id:255,name:"Tyler Loop",pos:"K",team:"BAL",value:1},
-  {id:317,name:"Dustin Hopkins",pos:"K",team:"CLE",value:1},
-  {id:318,name:"Greg Zuerlein",pos:"K",team:"NYJ",value:1},
-  // ── Top 15 $0 QBs ──
-  {id:257,name:"Aaron Rodgers",pos:"QB",team:"PIT",value:1},
-  {id:258,name:"Fernando Mendoza",pos:"QB",team:"LV",value:1},
-  {id:259,name:"Tua Tagovailoa",pos:"QB",team:"ATL",value:1},
-  {id:260,name:"Kirk Cousins",pos:"QB",team:"LV",value:1},
-  {id:261,name:"Deshaun Watson",pos:"QB",team:"CLE",value:1},
-  {id:262,name:"Michael Penix Jr.",pos:"QB",team:"ATL",value:1},
-  {id:263,name:"Shedeur Sanders",pos:"QB",team:"CLE",value:1},
-  {id:264,name:"J.J. McCarthy",pos:"QB",team:"MIN",value:1},
-  {id:265,name:"Carson Beck",pos:"QB",team:"ARI",value:1},
-  {id:266,name:"Mac Jones",pos:"QB",team:"SF",value:1},
-  {id:267,name:"Justin Fields",pos:"QB",team:"KC",value:1},
-  {id:268,name:"Ty Simpson",pos:"QB",team:"LAR",value:1},
-  {id:269,name:"Anthony Richardson Sr.",pos:"QB",team:"IND",value:1},
-  {id:270,name:"Joe Flacco",pos:"QB",team:"CIN",value:1},
-  {id:271,name:"Joe Milton III",pos:"QB",team:"DAL",value:1},
-  // ── Top 15 $0 RBs ──
-  {id:272,name:"Nicholas Singleton",pos:"RB",team:"TEN",value:1},
-  {id:273,name:"Kaytron Allen",pos:"RB",team:"WAS",value:1},
-  {id:274,name:"Jaydon Blue",pos:"RB",team:"DAL",value:1},
-  {id:275,name:"Mike Washington Jr.",pos:"RB",team:"LV",value:1},
-  {id:276,name:"Jaylen Wright",pos:"RB",team:"MIA",value:1},
-  {id:277,name:"Ollie Gordon II",pos:"RB",team:"MIA",value:1},
-  {id:278,name:"George Holani",pos:"RB",team:"SEA",value:1},
-  {id:279,name:"Isaiah Davis",pos:"RB",team:"NYJ",value:1},
-  {id:280,name:"Justice Hill",pos:"RB",team:"BAL",value:1},
-  {id:281,name:"Jordan James",pos:"RB",team:"SF",value:1},
-  {id:282,name:"Demond Claiborne",pos:"RB",team:"MIN",value:1},
-  {id:283,name:"DJ Giddens",pos:"RB",team:"IND",value:1},
-  {id:284,name:"Samaje Perine",pos:"RB",team:"CIN",value:1},
-  {id:285,name:"LeQuint Allen Jr.",pos:"RB",team:"JAC",value:1},
-  {id:286,name:"Chris Brooks",pos:"RB",team:"GB",value:1},
-  // ── Top 15 $0 WRs ──
-  {id:287,name:"Troy Franklin",pos:"WR",team:"DEN",value:1},
-  {id:288,name:"Pat Bryant",pos:"WR",team:"DEN",value:1},
-  {id:289,name:"Jaylin Noel",pos:"WR",team:"HOU",value:1},
-  {id:290,name:"Tank Dell",pos:"WR",team:"HOU",value:1},
-  {id:291,name:"Cooper Kupp",pos:"WR",team:"SEA",value:1},
-  {id:292,name:"Zachariah Branch",pos:"WR",team:"ATL",value:1},
-  {id:293,name:"Antonio Williams",pos:"WR",team:"WAS",value:1},
-  {id:294,name:"Keon Coleman",pos:"WR",team:"BUF",value:1},
-  {id:295,name:"Germie Bernard",pos:"WR",team:"PIT",value:1},
-  {id:296,name:"Jack Bech",pos:"WR",team:"LV",value:1},
-  {id:297,name:"Chimere Dike",pos:"WR",team:"TEN",value:1},
-  {id:298,name:"Elic Ayomanor",pos:"WR",team:"TEN",value:1},
-  {id:299,name:"Tory Horton",pos:"WR",team:"SEA",value:1},
-  {id:300,name:"Malachi Fields",pos:"WR",team:"NYG",value:1},
-  {id:301,name:"Tyquan Thornton",pos:"WR",team:"KC",value:1},
-  // ── Top 15 $0 TEs ──
-  {id:302,name:"Cade Otton",pos:"TE",team:"TB",value:1},
-  {id:303,name:"Oscar Delp",pos:"TE",team:"NO",value:1},
-  {id:304,name:"David Njoku",pos:"TE",team:"LAC",value:1},
-  {id:305,name:"Colby Parkinson",pos:"TE",team:"LAR",value:1},
-  {id:306,name:"Evan Engram",pos:"TE",team:"DEN",value:1},
-  {id:307,name:"Eli Stowers",pos:"TE",team:"PHI",value:1},
-  {id:308,name:"Greg Dulcich",pos:"TE",team:"MIA",value:1},
-  {id:309,name:"Mason Taylor",pos:"TE",team:"NYJ",value:1},
-  {id:310,name:"Theo Johnson",pos:"TE",team:"NYG",value:1},
-  {id:311,name:"Mike Gesicki",pos:"TE",team:"CIN",value:1},
-  {id:312,name:"Jake Tonges",pos:"TE",team:"SF",value:1},
-  {id:313,name:"Darnell Washington",pos:"TE",team:"PIT",value:1},
-  {id:314,name:"Max Klare",pos:"TE",team:"LAR",value:1},
-  {id:315,name:"Elijah Arroyo",pos:"TE",team:"SEA",value:1},
-  {id:316,name:"Noah Gray",pos:"TE",team:"KC",value:1},
+  {id:1,name:"Jahmyr Gibbs",pos:"RB",team:"DET",value:59,projPts:328.4,tier:1},
+  {id:2,name:"Bijan Robinson",pos:"RB",team:"ATL",value:58,projPts:331.3,tier:1},
+  {id:3,name:"Ja'Marr Chase",pos:"WR",team:"CIN",value:57,projPts:251.1,tier:1},
+  {id:4,name:"Puka Nacua",pos:"WR",team:"LAR",value:57,projPts:310.5,tier:1},
+  {id:5,name:"Jaxon Smith-Njigba",pos:"WR",team:"SEA",value:52,projPts:300.4,tier:1},
+  {id:6,name:"Amon-Ra St. Brown",pos:"WR",team:"DET",value:49,projPts:265.5,tier:1},
+  {id:7,name:"Christian McCaffrey",pos:"RB",team:"SF",value:47,projPts:365.6,tier:1},
+  {id:8,name:"Jonathan Taylor",pos:"RB",team:"IND",value:45,projPts:339.3,tier:1},
+  {id:9,name:"CeeDee Lamb",pos:"WR",team:"DAL",value:41,projPts:163.4,tier:2},
+  {id:10,name:"Justin Jefferson",pos:"WR",team:"MIN",value:40,projPts:159.5,tier:2},
+  {id:11,name:"James Cook III",pos:"RB",team:"BUF",value:38,projPts:285.7,tier:2},
+  {id:12,name:"Ashton Jeanty",pos:"RB",team:"LV",value:37,projPts:217.6,tier:2},
+  {id:13,name:"Drake London",pos:"WR",team:"ATL",value:36,projPts:167.9,tier:2},
+  {id:14,name:"Chase Brown",pos:"RB",team:"CIN",value:36,projPts:248.1,tier:2},
+  {id:15,name:"Brock Bowers",pos:"TE",team:"LV",value:35,projPts:144.2,tier:1},
+  {id:16,name:"A.J. Brown",pos:"WR",team:"NE",value:35,projPts:181.3,tier:2},
+  {id:17,name:"Saquon Barkley",pos:"RB",team:"PHI",value:35,projPts:213.8,tier:2},
+  {id:18,name:"De'Von Achane",pos:"RB",team:"MIA",value:34,projPts:289.3,tier:2},
+  {id:19,name:"Omarion Hampton",pos:"RB",team:"LAC",value:33,projPts:119.7,tier:3},
+  {id:20,name:"Nico Collins",pos:"WR",team:"HOU",value:32,projPts:190.7,tier:2},
+  {id:21,name:"Derrick Henry",pos:"RB",team:"BAL",value:31,projPts:272,tier:3},
+  {id:22,name:"George Pickens",pos:"WR",team:"DAL",value:31,projPts:245.4,tier:3},
+  {id:23,name:"Kenneth Walker III",pos:"RB",team:"KC",value:31,projPts:176.4,tier:3},
+  {id:24,name:"Trey McBride",pos:"TE",team:"ARI",value:30,projPts:252.9,tier:1},
+  {id:25,name:"Rashee Rice",pos:"WR",team:"KC",value:30,projPts:123.6,tier:3},
+  {id:26,name:"Chris Olave",pos:"WR",team:"NO",value:30,projPts:219,tier:3},
+  {id:27,name:"Josh Allen",pos:"QB",team:"BUF",value:30,projPts:374.6,tier:1},
+  {id:28,name:"DeVonta Smith",pos:"WR",team:"PHI",value:30,projPts:163.3,tier:3},
+  {id:29,name:"Zay Flowers",pos:"WR",team:"BAL",value:28,projPts:200.3,tier:3},
+  {id:30,name:"Kyren Williams",pos:"RB",team:"LAR",value:27,projPts:245.3,tier:3},
+  {id:31,name:"Tee Higgins",pos:"WR",team:"CIN",value:27,projPts:182.1,tier:4},
+  {id:32,name:"Tetairoa McMillan",pos:"WR",team:"CAR",value:27,projPts:176.4,tier:4},
+  {id:33,name:"Jeremiyah Love",pos:"RB",team:"ARI",value:27,projPts:0,tier:3},
+  {id:34,name:"Malik Nabers",pos:"WR",team:"NYG",value:25,projPts:48.1,tier:3},
+  {id:35,name:"Lamar Jackson",pos:"QB",team:"BAL",value:25,projPts:221.9,tier:1},
+  {id:36,name:"Josh Jacobs",pos:"RB",team:"GB",value:24,projPts:219.1,tier:3},
+  {id:37,name:"Emeka Egbuka",pos:"WR",team:"TB",value:24,projPts:164.2,tier:4},
+  {id:38,name:"Breece Hall",pos:"RB",team:"NYJ",value:23,projPts:189.7,tier:3},
+  {id:39,name:"Garrett Wilson",pos:"WR",team:"NYJ",value:23,projPts:81.5,tier:4},
+  {id:40,name:"Javonte Williams",pos:"RB",team:"DAL",value:23,projPts:225.3,tier:3},
+  {id:41,name:"Ladd McConkey",pos:"WR",team:"LAC",value:22,projPts:147.9,tier:4},
+  {id:42,name:"Colston Loveland",pos:"TE",team:"CHI",value:21,projPts:136.1,tier:1},
+  {id:43,name:"Jaylen Waddle",pos:"WR",team:"DEN",value:21,projPts:162.1,tier:4},
+  {id:44,name:"Drake Maye",pos:"QB",team:"NE",value:21,projPts:359.5,tier:1},
+  {id:45,name:"Terry McLaurin",pos:"WR",team:"WAS",value:20,projPts:95.2,tier:4},
+  {id:46,name:"Travis Etienne Jr.",pos:"RB",team:"NO",value:20,projPts:235.9,tier:4},
+  {id:47,name:"Davante Adams",pos:"WR",team:"LAR",value:20,projPts:192.9,tier:4},
+  {id:48,name:"Luther Burden III",pos:"WR",team:"CHI",value:20,projPts:104.4,tier:4},
+  {id:49,name:"Joe Burrow",pos:"QB",team:"CIN",value:19,projPts:139.5,tier:2},
+  {id:50,name:"Cam Skattebo",pos:"RB",team:"NYG",value:18,projPts:115.7,tier:4},
+  {id:51,name:"Mike Evans",pos:"WR",team:"SF",value:17,projPts:69.8,tier:4},
+  {id:52,name:"Jameson Williams",pos:"WR",team:"DET",value:17,projPts:187.4,tier:4},
+  {id:53,name:"D'Andre Swift",pos:"RB",team:"CHI",value:17,projPts:211.6,tier:4},
+  {id:54,name:"Jayden Daniels",pos:"QB",team:"WAS",value:17,projPts:117.3,tier:2},
+  {id:55,name:"Tyler Warren",pos:"TE",team:"IND",value:16,projPts:150.5,tier:1},
+  {id:56,name:"Quinshon Judkins",pos:"RB",team:"CLE",value:16,projPts:156.8,tier:4},
+  {id:57,name:"Bucky Irving",pos:"RB",team:"TB",value:15,projPts:123.5,tier:4},
+  {id:58,name:"Christian Watson",pos:"WR",team:"GB",value:15,projPts:114.9,tier:5},
+  {id:59,name:"David Montgomery",pos:"RB",team:"HOU",value:15,projPts:154.9,tier:4},
+  {id:60,name:"DJ Moore",pos:"WR",team:"BUF",value:14,projPts:145.2,tier:5},
+  {id:61,name:"TreVeyon Henderson",pos:"RB",team:"NE",value:14,projPts:188.7,tier:4},
+  {id:62,name:"Jalen Hurts",pos:"QB",team:"PHI",value:14,projPts:305.1,tier:2},
+  {id:63,name:"Rome Odunze",pos:"WR",team:"CHI",value:14,projPts:124.1,tier:5},
+  {id:64,name:"Bhayshul Tuten",pos:"RB",team:"JAC",value:13,projPts:83.6,tier:4},
+  {id:65,name:"Jadarian Price",pos:"RB",team:"SEA",value:13,projPts:0,tier:5},
+  {id:66,name:"Tucker Kraft",pos:"TE",team:"GB",value:13,projPts:101.2,tier:2},
+  {id:67,name:"Caleb Williams",pos:"QB",team:"CHI",value:13,projPts:324.2,tier:2},
+  {id:68,name:"Justin Herbert",pos:"QB",team:"LAC",value:13,projPts:299.9,tier:2},
+  {id:69,name:"Carnell Tate",pos:"WR",team:"TEN",value:13,projPts:0,tier:5},
+  {id:70,name:"Jaylen Warren",pos:"RB",team:"PIT",value:12,projPts:197.1,tier:5},
+  {id:71,name:"Marvin Harrison Jr.",pos:"WR",team:"ARI",value:12,projPts:107.3,tier:5},
+  {id:72,name:"Brian Thomas Jr.",pos:"WR",team:"JAC",value:12,projPts:114.8,tier:5},
+  {id:73,name:"Tony Pollard",pos:"RB",team:"TEN",value:12,projPts:169.3,tier:5},
+  {id:74,name:"Trevor Lawrence",pos:"QB",team:"JAC",value:12,projPts:350.2,tier:3},
+  {id:75,name:"Harold Fannin Jr.",pos:"TE",team:"CLE",value:12,projPts:150.4,tier:2},
+  {id:76,name:"Rhamondre Stevenson",pos:"RB",team:"NE",value:11,projPts:162.8,tier:5},
+  {id:77,name:"DK Metcalf",pos:"WR",team:"PIT",value:11,projPts:157.7,tier:5},
+  {id:78,name:"Parker Washington",pos:"WR",team:"JAC",value:11,projPts:155.7,tier:5},
+  {id:79,name:"Dak Prescott",pos:"QB",team:"DAL",value:11,projPts:323.8,tier:3},
+  {id:80,name:"Sam LaPorta",pos:"TE",team:"DET",value:10,projPts:86.9,tier:2},
+  {id:81,name:"Alec Pierce",pos:"WR",team:"IND",value:10,projPts:159.8,tier:5},
+  {id:82,name:"Kyle Pitts Sr.",pos:"TE",team:"ATL",value:9,projPts:166.8,tier:2},
+  {id:83,name:"Chuba Hubbard",pos:"RB",team:"CAR",value:9,projPts:110.4,tier:5},
+  {id:84,name:"Courtland Sutton",pos:"WR",team:"DEN",value:8,projPts:182.7,tier:5},
+  {id:85,name:"Rico Dowdle",pos:"RB",team:"PIT",value:8,projPts:196.8,tier:5},
+  {id:86,name:"Chris Godwin Jr.",pos:"WR",team:"TB",value:8,projPts:66.5,tier:5},
+  {id:87,name:"J.K. Dobbins",pos:"RB",team:"DEN",value:8,projPts:110.4,tier:5},
+  {id:88,name:"Jordyn Tyson",pos:"WR",team:"NO",value:8,projPts:0,tier:6},
+  {id:89,name:"Jaxson Dart",pos:"QB",team:"NYG",value:7,projPts:246.6,tier:3},
+  {id:90,name:"Michael Pittman Jr.",pos:"WR",team:"PIT",value:7,projPts:162.4,tier:6},
+  {id:91,name:"Michael Wilson",pos:"WR",team:"ARI",value:7,projPts:181.6,tier:6},
+  {id:92,name:"Brock Purdy",pos:"QB",team:"SF",value:7,projPts:187.4,tier:3},
+  {id:93,name:"RJ Harvey",pos:"RB",team:"DEN",value:7,projPts:183.1,tier:5},
+  {id:94,name:"Quentin Johnston",pos:"WR",team:"LAC",value:6,projPts:145.7,tier:6},
+  {id:95,name:"Blake Corum",pos:"RB",team:"LAR",value:6,projPts:118.2,tier:5},
+  {id:96,name:"Kyle Monangai",pos:"RB",team:"CHI",value:6,projPts:137.7,tier:5},
+  {id:97,name:"Josh Downs",pos:"WR",team:"IND",value:6,projPts:107.4,tier:6},
+  {id:98,name:"Bo Nix",pos:"QB",team:"DEN",value:6,projPts:315.8,tier:3},
+  {id:99,name:"Patrick Mahomes II",pos:"QB",team:"KC",value:6,projPts:296.2,tier:3},
+  {id:100,name:"Makai Lemon",pos:"WR",team:"PHI",value:6,projPts:0,tier:6},
+  {id:101,name:"Travis Kelce",pos:"TE",team:"KC",value:6,projPts:155.2,tier:3},
+  {id:102,name:"Wan'Dale Robinson",pos:"WR",team:"TEN",value:6,projPts:171.9,tier:6},
+  {id:103,name:"Kenny Gainwell",pos:"RB",team:"TB",value:6,projPts:184.8,tier:5},
+  {id:104,name:"Matthew Stafford",pos:"QB",team:"LAR",value:6,projPts:358.4,tier:3},
+  {id:105,name:"George Kittle",pos:"TE",team:"SF",value:5,projPts:133,tier:3},
+  {id:106,name:"Jordan Addison",pos:"WR",team:"MIN",value:5,projPts:114.1,tier:6},
+  {id:107,name:"Jakobi Meyers",pos:"WR",team:"JAC",value:5,projPts:138.3,tier:6},
+  {id:108,name:"Rachaad White",pos:"RB",team:"WAS",value:5,projPts:123,tier:5},
+  {id:109,name:"Jayden Reed",pos:"WR",team:"GB",value:5,projPts:39,tier:6},
+  {id:110,name:"Jonathon Brooks",pos:"RB",team:"CAR",value:5,projPts:0,tier:5},
+  {id:111,name:"Aaron Jones Sr.",pos:"RB",team:"MIN",value:5,projPts:104.7,tier:5},
+  {id:112,name:"Jared Goff",pos:"QB",team:"DET",value:5,projPts:305.1,tier:3},
+  {id:113,name:"Jacory Croskey-Merritt",pos:"RB",team:"WAS",value:5,projPts:135.8,tier:5},
+  {id:114,name:"Kyler Murray",pos:"QB",team:"MIN",value:5,projPts:80.8,tier:4},
+  {id:115,name:"Dalton Kincaid",pos:"TE",team:"BUF",value:5,projPts:106.6,tier:3},
+  {id:116,name:"Jordan Mason",pos:"RB",team:"MIN",value:5,projPts:121.9,tier:6},
+  {id:117,name:"Jake Ferguson",pos:"TE",team:"DAL",value:5,projPts:147.1,tier:3},
+  {id:118,name:"Dallas Goedert",pos:"TE",team:"PHI",value:5,projPts:155.1,tier:3},
+  {id:119,name:"Baker Mayfield",pos:"QB",team:"TB",value:5,projPts:282.9,tier:4},
+  {id:120,name:"Xavier Worthy",pos:"WR",team:"KC",value:5,projPts:88.9,tier:6},
+  {id:121,name:"Mark Andrews",pos:"TE",team:"BAL",value:4,projPts:107,tier:3},
+  {id:122,name:"Jordan Love",pos:"QB",team:"GB",value:4,projPts:241.1,tier:4},
+  {id:123,name:"Jayden Higgins",pos:"WR",team:"HOU",value:4,projPts:109,tier:6},
+  {id:124,name:"Tyler Shough",pos:"QB",team:"NO",value:4,projPts:164,tier:4},
+  {id:125,name:"Isaiah Likely",pos:"TE",team:"NYG",value:4,projPts:48.2,tier:3},
+  {id:126,name:"Tyrone Tracy Jr.",pos:"RB",team:"NYG",value:4,projPts:142.8,tier:6},
+  {id:127,name:"Chris Rodriguez Jr.",pos:"RB",team:"JAC",value:4,projPts:90.5,tier:6},
+  {id:128,name:"Romeo Doubs",pos:"WR",team:"NE",value:4,projPts:137.9,tier:6},
+  {id:129,name:"Khalil Shakir",pos:"WR",team:"BUF",value:4,projPts:130.4,tier:6},
+  {id:130,name:"Jalen Coker",pos:"WR",team:"CAR",value:4,projPts:73.9,tier:6},
+  {id:131,name:"Woody Marks",pos:"RB",team:"HOU",value:4,projPts:139.1,tier:6},
+  {id:132,name:"Tyler Allgeier",pos:"RB",team:"ARI",value:3,projPts:116,tier:6},
+  {id:133,name:"Malik Willis",pos:"QB",team:"MIA",value:3,projPts:51.2,tier:4},
+  {id:134,name:"KC Concepcion",pos:"WR",team:"CLE",value:3,projPts:0,tier:6},
+  {id:135,name:"Matthew Golden",pos:"WR",team:"GB",value:3,projPts:55.5,tier:6},
+  {id:136,name:"Tyjae Spears",pos:"RB",team:"TEN",value:3,projPts:89.2,tier:6},
+  {id:137,name:"Alvin Kamara",pos:"RB",team:"NO",value:3,projPts:84.2,tier:6},
+  {id:138,name:"Zach Charbonnet",pos:"RB",team:"SEA",value:2,projPts:171.4,tier:6},
+  {id:139,name:"Rashid Shaheed",pos:"WR",team:"SEA",value:2,projPts:127.1,tier:7},
+  {id:140,name:"Dylan Sampson",pos:"RB",team:"CLE",value:2,projPts:71.1,tier:6},
+  {id:141,name:"C.J. Stroud",pos:"QB",team:"HOU",value:2,projPts:216.5,tier:4},
+  {id:142,name:"Juwan Johnson",pos:"TE",team:"NO",value:2,projPts:141.4,tier:4},
+  {id:143,name:"Sam Darnold",pos:"QB",team:"SEA",value:2,projPts:249.4,tier:4},
+  {id:144,name:"Brenton Strange",pos:"TE",team:"JAC",value:2,projPts:95,tier:4},
+  {id:145,name:"Chig Okonkwo",pos:"TE",team:"WAS",value:2,projPts:96,tier:4},
+  {id:146,name:"Isiah Pacheco",pos:"RB",team:"DET",value:2,projPts:77.8,tier:6},
+  {id:147,name:"Keaton Mitchell",pos:"RB",team:"LAC",value:2,projPts:50.9,tier:6},
+  {id:148,name:"Hunter Henry",pos:"TE",team:"NE",value:2,projPts:148.8,tier:4},
+  {id:149,name:"Tank Bigsby",pos:"RB",team:"PHI",value:2,projPts:52.3,tier:6},
+  {id:150,name:"Cam Ward",pos:"QB",team:"TEN",value:2,projPts:193.7,tier:4},
+  {id:151,name:"Jonah Coleman",pos:"RB",team:"DEN",value:2,projPts:0,tier:6},
+  {id:152,name:"Brian Robinson Jr.",pos:"RB",team:"ATL",value:2,projPts:58.5,tier:6},
+  {id:153,name:"Daniel Jones",pos:"QB",team:"IND",value:2,projPts:234.4,tier:4},
+  {id:154,name:"Jauan Jennings",pos:"WR",team:"MIN",value:2,projPts:145.8,tier:7},
+  {id:155,name:"Oronde Gadsden II",pos:"TE",team:"LAC",value:2,projPts:106.9,tier:4},
+  {id:156,name:"Adonai Mitchell",pos:"WR",team:"NYJ",value:2,projPts:71.4,tier:7},
+  {id:157,name:"Jalen McMillan",pos:"WR",team:"TB",value:2,projPts:23.9,tier:7},
+  {id:158,name:"Bryce Young",pos:"QB",team:"CAR",value:1,projPts:229,tier:4},
+  {id:159,name:"Jerry Jeudy",pos:"WR",team:"CLE",value:1,projPts:95.7,tier:7},
+  {id:160,name:"Denzel Boston",pos:"WR",team:"CLE",value:1,projPts:0,tier:7},
+  {id:161,name:"Dalton Schultz",pos:"TE",team:"HOU",value:1,projPts:136.7,tier:4},
+  {id:162,name:"Tre Tucker",pos:"WR",team:"LV",value:1,projPts:133.2,tier:7},
+  {id:163,name:"Omar Cooper Jr.",pos:"WR",team:"NYJ",value:1,projPts:0,tier:7},
+  {id:164,name:"Deebo Samuel Sr.",pos:"WR",team:"SF",value:1,projPts:152.2,tier:7},
+  {id:165,name:"De'Zhaun Stribling",pos:"WR",team:"SF",value:1,projPts:0,tier:7},
+  {id:166,name:"Tre' Harris",pos:"WR",team:"LAC",value:1,projPts:54.4,tier:7},
+  {id:167,name:"AJ Barner",pos:"TE",team:"SEA",value:1,projPts:121.3,tier:4},
+  {id:168,name:"T.J. Hockenson",pos:"TE",team:"MIN",value:1,projPts:87.3,tier:4},
+  {id:169,name:"Jacoby Brissett",pos:"QB",team:"ARI",value:1,projPts:235.4,tier:4},
+  {id:170,name:"Travis Hunter",pos:"WR",team:"JAC",value:1,projPts:49.8,tier:7},
+  {id:171,name:"Sean Tucker",pos:"RB",team:"TB",value:1,projPts:87.4,tier:7},
+  {id:172,name:"Braelon Allen",pos:"RB",team:"NYJ",value:1,projPts:14.3,tier:7},
+  {id:173,name:"Ryan Flournoy",pos:"WR",team:"DAL",value:1,projPts:94,tier:7},
+  {id:174,name:"Stefon Diggs",pos:"WR",team:"WAS",value:1,projPts:167.8,tier:7},
+  {id:175,name:"Kenyon Sadiq",pos:"TE",team:"NYJ",value:1,projPts:0,tier:4},
+  {id:176,name:"Kayshon Boutte",pos:"WR",team:"NE",value:1,projPts:107.6,tier:7},
+  {id:177,name:"Ray Davis",pos:"RB",team:"BUF",value:1,projPts:59.1,tier:7},
+  {id:178,name:"Jalen Nailor",pos:"WR",team:"LV",value:1,projPts:86.2,tier:7},
+  {id:179,name:"Houston Texans",pos:"DEF",team:"HOU",value:1,projPts:164,tier:1},
+  {id:180,name:"Calvin Ridley",pos:"WR",team:"TEN",value:1,projPts:38.8,tier:7},
+  {id:181,name:"Kimani Vidal",pos:"RB",team:"LAC",value:1,projPts:109.9,tier:7},
+  {id:182,name:"Terrance Ferguson",pos:"TE",team:"LAR",value:1,projPts:46.6,tier:4},
+  {id:183,name:"Emmett Johnson",pos:"RB",team:"KC",value:1,projPts:0,tier:7},
+  {id:184,name:"James Conner",pos:"RB",team:"ARI",value:1,projPts:29.3,tier:7},
+  {id:185,name:"Malik Washington",pos:"WR",team:"MIA",value:1,projPts:93.7,tier:8},
+  {id:186,name:"Rashod Bateman",pos:"WR",team:"BAL",value:1,projPts:45.9,tier:7},
+  {id:187,name:"Emanuel Wilson",pos:"RB",team:"SEA",value:1,projPts:87,tier:7},
+  {id:188,name:"Dontayvion Wicks",pos:"WR",team:"PHI",value:1,projPts:60.8,tier:7},
+  {id:189,name:"Darnell Mooney",pos:"WR",team:"NYG",value:1,projPts:66.3,tier:8},
+  {id:190,name:"Denver Broncos",pos:"DEF",team:"DEN",value:1,projPts:143,tier:1},
+  {id:191,name:"Isaac TeSlaa",pos:"WR",team:"DET",value:1,projPts:67.9,tier:8},
+  {id:192,name:"Gunnar Helm",pos:"TE",team:"TEN",value:1,projPts:69.7,tier:4},
+  {id:193,name:"Geno Smith",pos:"QB",team:"NYJ",value:1,projPts:190.9,tier:4},
+  {id:194,name:"Pat Freiermuth",pos:"TE",team:"PIT",value:1,projPts:93.1,tier:4},
+  {id:195,name:"Seattle Seahawks",pos:"DEF",team:"SEA",value:1,projPts:179,tier:1},
+  {id:196,name:"Los Angeles Rams",pos:"DEF",team:"LAR",value:1,projPts:136,tier:1},
+  {id:210,name:"Pittsburgh Steelers",pos:"DEF",team:"PIT",value:1,projPts:130,tier:3},
+  {id:211,name:"Minnesota Vikings",pos:"DEF",team:"MIN",value:1,projPts:136,tier:2},
+  {id:212,name:"Baltimore Ravens",pos:"DEF",team:"BAL",value:1,projPts:97,tier:3},
+  {id:213,name:"San Francisco 49ers",pos:"DEF",team:"SF",value:1,projPts:78,tier:4},
+  {id:214,name:"Buffalo Bills",pos:"DEF",team:"BUF",value:1,projPts:110,tier:4},
+  {id:215,name:"Philadelphia Eagles",pos:"DEF",team:"PHI",value:1,projPts:135,tier:2},
+  {id:216,name:"Kansas City Chiefs",pos:"DEF",team:"KC",value:1,projPts:92,tier:3},
+  {id:217,name:"Dallas Cowboys",pos:"DEF",team:"DAL",value:1,projPts:59,tier:4},
+  {id:218,name:"Jacksonville Jaguars",pos:"DEF",team:"JAC",value:1,projPts:144,tier:2},
+  {id:219,name:"New England Patriots",pos:"DEF",team:"NE",value:1,projPts:127,tier:2},
+  {id:220,name:"Los Angeles Chargers",pos:"DEF",team:"LAC",value:1,projPts:111,tier:3},
+  {id:221,name:"Green Bay Packers",pos:"DEF",team:"GB",value:1,projPts:79,tier:3},
+  {id:222,name:"Detroit Lions",pos:"DEF",team:"DET",value:1,projPts:97,tier:4},
+  {id:223,name:"Cleveland Browns",pos:"DEF",team:"CLE",value:1,projPts:133,tier:4},
+  {id:224,name:"Atlanta Falcons",pos:"DEF",team:"ATL",value:1,projPts:122,tier:4},
+  {id:225,name:"Indianapolis Colts",pos:"DEF",team:"IND",value:1,projPts:99,tier:4},
+  {id:226,name:"New Orleans Saints",pos:"DEF",team:"NO",value:1,projPts:118,tier:4},
+  {id:227,name:"Chicago Bears",pos:"DEF",team:"CHI",value:1,projPts:115,tier:4},
+  {id:228,name:"Carolina Panthers",pos:"DEF",team:"CAR",value:1,projPts:103,tier:5},
+  {id:229,name:"Tampa Bay Buccaneers",pos:"DEF",team:"TB",value:1,projPts:99,tier:5},
+  {id:230,name:"New York Giants",pos:"DEF",team:"NYG",value:1,projPts:77,tier:5},
+  {id:231,name:"Tennessee Titans",pos:"DEF",team:"TEN",value:1,projPts:87,tier:5},
+  {id:232,name:"Cincinnati Bengals",pos:"DEF",team:"CIN",value:1,projPts:79,tier:5},
+  {id:233,name:"Miami Dolphins",pos:"DEF",team:"MIA",value:1,projPts:95,tier:5},
+  {id:234,name:"Las Vegas Raiders",pos:"DEF",team:"LV",value:1,projPts:75,tier:5},
+  {id:235,name:"Washington Commanders",pos:"DEF",team:"WAS",value:1,projPts:76,tier:5},
+  {id:236,name:"New York Jets",pos:"DEF",team:"NYJ",value:1,projPts:47,tier:5},
+  {id:237,name:"Arizona Cardinals",pos:"DEF",team:"ARI",value:1,projPts:77,tier:5},
+  {id:197,name:"MarShawn Lloyd",pos:"RB",team:"GB",value:1,projPts:0,tier:7},
+  {id:198,name:"Brandon Aubrey",pos:"K",team:"DAL",value:1,projPts:187.6,tier:1},
+  {id:199,name:"Ka'imi Fairbairn",pos:"K",team:"HOU",value:1,projPts:194,tier:1},
+  {id:200,name:"Cameron Dicker",pos:"K",team:"LAC",value:1,projPts:170,tier:1},
+  {id:201,name:"Cam Little",pos:"K",team:"JAC",value:1,projPts:164,tier:1},
+  {id:202,name:"Jason Myers",pos:"K",team:"SEA",value:1,projPts:202,tier:1},
+  {id:203,name:"Eddy Pineiro",pos:"K",team:"SF",value:1,projPts:140,tier:2},
+  {id:204,name:"Jake Bates",pos:"K",team:"DET",value:1,projPts:152,tier:2},
+  {id:205,name:"Cairo Santos",pos:"K",team:"CHI",value:1,projPts:132,tier:2},
+  {id:206,name:"Evan McPherson",pos:"K",team:"CIN",value:1,projPts:136,tier:2},
+  {id:207,name:"Harrison Butker",pos:"K",team:"KC",value:1,projPts:149,tier:3},
+  {id:208,name:"Chris Boswell",pos:"K",team:"PIT",value:1,projPts:151,tier:3},
+  {id:209,name:"Harrison Mevis",pos:"K",team:"LAR",value:1,projPts:82,tier:3},
+  {id:238,name:"Zane Gonzalez",pos:"K",team:"MIA",value:1,projPts:96,tier:4},
+  {id:239,name:"Trey Smack",pos:"K",team:"GB",value:1,projPts:0,tier:4},
+  {id:240,name:"Blake Grupe",pos:"K",team:"IND",value:1,projPts:129,tier:4},
+  {id:241,name:"Nick Folk",pos:"K",team:"ATL",value:1,projPts:127,tier:4},
+  {id:242,name:"Jake Moody",pos:"K",team:"WAS",value:1,projPts:81,tier:5},
+  {id:243,name:"Ben Sauls",pos:"K",team:"NYG",value:1,projPts:32,tier:4},
+  {id:244,name:"Joey Slye",pos:"K",team:"TEN",value:1,projPts:135,tier:4},
+  {id:245,name:"Chad Ryland",pos:"K",team:"ARI",value:1,projPts:130,tier:4},
+  {id:246,name:"Ryan Fitzgerald",pos:"K",team:"CAR",value:1,projPts:111,tier:4},
+  {id:247,name:"Daniel Carlson",pos:"K",team:"LV",value:1,projPts:103,tier:4},
+  {id:248,name:"Chase McLaughlin",pos:"K",team:"TB",value:1,projPts:156,tier:3},
+  {id:249,name:"Wil Lutz",pos:"K",team:"DEN",value:1,projPts:134,tier:3},
+  {id:250,name:"Will Reichard",pos:"K",team:"MIN",value:1,projPts:159,tier:3},
+  {id:251,name:"Charlie Smyth",pos:"K",team:"NO",value:1,projPts:60,tier:3},
+  {id:252,name:"Jake Elliott",pos:"K",team:"PHI",value:1,projPts:116,tier:3},
+  {id:253,name:"Tyler Bass",pos:"K",team:"BUF",value:1,projPts:0,tier:4},
+  {id:254,name:"Andy Borregales",pos:"K",team:"NE",value:1,projPts:149,tier:3},
+  {id:255,name:"Tyler Loop",pos:"K",team:"BAL",value:1,projPts:144,tier:2},
+  {id:317,name:"Dustin Hopkins",pos:"K",team:"CLE",value:1,projPts:0,tier:99},
+  {id:318,name:"Greg Zuerlein",pos:"K",team:"NYJ",value:1,projPts:0,tier:99},
+  {id:257,name:"Aaron Rodgers",pos:"QB",team:"PIT",value:1,projPts:233.6,tier:5},
+  {id:258,name:"Fernando Mendoza",pos:"QB",team:"LV",value:1,projPts:0,tier:5},
+  {id:259,name:"Tua Tagovailoa",pos:"QB",team:"ATL",value:1,projPts:175.7,tier:5},
+  {id:260,name:"Kirk Cousins",pos:"QB",team:"LV",value:1,projPts:108.5,tier:5},
+  {id:261,name:"Deshaun Watson",pos:"QB",team:"CLE",value:1,projPts:0,tier:5},
+  {id:262,name:"Michael Penix Jr.",pos:"QB",team:"ATL",value:1,projPts:123.3,tier:5},
+  {id:263,name:"Shedeur Sanders",pos:"QB",team:"CLE",value:1,projPts:94.9,tier:5},
+  {id:264,name:"J.J. McCarthy",pos:"QB",team:"MIN",value:1,projPts:137.4,tier:6},
+  {id:265,name:"Carson Beck",pos:"QB",team:"ARI",value:1,projPts:0,tier:6},
+  {id:266,name:"Mac Jones",pos:"QB",team:"SF",value:1,projPts:136,tier:6},
+  {id:267,name:"Justin Fields",pos:"QB",team:"KC",value:1,projPts:143.7,tier:6},
+  {id:268,name:"Ty Simpson",pos:"QB",team:"LAR",value:1,projPts:0,tier:6},
+  {id:269,name:"Anthony Richardson Sr.",pos:"QB",team:"IND",value:1,projPts:1.7,tier:6},
+  {id:270,name:"Joe Flacco",pos:"QB",team:"CIN",value:1,projPts:156.7,tier:6},
+  {id:271,name:"Joe Milton III",pos:"QB",team:"DAL",value:1,projPts:12.3,tier:6},
+  {id:272,name:"Nicholas Singleton",pos:"RB",team:"TEN",value:1,projPts:0,tier:7},
+  {id:273,name:"Kaytron Allen",pos:"RB",team:"WAS",value:1,projPts:0,tier:7},
+  {id:274,name:"Jaydon Blue",pos:"RB",team:"DAL",value:1,projPts:19.9,tier:7},
+  {id:275,name:"Mike Washington Jr.",pos:"RB",team:"LV",value:1,projPts:0,tier:7},
+  {id:276,name:"Jaylen Wright",pos:"RB",team:"MIA",value:1,projPts:45.7,tier:7},
+  {id:277,name:"Ollie Gordon II",pos:"RB",team:"MIA",value:1,projPts:50.6,tier:7},
+  {id:278,name:"George Holani",pos:"RB",team:"SEA",value:1,projPts:19.8,tier:7},
+  {id:279,name:"Isaiah Davis",pos:"RB",team:"NYJ",value:1,projPts:60.7,tier:7},
+  {id:280,name:"Justice Hill",pos:"RB",team:"BAL",value:1,projPts:54.7,tier:7},
+  {id:281,name:"Jordan James",pos:"RB",team:"SF",value:1,projPts:0,tier:7},
+  {id:282,name:"Demond Claiborne",pos:"RB",team:"MIN",value:1,projPts:0,tier:8},
+  {id:283,name:"DJ Giddens",pos:"RB",team:"IND",value:1,projPts:9.6,tier:8},
+  {id:284,name:"Samaje Perine",pos:"RB",team:"CIN",value:1,projPts:69.4,tier:8},
+  {id:285,name:"LeQuint Allen Jr.",pos:"RB",team:"JAC",value:1,projPts:19.8,tier:8},
+  {id:286,name:"Chris Brooks",pos:"RB",team:"GB",value:1,projPts:26.2,tier:8},
+  {id:287,name:"Troy Franklin",pos:"WR",team:"DEN",value:1,projPts:144.6,tier:8},
+  {id:288,name:"Pat Bryant",pos:"WR",team:"DEN",value:1,projPts:59.3,tier:8},
+  {id:289,name:"Jaylin Noel",pos:"WR",team:"HOU",value:1,projPts:55.4,tier:8},
+  {id:290,name:"Tank Dell",pos:"WR",team:"HOU",value:1,projPts:0,tier:8},
+  {id:291,name:"Cooper Kupp",pos:"WR",team:"SEA",value:1,projPts:93.8,tier:8},
+  {id:292,name:"Zachariah Branch",pos:"WR",team:"ATL",value:1,projPts:0,tier:8},
+  {id:293,name:"Antonio Williams",pos:"WR",team:"WAS",value:1,projPts:0,tier:8},
+  {id:294,name:"Keon Coleman",pos:"WR",team:"BUF",value:1,projPts:83.4,tier:8},
+  {id:295,name:"Germie Bernard",pos:"WR",team:"PIT",value:1,projPts:0,tier:8},
+  {id:296,name:"Jack Bech",pos:"WR",team:"LV",value:1,projPts:32.4,tier:8},
+  {id:297,name:"Chimere Dike",pos:"WR",team:"TEN",value:1,projPts:102.1,tier:8},
+  {id:298,name:"Elic Ayomanor",pos:"WR",team:"TEN",value:1,projPts:96,tier:8},
+  {id:299,name:"Tory Horton",pos:"WR",team:"SEA",value:1,projPts:58.6,tier:8},
+  {id:300,name:"Malachi Fields",pos:"WR",team:"NYG",value:1,projPts:0,tier:8},
+  {id:301,name:"Tyquan Thornton",pos:"WR",team:"KC",value:1,projPts:71.3,tier:8},
+  {id:302,name:"Cade Otton",pos:"TE",team:"TB",value:1,projPts:92.7,tier:4},
+  {id:303,name:"Oscar Delp",pos:"TE",team:"NO",value:1,projPts:0,tier:5},
+  {id:304,name:"David Njoku",pos:"TE",team:"LAC",value:1,projPts:69.8,tier:5},
+  {id:305,name:"Colby Parkinson",pos:"TE",team:"LAR",value:1,projPts:108.3,tier:5},
+  {id:306,name:"Evan Engram",pos:"TE",team:"DEN",value:1,projPts:77.8,tier:5},
+  {id:307,name:"Eli Stowers",pos:"TE",team:"PHI",value:1,projPts:0,tier:5},
+  {id:308,name:"Greg Dulcich",pos:"TE",team:"MIA",value:1,projPts:49.8,tier:5},
+  {id:309,name:"Mason Taylor",pos:"TE",team:"NYJ",value:1,projPts:66.9,tier:5},
+  {id:310,name:"Theo Johnson",pos:"TE",team:"NYG",value:1,projPts:105.3,tier:5},
+  {id:311,name:"Mike Gesicki",pos:"TE",team:"CIN",value:1,projPts:56.7,tier:5},
+  {id:312,name:"Jake Tonges",pos:"TE",team:"SF",value:1,projPts:76.3,tier:6},
+  {id:313,name:"Darnell Washington",pos:"TE",team:"PIT",value:1,projPts:57.9,tier:6},
+  {id:314,name:"Max Klare",pos:"TE",team:"LAR",value:1,projPts:0,tier:6},
+  {id:315,name:"Elijah Arroyo",pos:"TE",team:"SEA",value:1,projPts:29.4,tier:6},
+  {id:316,name:"Noah Gray",pos:"TE",team:"KC",value:1,projPts:28.3,tier:6},
 ];
 
 // 2026 Confirmed Keepers — pre-loaded into mock draft (editable in UI)
@@ -65462,17 +65457,17 @@ function buildBotProfiles(draftPicks) {
 // Bot personality traits — behavioral modifiers from Manager and Draft Profiles.docx
 const BOT_PERSONALITY_TRAITS = {
   "Aaron Fay": { budgetBlower: false, earlyAggression: 1.0, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0.1, mobileQBBonus: 0, depthHunter: false, recklessLate: true, stubbornOnTargets: false, lurkerSniper: false, lateDraftBully: false },
-  "Eric Graef": { budgetBlower: false, earlyAggression: 0.7, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: false, lurkerSniper: false, lateDraftBully: false },
+  "Eric Graef": { budgetBlower: false, earlyAggression: 1.1, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: true, recklessLate: false, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
   "Greg Cady": { budgetBlower: false, earlyAggression: 0.85, latePassivity: 1.0, kDefBait: true, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: true, stubbornOnTargets: true, lurkerSniper: true, lateDraftBully: false },
-  "Greg Mulder": { budgetBlower: false, earlyAggression: 0.9, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: false, lurkerSniper: false, lateDraftBully: false },
-  "James Lazette": { budgetBlower: false, earlyAggression: 1.3, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: true, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
-  "Joshua Van Groningen": { budgetBlower: false, earlyAggression: 1.3, latePassivity: 0.35, kDefBait: false, stackPreference: null, erratic: 0.15, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: false, lurkerSniper: false, lateDraftBully: false },
-  "Matthew Van Groningen": { budgetBlower: false, earlyAggression: 1.0, latePassivity: 1.0, kDefBait: false, stackPreference: "QB+WR", erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
-  "Ross Van Groningen": { budgetBlower: false, earlyAggression: 1.2, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
-  "Steve Vander Molen": { budgetBlower: false, earlyAggression: 1.2, latePassivity: 0.5, kDefBait: false, stackPreference: null, erratic: 0.3, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: false, lurkerSniper: false, lateDraftBully: false },
-  "Trey Hugen": { budgetBlower: false, earlyAggression: 0.6, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: true, recklessLate: false, stubbornOnTargets: false, lurkerSniper: true, lateDraftBully: true },
-  "Tyler Goslinga": { budgetBlower: true, earlyAggression: 1.4, latePassivity: 0.3, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
-  "Vance Sipma": { budgetBlower: false, earlyAggression: 0.8, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0.15, mobileQBBonus: 0.35, depthHunter: false, recklessLate: true, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
+  "Greg Mulder": { budgetBlower: false, earlyAggression: 0.95, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: true, lurkerSniper: true, lateDraftBully: false },
+  "James Lazette": { budgetBlower: false, earlyAggression: 1.2, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: true, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
+  "Joshua Van Groningen": { budgetBlower: false, earlyAggression: 1.35, latePassivity: 0.7, kDefBait: false, stackPreference: null, erratic: 0.15, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
+  "Matthew Van Groningen": { budgetBlower: false, earlyAggression: 1.0, latePassivity: 1.0, kDefBait: false, stackPreference: "QB+WR", erratic: 0, mobileQBBonus: 0, depthHunter: true, recklessLate: false, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
+  "Ross Van Groningen": { budgetBlower: false, earlyAggression: 1.05, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
+  "Steve Vander Molen": { budgetBlower: false, earlyAggression: 1.1, latePassivity: 0.6, kDefBait: false, stackPreference: null, erratic: 0.3, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: false, lurkerSniper: false, lateDraftBully: false },
+  "Trey Hugen": { budgetBlower: false, earlyAggression: 0.7, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: true, recklessLate: false, stubbornOnTargets: false, lurkerSniper: true, lateDraftBully: false },
+  "Tyler Goslinga": { budgetBlower: true, earlyAggression: 1.3, latePassivity: 0.4, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
+  "Vance Sipma": { budgetBlower: false, earlyAggression: 0.85, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0.15, mobileQBBonus: 0.35, depthHunter: false, recklessLate: true, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
 };
 
 // ── DYNAMIC NOMINATION ALGORITHM ──
@@ -65752,11 +65747,10 @@ function pickNominationTarget(nominator, available, currentRosters, currentBudge
 const MOCK_DRAFT_AVATAR_URL = (name) => `./avatars/${name}.jpg`;
 
 // ── DRAFT GRADE GENERATOR ──
-// Calculates letter grades and generates short write-ups for each team post-draft
+// Blended grading: 50% Projected Team Output + 30% ADP Value Efficiency + 20% Tier Capital
 function generateDraftGrades(nominations, rosters, budgets, playerPool) {
   const grades = [];
   const managerPicks = {};
-  // Group picks by manager
   nominations.forEach(n => {
     if (!managerPicks[n.winner]) managerPicks[n.winner] = [];
     managerPicks[n.winner].push(n);
@@ -65765,38 +65759,54 @@ function generateDraftGrades(nominations, rosters, budgets, playerPool) {
   Object.entries(rosters).forEach(([manager, roster]) => {
     const picks = managerPicks[manager] || [];
     const keepers = roster.filter(p => p.isKeeper);
-    const auctionPicks = picks.map(p => p); // only auction picks (not keepers)
+    const auctionPicks = picks.map(p => p);
 
-    // Total value acquired vs total spent — INCLUDING keepers (keeper savings are part of draft strategy)
     let totalValue = 0;
     let totalSpent = 0;
-    let steals = 0; // paid < 80% of ADP
-    let overpays = 0; // paid > 120% of ADP
+    let steals = 0;
+    let overpays = 0;
     let biggestSteal = null;
     let biggestOverpay = null;
     let bestStealDiff = 0;
     let worstOverpayDiff = 0;
 
-    // Count keepers as picks too (their ADP value vs keeper price)
+    // ── Projected points & tier tracking ──
+    let totalProjPts = 0;
+    let tierCapital = 0; // count of Tier 1-2 players (premium assets)
+    const tierCounts = { 1: 0, 2: 0, 3: 0 };
+
+    // Helper: look up player projection data
+    const getPlayerData = (name) => MOCK_PLAYER_POOL.find(p => p.name.toLowerCase() === (name || "").toLowerCase());
+
+    // Count keepers
     keepers.forEach(k => {
-      // Look up ADP value from the player pool (by name match)
-      const poolPlayer = MOCK_PLAYER_POOL.find(p => p.name.toLowerCase() === (k.name || "").toLowerCase());
-      const adp = poolPlayer ? poolPlayer.value : k.price; // fallback to price if not found
+      const poolPlayer = getPlayerData(k.name);
+      const adp = poolPlayer ? poolPlayer.value : k.price;
+      const projPts = poolPlayer ? (poolPlayer.projPts || 0) : 0;
+      const tier = poolPlayer ? (poolPlayer.tier || 99) : 99;
       const paid = k.price || 0;
       totalValue += adp;
       totalSpent += paid;
+      totalProjPts += projPts;
+      if (tier <= 2) tierCapital++;
+      if (tier <= 3) tierCounts[Math.min(tier, 3)]++;
       const diff = adp - paid;
       if (paid < adp * 0.8 && adp > 3) {
         steals++;
-        if (diff > bestStealDiff) { bestStealDiff = diff; biggestSteal = { player: { name: k.name, pos: k.pos, value: adp }, price: paid }; }
+        if (diff > bestStealDiff) { bestStealDiff = diff; biggestSteal = { player: { name: k.name, pos: k.pos, value: adp, projPts, tier }, price: paid }; }
       }
     });
 
     auctionPicks.forEach(p => {
       const adp = p.player.value || 1;
+      const projPts = p.player.projPts || 0;
+      const tier = p.player.tier || 99;
       const paid = p.price;
       totalValue += adp;
       totalSpent += paid;
+      totalProjPts += projPts;
+      if (tier <= 2) tierCapital++;
+      if (tier <= 3) tierCounts[Math.min(tier, 3)]++;
       const diff = adp - paid;
       if (paid < adp * 0.8) {
         steals++;
@@ -65808,12 +65818,9 @@ function generateDraftGrades(nominations, rosters, budgets, playerPool) {
       }
     });
 
-    // Cap totalSpent at $200 — safety check
     if (totalSpent > 200) totalSpent = 200;
-
-    // Value score: ratio of ADP value acquired to money spent (>1 = good, <1 = bad)
     const valueRatio = totalSpent > 0 ? totalValue / totalSpent : 1;
-    // Positional balance score
+
     const posCount = { QB: 0, RB: 0, WR: 0, TE: 0, K: 0, DEF: 0 };
     roster.forEach(p => { if (posCount[p.pos] !== undefined) posCount[p.pos]++; });
     const hasQB = posCount.QB >= 1;
@@ -65822,131 +65829,211 @@ function generateDraftGrades(nominations, rosters, budgets, playerPool) {
     const hasTE = posCount.TE >= 1;
     const balanceScore = (hasQB ? 1 : 0) + (hasRB ? 1 : 0) + (hasWR ? 1 : 0) + (hasTE ? 1 : 0);
 
-    // Star power: top 3 picks by value
     const starPower = roster.filter(p => !p.isKeeper).sort((a, b) => (b.price || 0) - (a.price || 0)).slice(0, 3);
-    const starTotal = starPower.reduce((s, p) => s + (p.price || 0), 0);
 
-    // Calculate unspent budget
     const keeperCost = keepers.reduce((s, k) => s + (k.price || 0), 0);
     const auctionBudget = 200 - keeperCost;
     const auctionSpent = auctionPicks.reduce((s, p) => s + p.price, 0);
     const unspent = auctionBudget - auctionSpent;
 
-    // Final grade calculation — field-relative total ADP value approach
-    // The #1 factor is: how much total roster value did you acquire vs the field?
-    // A manager who walks away with $230 in ADP value has a better team than one with $170,
-    // regardless of what they paid for it.
-    // We compute grades AFTER collecting all managers, so for now store raw data.
     grades.push({
       manager,
-      grade: "", // computed after all managers collected
+      grade: "",
       gradeNum: 0,
       valueRatio: Math.round(valueRatio * 100) / 100,
       totalValue,
       totalSpent,
+      totalProjPts: Math.round(totalProjPts),
+      tierCapital,
+      tierCounts,
       unspent: Math.max(0, unspent),
       steals,
       overpays,
       biggestSteal,
       biggestOverpay,
-      writeup: "", // computed after grading
+      writeup: "",
       starPower,
       keepers,
       balanceScore,
     });
-
-    // Letter grade — computed below after all managers collected
-    // Write-up — computed below after grading
   });
 
-  // ── FIELD-RELATIVE GRADING ──
-  // Grade based on RANK in the field, not raw value spread.
-  // This forces a real distribution: #1 gets A+, #12 gets C-/D, middle gets B-range.
-  // Rank-based ensures separation even when values are clustered.
-  const sorted = [...grades].sort((a, b) => b.totalValue - a.totalValue);
-  const rankMap = {};
-  sorted.forEach((g, i) => { rankMap[g.manager] = i; }); // 0 = best, 11 = worst
+  // ── BLENDED COMPOSITE SCORE ──
+  // 80% Optimal Starting Lineup Projected Pts + 15% ADP Value + 5% Tier Capital
+  // Starting lineup: 1 QB, 2 RB, 2 WR, 1 TE, 1 FLEX (RB/WR/TE), 1 K, 1 DEF = 9 starters
 
-  // Target grade distribution for 12 teams:
-  // Rank 0 (best): ~92 pts (A)
-  // Rank 1: ~85 (A-)
-  // Rank 2: ~79 (B+)
-  // Rank 3: ~74 (B)
-  // Rank 4: ~69 (B-)
-  // Rank 5: ~64 (B-)
-  // Rank 6: ~59 (C+)
-  // Rank 7: ~54 (C)
-  // Rank 8: ~49 (C)
-  // Rank 9: ~44 (C-)
-  // Rank 10: ~39 (D+)
-  // Rank 11 (worst): ~34 (D+)
-  const rankGrades = [92, 85, 79, 74, 69, 64, 59, 54, 49, 44, 39, 34];
+  // Calculate optimal starting lineup projected points for each manager
+  grades.forEach(g => {
+    const roster = rosters[g.manager] || [];
+    // Get projected points for each player on the roster
+    const rosterWithProj = roster.map(p => {
+      const poolPlayer = MOCK_PLAYER_POOL.find(pp => pp.name.toLowerCase() === (p.name || "").toLowerCase());
+      return { ...p, projPts: poolPlayer ? (poolPlayer.projPts || 0) : (p.projPts || 0) };
+    });
+    // Sort each position group by projPts descending
+    const qbs = rosterWithProj.filter(p => p.pos === "QB").sort((a, b) => b.projPts - a.projPts);
+    const rbs = rosterWithProj.filter(p => p.pos === "RB").sort((a, b) => b.projPts - a.projPts);
+    const wrs = rosterWithProj.filter(p => p.pos === "WR").sort((a, b) => b.projPts - a.projPts);
+    const tes = rosterWithProj.filter(p => p.pos === "TE").sort((a, b) => b.projPts - a.projPts);
+    const ks = rosterWithProj.filter(p => p.pos === "K").sort((a, b) => b.projPts - a.projPts);
+    const defs = rosterWithProj.filter(p => p.pos === "DEF").sort((a, b) => b.projPts - a.projPts);
+
+    // Fill starters: QB1, RB1, RB2, WR1, WR2, TE1, K1, DEF1
+    let starterPts = 0;
+    starterPts += (qbs[0] ? qbs[0].projPts : 0);
+    starterPts += (rbs[0] ? rbs[0].projPts : 0) + (rbs[1] ? rbs[1].projPts : 0);
+    starterPts += (wrs[0] ? wrs[0].projPts : 0) + (wrs[1] ? wrs[1].projPts : 0);
+    starterPts += (tes[0] ? tes[0].projPts : 0);
+    starterPts += (ks[0] ? ks[0].projPts : 0);
+    starterPts += (defs[0] ? defs[0].projPts : 0);
+
+    // FLEX: best remaining RB/WR/TE not already in a starter slot
+    const flexCandidates = [
+      rbs[2] || null, // RB3 (RB1+RB2 already starting)
+      wrs[2] || null, // WR3
+      tes[1] || null, // TE2
+    ].filter(Boolean).sort((a, b) => b.projPts - a.projPts);
+    starterPts += (flexCandidates[0] ? flexCandidates[0].projPts : 0);
+
+    g.starterProjPts = Math.round(starterPts);
+    g.weeklyProjPts = Math.round((starterPts / 17) * 10) / 10; // per-week average
+  });
+
+  // ── SEASON PROJECTIONS (Monte Carlo, 500 iterations) ──
+  // Simulate 500 seasons using projected weekly points + realistic variance.
+  const allWeekly = grades.map(g => g.weeklyProjPts);
+  const numTeams = grades.length;
+  const regSeasonWeeks = 14;
+  const playoffTeams = 6;
+  const simIterations = 500;
+
+  // Generate round-robin schedule: 12 teams, 14 weeks
+  const schedule = [];
+  for (let week = 0; week < numTeams - 1; week++) {
+    const round = [];
+    const t = [0, ...Array.from({ length: numTeams - 1 }, (_, i) => ((i + week) % (numTeams - 1)) + 1)];
+    for (let i = 0; i < numTeams / 2; i++) round.push([t[i], t[numTeams - 1 - i]]);
+    schedule.push(round);
+  }
+  // Weeks 12-14: repeat first 3 weeks
+  for (let w = 0; w < regSeasonWeeks - (numTeams - 1); w++) schedule.push(schedule[w]);
+
+  // Run simulation
+  const simWins = Array(numTeams).fill(0);
+  const simLosses = Array(numTeams).fill(0);
+  const simPlayoffs = Array(numTeams).fill(0);
+  const simChamps = Array(numTeams).fill(0);
+
+  for (let sim = 0; sim < simIterations; sim++) {
+    const records = Array(numTeams).fill(null).map(() => ({ w: 0, l: 0, pf: 0 }));
+    for (let week = 0; week < regSeasonWeeks; week++) {
+      const matchups = schedule[week % schedule.length];
+      for (const [a, b] of matchups) {
+        const sA = allWeekly[a] * (0.75 + Math.random() * 0.50); // ±25% variance
+        const sB = allWeekly[b] * (0.75 + Math.random() * 0.50);
+        records[a].pf += sA; records[b].pf += sB;
+        if (sA > sB) { records[a].w++; records[b].l++; } else { records[b].w++; records[a].l++; }
+      }
+    }
+    // Playoff seeding
+    const standings = records.map((r, i) => ({ i, ...r })).sort((a, b) => b.w - a.w || b.pf - a.pf);
+    for (let i = 0; i < numTeams; i++) { simWins[i] += records[i].w; simLosses[i] += records[i].l; }
+    for (let s = 0; s < playoffTeams; s++) simPlayoffs[standings[s].i]++;
+    // Playoff bracket: 1&2 bye, 3v6, 4v5 → semis → final
+    const pf = standings.slice(0, playoffTeams).map(s => s.i);
+    const game = (a, b) => allWeekly[a] * (0.75 + Math.random() * 0.50) > allWeekly[b] * (0.75 + Math.random() * 0.50) ? a : b;
+    const r1a = game(pf[2], pf[5]), r1b = game(pf[3], pf[4]);
+    const s1 = game(pf[0], r1b), s2 = game(pf[1], r1a);
+    simChamps[game(s1, s2)]++;
+  }
+
+  grades.forEach((g, i) => {
+    const avgW = Math.round(simWins[i] / simIterations);
+    g.projRecord = `${avgW}-${14 - avgW}`;
+    g.playoffPct = Math.round((simPlayoffs[i] / simIterations) * 100);
+    g.champPct = Math.round((simChamps[i] / simIterations) * 100);
+  });
+
+  const projSorted = [...grades].sort((a, b) => b.starterProjPts - a.starterProjPts);
+  const valueSorted = [...grades].sort((a, b) => b.totalValue - a.totalValue);
+  const tierSorted = [...grades].sort((a, b) => b.tierCapital - a.tierCapital);
+
+  const projRank = {};
+  const valueRank = {};
+  const tierRank = {};
+  projSorted.forEach((g, i) => { projRank[g.manager] = i; });
+  valueSorted.forEach((g, i) => { valueRank[g.manager] = i; });
+  tierSorted.forEach((g, i) => { tierRank[g.manager] = i; });
+
+  // Convert rank (0-11) to score (100-0) using smooth curve
+  const n = grades.length;
+  const rankToScore = (rank) => 100 - (rank / (n - 1)) * 66; // top=100, bottom=34
 
   grades.forEach(g => {
-    const rank = rankMap[g.manager];
-    let gradeNum = rankGrades[rank] || 50;
+    const projScore = rankToScore(projRank[g.manager]);
+    const valueScore = rankToScore(valueRank[g.manager]);
+    const tierScore = rankToScore(tierRank[g.manager]);
 
-    // Small steal bonus: +1 per steal above 3 (reward smart buying, but don't inflate)
+    // Blended: 80% projected starting lineup + 15% value efficiency + 5% tier capital
+    let gradeNum = projScore * 0.80 + valueScore * 0.15 + tierScore * 0.05;
+
+    // Small steal bonus: +1 per steal above 3
     if (g.steals > 3) gradeNum += (g.steals - 3) * 1;
-
     // Small overpay penalty: -1 per overpay above 4
     if (g.overpays > 4) gradeNum -= (g.overpays - 4) * 1;
+    // Unspent budget penalty
+    if (g.unspent > 3) gradeNum -= Math.min(12, (g.unspent - 3) * 0.6);
 
-    // ── STUPIDITY TAX: unspent budget penalty ──
-    if (g.unspent > 3) {
-      gradeNum -= Math.min(12, (g.unspent - 3) * 0.6);
-    }
-
-    // Clamp
     gradeNum = Math.max(0, Math.min(100, gradeNum));
     g.gradeNum = Math.round(gradeNum);
 
-    // Letter grade
     g.grade = gradeNum >= 95 ? "A+" : gradeNum >= 88 ? "A" : gradeNum >= 82 ? "A-" :
       gradeNum >= 76 ? "B+" : gradeNum >= 70 ? "B" : gradeNum >= 64 ? "B-" :
       gradeNum >= 58 ? "C+" : gradeNum >= 50 ? "C" : gradeNum >= 42 ? "C-" :
       gradeNum >= 35 ? "D+" : gradeNum >= 28 ? "D" : gradeNum >= 20 ? "D-" : "F";
 
-    // Generate write-up
-    const firstName = g.manager.split(" ")[0];
+    // ── Write-ups now reference weekly projections and season simulation ──
+    const nameParts = g.manager.split(" ");
+    const lastInitials = nameParts.slice(1).map(w => w[0].toUpperCase()).join(".");
+    const firstName = nameParts.length > 1 ? `${nameParts[0]} ${lastInitials}.` : nameParts[0];
     const surplus = g.totalValue - g.totalSpent;
+    const wkPts = g.weeklyProjPts;
 
     if (gradeNum >= 82) {
       const templates = [
-        `${firstName} found value everywhere. ${g.steals} steals, +$${surplus} surplus value, and a roster that looks playoff-ready on paper.`,
-        g.biggestSteal ? `${g.biggestSteal.player.name} at $${g.biggestSteal.price} (worth $${g.biggestSteal.player.value}) headlines a class where ${firstName} consistently paid below market.` : `${firstName} stayed disciplined all night and it paid off across the board.`,
-        `+$${surplus} total surplus. ${firstName} built a top-tier roster without chasing a single price. That's composure.`,
-        g.steals >= 5 ? `${g.steals} steals in one draft. ${firstName} basically robbed the room blind and nobody noticed until now.` : `${firstName} executed a near-flawless auction strategy. The math backs it up.`,
+        `${firstName}'s starters project ${wkPts} pts/wk → ${g.projRecord} record, ${g.playoffPct}% playoff odds. ${g.tierCapital} Tier 1-2 assets. This roster is built to compete.`,
+        g.biggestSteal ? `${g.biggestSteal.player.name} at $${g.biggestSteal.price} (worth $${g.biggestSteal.player.value}) anchors a lineup projecting ${wkPts} pts/wk. ${g.champPct}% title shot.` : `${wkPts} pts/wk projected with a ${g.projRecord} record. ${firstName} stayed disciplined and it paid off.`,
+        `${g.champPct}% championship probability. ${wkPts} pts/wk. ${g.tierCapital} premium-tier players. ${firstName} executed one of the best drafts in the room.`,
+        g.steals >= 5 ? `${g.steals} steals built a ${wkPts} pts/wk lineup. ${firstName} projects ${g.projRecord} with a ${g.playoffPct}% playoff lock.` : `${firstName} balanced star power (${g.tierCapital} Tier 1-2) with depth. Projections: ${wkPts}/wk, ${g.projRecord}, ${g.playoffPct}% playoffs.`,
       ];
       g.writeup = templates[Math.floor(Math.random() * templates.length)];
     } else if (gradeNum >= 58) {
       const templates = [
-        g.biggestSteal && g.biggestOverpay ? `${firstName} had highs (${g.biggestSteal.player.name} at $${g.biggestSteal.price}) and lows (${g.biggestOverpay.player.name} at $${g.biggestOverpay.price}). Net result: a competitive but imperfect roster.` : `${firstName} built something solid without any splash picks. Steady, not spectacular.`,
-        surplus >= 0 ? `+$${surplus} surplus overall. ${firstName} found enough value to offset ${g.overpays} overpay${g.overpays !== 1 ? "s" : ""}. Could've been better, could've been worse.` : `$${Math.abs(surplus)} in the hole on value. ${firstName} overpaid in spots but compensated with ${g.steals} steal${g.steals !== 1 ? "s" : ""} elsewhere.`,
-        `${g.steals} steals vs ${g.overpays} overpays. ${firstName}'s draft was a mixed bag — some great instincts, some questionable aggression.`,
-        g.balanceScore >= 3 ? `Positionally balanced with playable depth. ${firstName} won't dominate but won't embarrass either.` : `A few positional gaps could hurt ${firstName} come bye weeks. The top-end talent is there though.`,
+        `${wkPts} pts/wk, ${g.projRecord} projected. ${g.playoffPct}% playoff odds. ${firstName} built a competitive roster — bubble team territory.`,
+        g.biggestSteal && g.biggestOverpay ? `Highs (${g.biggestSteal.player.name} at $${g.biggestSteal.price}) and lows (${g.biggestOverpay.player.name} at $${g.biggestOverpay.price}). Net: ${wkPts} pts/wk, ${g.projRecord} projected.` : `${firstName} projects ${wkPts} pts/wk for a ${g.projRecord} record. Solid, not elite. ${g.playoffPct}% playoff odds.`,
+        `${g.steals} steals vs ${g.overpays} overpays. ${wkPts} pts/wk projected. ${firstName}'s draft gives a ${g.playoffPct}% shot at the postseason.`,
+        surplus >= 0 ? `+$${surplus} surplus value, ${wkPts} pts/wk. ${firstName} found value but projects only ${g.projRecord} — needs some breakouts.` : `${wkPts} pts/wk → ${g.projRecord}. ${firstName} overpaid in spots but the lineup still projects competitively. ${g.playoffPct}% playoffs.`,
       ];
       g.writeup = templates[Math.floor(Math.random() * templates.length)];
     } else if (gradeNum >= 35) {
       const templates = [
-        g.biggestOverpay ? `${g.biggestOverpay.player.name} at $${g.biggestOverpay.price} (ADP $${g.biggestOverpay.player.value}) set the tone for a rough night. ${g.overpays} overpays dragged ${firstName} into the red.` : `${firstName} spent aggressively early and paid for it in the back half of the draft.`,
-        `$${Math.abs(surplus)} in negative value. ${firstName} chased too many players and won too many bidding wars he shouldn't have.`,
-        g.overpays >= 3 ? `${g.overpays} overpays. ${firstName} was either the second-highest bidder on everyone or the winner at prices nobody else wanted.` : `Not enough steals to offset the damage. ${firstName} needed 2-3 more values and didn't find them.`,
-        g.unspent > 5 ? `${firstName} left $${g.unspent} on the table. That's $${g.unspent} of roster value voluntarily abandoned.` : `${firstName} spent like a contender but drafted like a rebuilder. The budget math doesn't add up.`,
+        g.biggestOverpay ? `${g.biggestOverpay.player.name} at $${g.biggestOverpay.price} (ADP $${g.biggestOverpay.player.value}) set the tone. Only ${wkPts} pts/wk → ${g.projRecord}. ${g.playoffPct}% playoff odds for ${firstName}.` : `${firstName} projects just ${wkPts} pts/wk — that's a ${g.projRecord} record and only ${g.playoffPct}% playoff odds.`,
+        `${wkPts} pts/wk, ${g.projRecord} projected. Only ${g.tierCapital} Tier 1-2 players. ${firstName} missed the elite tier and the projections show it.`,
+        g.unspent > 5 ? `${firstName} left $${g.unspent} on the table and only projects ${wkPts} pts/wk (${g.projRecord}). That's unrealized roster strength.` : `${g.overpays} overpays, ${wkPts} pts/wk projected. ${firstName}'s ${g.playoffPct}% playoff odds tell the story.`,
+        `${g.projRecord} projected with ${g.playoffPct}% playoff odds. ${firstName} needed more firepower — ${wkPts} pts/wk won't cut it in this league.`,
       ];
       g.writeup = templates[Math.floor(Math.random() * templates.length)];
     } else {
       const templates = [
-        g.biggestOverpay ? `$${g.biggestOverpay.price} for ${g.biggestOverpay.player.name} (ADP $${g.biggestOverpay.player.value}). That one pick encapsulates the whole night for ${firstName}.` : `${firstName} lost this draft in the middle rounds where overpay after overpay piled up.`,
-        `$${Math.abs(surplus)} underwater on value. ${firstName} won every bidding war — and that was the problem.`,
-        g.unspent > 10 ? `${firstName} left $${g.unspent} unspent AND acquired the least value in the room. That's a special kind of bad.` : `${g.overpays} overpays, $${Math.abs(surplus)} in the hole, and a roster with no clear path to the playoffs. Rebuild year.`,
-        `${firstName} spent $${g.totalSpent} and acquired $${g.totalValue} in value. That's the kind of math that ends seasons before they start.`,
+        g.biggestOverpay ? `$${g.biggestOverpay.price} for ${g.biggestOverpay.player.name} (ADP $${g.biggestOverpay.player.value}). ${wkPts} pts/wk → ${g.projRecord}. ${g.playoffPct}% playoffs. Rebuild year for ${firstName}.` : `${wkPts} pts/wk — that's dead last. ${g.projRecord} projected. ${firstName}'s roster is an accidental rebuild.`,
+        `${g.projRecord} projected. ${g.playoffPct}% playoff odds. ${g.champPct}% title shot. ${firstName} might want to start planning trades.`,
+        g.unspent > 10 ? `${firstName} left $${g.unspent} unspent AND projects the fewest points (${wkPts}/wk). ${g.projRecord} incoming.` : `${g.overpays} overpays, ${wkPts} pts/wk, ${g.projRecord} projected. ${firstName}'s season starts uphill.`,
+        `${firstName} projects ${wkPts} pts/wk for a ${g.projRecord} record. The ${g.playoffPct}% playoff probability says it all.`,
       ];
       g.writeup = templates[Math.floor(Math.random() * templates.length)];
     }
   });
 
-  // Sort by grade (best first)
   grades.sort((a, b) => b.gradeNum - a.gradeNum);
   return grades;
 }
@@ -66013,9 +66100,12 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
   const posBonus = (bot.posAlloc[pos] || 0.1) / 0.25;
   let perceivedValue = baseValue * (0.7 + 0.6 * posBonus);
 
+  // Draft progress (used by multiple modifiers below)
+  const draftProgress = rosterSoFar.length / 15;
+
   // Stars & scrubs bots overpay for studs, underpay for mid-tier
   if (bot.starsAndScrubs > 0.6 && baseValue > 35) perceivedValue *= 1.08;
-  if (bot.starsAndScrubs > 0.6 && baseValue < 15) perceivedValue *= 0.75;
+  if (bot.starsAndScrubs > 0.6 && baseValue < 15 && draftProgress < 0.5) perceivedValue *= 0.82;
 
   // Aggression factor
   perceivedValue *= (0.85 + 0.3 * bot.aggression);
@@ -66045,8 +66135,21 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
     }
   }
 
+  // ── TIER-AWARENESS: Bots bid more aggressively for Tier 1-2 players ──
+  const playerTier = player.tier || 99;
+  if (playerTier <= 2 && Array.isArray(poolRemaining)) {
+    const elitesRemaining = poolRemaining.filter(p => p.pos === pos && (p.tier || 99) <= 2).length;
+    if (elitesRemaining <= 2) perceivedValue *= 1.18;
+    else if (elitesRemaining <= 4) perceivedValue *= 1.10;
+    else perceivedValue *= 1.05;
+  } else if (playerTier <= 2) {
+    perceivedValue *= 1.08;
+  } else if (playerTier === 3) {
+    const hasEliteAtPos = rosterSoFar.some(p => (p.tier || 99) <= 2 && p.pos === pos);
+    if (!hasEliteAtPos) perceivedValue *= 1.04;
+  }
+
   // Early vs late draft phase (based on roster fill %)
-  const draftProgress = rosterSoFar.length / 15;
   if (draftProgress < 0.4) {
     // Passive managers still compete for starter positions they need — floor at 0.85
     const STARTER_NEEDS = { QB:1, RB:2, WR:2, TE:1, K:1, DEF:1 };
@@ -66200,6 +66303,12 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
   const slotsRemaining = 15 - rosterSoFar.length;
   const maxBid = budgetLeft - (slotsRemaining - 1);
 
+  // ── BUDGET RESERVE: keep enough for bench players ──
+  let reservePerSlot = 1;
+  if (slotsRemaining >= 10) reservePerSlot = 3;
+  else if (slotsRemaining >= 7) reservePerSlot = 2;
+  const pacingCap = Math.max(1, budgetLeft - ((slotsRemaining - 1) * reservePerSlot));
+
   // ── STARTER URGENCY: must fill starting lineup before bench ──
   // Count how many starter slots are still open
   const openStarterSlots = Object.entries(SLOTS).reduce((sum, [p, need]) => {
@@ -66227,52 +66336,53 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
     perceivedValue *= 1.25;
   }
 
-  if (filled >= needed && !flexNeeded) perceivedValue *= 0.3;
-  else if (filled >= needed && flexNeeded && !flexFilled) perceivedValue *= 0.7;
-  else if (filled >= needed && flexFilled) perceivedValue *= 0.4;
+  if (filled >= needed && !flexNeeded) perceivedValue *= 0.45;
+  else if (filled >= needed && flexNeeded && !flexFilled) perceivedValue *= 0.75;
+  else if (filled >= needed && flexFilled) perceivedValue *= 0.5;
 
   // Bench spots — mild penalty, not severe (we still want bots to SPEND their money)
-  if (rosterSoFar.length >= 13) perceivedValue *= 0.7;
+  // Softened from 0.7 to 0.85 so it doesn't fight budget pressure in late rounds
+  if (rosterSoFar.length >= 13) perceivedValue *= 0.85;
 
   // ── BUDGET PRESSURE: force bots to spend their money ──
   // Target: spend at least $195 of $200. No one should leave $20+ on the table.
-  // Pressure scales with how much money they have relative to slots remaining.
+  // Pressure starts earlier now (≤11 slots) so bots spend through mid-draft, not just at the end.
   if (slotsRemaining > 0) {
     const avgPerSlot = budgetLeft / slotsRemaining;
-    if (slotsRemaining <= 3 && avgPerSlot > 5) {
+    if (slotsRemaining <= 3 && avgPerSlot > 4) {
       // CRITICAL: 1-3 slots left with excess cash — bid aggressively on ANYTHING
-      perceivedValue *= 1 + (avgPerSlot - 3) * 0.12; // e.g., $15/slot → 2.44x boost
-    } else if (slotsRemaining <= 5 && avgPerSlot > 6) {
+      perceivedValue *= 1 + (avgPerSlot - 3) * 0.15; // e.g., $15/slot → 2.8x boost
+    } else if (slotsRemaining <= 5 && avgPerSlot > 5) {
       // Strong pressure: 4-5 slots left with too much money
-      perceivedValue *= 1 + (avgPerSlot - 6) * 0.08; // e.g., $20/slot → 2.12x boost
-    } else if (slotsRemaining <= 8 && avgPerSlot > 10) {
+      perceivedValue *= 1 + (avgPerSlot - 5) * 0.10; // e.g., $20/slot → 2.5x boost
+    } else if (slotsRemaining <= 8 && avgPerSlot > 8) {
       // Moderate pressure: mid-draft, avg per slot is getting too high
-      perceivedValue *= 1 + (avgPerSlot - 10) * 0.04; // e.g., $18/slot → 1.32x boost
-    } else if (slotsRemaining <= 11 && avgPerSlot > 15) {
-      // Mild early pressure: if avg is way above normal ($13/slot), start spending
-      perceivedValue *= 1 + (avgPerSlot - 15) * 0.02;
+      perceivedValue *= 1 + (avgPerSlot - 8) * 0.06; // e.g., $16/slot → 1.48x boost
+    } else if (slotsRemaining <= 11 && avgPerSlot > 12) {
+      // Early pressure: avg is above normal ($13/slot = default), start competing harder
+      perceivedValue *= 1 + (avgPerSlot - 12) * 0.03; // e.g., $18/slot → 1.18x boost
     }
   }
 
   // Random variance (+/- 15%)
   const variance = 0.85 + Math.random() * 0.3;
   // Tiered value cap calibrated to REAL NFL league auction history (2015-2025):
-  // - $70+ happened TWICE in 11 years (0.2/yr). $65+ ~1/yr. $60+ ~3/yr. $50+ ~8-9/yr.
-  // - RB1 median=$46, P90=$63, max=$71. WR1 median=$35, P90=$57, max=$65.
-  // Cap formula ensures realistic top-end: most expensive picks land $55-63, with
-  // a rare $65+ outlier requiring perfect storm of high ADP + aggressive bot + variance.
-  // $55+ ADP → 1.03x cap (max ~$63-65 for the very top guys)
-  // $45-54 ADP → 1.08x cap (max ~$52-58)
-  // $35-44 ADP → 1.15x cap (max ~$44-51)
+  // Mid-tier guys ($5-30 ADP) typically sell AT or slightly above ADP.
+  // Elite guys ($35+) can go 5-15% over ADP in bidding wars but rarely more.
+  // Cheap guys ($1-4) can go up to 3x in urgency situations.
+  // Cap formula ensures bots will compete up to realistic prices:
+  // $55+ ADP → 1.08x cap (max ~$63-67 for the very top guys)
+  // $45-54 ADP → 1.12x cap (max ~$54-62)
+  // $35-44 ADP → 1.18x cap (max ~$45-53)
   // $25-34 ADP → 1.25x cap (max ~$34-43)
-  // $10-24 ADP → 1.45x cap (max ~$19-35)
-  // $5-9 ADP → 1.80x cap
-  // $1-4 ADP → 3.0x cap
-  const baseCap = baseValue >= 55 ? 1.03 : baseValue >= 45 ? 1.08 : baseValue >= 35 ? 1.15 : baseValue >= 25 ? 1.25 : baseValue >= 10 ? 1.45 : baseValue >= 5 ? 1.80 : 3.0;
-  const wiggle = baseValue >= 55 ? Math.ceil(Math.random() * 3) : baseValue >= 45 ? Math.ceil(Math.random() * 4) : baseValue >= 35 ? Math.ceil(Math.random() * 4) : baseValue >= 25 ? Math.ceil(Math.random() * 3) : baseValue >= 10 ? Math.ceil(Math.random() * 3) : baseValue >= 5 ? Math.ceil(Math.random() * 2) : Math.ceil(Math.random() * 2);
+  // $10-24 ADP → 1.30x cap (mid-tier guys go near ADP, sometimes slightly over)
+  // $5-9 ADP → 1.50x cap (cheap starters, competition can push them up)
+  // $1-4 ADP → 3.0x cap (urgency/need can inflate these)
+  const baseCap = baseValue >= 55 ? 1.08 : baseValue >= 45 ? 1.12 : baseValue >= 35 ? 1.18 : baseValue >= 25 ? 1.25 : baseValue >= 10 ? 1.30 : baseValue >= 5 ? 1.50 : 3.0;
+  const wiggle = baseValue >= 55 ? Math.ceil(Math.random() * 4) : baseValue >= 45 ? Math.ceil(Math.random() * 5) : baseValue >= 35 ? Math.ceil(Math.random() * 4) : baseValue >= 25 ? Math.ceil(Math.random() * 3) : baseValue >= 10 ? Math.ceil(Math.random() * 3) : baseValue >= 5 ? Math.ceil(Math.random() * 2) : Math.ceil(Math.random() * 2);
   const valueCap = Math.floor(baseValue * baseCap) + wiggle;
   const cappedValue = Math.min(perceivedValue * variance, valueCap);
-  const finalValue = Math.min(Math.floor(cappedValue), maxBid);
+  const finalValue = Math.min(Math.floor(cappedValue), pacingCap);
 
   // Will they bid?
   // ── STARTER-LOCK RULE: if remaining picks <= open starter slots, ONLY bid on needed starters ──
@@ -66285,11 +66395,11 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
     return { willBid: false, maxBid: 0, bidTo: 0, delay: 0 };
   }
 
-  const willBid = currentBid < finalValue && currentBid < maxBid;
+  const willBid = currentBid < finalValue && currentBid < pacingCap;
 
   // Bid increment: aggressive bots jump more, patient bots go $1 at a time
   const increment = bot.aggression > 0.6 ? Math.ceil(Math.random() * 3 + 1) : Math.ceil(Math.random() * 2);
-  const bidTo = Math.min(currentBid + increment, finalValue, maxBid);
+  const bidTo = Math.min(currentBid + increment, finalValue, pacingCap);
 
   // Delay: aggressive bots bid fast, patient bots wait longer
   let baseDelay = 600 + (1 - bot.aggression) * 1400;
@@ -66298,7 +66408,7 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
   if (traits.lurkerSniper) baseDelay += 400 + Math.random() * 600;
   const delay = baseDelay + Math.random() * 800;
 
-  return { willBid, maxBid: Math.min(finalValue, maxBid), bidTo, delay: Math.round(delay) };
+  return { willBid, maxBid: Math.min(finalValue, pacingCap), bidTo, delay: Math.round(delay) };
 }
 
 function MockDraftTab() {
@@ -66468,13 +66578,13 @@ function MockDraftTab() {
       const mSlotsLeft = TOTAL_ROSTER - (currentRosters[m] || []).length;
       const mMaxBid = mBudget - (mSlotsLeft - 1);
       if (mMaxBid <= currentBid) return;
-      const decision = botDecision(bot, player, currentBid, currentRosters[m] || [], currentBudgets[m] || 0, pool.length);
+      const decision = botDecision(bot, player, currentBid, currentRosters[m] || [], currentBudgets[m] || 0, pool);
       if (decision.willBid && decision.bidTo > currentBid) {
         cumulativeDelay += decision.delay;
         const timeoutId = setTimeout(() => {
           const live = auctionRef.current;
           if (!live.player || live.player.id !== player.id) return;
-          const freshDecision = botDecision(bot, player, live.bid, currentRosters[m] || [], currentBudgets[m] || 0, pool.length);
+          const freshDecision = botDecision(bot, player, live.bid, currentRosters[m] || [], currentBudgets[m] || 0, pool);
           if (!freshDecision.willBid || freshDecision.bidTo <= live.bid) return;
           const newBid = Math.min(live.bid + Math.ceil(Math.random() * 3 + 1), freshDecision.maxBid, mMaxBid);
           if (newBid <= live.bid) return;
@@ -66734,7 +66844,7 @@ function MockDraftTab() {
     let currentBidder = bidder;
     let biddingActive = true;
     let rounds = 0;
-    while (biddingActive && rounds < 50) {
+    while (biddingActive && rounds < 20) {
       biddingActive = false;
       rounds++;
       const bidders = order.filter(m => m !== userTeam && m !== currentBidder && (r[m] || []).length < TOTAL_ROSTER);
@@ -66822,7 +66932,7 @@ function MockDraftTab() {
       let currentBidder = nominator;
       let biddingActive = true;
       let rounds = 0;
-      while (biddingActive && rounds < 50) {
+      while (biddingActive && rounds < 20) {
         biddingActive = false;
         rounds++;
         const bidders = order.filter(m => m !== currentBidder && (curRosters[m] || []).length < TOTAL_ROSTER);
@@ -66852,15 +66962,21 @@ function MockDraftTab() {
       curNominations.push({ player: bestPlayer, price: currentBid, winner: currentBidder });
       curLog.push(`⚡ ${currentBidder.split(" ")[0]} wins ${bestPlayer.name} (${bestPlayer.pos}) — $${currentBid}`);
 
-      // Generate chat for this simulated pick (so report card has hottest chats)
-      const simChatMsgs = generateChatMessages(bestPlayer, currentBid, currentBidder, nominator, curRosters, curBudgets, TOTAL_ROSTER, usedMessagesRef.current, order, userTeam);
-      if (simChatMsgs.length > 0) {
-        const simSpoken = new Set(simChatMsgs.map(m => m.manager).filter(Boolean));
-        addEmojiReactions(simChatMsgs, order, userTeam, simSpoken);
-        // Keep reactions attached (no delay needed for simulated picks)
-        simChatMsgs.forEach(msg => {
-          simChatBatch.push({ ...msg, id: Date.now() + Math.random() + simChatBatch.length, pickContext: { player: bestPlayer.name, pos: bestPlayer.pos, price: currentBid, winner: currentBidder } });
-        });
+      // Chat generation: during Sim All, generate for notable picks (steals, overpays, studs, K/DEF, rival picks)
+      const isSteal = currentBid < bestPlayer.value * 0.75;
+      const isOverpay = currentBid > bestPlayer.value * 1.3;
+      const isStud = bestPlayer.value >= 25;
+      const isKDef = bestPlayer.pos === "K" || bestPlayer.pos === "DEF";
+      const isNotablePick = count !== "all" || isSteal || isOverpay || isStud || (isKDef && currentBid > 1);
+      if (isNotablePick) {
+        const simChatMsgs = generateChatMessages(bestPlayer, currentBid, currentBidder, nominator, curRosters, curBudgets, TOTAL_ROSTER, usedMessagesRef.current, order, userTeam);
+        if (simChatMsgs.length > 0) {
+          const simSpoken = new Set(simChatMsgs.map(m => m.manager).filter(Boolean));
+          addEmojiReactions(simChatMsgs, order, userTeam, simSpoken);
+          simChatMsgs.forEach(msg => {
+            simChatBatch.push({ ...msg, id: Date.now() + Math.random() + simChatBatch.length, pickContext: { player: bestPlayer.name, pos: bestPlayer.pos, price: currentBid, winner: currentBidder } });
+          });
+        }
       }
 
       picks++;
@@ -67475,6 +67591,7 @@ function MockDraftTab() {
               <div style={{ display:"flex", justifyContent:"center", gap:0, marginBottom:12 }}>
                 <button onClick={() => setReportTab("grades")} style={{ background:"transparent", border:"none", borderBottom: reportTab === "grades" ? "2px solid #e9c46a" : "2px solid transparent", color: reportTab === "grades" ? "#e9c46a" : "#8b949e", fontSize:12, fontWeight:700, padding:"8px 20px", cursor:"pointer", letterSpacing:0.5 }}>GRADES</button>
                 <button onClick={() => setReportTab("highlights")} style={{ background:"transparent", border:"none", borderBottom: reportTab === "highlights" ? "2px solid #e9c46a" : "2px solid transparent", color: reportTab === "highlights" ? "#e9c46a" : "#8b949e", fontSize:12, fontWeight:700, padding:"8px 20px", cursor:"pointer", letterSpacing:0.5 }}>HIGHLIGHTS</button>
+                <button onClick={() => setReportTab("projections")} style={{ background:"transparent", border:"none", borderBottom: reportTab === "projections" ? "2px solid #e9c46a" : "2px solid transparent", color: reportTab === "projections" ? "#e9c46a" : "#8b949e", fontSize:12, fontWeight:700, padding:"8px 20px", cursor:"pointer", letterSpacing:0.5 }}>PROJECTIONS</button>
               </div>
 
               <div style={{ overflowY:"auto", flex:1 }}>
@@ -67493,8 +67610,11 @@ function MockDraftTab() {
                             <div style={{ fontWeight:700, color:"#c9d1d9", fontSize:13, marginBottom:3 }}>{g.manager}</div>
                             <div style={{ fontSize:11, color:"#8b949e", lineHeight:1.5, marginBottom:6 }}>{g.writeup}</div>
                             <div style={{ display:"flex", gap:8, flexWrap:"wrap", fontSize:10 }}>
-                              <span style={{ color:"#2ecc71" }}>📊 ADP Worth: ${g.totalValue}</span>
-                              <span style={{ color:"#e74c3c" }}>💸 Paid: ${g.totalSpent}</span>
+                              <span style={{ color:"#58a6ff" }}>🏈 {g.weeklyProjPts} pts/wk</span>
+                              <span style={{ color:"#c9d1d9" }}>📊 Proj: {g.projRecord}</span>
+                              <span style={{ color:"#2ecc71" }}>🏆 Playoffs: {g.playoffPct}%</span>
+                              <span style={{ color:"#ffd700" }}>👑 Ship: {g.champPct}%</span>
+                              <span style={{ color:"#d2a8ff" }}>⭐ Tier 1-2: {g.tierCapital}</span>
                               <span style={{ color: g.totalValue > g.totalSpent ? "#2ecc71" : "#e74c3c" }}>{g.totalValue > g.totalSpent ? "📈" : "📉"} {g.totalValue > g.totalSpent ? "+" : ""}${g.totalValue - g.totalSpent} surplus</span>
                               <span style={{ color:"#2ecc71" }}>🎯 Steals: {g.steals}</span>
                               <span style={{ color:"#e67e22" }}>📈 Overpays: {g.overpays}</span>
@@ -67514,8 +67634,8 @@ function MockDraftTab() {
                     <div style={{ background:"#0d1117", border:"1px solid #21262d", borderRadius:10, padding:"12px 16px" }}>
                       <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:14, color:"#6bb3ff", marginBottom:8 }}>📊 Draft Overview</div>
                       <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr 1fr", gap:8, fontSize:11 }}>
-                        <div style={{ textAlign:"center" }}><div style={{ fontSize:18, fontWeight:700, color:"#c9d1d9" }}>{totalPicks}</div><div style={{ color:"#8b949e", fontSize:9 }}>Total Picks</div></div>
-                        <div style={{ textAlign:"center" }}><div style={{ fontSize:18, fontWeight:700, color:"#2ecc71" }}>${avgPrice}</div><div style={{ color:"#8b949e", fontSize:9 }}>Avg Price</div></div>
+                        <div style={{ textAlign:"center" }}><div style={{ fontSize:18, fontWeight:700, color:"#58a6ff" }}>{draftGrades ? Math.round(draftGrades.reduce((s,g) => s + (g.weeklyProjPts || 0), 0) / draftGrades.length * 10) / 10 : 0}</div><div style={{ color:"#8b949e", fontSize:9 }}>Avg Pts/Wk</div></div>
+                        <div style={{ textAlign:"center" }}><div style={{ fontSize:18, fontWeight:700, color:"#ffd700" }}>{draftGrades ? (() => { const top = [...draftGrades].sort((a,b) => b.weeklyProjPts - a.weeklyProjPts)[0]; const p = top?.manager.split(" ") || []; const li = p.slice(1).map(w => w[0].toUpperCase()).join("."); return p.length > 1 ? `${p[0]} ${li}.` : p[0] || "—"; })() : "—"}</div><div style={{ color:"#8b949e", fontSize:9 }}>🏆 Favorite</div></div>
                         <div style={{ textAlign:"center" }}><div style={{ fontSize:18, fontWeight:700, color:"#2ecc71" }}>{totalSteals}</div><div style={{ color:"#8b949e", fontSize:9 }}>Total Steals</div></div>
                         <div style={{ textAlign:"center" }}><div style={{ fontSize:18, fontWeight:700, color:"#e67e22" }}>{totalOverpays}</div><div style={{ color:"#8b949e", fontSize:9 }}>Total Overpays</div></div>
                       </div>
@@ -67612,6 +67732,53 @@ function MockDraftTab() {
                         </div>
                       </div>
                     )}
+                  </div>
+                )}
+
+                {/* PROJECTIONS TAB */}
+                {reportTab === "projections" && draftGrades && (
+                  <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
+                    <div style={{ background:"#0d1117", border:"1px solid #21262d", borderRadius:10, padding:"12px 16px" }}>
+                      <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:14, color:"#6bb3ff", marginBottom:10 }}>📡 Season Projection Leaderboard</div>
+                      <div style={{ fontSize:9, color:"#8b949e", marginBottom:8 }}>Based on 500 simulated seasons with ±25% weekly variance</div>
+                      <table style={{ width:"100%", borderCollapse:"collapse", fontSize:11 }}>
+                        <thead>
+                          <tr style={{ borderBottom:"1px solid #30363d" }}>
+                            <th style={{ textAlign:"left", padding:"6px 4px", color:"#8b949e", fontWeight:600 }}>#</th>
+                            <th style={{ textAlign:"left", padding:"6px 4px", color:"#8b949e", fontWeight:600 }}>Manager</th>
+                            <th style={{ textAlign:"center", padding:"6px 4px", color:"#8b949e", fontWeight:600 }}>Pts/Wk</th>
+                            <th style={{ textAlign:"center", padding:"6px 4px", color:"#8b949e", fontWeight:600 }}>Record</th>
+                            <th style={{ textAlign:"center", padding:"6px 4px", color:"#8b949e", fontWeight:600 }}>Playoffs</th>
+                            <th style={{ textAlign:"center", padding:"6px 4px", color:"#8b949e", fontWeight:600 }}>🏆 Ship</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {[...draftGrades].sort((a, b) => b.weeklyProjPts - a.weeklyProjPts).map((g, i) => {
+                            const nameParts = g.manager.split(" ");
+                            const lastInitials = nameParts.slice(1).map(w => w[0].toUpperCase()).join(".");
+                            const displayName = nameParts.length > 1 ? `${nameParts[0]} ${lastInitials}.` : nameParts[0];
+                            return (
+                            <tr key={g.manager} style={{ borderBottom:"1px solid #1e2a3a", background: i === 0 ? "rgba(46,204,113,0.08)" : i <= 5 ? "rgba(88,166,255,0.04)" : "transparent" }}>
+                              <td style={{ padding:"6px 4px", color:"#8b949e" }}>{i + 1}</td>
+                              <td style={{ padding:"6px 4px", color:"#c9d1d9", fontWeight:500, display:"flex", alignItems:"center", gap:6 }}>
+                                <img src={`./avatars/${g.manager}.jpg`} alt="" style={{ width:20, height:20, borderRadius:"50%", objectFit:"cover" }} onError={e => { e.target.style.display = "none"; }} />
+                                {displayName}
+                              </td>
+                              <td style={{ textAlign:"center", padding:"6px 4px", color:"#58a6ff", fontWeight:700 }}>{g.weeklyProjPts}</td>
+                              <td style={{ textAlign:"center", padding:"6px 4px", color:"#c9d1d9" }}>{g.projRecord}</td>
+                              <td style={{ textAlign:"center", padding:"6px 4px", color: g.playoffPct >= 70 ? "#2ecc71" : g.playoffPct >= 40 ? "#e9c46a" : "#f85149", fontWeight:600 }}>{g.playoffPct}%</td>
+                              <td style={{ textAlign:"center", padding:"6px 4px", color: g.champPct >= 15 ? "#ffd700" : "#8b949e", fontWeight: g.champPct >= 15 ? 700 : 400 }}>{g.champPct}%</td>
+                            </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                      <div style={{ marginTop:8, fontSize:9, color:"#484f58", display:"flex", justifyContent:"space-between" }}>
+                        <span>🟢 = 70%+ playoff odds</span>
+                        <span>🟡 = 40-69% bubble</span>
+                        <span>🔴 = &lt;40% longshot</span>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
