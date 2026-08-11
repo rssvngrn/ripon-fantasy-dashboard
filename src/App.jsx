@@ -69,7 +69,7 @@ const DATA = {
   ],
   wPct: [
     { Manager: "Spencer Hower",          Wins: 17, Losses: 9,  "W%": 0.6538, "Avg Finish": 4.00, "Avg Weekly Pts": 104.23, Active: false, PlayoffApps: 2,  Seasons: 2  },
-    { Manager: "Eric Graef",             Wins: 85, Losses: 63, "W%": 0.5743, "Avg Finish": 4.27, "Avg Weekly Pts": 108.18, Active: true,  PlayoffApps: 10, Seasons: 11 },
+    { Manager: "Eric Graef",             Wins: 85, Losses: 63, "W%": 0.5743, "Avg Finish": 4.27, "Avg Weekly Pts": 108.18, Active: false, PlayoffApps: 10, Seasons: 11 },
     { Manager: "James Lazette",          Wins: 76, Losses: 59, "W%": 0.5630, "Avg Finish": 5.90, "Avg Weekly Pts": 109.81, Active: true,  PlayoffApps: 6,  Seasons: 10 },
     { Manager: "Trey Hugen",             Wins: 82, Losses: 66, "W%": 0.5541, "Avg Finish": 6.64, "Avg Weekly Pts": 110.28, Active: true,  PlayoffApps: 7,  Seasons: 11 },
     { Manager: "Ross Van Groningen",     Wins: 81, Losses: 67, "W%": 0.5473, "Avg Finish": 5.45, "Avg Weekly Pts": 105.63, Active: true,  PlayoffApps: 7,  Seasons: 11 },
@@ -88,6 +88,7 @@ const DATA = {
     { Manager: "Tim Hoekstra",           Wins: 4,  Losses: 9,  "W%": 0.3077, "Avg Finish": 10.00,"Avg Weekly Pts": 78.31,  Active: false, PlayoffApps: 0,  Seasons: 1  },
     { Manager: "Jon Vander Molen",       Wins: 4,  Losses: 9,  "W%": 0.3077, "Avg Finish": 12.00,"Avg Weekly Pts": 103.01, Active: false, PlayoffApps: 0,  Seasons: 1  },
     { Manager: "Tommy Van Groningen",    Wins: 0,  Losses: 13, "W%": 0.0000, "Avg Finish": 9.00, "Avg Weekly Pts": 67.72,  Active: false, PlayoffApps: 0,  Seasons: 1  },
+    { Manager: "Jared Stuit",            Wins: 0,  Losses: 0,  "W%": 0.0000, "Avg Finish": 0.00, "Avg Weekly Pts": 0.00,   Active: true,  PlayoffApps: 0,  Seasons: 0  },
   ],
   topScoresBySegment: {
     "0_10": [
@@ -104,13 +105,13 @@ const DATA = {
     { Points:124.64, Year:2015, Week:2, Manager:"Ross Van Groningen", "Team Name":"I Like Bortles", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:10, Active:true },
     { Points:123.58, Year:2015, Week:13, Manager:"Ross Van Groningen", "Team Name":"I Like Bortles", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:10, Active:true },
     { Points:122.34, Year:2015, Week:1, Manager:"Tim Hoekstra", "Team Name":"Timothy's Team", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:10, Active:false },
-    { Points:121.64, Year:2015, Week:8, Manager:"Eric Graef", "Team Name":"Me and Julio", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:10, Active:true },
+    { Points:121.64, Year:2015, Week:8, Manager:"Eric Graef", "Team Name":"Me and Julio", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:10, Active:false },
     { Points:120.94, Year:2015, Week:13, Manager:"Greg Cady", "Team Name":"CO U KNOW", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:10, Active:true },
     { Points:120.78, Year:2015, Week:9, Manager:"Greg Cady", "Team Name":"CO U KNOW", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:10, Active:true },
-    { Points:118.5, Year:2015, Week:7, Manager:"Eric Graef", "Team Name":"Me and Julio", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:10, Active:true },
-    { Points:117.78, Year:2015, Week:13, Manager:"Eric Graef", "Team Name":"Me and Julio", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:10, Active:true },
+    { Points:118.5, Year:2015, Week:7, Manager:"Eric Graef", "Team Name":"Me and Julio", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:10, Active:false },
+    { Points:117.78, Year:2015, Week:13, Manager:"Eric Graef", "Team Name":"Me and Julio", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:10, Active:false },
     { Points:116.28, Year:2015, Week:4, Manager:"Jonathon Israel", "Team Name":"SanduskyShowerSquad", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:10, Active:false },
-    { Points:115.5, Year:2015, Week:5, Manager:"Eric Graef", "Team Name":"Me and Julio", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:10, Active:true },
+    { Points:115.5, Year:2015, Week:5, Manager:"Eric Graef", "Team Name":"Me and Julio", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:10, Active:false },
     ],
     "0_12": [
     { Points:153.52, Year:2016, Week:7, Manager:"James Lazette", "Team Name":"OJ's Isotoners", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
@@ -121,10 +122,10 @@ const DATA = {
     { Points:138.64, Year:2016, Week:2, Manager:"Spencer Hower", "Team Name":"If It Fitz I Sitz", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:false },
     { Points:135.58, Year:2016, Week:3, Manager:"Ross Van Groningen", "Team Name":"My Coach Left Me", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
     { Points:128.48, Year:2016, Week:1, Manager:"James Lazette", "Team Name":"OJ's Isotoners", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
-    { Points:128.0, Year:2016, Week:5, Manager:"Eric Graef", "Team Name":"CobbSalad n CrabLegs", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
-    { Points:124.98, Year:2016, Week:8, Manager:"Eric Graef", "Team Name":"CobbSalad n CrabLegs", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
+    { Points:128.0, Year:2016, Week:5, Manager:"Eric Graef", "Team Name":"CobbSalad n CrabLegs", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:false },
+    { Points:124.98, Year:2016, Week:8, Manager:"Eric Graef", "Team Name":"CobbSalad n CrabLegs", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:false },
     { Points:124.82, Year:2016, Week:4, Manager:"Ross Van Groningen", "Team Name":"My Coach Left Me", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
-    { Points:124.7, Year:2016, Week:4, Manager:"Eric Graef", "Team Name":"CobbSalad n CrabLegs", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
+    { Points:124.7, Year:2016, Week:4, Manager:"Eric Graef", "Team Name":"CobbSalad n CrabLegs", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:false },
     { Points:124.64, Year:2016, Week:11, Manager:"Greg Cady", "Team Name":"Ron Mexico", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
     { Points:123.74, Year:2016, Week:13, Manager:"Ben de Ruiter", "Team Name":"Eiferted", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:12, Active:false },
     { Points:122.24, Year:2016, Week:1, Manager:"Steve Vander Molen", "Team Name":"Team Trump", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
@@ -138,7 +139,7 @@ const DATA = {
     { Points:184.4, Year:2025, Week:10, Manager:"Tyler Goslinga", "Team Name":"(Taylor's Version)", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:183.02, Year:2019, Week:5, Manager:"Greg Cady", "Team Name":"Ron Mexico", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:181.7, Year:2019, Week:1, Manager:"Tyler Goslinga", "Team Name":"Living on a Prayer", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
-    { Points:178.28, Year:2018, Week:4, Manager:"Eric Graef", "Team Name":"Chirhomantics", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
+    { Points:178.28, Year:2018, Week:4, Manager:"Eric Graef", "Team Name":"Chirhomantics", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:false },
     { Points:177.68, Year:2025, Week:5, Manager:"Ross Van Groningen", "Team Name":"I'm Sorry Smith Jaxon", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:177.36, Year:2019, Week:5, Manager:"Ross Van Groningen", "Team Name":"30-50 Feral Hogs", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:175.88, Year:2018, Week:7, Manager:"Trey Hugen", "Team Name":"Dropping Like Flies", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
@@ -160,7 +161,7 @@ const DATA = {
     { Points:179.44, Year:2020, Week:2, Manager:"James Lazette", "Team Name":"Don Mexico", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:169.18, Year:2021, Week:5, Manager:"James Lazette", "Team Name":"Don Mexico", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:166.28, Year:2020, Week:4, Manager:"Greg Mulder", "Team Name":"Modelovirus", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:14, Active:true },
-    { Points:164.02, Year:2020, Week:3, Manager:"Eric Graef", "Team Name":"Here in Allentown", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
+    { Points:164.02, Year:2020, Week:3, Manager:"Eric Graef", "Team Name":"Here in Allentown", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:false },
     { Points:160.44, Year:2021, Week:6, Manager:"Trey Hugen", "Team Name":"Cayman Nebraska", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:160.04, Year:2021, Week:5, Manager:"Joshua Van Groningen", "Team Name":"CeeDeez", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:159.98, Year:2020, Week:12, Manager:"Matthew Van Groningen", "Team Name":"Kittle Corn", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
@@ -169,9 +170,9 @@ const DATA = {
     { Points:151.96, Year:2021, Week:2, Manager:"Aaron Fay", "Team Name":"My Kupp Runneth Over", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:150.3, Year:2020, Week:1, Manager:"Steve Vander Molen", "Team Name":"Team Trump", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:148.62, Year:2021, Week:13, Manager:"Trey Hugen", "Team Name":"Cayman Nebraska", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
-    { Points:147.66, Year:2021, Week:5, Manager:"Eric Graef", "Team Name":"Rodgers2024", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
+    { Points:147.66, Year:2021, Week:5, Manager:"Eric Graef", "Team Name":"Rodgers2024", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:false },
     { Points:147.54, Year:2021, Week:5, Manager:"Greg Mulder", "Team Name":"Put it in reverse Terry!!", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
-    { Points:147.14, Year:2020, Week:7, Manager:"Eric Graef", "Team Name":"Here in Allentown", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
+    { Points:147.14, Year:2020, Week:7, Manager:"Eric Graef", "Team Name":"Here in Allentown", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:false },
     { Points:147.08, Year:2021, Week:13, Manager:"Matthew Van Groningen", "Team Name":"State of Jefferson", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:146.54, Year:2020, Week:12, Manager:"Vance Sipma", "Team Name":"In Godwin We Trust", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:146.0, Year:2021, Week:6, Manager:"Joshua Van Groningen", "Team Name":"CeeDeez", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
@@ -194,7 +195,7 @@ const DATA = {
     { Points:59.72, Year:2015, Week:3, Manager:"Tommy Van Groningen", "Team Name":"Goodell Approves", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:10, Active:false },
     { Points:60.2, Year:2015, Week:8, Manager:"Tim Hoekstra", "Team Name":"Timothy's Team", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:10, Active:false },
     { Points:60.5, Year:2015, Week:5, Manager:"Tim Hoekstra", "Team Name":"Timothy's Team", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:10, Active:false },
-    { Points:61.74, Year:2015, Week:4, Manager:"Eric Graef", "Team Name":"Me and Julio", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:10, Active:true },
+    { Points:61.74, Year:2015, Week:4, Manager:"Eric Graef", "Team Name":"Me and Julio", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:10, Active:false },
     { Points:62.16, Year:2015, Week:9, Manager:"Tim Hoekstra", "Team Name":"Timothy's Team", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:10, Active:false },
     { Points:63.78, Year:2015, Week:2, Manager:"Tommy Van Groningen", "Team Name":"Goodell Approves", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:10, Active:false },
     { Points:65.4, Year:2015, Week:7, Manager:"Jonathon Israel", "Team Name":"SanduskyShowerSquad", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:10, Active:false },
@@ -218,7 +219,7 @@ const DATA = {
     { Points:64.32, Year:2016, Week:3, Manager:"Vance Sipma", "Team Name":"The Rookie Redneck", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:12, Active:true },
     { Points:65.0, Year:2016, Week:12, Manager:"Matthew Van Groningen", "Team Name":"Hingle McCringleberry", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:12, Active:true },
     { Points:65.8, Year:2016, Week:6, Manager:"Jonathon Israel", "Team Name":"Teo's 'girlfriend'", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:12, Active:false },
-    { Points:67.26, Year:2016, Week:12, Manager:"Eric Graef", "Team Name":"CobbSalad n CrabLegs", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
+    { Points:67.26, Year:2016, Week:12, Manager:"Eric Graef", "Team Name":"CobbSalad n CrabLegs", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:false },
     { Points:67.5, Year:2016, Week:5, Manager:"Vance Sipma", "Team Name":"The Rookie Redneck", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:12, Active:true },
     { Points:67.68, Year:2016, Week:9, Manager:"Matthew Van Groningen", "Team Name":"Hingle McCringleberry", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:12, Active:true },
     { Points:68.08, Year:2016, Week:10, Manager:"Trey Hugen", "Team Name":"#TeamofBusts", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:12, Active:true },
@@ -236,12 +237,12 @@ const DATA = {
     { Points:55.42, Year:2017, Week:9, Manager:"Spencer Hower", "Team Name":"3 beers 2 deep...", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:false },
     { Points:55.56, Year:2024, Week:1, Manager:"Trey Hugen", "Team Name":"Love Thy Nabers", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:55.6, Year:2022, Week:11, Manager:"Matthew Van Groningen", "Team Name":"State of Depression", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
-    { Points:55.86, Year:2017, Week:3, Manager:"Eric Graef", "Team Name":"Ravenous D", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
+    { Points:55.86, Year:2017, Week:3, Manager:"Eric Graef", "Team Name":"Ravenous D", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:false },
     { Points:57.42, Year:2017, Week:1, Manager:"Matthew Van Groningen", "Team Name":"Michael Rosen", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:57.78, Year:2022, Week:14, Manager:"Aaron Fay", "Team Name":"Cooper Troopers", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:59.24, Year:2018, Week:8, Manager:"Vance Sipma", "Team Name":"Redneck Rebellion", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:59.58, Year:2017, Week:5, Manager:"Vance Sipma", "Team Name":"Redneck Revenge", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
-    { Points:59.82, Year:2019, Week:6, Manager:"Eric Graef", "Team Name":"Chirhomantics", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
+    { Points:59.82, Year:2019, Week:6, Manager:"Eric Graef", "Team Name":"Chirhomantics", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:false },
     { Points:60.24, Year:2025, Week:2, Manager:"Greg Mulder", "Team Name":"Pitt Happens", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:61.44, Year:2022, Week:10, Manager:"Aaron Fay", "Team Name":"Cooper Troopers", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:62.42, Year:2017, Week:13, Manager:"Greg Cady", "Team Name":"Ron Mexico", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
@@ -298,7 +299,7 @@ const DATA = {
     { Points:111.04, Year:2016, Week:5, Manager:"Ross Van Groningen", "Team Name":"My Coach Left Me", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
     { Points:108.14, Year:2016, Week:1, Manager:"Greg Mulder", "Team Name":"Revenge of Harambe", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:12, Active:true },
     { Points:104.68, Year:2016, Week:9, Manager:"Steve Vander Molen", "Team Name":"Team Trump", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
-    { Points:104.46, Year:2016, Week:7, Manager:"Eric Graef", "Team Name":"CobbSalad n CrabLegs", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
+    { Points:104.46, Year:2016, Week:7, Manager:"Eric Graef", "Team Name":"CobbSalad n CrabLegs", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:false },
     { Points:102.58, Year:2016, Week:1, Manager:"Ben de Ruiter", "Team Name":"Eiferted", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:12, Active:false },
     { Points:102.46, Year:2016, Week:6, Manager:"Greg Cady", "Team Name":"Ron Mexico", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
     { Points:100.32, Year:2016, Week:1, Manager:"Ross Van Groningen", "Team Name":"My Coach Left Me", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
@@ -319,10 +320,10 @@ const DATA = {
     { Points:155.74, Year:2019, Week:1, Manager:"Trey Hugen", "Team Name":"Me & Mahomies", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:145.12, Year:2018, Week:10, Manager:"Steve Vander Molen", "Team Name":"Team Trump", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:144.04, Year:2024, Week:11, Manager:"Aaron Fay", "Team Name":"Balaam's McConkey", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
-    { Points:141.78, Year:2018, Week:9, Manager:"Eric Graef", "Team Name":"Chirhomantics", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
+    { Points:141.78, Year:2018, Week:9, Manager:"Eric Graef", "Team Name":"Chirhomantics", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:false },
     { Points:141.06, Year:2018, Week:4, Manager:"Trey Hugen", "Team Name":"Dropping Like Flies", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:140.98, Year:2023, Week:3, Manager:"Trey Hugen", "Team Name":"Ja'MarrvelouslyChasinWins", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
-    { Points:138.8, Year:2023, Week:4, Manager:"Eric Graef", "Team Name":"Oooolave oh-oh", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
+    { Points:138.8, Year:2023, Week:4, Manager:"Eric Graef", "Team Name":"Oooolave oh-oh", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:false },
     { Points:137.24, Year:2022, Week:8, Manager:"Vance Sipma", "Team Name":"Kyler Whales", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:136.12, Year:2019, Week:8, Manager:"Greg Cady", "Team Name":"Ron Mexico", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:136.1, Year:2018, Week:1, Manager:"Trey Hugen", "Team Name":"Dropping Like Flies", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
@@ -349,7 +350,7 @@ const DATA = {
     { Points:125.82, Year:2021, Week:7, Manager:"Joshua Van Groningen", "Team Name":"CeeDeez", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:125.4, Year:2020, Week:1, Manager:"Tyler Goslinga", "Team Name":"Falcon Cook", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:121.18, Year:2020, Week:4, Manager:"Joshua Van Groningen", "Team Name":"Misfits", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:14, Active:true },
-    { Points:120.74, Year:2020, Week:12, Manager:"Eric Graef", "Team Name":"Here in Allentown", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
+    { Points:120.74, Year:2020, Week:12, Manager:"Eric Graef", "Team Name":"Here in Allentown", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:false },
     { Points:120.36, Year:2020, Week:2, Manager:"Joshua Van Groningen", "Team Name":"Misfits", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:119.62, Year:2021, Week:10, Manager:"Trey Hugen", "Team Name":"Cayman Nebraska", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:119.58, Year:2020, Week:13, Manager:"Tyler Goslinga", "Team Name":"Falcon Cook", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
@@ -397,30 +398,30 @@ const DATA = {
     { Points:87.38, Year:2016, Week:11, Manager:"Greg Mulder", "Team Name":"Revenge of Harambe", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:12, Active:true },
     { Points:87.48, Year:2016, Week:8, Manager:"Ben de Ruiter", "Team Name":"Eiferted", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:12, Active:false },
     { Points:87.66, Year:2016, Week:5, Manager:"Jonathon Israel", "Team Name":"Teo's 'girlfriend'", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:12, Active:false },
-    { Points:87.8, Year:2016, Week:13, Manager:"Eric Graef", "Team Name":"CobbSalad n CrabLegs", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
+    { Points:87.8, Year:2016, Week:13, Manager:"Eric Graef", "Team Name":"CobbSalad n CrabLegs", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:false },
     { Points:88.84, Year:2016, Week:6, Manager:"Trey Hugen", "Team Name":"#TeamofBusts", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:12, Active:true },
     { Points:88.9, Year:2016, Week:6, Manager:"James Lazette", "Team Name":"OJ's Isotoners", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
     { Points:89.4, Year:2016, Week:7, Manager:"Greg Mulder", "Team Name":"Revenge of Harambe", "Reached Playoffs":"No Playoffs", PPR:0.0, Teams:12, Active:true },
     { Points:90.18, Year:2016, Week:13, Manager:"Steve Vander Molen", "Team Name":"Team Trump", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
-    { Points:90.26, Year:2016, Week:3, Manager:"Eric Graef", "Team Name":"CobbSalad n CrabLegs", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:true },
+    { Points:90.26, Year:2016, Week:3, Manager:"Eric Graef", "Team Name":"CobbSalad n CrabLegs", "Reached Playoffs":"Playoffs", PPR:0.0, Teams:12, Active:false },
     ],
     "0.5_12": [
     { Points:70.22, Year:2025, Week:1, Manager:"Steve Vander Molen", "Team Name":"Steve", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:73.64, Year:2024, Week:7, Manager:"Matthew Van Groningen", "Team Name":"Griddy Griddy Bang Bang", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:79.32, Year:2017, Week:3, Manager:"Ben de Ruiter", "Team Name":"Friendship", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:false },
     { Points:79.82, Year:2018, Week:10, Manager:"Trey Hugen", "Team Name":"Dropping Like Flies", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
-    { Points:80.42, Year:2023, Week:6, Manager:"Eric Graef", "Team Name":"Oooolave oh-oh", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
+    { Points:80.42, Year:2023, Week:6, Manager:"Eric Graef", "Team Name":"Oooolave oh-oh", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:false },
     { Points:81.3, Year:2022, Week:9, Manager:"Greg Cady", "Team Name":"Joe Nebraska", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:81.36, Year:2025, Week:14, Manager:"Tyler Goslinga", "Team Name":"(Taylor's Version)", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:81.8, Year:2025, Week:11, Manager:"Greg Mulder", "Team Name":"Pitt Happens", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:82.94, Year:2018, Week:13, Manager:"James Lazette", "Team Name":"Shake-N-Bake", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:83.42, Year:2017, Week:6, Manager:"Ben de Ruiter", "Team Name":"Friendship", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:false },
-    { Points:83.48, Year:2025, Week:6, Manager:"Eric Graef", "Team Name":"K + S = (barf)", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
+    { Points:83.48, Year:2025, Week:6, Manager:"Eric Graef", "Team Name":"K + S = (barf)", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:false },
     { Points:85.12, Year:2017, Week:7, Manager:"James Lazette", "Team Name":"Hanging W/ Hernandez", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:85.36, Year:2022, Week:14, Manager:"Trey Hugen", "Team Name":"Ja'MarrvelouslyChasinWins", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:85.88, Year:2017, Week:13, Manager:"Vance Sipma", "Team Name":"Redneck Revenge", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:87.18, Year:2019, Week:11, Manager:"Ben de Ruiter", "Team Name":"James White Claws", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:false },
-    { Points:87.56, Year:2017, Week:1, Manager:"Eric Graef", "Team Name":"Ravenous D", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
+    { Points:87.56, Year:2017, Week:1, Manager:"Eric Graef", "Team Name":"Ravenous D", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:false },
     { Points:88.56, Year:2023, Week:4, Manager:"Joshua Van Groningen", "Team Name":"CEEDEEZ", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:89.1, Year:2024, Week:3, Manager:"Aaron Fay", "Team Name":"Balaam's McConkey", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:12, Active:true },
     { Points:89.3, Year:2025, Week:10, Manager:"Joshua Van Groningen", "Team Name":"Tuten Brown SZN", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:12, Active:true },
@@ -438,7 +439,7 @@ const DATA = {
     { Points:89.22, Year:2020, Week:13, Manager:"Steve Vander Molen", "Team Name":"Team Trump", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:89.96, Year:2021, Week:8, Manager:"Matthew Van Groningen", "Team Name":"State of Jefferson", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:89.96, Year:2021, Week:12, Manager:"Ben de Ruiter", "Team Name":"James White Claws", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:14, Active:false },
-    { Points:90.34, Year:2021, Week:10, Manager:"Eric Graef", "Team Name":"Rodgers2024", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
+    { Points:90.34, Year:2021, Week:10, Manager:"Eric Graef", "Team Name":"Rodgers2024", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:false },
     { Points:91.66, Year:2020, Week:10, Manager:"Tyler Goslinga", "Team Name":"Falcon Cook", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:91.76, Year:2021, Week:13, Manager:"Steve Vander Molen", "Team Name":"Kelcemetrics", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:92.86, Year:2021, Week:11, Manager:"Joshua Van Groningen", "Team Name":"CeeDeez", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
@@ -446,7 +447,7 @@ const DATA = {
     { Points:93.38, Year:2021, Week:1, Manager:"Ross Van Groningen", "Team Name":"Uncle Rico", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:93.92, Year:2020, Week:5, Manager:"Greg Mulder", "Team Name":"Modelovirus", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:14, Active:true },
     { Points:94.04, Year:2021, Week:14, Manager:"Steve Vander Molen", "Team Name":"Kelcemetrics", "Reached Playoffs":"No Playoffs", PPR:0.5, Teams:14, Active:true },
-    { Points:94.92, Year:2021, Week:3, Manager:"Eric Graef", "Team Name":"Rodgers2024", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:true },
+    { Points:94.92, Year:2021, Week:3, Manager:"Eric Graef", "Team Name":"Rodgers2024", "Reached Playoffs":"Playoffs", PPR:0.5, Teams:14, Active:false },
     ],
   },
   mostTopWeeks: [
@@ -527,20 +528,20 @@ const DATA = {
     { Manager:"Trey Hugen", Streak:9, StartYear:2015, StartWeek:3, EndYear:2015, EndWeek:11, Active:true, currentStreak: false },
     { Manager:"Greg Cady", Streak:8, StartYear:2015, StartWeek:8, EndYear:2016, EndWeek:2, Active:true, currentStreak: false },
     { Manager:"Vance Sipma", Streak:8, StartYear:2024, StartWeek:3, EndYear:2024, EndWeek:10, Active:true, currentStreak: false },
-    { Manager:"Eric Graef", Streak:7, StartYear:2021, StartWeek:9, EndYear:2022, EndWeek:1, Active:true, currentStreak: false },
-    { Manager:"Eric Graef", Streak:7, StartYear:2024, StartWeek:4, EndYear:2024, EndWeek:10, Active:true, currentStreak: false },
+    { Manager:"Eric Graef", Streak:7, StartYear:2021, StartWeek:9, EndYear:2022, EndWeek:1, Active:false, currentStreak: false },
+    { Manager:"Eric Graef", Streak:7, StartYear:2024, StartWeek:4, EndYear:2024, EndWeek:10, Active:false, currentStreak: false },
     { Manager:"Greg Cady", Streak:7, StartYear:2018, StartWeek:8, EndYear:2019, EndWeek:1, Active:true, currentStreak: false },
     { Manager:"Trey Hugen", Streak:7, StartYear:2018, StartWeek:5, EndYear:2018, EndWeek:11, Active:true, currentStreak: false },
     { Manager:"Tyler Goslinga", Streak:7, StartYear:2022, StartWeek:8, EndYear:2022, EndWeek:14, Active:true, currentStreak: false },
     { Manager:"Joshua Van Groningen", Streak:7, StartYear:2022, StartWeek:7, EndYear:2022, EndWeek:13, Active:true, currentStreak: false },
     { Manager:"Aaron Fay", Streak:7, StartYear:2021, StartWeek:12, EndYear:2022, EndWeek:4, Active:true, currentStreak: false },
-    { Manager:"Eric Graef", Streak:6, StartYear:2023, StartWeek:6, EndYear:2023, EndWeek:11, Active:true, currentStreak: false },
+    { Manager:"Eric Graef", Streak:6, StartYear:2023, StartWeek:6, EndYear:2023, EndWeek:11, Active:false, currentStreak: false },
     { Manager:"Steve Vander Molen", Streak:6, StartYear:2017, StartWeek:11, EndYear:2018, EndWeek:3, Active:true, currentStreak: false },
     { Manager:"Steve Vander Molen", Streak:6, StartYear:2018, StartWeek:11, EndYear:2019, EndWeek:3, Active:true, currentStreak: false },
     { Manager:"James Lazette", Streak:6, StartYear:2020, StartWeek:1, EndYear:2020, EndWeek:6, Active:true, currentStreak: false },
     { Manager:"James Lazette", Streak:6, StartYear:2021, StartWeek:4, EndYear:2021, EndWeek:9, Active:true, currentStreak: false },
     { Manager:"James Lazette", Streak:6, StartYear:2022, StartWeek:6, EndYear:2022, EndWeek:11, Active:true, currentStreak: false },
-    { Manager:"Eric Graef", Streak:5, StartYear:2019, StartWeek:1, EndYear:2019, EndWeek:5, Active:true, currentStreak: false },
+    { Manager:"Eric Graef", Streak:5, StartYear:2019, StartWeek:1, EndYear:2019, EndWeek:5, Active:false, currentStreak: false },
     { Manager:"Greg Mulder", Streak:5, StartYear:2015, StartWeek:5, EndYear:2015, EndWeek:9, Active:true, currentStreak: false },
     { Manager:"Greg Mulder", Streak:5, StartYear:2021, StartWeek:1, EndYear:2021, EndWeek:5, Active:true, currentStreak: false },
     { Manager:"Greg Mulder", Streak:5, StartYear:2022, StartWeek:7, EndYear:2022, EndWeek:11, Active:true, currentStreak: false },
@@ -590,7 +591,7 @@ const DATA = {
   ],
   seasonRecords: [
     { Manager:"Casey Rhoda", Year:2015, Team:"Casey's Team", Wins:6, Losses:7, PF:1220.7, WPct:0.4615, Active:false, PPR:0.0, Teams:10, Finish:8 },
-    { Manager:"Eric Graef", Year:2015, Team:"Me and Julio", Wins:6, Losses:7, PF:1260.7, WPct:0.4615, Active:true, PPR:0.0, Teams:10, Finish:1 },
+    { Manager:"Eric Graef", Year:2015, Team:"Me and Julio", Wins:6, Losses:7, PF:1260.7, WPct:0.4615, Active:false, PPR:0.0, Teams:10, Finish:1 },
     { Manager:"Greg Cady", Year:2015, Team:"CO U KNOW", Wins:10, Losses:3, PF:1316.14, WPct:0.7692, Active:true, PPR:0.0, Teams:10, Finish:2 },
     { Manager:"Greg Mulder", Year:2015, Team:"Junior Melonheads", Wins:9, Losses:4, PF:1315.3, WPct:0.6923, Active:true, PPR:0.0, Teams:10, Finish:3 },
     { Manager:"Jonathon Israel", Year:2015, Team:"SanduskyShowerSquad", Wins:6, Losses:7, PF:1232.18, WPct:0.4615, Active:false, PPR:0.0, Teams:10, Finish:6 },
@@ -600,7 +601,7 @@ const DATA = {
     { Manager:"Tommy Van Groningen", Year:2015, Team:"Goodell Approves", Wins:0, Losses:13, PF:880.3, WPct:0.0, Active:false, PPR:0.0, Teams:10, Finish:9 },
     { Manager:"Trey Hugen", Year:2015, Team:"Jamaal bout dat bass", Wins:11, Losses:2, PF:1292.3, WPct:0.8462, Active:true, PPR:0.0, Teams:10, Finish:4 },
     { Manager:"Ben de Ruiter", Year:2016, Team:"Eiferted", Wins:6, Losses:7, PF:1225.46, WPct:0.4615, Active:false, PPR:0.0, Teams:12, Finish:8 },
-    { Manager:"Eric Graef", Year:2016, Team:"CobbSalad n CrabLegs", Wins:8, Losses:5, PF:1279.44, WPct:0.6154, Active:true, PPR:0.0, Teams:12, Finish:2 },
+    { Manager:"Eric Graef", Year:2016, Team:"CobbSalad n CrabLegs", Wins:8, Losses:5, PF:1279.44, WPct:0.6154, Active:false, PPR:0.0, Teams:12, Finish:2 },
     { Manager:"Greg Cady", Year:2016, Team:"Ron Mexico", Wins:8, Losses:5, PF:1242.72, WPct:0.6154, Active:true, PPR:0.0, Teams:12, Finish:1 },
     { Manager:"Greg Mulder", Year:2016, Team:"Revenge of Harambe", Wins:4, Losses:9, PF:1203.94, WPct:0.3077, Active:true, PPR:0.0, Teams:12, Finish:11 },
     { Manager:"James Lazette", Year:2016, Team:"OJ's Isotoners", Wins:9, Losses:4, PF:1318.66, WPct:0.6923, Active:true, PPR:0.0, Teams:12, Finish:4 },
@@ -612,7 +613,7 @@ const DATA = {
     { Manager:"Trey Hugen", Year:2016, Team:"#TeamofBusts", Wins:2, Losses:11, PF:990.86, WPct:0.1538, Active:true, PPR:0.0, Teams:12, Finish:10 },
     { Manager:"Vance Sipma", Year:2016, Team:"The Rookie Redneck", Wins:6, Losses:7, PF:1091.28, WPct:0.4615, Active:true, PPR:0.0, Teams:12, Finish:7 },
     { Manager:"Ben de Ruiter", Year:2017, Team:"Friendship", Wins:7, Losses:6, PF:1347.4, WPct:0.5385, Active:false, PPR:0.5, Teams:12, Finish:2 },
-    { Manager:"Eric Graef", Year:2017, Team:"Ravenous D", Wins:7, Losses:6, PF:1303.64, WPct:0.5385, Active:true, PPR:0.5, Teams:12, Finish:5 },
+    { Manager:"Eric Graef", Year:2017, Team:"Ravenous D", Wins:7, Losses:6, PF:1303.64, WPct:0.5385, Active:false, PPR:0.5, Teams:12, Finish:5 },
     { Manager:"Greg Cady", Year:2017, Team:"Ron Mexico", Wins:7, Losses:6, PF:1255.94, WPct:0.5385, Active:true, PPR:0.5, Teams:12, Finish:7 },
     { Manager:"Greg Mulder", Year:2017, Team:"1-877-Kars-4-Kids", Wins:7, Losses:6, PF:1302.48, WPct:0.5385, Active:true, PPR:0.5, Teams:12, Finish:1 },
     { Manager:"James Lazette", Year:2017, Team:"Hanging W/ Hernandez", Wins:6, Losses:7, PF:1352.64, WPct:0.4615, Active:true, PPR:0.5, Teams:12, Finish:11 },
@@ -624,7 +625,7 @@ const DATA = {
     { Manager:"Trey Hugen", Year:2017, Team:"Hunt and Hill Show", Wins:8, Losses:5, PF:1548.94, WPct:0.6154, Active:true, PPR:0.5, Teams:12, Finish:6 },
     { Manager:"Vance Sipma", Year:2017, Team:"Redneck Revenge", Wins:5, Losses:8, PF:1282.54, WPct:0.3846, Active:true, PPR:0.5, Teams:12, Finish:9 },
     { Manager:"Ben de Ruiter", Year:2018, Team:"Friendship", Wins:5, Losses:8, PF:1398.08, WPct:0.3846, Active:false, PPR:0.5, Teams:12, Finish:11 },
-    { Manager:"Eric Graef", Year:2018, Team:"Chirhomantics", Wins:6, Losses:7, PF:1508.38, WPct:0.4615, Active:true, PPR:0.5, Teams:12, Finish:5 },
+    { Manager:"Eric Graef", Year:2018, Team:"Chirhomantics", Wins:6, Losses:7, PF:1508.38, WPct:0.4615, Active:false, PPR:0.5, Teams:12, Finish:5 },
     { Manager:"Greg Cady", Year:2018, Team:"Ron Mexico", Wins:9, Losses:4, PF:1556.08, WPct:0.6923, Active:true, PPR:0.5, Teams:12, Finish:2 },
     { Manager:"Greg Mulder", Year:2018, Team:"\u00af\\_(\u30c4)_/\u00af", Wins:6, Losses:7, PF:1485.52, WPct:0.4615, Active:true, PPR:0.5, Teams:12, Finish:8 },
     { Manager:"James Lazette", Year:2018, Team:"Shake-N-Bake", Wins:8, Losses:5, PF:1482.56, WPct:0.6154, Active:true, PPR:0.5, Teams:12, Finish:6 },
@@ -636,7 +637,7 @@ const DATA = {
     { Manager:"Vance Sipma", Year:2018, Team:"Redneck Rebellion", Wins:4, Losses:9, PF:1305.62, WPct:0.3077, Active:true, PPR:0.5, Teams:12, Finish:7 },
     { Manager:"Zac Dewey", Year:2018, Team:"Captain Woof", Wins:4, Losses:9, PF:1406.32, WPct:0.3077, Active:false, PPR:0.5, Teams:12, Finish:9 },
     { Manager:"Ben de Ruiter", Year:2019, Team:"James White Claws", Wins:2, Losses:11, PF:1158.44, WPct:0.1538, Active:false, PPR:0.5, Teams:12, Finish:9 },
-    { Manager:"Eric Graef", Year:2019, Team:"Chirhomantics", Wins:9, Losses:4, PF:1410.62, WPct:0.6923, Active:true, PPR:0.5, Teams:12, Finish:4 },
+    { Manager:"Eric Graef", Year:2019, Team:"Chirhomantics", Wins:9, Losses:4, PF:1410.62, WPct:0.6923, Active:false, PPR:0.5, Teams:12, Finish:4 },
     { Manager:"Greg Cady", Year:2019, Team:"Ron Mexico", Wins:7, Losses:6, PF:1522.62, WPct:0.5385, Active:true, PPR:0.5, Teams:12, Finish:1 },
     { Manager:"Greg Mulder", Year:2019, Team:"Meth-Gators", Wins:8, Losses:5, PF:1491.74, WPct:0.6154, Active:true, PPR:0.5, Teams:12, Finish:5 },
     { Manager:"James Lazette", Year:2019, Team:"Don Mexico", Wins:5, Losses:8, PF:1372.98, WPct:0.3846, Active:true, PPR:0.5, Teams:12, Finish:10 },
@@ -649,7 +650,7 @@ const DATA = {
     { Manager:"Zac Dewey", Year:2019, Team:"Captain Woof", Wins:7, Losses:6, PF:1339.46, WPct:0.5385, Active:false, PPR:0.5, Teams:12, Finish:2 },
     { Manager:"Aaron Fay", Year:2020, Team:"My Kupp Runneth Over", Wins:5, Losses:8, PF:1197.22, WPct:0.3846, Active:true, PPR:0.5, Teams:14, Finish:12 },
     { Manager:"Ben de Ruiter", Year:2020, Team:"James White Claws", Wins:6, Losses:7, PF:1340.92, WPct:0.4615, Active:false, PPR:0.5, Teams:14, Finish:8 },
-    { Manager:"Eric Graef", Year:2020, Team:"Here in Allentown", Wins:8, Losses:5, PF:1568.58, WPct:0.6154, Active:true, PPR:0.5, Teams:14, Finish:2 },
+    { Manager:"Eric Graef", Year:2020, Team:"Here in Allentown", Wins:8, Losses:5, PF:1568.58, WPct:0.6154, Active:false, PPR:0.5, Teams:14, Finish:2 },
     { Manager:"Greg Cady", Year:2020, Team:"Ron Mexico", Wins:3, Losses:10, PF:1260.48, WPct:0.2308, Active:true, PPR:0.5, Teams:14, Finish:14 },
     { Manager:"Greg Mulder", Year:2020, Team:"Modelovirus", Wins:5, Losses:8, PF:1383.92, WPct:0.3846, Active:true, PPR:0.5, Teams:14, Finish:10 },
     { Manager:"James Lazette", Year:2020, Team:"Don Mexico", Wins:10, Losses:3, PF:1607.9, WPct:0.7692, Active:true, PPR:0.5, Teams:14, Finish:1 },
@@ -663,7 +664,7 @@ const DATA = {
     { Manager:"Zac Dewey", Year:2020, Team:"Captain Woof", Wins:4, Losses:9, PF:1257.56, WPct:0.3077, Active:false, PPR:0.5, Teams:14, Finish:13 },
     { Manager:"Aaron Fay", Year:2021, Team:"My Kupp Runneth Over", Wins:10, Losses:4, PF:1710.52, WPct:0.7143, Active:true, PPR:0.5, Teams:14, Finish:3 },
     { Manager:"Ben de Ruiter", Year:2021, Team:"James White Claws", Wins:1, Losses:13, PF:1113.92, WPct:0.0714, Active:false, PPR:0.5, Teams:14, Finish:14 },
-    { Manager:"Eric Graef", Year:2021, Team:"Rodgers2024", Wins:11, Losses:3, PF:1593.54, WPct:0.7857, Active:true, PPR:0.5, Teams:14, Finish:5 },
+    { Manager:"Eric Graef", Year:2021, Team:"Rodgers2024", Wins:11, Losses:3, PF:1593.54, WPct:0.7857, Active:false, PPR:0.5, Teams:14, Finish:5 },
     { Manager:"Greg Cady", Year:2021, Team:"Ron Mexico", Wins:4, Losses:10, PF:1393.02, WPct:0.2857, Active:true, PPR:0.5, Teams:14, Finish:11 },
     { Manager:"Greg Mulder", Year:2021, Team:"Put it in reverse Terry!!", Wins:10, Losses:4, PF:1622.18, WPct:0.7143, Active:true, PPR:0.5, Teams:14, Finish:2 },
     { Manager:"James Lazette", Year:2021, Team:"Don Mexico", Wins:9, Losses:5, PF:1578.82, WPct:0.6429, Active:true, PPR:0.5, Teams:14, Finish:8 },
@@ -676,7 +677,7 @@ const DATA = {
     { Manager:"Vance Sipma", Year:2021, Team:"Jonathan Taylor Thomas", Wins:5, Losses:9, PF:1394.68, WPct:0.3571, Active:true, PPR:0.5, Teams:14, Finish:10 },
     { Manager:"Zac Dewey", Year:2021, Team:"Captain Woof", Wins:4, Losses:10, PF:1375.54, WPct:0.2857, Active:false, PPR:0.5, Teams:14, Finish:12 },
     { Manager:"Aaron Fay", Year:2022, Team:"Cooper Troopers", Wins:6, Losses:8, PF:1404.14, WPct:0.4286, Active:true, PPR:0.5, Teams:12, Finish:12 },
-    { Manager:"Eric Graef", Year:2022, Team:"The Real Commish", Wins:8, Losses:6, PF:1600.02, WPct:0.5714, Active:true, PPR:0.5, Teams:12, Finish:6 },
+    { Manager:"Eric Graef", Year:2022, Team:"The Real Commish", Wins:8, Losses:6, PF:1600.02, WPct:0.5714, Active:false, PPR:0.5, Teams:12, Finish:6 },
     { Manager:"Greg Cady", Year:2022, Team:"Joe Nebraska", Wins:7, Losses:7, PF:1397.78, WPct:0.5, Active:true, PPR:0.5, Teams:12, Finish:11 },
     { Manager:"Greg Mulder", Year:2022, Team:"Quon Solo", Wins:9, Losses:5, PF:1648.8, WPct:0.6429, Active:true, PPR:0.5, Teams:12, Finish:4 },
     { Manager:"James Lazette", Year:2022, Team:"Don Mexico", Wins:8, Losses:6, PF:1583.82, WPct:0.5714, Active:true, PPR:0.5, Teams:12, Finish:1 },
@@ -688,7 +689,7 @@ const DATA = {
     { Manager:"Tyler Goslinga", Year:2022, Team:"Fournetflix and chill", Wins:11, Losses:3, PF:1813.24, WPct:0.7857, Active:true, PPR:0.5, Teams:12, Finish:3 },
     { Manager:"Vance Sipma", Year:2022, Team:"Kyler Whales", Wins:4, Losses:10, PF:1451.34, WPct:0.2857, Active:true, PPR:0.5, Teams:12, Finish:10 },
     { Manager:"Aaron Fay", Year:2023, Team:"Cooper Troopers", Wins:3, Losses:11, PF:1426.92, WPct:0.2143, Active:true, PPR:0.5, Teams:12, Finish:9 },
-    { Manager:"Eric Graef", Year:2023, Team:"Oooolave oh-oh", Wins:8, Losses:6, PF:1511.6, WPct:0.5714, Active:true, PPR:0.5, Teams:12, Finish:4 },
+    { Manager:"Eric Graef", Year:2023, Team:"Oooolave oh-oh", Wins:8, Losses:6, PF:1511.6, WPct:0.5714, Active:false, PPR:0.5, Teams:12, Finish:4 },
     { Manager:"Greg Cady", Year:2023, Team:"Joe Nebraska", Wins:7, Losses:7, PF:1487.4, WPct:0.5, Active:true, PPR:0.5, Teams:12, Finish:7 },
     { Manager:"Greg Mulder", Year:2023, Team:"Calvin Ridley Parlay", Wins:7, Losses:7, PF:1602.78, WPct:0.5, Active:true, PPR:0.5, Teams:12, Finish:1 },
     { Manager:"James Lazette", Year:2023, Team:"Amon A New Level", Wins:9, Losses:5, PF:1672.24, WPct:0.6429, Active:true, PPR:0.5, Teams:12, Finish:3 },
@@ -700,7 +701,7 @@ const DATA = {
     { Manager:"Tyler Goslinga", Year:2023, Team:"Good Wilson Hunting", Wins:5, Losses:9, PF:1435.06, WPct:0.3571, Active:true, PPR:0.5, Teams:12, Finish:11 },
     { Manager:"Vance Sipma", Year:2023, Team:"R.I.P. Chubbie's Knee", Wins:8, Losses:6, PF:1467.92, WPct:0.5714, Active:true, PPR:0.5, Teams:12, Finish:6 },
     { Manager:"Aaron Fay", Year:2024, Team:"Balaam's McConkey", Wins:6, Losses:8, PF:1489.1, WPct:0.4286, Active:true, PPR:0.5, Teams:12, Finish:7 },
-    { Manager:"Eric Graef", Year:2024, Team:"White Privilege", Wins:9, Losses:5, PF:1623.28, WPct:0.6429, Active:true, PPR:0.5, Teams:12, Finish:4 },
+    { Manager:"Eric Graef", Year:2024, Team:"White Privilege", Wins:9, Losses:5, PF:1623.28, WPct:0.6429, Active:false, PPR:0.5, Teams:12, Finish:4 },
     { Manager:"Greg Cady", Year:2024, Team:"U Got Cooked", Wins:7, Losses:7, PF:1650, WPct:0.5, Active:true, PPR:0.5, Teams:12, Finish:1 },
     { Manager:"Greg Mulder", Year:2024, Team:"Mostly Breeceful Protest", Wins:6, Losses:8, PF:1569.36, WPct:0.4286, Active:true, PPR:0.5, Teams:12, Finish:10 },
     { Manager:"James Lazette", Year:2024, Team:"Shake and Bake", Wins:6, Losses:8, PF:1426.06, WPct:0.4286, Active:true, PPR:0.5, Teams:12, Finish:8 },
@@ -712,7 +713,7 @@ const DATA = {
     { Manager:"Tyler Goslinga", Year:2024, Team:"(Taylor's Version)", Wins:5, Losses:9, PF:1436.22, WPct:0.3571, Active:true, PPR:0.5, Teams:12, Finish:11 },
     { Manager:"Vance Sipma", Year:2024, Team:"King Henry's Return", Wins:11, Losses:3, PF:1735.7, WPct:0.7857, Active:true, PPR:0.5, Teams:12, Finish:2 },
     { Manager:"Aaron Fay", Year:2025, Team:"Balaam's McConkey", Wins:7, Losses:7, PF:1424.3, WPct:0.5, Active:true, PPR:0.5, Teams:12, Finish:12 },
-    { Manager:"Eric Graef", Year:2025, Team:"K + S = (barf)", Wins:5, Losses:9, PF:1350.58, WPct:0.3571, Active:true, PPR:0.5, Teams:12, Finish:9 },
+    { Manager:"Eric Graef", Year:2025, Team:"K + S = (barf)", Wins:5, Losses:9, PF:1350.58, WPct:0.3571, Active:false, PPR:0.5, Teams:12, Finish:9 },
     { Manager:"Greg Cady", Year:2025, Team:"All Bark", Wins:7, Losses:7, PF:1512.36, WPct:0.5, Active:true, PPR:0.5, Teams:12, Finish:5 },
     { Manager:"Greg Mulder", Year:2025, Team:"Pitt Happens", Wins:8, Losses:6, PF:1522.86, WPct:0.5714, Active:true, PPR:0.5, Teams:12, Finish:2 },
     { Manager:"James Lazette", Year:2025, Team:"Shake and Bake", Wins:6, Losses:8, PF:1428.6, WPct:0.4286, Active:true, PPR:0.5, Teams:12, Finish:7 },
@@ -42641,7 +42642,16 @@ const DATA = {
       bestDraft:  "The 2024 draft (12.34 pts/$) is his career peak, anchored by Baker Mayfield for $1 putting up 337 points — the best $1 pick in league history by total production. Paired with a balanced supporting class, it was the cleanest execution of his value-hunting style.",
       worstDraft: "The 2016 class (7.99 pts/$) landed him at #10 in an 11-manager field — a rare stumble for a manager who typically finishes mid-table or better. The Adrian Peterson (-154 ROI) whiff on a fading legend set the tone early.",
       trends:     "Graef's ROI trajectory tells a clear story: gradual improvement from -14 in 2015 to a career-best +37 in 2025. His spend at QB has nearly doubled in recent seasons ($8.40 career vs $14.00 recent), a deliberate shift away from his traditionally flat allocation. With Lamar Jackson already locked in as a keeper, the QB-first trend is likely to accelerate.",
-      outlook2026: "Coming off his best ROI season ever, Graef enters 2026 with Lamar Jackson already secured at $31. His best remaining keeper is Travis Etienne at $12 (drafted $7, +$5) — 240 RB points, 102 above positional average, for $12. An RB putting up those numbers costs $18+ on the open market. TE and WR depth is where the freed budget goes, continuing the positional shift his recent spend data suggests is already underway.",
+      outlook2026: "Eric Graef departed the No Fun League after the 2025 season following 11 years of competition. His spot was filled by Jared Stuit. Graef's legacy: 85-63, one championship (2015), four draft day podiums, the best $1 pick in league history (Baker Mayfield 2024, 337 pts), and a quiet process that produced above-.500 ball for over a decade.",
+    },
+    "Jared Stuit": {
+      summary:    "Jared Stuit enters the No Fun League in 2026 as the first new manager since 2020. He inherits Eric Graef's roster slot and brings a balanced, spreadsheet-driven approach honed in the Duck Dynasty league. His DD resume features a historic 1-13 to 11-3 turnaround and a championship game appearance in 2025.",
+      strengths:  "Stuit is methodical and prepared — he comes with detailed lists, sticks to his numbers, and stays locked in late when others check out. His Duck Dynasty results show a manager who learns fast and adapts. He nominates players he wants (not bait) and will chase his targets, suggesting conviction in his pre-draft work.",
+      weaknesses: "Zero NFL auction draft history means no data on how his process translates to a deeper, more experienced league. The DD rookie draft format is structurally different from an auction — positional allocation, budget management under pressure, and keeper dynamics are all new variables.",
+      bestDraft:  "No NFL draft history yet. His first auction will write this section.",
+      worstDraft: "No NFL draft history yet.",
+      trends:     "No NFL trends data available. In Duck Dynasty, his roster construction shifted dramatically between 2024 (1-13, last place) and 2025 (11-3, runner-up), suggesting aggressive mid-season adjustments and a willingness to rebuild on the fly.",
+      outlook2026: "Stuit enters with Chris Olave kept at $13 (a WR1 at a mid-tier price) and $187 in auction budget. Expect a balanced spend across positions with a lean toward depth over concentration — two $25 RBs over one $55 RB is his stated preference. His preparation level and target-locked style suggest he will not be outworked on draft night. The question is whether DD success translates to an 11-year auction league with established managers who know every pricing trick in the book.",
     },
     "Greg Cady": {
       summary:    "Greg Cady is the league's most disciplined QB spender — his $6.00 average at the position is the lowest among any 10+ season manager, and it's a deliberate feature. He redirects that savings into steady RB and WR volume, relying on dart throws and late-round upside rather than a QB anchor. His +1.0 avg ROI and one draft day win (2019) suggest the approach works more often than it fails.",
@@ -42769,6 +42779,13 @@ const DATA = {
       moments:   "The 2020 championship is the signature achievement — 10-3 in the regular season, first place finish, a title. The 2023 draft class (14.36 pts/$, 2,872 total points) stands alone as the most efficient full-spend draft in league history. Those two moments define what Lazette looks like at his best.",
       rivalries:  "Lazette has been particularly tough on Aaron Fay, holding a 4-2 head-to-head edge. His 6-game win streak is one of the longer runs in recent history. Against the founding class of 2015 managers he has been competitive, building winning records against several of the league's most tenured opponents.",
       legacy:    "One title, 76-59, the best average draft day rank, and a record-setting 2023 draft class. Lazette's legacy is one of process and consistency. He wins more than he loses every year and makes the right call more often than not. In a league built on variance, that counts for a lot.",
+    },
+    "Jared Stuit": {
+      story:     "Jared Stuit enters the No Fun League in 2026 as Eric Graef's replacement — the first new manager since Aaron Fay joined in 2020. At 29, he is the youngest manager in the league, but his resume in Duck Dynasty suggests he is anything but inexperienced. After a 1-13 toilet bowl season in 2024, he posted an 11-3 turnaround in 2025 and reached the championship game — the biggest single-season improvement in either league's history. He arrives with a spreadsheet, a plan, and zero fear.",
+      style:     "Stuit is a balanced-budget, target-locked drafter who comes in prepared with detailed lists and sticks to them. He nominates players he wants, chases his guys when bid up, and stays locked in late when others check out. His Duck Dynasty results show a manager who learns fast and adapts — the 1-13 to 11-3 arc is not luck, it's process correction executed at speed.",
+      moments:   "The 2025 Duck Dynasty runner-up finish — going from dead last to the championship game in one season — is the calling card. His first NFL auction draft will be the moment that defines whether the dynasty success translates to a deeper, more competitive league.",
+      rivalries:  "Too early for rivalries in the NFL league, but as the only Cowboys fan alongside Aaron Fay's Rams loyalty, the two share a bond against the room full of 49ers faithful. His connections to the Ripon Christian football sideline with Tyler and the church crew with half the league mean relationships already exist — the rivalry data just needs time to develop.",
+      legacy:    "Zero seasons, zero wins, zero losses. The book is blank. But the Duck Dynasty arc and the preparation level suggest the first chapter will not be quiet.",
     },
     "Joshua Van Groningen": {
       story:     "Joshua Van Groningen is the most decorated recent addition to the No Fun League — two titles in six seasons, a career ROI that leads all active managers, and a 2024 draft day championship. He arrived in 2020 and immediately looked like someone who had studied the league before joining. Two championships later the question is not whether he can win, but how many times.",
@@ -44551,7 +44568,7 @@ const NFL_LINEUP_EFFICIENCY = {
   },
 };
 
-const ALUMNI = new Set(["Spencer Hower","Casey Rhoda","Tim Hoekstra","Jonathon Israel","Jon Vander Molen","Ben de Ruiter","Zac Dewey","Tommy Van Groningen"]);
+const ALUMNI = new Set(["Spencer Hower","Casey Rhoda","Tim Hoekstra","Jonathon Israel","Jon Vander Molen","Ben de Ruiter","Zac Dewey","Tommy Van Groningen","Eric Graef"]);
 const mgr = (name) => ALUMNI.has(name) ? `${name} 💀🪦⚰️` : name;
 const firstName = (name) => {
   const parts = name.split(" ");
@@ -45909,7 +45926,7 @@ const SLEEPER_NAME_MAP = {
   "TylerGoslinga":   "Tyler Goslinga",
   "grgmldr":         "Greg Mulder",
   "JoshVG":          "Joshua Van Groningen",
-  "egraef":          "Eric Graef",
+  "jaredstuit":      "Jared Stuit",
   "JamesL81":        "James Lazette",
   "fourputtbogey":   "Ross Van Groningen",
   "Slimcady":        "Greg Cady",
@@ -59070,449 +59087,497 @@ const CANNED_MESSAGES = {
    "text": "$500 buy-in?? I have a toddler and a mortgage. I can barely afford the 805 in my hand right now."
   }
  ],
- "Eric Graef": [
+ "Jared Stuit": [
   {
    "trigger": "overpay",
-   "text": "That's... a lot. In our church league he went for half that."
+   "text": "That's above my number. Wouldn't have gone there."
   },
   {
    "trigger": "overpay",
-   "text": "Bold. Very bold. I'll be in bed by 9:30 regardless of how this ends."
+   "text": "My spreadsheet has that highlighted red. Just saying."
   },
   {
    "trigger": "overpay",
-   "text": "And people wonder why I stick to my list."
+   "text": "Coach Prime wouldn't approve of that price."
   },
   {
    "trigger": "overpay",
-   "text": "And THAT is why I finish my draft first every year."
+   "text": "That's bold. Not my style but bold."
   },
   {
    "trigger": "overpay",
-   "text": "That's above my estimate. Significantly above."
+   "text": "I had him $8 lower on my sheet. Interesting."
   },
   {
    "trigger": "overpay",
-   "text": "In my 20+ years of fantasy football, that's still an overpay."
+   "text": "Noted. Crossing that tier off my list."
   },
   {
    "trigger": "overpay",
-   "text": "I rarely comment but... that's a lot of money."
+   "text": "Jerry Jones wouldn't even pay that. And he pays everyone.",
+   "isHotTake": true
   },
   {
    "trigger": "overpay",
-   "text": "My church league would be APPALLED at that price."
+   "text": "That's more than I budgeted for the whole position group."
   },
   {
    "trigger": "overpay",
-   "text": "That's aggressive for a guy who might be a flex play by week 8."
+   "text": "Yikes. My list just got better by comparison."
   },
   {
    "trigger": "overpay",
-   "text": "Noted. Moving on."
+   "text": "That price doesn't pass the spreadsheet test."
   },
   {
    "trigger": "steal",
-   "text": "Nice. Very efficient."
+   "text": "Solid. That's right at value."
   },
   {
    "trigger": "steal",
-   "text": "See, that's how you do it. Discipline."
+   "text": "Good pick. Had him circled at that price too."
   },
   {
    "trigger": "steal",
-   "text": "Good value. I had him marked at about that price."
+   "text": "Nice one. That's how you build a roster."
   },
   {
    "trigger": "steal",
-   "text": "Smart money. That's a playoff-caliber pickup."
+   "text": "That's a steal. Well played."
   },
   {
    "trigger": "steal",
-   "text": "Disciplined bidding wins leagues. That's proof right there."
+   "text": "Respect. That's discipline right there."
   },
   {
    "trigger": "steal",
-   "text": "I'd tip my hat to that one. Well done."
+   "text": "My sheet had him higher. You got a deal."
   },
   {
    "trigger": "steal",
-   "text": "My list had him at the same number. Good eye."
+   "text": "Can't be mad at that value. Smart."
   },
   {
    "trigger": "steal",
-   "text": "That's how veterans draft. Right at value."
+   "text": "That's the kind of pick that wins you a season."
   },
   {
    "trigger": "kicker_over_1",
-   "text": "A kicker for more than a dollar. Unbelievable. Every single year."
+   "text": "More than a dollar for a kicker. I mean, I get it... but still."
   },
   {
    "trigger": "kicker_over_1",
-   "text": "In my church league, kickers are $1. Period. End of discussion."
+   "text": "I budgeted $2 for mine but anything over that is wild."
   },
   {
    "trigger": "kicker_over_1",
-   "text": "I've been doing this for 20 years. Kickers are a dollar."
+   "text": "Kicker wars. Every year. Never gets old."
   },
   {
    "trigger": "kicker_over_1",
-   "text": "The fact that we have to have this conversation annually is embarrassing."
+   "text": "I'll spend $2 for the right kicker. That's more than the right kicker though."
   },
   {
    "trigger": "kicker_over_1",
-   "text": "Dollar. Kickers. Always. I will die on this hill."
+   "text": "The only kicker I'd pay more than $1 for is Brandon Aubrey. And that's not Brandon Aubrey."
   },
   {
    "trigger": "def_over_1",
-   "text": "Why. Just... why would you pay more than $1 for a defense."
+   "text": "Defense at that price? I'll take the $1 streaming option."
   },
   {
    "trigger": "def_over_1",
-   "text": "A defense has never won anyone a championship at that price."
+   "text": "My spreadsheet has defense at $1-2. That's generous."
   },
   {
    "trigger": "def_over_1",
-   "text": "My church league understands this. Why can't we?"
+   "text": "Bold strategy. I'll stick with my budget."
   },
   {
    "trigger": "stack",
-   "text": "Stacking. Interesting strategy. High variance."
+   "text": "Stack. Noted. High ceiling if it hits."
   },
   {
    "trigger": "stack",
-   "text": "Bold correlation play. Hope the bye doesn't kill you."
+   "text": "Correlation play. Risky but I respect the strategy."
   },
   {
    "trigger": "stack",
-   "text": "Stack if you want. I'll take the consistent floor."
+   "text": "Stacking is fun until the bye week. Good luck."
   },
   {
    "trigger": "self_pick",
-   "text": "Got him right at my price. Perfect."
+   "text": "Right at my price. Checked off the list."
   },
   {
    "trigger": "self_pick",
-   "text": "That's exactly what my sheet said. Moving on."
+   "text": "Had him circled. Let's go."
   },
   {
    "trigger": "self_pick",
-   "text": "Checked off. Next."
+   "text": "That's one of my guys. Spreadsheet says yes."
   },
   {
    "trigger": "self_pick",
-   "text": "Right at my estimate. Efficient."
+   "text": "Perfect. Exactly where I wanted him."
   },
   {
    "trigger": "self_pick",
-   "text": "That's a playoff contributor. Mark it down."
+   "text": "Preparation meets opportunity. Love it."
   },
   {
    "trigger": "self_pick",
-   "text": "My list is working perfectly tonight."
+   "text": "Got him. On to the next target."
   },
   {
    "trigger": "self_pick",
-   "text": "Another one at value. The system works."
+   "text": "That's a starter. Locked in."
   },
   {
    "trigger": "self_pick",
-   "text": "Quiet efficiency. That's the goal."
+   "text": "The new guy knows what he's doing. Trust the process."
   },
   {
    "trigger": "self_pick",
-   "text": "The elder statesman gets his guy. No drama."
+   "text": "Crossed off. Next man up."
   },
   {
    "trigger": "self_pick",
-   "text": "20 years of drafting and the discipline still pays off."
+   "text": "Quiet and efficient. That's the goal tonight."
   },
   {
    "trigger": "rival_pick",
-   "text": "Greg C, you're going to regret that one by week 4."
-  },
-  {
-   "trigger": "rival_pick",
-   "text": "Interesting choice, Greg. Very interesting."
-  },
-  {
-   "trigger": "rival_pick",
-   "text": "Greg C, is that on your spreadsheet or an impulse buy?",
+   "text": "Tyler, if that pick gets injured I know who NOT to send him to. The RC trainer let my kid play on a tweaked hamstring.",
    "isHotTake": true
   },
   {
    "trigger": "rival_pick",
-   "text": "I've watched Greg draft for years. This is... a choice."
+   "text": "Ross, your 49ers couldn't beat my Cowboys in the 90s and your roster can't beat mine now.",
+   "isHotTake": true
   },
   {
    "trigger": "rival_pick",
-   "text": "Greg C, our church league would roast you for that."
+   "text": "Steve, stick to that Traeger. My smoker puts out better ribs AND better rosters.",
+   "isHotTake": true
   },
   {
-   "trigger": "general",
-   "text": "What time is it? I've got worship team early tomorrow."
+   "trigger": "rival_pick",
+   "text": "Trey, I smoke better brisket than you and I'm about to smoke you in the standings too.",
+   "isHotTake": true
   },
   {
-   "trigger": "general",
-   "text": "Can we speed this up? Some of us have a service at 7am."
-  },
-  {
-   "trigger": "general",
-   "text": "This is fun but I need to be functional tomorrow morning."
-  },
-  {
-   "trigger": "general",
-   "text": "Greg C, didn't you say that same thing last year about RB prices?"
-  },
-  {
-   "trigger": "general",
-   "text": "Pass me a Lagunitas if there's one left."
-  },
-  {
-   "trigger": "general",
-   "text": "One more Sierra Nevada and then I'm cutting myself off. 7am service tomorrow."
-  },
-  {
-   "trigger": "general",
-   "text": "Anyone else want pizza before I grab the last slice? Going once. Going twice."
-  },
-  {
-   "trigger": "general",
-   "text": "You know, U2 put on a better show than this draft so far."
-  },
-  {
-   "trigger": "general",
-   "text": "Sorry I'm a few minutes late. Evening service ran long."
-  },
-  {
-   "trigger": "general",
-   "text": "Just got here from church. What did I miss?"
-  },
-  {
-   "trigger": "general",
-   "text": "Ross, you want me to schedule worship team around draft night next year?"
-  },
-  {
-   "trigger": "general",
-   "text": "I've been doing this longer than most of you have been alive. Well, close."
-  },
-  {
-   "trigger": "general",
-   "text": "Being the old man of the group has its advantages. Wisdom, for one."
-  },
-  {
-   "trigger": "general",
-   "text": "I've made playoffs more times than some of you have made good decisions."
-  },
-  {
-   "trigger": "general",
-   "text": "My playoff streak didn't happen by accident. Preparation matters."
-  },
-  {
-   "trigger": "general",
-   "text": "Anyone want to talk about Vulfpeck? No? Just me? Fine."
-  },
-  {
-   "trigger": "general",
-   "text": "I've got a rare vinyl waiting for me at home. Let's wrap this up."
-  },
-  {
-   "trigger": "general",
-   "text": "The Sierra Nevada is going down smooth tonight."
-  },
-  {
-   "trigger": "general",
-   "text": "Florida man turned California man turned fantasy football elder.",
+   "trigger": "rival_pick",
+   "text": "James, your beer fridge is as lukewarm as that pick. Invest in some ice, host.",
    "isHotTake": true
   },
   {
    "trigger": "general",
-   "text": "Back in Florida we didn't have auction drafts. We just picked and prayed."
+   "text": "Modelo is cold and the spreadsheet is ready. Let's do this."
   },
   {
    "trigger": "general",
-   "text": "The old Acura got me here on time. Barely."
+   "text": "I've been prepping for this all week between field calls."
   },
   {
    "trigger": "general",
-   "text": "Ross, Greg M — nice work on sound this morning by the way."
+   "text": "Cowboys are going to be scary this year. Just putting that out there."
   },
   {
    "trigger": "general",
-   "text": "Vance, good cajón work this morning. Eric approves."
-  },
-  {
-   "trigger": "general",
-   "text": "If I leave at 9:30, nobody panic. I have a guitar to tune for tomorrow."
-  },
-  {
-   "trigger": "general",
-   "text": "You know what this draft needs? A good Vulfpeck song in the background."
-  },
-  {
-   "trigger": "general",
-   "text": "New wave bands don't get enough respect in this group."
-  },
-  {
-   "trigger": "late_draft",
-   "text": "Alright, I'm just filling spots at this point. My roster's set."
-  },
-  {
-   "trigger": "late_draft",
-   "text": "My starters are locked. These are just lottery tickets."
-  },
-  {
-   "trigger": "late_draft",
-   "text": "I'm ready to head out whenever the last pick drops."
-  },
-  {
-   "trigger": "late_draft",
-   "text": "Clock is ticking toward bedtime. Let's finish strong."
-  },
-  {
-   "trigger": "late_draft",
-   "text": "I've got my core. Everything else is gravy."
-  },
-  {
-   "trigger": "late_draft",
-   "text": "Sierra Nevada count: 3. Energy level: declining. Let's wrap up."
-  },
-  {
-   "trigger": "late_draft",
-   "text": "First one done as always. The rest of you take your time."
-  },
-  {
-   "trigger": "late_draft",
-   "text": "I could be organizing my record collection right now. Just saying."
-  },
-  {
-   "trigger": "late_draft",
-   "text": "My roster is complete. I'm just watching the show at this point."
-  },
-  {
-   "trigger": "late_draft",
-   "text": "Elder statesman checking out mentally. Starters are locked."
-  },
-  {
-   "trigger": "nomination_bait",
-   "text": "Here's one for you big spenders. Have at it."
-  },
-  {
-   "trigger": "nomination_bait",
-   "text": "Let's see who overpays for this name."
-  },
-  {
-   "trigger": "nomination_bait",
-   "text": "Throwing this out to drain some budgets. Not mine though."
-  },
-  {
-   "trigger": "nomination_bait",
-   "text": "This name should start a bidding war. Enjoy."
-  },
-  {
-   "trigger": "nomination_bait",
-   "text": "I'm nominating this one because someone's going to be foolish."
-  },
-  {
-   "trigger": "outbid",
-   "text": "Not in my budget. He's all yours."
-  },
-  {
-   "trigger": "outbid",
-   "text": "I'm not chasing that. My list has other options."
-  },
-  {
-   "trigger": "outbid",
-   "text": "Nope. Not paying a cent over my number."
-  },
-  {
-   "trigger": "outbid",
-   "text": "Too rich. I'll wait for the next tier down."
-  },
-  {
-   "trigger": "outbid",
-   "text": "I don't overpay. That's not how you make playoffs consistently."
-  },
-  {
-   "trigger": "outbid",
-   "text": "Let them fight over it. I've got discipline."
-  },
-  {
-   "trigger": "outbid",
-   "text": "My list says there's an equivalent player coming up cheaper."
-  },
-  {
-   "trigger": "outbid",
-   "text": "20 years of experience says: don't chase."
-  },
-  {
-   "trigger": "reply_to_mention",
-   "text": "I've been doing this longer than you. Respectfully."
-  },
-  {
-   "trigger": "reply_to_mention",
-   "text": "My playoff streak speaks for itself."
-  },
-  {
-   "trigger": "reply_to_mention",
-   "text": "Noted. Anyway."
-  },
-  {
-   "trigger": "reply_to_mention",
-   "text": "That's nice. I'm still going to make playoffs."
-  },
-  {
-   "trigger": "reply_to_mention",
-   "text": "You'll see. January tells the real story."
-  },
-  {
-   "trigger": "reply_to_mention",
-   "text": "The elder statesman isn't concerned."
-  },
-  {
-   "trigger": "reply_to_mention",
-   "text": "I've heard worse from the youth group kids."
-  },
-  {
-   "trigger": "reply_to_mention",
-   "text": "Quiet confidence beats loud opinions. Every time."
-  },
-  {
-   "trigger": "reply_to_mention",
-   "text": "I'll be at home spinning vinyl while you're stressing over your roster in November.",
+   "text": "All these 49ers fans in one room. Must be nice having no originality.",
    "isHotTake": true
   },
   {
+   "trigger": "general",
+   "text": "Aaron, you and me against the 49er army tonight."
+  },
+  {
+   "trigger": "general",
+   "text": "Had a long day in the almonds but I'm locked in now."
+  },
+  {
+   "trigger": "general",
+   "text": "I may be the new guy but I've done my homework."
+  },
+  {
+   "trigger": "general",
+   "text": "Coach Prime would respect the preparation I've put in tonight.",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "Youngest guy in the league and I guarantee my spreadsheet is the most detailed."
+  },
+  {
+   "trigger": "general",
+   "text": "Ribs are on the smoker for tomorrow. Tonight is draft fuel."
+  },
+  {
+   "trigger": "general",
+   "text": "Jerry Jones runs a $9 billion franchise on gut feel. I use a spreadsheet. We are not the same."
+  },
+  {
+   "trigger": "general",
+   "text": "Quick trivia: who has the most Super Bowl wins as a franchise? That's right. Dallas."
+  },
+  {
+   "trigger": "general",
+   "text": "RC football practice tomorrow at 7am. Tyler, don't be late."
+  },
+  {
+   "trigger": "general",
+   "text": "Whoever said the new guy would be nervous clearly hasn't seen my prep binder."
+  },
+  {
+   "trigger": "general",
+   "text": "Prime Time said it best: 'Look good, feel good, play good.' My roster looks GOOD."
+  },
+  {
+   "trigger": "general",
+   "text": "I told the wife I'd be home by 10. We're on pace. Barely."
+  },
+  {
+   "trigger": "general",
+   "text": "Vance, good cajon this morning at church. Sounded great.",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "Pass me whatever's cold. I'm not picky."
+  },
+  {
+   "trigger": "general",
+   "text": "This feels like trivia night. Except the answers cost $40 and nobody's winning a gift card."
+  },
+  {
+   "trigger": "general",
+   "text": "Tony Romo and Jessica Simpson breaking up is the greatest tragedy in Cowboys history. Including the salary cap.",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "Somewhere in an alternate timeline, Tony and Jessica are still together and the Cowboys have 3 more rings.",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "I just want Jim Nantz's job. Sit next to Romo for 3 hours and talk football? That's the dream.",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "Jim Nantz gets PAID to hang out with Tony Romo. I'd do it for free.",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "Tony Romo got an OWI in Milwaukee and I still trust him more than half the picks in this draft."
+  },
+  {
+   "trigger": "general",
+   "text": "Romo blew a .091 in Milwaukee and still had a better game plan than some of you tonight.",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "If Tony Romo can survive an OWI in Milwaukee, I can survive being the new guy in this league.",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "I shook 40 hands at the door this morning. My grip strength is peaking for this draft."
+  },
+  {
+   "trigger": "general",
+   "text": "Greeted the whole church this morning with my wife. Smiled at everyone. Now I'm here to take your money."
+  },
+  {
+   "trigger": "general",
+   "text": "I was welcoming people into God's house at 9am. Now I'm welcoming myself into your nightmares at 7:30.",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "I showed up in my Dak jersey, jorts, and Jordans. If you can't respect the drip you can't respect the draft picks.",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "The sun through that AT&T window has cost us more touchdowns than our secondary. And that's saying something."
+  },
+  {
+   "trigger": "general",
+   "text": "Jerry Jones put a giant window in a football stadium and acts surprised when the sun blinds his receivers every September.",
+   "isHotTake": true
+  },
+  {
+   "trigger": "general",
+   "text": "I wish NFL Network would talk about the Cowboys more. They barely mention us. Maybe once every... 5 minutes."
+  },
+  {
+   "trigger": "general",
+   "text": "Turn on NFL Network and it's Cowboys this, Cowboys that. And honestly? Still not enough."
+  },
+  {
+   "trigger": "general",
+   "text": "No jokes. This is actually the Cowboys' year. I'm serious this time."
+  },
+  {
+   "trigger": "general",
+   "text": "These ribs I'm smoking tomorrow are going to be better than anyone's draft picks tonight."
+  },
+  {
+   "trigger": "general",
+   "text": "Modelo and draft night. Name a better combo. I'll wait."
+  },
+  {
+   "trigger": "general",
+   "text": "If I could draft like I smoke a rack of ribs, I'd be undefeated."
+  },
+  {
+   "trigger": "general",
+   "text": "Someone pass me another cold one. Brand doesn't matter. Just cold."
+  },
+  {
+   "trigger": "general",
+   "text": "Next golf trip, I'm ordering oysters Rockefeller and not sharing with any of you."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Starters are set. Hunting bargains for the bench now."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Still locked in. There's value left on the board."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "My spreadsheet still has upside guys flagged. Not done yet."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Budget's tight but I've got a plan for these last spots."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "This is where preparation pays off. I know who's left."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "End of the draft is where leagues are won. Stay sharp."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Young upside guys here. This is my wheelhouse."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Couple more picks and I can get home to the boys."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "Still grinding while half the room is on their phone."
+  },
+  {
+   "trigger": "late_draft",
+   "text": "The new guy isn't checking out early. I'm here till the last pick."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Putting this one up. He's on my list."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "I want this guy. Let's see what happens."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "One of my targets. Here we go."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "Had him circled all week. Nominating."
+  },
+  {
+   "trigger": "nomination_bait",
+   "text": "This is one of my guys. Don't make me overpay."
+  },
+  {
+   "trigger": "outbid",
+   "text": "That's past my number. I'll pivot."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I had a limit and I'm sticking to it."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Spreadsheet says stop. I'm stopping."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Can't go there. My next guy is close in value anyway."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Alright, you win. I've got other targets."
+  },
+  {
+   "trigger": "outbid",
+   "text": "That's above my max. On to plan B."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Not chasing. There's always another option on the board."
+  },
+  {
+   "trigger": "outbid",
+   "text": "I don't have Jerry Jones money. He's yours.",
+   "isHotTake": true
+  },
+  {
+   "trigger": "outbid",
+   "text": "If I had Jerry Jones' checkbook I'd keep going. But I don't. You win."
+  },
+  {
+   "trigger": "outbid",
+   "text": "Jerry Jones would overpay for that guy. I'm not Jerry Jones. Well... not financially anyway."
+  },
+  {
    "trigger": "reply_to_mention",
-   "text": "Sure. Let me know how that works out for you."
+   "text": "Hey, I'm just the new guy with a spreadsheet. Don't mind me."
   },
   {
-   "trigger": "general",
-   "text": "I allegedly snuck away at the 49ers tailgate for a cigarette and some Fireball with college buddies. Allegedly."
+   "trigger": "reply_to_mention",
+   "text": "Fair point. But my list disagrees."
   },
   {
-   "trigger": "general",
-   "text": "What happens at the porta-potty line stays at the porta-potty line. Allegedly."
+   "trigger": "reply_to_mention",
+   "text": "Sure. We'll see at the end of the year."
   },
   {
-   "trigger": "general",
-   "text": "My college buddies and I may or may not have had Fireball shots at the tailgate. The worship pastor pleads the fifth."
+   "trigger": "reply_to_mention",
+   "text": "New to this league but not new to fantasy football."
   },
   {
-   "trigger": "general",
-   "text": "There are rumors about me and a cigarette at the 49ers tailgate. I neither confirm nor deny."
+   "trigger": "reply_to_mention",
+   "text": "I didn't come here to lose. Trust that."
   },
   {
-   "trigger": "general",
-   "text": "I came straight here from the evening service. Did not even change. Let us draft."
+   "trigger": "reply_to_mention",
+   "text": "The new guy isn't scared. Keep it coming."
   },
   {
-   "trigger": "general",
-   "text": "Worship service ended at 7. I am here at 7:15. That is dedication to both callings."
+   "trigger": "reply_to_mention",
+   "text": "Roger Staubach wouldn't flinch at that. Neither will I."
   },
   {
-   "trigger": "general",
-   "text": "Still in my church clothes. Came straight from leading worship. Now I am leading this draft in efficiency."
+   "trigger": "reply_to_mention",
+   "text": "I deal with pests all day. This is nothing new."
+  },
+  {
+   "trigger": "reply_to_mention",
+   "text": "I've walked almond orchards in 108 degree heat. Your roast doesn't even register."
   }
  ],
  "Greg Cady": [
@@ -64502,7 +64567,7 @@ const CANNED_MESSAGES = {
 // ── MOCK DRAFT CHAT ENGINE ───────────────────────────────────────────────────
 // Deterministic chat feed using canned messages. No AI/LLM at runtime.
 // vibeKey frequency: loud managers react ~60% of triggers, quiet ~20%, social/snarky ~40%
-const VIBE_FREQUENCY = { loud: 0.45, quiet: 0.30, snarky: 0.38, social: 0.38, any: 0.35 };
+const VIBE_FREQUENCY = { loud: 0.45, quiet: 0.36, snarky: 0.38, social: 0.38, any: 0.35 };
 
 // Beer template system — {beer} placeholder gets filled per manager
 const MANAGER_BEERS = {
@@ -64535,8 +64600,8 @@ const BEER_TEMPLATES = [
 ];
 const VIBE_MAP = {
   "Aaron Fay": "loud", "Joshua Van Groningen": "loud", "Greg Cady": "loud",
-  "Tyler Goslinga": "quiet", // quiet and focused until broke, then becomes color commentator
-  "Eric Graef": "quiet", "Greg Mulder": "quiet", "Matthew Van Groningen": "quiet",
+  "Tyler Goslinga": "social",
+  "Jared Stuit": "quiet", "Greg Mulder": "quiet", "Matthew Van Groningen": "quiet",
   "Steve Vander Molen": "snarky", "Trey Hugen": "snarky",
   "James Lazette": "social", "Vance Sipma": "social",
   "Ross Van Groningen": "any"
@@ -64545,15 +64610,14 @@ const VIBE_MAP = {
 const RIVALRIES = {
   "Aaron Fay": ["James Lazette"],
   "James Lazette": ["Aaron Fay"],
-  "Eric Graef": ["Greg Cady"],
-  "Greg Cady": ["Eric Graef"],
+  "Greg Cady": ["Greg Mulder"],
   "Steve Vander Molen": ["Ross Van Groningen"],
   "Tyler Goslinga": ["Matthew Van Groningen"],
   "Joshua Van Groningen": ["Matthew Van Groningen"],
   "Matthew Van Groningen": ["Trey Hugen", "Tyler Goslinga", "Joshua Van Groningen"],
   "Vance Sipma": ["Trey Hugen"],
   "Trey Hugen": ["Greg Cady", "James Lazette", "Vance Sipma"],
-  "Greg Mulder": ["Ross Van Groningen", "Eric Graef"],
+  "Greg Mulder": ["Ross Van Groningen", "Greg Cady"],
   "Ross Van Groningen": ["*"], // low chance with anyone — handled specially in code
 };
 
@@ -64940,8 +65004,8 @@ function generateChatMessages(player, price, winner, nominator, allRosters, allB
         { managers: ["Matthew Van Groningen"], text: "My cat has a UTI and is still making better decisions than whoever just bid that." },
         { managers: ["Matthew Van Groningen"], text: "I will die on two hills: Commanders should be Redskins, and that price should be $10 less. I'm right about both." },
         { managers: ["Matthew Van Groningen"], text: "My closet beer has a better cost-to-value ratio than that pick. And my closet beer is questionable at best." },
-        { managers: ["Eric Graef"], text: "They say I had Fireball at the 49ers game. Allegedly. What's NOT alleged is that bid being $10 too much." },
-        { managers: ["Eric Graef"], text: "My church league would excommunicate someone for that price. And we're Presbyterians. We don't excommunicate easily." },
+        { managers: ["Jared Stuit"], text: "Jerry Jones runs a $9 BILLION franchise and even HE wouldn't pay that. And Jerry pays EVERYONE." },
+        { managers: ["Jared Stuit"], text: "I showed up in my Dak jersey, jorts, and Jordans with a spreadsheet that says that pick is WRONG. The drip AND the data agree." },
         { managers: ["Greg Mulder"], text: "That trade with Matthew was FAIR and that bid was UNFAIR to your own team. Two injustices. I'll mention both annually." },
         { managers: ["Greg Mulder"], text: "I roasted Ross at his wedding. That bid is roasting itself. I don't even need to say anything. But I will: yikes." },
       ],
@@ -64962,9 +65026,9 @@ function generateChatMessages(player, price, winner, nominator, allRosters, allB
         { managers: ["James Lazette"], text: "Tyler still hasn't recovered from giving me Derrick Henry for John Ross III. Whoever just got THAT value? Same energy. Someone's not sleeping tonight." },
         { managers: ["James Lazette"], text: "That's the kind of trade bait I'm going to send a 3-way trade offer for by Tuesday. Mark my words." },
         { managers: ["Vance Sipma"], text: "Someone just got a steal and I'm having Justin Fields flashbacks. James's Wi-Fi. A show of hands. $1. I'll NEVER be over it." },
-        { managers: ["Vance Sipma"], text: "I play cajón at church with Eric. We make beautiful music. That roster? That's not music. That's noise." },
+        { managers: ["Vance Sipma"], text: "I play cajón at church with Jared. We make beautiful music. That roster? That's not music. That's noise." },
         { managers: ["Matthew Van Groningen"], text: "That was a TIER 1 player at TIER 4 prices. I'm putting my headphones back in because I can't look at you people." },
-        { managers: ["Eric Graef"], text: "I could've bought that player AND a sixer of Sierra Nevada and still spent less than what some of you paid for your QB." },
+        { managers: ["Jared Stuit"], text: "I'm the youngest guy here and my spreadsheet is more detailed than half your careers. That steal just proved it." },
         { managers: ["Greg Mulder"], text: "JV basketball MVP. Two fantasy rings. A homecoming crown. And I just watched the steal of the draft go to someone else. Pain." },
       ],
       "rival_pick": [
@@ -64994,7 +65058,7 @@ function generateChatMessages(player, price, winner, nominator, allRosters, allB
         { managers: ["Vance Sipma"], text: "Trey just looked at me. He's thinking about a trade. I can FEEL it. Trey. NO. Do NOT open that trade screen." },
         { managers: ["Matthew Van Groningen"], text: "I've been dealing with cat UTIs all week and THAT roster is somehow more painful to look at." },
         { managers: ["Matthew Van Groningen"], text: "The Commanders rebrand is the second-worst decision I've ever witnessed. That pick is the first." },
-        { managers: ["Eric Graef"], text: "I'm going to bed at 9:30 regardless. But I'll be going to bed HAPPY knowing that roster exists in my division." },
+        { managers: ["Jared Stuit"], text: "I went from toilet bowl to runner-up in one year. That roster? That's going in the OPPOSITE direction." },
         { managers: ["Greg Mulder"], text: "I went to Dordt with Josh, Trey, and Ross. We all learned discipline there. Whoever made that pick clearly went somewhere else." },
       ],
       "kicker_over_1": [
@@ -65016,7 +65080,7 @@ function generateChatMessages(player, price, winner, nominator, allRosters, allB
         { managers: ["James Lazette"], text: "My barn has a 'STOP' sign, a 'YIELD' sign, and a 'WRONG WAY' sign. Paying for a kicker violates ALL THREE." },
         { managers: ["Vance Sipma"], text: "Pat McAfee was literally a kicker and even HE says they should cost $1 in fantasy. I listen to his show EVERY DAY." },
         { managers: ["Matthew Van Groningen"], text: "My cat is peeing outside the litter box AND making better financial decisions than this league." },
-        { managers: ["Eric Graef"], text: "Greg C and I don't agree on much but we agree on this: whoever paid $2 for a kicker needs to repent immediately." },
+        { managers: ["Jared Stuit"], text: "The only kicker worth more than $1 is Brandon Aubrey and HE'S A COWBOY. So unless that's Aubrey, this is a crime." },
         { managers: ["Greg Mulder"], text: "I collect dues from 12 managers every year. This is the first time I've wanted to issue a REFUND for someone's own stupidity." },
       ],
     };
@@ -65385,14 +65449,16 @@ const MOCK_DRAFT_KEEPERS_2026 = [
   { manager:"Steve Vander Molen",     name:"George Pickens",      pos:"WR", team:"DAL", price:19 },
   { manager:"Vance Sipma",            name:"Emeka Egbuka",        pos:"WR", team:"TB",  price:19 },
   { manager:"Trey Hugen",             name:"Ja'Marr Chase",       pos:"WR", team:"CIN", price:37 },
+  { manager:"Jared Stuit",            name:"Chris Olave",         pos:"WR", team:"NO",  price:13 },
 ];
 
 // Bot profile builder — computes tendencies from real draft history
 function buildBotProfiles(draftPicks) {
-  const managers2025 = [...new Set(draftPicks.filter(p => p.year === 2025).map(p => p.manager))];
+  const managers2025 = [...new Set(draftPicks.filter(p => p.year === 2025).map(p => p.manager))].map(m => m === "Eric Graef" ? "Jared Stuit" : m);
   const profiles = {};
   managers2025.forEach(mgr => {
-    const picks = draftPicks.filter(p => p.manager === mgr);
+    const dataMgr = mgr === "Jared Stuit" ? "Eric Graef" : mgr;
+    const picks = draftPicks.filter(p => p.manager === dataMgr);
     const auctionPicks = picks.filter(p => !p.isKeeper); // Exclude keepers for allocation calc
     const years = [...new Set(picks.map(p => p.year))];
     const totalBudget = years.length * 200;
@@ -65457,7 +65523,7 @@ function buildBotProfiles(draftPicks) {
 // Bot personality traits — behavioral modifiers from Manager and Draft Profiles.docx
 const BOT_PERSONALITY_TRAITS = {
   "Aaron Fay": { budgetBlower: false, earlyAggression: 1.0, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0.1, mobileQBBonus: 0, depthHunter: false, recklessLate: true, stubbornOnTargets: false, lurkerSniper: false, lateDraftBully: false },
-  "Eric Graef": { budgetBlower: false, earlyAggression: 1.1, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: true, recklessLate: false, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
+  "Jared Stuit": { budgetBlower: false, earlyAggression: 1.0, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: true, recklessLate: false, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
   "Greg Cady": { budgetBlower: false, earlyAggression: 0.85, latePassivity: 1.0, kDefBait: true, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: true, stubbornOnTargets: true, lurkerSniper: true, lateDraftBully: false },
   "Greg Mulder": { budgetBlower: false, earlyAggression: 0.95, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: true, lurkerSniper: true, lateDraftBully: false },
   "James Lazette": { budgetBlower: false, earlyAggression: 1.2, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: true, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
@@ -66421,7 +66487,7 @@ function MockDraftTab() {
 
   const draftPicks = DATA.playerData.draftPicks || [];
   const botProfiles = React.useMemo(() => buildBotProfiles(draftPicks), []);
-  const managers2025 = React.useMemo(() => [...new Set(draftPicks.filter(p => p.year === 2025).map(p => p.manager))].sort(), []);
+  const managers2025 = React.useMemo(() => [...new Set(draftPicks.filter(p => p.year === 2025).map(p => p.manager))].map(m => m === "Eric Graef" ? "Jared Stuit" : m).sort(), []);
 
   // Editable keepers state — initialized from defaults, user can modify before draft
   const [editKeepers, setEditKeepers] = useState(() => MOCK_DRAFT_KEEPERS_2026.map((k, i) => ({ ...k, id: i })));
@@ -66610,7 +66676,7 @@ function MockDraftTab() {
     const OFFICIAL_NOM_ORDER = [
       "Tyler Goslinga", "Greg Mulder", "Steve Vander Molen", "Joshua Van Groningen",
       "Greg Cady", "Ross Van Groningen", "James Lazette", "Vance Sipma",
-      "Eric Graef", "Matthew Van Groningen", "Trey Hugen", "Aaron Fay"
+      "Jared Stuit", "Matthew Van Groningen", "Trey Hugen", "Aaron Fay"
     ];
     const order = OFFICIAL_NOM_ORDER.filter(m => managers2025.includes(m));
     order.forEach(m => { initRosters[m] = []; initBudgets[m] = 200; });
