@@ -63942,10 +63942,6 @@ const CANNED_MESSAGES = {
   },
   {
    "trigger": "general",
-   "text": "Eric, good cajón work this morning at church. We sounded great."
-  },
-  {
-   "trigger": "general",
    "text": "Great service this morning, fellas. Now let's draft."
   },
   {
@@ -63984,10 +63980,6 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "Being single means all my disposable income goes to fantasy football."
-  },
-  {
-   "trigger": "general",
-   "text": "I played cajón this morning for Eric. Now I'm drafting. Full day."
   },
   {
    "trigger": "late_draft",
@@ -64572,7 +64564,7 @@ const VIBE_FREQUENCY = { loud: 0.45, quiet: 0.36, snarky: 0.38, social: 0.38, an
 // Beer template system — {beer} placeholder gets filled per manager
 const MANAGER_BEERS = {
   "Aaron Fay": "805 Cerveza",
-  "Eric Graef": "Sierra Nevada",
+  "Jared Stuit": "Modelo",
   "Greg Cady": "Colorado craft",
   "Greg Mulder": "Modelo",
   "James Lazette": "whatever's closest",
@@ -65114,6 +65106,18 @@ function generateChatMessages(player, price, winner, nominator, allRosters, allB
   return withReplies.slice(0, 7);
 }
 
+// 2026 NFL Bye Weeks (team abbreviation → bye week number)
+const NFL_BYE_WEEKS_2026 = {
+  CAR:5, KC:5,
+  CIN:6, DET:6, MIA:6, MIN:6,
+  BUF:7, JAX:7, LAC:7, WAS:7,
+  HOU:8, NO:8, NYG:8, SF:8,
+  PIT:9, TEN:9,
+  CHI:10, DEN:10, PHI:10, TB:10,
+  ATL:11, CLE:11, GB:11, LAR:11, NE:11, SEA:11,
+  BAL:13, IND:13, LV:13, NYJ:13,
+  ARI:14, DAL:14,
+};
 
 // Roster: 1 QB, 2 RB, 2 WR, 1 TE, 1 FLEX (RB/WR/TE), 1 K, 1 DEF, 6 BN = 15 total
 const MOCK_PLAYER_POOL = [
@@ -65442,7 +65446,6 @@ const MOCK_DRAFT_KEEPERS_2026 = [
   { manager:"Tyler Goslinga",         name:"Jonathan Taylor",     pos:"RB", team:"IND", price:24 },
   { manager:"Greg Cady",              name:"Puka Nacua",          pos:"WR", team:"LAR", price:45 },
   { manager:"Ross Van Groningen",     name:"Jaxon Smith-Njigba",  pos:"WR", team:"SEA", price:11 },
-  { manager:"James Lazette",          name:"Bijan Robinson",      pos:"RB", team:"ATL", price:65 },
   { manager:"Matthew Van Groningen",  name:"Justin Jefferson",    pos:"WR", team:"MIN", price:31 },
   { manager:"Aaron Fay",              name:"Ladd McConkey",       pos:"WR", team:"LAC", price:13 },
   { manager:"Greg Mulder",            name:"Brock Bowers",        pos:"TE", team:"LV",  price:12 },
@@ -65532,7 +65535,7 @@ const BOT_PERSONALITY_TRAITS = {
   "Ross Van Groningen": { budgetBlower: false, earlyAggression: 1.05, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
   "Steve Vander Molen": { budgetBlower: false, earlyAggression: 1.1, latePassivity: 0.6, kDefBait: false, stackPreference: null, erratic: 0.3, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: false, lurkerSniper: false, lateDraftBully: false },
   "Trey Hugen": { budgetBlower: false, earlyAggression: 0.7, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: true, recklessLate: false, stubbornOnTargets: false, lurkerSniper: true, lateDraftBully: false },
-  "Tyler Goslinga": { budgetBlower: true, earlyAggression: 1.3, latePassivity: 0.4, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
+  "Tyler Goslinga": { budgetBlower: true, earlyAggression: 1.15, latePassivity: 0.5, kDefBait: false, stackPreference: null, erratic: 0, mobileQBBonus: 0, depthHunter: false, recklessLate: false, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
   "Vance Sipma": { budgetBlower: false, earlyAggression: 0.85, latePassivity: 1.0, kDefBait: false, stackPreference: null, erratic: 0.15, mobileQBBonus: 0.35, depthHunter: false, recklessLate: true, stubbornOnTargets: true, lurkerSniper: false, lateDraftBully: false },
 };
 
@@ -65803,6 +65806,23 @@ function pickNominationTarget(nominator, available, currentRosters, currentBudge
       score -= 30;
     }
 
+    // ── BYE-WEEK COVERAGE: prefer bench targets that cover starter bye weeks ──
+    // Only applies when starters at that position are filled and player is QB/RB/WR/TE
+    if (p.pos !== "K" && p.pos !== "DEF") {
+      const pBye = NFL_BYE_WEEKS_2026[(p.team || "").toUpperCase()] || 0;
+      const starterNeeded = starterNeeds[p.pos] || 0;
+      const startersOwned = roster.filter(r => r.pos === p.pos).slice(0, starterNeeded);
+      if (startersOwned.length >= starterNeeded && pBye > 0) {
+        const starterByeWeeks = startersOwned.map(s => NFL_BYE_WEEKS_2026[(s.team || "").toUpperCase()] || 0).filter(b => b > 0);
+        const sharesByeWithStarter = starterByeWeeks.includes(pBye);
+        if (!sharesByeWithStarter && starterByeWeeks.length > 0) {
+          score += 6; // Bonus: covers a starter's bye week
+        } else if (sharesByeWithStarter) {
+          score -= 4; // Penalty: same bye as starter, useless as replacement
+        }
+      }
+    }
+
     if (score > bestScore) { bestScore = score; bestPlayer = p; }
   });
 
@@ -65929,40 +65949,78 @@ function generateDraftGrades(nominations, rosters, budgets, playerPool) {
   // Starting lineup: 1 QB, 2 RB, 2 WR, 1 TE, 1 FLEX (RB/WR/TE), 1 K, 1 DEF = 9 starters
 
   // Calculate optimal starting lineup projected points for each manager
+  // WITH bye-week adjustments: for each of 17 weeks, if a starter is on bye,
+  // the best available bench player fills that slot
   grades.forEach(g => {
     const roster = rosters[g.manager] || [];
-    // Get projected points for each player on the roster
+    // Get projected points + bye week for each player on the roster
     const rosterWithProj = roster.map(p => {
       const poolPlayer = MOCK_PLAYER_POOL.find(pp => pp.name.toLowerCase() === (p.name || "").toLowerCase());
-      return { ...p, projPts: poolPlayer ? (poolPlayer.projPts || 0) : (p.projPts || 0) };
+      const weeklyPts = poolPlayer ? (poolPlayer.projPts || 0) / 17 : (p.projPts || 0) / 17;
+      const team = poolPlayer ? (poolPlayer.team || p.team || "") : (p.team || "");
+      const byeWeek = NFL_BYE_WEEKS_2026[team.toUpperCase()] || 0;
+      return { ...p, weeklyPts, byeWeek, projPts: poolPlayer ? (poolPlayer.projPts || 0) : (p.projPts || 0) };
     });
-    // Sort each position group by projPts descending
-    const qbs = rosterWithProj.filter(p => p.pos === "QB").sort((a, b) => b.projPts - a.projPts);
-    const rbs = rosterWithProj.filter(p => p.pos === "RB").sort((a, b) => b.projPts - a.projPts);
-    const wrs = rosterWithProj.filter(p => p.pos === "WR").sort((a, b) => b.projPts - a.projPts);
-    const tes = rosterWithProj.filter(p => p.pos === "TE").sort((a, b) => b.projPts - a.projPts);
-    const ks = rosterWithProj.filter(p => p.pos === "K").sort((a, b) => b.projPts - a.projPts);
-    const defs = rosterWithProj.filter(p => p.pos === "DEF").sort((a, b) => b.projPts - a.projPts);
 
-    // Fill starters: QB1, RB1, RB2, WR1, WR2, TE1, K1, DEF1
-    let starterPts = 0;
-    starterPts += (qbs[0] ? qbs[0].projPts : 0);
-    starterPts += (rbs[0] ? rbs[0].projPts : 0) + (rbs[1] ? rbs[1].projPts : 0);
-    starterPts += (wrs[0] ? wrs[0].projPts : 0) + (wrs[1] ? wrs[1].projPts : 0);
-    starterPts += (tes[0] ? tes[0].projPts : 0);
-    starterPts += (ks[0] ? ks[0].projPts : 0);
-    starterPts += (defs[0] ? defs[0].projPts : 0);
+    // Simulate 17 weeks and calculate total season points with optimal lineup each week
+    let seasonTotal = 0;
+    for (let week = 1; week <= 17; week++) {
+      // Players available this week (not on bye)
+      const available = rosterWithProj.filter(p => p.byeWeek !== week);
+      const onBye = rosterWithProj.filter(p => p.byeWeek === week);
 
-    // FLEX: best remaining RB/WR/TE not already in a starter slot
-    const flexCandidates = [
-      rbs[2] || null, // RB3 (RB1+RB2 already starting)
-      wrs[2] || null, // WR3
-      tes[1] || null, // TE2
-    ].filter(Boolean).sort((a, b) => b.projPts - a.projPts);
-    starterPts += (flexCandidates[0] ? flexCandidates[0].projPts : 0);
+      // Sort each position group by weekly pts descending
+      const qbs = available.filter(p => p.pos === "QB").sort((a, b) => b.weeklyPts - a.weeklyPts);
+      const rbs = available.filter(p => p.pos === "RB").sort((a, b) => b.weeklyPts - a.weeklyPts);
+      const wrs = available.filter(p => p.pos === "WR").sort((a, b) => b.weeklyPts - a.weeklyPts);
+      const tes = available.filter(p => p.pos === "TE").sort((a, b) => b.weeklyPts - a.weeklyPts);
+      const ks = available.filter(p => p.pos === "K").sort((a, b) => b.weeklyPts - a.weeklyPts);
+      const defs = available.filter(p => p.pos === "DEF").sort((a, b) => b.weeklyPts - a.weeklyPts);
 
-    g.starterProjPts = Math.round(starterPts);
-    g.weeklyProjPts = Math.round((starterPts / 17) * 10) / 10; // per-week average
+      // Fill starters: QB1, RB1, RB2, WR1, WR2, TE1, K1, DEF1
+      let weekPts = 0;
+      weekPts += (qbs[0] ? qbs[0].weeklyPts : 0);
+      weekPts += (rbs[0] ? rbs[0].weeklyPts : 0) + (rbs[1] ? rbs[1].weeklyPts : 0);
+      weekPts += (wrs[0] ? wrs[0].weeklyPts : 0) + (wrs[1] ? wrs[1].weeklyPts : 0);
+      weekPts += (tes[0] ? tes[0].weeklyPts : 0);
+      weekPts += (ks[0] ? ks[0].weeklyPts : 0);
+      weekPts += (defs[0] ? defs[0].weeklyPts : 0);
+
+      // FLEX: best remaining RB/WR/TE not already starting
+      const flexCandidates = [
+        rbs[2] || null,
+        wrs[2] || null,
+        tes[1] || null,
+      ].filter(Boolean).sort((a, b) => b.weeklyPts - a.weeklyPts);
+      weekPts += (flexCandidates[0] ? flexCandidates[0].weeklyPts : 0);
+
+      seasonTotal += weekPts;
+    }
+
+    g.starterProjPts = Math.round(seasonTotal);
+    g.weeklyProjPts = Math.round((seasonTotal / 17) * 10) / 10;
+    // Track how many bye-week starters had no replacement (depth penalty indicator)
+    g.byeWeekGap = Math.round((() => {
+      // Compare to a "no-bye" baseline (all starters every week)
+      const allAvailable = rosterWithProj;
+      const qbs = allAvailable.filter(p => p.pos === "QB").sort((a, b) => b.weeklyPts - a.weeklyPts);
+      const rbs = allAvailable.filter(p => p.pos === "RB").sort((a, b) => b.weeklyPts - a.weeklyPts);
+      const wrs = allAvailable.filter(p => p.pos === "WR").sort((a, b) => b.weeklyPts - a.weeklyPts);
+      const tes = allAvailable.filter(p => p.pos === "TE").sort((a, b) => b.weeklyPts - a.weeklyPts);
+      const ks = allAvailable.filter(p => p.pos === "K").sort((a, b) => b.weeklyPts - a.weeklyPts);
+      const defs = allAvailable.filter(p => p.pos === "DEF").sort((a, b) => b.weeklyPts - a.weeklyPts);
+      let baseWeek = 0;
+      baseWeek += (qbs[0] ? qbs[0].weeklyPts : 0);
+      baseWeek += (rbs[0] ? rbs[0].weeklyPts : 0) + (rbs[1] ? rbs[1].weeklyPts : 0);
+      baseWeek += (wrs[0] ? wrs[0].weeklyPts : 0) + (wrs[1] ? wrs[1].weeklyPts : 0);
+      baseWeek += (tes[0] ? tes[0].weeklyPts : 0);
+      baseWeek += (ks[0] ? ks[0].weeklyPts : 0);
+      baseWeek += (defs[0] ? defs[0].weeklyPts : 0);
+      const flexCandidates = [rbs[2]||null, wrs[2]||null, tes[1]||null].filter(Boolean).sort((a,b) => b.weeklyPts - a.weeklyPts);
+      baseWeek += (flexCandidates[0] ? flexCandidates[0].weeklyPts : 0);
+      const noByeTotal = baseWeek * 17;
+      return noByeTotal - seasonTotal;
+    })());
   });
 
   // ── SEASON PROJECTIONS (Monte Carlo, 500 iterations) ──
@@ -66134,10 +66192,20 @@ const DraftSounds = (() => {
     bid: () => { /* tone(880, 0.06, "square", 0.15); */ },
     // Countdown tick — audible metronome for last 3 seconds
     tick: () => { tone(1000, 0.05, "sine", 0.35); },
-    // Bid won — ascending triumphant fanfare
+    // Bid won (bot) — ascending triumphant fanfare
     won: () => { tone(440, 0.12); setTimeout(() => tone(550, 0.12), 100); setTimeout(() => tone(660, 0.12), 200); setTimeout(() => tone(880, 0.25), 300); },
+    // Bid won (YOU) — bigger, more celebratory with harmony
+    youWon: () => { tone(440, 0.15, "sine", 0.35); tone(550, 0.15, "sine", 0.2); setTimeout(() => { tone(550, 0.15, "sine", 0.35); tone(660, 0.15, "sine", 0.2); }, 150); setTimeout(() => { tone(660, 0.15, "sine", 0.35); tone(880, 0.15, "sine", 0.2); }, 300); setTimeout(() => { tone(880, 0.4, "sine", 0.4); tone(1100, 0.4, "sine", 0.25); }, 450); },
     // Your turn to nominate — attention-grabbing double chime
     yourTurn: () => { tone(600, 0.1); setTimeout(() => tone(800, 0.15), 150); setTimeout(() => tone(600, 0.1), 350); setTimeout(() => tone(800, 0.15), 500); },
+    // Draft started — epic ascending fanfare (stadium horn feel)
+    draftStart: () => { tone(330, 0.2, "sawtooth", 0.25); setTimeout(() => tone(440, 0.2, "sawtooth", 0.25), 200); setTimeout(() => tone(550, 0.2, "sawtooth", 0.25), 400); setTimeout(() => tone(660, 0.25, "sawtooth", 0.3), 600); setTimeout(() => tone(880, 0.4, "sawtooth", 0.35), 800); },
+    // Draft ended — triumphant completion fanfare (longer, celebratory)
+    draftEnd: () => { tone(440, 0.15); setTimeout(() => tone(550, 0.15), 150); setTimeout(() => tone(660, 0.15), 300); setTimeout(() => tone(880, 0.3), 450); setTimeout(() => tone(1100, 0.15), 700); setTimeout(() => tone(880, 0.4), 850); },
+    // Draft paused — descending two-tone (halt signal)
+    paused: () => { tone(600, 0.15, "triangle", 0.3); setTimeout(() => tone(400, 0.25, "triangle", 0.25), 150); },
+    // Draft resumed — ascending two-tone (go signal)
+    resumed: () => { tone(400, 0.15, "triangle", 0.3); setTimeout(() => tone(600, 0.25, "triangle", 0.25), 150); },
   };
 })();
 
@@ -66228,12 +66296,15 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
     perceivedValue *= (traits.latePassivity || 1.0);
   }
 
-  // Budget blower (Tyler) — overpay for top-tier early, then go silent
+  // Budget blower (Tyler) — overpay for top-tier early, then pull back mid-draft
   if (traits.budgetBlower && baseValue > 40 && draftProgress < 0.35) {
-    perceivedValue *= 1.15;
+    perceivedValue *= 1.10;
   }
-  if (traits.budgetBlower && budgetLeft < 40) {
-    perceivedValue *= 0.4; // Tyler with no money = PokemonGo + beer + color commentary
+  if (traits.budgetBlower && draftProgress >= 0.35 && draftProgress < 0.7) {
+    perceivedValue *= 0.75; // Tyler tightens up mid-draft to save budget for bench
+  }
+  if (traits.budgetBlower && budgetLeft < 30) {
+    perceivedValue *= 0.5; // Tyler with low money = PokemonGo + beer + color commentary
   }
 
   // Stubborn on targets — won't let go easily, pushes slightly past value
@@ -66405,6 +66476,27 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
   if (filled >= needed && !flexNeeded) perceivedValue *= 0.45;
   else if (filled >= needed && flexNeeded && !flexFilled) perceivedValue *= 0.75;
   else if (filled >= needed && flexFilled) perceivedValue *= 0.5;
+
+  // ── BYE-WEEK COVERAGE LOGIC (QB, RB, WR, TE only — not K/DEF) ──
+  // Once starter slots are filled, bots prefer bench players whose bye weeks
+  // differ from their starters at the same position, so they have a real fill-in.
+  if (filled >= needed && !isKDef && (pos === "QB" || pos === "RB" || pos === "WR" || pos === "TE")) {
+    const playerBye = NFL_BYE_WEEKS_2026[(player.team || "").toUpperCase()] || 0;
+    // Get bye weeks of existing starters at this position (or flex-eligible)
+    const startersAtPos = rosterSoFar.filter(p => p.pos === pos).slice(0, needed);
+    const starterByes = startersAtPos.map(p => NFL_BYE_WEEKS_2026[(p.team || "").toUpperCase()] || 0).filter(b => b > 0);
+    if (playerBye > 0 && starterByes.length > 0) {
+      const coversABye = starterByes.some(sb => sb === playerBye ? false : true);
+      const sharesBye = starterByes.some(sb => sb === playerBye);
+      if (!sharesBye && coversABye) {
+        // This player is available during ALL starter bye weeks — excellent bench pickup
+        perceivedValue *= 1.25;
+      } else if (sharesBye) {
+        // Same bye as a starter — much less useful as a bench piece
+        perceivedValue *= 0.7;
+      }
+    }
+  }
 
   // Bench spots — mild penalty, not severe (we still want bots to SPEND their money)
   // Softened from 0.7 to 0.85 so it doesn't fight budget pressure in late rounds
@@ -66581,6 +66673,7 @@ function MockDraftTab() {
     pauseDataRef.current = { remainingSeconds: countdown };
     setPaused(true);
     setLog(prev => [...prev, `⏸ Draft paused`]);
+    DraftSounds.paused();
   };
 
   // Resume draft — restarts countdown from where it left off and reschedules bots
@@ -66593,8 +66686,9 @@ function MockDraftTab() {
       setDraftStarted(true);
       pauseDataRef.current = null;
       setLog(prev => [...prev, `▶ Draft started — let's go!`]);
+      DraftSounds.draftStart();
       const { rosters: r, budgets: b, pool: p, order } = auctionRef.current;
-      setTimeout(() => triggerNomination(order, 0, r, b, p), 500);
+      setTimeout(() => triggerNomination(order, 0, r, b, p), 1500);
       return;
     }
     if (!pauseDataRef.current) return;
@@ -66602,6 +66696,7 @@ function MockDraftTab() {
     pauseDataRef.current = null;
     setPaused(false);
     setLog(prev => [...prev, `▶ Draft resumed`]);
+    DraftSounds.resumed();
     if (remainingSeconds > 0 && currentNom) {
       resetCountdown(remainingSeconds);
       const { player, bid, bidder, rosters: r, budgets: b, pool: p, order } = auctionRef.current;
@@ -66806,7 +66901,7 @@ function MockDraftTab() {
     if (countdownRef.current) clearInterval(countdownRef.current);
     clearBotQueue();
     setCountdown(0);
-    DraftSounds.won();
+    if (winner === userTeam) DraftSounds.youWon(); else DraftSounds.won();
     // Safety: cap finalBid at winner's remaining budget (should never trigger, but prevents negative budgets)
     const safeBid = Math.min(finalBid, currentBudgets[winner] || 0);
     const newRosters = { ...currentRosters, [winner]: [...(currentRosters[winner] || []), { ...player, price: safeBid }] };
@@ -66889,6 +66984,7 @@ function MockDraftTab() {
       }
       setPhase("complete");
       setLog(prev => [...prev, `🏁 Draft complete! All rosters filled.`]);
+      setTimeout(() => DraftSounds.draftEnd(), 600);
       return;
     }
     const nextIdx = idx + 1;
@@ -66964,7 +67060,8 @@ function MockDraftTab() {
     let curLog = [...log];
     const order = nomOrder;
     let picks = 0;
-    const maxPicks = count === "all" ? 999 : count;
+    const maxPicks = count === "all" ? 999 : count === "toMyNom" ? 999 : count;
+    const stopAtMyNom = count === "toMyNom";
     const simChatBatch = []; // collect chat messages from simulated picks
 
     while (picks < maxPicks) {
@@ -66981,6 +67078,9 @@ function MockDraftTab() {
         scanned++;
       }
       if (!nominator || curPool.length === 0) break;
+
+      // "Sim to My Nom" — stop when it's the user's turn to nominate
+      if (stopAtMyNom && nominator === userTeam && picks > 0) break;
 
       // Pick best player for nominator (dynamic phase-based nomination)
       const available = curPool.filter(p => p !== null);
@@ -67071,6 +67171,7 @@ function MockDraftTab() {
     if (allFull || curPool.length === 0) {
       setPhase("complete");
       setLog(prev => [...prev, `🏁 Draft complete! All rosters filled.`]);
+      setTimeout(() => DraftSounds.draftEnd(), 600);
     } else {
       // Resume normal flow — trigger next nomination
       auctionRef.current = { bid: 0, bidder: null, player: null, rosters: curRosters, budgets: curBudgets, pool: curPool, order, idx: curIdx };
@@ -67158,16 +67259,41 @@ function MockDraftTab() {
         <div style={{ background:"#0a0a0a", border:"1px solid #1a1a1a", borderRadius:12, padding:mobile?"16px":"24px", display:"flex", flexDirection:"column", gap:12 }}>
           <div style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:16, color:"#f4a261", letterSpacing:1 }}>🤖 Bot Opponents</div>
           <div style={{ fontSize:12, color:"#666", marginBottom:8 }}>Each bot drafts based on their real historical tendencies from {Object.values(botProfiles).reduce((a,b) => a + b.seasonsPlayed, 0)} total draft seasons</div>
-          <div style={{ display:"grid", gridTemplateColumns:mobile?"1fr":"1fr 1fr", gap:8 }}>
+          <div style={{ display:"grid", gridTemplateColumns:mobile?"1fr":"1fr 1fr", gap:10 }}>
             {managers2025.filter(m => m !== userTeam).map(m => {
               const bot = botProfiles[m];
               if (!bot) return null;
               const topPos = bot.posPriority[0];
-              const style = bot.starsAndScrubs > 0.6 ? "Stars & Scrubs" : bot.starsAndScrubs < 0.35 ? "Balanced" : "Moderate";
+              const posColor = POS_COLOR[topPos] || "#555";
+              // Unique hand-crafted tag per manager based on their actual draft personality
+              const MANAGER_TAGS = {
+                "Aaron Fay": { label:"Reckless Closer", color:"#e74c3c" },
+                "Greg Cady": { label:"Patient Sniper", color:"#9b5de5" },
+                "Greg Mulder": { label:"Silent Assassin", color:"#9b5de5" },
+                "James Lazette": { label:"Alpha Spender", color:"#f4a261" },
+                "Jared Stuit": { label:"The Wildcard", color:"#6bb3ff" },
+                "Joshua Van Groningen": { label:"Impatient Baller", color:"#f4a261" },
+                "Matthew Van Groningen": { label:"The Stacker", color:"#2ecc71" },
+                "Ross Van Groningen": { label:"Calculated Risk", color:"#e9c46a" },
+                "Steve Vander Molen": { label:"Chaos Agent", color:"#ff6b6b" },
+                "Trey Hugen": { label:"Bargain Hunter", color:"#2ecc71" },
+                "Tyler Goslinga": { label:"All-In Early", color:"#ff6b6b" },
+                "Vance Sipma": { label:"QB Whisperer", color:"#e74c3c" },
+              };
+              const trait = MANAGER_TAGS[m] || { label:"Unknown", color:"#888" };
+              const displaySeasons = m === "Jared Stuit" ? "1st season" : `${bot.seasonsPlayed} seasons`;
               return (
-                <div key={m} style={{ background:"#111", borderRadius:8, padding:"10px 12px", borderLeft:`3px solid ${POS_COLOR[topPos] || "#555"}` }}>
-                  <div style={{ fontSize:12, fontWeight:700, color:"#ddd" }}>{m}</div>
-                  <div style={{ fontSize:10, color:"#888", marginTop:3 }}>{style} · {topPos}-first · {bot.seasonsPlayed} seasons</div>
+                <div key={m} style={{ background:"#111", borderRadius:10, padding:"10px 14px", borderLeft:`4px solid ${posColor}`, display:"flex", gap:12, alignItems:"center" }}>
+                  <div style={{ width:40, height:40, borderRadius:"50%", border:`2px solid ${posColor}`, overflow:"hidden", flexShrink:0 }}>
+                    <img src={MOCK_DRAFT_AVATAR_URL(m)} alt={m} style={{ width:"100%", height:"100%", objectFit:"cover" }} />
+                  </div>
+                  <div style={{ flex:1, minWidth:0 }}>
+                    <div style={{ fontSize:13, fontWeight:700, color:"#eee", marginBottom:3 }}>{m}</div>
+                    <div style={{ display:"flex", alignItems:"center", gap:6 }}>
+                      <span style={{ fontSize:9, color:trait.color, background:trait.color+"18", border:`1px solid ${trait.color}44`, borderRadius:4, padding:"1px 6px", fontWeight:600 }}>{trait.label}</span>
+                      <span style={{ fontSize:10, color:"#666" }}>{displaySeasons}</span>
+                    </div>
+                  </div>
                 </div>
               );
             })}
@@ -67184,13 +67310,18 @@ function MockDraftTab() {
 
           {/* Keeper list */}
           <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
-            {editKeepers.map((k, idx) => (
+            {[...editKeepers].sort((a, b) => {
+              const posOrder = { QB:0, RB:1, WR:2, TE:3, K:4, DEF:5 };
+              const pA = posOrder[a.pos] ?? 9, pB = posOrder[b.pos] ?? 9;
+              if (pA !== pB) return pA - pB;
+              return b.price - a.price;
+            }).map((k) => (
               <div key={k.id} style={{ display:"flex", alignItems:"center", gap:8, background:"#111", borderRadius:6, padding:"8px 10px", borderLeft:`3px solid ${POS_COLOR[k.pos] || "#555"}` }}>
                 <span style={{ fontSize:11, fontWeight:700, color:"#ddd", minWidth:mobile?60:90 }}>{(() => { const first = k.manager.split(" ")[0]; const last = k.manager.split(" ")[k.manager.split(" ").length - 1]; if (first === "Greg" || first === "Matthew" || first === "Joshua") return first + " " + last[0]; return first; })()}</span>
                 <span style={{ fontSize:10, color:POS_COLOR[k.pos], fontWeight:600, minWidth:24 }}>{k.pos}</span>
                 <span style={{ fontSize:11, color:"#aaa", flex:1 }}>{k.name} ({k.team})</span>
                 <span style={{ fontSize:11, color:"#2ecc71", fontWeight:700 }}>${k.price}</span>
-                <button onClick={() => setEditKeepers(prev => prev.filter((_, i) => i !== idx))} style={{ background:"none", border:"none", color:"#d42b2b", cursor:"pointer", fontSize:14, padding:"0 4px" }} title="Remove keeper">✕</button>
+                <button onClick={() => setEditKeepers(prev => prev.filter(p => p.id !== k.id))} style={{ background:"none", border:"none", color:"#d42b2b", cursor:"pointer", fontSize:14, padding:"0 4px" }} title="Remove keeper">✕</button>
               </div>
             ))}
             {editKeepers.length === 0 && <div style={{ fontSize:12, color:"#555", fontStyle:"italic", padding:8 }}>No keepers set — all managers start with full $200</div>}
@@ -67328,10 +67459,11 @@ function MockDraftTab() {
             )}
             {phase !== "complete" && (
               <>
-                <button onClick={() => simulatePicks(10)} disabled={simulating || paused} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#6bb3ff", cursor: (simulating || paused) ? "not-allowed" : "pointer", fontSize:10, fontWeight:600, padding:"3px 8px" }}>⚡ Sim 10</button>
+                <button onClick={() => simulatePicks("toMyNom")} disabled={simulating || paused} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#6bb3ff", cursor: (simulating || paused) ? "not-allowed" : "pointer", fontSize:10, fontWeight:600, padding:"3px 8px" }}>⚡ Sim to My Nom</button>
                 <button onClick={() => simulatePicks("all")} disabled={simulating || paused} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#e9c46a", cursor: (simulating || paused) ? "not-allowed" : "pointer", fontSize:10, fontWeight:600, padding:"3px 8px" }}>⚡ Sim All</button>
               </>
             )}
+            <button onClick={() => { if(timerRef.current)clearTimeout(timerRef.current);if(countdownRef.current)clearInterval(countdownRef.current);clearBotQueue();setCountdown(0);setCurrentNom(null);setChatMessages([]);usedMessagesRef.current=new Set();startDraft(); }} style={{ background:"#21262d", border:"1px solid #da3633", borderRadius:4, color:"#da3633", cursor:"pointer", fontSize:10, fontWeight:600, padding:"3px 8px" }}>↺ Restart</button>
             {phase === "complete" && <div style={{ fontSize:12, color:"#2ecc71", fontWeight:700 }}>✓ Complete</div>}
           </div>
         </div>
@@ -67355,7 +67487,7 @@ function MockDraftTab() {
                     </div>
                     <div style={{ fontSize:9, color: isUser ? "#6bb3ff" : "#8b949e", marginTop:2, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis", maxWidth:75 }}>{m === "Greg Mulder" ? "Greg M" : m === "Greg Cady" ? "Greg C" : m.split(" ")[0]}</div>
                     <div style={{ fontSize:9, color:"#8b949e" }}>MAX: <span style={{ color:"#2ecc71", fontWeight:700 }}>${maxBid > 0 ? maxBid : 0}</span></div>
-                    <div style={{ fontSize:9, color:"#8b949e" }}>${mBudget} · {mRoster.length}🏷</div>
+                    <div style={{ fontSize:9, color:"#8b949e" }}>${mBudget} · <span style={{ color: mRoster.length >= TOTAL_ROSTER ? "#2ecc71" : "#c9d1d9", fontWeight:600 }}>{mRoster.length}/{TOTAL_ROSTER}</span></div>
                   </div>
                 );
               })}
@@ -67404,7 +67536,9 @@ function MockDraftTab() {
               <div style={{ display:"flex", alignItems:"center", gap:8 }}>
                 <span style={{ background:POS_COLOR[currentNom.player.pos], color:"#fff", fontSize:9, fontWeight:700, padding:"2px 5px", borderRadius:3 }}>{currentNom.player.pos}</span>
                 <span style={{ fontSize:14, fontWeight:700, color:"#c9d1d9" }}>{currentNom.player.name}</span>
-                <span style={{ fontSize:10, color:"#8b949e" }}>{currentNom.player.team} · ADP ${currentNom.player.value}</span>
+                {_abbrToName[(currentNom.player.team || "").toUpperCase()] && <TeamLogoSmall teamName={_abbrToName[(currentNom.player.team || "").toUpperCase()]} size={32} />}
+                <span style={{ fontSize:12, color:"#e9c46a", fontWeight:700, background:"#e9c46a18", border:"1px solid #e9c46a44", borderRadius:4, padding:"2px 8px" }}>ADP ${currentNom.player.value}</span>
+                <span style={{ fontSize:10, color:"#8b949e" }}>{currentNom.player.team}</span>
               </div>
               <div style={{ display:"flex", alignItems:"center", gap:6 }}>
                 <div style={{ fontSize:10, color:"#8b949e" }}>Nom: {currentNom.nominator.split(" ")[0]}</div>
@@ -67486,7 +67620,7 @@ function MockDraftTab() {
                             <td style={{ padding:"2px 4px", color:"#e9c46a", textAlign:"right", fontWeight:600 }}>${p.value}</td>
                             {currentNom && currentNom.waitingForUser && (
                               <td style={{ padding:"2px 4px", textAlign:"center", whiteSpace:"nowrap" }}>
-                                <input type="number" min={1} max={200} value={nomPrice} onChange={e => setNomPrice(Math.max(1, Number(e.target.value)))} style={{ width:36, background:"#0d1117", border:"1px solid #30363d", borderRadius:3, color:"#2ecc71", fontSize:9, padding:"2px 3px", textAlign:"center", marginRight:3 }} />
+                                <input type="number" min={1} max={200} value={nomPrice === 0 ? "" : nomPrice} onChange={e => { const v = e.target.value; setNomPrice(v === "" ? 0 : Math.min(200, Number(v))); }} onBlur={() => { if (nomPrice < 1) setNomPrice(1); }} style={{ width:36, background:"#0d1117", border:"1px solid #30363d", borderRadius:3, color:"#2ecc71", fontSize:9, padding:"2px 3px", textAlign:"center", marginRight:3 }} />
                                 <button onClick={() => userNominate(p, nomPrice)} style={{ background:"#238636", border:"none", borderRadius:4, color:"#fff", fontSize:9, padding:"2px 6px", cursor:"pointer" }}>Nom</button>
                               </td>
                             )}
