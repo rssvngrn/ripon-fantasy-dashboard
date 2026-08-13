@@ -65444,7 +65444,6 @@ const MOCK_PLAYER_POOL = [
 // These are the DEFAULT keepers shown in setup. User can add/remove/edit before starting.
 const MOCK_DRAFT_KEEPERS_2026 = [
   { manager:"Tyler Goslinga",         name:"Jonathan Taylor",     pos:"RB", team:"IND", price:24 },
-  { manager:"Greg Cady",              name:"Puka Nacua",          pos:"WR", team:"LAR", price:45 },
   { manager:"Ross Van Groningen",     name:"Jaxon Smith-Njigba",  pos:"WR", team:"SEA", price:11 },
   { manager:"Matthew Van Groningen",  name:"Justin Jefferson",    pos:"WR", team:"MIN", price:31 },
   { manager:"Aaron Fay",              name:"Ladd McConkey",       pos:"WR", team:"LAC", price:13 },
@@ -66559,12 +66558,34 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
   const increment = bot.aggression > 0.6 ? Math.ceil(Math.random() * 3 + 1) : Math.ceil(Math.random() * 2);
   const bidTo = Math.min(currentBid + increment, finalValue, pacingCap);
 
-  // Delay: aggressive bots bid fast, patient bots wait longer
-  let baseDelay = 600 + (1 - bot.aggression) * 1400;
-  if (traits.erratic > 0) baseDelay += Math.random() * 1000 * traits.erratic;
-  // Lurkers/snipers wait longer before bidding
-  if (traits.lurkerSniper) baseDelay += 400 + Math.random() * 600;
-  const delay = baseDelay + Math.random() * 800;
+  // Delay: sliding scale based on how close the current bid is to the player's ADP.
+  // Low price ratio (obvious value) = fast bids. Near ADP = slow, deliberate bids.
+  const priceRatio = baseValue > 0 ? currentBid / baseValue : 1;
+  let baseDelay;
+  if (priceRatio < 0.4) {
+    // Slam-the-button territory — obvious steal, everyone bidding fast
+    baseDelay = 400 + Math.random() * 500 + (1 - bot.aggression) * 300;
+  } else if (priceRatio < 0.75) {
+    // Mid-range — thinking about it, still competing
+    baseDelay = 900 + Math.random() * 900 + (1 - bot.aggression) * 600;
+  } else {
+    // Near or above ADP — slow, deliberate, sweating the decision
+    baseDelay = 1800 + Math.random() * 1700 + (1 - bot.aggression) * 800;
+  }
+  // Erratic bots add random jitter at any price level
+  if (traits.erratic > 0) baseDelay += Math.random() * 800 * traits.erratic;
+  // Lurkers/snipers add significant delay near ADP — the classic last-second snipe
+  if (traits.lurkerSniper) {
+    if (priceRatio >= 0.75) baseDelay += 1200 + Math.random() * 1500; // dramatic late bid
+    else if (priceRatio >= 0.4) baseDelay += 400 + Math.random() * 600;
+  }
+  // Buzzer-beater: ~15% chance for snipers/loud types (8% for others) to push to 80-95% of a 10s timer
+  // These are the "GOING ONCE... GOING TWICE... OH WAIT" moments
+  const buzzerChance = traits.lurkerSniper ? 0.15 : (bot.aggression > 0.6 ? 0.12 : 0.08);
+  if (priceRatio >= 0.85 && Math.random() < buzzerChance) {
+    baseDelay = 8000 + Math.random() * 1500; // targets 8-9.5s on a 10s timer (scales with timer)
+  }
+  const delay = baseDelay + Math.random() * 400;
 
   return { willBid, maxBid: Math.min(finalValue, pacingCap), bidTo, delay: Math.round(delay) };
 }
@@ -66741,7 +66762,14 @@ function MockDraftTab() {
       if (mMaxBid <= currentBid) return;
       const decision = botDecision(bot, player, currentBid, currentRosters[m] || [], currentBudgets[m] || 0, pool);
       if (decision.willBid && decision.bidTo > currentBid) {
-        cumulativeDelay += decision.delay;
+        // Scale delay proportional to timer length (delays tuned for 10s base)
+        // Cap individual delay at 95% of timer — snipers can bid at the buzzer
+        const timerMs = timerSeconds * 1000;
+        const scaledDelay = Math.min(decision.delay * (timerSeconds / 10), timerMs * 0.95);
+        cumulativeDelay += scaledDelay;
+        // Skip if cumulative delay exceeds 90% of timer — they'll get another chance next wave
+        // (But always let at least the first bidder through)
+        if (cumulativeDelay > timerMs * 0.9 && botQueueRef.current.length > 0) return;
         const timeoutId = setTimeout(() => {
           const live = auctionRef.current;
           if (!live.player || live.player.id !== player.id) return;
@@ -67480,8 +67508,9 @@ function MockDraftTab() {
                 const mRoster = rosters[m] || [];
                 const isUser = m === userTeam;
                 const maxBid = mBudget - (TOTAL_ROSTER - mRoster.length - 1);
+                const isHighBidder = currentNom && currentNom.currentBidder === m;
                 return (
-                  <div key={m} style={{ display:"flex", flexDirection:"column", alignItems:"center", padding:"4px 4px 6px", borderRight:"1px solid #1e2a3a", background: isUser ? "#1c2d4a" : "transparent" }}>
+                  <div key={m} style={{ display:"flex", flexDirection:"column", alignItems:"center", padding:"4px 4px 6px", borderRight:"1px solid #1e2a3a", background: isHighBidder ? "#0f2a1a" : isUser ? "#1c2d4a" : "transparent", boxShadow: isHighBidder ? "inset 0 0 12px #2ecc7140, 0 0 8px #2ecc7130" : "none", transition:"background 0.3s, box-shadow 0.3s" }}>
                     <div style={{ width:32, height:32, borderRadius:"50%", border: isUser ? "2px solid #2176d2" : "2px solid #30363d", overflow:"hidden", flexShrink:0 }}>
                       <img src={MOCK_DRAFT_AVATAR_URL(m)} alt="" style={{ width:"100%", height:"100%", objectFit:"cover" }} />
                     </div>
@@ -67499,7 +67528,7 @@ function MockDraftTab() {
             {/* Header row — slot labels */}
             {SLOT_ROWS.map((slot, rowIdx) => (
               <React.Fragment key={rowIdx}>
-                <div style={{ padding:"4px 8px", fontSize:10, color: POS_COLOR[slot] || "#8b949e", fontWeight:700, borderBottom:"1px solid #1e2a3a", borderRight:"1px solid #1e2a3a", display:"flex", alignItems:"center", background:"#161b22", position:"sticky", left:0, zIndex:2 }}>{slot}</div>
+                <div style={{ padding:"4px 8px", fontSize:11, color: POS_COLOR[slot] || "#c9d1d9", fontWeight:700, borderBottom:"1px solid #1e2a3a", borderRight:"1px solid #1e2a3a", display:"flex", alignItems:"center", background:"#161b22", position:"sticky", left:0, zIndex:2 }}>{slot}</div>
                 {nomOrder.map(m => {
                   const slots = getRosterSlots(m);
                   const player = slots[rowIdx];
@@ -67514,7 +67543,7 @@ function MockDraftTab() {
                     <div key={m+rowIdx} style={{ padding:"3px 6px", fontSize:10, borderBottom:"1px solid #1e2a3a", borderRight:"1px solid #141a22", background: cellBg, minHeight:28, display:"flex", alignItems:"center", borderLeft: player ? `2px solid ${posAccent}66` : "2px solid transparent" }}>
                       {player ? (
                         <div>
-                          <span style={{ color: isUser ? "#6bb3ff" : "#c9d1d9", fontWeight:600, fontSize:10 }}>{player.name.length > 14 ? player.name.substring(0,12)+"…" : player.name}</span>
+                          <span style={{ color: isUser ? "#6bb3ff" : "#c9d1d9", fontWeight:600, fontSize:10 }}>{player.name.length > 14 ? player.name.split(" ")[0].charAt(0) + ". " + player.name.split(" ").slice(1).join(" ") : player.name}</span>
                           <span style={{ color:"#2ecc71", fontSize:9, marginLeft:4 }}>${player.price}</span>
                           {player.isKeeper && <span style={{ color:"#e9c46a", fontSize:8, marginLeft:3 }}>🔒</span>}
                         </div>
@@ -67530,37 +67559,36 @@ function MockDraftTab() {
         </div>
 
         {/* ─── BID BAR (always visible) ─── */}
-        <div style={{ display:"flex", alignItems:"center", justifyContent:"center", gap:16, padding:"8px 16px", borderTop:"1px solid #1e2a3a", background:"#161b22", flexShrink:0 }}>
+        <div style={{ display:"flex", alignItems:"center", justifyContent:"center", gap:12, padding:"8px 16px", borderTop: countdown > 0 && !paused && countdown <= Math.max(2, Math.floor(timerSeconds * 0.3)) ? "2px solid #f85149" : "1px solid #1e2a3a", background: countdown > 0 && !paused && countdown <= Math.max(2, Math.floor(timerSeconds * 0.3)) ? "#1a0a0a" : "#161b22", flexShrink:0, transition:"background 0.3s, border-top 0.3s" }}>
           {currentNom && currentNom.player ? (
             <>
-              <div style={{ display:"flex", alignItems:"center", gap:8 }}>
-                <span style={{ background:POS_COLOR[currentNom.player.pos], color:"#fff", fontSize:9, fontWeight:700, padding:"2px 5px", borderRadius:3 }}>{currentNom.player.pos}</span>
-                <span style={{ fontSize:14, fontWeight:700, color:"#c9d1d9" }}>{currentNom.player.name}</span>
+              <div style={{ display:"flex", alignItems:"center", gap:8, overflow:"hidden" }}>
+                <span style={{ fontSize:10, color:"#8b949e", flexShrink:0, whiteSpace:"nowrap" }}>Nom: {currentNom.nominator.split(" ")[0]}</span>
+                <span style={{ background:POS_COLOR[currentNom.player.pos], color:"#fff", fontSize:9, fontWeight:700, padding:"2px 5px", borderRadius:3, flexShrink:0 }}>{currentNom.player.pos}</span>
+                <span style={{ fontSize:14, fontWeight:700, color:"#c9d1d9", whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis", maxWidth:180 }}>{currentNom.player.name}</span>
                 {_abbrToName[(currentNom.player.team || "").toUpperCase()] && <TeamLogoSmall teamName={_abbrToName[(currentNom.player.team || "").toUpperCase()]} size={32} />}
-                <span style={{ fontSize:12, color:"#e9c46a", fontWeight:700, background:"#e9c46a18", border:"1px solid #e9c46a44", borderRadius:4, padding:"2px 8px" }}>ADP ${currentNom.player.value}</span>
-                <span style={{ fontSize:10, color:"#8b949e" }}>{currentNom.player.team}</span>
+                <span style={{ fontSize:10, color:"#8b949e", flexShrink:0 }}>{currentNom.player.team}</span>
+                <span style={{ fontSize:12, color:"#e9c46a", fontWeight:700, background:"#e9c46a18", border:"1px solid #e9c46a44", borderRadius:4, padding:"2px 8px", flexShrink:0, whiteSpace:"nowrap" }}>ADP ${currentNom.player.value}</span>
               </div>
-              <div style={{ display:"flex", alignItems:"center", gap:6 }}>
-                <div style={{ fontSize:10, color:"#8b949e" }}>Nom: {currentNom.nominator.split(" ")[0]}</div>
-                <div style={{ width:1, height:20, background:"#30363d" }}></div>
-                <button onClick={() => setBidAmount(Math.max(currentNom.currentBid + 1, bidAmount - 1))} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#c9d1d9", width:26, height:26, cursor:"pointer", fontSize:13 }}>-</button>
+              <div style={{ display:"flex", alignItems:"center", gap:6, flexShrink:0 }}>
+                <button onClick={() => setBidAmount(Math.max(currentNom.currentBid + 1, bidAmount - 1))} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#c9d1d9", width:32, height:32, cursor:"pointer", fontSize:15, fontWeight:700, display:"flex", alignItems:"center", justifyContent:"center" }}>-</button>
                 <div style={{ background:"#0d1117", border:"1px solid #30363d", borderRadius:4, padding:"4px 12px", color:"#2ecc71", fontSize:16, fontWeight:700, minWidth:50, textAlign:"center" }}>${bidAmount}</div>
-                <button onClick={() => setBidAmount(Math.min(userMaxBid, bidAmount + 1))} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#c9d1d9", width:26, height:26, cursor:"pointer", fontSize:13 }}>+</button>
+                <button onClick={() => setBidAmount(Math.min(userMaxBid, bidAmount + 1))} style={{ background:"#21262d", border:"1px solid #30363d", borderRadius:4, color:"#c9d1d9", width:32, height:32, cursor:"pointer", fontSize:15, fontWeight:700, display:"flex", alignItems:"center", justifyContent:"center" }}>+</button>
               </div>
-              <div style={{ display:"flex", alignItems:"center", gap:4 }}>
+              <div style={{ display:"flex", alignItems:"center", gap:4, flexShrink:0 }}>
                 <div style={{ textAlign:"center", minWidth:60 }}>
-                  <div style={{ fontSize:20, fontWeight:700, color:"#2ecc71", fontFamily:"monospace" }}>${currentNom.currentBid}</div>
+                  <div style={{ fontSize:20, fontWeight:700, color:"#ffffff", fontFamily:"monospace", minWidth:48 }}>${currentNom.currentBid}</div>
                   <div style={{ fontSize:9, color:"#8b949e" }}>High: {currentNom.currentBidder === "Greg Mulder" ? "Greg M" : currentNom.currentBidder === "Greg Cady" ? "Greg C" : currentNom.currentBidder?.split(" ")[0]}</div>
                 </div>
-                {countdown > 0 && !paused && <div style={{ fontSize:16, color: countdown <= 5 ? "#f85149" : "#e9c46a", fontWeight:700, fontFamily:"monospace", marginLeft:8 }}>⏱{countdown}s</div>}
-                {paused && <div style={{ fontSize:14, color:"#2ecc71", fontWeight:700, fontFamily:"monospace", marginLeft:8, display:"flex", alignItems:"center", gap:4 }}>⏸ PAUSED</div>}
               </div>
               {phase !== "complete" && countdown > 0 && !paused && (
-                <div style={{ display:"flex", gap:6 }}>
-                  <button onClick={userBid} disabled={currentNom.currentBidder === userTeam || bidAmount <= currentNom.currentBid || bidAmount > userMaxBid} style={{ background: currentNom.currentBidder !== userTeam && bidAmount > currentNom.currentBid && bidAmount <= userMaxBid ? "#238636" : "#21262d", border:"1px solid #30363d", borderRadius:6, color: currentNom.currentBidder === userTeam ? "#484f58" : "#fff", fontSize:12, fontWeight:700, padding:"6px 16px", cursor: currentNom.currentBidder !== userTeam && bidAmount > currentNom.currentBid ? "pointer" : "not-allowed" }}>{currentNom.currentBidder === userTeam ? "LEADING" : `BID $${bidAmount}`}</button>
-                  <button onClick={userPass} disabled={currentNom.currentBidder === userTeam} style={{ background: currentNom.currentBidder === userTeam ? "#21262d" : "#da3633", border:"1px solid #30363d", borderRadius:6, color: currentNom.currentBidder === userTeam ? "#484f58" : "#fff", fontSize:12, padding:"6px 12px", cursor: currentNom.currentBidder === userTeam ? "not-allowed" : "pointer" }}>{currentNom.currentBidder === userTeam ? "LEADING" : "PASS"}</button>
+                <div style={{ display:"flex", alignItems:"center", gap:6, flexShrink:0 }}>
+                  <button onClick={userBid} disabled={currentNom.currentBidder === userTeam || bidAmount <= currentNom.currentBid || bidAmount > userMaxBid} style={{ background: currentNom.currentBidder !== userTeam && bidAmount > currentNom.currentBid && bidAmount <= userMaxBid ? "#238636" : "#21262d", border:"1px solid #30363d", borderRadius:6, color: currentNom.currentBidder === userTeam ? "#484f58" : "#fff", fontSize:12, fontWeight:700, padding:"6px 16px", cursor: currentNom.currentBidder !== userTeam && bidAmount > currentNom.currentBid ? "pointer" : "not-allowed", minWidth:80, textAlign:"center" }}>{currentNom.currentBidder === userTeam ? "LEADING" : `BID $${bidAmount}`}</button>
+                  <button onClick={userPass} disabled={currentNom.currentBidder === userTeam} style={{ background: currentNom.currentBidder === userTeam ? "#21262d" : "#da3633", border:"1px solid #30363d", borderRadius:6, color: currentNom.currentBidder === userTeam ? "#484f58" : "#fff", fontSize:12, padding:"6px 12px", cursor: currentNom.currentBidder === userTeam ? "not-allowed" : "pointer", minWidth:56, textAlign:"center" }}>{currentNom.currentBidder === userTeam ? "LEADING" : "PASS"}</button>
+                  <div style={{ fontSize:16, color: countdown <= Math.max(2, Math.floor(timerSeconds * 0.3)) ? "#f85149" : "#e9c46a", fontWeight:700, fontFamily:"monospace", marginLeft:4, minWidth:42, textAlign:"center" }}>⏱{countdown}s</div>
                 </div>
               )}
+              {paused && <div style={{ fontSize:14, color:"#2ecc71", fontWeight:700, fontFamily:"monospace", flexShrink:0 }}>⏸ PAUSED</div>}
             </>
           ) : currentNom && currentNom.waitingForUser ? (
             <div style={{ fontSize:13, color:"#6bb3ff", fontWeight:600 }}>Your turn to nominate — select a player below</div>
@@ -67612,12 +67640,14 @@ function MockDraftTab() {
                         </tr>
                       </thead>
                       <tbody>
-                        {filteredPool.slice(0, 40).map(p => (
-                          <tr key={p.id} style={{ borderBottom:"1px solid #141a22" }}>
-                            <td style={{ padding:"2px 4px", color:"#c9d1d9", fontSize:11 }}>{p.name}</td>
+                        {filteredPool.slice(0, 40).map(p => {
+                          const isActive = currentNom && currentNom.player && currentNom.player.id === p.id;
+                          return (
+                          <tr key={p.id} style={{ borderBottom:"1px solid #141a22", background: isActive ? "#e9c46a14" : "transparent", borderLeft: isActive ? "2px solid #e9c46a" : "2px solid transparent" }}>
+                            <td style={{ padding:"2px 4px", color: isActive ? "#e9c46a" : "#c9d1d9", fontSize:11, fontWeight: isActive ? 700 : 400 }}>{p.name}</td>
                             <td style={{ padding:"2px 4px", textAlign:"center" }}><span style={{ color:POS_COLOR[p.pos], fontWeight:600, fontSize:10 }}>{p.pos}</span></td>
                             <td style={{ padding:"2px 4px", color:"#8b949e", textAlign:"center", fontSize:10 }}>{p.team}</td>
-                            <td style={{ padding:"2px 4px", color:"#e9c46a", textAlign:"right", fontWeight:600 }}>${p.value}</td>
+                            <td style={{ padding:"2px 4px", color: p.value >= 40 ? "#e9c46a" : p.value >= 15 ? "#c9d1d9" : "#6e7681", textAlign:"right", fontWeight:600 }}>${p.value}</td>
                             {currentNom && currentNom.waitingForUser && (
                               <td style={{ padding:"2px 4px", textAlign:"center", whiteSpace:"nowrap" }}>
                                 <input type="number" min={1} max={200} value={nomPrice === 0 ? "" : nomPrice} onChange={e => { const v = e.target.value; setNomPrice(v === "" ? 0 : Math.min(200, Number(v))); }} onBlur={() => { if (nomPrice < 1) setNomPrice(1); }} style={{ width:36, background:"#0d1117", border:"1px solid #30363d", borderRadius:3, color:"#2ecc71", fontSize:9, padding:"2px 3px", textAlign:"center", marginRight:3 }} />
@@ -67625,7 +67655,8 @@ function MockDraftTab() {
                               </td>
                             )}
                           </tr>
-                        ))}
+                          );
+                        })}
                       </tbody>
                     </table>
                   </div>
@@ -67693,7 +67724,7 @@ function MockDraftTab() {
               </div>
 
               {/* Right 1/3: Chat (always visible) */}
-              <div ref={chatRef} style={{ flex:1, overflowY:"auto", padding:"8px 12px" }}>
+              <div ref={chatRef} style={{ flex:1, overflowY:"auto", padding:"8px 12px", background:"#0a0e14", borderLeft:"2px solid #1e2a3a" }}>
                 <div style={{ fontSize:10, color:"#8b949e", fontWeight:700, letterSpacing:0.5, marginBottom:6 }}>💬 DRAFT CHAT</div>
                 {chatMessages.length === 0 && <div style={{ fontSize:10, color:"#30363d", fontStyle:"italic" }}>Chat will come alive once picks start...</div>}
                 {chatMessages.map((msg) => (
