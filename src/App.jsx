@@ -42627,214 +42627,214 @@ const DATA = {
 
   draftProfiles: {
     "Aaron Fay": {
-      summary:    "Aaron Fay joined the league in 2020 and immediately established himself as a swing-for-the-fences auction manager. He runs lean at QB ($7.50 avg) and WR, stockpiling budget for high-upside RB purchases and his true superpower — finding elite production at $1. His $1 picks average a league-leading 115 points, the best mark among active managers by a wide margin.",
-      strengths:  "Fay's $1 game is elite. Justin Herbert in 2025 (295 pts), Joe Burrow in 2021 (+191 ROI), and Kareem Hunt in 2020 (+138 ROI) show a manager who consistently finds starting-caliber production at the minimum price. He won the 2021 draft day crown outright with a 13.05 pts/$ class — the best single-season haul of his career.",
-      weaknesses: "Fay's bust ceiling is as high as his value ceiling. Daniel Jones 2020 (-191 ROI), Baker Mayfield 2020 (-145 ROI), and Austin Ekeler in 2025 (-95) show a recurring pattern: he bets on bounce-back or breakout candidates and sometimes catches the fall instead of the bounce. His 2020 draft (6.95 pts/$) was the worst of his career.",
-      bestDraft:  "2021 is Fay's masterpiece. He landed Joe Burrow for $2 (336 pts, +191 ROI) and Austin Ekeler for $42 (+122 ROI) in the same class, running the whole roster at 13.05 pts/$ — a figure that ranks among the top all-time single-season performances in No Fun League history.",
-      worstDraft: "The 2020 debut was a rough introduction. At 6.95 pts/$, it was the worst draft day performance in the league that year. Daniel Jones (-191 ROI) and Baker Mayfield (-145 ROI) busting in the same class is the kind of damage that takes seasons to recover from financially.",
-      trends:     "Fay's ROI has been volatile across six seasons — a -33 debut, a +33 peak in 2021, and a slow grind back toward neutral since. His spend profile has shifted slightly: WR allocation is creeping up while RB is coming down, suggesting an evolving view of where roster value lives. The one constant is his $1 game, which has steadily improved season over season and is now the best in the league.",
-      outlook2026: "Expect Fay to run lean at QB and WR again, hunting value in the mid-RB range and banking on his late-round process. Despite Justin Herbert's 295-pt value score, the smarter keeper is Jameson Williams at $26 (drafted $21, +$5) — 193 WR points, 81 above positional average. The 2025 WR gap from top to mid was 126 pts; finding a plus-WR1 for $26 is genuinely scarce value. The QB market is deep enough that skipping Herbert costs less than it appears on a pure pts/$ basis.",
+      summary:    "Fay came in swinging in 2020 and hasn't really stopped. Spends almost nothing at QB ($7.50 avg), ignores WR for the most part, dumps his budget into high-upside RBs, and somehow keeps finding legit starters for a dollar. His $1 picks average 115 points — nobody else in this league is close to that.",
+      strengths:  "Dollar picks. That's his whole edge. Justin Herbert 2025 (295 pts), Joe Burrow 2021 (+191 ROI), Kareem Hunt 2020 (+138 ROI). Keeps pulling starters out of the bargain bin while everyone else overpays for the same production. His 2021 class hit 13.05 pts/$ which was the best he's ever done.",
+      weaknesses: "Swings big, whiffs big. Daniel Jones 2020 (-191 ROI), Baker Mayfield 2020 (-145 ROI), Ekeler 2025 (-95). He loves bounce-back candidates and sometimes catches guys still bouncing downward. His debut class at 6.95 pts/$ was rough.",
+      bestDraft:  "2021. Burrow at $2 going for 336 points, Ekeler at $42 popping off next to him. Whole class hit 13.05 pts/$ which is near the top of anything anyone in this league has ever done.",
+      worstDraft: "2020 debut — dead last at 6.95 pts/$. Daniel Jones and Baker Mayfield both imploding in the same class is a tough way to introduce yourself to a league.",
+      trends:     "ROI has been all over the place: started at -33, peaked at +33 in 2021, drifted back toward zero since. He's been putting more into WR and backing off RB lately, so maybe he's rethinking where the value actually is. His $1 game keeps getting better every year though.",
+      outlook2026: "He'll punt QB again and target mid-range RBs while relying on that late-round magic. Jameson Williams at $26 (drafted $21, +$5) is the keeper that matters — 193 WR points, 81 above average. WR gap from top to mid was 126 pts in 2025 and you can't buy WR1 production for $26 at auction. Herbert had 295 points but QB is deep enough that letting him go won't hurt as much as you'd think.",
     },
     "Eric Graef": {
-      summary:    "Eric Graef is the model of a disciplined, volume-oriented auction manager across 11 seasons. He buys more RBs than almost anyone (46 non-keeper picks) while keeping position spend balanced, rarely overpaying at any slot. His career ROI of +3.7 reflects a manager who extracts value quietly and consistently without ever making the headlines.",
-      strengths:  "Graef has four draft day podiums — the most of any manager without a championship — and one win (2020). Cam Newton 2017 (+152 ROI), Mark Ingram II 2017 (+145), and Travis Etienne 2025 (+134) are all examples of paying fair market and getting above-market production. His best $1 pick — Baker Mayfield 2024 at 337 pts — is the single greatest $1 performance in league history.",
-      weaknesses: "Graef's bust file has a specific fingerprint: aging veterans who fall off a cliff. Adrian Peterson 2016 (-154 ROI), Tony Romo 2015 (-146), and Derek Carr 2019 (-136) all represent the same mistake — trusting a name over the underlying situation. When he overpays for pedigree, it tends to hurt.",
-      bestDraft:  "The 2024 draft (12.34 pts/$) is his career peak, anchored by Baker Mayfield for $1 putting up 337 points — the best $1 pick in league history by total production. Paired with a balanced supporting class, it was the cleanest execution of his value-hunting style.",
-      worstDraft: "The 2016 class (7.99 pts/$) landed him at #10 in an 11-manager field — a rare stumble for a manager who typically finishes mid-table or better. The Adrian Peterson (-154 ROI) whiff on a fading legend set the tone early.",
-      trends:     "Graef's ROI trajectory tells a clear story: gradual improvement from -14 in 2015 to a career-best +37 in 2025. His spend at QB has nearly doubled in recent seasons ($8.40 career vs $14.00 recent), a deliberate shift away from his traditionally flat allocation. With Lamar Jackson already locked in as a keeper, the QB-first trend is likely to accelerate.",
-      outlook2026: "Eric Graef departed the No Fun League after the 2025 season following 11 years of competition. His spot was filled by Jared Stuit. Graef's legacy: 85-63, one championship (2015), four draft day podiums, the best $1 pick in league history (Baker Mayfield 2024, 337 pts), and a quiet process that produced above-.500 ball for over a decade.",
+      summary:    "Graef played 11 seasons doing the same thing every year — buy a bunch of RBs (46 non-keeper picks at that position), stay balanced, don't get cute. Finished with a +3.7 career ROI. Never made the headlines on draft night, but kept showing up in the standings where it counts.",
+      strengths:  "Four draft day podiums without having to flash for any of them, plus a 2020 win. Cam Newton 2017 (+152 ROI), Mark Ingram II 2017 (+145), Travis Etienne 2025 (+134). Pays fair prices and gets above-fair production back. And Baker Mayfield 2024 at $1 for 337 points — best dollar-pick anyone in this league has ever had.",
+      weaknesses: "Got burned chasing name recognition on aging guys. Adrian Peterson 2016 (-154 ROI), Tony Romo 2015 (-146), Derek Carr 2019 (-136). Kept trusting the name when the situation had already changed. His 2016 class at 7.99 pts/$ was the only real stinker.",
+      bestDraft:  "2024, career best at 12.34 pts/$. Baker for $1 putting up 337 points was the engine, but the rest was balanced and clean too. That's what his style looks like when everything cooperates.",
+      worstDraft: "2016. Tenth out of 11 guys at 7.99 pts/$. Adrian Peterson (-154 ROI) was the culprit — bet on a legend in decline and paid for it.",
+      trends:     "ROI went from -14 in year one to +37 in his last season. Steady upward arc over a decade. QB spend almost doubled in recent years ($8.40 career vs $14.00 recent), and with Lamar Jackson as a keeper, he was clearly shifting toward a QB-first mindset before he stepped away.",
+      outlook2026: "Gone after 2025. Jared Stuit has his spot now. Eleven years, 85-63, one title (2015), four podiums, and the best dollar-pick in history. Quietly one of the better careers this league has seen, even if nobody really talked about it while it was happening.",
     },
     "Jared Stuit": {
-      summary:    "Jared Stuit enters the No Fun League in 2026 as the first new manager since 2020. He inherits Eric Graef's roster slot and brings a balanced, spreadsheet-driven approach honed in the Duck Dynasty league. His DD resume features a historic 1-13 to 11-3 turnaround and a championship game appearance in 2025.",
-      strengths:  "Stuit is methodical and prepared — he comes with detailed lists, sticks to his numbers, and stays locked in late when others check out. His Duck Dynasty results show a manager who learns fast and adapts. He nominates players he wants (not bait) and will chase his targets, suggesting conviction in his pre-draft work.",
-      weaknesses: "Zero NFL auction draft history means no data on how his process translates to a deeper, more experienced league. The DD rookie draft format is structurally different from an auction — positional allocation, budget management under pressure, and keeper dynamics are all new variables.",
-      bestDraft:  "No NFL draft history yet. His first auction will write this section.",
-      worstDraft: "No NFL draft history yet.",
-      trends:     "No NFL trends data available. In Duck Dynasty, his roster construction shifted dramatically between 2024 (1-13, last place) and 2025 (11-3, runner-up), suggesting aggressive mid-season adjustments and a willingness to rebuild on the fly.",
-      outlook2026: "Stuit enters with Chris Olave kept at $13 (a WR1 at a mid-tier price) and $187 in auction budget. Expect a balanced spend across positions with a lean toward depth over concentration — two $25 RBs over one $55 RB is his stated preference. His preparation level and target-locked style suggest he will not be outworked on draft night. The question is whether DD success translates to an 11-year auction league with established managers who know every pricing trick in the book.",
+      summary:    "First new blood since 2020. Takes over Eric Graef's spot with a spreadsheet-first, don't-panic style from the Duck Dynasty league. In DD he went from 1-13 to 11-3 and made the championship in one offseason. That kind of swing takes real work behind the scenes.",
+      strengths:  "Shows up prepared. Firm numbers, detailed target lists, doesn't lose focus when the draft drags into round 12. His DD results show somebody who figures out what went wrong fast and fixes it. Nominates guys he actually wants instead of playing cute with bait noms. Has conviction.",
+      weaknesses: "Never done an NFL auction draft. Zero data on what his process looks like against a room that's been doing this for a decade. DD rookie draft is a totally different format from a full auction with keepers and positional budget management.",
+      bestDraft:  "No NFL history yet. Comes back here in January 2027.",
+      worstDraft: "Nothing on file yet.",
+      trends:     "No NFL data to pull from. In DD he went from dead last (1-13) to runner-up (11-3) in one offseason. That's an aggressive adjuster who'll blow things up when they aren't working.",
+      outlook2026: "Comes in with Chris Olave kept at $13 (WR1 at a mid-range price) and $187 to spend. Probably goes balanced — two $25 RBs rather than one $55 RB. He'll be ready. Question is whether DD success holds up against guys who've been gaming auction pricing for 11 years.",
     },
     "Greg Cady": {
-      summary:    "Greg Cady is the league's most disciplined QB spender — his $6.00 average at the position is the lowest among any 10+ season manager, and it's a deliberate feature. He redirects that savings into steady RB and WR volume, relying on dart throws and late-round upside rather than a QB anchor. His +1.0 avg ROI and one draft day win (2019) suggest the approach works more often than it fails.",
-      strengths:  "Cady's 2019 win (13.42 pts/$) was built on lean QB spend while others chased premium names at inflated prices. Cam Newton 2015 (+172 ROI), Todd Gurley 2017 (+171), and Caleb Williams 2025 (+129) show a manager willing to bet on emerging players before the room prices them up. His 2024 class was his most productive by raw points — 2,588 pts from 15 picks.",
-      weaknesses: "Cady's kryptonite is injury-prone RBs. Gus Edwards 2021 (-160 ROI), Andrew Luck 2017 (-139), and Cam Akers 2023 (-124) form a consistent pattern: he targets high-upside players in volatile situations, and it backfires regularly. The 2015 class (8.19 pts/$) was his worst — a reminder that cheap-QB strategies need the rest of the roster to carry the load.",
-      bestDraft:  "The 2019 draft (13.42 pts/$, league-best that year) was Cady at his most efficient. He identified undervalued targets across the board while the rest of the room chased premium names at inflated prices — and walked away with the best points-per-dollar class in a field of 12.",
-      worstDraft: "The 2015 debut (8.19 pts/$, 7th of 10 managers) was where the cheap-QB strategy showed its limits. Without a dependable anchor at the position, the rest of the roster had to carry too much ground. It took four seasons to find the right formula.",
-      trends:     "Cady's ROI trajectory is the most dramatic positive arc in the league: -23 in 2022, -27 in 2023, then back-to-back dominant seasons at +37 and +39 in 2024 and 2025. His QB spend has ticked up slightly in recent years ($6.00 career vs $9.60 recent), a minor but notable departure from his historically extreme discipline at the position. He is the only current manager who used zero keepers entering 2025.",
-      outlook2026: "Cady enters 2026 with no existing keeper and maximum flexibility. The strongest case is Caleb Williams at $9 (drafted $4, +$5) — 338 QB points for $9 is a deal on paper, but given QB opportunity cost is the lowest of any position (only 54 pts separated top from mid in 2025), the better argument may be Puka Nacua at $45 (drafted $40, +$5) for 321 WR points. The WR gap from top to mid was 126 pts in 2025 — that kind of production is hard to recreate on draft day at any price. If Williams is kept, the surplus capital must go toward locking down WR depth that the cheap-QB strategy has always relied on others to carry.",
+      summary:    "Three rings and the cheapest QB spender in the league ($6.00 avg). That's by design — he punts the position, puts that cash into RB/WR volume, and banks on dart throws hitting. +1.0 avg ROI and a 2019 draft day win prove it works more than it doesn't.",
+      strengths:  "His 2019 at 13.42 pts/$ happened because he stayed cheap at QB while the room chased big names. Cam Newton 2015 (+172 ROI), Todd Gurley 2017 (+171), Caleb Williams 2025 (+129). Gets to breakout guys before the room catches on. His 2024 class put up 2,588 raw points, his best output ever.",
+      weaknesses: "Keeps getting bit by injury-prone RBs. Gus Edwards 2021 (-160 ROI), Andrew Luck 2017 (-139), Cam Akers 2023 (-124). Targets volatile situations, and when those blow up they really blow up. His 2015 debut at 8.19 pts/$ showed what happens when punt-QB has no safety net.",
+      bestDraft:  "2019, 13.42 pts/$, best in the league that year. Found undervalued guys everywhere while the room chased brand-name QBs at stupid prices. Walked away with the best efficiency in a field of 12.",
+      worstDraft: "2015 debut at 8.19 pts/$ (7th of 10). Punting QB with no backup plan meant the rest had to be perfect, and it wasn't. Took him four years to get the formula right.",
+      trends:     "ROI turnaround is wild: -23 in 2022, -27 in 2023, then back-to-back +37 and +39 in 2024 and 2025. QB spend has ticked up slightly ($6.00 career vs $9.60 recent), which is notable for a guy known for extreme cheapness there. He also entered 2025 with zero keepers, which nobody else did.",
+      outlook2026: "Keeping Puka Nacua at $45 (drafted $40, +$5) locks in a Tier 1 WR who projected 321 points — production that's nearly impossible to find at auction. The WR gap between elite and mid was 126 pts in 2025, so this solves his biggest problem immediately. With $155 remaining, expect the budget QB strategy to continue while he loads up on RB depth and a second WR. The ROI turnaround from 2024-2025 suggests a guy who's figured out roster construction; now he just needs to avoid the mid-round WR busts that plagued 2022-2023.",
     },
     "Greg Mulder": {
-      summary:    "Greg Mulder is 11 seasons in with zero draft day wins and a career ROI of -5.2 — but he also finds more productive $1 picks than almost anyone (103.9 pts avg, 2nd all-time). He's a volume buyer at RB who consistently pays mid-market prices, trusts his late-round process, and has shown flashes of brilliance (2023's 11.85 pts/$) that suggest the tools are there even when the results aren't.",
-      strengths:  "When Mulder gets it right, he gets it very right. Jalen Hurts 2021 (+168 ROI), Deebo Samuel 2021 (+164), and David Johnson 2016 (+163) show a manager with genuine upside instincts. His $1 pick game is arguably the most underrated in the league — Jared Goff 2023 at 317 points and Josh Allen 2019 at 279 are the standouts of a deep file.",
-      weaknesses: "Mulder's bust record is the longest in the league — 28 picks below -50 ROI. Ben Roethlisberger 2019 (-201 ROI), Isiah Pacheco 2024 (-187), and David Johnson 2017 (-172) — the same player he valued in 2016 — form a pattern of high-priced RBs who get hurt or underperform. The 2015 class (6.51 pts/$) was the worst debut of any active manager.",
-      bestDraft:  "The 2023 class (11.85 pts/$) was the best of Mulder's career, built on Jared Goff at $1 (317 pts) and a balanced class that produced 2,369 total points from 15 picks. When the $1 picks pop and the RBs stay healthy, his process works beautifully.",
-      worstDraft: "The 2015 debut (6.51 pts/$, last of 10 managers) set a difficult tone. But 2017 may be the most painful — David Johnson was drafted for $68, delivered -172 ROI, and sank an entire season. Paying a franchise price for a player who misses almost the entire year is a hole no roster can climb out of.",
-      trends:     "Mulder's ROI trend is noisy but has quietly stabilized near zero in recent seasons after years of double-digit negatives. His season-by-season trajectory shows a manager who learned from early disasters and tightened his process: the 2021 peak (+25) and near-breakeven finishes in 2023 and 2025 suggest the bust frequency is finally coming down. He is still the league's most prolific RB buyer and that has not changed.",
-      outlook2026: "Mulder enters 2026 with Brock Bowers secured at $12. Despite Jordan Love's eye-catching value score at $6, QB is the position where the gap from elite to solid is smallest — only 54 pts in 2025. The stronger keeper case is Dallas Goedert at $8 (drafted $3, +$5) — 156 TE points, 47 above positional average, at a price that saves meaningful budget. TE is the second-scarce position behind WR in this league; a cheap, productive TE paired with Bowers frees the auction budget for the RB talent that has historically defined his best and worst seasons.",
+      summary:    "Eleven seasons without a single draft day win, -5.2 career ROI. But his $1 picks hit at an absurd rate (103.9 pts avg, 2nd best ever). Buys RBs in volume at mid prices, trusts his late-round gut, and when it clicks (2023 at 11.85 pts/$) it really clicks. Talent's there. Consistency isn't.",
+      strengths:  "When he nails it he nails it hard. Jalen Hurts 2021 (+168 ROI), Deebo Samuel 2021 (+164), David Johnson 2016 (+163). Real upside instincts. His $1 game is probably the most underrated skill in the league — Jared Goff 2023 at 317 points and Josh Allen 2019 at 279 are just the headliners.",
+      weaknesses: "Most busts in the league — 28 picks below -50 ROI. Roethlisberger 2019 (-201 ROI), Isiah Pacheco 2024 (-187), David Johnson 2017 (-172, same guy he nailed the year before). Keeps paying up for RBs who get hurt or fall off, and the volume means the bad ones stack up fast. His 2015 debut at 6.51 pts/$ was the worst opening class of any current manager.",
+      bestDraft:  "2023 at 11.85 pts/$, career high. Goff at $1 for 317 points anchored it and the rest was balanced enough to produce 2,369 total. When his dollar picks pop and the RBs stay healthy, this approach works.",
+      worstDraft: "2015 debut was ugly (6.51 pts/$, dead last of 10). But 2017 might hurt more — David Johnson at $68 delivered -172 ROI and tanked the season. Way too much money in one fragile guy.",
+      trends:     "ROI has been all over but quietly stabilized near zero after years of double-digit negatives. The 2021 peak (+25) and near-breakeven in 2023 and 2025 suggest the bust rate is coming down. Still buys more RBs than anyone and that hasn't changed.",
+      outlook2026: "Has Brock Bowers locked in at $12. Jordan Love at $6 looks tempting but QB is where the gap between good and great is smallest (54 pts in 2025). Dallas Goedert at $8 (drafted $3, +$5) for 156 TE points, 47 above average, might be smarter. TE is the second-scarcest position in this league and a cheap productive TE paired with Bowers frees up cash for the RB bets that have defined his whole career.",
     },
     "James Lazette": {
-      summary:    "James Lazette has the best average draft day rank (4.6) of any 10+ season manager in the league, a career ROI of +3.7, and the single greatest full-spend draft class in No Fun League history (2023, 14.36 pts/$). He is the definition of a consistent auction operator — lean at QB ($9.10 avg), the most disciplined TE spender ($5.30 avg), and systematic about extracting value without chasing.",
-      strengths:  "Lazette's floor is his superpower. Three podiums, one win, and only one last-place draft day finish across 10 seasons is a consistency record no one in the league can match. His 2023 class produced 2,872 total points from a full $200 budget — the most points any manager has ever generated from a single draft. Melvin Gordon 2017 (+141 ROI), Kyler Murray 2020 (+140), and Mike Williams 2021 (+108) show a manager who identifies value before prices escalate.",
-      weaknesses: "Lazette's bust record shows a tendency to trust aging or volatile players at mid-range prices. Anthony Richardson 2024 (-137 ROI), Kyler Murray 2025 (-134), and Keenan Allen 2016 (-133) suggest a manager who sometimes over-indexes on prior production in players whose situations had already turned. The 2016 class (8.56 pts/$) was a rare stumble in an otherwise clean career.",
-      bestDraft:  "The 2023 draft is the best ever recorded in the No Fun League by pts/$. At 14.36 pts/$ on a full $200 budget — 2,872 total points from 15 picks — it's not just his personal best, it's a league record. Every dollar worked, and it wasn't luck: it was the culmination of seven seasons of process refinement.",
-      worstDraft: "The 2016 class (8.56 pts/$) was where Lazette's careful approach ran headfirst into a bad run of luck and a Keenan Allen (-133 ROI) injury that wiped out one of his key investments. Still good enough for 6th in a 12-manager field — which says more about his floor than his ceiling.",
-      trends:     "Lazette has hit a notable speed bump after his 2023 historic class. Back-to-back negative ROI seasons in 2024 (-8) and 2025 (-15) represent his worst sustained stretch since entering the league, and his WR spend has collapsed in recent years ($15.40 career vs $10.00 recent). The TE spend is nearly nonexistent at $2.50 average over the last three seasons, a strategic gamble that has left the position volatile.",
-      outlook2026: "Lazette faces a genuine choice after two down seasons. Kyle Pitts at $10 (drafted $5, +$5) is the strongest pick — 168 TE points, 59 above positional average, for $10. The TE positional gap from elite to mid was 121 pts in 2025, second only to WR; locking in a TE1 below market is the same structural advantage as a keeper WR. Baker Mayfield at $17 is the higher-ceiling option but QB opportunity cost is low enough that the $7 difference is better deployed at auction on WR or RB. Pitts is the play.",
+      summary:    "Best average draft day rank in the league (4.6) across 10 seasons. +3.7 career ROI. And the single best full-budget draft anyone has ever had (2023, 14.36 pts/$). Keeps QB cheap ($9.10 avg), spends the least on TE ($5.30 avg), and just doesn't miss often. Steady hand.",
+      strengths:  "Consistency. Three podiums, one win, and only ONE last-place finish across 10 years. Nobody has that floor. His 2023 class cranked out 2,872 points from a full $200 budget — most any manager has gotten from one draft. Melvin Gordon 2017 (+141 ROI), Kyler Murray 2020 (+140), Mike Williams 2021 (+108). Spots value before it becomes obvious.",
+      weaknesses: "Has a soft spot for aging or volatile guys at mid-range prices. Anthony Richardson 2024 (-137 ROI), Kyler Murray 2025 (-134), Keenan Allen 2016 (-133). Sometimes pays for what a player used to be. His 2016 class at 8.56 pts/$ was a rare bad one.",
+      bestDraft:  "2023. League record. 14.36 pts/$ on a full $200 budget, 2,872 total points. Not just his personal best — the best anyone's ever done. Every dollar worked. Came after seven years of refining his approach.",
+      worstDraft: "2016 at 8.56 pts/$. Keenan Allen injury (-133 ROI) torpedoed one of his key investments and the rest couldn't make up for it. Still finished 6th of 12, which tells you how high his floor normally sits.",
+      trends:     "Two rough years back to back after the record class. Negative ROI in 2024 (-8) and 2025 (-15), his worst sustained stretch. WR spend has cratered ($15.40 career vs $10.00 recent) and TE budget is basically nothing at $2.50 avg over three years. Something in his allocation shifted and results followed.",
+      outlook2026: "Coming off two down years with a real decision to make. Kyle Pitts at $10 (drafted $5, +$5) for 168 TE points, 59 above average, is the strongest play. TE gap from top to mid was 121 pts in 2025, second only to WR. A TE1 below market is a structural edge. Baker at $17 has more ceiling but QB opportunity cost is low enough that those $7 go further at auction on WR or RB.",
     },
     "Joshua Van Groningen": {
-      summary:    "Joshua Van Groningen has packed an impressive resume into just six seasons — a 2024 draft day win, the highest career avg ROI (+12.3) among active managers, and a roster-building style that leans heavily on TE premium ($14.40 avg, highest in the league) and volatile RB speculation. He is capable of both the highest highs and the most gut-wrenching busts in the same draft class.",
-      strengths:  "Josh's ROI leadership (+12.3 career avg) is the real story. He wins by finding value in positions others overlook while holding the line on QB spend ($8.10 avg). His 2024 draft (13.18 pts/$, best that year) was a masterclass in efficient allocation. Javonte Williams 2025 (+149 ROI), Tom Brady 2020 (+128), and Tony Pollard 2022 (+121) show a genuine feel for underpriced targets.",
-      weaknesses: "The bust list reads like a monument to RB volatility: Javonte Williams 2022 (-173 ROI), Saquon Barkley 2020 (-165), and J.K. Dobbins 2023 (-151). He pays for upside and sometimes gets the downside instead. His 2021 class (9.76 pts/$, 7th of 14) reflects what happens when high-variance bets all miss at once.",
-      bestDraft:  "The 2024 draft (13.18 pts/$) earned him the draft day crown and was the most complete expression of his auction philosophy. He got above-market returns across multiple positions and produced 2,042 points from a $155 budget — extraordinary efficiency.",
-      worstDraft: "The 2021 class (9.76 pts/$) was his quietest season — 7th of 14 managers, with a portfolio that never quite fired together. None of the big picks delivered and the class produced results well below his usual standard. It is the one season where the high-upside strategy simply did not connect.",
-      trends:     "After four straight positive ROI seasons including a career-best +35 in 2024, Van Groningen dipped to -6 in 2025 — his first negative since entering the league. His QB spend has been quietly declining ($8.10 career vs $6.50 recent) as he concentrates capital at RB and his signature TE-premium slot ($14.00+ avg). The high-variance nature of his roster construction means the ceiling and floor both remain extreme.",
-      outlook2026: "Expect another TE-premium, low-QB build. His standout keeper is Javonte Williams at $7 (drafted $2, +$5) — 227 RB points, 89 above positional average, saving $11 against open market rates. With Bucky Irving already secured at $12 and the WR gap from top to mid at 126 pts in 2025, the freed $193 budget is best used pursuing a premium WR in the live auction rather than locking in a second cheap skill player at a position that doesn't create the same floor separation.",
+      summary:    "Six seasons, two titles, a 2024 draft day crown, and the best career ROI (+12.3) of anyone active. Spends more at TE than anybody ($14.40 avg) and speculates hard on volatile RBs. The upside is he looks unstoppable half the time. The downside is the busts are genuinely ugly.",
+      strengths:  "+12.3 career ROI tells the story. Finds value in spots others skip while staying cheap at QB ($8.10 avg). 2024 draft at 13.18 pts/$ was best in the league that year. Javonte Williams 2025 (+149 ROI), Tom Brady 2020 (+128), Tony Pollard 2022 (+121). Has a feel for guys whose price hasn't caught up to their output yet.",
+      weaknesses: "RB volatility is the cost. Javonte Williams 2022 (-173 ROI), Saquon Barkley 2020 (-165), J.K. Dobbins 2023 (-151). Pays for upside and sometimes just eats the full downside. His 2021 class at 9.76 pts/$ (7th of 14) is what happens when the high-variance bets all miss at once.",
+      bestDraft:  "2024, 13.18 pts/$, draft day champ. Got above-market returns at multiple positions, squeezed 2,042 points out of a $155 budget. Elite efficiency.",
+      worstDraft: "2021 at 9.76 pts/$ (7th of 14). Quiet year. Big picks didn't deliver and the class just never came together. Only season where the high-upside approach produced nothing worth mentioning.",
+      trends:     "Four straight positive ROI through 2024 (peaking at +35), then a dip to -6 in 2025, his first negative since joining. QB spend keeps dropping ($8.10 career vs $6.50 recent) as he funnels more into RB and TE. Variance on this approach stays extreme in both directions.",
+      outlook2026: "Expect TE-premium, low-QB again. Javonte Williams at $7 (drafted $2, +$5) is the standout keeper — 227 RB points, 89 above average, saving $11 vs open market. With Bucky Irving locked at $12 and the WR gap at 126 pts in 2025, the $193 in freed-up budget is best aimed at a premium WR rather than another cheap skill piece.",
     },
     "Matthew Van Groningen": {
-      summary:    "Matthew Van Groningen is a decade-long member of the league with a nearly break-even career ROI (+0.4) and three draft day podiums but no wins. He runs a balanced spend across positions, has a persistent weakness for QBs in uncertain situations, and produced the second-best single-season pts/$ in league history in 2018 (15.58 pts/$) — a performance that makes his lack of a draft title all the more puzzling.",
-      strengths:  "The 2018 class is Matthew's calling card: 15.58 pts/$ on a lean $88 budget — the lightest spend of any top-3 finisher ever. Aaron Rodgers 2020 (+185 ROI) is his best individual value — a $5 QB who put up 399 points in a season where almost everyone paid premium prices for mediocre production. Austin Ekeler 2022 (+114) showed the same instinct operating at RB.",
-      weaknesses: "Matthew's Achilles heel is QB speculation on players with unsettled situations. Trevor Lawrence 2024 (-177 ROI), Russell Wilson 2022 (-121), and Dameon Pierce 2023 (-107) paint a picture of a manager who sometimes pays mid-tier prices for players already trending the wrong direction. Three podiums without a win across 10 seasons suggests a gap between process quality and conversion.",
-      bestDraft:  "The 2018 class (15.58 pts/$, 2nd all-time) is staggering. Spending only $88 and generating over 1,370 fresh points is a feat of auction efficiency that has never been replicated. The Aaron Rodgers 2020 pick (+185 ROI) runs it a close second as a single-pick story.",
-      worstDraft: "The 2016 debut (8.37 pts/$, 7th of 12) was a rocky start. Combined with Trevor Lawrence 2024 (-177 ROI) — a $30+ investment in a QB who had already shown his limitations — these are the two data points that define where Matthew's draft instincts still have room to grow.",
-      trends:     "The most alarming recent trend in Matthew's draft history is a hard pivot away from QB investment — his recent QB avg has dropped from $8.80 career to $4.30 in the last three seasons, while RB spend has surged to $23.20. The ROI results have followed suit: two straight negative years (-25 in 2024, -18 in 2025) suggest the heavy RB allocation is not compensating for the de-emphasis at QB. Something needs to change structurally in 2026.",
-      outlook2026: "Matthew's best keeper is Drake Maye at $11 (drafted $6, +$5) — 363 QB points for $11 — but the positional context matters: the QB gap from top to mid was only 54 pts in 2025, meaning Maye's 363 could be replaced by a $9-12 QB in the live auction for a similar outcome. The stronger keeper argument is Jahmyr Gibbs at $65 (drafted $60, +$5) for 337 RB points — the RB gap from top to mid was 88 pts and top-end RBs command $40+ at auction. Gibbs is expensive as a keeper but he is one of the hardest players in the pool to replace on draft day. If the budget allows, Gibbs unlocks more positional scarcity than Maye does.",
+      summary:    "Ten years in, ROI basically at zero (+0.4), three podiums but no wins. Spreads money around, has a bad habit of paying for QBs in sketchy situations, and somehow produced the second-best single-season pts/$ ever (2018, 15.58 pts/$). He can clearly do it. Just can't do it every year.",
+      strengths:  "2018 class is wild. 15.58 pts/$ on just $88 in budget — lightest spend of any top-3 finisher ever. Aaron Rodgers 2020 at $5 producing 399 points (+185 ROI) is his best single hit. A $5 QB going nuclear while everyone else overpaid for mediocre guys. Ekeler 2022 (+114) showed the same instinct at RB.",
+      weaknesses: "Keeps buying QBs with red flags. Trevor Lawrence 2024 (-177 ROI), Russell Wilson 2022 (-121), Dameon Pierce 2023 (-107). Pays mid-range money for guys already trending wrong. Three podiums without a win over 10 seasons says there's a gap between how good his process looks and how often it actually converts.",
+      bestDraft:  "2018 at 15.58 pts/$, second-best all time. Spent $88 and got 1,370+ points out of it. Nobody has replicated that. Rodgers 2020 (+185 ROI) is the closest single-pick version of that same magic.",
+      worstDraft: "2016 debut at 8.37 pts/$ (7th of 12) was rocky. Trevor Lawrence 2024 at -177 ROI on $30+ for a QB who'd already shown his ceiling is the other standout. Both are moments where his instincts went sideways.",
+      trends:     "Recent years are concerning. Pulled way back from QB ($8.80 career down to $4.30 recently) and pushed hard into RB ($23.20 recent). Results haven't followed: two straight negative ROI years (-25 in 2024, -18 in 2025). Heavy RB allocation isn't making up for abandoning QB. Something structural needs to shift.",
+      outlook2026: "Drake Maye at $11 (drafted $6, +$5) for 363 QB points makes sense on paper, but QB gap was only 54 pts in 2025. Can find similar production at auction for $9-12. Jahmyr Gibbs at $65 (drafted $60, +$5) for 337 RB points is expensive but harder to replace — RB gap was 88 pts and top-end backs cost $40+ at auction. Gibbs is pricey as a keeper but creates more scarcity advantage than Maye does.",
     },
     "Ross Van Groningen": {
-      summary:    "Ross Van Groningen is the league's most committed RB-first auction manager — his $25.00 average spend at the position is the highest of any active manager by a significant margin, a philosophy that won him the inaugural 2015 draft day title but has increasingly worked against him in an era of RB volatility. Eleven seasons in, his -1.2 career ROI reflects a manager whose instincts are sound but whose roster construction leaves little margin for error when the expensive backs get hurt.",
-      strengths:  "When the RB-heavy strategy fires, it fires big. Alvin Kamara 2020 ($58, +160 ROI) is the league's most expensive single value pick ever recorded. Brandon Marshall 2015 (+111) and Allen Robinson 2015 (+108) in the same class show his best season was a complete team effort. Geno Smith 2023 at $1 (241 pts) is his personal best steal.",
-      weaknesses: "The commissioner's bust list is RB-heavy by design — and sometimes brutally so. James Conner 2025 (-225 ROI, fourth-worst bust in league history), Jimmy Garoppolo 2020 (-166), and Allen Robinson 2017 (-149) reflect the cost of concentrating budget in a fragile position. His draft day avg rank of 7.3 suggests the RB-first model is increasingly punished by the modern fantasy landscape.",
-      bestDraft:  "The 2015 inaugural draft (9.73 pts/$, league champion) set the template. A healthy Marshawn Lynch, a balanced supporting cast, and the first-mover advantage of a brand-new league made it the cleanest draft of his career — and the No Fun League's very first draft day title.",
-      worstDraft: "The 2021 class (7.86 pts/$, 12th of 14 managers) was the worst of his career. The RB market had matured, injury variance was high, and concentrating $25/pick at a volatile position finally showed its ceiling. It was the first season where the strategy produced a bottom-tier result.",
-      trends:     "The commissioner's ROI in 2025 was -33 — his worst single-season performance in 11 years of competition, and the clearest evidence yet that the RB-first model is being punished by the modern fantasy market. Recent spend data shows a notable shift: WR allocation has climbed from $13.90 career to $18.10 in recent years, suggesting an awareness that the portfolio needs rebalancing. The QB budget has been cut to nearly nothing ($3.40 recent avg vs $5.70 career).",
-      outlook2026: "The blueprint for 2026 starts with keeping Jaxon Smith-Njigba at $11 (kept at $6 in 2025, +$5 again) — 312 WR points in 2025, 200 above the positional average, for a price that would be laughed at in a live auction. The WR gap from top to mid was 126 pts in 2025; JSN is firmly WR1 territory and impossible to replicate at $11 on draft day. With that anchor in place, the remaining $189 should move decisively away from the expensive RB bets that drove the -33 ROI in 2025 and toward the WR and TE depth the roster has chronically underfunded.",
+      summary:    "The commissioner goes harder on RBs than anyone — $25.00 avg at the position, highest by a wide margin. Won the very first draft day title in 2015 with that approach. Eleven seasons later though, the philosophy has taken hits in an era where RBs can't stay healthy. -1.2 career ROI says the instincts are there but there's almost no room for error.",
+      strengths:  "When the RB-heavy build works it's devastating. Alvin Kamara 2020 at $58 for +160 ROI is the most expensive value pick ever in this league. Brandon Marshall 2015 (+111) and Allen Robinson 2015 (+108) in the same class show his best year was a full-roster effort. Geno Smith 2023 at $1 for 241 points is his personal best steal.",
+      weaknesses: "Bust list is full of RBs, because that's where all the money goes. James Conner 2025 (-225 ROI, fourth-worst bust in league history), Jimmy Garoppolo 2020 (-166), Allen Robinson 2017 (-149). When you concentrate that much cash in one fragile position, bad years get really bad. 7.3 draft day avg rank says the model is getting punished more over time.",
+      bestDraft:  "Inaugural 2015 draft at 9.73 pts/$. Healthy Marshawn Lynch, solid cast around him, first-mover advantage in a brand new league. Cleanest draft he's had.",
+      worstDraft: "2021 at 7.86 pts/$ (12th of 14). Worst of his career. RB market had matured, injury variance was brutal, and loading $25/pick into a volatile position finally cratered. First time the strategy produced a bottom-tier finish.",
+      trends:     "2025 ROI of -33 was his worst single season in 11 years. Clearest sign yet that RB-heavy is taking more damage in the modern market. He's been shifting though — WR allocation climbed from $13.90 career to $18.10 recently. QB budget cut to almost nothing ($3.40 recent vs $5.70 career).",
+      outlook2026: "Keeping JSN at $11 (kept at $6 in 2025, +$5 again) is the no-brainer. 312 WR points in 2025, 200 above average, for $11. WR1 production at a price that wouldn't even get a bench WR at auction. WR gap from top to mid was 126 pts and JSN is impossible to replace at that price. With that anchor locked, the remaining $189 should move away from the big RB bets that produced -33 in 2025.",
     },
     "Steve Vander Molen": {
-      summary:    "Steve Vander Molen holds the highest career avg ROI (+14.4) of any manager with 10+ seasons in the league — a remarkable figure for a manager who has never won a draft day. He is a systematic value hunter who spreads spend evenly across all four skill positions, never chases the top price at any slot, and has four podiums to show for it. The championship is the one gap in an otherwise elite draft record.",
-      strengths:  "Steve's ROI leadership is built on a deep file of above-market picks at every position. Matthew Stafford 2021 (+133 ROI), LeGarrette Blount 2016 (+123), and Adam Thielen 2017 (+117) all outperformed their price brackets significantly. Carson Palmer 2015 at $1 (314 pts) remains one of the top five $1 picks in league history. Four podiums across 11 seasons is a consistency record matched by no one.",
-      weaknesses: "Steve's bust file has a specific pattern: trusting aging veterans with one more run in them. Derek Carr 2018 (-188 ROI), Calvin Ridley 2021 (-110), and Julio Jones 2022 (-105) are all players drafted on reputation rather than situation. His 2022 class (8.03 pts/$) came entirely from misreading the market on established names who were already in decline.",
-      bestDraft:  "The 2020 class (10.91 pts/$, league-best that year) was his most complete draft — balanced spend, above-average ROI across positions, and a team that delivered results when it mattered. It is the clearest expression of what his systematic approach looks like when all variables cooperate.",
-      worstDraft: "The 2022 class (8.03 pts/$, 12th of 12 managers) was a rare complete miss. Derek Carr (-188 ROI) proved to be his single worst individual pick — the one data point that proves even the league's most efficient ROI record is not immune to a bad read on a declining veteran.",
-      trends:     "Vander Molen's 2025 season was the best of his 11-year career — a +60 ROI that nearly doubled his previous peak. His recent spend profile has shifted meaningfully: RB and TE allocation are up substantially ($20.20 and $22.80 recent vs $15.60 and $12.10 career) while WR has dropped. The consistency that defined his early career has evolved into a more aggressive, positional-concentration approach — and in 2025 it worked spectacularly.",
-      outlook2026: "Coming off the best draft of his career, Vander Molen holds two legitimate keeper options. George Pickens at $19 (drafted $14, +$5) for 251 WR points — 139 above positional average — is the clear call. The WR gap from top to mid was 126 pts in 2025; a WR producing 139 above average is irreplaceable at $19 on the open market. Kareem Hunt at $6 has a higher value ratio, but 137 RB points is only slightly above average — comparable production can be found at auction. Pickens is the keeper that genuinely cannot be replicated for the price.",
+      summary:    "Highest career ROI (+14.4) of anyone with 10+ seasons. Never won a draft day. Spreads money evenly, never overpays anywhere, hunts value at every position, four podiums. Consistently great at drafting with zero titles to show for it. That's the Steve VDM experience.",
+      strengths:  "The ROI lead comes from years of above-market picks everywhere. Matthew Stafford 2021 (+133 ROI), LeGarrette Blount 2016 (+123), Adam Thielen 2017 (+117). They all crushed their price tags. Carson Palmer 2015 at $1 for 314 points is still a top-five dollar-pick in history. Four podiums in 11 years with no title.",
+      weaknesses: "His bust file has a pattern — aging vets he thought had one more good year. Derek Carr 2018 (-188 ROI), Calvin Ridley 2021 (-110), Julio Jones 2022 (-105). Drafted on reputation instead of current situation. 2022 at 8.03 pts/$ (last of 12) was what happens when you misread declining names.",
+      bestDraft:  "2020 at 10.91 pts/$, best in the league that year. Balanced spend, above-average ROI at every position. His system working the way it's supposed to.",
+      worstDraft: "2022 at 8.03 pts/$ (dead last of 12). Rare total miss. Carr at -188 ROI was his worst individual pick ever. Even the best ROI track isn't immune to a bad read on a fading vet.",
+      trends:     "2025 was his best year in 11 seasons. +60 ROI, nearly doubling his previous high. Spending has shifted: RB and TE way up ($20.20 and $22.80 recently vs $15.60 and $12.10 career) while WR dropped. What used to be perfectly balanced has gotten more aggressive and concentrated — and in 2025 it paid off huge.",
+      outlook2026: "Coming off career-best draft, has options. George Pickens at $19 (drafted $14, +$5) for 251 WR points, 139 above average — that's the keeper. WR gap from top to mid was 126 pts in 2025 and a guy producing 139 above average for $19 is impossible to match at auction. Kareem Hunt at $6 looks good by ratio but 137 RB points is only a bit above average and you can buy that at auction. Pickens is the one you can't replace at the price.",
     },
     "Trey Hugen": {
-      summary:    "Trey Hugen owns the single greatest draft class in No Fun League history — 2018 at 19.8 pts/$, built on Patrick Mahomes for $6 and a lean budget that squeezed maximum value from every dollar. He is a two-time draft day champion (2017, 2018) with a -1.1 career ROI that tells a story of a manager who peaks historically and then struggles to replicate it — a classic boom-or-bust arc across 11 seasons.",
-      strengths:  "The 2018 draft stands alone. Mahomes for $6 (+183 ROI), a $109 total budget that produced 2,158 points, a pts/$ figure that has never been approached in 11 seasons of competition. Add the 2017 title and a 2024 podium, and Hugen's peak performance window is genuinely elite. Raheem Mostert 2023 (+174 ROI) and Ja'Marr Chase 2021 (+124) show the instinct for pre-breakout picks has not left him.",
-      weaknesses: "Hugen's career ROI (-1.1) despite two wins tells the real story: the valley is as deep as the peak. His $1 pick average (58.4 pts) is the lowest among active managers. Miles Sanders 2023 (-116 ROI), Chris Olave 2024 (-109), and Courtland Sutton 2020 (-106) form a pattern of WR busts at mid-tier prices that consistently drag down his classes.",
-      bestDraft:  "The 2018 class at 19.8 pts/$ is the greatest draft ever recorded in No Fun League history. Mahomes at $6 is the most impactful underpay in league history, but the supporting cast — lean, efficient, and almost entirely penalty-free — made it a complete masterpiece. It is the benchmark every auction manager is measured against.",
-      worstDraft: "The 2016 class (8.05 pts/$, 9th of 12 managers) was the trough of his career — a full $200 spent with very little to show for it, the year before back-to-back titles. Whatever adjustments he made after 2016 turned him into a champion. The contrast is the sharpest in league history.",
-      trends:     "Hugen's recent ROI trend is bleak outside of a brief 2023 recovery (+8): -32 in 2022, -2 in 2024, -10 in 2025. The WR position has been the consistent drag — mid-tier WR busts have appeared in his bottom picks in five of the last six seasons. His RB spend has actually declined in recent years ($12.40 recent vs $15.20 career), which combined with lower WR ROI points to a manager who has not found a consistent replacement for the keeper-heavy, lean-budget approach that won him back-to-back titles in 2017 and 2018.",
-      outlook2026: "With Ja'Marr Chase already locked in at $37, Hugen needs a bargain secondary option. Tyler Warren at $14 (drafted $9, +$5) is the right call — 151 TE points, 42 above positional average. The TE positional gap from elite to mid was 121 pts in 2025, second only to WR; a cheap TE1 creates the same structural roster advantage as a cheap WR. Keeping Warren frees budget to address the WR bust pattern that has defined his recent seasons with more deliberate mid-range investment rather than the speculative picks that have repeatedly misfired.",
+      summary:    "Owns the single greatest draft class ever: 2018 at 19.8 pts/$, built on getting Mahomes for $6. Two-time draft day champ (2017, 2018). But -1.1 career ROI tells you the rest of the story. He peaked historically and has spent years trying to get back there. Boom-or-bust career across 11 seasons.",
+      strengths:  "2018 stands alone. Mahomes at $6 (+183 ROI), $109 total budget producing 2,158 points, a pts/$ number nobody has sniffed in 11 years. Add the 2017 title and a 2024 podium and his peak window is as good as anyone's ever been. Raheem Mostert 2023 (+174 ROI) and Ja'Marr Chase 2021 (+124) prove he can still find breakouts.",
+      weaknesses: "-1.1 career ROI despite two wins. Says a lot. His $1 picks average 58.4 pts, lowest of any active manager. Miles Sanders 2023 (-116 ROI), Chris Olave 2024 (-109), Courtland Sutton 2020 (-106). Mid-priced WR busts keep dragging his classes down year after year.",
+      bestDraft:  "2018 at 19.8 pts/$. Greatest draft in No Fun League history. Mahomes for $6 is the most impactful underpay ever, and the rest was clean on a lean budget. It's the benchmark everyone else gets measured against.",
+      worstDraft: "2016 at 8.05 pts/$ (9th of 12). Full $200 spent with almost nothing back. The very next year he won back-to-back titles though. Whatever he changed after 2016 turned him into a champion. Gap between those seasons is the sharpest anyone's ever had.",
+      trends:     "Recent ROI looks rough outside a brief 2023 rebound (+8): -32 in 2022, -2 in 2024, -10 in 2025. WR has been the consistent drag with mid-tier busts at the position in five of six years. RB spend dropped ($12.40 recent vs $15.20 career), and combined with the WR problems it points to a guy who hasn't found a replacement for the keeper-heavy lean-budget formula that won him back-to-back.",
+      outlook2026: "Ja'Marr Chase locked in at $37. Needs a cheap secondary option. Tyler Warren at $14 (drafted $9, +$5) for 151 TE points, 42 above average, is the right pick. TE gap from elite to mid was 121 pts in 2025, second only to WR. Cheap TE1 creates real flexibility. Keeping Warren frees budget to address the WR bust pattern with more careful mid-range spending instead of the speculative swings that keep missing.",
     },
     "Tyler Goslinga": {
-      summary:    "Tyler Goslinga is a two-time draft day champion (2022, 2025) with a +4.4 career ROI and the most active TE-premium strategy in the league ($15.10 avg, highest among current managers). He joined in 2018 and has steadily built one of the most reliable recent-era records — his last three classes (2022, 2023, 2025) all podiumed, and his $1 pick average (117.7 pts, highest active) is elite.",
-      strengths:  "Goslinga's best individual pick — Lamar Jackson 2019 for $5 (+225 ROI, #1 all-time) — is the single greatest value pick in No Fun League history. Dalvin Cook 2020 (+146), Jalen Hurts 2022 (+144), and Brock Purdy 2023 at $1 (330 pts) show a manager who consistently identifies elite production before the price adjusts.",
-      weaknesses: "Goslinga's bust ceiling is real. Jimmy Garoppolo 2018 (-211 ROI) on debut, Christian McCaffrey 2024 (-197), and Antonio Brown 2019 (-138) form a pattern of paying premium prices for players whose availability or health was already questionable at draft time. His 2018 debut (8.04 pts/$) was the roughest start of any current manager.",
-      bestDraft:  "The 2022 class (13.01 pts/$, league-best that year) was Goslinga's cleanest execution — a balanced portfolio that produced 2,395 points from a $184 budget. It was the season where his TE-premium, lean-QB philosophy fully crystallized into a winning blueprint.",
-      worstDraft: "The 2018 debut (8.04 pts/$, last of 13 managers) was brutal. Jimmy Garoppolo at $11 (-211 ROI) set the tone for a class where every major pick disappointed. The lesson apparently landed — he has not finished below 7th since, and has won the whole thing twice.",
-      trends:     "Goslinga's ROI arc shows a manager who struggled early, peaked in 2022 (+51), stumbled in 2024 (-17), and stabilized back to positive in 2025 (+11). His QB spend has increased significantly in recent years ($13.60 recent vs $7.50 career) while WR has dropped, suggesting a strategic pivot toward anchoring the QB slot with a real investment rather than hunting bargains. His TE-premium strategy remains the most aggressive in the league and has been a consistent source of value.",
-      outlook2026: "Goslinga enters 2026 as a two-time defending draft day champion with a clear automatic keeper: Jared Goff at $8 (drafted $3, +$5) for 327 QB points looks irresistible — but QB opportunity cost is the lowest of any position (only 54 pts separated top from mid in 2025), and comparable QB production can be found at auction for $10-15. The better keeper argument is Jaylen Warren at $11 (drafted $6, +$5) — 201 RB points, 63 above positional average, for $11. With Jonathan Taylor already secured at $24, two productive RBs for $35 combined frees substantial capital for the premium TE his strategy demands and the WR depth his recent classes have lacked. Goff is an option if roster construction requires it, but the positional scarcity case favors Warren.",
+      summary:    "Two-time draft day champ (2022, 2025), +4.4 career ROI, and the most aggressive TE spender ($15.10 avg). Debuted in 2018 dead last, and has built one of the best recent-era resumes since. Last three classes all podiumed. His $1 pick average (117.7 pts) leads all active managers.",
+      strengths:  "Lamar Jackson 2019 for $5 at +225 ROI. Best value pick in No Fun League history. Dalvin Cook 2020 (+146), Jalen Hurts 2022 (+144), Brock Purdy 2023 at $1 for 330 points. Keeps finding guys before the price catches up to their talent.",
+      weaknesses: "Bust ceiling is real. Jimmy Garoppolo 2018 (-211 ROI) on debut, CMC 2024 (-197), Antonio Brown 2019 (-138). Pays big for guys whose health was already a question mark. His 2018 debut at 8.04 pts/$ was the roughest start of any current manager.",
+      bestDraft:  "2022 at 13.01 pts/$, league-best that year. Balanced class, 2,395 points from $184 budget. The season where TE-first cheap-QB fully clicked as a formula.",
+      worstDraft: "2018 debut at 8.04 pts/$ (last of 13). Garoppolo at $11 for -211 ROI set the tone and everything else went down with it. Clearly learned from it though — hasn't finished below 7th since and won the whole thing twice.",
+      trends:     "ROI arc tells it: struggled early, peaked in 2022 (+51), stumbled in 2024 (-17), bounced back in 2025 (+11). QB spend has gone up significantly ($13.60 recent vs $7.50 career) while WR dropped — looks like a pivot toward actually investing at QB instead of bargain-hunting there. TE-premium stays the most aggressive in the league.",
+      outlook2026: "Two-time defending draft day champ. Jared Goff at $8 (drafted $3, +$5) for 327 QB points looks automatic, but QB opportunity cost is lowest of any position (54 pts top to mid in 2025) and you can find similar at auction for $10-15. Jaylen Warren at $11 (drafted $6, +$5) for 201 RB points, 63 above average, is stronger. With J-Taylor already at $24, two productive RBs for $35 total frees up real money for the premium TE his strategy demands.",
     },
     "Vance Sipma": {
-      summary:    "Vance Sipma has the worst career avg draft day rank (8.5) and the most negative avg ROI (-10.4) of any active manager — figures that mask real bright spots like a 2024 breakout and Jordan Love at $1 in 2023 (256 pts). His defining characteristic is a willingness to spend heavily at QB ($14.50 avg, highest in the league by a wide margin) — a strategy that has produced both his best and worst results.",
-      strengths:  "When Vance's QB spend hits, the ceiling is real. Jordan Love 2023 ($1, 256 pts) and the 2024 class (12.11 pts/$) show a manager who is actively improving. Le'Veon Bell 2017 (+119 ROI), Jameson Williams 2024 (+101), and Derrick Henry 2024 (+100) represent a sharp eye for value at RB and WR — it is the QB slot that historically swallows the gains.",
-      weaknesses: "Marcus Mariota 2018 (-261 ROI) is the worst single pick in No Fun League history — a $6 QB who played 12 snaps before his season ended. The pattern extends: Jonathon Brooks 2024 (-146), Mike Williams 2023 (-125), and a 2017 class (7.55 pts/$) where QB-heavy spend produced nothing. Paying $14.50 at QB — 70% above the league median — is a structural disadvantage unless the picks hit.",
-      bestDraft:  "The 2018 class (13.13 pts/$, 3rd all-time that season) is the great what-if of Vance's career. Despite the Mariota catastrophe, the rest of the class was so good he still finished third. Imagine that draft without the worst single pick in league history — it might have been the all-time record.",
-      worstDraft: "The 2017 class (7.55 pts/$, last of 12 managers) was the most complete disaster of his career — the direct result of the league's most aggressive QB spending producing nothing. Every dollar spent above the median at QB evaporated. It is the starkest single-season argument against his roster construction philosophy.",
-      trends:     "Vance's recent trends are moving in the wrong direction in the one area that matters most: his QB spend has increased from $14.50 career average to $22.80 in recent seasons, doubling down on the strategy that has produced the worst single pick in league history. Nine of his ten seasons have ended with negative ROI, and the two-year stretch of -26 (2023) and -24 (2025) suggests the structural issue at QB is getting worse, not better. The one bright spot is genuine improvement in his WR and RB identification.",
-      outlook2026: "The most important thing Vance can do for his 2026 draft is keep the right player. Rico Dowdle at $6 (drafted $1, +$5) for 191 RB points — 53 above positional average — is the clear call over Josh Allen at $41. The QB market is deep enough that letting Allen go to auction costs far less than the 126-pt WR gap or 88-pt RB gap suggest at skill positions. With Brian Thomas already secured at $20, Dowdle at $6 gives him two productive starters for $26 combined and materially reduces the pressure to overpay at QB — which has been the structural drain on his roster for nine of ten seasons.",
+      summary:    "Worst career draft day rank (8.5) and most negative ROI (-10.4) of any active manager. But there are real bright spots buried in there — a 2024 breakout and Jordan Love at $1 in 2023 for 256 points. He spends big at QB ($14.50 avg, highest in the league by far) and that bet has produced his best and worst outcomes.",
+      strengths:  "When the QB gamble hits, the ceiling shows up. Jordan Love 2023 ($1, 256 pts) and the 2024 class at 12.11 pts/$ prove he's getting better. Le'Veon Bell 2017 (+119 ROI), Jameson Williams 2024 (+101), Derrick Henry 2024 (+100). Actually has a good eye for RB and WR value. QB spending just eats the gains.",
+      weaknesses: "Marcus Mariota 2018 at -261 ROI. Worst single pick in league history. $6 QB who played 12 snaps before his season ended. Pattern continues: Jonathon Brooks 2024 (-146), Mike Williams 2023 (-125), and a 2017 class at 7.55 pts/$ where heavy QB investment produced nothing. Spending 70% more than league median at QB is a structural hole unless the picks hit.",
+      bestDraft:  "2018 at 13.13 pts/$, 3rd best that season. And this is with the worst pick in history (Mariota) in that same class. Rest was so good it still finished third. Think about that class without Mariota.",
+      worstDraft: "2017 at 7.55 pts/$ (last of 12). Most complete disaster of his career, directly caused by aggressive QB spending producing nothing. Every dollar above the league median at QB just evaporated.",
+      trends:     "Concerning: QB spend has gone UP from $14.50 career to $22.80 recently. He's doubling down on the exact approach that produced the worst pick in history. Nine of ten seasons ended negative ROI, and the recent stretch of -26 (2023) and -24 (2025) says the QB issue is getting worse. One bright spot — his WR and RB identification has genuinely improved.",
+      outlook2026: "Most important decision: Rico Dowdle at $6 (drafted $1, +$5) for 191 RB points, 53 above average. That's the keeper over Josh Allen at $41. QB market is deep enough that letting Allen go costs way less than the 126-pt WR gap or 88-pt RB gap at skill positions. With Brian Thomas at $20, Dowdle at $6 gives him two productive starters for $26 combined and takes pressure off having to overpay at QB — which has been the drain for nine of ten seasons.",
     },
   },
   managerProfiles: {
     "Aaron Fay": {
-      story:     "Aaron Fay arrived in 2020 mid-pandemic and immediately announced himself as a manager who plays for boom, not safety. His debut was a disaster at 5-8, but 2021 was a revelation: 10-4, a playoff run, and one of the most efficient draft classes in league history. Six seasons in, he oscillates between flashes of brilliance and frustrating inconsistency — the hallmark of a manager whose ceiling and floor are both extreme. The title remains elusive but the potential is undeniable.",
-      style:     "Fay manages by feel and upside. He takes shots on boom players, hunts $1 production better than almost anyone in the league, and tolerates variance more than most. His $1 pick average is the best of any active manager — a genuine skill that offsets the bust rate elsewhere on his roster. When he is right, he is spectacularly right.",
-      moments:   "The 2021 season is the definitive Fay moment: Joe Burrow at $2 producing 336 points, Austin Ekeler delivering alongside him, a 10-4 record that had the whole league worried. The contrast with his debut — Daniel Jones and Baker Mayfield both busting in the same class — captures the full range of what a Fay season can look like.",
-      rivalries:  "Fay has struggled most against James Lazette, dropping 4 of 6 matchups. His best record is a perfect 2-0 against the now-departed Ben de Ruiter. Against the active field he is competitive but hasn't yet developed the one-sided dominance that league veterans carry.",
-      legacy:    "37-46, no titles, six seasons. Too early to write the final chapter. His 2021 performance showed he can operate at a championship level when everything clicks. The $1 talent is real. The rest needs to catch up.",
+      story:     "Showed up in 2020 during Covid, went 5-8, and nobody thought much of it. Then 2021 happened — 10-4, Burrow at $2 carrying a playoff run, and suddenly the whole room was watching him. He's been like that ever since. One year he looks like the guy about to break through, next year he's lighting money on fire on bounce-back RBs who are still bouncing the wrong direction. Six seasons in and I genuinely don't know which version shows up next.",
+      style:     "Gut drafter. Barely touches QB, targets upside RBs at mid-range prices, and then somehow finds $1 starters better than anyone I've seen in this league. His bargain bin picks average 115 points and that's absurd. It lets him absorb the Daniel Jones and Baker Mayfield disasters without completely sinking.",
+      moments:   "2021 was the year people stopped ignoring him. Burrow for $2 doing 336 points with Ekeler going nuts beside him — that team scared people. His 2020 debut where both Jones and Baker imploded on the same roster is the flip side of that coin. That's who he is, both of those things at once.",
+      rivalries:  "2-4 against James which bugs him. 2-0 against Ben de Ruiter back when Ben was still around. He hasn't had long enough to build those lopsided head-to-head records the founding guys have, but he's scrappy against the whole field.",
+      legacy:    "37-46, no ring, six seasons. Way too early to stamp a verdict on it. The $1 game is real, the 2021 ceiling is real, and the consistency problems are also real. Story's still being written.",
     },
     "Eric Graef": {
-      story:     "Eric Graef is eleven seasons deep, 85-63 all-time, one championship, and one of the most consistent presences in the league. He won the 2020 draft day crown, broke through for a title in 2015, and has four draft day podiums to go alongside it. His career is a study in sustained competitiveness built quietly and maintained stubbornly across a decade of competition.",
-      style:     "Graef is a volume manager. He drafts more RBs than almost anyone, keeps his budget balanced, and relies on the law of large numbers to produce a functional roster. He doesn't make many bold moves — he makes a lot of correct ones. His consistency is real but occasionally works against him in single-elimination formats where boom weeks matter more than season-long efficiency.",
-      moments:   "Baker Mayfield for $1 in 2024 putting up 337 points — the best $1 pick in league history — is the moment that defined his championship season. The 2020 draft day win was the first sign his quiet process could produce league-best results. The 2016 class and the Adrian Peterson disaster are the reminders of where the approach has its limits.",
-      rivalries:  "Graef has been particularly competitive against Ross Van Groningen over the years, a matchup that reflects two different philosophies — balanced efficiency vs RB concentration — with Graef's approach winning more often in recent seasons.",
-      legacy:    "85-63, one title, four draft day podiums. Graef's legacy is one of the most quietly impressive in league history — 11 seasons of above-.500 ball, consistent playoff contention, and a championship earned through patience and process.",
+      story:     "Eleven years in this thing and the man never once made a headline on draft night. Didn't need to. 85-63, a championship in 2015, four podiums, and the best dollar pick any of us have ever seen (Baker for $1 in 2024, 337 points). He just kept drafting RBs, staying balanced, and showing up near the top while nobody wrote articles about it.",
+      style:     "Volume and patience. Grabs a ton of RBs at fair prices and trusts that a few will hit. Doesn't try to get cute, doesn't swing for fences, and somehow his +3.7 career ROI happened without a single flashy moment. The approach works great during regular seasons and occasionally gets a little too conservative for playoff weeks where you need a 140-point ceiling.",
+      moments:   "Baker at $1 in 2024 is the thing everyone remembers. 337 points from a guy nobody wanted to spend a dollar on. That powered his title run in 2015 and honestly might be the single greatest steal in our history. The 2016 Adrian Peterson disaster is where it went wrong — bet on an aging legend and ate -154 ROI for it.",
+      rivalries:  "Had a competitive series with Ross over the years. Two totally different philosophies (Eric's balanced efficiency vs Ross's RB-heavy concentration) and toward the end, Eric's version won more often.",
+      legacy:    "85-63, one title, four podiums, eleven seasons above .500. Baker for $1. Quietly one of the better careers in league history even though I don't think we appreciated it enough while it was happening. Jared's got big shoes to fill.",
     },
     "Greg Cady": {
-      story:     "Greg Cady is the most decorated manager in No Fun League history. Three championships — the only manager to win three, and the only one who has shown the ability to rebuild and win across different eras. He entered in the founding year, finished second in 2015, and has been at or near the top in his best years ever since. The 2024 title came at the end of back-to-back historic draft seasons, cementing a legacy that was already secure.",
-      style:     "Cady plays the cheapest QB in the league and spends the savings everywhere else. It is a high-conviction philosophy that requires the rest of the roster to overperform — and in his best seasons, it does. He has an instinct for breakout players before the room prices them up, which has produced his biggest wins. His worst seasons come when the breakout candidates break down instead.",
-      moments:   "The 2024 championship — Caleb Williams for $4, a 2,588-point draft class, a trophy at the end. The 2019 draft day win (13.42 pts/$) was the blueprint executed perfectly. Back-to-back +37 and +39 ROI seasons in 2024 and 2025 represent the best two-year draft run in recent league history. His 8-game win streak is among the longest ever recorded.",
-      rivalries:  "Three titles means Cady has been in the way of every other manager at some point. The Van Groningen family has been his most frequent opposition across meaningful games. He has been particularly dominant against lower-seeded opponents in playoff settings.",
-      legacy:    "Three titles. 76-72 all-time. The most championships in No Fun League history — that is the headline and it is enough. He is the standard every other manager is measured against.",
+      story:     "Three championships. Only guy in 11 years to do that. Won in 2016, again in 2019, and then after everyone thought he was fading he grabbed another one in 2024. Been around since day one and keeps finding a way to be standing at the end when everyone else runs out of gas. His whole thing is punting QB — spends $6 average there, lowest in the league — and loading up everywhere else. When it works it works better than anyone.",
+      style:     "Punt QB, spread the savings across RB and WR, throw darts, and trust that enough of them stick. Sounds simple. Took him four years to actually get it working (debut was 8.19 pts/$, not great) but once it clicked in 2019 at 13.42 pts/$ he hasn't really looked back. Back-to-back +37 and +39 ROI in 2024-25 is the best consecutive stretch anyone's had recently.",
+      moments:   "2024 championship run. Caleb Williams at $4, a 2,588-point class, and a trophy. The 2019 draft day win at 13.42 pts/$ was the formula working perfectly for the first time. His 8-game win streak is one of the longest on record. Oh, and entering 2025 with ZERO keepers — nobody else had the guts to do that.",
+      rivalries:  "When you've won three times you've been in everybody's way. The Van Groningens have been his most common opponents in meaningful games. He's particularly nasty as a lower seed in the playoffs — ask anyone who's drawn him in round one.",
+      legacy:    "Three rings. 76-72. Most championships in league history by a mile and it's not particularly close. He's the standard. Full stop.",
     },
     "Greg Mulder": {
-      story:     "Greg Mulder arrived in the founding season and has produced one of the most complicated careers in league history. Two titles (2017 and 2023), a debut in last place, and eleven seasons of a process that works brilliantly when the picks hit and misfires spectacularly when they don't. He is impossible to write off and impossible to fully trust.",
-      style:     "Mulder trusts the process harder than anyone. He buys volume at RB, hunts value at every price point, and generates more $1 production than almost any manager alive. The bust rate is real and documented, but so is the upside. His best seasons look effortless. His worst look like the same approach producing different outcomes.",
-      moments:   "The 2017 championship was the proof of concept. Jalen Hurts and Deebo Samuel both posting +160 ROI in the same 2021 class was the single-season value harvest that drove a runner-up finish. The David Johnson saga — elite in 2016, catastrophic bust in 2017 — is the two-year story that defines the full range of his career.",
-      rivalries:  "Eleven seasons means Mulder has a meaningful head-to-head history with the entire founding class. His record against most opponents hovers near .500, a reflection of a career that produces as many wins as it does unexpected losses.",
-      legacy:    "Two titles, 79-69, the league's most productive $1 game. Mulder's legacy is unresolved — two championships say elite, the bust record says volatile. Both versions show up every few years and both are completely genuine.",
+      story:     "Founding member. Started dead last in 2015 and has since won the whole thing twice — 2017 and 2023. 79-69 overall. His process looks like genius half the time and insanity the other half and I honestly can't explain the gap between those two versions of him. You can't write him off because he's got two rings. You also can't relax because his bust list is genuinely unhinged.",
+      style:     "Buys RBs by the truckload at mid-range prices, trusts that a few will hit, and fills the rest with $1 lottery tickets that hit at a crazy rate. His dollar picks average 103.9 points — only Tyler's are better. When the RBs cooperate and the $1 guys pop, his teams look unbeatable. When the RBs get hurt (and they get hurt a lot for him), it falls apart fast.",
+      moments:   "2017 championship was the proof-of-concept. Hurts and Deebo both at +160 ROI in 2021 nearly got him a second straight finals trip. David Johnson is the story that sums him up perfectly — elite in 2016, catastrophic -172 bust in 2017. Exact same player, exact same approach, completely opposite result.",
+      rivalries:  "Eleven years means he's got real history with every founding member. Most of his head-to-head records hover right around .500, which honestly tracks with a career that produces brilliance and chaos in equal measure.",
+      legacy:    "Two titles, 79-69, second-best dollar-pick average in the league. The legacy is genuinely confusing. Two championships says elite. Most busts in league history says volatile. Somehow both things are equally true and he just keeps going.",
     },
     "James Lazette": {
-      story:     "James Lazette has been one of the most consistent winners in the league since joining in 2016. A title in 2020, 76-59 all-time, and the best average draft day rank among multi-season managers. The 2023 draft — 14.36 pts/$ on a full $200 budget, the best ever recorded in the No Fun League — cemented his reputation as the league's most reliable process-driven manager.",
-      style:     "Lazette is systematic. He builds his roster through consistent draft efficiency, keeps his QB and TE budget lean, and trusts the process to produce a competitive team without overpaying for any single player. His week-to-week management reflects the same discipline: he doesn't panic, doesn't chase, and rarely deviates from a plan that produces winning records in most seasons.",
-      moments:   "The 2020 championship is the signature achievement — 10-3 in the regular season, first place finish, a title. The 2023 draft class (14.36 pts/$, 2,872 total points) stands alone as the most efficient full-spend draft in league history. Those two moments define what Lazette looks like at his best.",
-      rivalries:  "Lazette has been particularly tough on Aaron Fay, holding a 4-2 head-to-head edge. His 6-game win streak is one of the longer runs in recent history. Against the founding class of 2015 managers he has been competitive, building winning records against several of the league's most tenured opponents.",
-      legacy:    "One title, 76-59, the best average draft day rank, and a record-setting 2023 draft class. Lazette's legacy is one of process and consistency. He wins more than he loses every year and makes the right call more often than not. In a league built on variance, that counts for a lot.",
+      story:     "Been winning quietly since 2016. Got his ring in 2020, sits at 76-59, and has the best average draft day finish of anyone who's been around more than a couple years. His 2023 draft — 14.36 pts/$ on a full $200 budget, 2,872 total points — is the single most efficient full-budget draft anyone's ever had in this league. That record probably doesn't get touched.",
+      style:     "Systematic to a fault. Keeps QB cheap, barely spends on TE, doesn't fall in love with any one guy, and trusts that steady-hand efficiency over 15 picks adds up to a competitive team. Manages the same way during the season — no panic moves, no waiver splurges. Just keeps making the right call slightly more often than the wrong one.",
+      moments:   "2020 championship: 10-3, first place wire to wire, a title. The 2023 class is the masterpiece though — 14.36 pts/$ and 2,872 points from a full budget is the stuff you can't replicate. Nobody's come close to that since and nobody probably will anytime soon.",
+      rivalries:  "4-2 against Aaron Fay. 6-game win streak that was one of the longer recent runs. Built winning records against guys who've been around way longer than him, which takes some doing in a league where experience is supposed to be an edge.",
+      legacy:    "One title, 76-59, best average draft position of any active manager, and the league record for draft efficiency. Most years he wins more than he loses and makes the right call more often than not. In a league where chaos is normal, that consistency is genuinely rare.",
     },
     "Jared Stuit": {
-      story:     "Jared Stuit enters the No Fun League in 2026 as Eric Graef's replacement — the first new manager since Aaron Fay joined in 2020. At 29, he is the youngest manager in the league, but his resume in Duck Dynasty suggests he is anything but inexperienced. After a 1-13 toilet bowl season in 2024, he posted an 11-3 turnaround in 2025 and reached the championship game — the biggest single-season improvement in either league's history. He arrives with a spreadsheet, a plan, and zero fear.",
-      style:     "Stuit is a balanced-budget, target-locked drafter who comes in prepared with detailed lists and sticks to them. He nominates players he wants, chases his guys when bid up, and stays locked in late when others check out. His Duck Dynasty results show a manager who learns fast and adapts — the 1-13 to 11-3 arc is not luck, it's process correction executed at speed.",
-      moments:   "The 2025 Duck Dynasty runner-up finish — going from dead last to the championship game in one season — is the calling card. His first NFL auction draft will be the moment that defines whether the dynasty success translates to a deeper, more competitive league.",
-      rivalries:  "Too early for rivalries in the NFL league, but as the only Cowboys fan alongside Aaron Fay's Rams loyalty, the two share a bond against the room full of 49ers faithful. His connections to the Ripon Christian football sideline with Tyler and the church crew with half the league mean relationships already exist — the rivalry data just needs time to develop.",
-      legacy:    "Zero seasons, zero wins, zero losses. The book is blank. But the Duck Dynasty arc and the preparation level suggest the first chapter will not be quiet.",
+      story:     "Brand new for 2026 — takes over Eric Graef's spot. He's 29, youngest guy in the room, but calling him inexperienced would be a mistake. In the Duck Dynasty league he went from 1-13 (dead last, got embarrassed) to 11-3 and a championship appearance the very next season. Biggest one-year jump in either league's history. That doesn't happen by accident.",
+      style:     "Shows up with a spreadsheet and a target list and doesn't deviate when things get weird. Firm on his numbers, stays locked in during the late rounds when half the room is on their phones. In DD he proved he can identify what went wrong, blow it up, and rebuild correctly in one offseason. Nominates guys he actually wants instead of playing bait games. Straightforward, prepared, dangerous.",
+      moments:   "2025 DD championship game appearance after going 1-13 the year before. That's the resume. It's only one moment but it's a hell of a moment. First NFL auction draft will tell us whether the dynasty success translates to a room that's been doing this since 2015.",
+      rivalries:  "Too early for NFL rivalries. Only Cowboys fan in the league alongside Aaron's Rams loyalty so they share a bond against all the 49ers fans. Knows Tyler and the church crew from Ripon Christian, knows several guys from the DD league. Relationships are already there, just needs time to build the head-to-head data.",
+      legacy:    "Zero NFL seasons. Book's blank. But based on the DD arc and how prepared he is, the first chapter won't be quiet.",
     },
     "Joshua Van Groningen": {
-      story:     "Joshua Van Groningen is the most decorated recent addition to the No Fun League — two titles in six seasons, a career ROI that leads all active managers, and a 2024 draft day championship. He arrived in 2020 and immediately looked like someone who had studied the league before joining. Two championships later the question is not whether he can win, but how many times.",
-      style:     "Joshua builds high-variance rosters with elite ceilings. He pays a premium at TE, keeps QB lean, and concentrates capital in high-upside RB and WR targets. When those targets hit, his teams are elite scorers. When they miss — and they sometimes miss badly — the same concentration creates downside. His teams are rarely average.",
-      moments:   "The 2021 title in his second season was the arrival announcement. The 2024 championship — built on a 13.18 pts/$ draft class that was the best of any manager that year — was the confirmation. Javonte Williams busting for -173 ROI in 2022 was the most painful single-pick moment of his career and a reminder that his style carries real risk.",
-      rivalries:  "With six seasons in the league, Joshua hasn't yet developed the deep rivalry history of the founding class managers. His 42-41 record reflects a manager who has been competitive against everyone without yet building the dominant head-to-head edge that distinguishes the league's elite.",
-      legacy:    "Two titles in six seasons. The best career ROI of any active manager. A 2024 draft day championship. Joshua Van Groningen's legacy is still being written, but the early chapters are as impressive as any in league history.",
+      story:     "Six seasons. Two rings. Best career ROI of any active manager and a 2024 draft day crown on top of it. He walked in looking like somebody who'd been studying tape before he even joined, and two championships later no one's asking whether he belongs. The only question left is how many more he's going to grab before people figure out his tendencies.",
+      style:     "High-ceiling rosters with real downside risk. Spends a premium at TE (most of anyone in the league), keeps QB dirt cheap, and concentrates his capital in high-upside RBs and WRs that either pop or spectacularly don't. His teams are rarely mediocre — they're either the scariest squad in the league or they're blowing up on the launch pad. There's no in-between with this guy.",
+      moments:   "2021 title in year two was the announcement. 2024 championship built on a 13.18 pts/$ draft (best in the league that year) was confirmation. Javonte Williams blowing up for -173 ROI in 2022 is the price of admission for his style — he bet big on upside and ate the full downside that time.",
+      rivalries:  "Six years in he hasn't quite developed the deep blood feuds the founding guys have. 42-41 record means he's competitive against the whole field without dominating any one person yet. Give it time.",
+      legacy:    "Two titles in six seasons. Best career ROI. Draft day championship. The early chapters are as good as anyone's have ever been and he's nowhere near done.",
     },
     "Matthew Van Groningen": {
-      story:     "Matthew Van Groningen has been in the league since 2016 and remains one of its great enigmas — zero titles, 63-72, and yet a 12-game win streak (the second-longest in history) and the second-best single-season draft efficiency ever. He has the tools for greatness and has demonstrated them repeatedly without converting them into a championship.",
-      style:     "Matthew is a big-swing manager. His best seasons are built on finding elite value at discount prices — the 2018 class on $88 in auction budget producing league-best pts/$ is the clearest example. His worst seasons reflect the same tendency applied to the wrong players. He has recently pivoted toward RB concentration, a shift that has produced two straight negative ROI years.",
-      moments:   "The 12-game win streak is the defining streak moment in league history. The 2018 draft class (15.58 pts/$, second all-time) was the peak of his process. Aaron Rodgers for $5 producing 399 points in 2020 (+185 ROI) is the best individual value pick of his career. Trevor Lawrence for $30+ in 2024 (-177 ROI) is the counterweight.",
-      rivalries:  "Matthew has faced the full field across 10 seasons without developing a dominant edge against any single opponent. His record against Ross Van Groningen — the commissioner and a fellow long-tenured manager — is one of the most closely watched ongoing rivalries in the league.",
-      legacy:    "Zero titles, 63-72, the second-longest win streak, the second-best single-season draft efficiency. Matthew's legacy is unfinished business. The tools for greatness are demonstrably there. They haven't aligned with a championship yet.",
+      story:     "Ten years in and I still can't figure him out. Zero titles, 63-72, but he holds a 12-game win streak (second-longest ever) and produced the second-best single-season draft efficiency in league history. He clearly has the tools. They just refuse to all fire in the same year when it matters. One of the league's great unsolved puzzles.",
+      style:     "Big swings. His best seasons come from finding elite guys at massive discounts — the 2018 draft where he spent $88 and got league-best pts/$ is the clearest example. His worst seasons come from the exact same tendency pointed at the wrong player. Recently he's been loading up on RBs at the expense of everything else and it's produced two straight negative ROI years. Something needs to shift.",
+      moments:   "That 12-game win streak is historic — nobody's done that except Steve with 14. The 2018 draft at 15.58 pts/$ on just $88 budget is absurd efficiency that shouldn't be possible. Rodgers for $5 doing 399 points in 2020 is his single best hit. Then there's Trevor Lawrence at -177 ROI on $30+ in 2024, which is... the other side of that same coin.",
+      rivalries:  "Ten seasons without building dominant edges against anyone. His matchup against Ross — fellow lifer — is one of the most-watched ongoing series because they've been at this the same amount of time with very different results to show for it.",
+      legacy:    "Zero titles, 63-72, second-longest win streak in history, second-best single-season draft ever. The book on Matthew is 'unfinished business' and it has been for a while now. Tools are there. Championship isn't. Yet.",
     },
     "Ross Van Groningen": {
-      story:     "The commissioner has been in the No Fun League since its founding in 2015, making him one of six managers present for every single season. Eleven seasons, 81 wins, zero titles — the most tortured record among the founding class. He reached the finals in 2023 and has been competitive in most years, but the championship remains the one gap in a long and distinguished career.",
-      style:     "The commissioner commits harder to RB than any other active manager, averaging $25 per RB pick — the highest in the league by a significant margin. It is a philosophy forged in the early era when RB dominance was more reliable, and it has created both his highest highs and his most painful lows. The recent data suggests a gradual evolution toward WR, but old habits die hard.",
-      moments:   "The 2023 finals appearance — 10-4, a runner-up finish, the closest he has come to a title. Alvin Kamara for $58 producing +160 ROI in 2020 is the signature value pick of his career. The 2021 season (7.86 pts/$, last in the league) is the nadir. James Conner for $36 in 2025 delivering 29 points is the most expensive single-season mistake in recent memory.",
-      rivalries:  "As commissioner, Ross has faced every manager across 11 seasons. His rivalry with Greg Mulder and Eric Graef — fellow founding class managers — has been the most consistent and competitive. Against the newer managers he has mixed results, occasionally looking like a founding-era relic against the analytics-driven approaches of the Sleeper era.",
-      legacy:    "81-67, zero titles, 11 seasons. The commissioner's legacy is one of sustained competitiveness without the ultimate result. How he adapts his RB-first philosophy in the final chapter of his career will define how the league remembers him.",
+      story:     "Been the commissioner since day one. One of six guys here for every single season. Eleven years, 81 wins, and zero championships. That's the most tortured record in the founding class and I'm painfully aware of it. Made the finals in 2023, been competitive most years, but the trophy is the one thing that keeps not happening no matter how many different ways I try to force it.",
+      style:     "I go harder on RBs than anyone — $25 average per RB pick, highest by a wide margin. That philosophy was forged when this league started and RB dominance was more bankable. It's created my best moments and my worst ones. The numbers say I should probably keep moving toward WR (which I've been doing lately) but old habits are stubborn things.",
+      moments:   "2023 finals. 10-4, runner-up. Closest I've gotten and it still stings. Kamara for $58 producing +160 ROI in 2020 is the signature pick of my career — most expensive value hit anyone's had. Then there's 2021 at 7.86 pts/$ (dead last) and James Conner in 2025 at $36 for 29 points. That's the full range.",
+      rivalries:  "Eleven seasons means I've faced everyone a bunch of times. The rivalry with Mulder and Eric — fellow founding members — has been the most consistent over the decade. Against the newer guys I've got mixed results, which is probably fair since some of them run circles around me analytically.",
+      legacy:    "81-67, zero titles, 11 seasons. I've been competitive for a long time without getting the ultimate result. How the next few years go will decide whether people remember me as the commissioner who built something great or the commissioner who built something great for everyone else to win.",
     },
     "Steve Vander Molen": {
-      story:     "Steve Vander Molen is one of six managers who has been in the No Fun League since its founding in 2015 — present for all eleven seasons, the owner of a 14-game win streak that is the longest in history, and the manager of a 2025 regular season (13-1) that was statistically the best ever recorded. Zero championships. The most efficient career ROI of any 10+ season manager. The Steve VDM paradox: elite by almost every process metric, without the title to match.",
-      style:     "Vander Molen is the league's quietest elite. He spreads his budget evenly, never overpays at any single position, and builds rosters through relentless value accumulation rather than star concentration. His bust rate is low, his floor is high, and his average ROI of +14.4 across 11 seasons is unmatched. The style produces consistent winning records and, so far, consistent playoff exits.",
-      moments:   "The 14-game win streak is the record no one is likely to break. The 2025 regular season — 13-1 — was the most dominant single-season performance in league history, and it still ended without a title. Carson Palmer for $1 in 2015 (314 pts) and Matthew Stafford 2021 (+133 ROI) are the individual highlights of a career full of correct, quiet decisions.",
-      rivalries:  "74-74 all-time means Vander Molen is essentially even against the field — which reflects a manager who beats everyone sometimes and loses to everyone sometimes. His head-to-head with Ross Van Groningen and Greg Mulder across 11 seasons has been one of the most competitive ongoing series in the league.",
-      legacy:    "The best career ROI. The longest win streak. The best single-season record. Zero titles. Steve Vander Molen's legacy is the most haunted in league history — a career defined by excellence that has not yet translated into the one thing that matters most.",
+      story:     "Here since 2015. Owns the longest win streak in league history (14 games). Put up a 13-1 regular season in 2025 — statistically the most dominant regular season anyone's ever had. Zero championships. Best efficiency ROI of any manager with 10+ seasons. The man is elite by literally every metric you can measure except the only one that actually counts. It's maddening.",
+      style:     "Quietest elite drafter in the room. Spreads his budget evenly, never overpays at any single position, just accumulates value everywhere until his roster is better than yours without any single pick looking flashy. Bust rate is low, floor is high, and +14.4 career ROI across 11 seasons is unmatched. The style produces winning records and, historically, heartbreaking playoff exits.",
+      moments:   "14-game win streak. Nobody's touching that. The 2025 regular season at 13-1 was the most dominant run anyone's ever put together and it ended without a trophy AGAIN. Carson Palmer for $1 in 2015 doing 314 points is still a top-five dollar pick in our history. Stafford at +133 ROI in 2021. A career full of correct, quiet decisions that somehow don't add up to a ring.",
+      rivalries:  "74-74 all-time which means he basically splits even against the entire field over a decade. Beats everyone sometimes, loses to everyone sometimes. Head-to-head with Ross and Mulder across all 11 seasons has been one of the tightest ongoing series we've got.",
+      legacy:    "Best career ROI. Longest win streak. Best single-season record. Zero championships. It's the most haunting career in this league and everyone knows it. All that excellence and somehow the one trophy he actually wants keeps slipping away.",
     },
     "Trey Hugen": {
-      story:     "Trey Hugen owns the greatest single-season draft class in league history (2018, 19.8 pts/$) and a career defined by historic peaks and deep valleys. One championship, 82-66 all-time, back-to-back draft day titles in 2017 and 2018 — and a decade since of trying to recapture those years. He was the best manager in the league at his peak. The question his entire career has been whether he can get back there.",
-      style:     "Hugen plays for the outlier. He has the highest scoring variance of any active manager, the product of a roster-building philosophy that targets ceiling over floor. His best weeks are untouchable. His worst are catastrophic. The 2018 Mahomes draft — $6 on the future MVP — is the philosophy at its most perfect. The WR bust parade of recent seasons is what happens when the ceiling chasing misses.",
-      moments:   "Patrick Mahomes for $6 in 2018 producing 448 points and anchoring the greatest draft class in league history. Back-to-back draft day championships in 2017 and 2018, still the most dominant two-year stretch in the draft room. The 11-2 regular season in 2015 was his first great year. The 9-game win streak is among the longest in league history.",
-      rivalries:  "Hugen has been a difficult matchup for managers with lower-variance rosters — when his boom weeks land, they are hard to beat. His head-to-head history spans the full founding class and shows the same volatility his season-long records do.",
-      legacy:    "One title, 82-66, the greatest draft class ever, the highest scoring average among active managers. Trey Hugen's legacy is already secure as the manager who showed what a perfect auction looks like. The back half of his career has been about trying to recapture 2018. No one has ever fully recaptured their best year.",
+      story:     "The man has the single greatest draft class in 11 years of this league — 2018, 19.8 pts/$, built on getting Mahomes for six dollars. Back-to-back draft day champ in 2017 and 2018. Won the whole thing that year too. And then spent the next several years trying to get back to that level. -1.1 career ROI tells you the other side of the story. He peaked historically and has been chasing that ghost ever since. 82-66 overall.",
+      style:     "Plays for the outlier every single time. His rosters have the highest scoring variance of anyone because he's always targeting ceiling over floor. His best weeks are untouchable — nobody can hang with a Trey team that's firing. His worst weeks are disasters. The 2018 Mahomes draft is what the philosophy looks like at its absolute peak. The recent WR bust parade is what happens when the ceiling-chasing misses five years in a row.",
+      moments:   "Mahomes. For. Six. Dollars. 448 points. Anchored the greatest draft anyone's ever had. Back-to-back draft day titles in 2017-2018 is still the most dominant two-year stretch anyone's had in the draft room. 11-2 in 2015 was his first great year. 9-game win streak is up there with the longest ever. The peak was genuinely historic.",
+      rivalries:  "He's always been a tough draw for lower-variance rosters because when his boom weeks land you just can't outscore him. Head-to-head history across the full founding class shows the same volatility his season records do — some years he beats everyone, other years everyone beats him.",
+      legacy:    "One title, 82-66, greatest draft class ever recorded, highest scoring average of any active manager. His legacy is locked in as the guy who showed what a perfect auction looks like. Everything after 2018 has been about trying to get back there, and nobody fully recaptures their best year. But he keeps trying.",
     },
     "Tyler Goslinga": {
-      story:     "Tyler Goslinga joined in 2018 with a last-place debut and has built one of the most impressive resumes in recent league history. One championship, two draft day titles, 59-50 all-time. His last three draft classes all podiumed. He has gone from last place in his debut to the most reliable top-performer in the Sleeper era — a trajectory that has no parallel in league history.",
-      style:     "Goslinga builds premium TE-first rosters, pays the highest average at the position of any active manager, and surrounds that anchor with high-upside skill position targets. His $1 pick average is the best of any active manager. He keeps QB lean, lets the TE and WR market carry the roster, and has a genuine eye for undervalued players before their price reflects their potential.",
-      moments:   "Lamar Jackson for $5 in 2019 producing +225 ROI — the single greatest value pick in league history. The 2025 championship season — his first title, beating Greg Mulder in the final 120.28 to 81.0. Brock Purdy for $1 in 2023 (330 pts). And the starting point: Jimmy Garoppolo for $11 in 2018 (-211 ROI), the most expensive debut mistake in league history, which makes the turnaround even more remarkable.",
-      rivalries:  "Goslinga's 7-game win streak reflects his ability to run through competition during peak seasons. His matchup against Aaron Fay — two managers who arrived in the same era representing different approaches — has been one of the defining head-to-head series of the post-2020 league.",
-      legacy:    "One championship, two draft day titles, the greatest single value pick in history, a historic turnaround from last-place debut to sustained dominance. Tyler Goslinga's legacy is one of the most complete in the modern era. If the trajectory continues, the conversation will be about where he ranks among the all-time greats.",
+      story:     "Came in 2018 and got absolutely crushed — dead last, Garoppolo at -211 ROI on debut. Brutal start. And then he just... figured it out? One championship, two draft day titles, 59-50. Last three draft classes all podiumed. Went from worst debut of any active manager to one of the best active resumes in the Sleeper era. That trajectory doesn't exist anywhere else in this league.",
+      style:     "TE-premium, cheap QB, surround the anchor with high-upside skill guys and let the $1 lottery tickets do the heavy lifting at the back end. His dollar picks average 117.7 points which leads all active managers. Keeps QB lean (usually), lets TE and WR carry the weight, and has a genuinely scary ability to identify guys before their price catches up to their talent.",
+      moments:   "Lamar Jackson for $5 in 2019. +225 ROI. Greatest single value pick in the history of this league and probably ever will be. The 2025 championship — beating Mulder in the final 120-81. Purdy for $1 in 2023 doing 330 points. And then the starting point: Garoppolo at -211 ROI in 2018, the most expensive debut mistake anyone's had, which makes everything that came after even crazier.",
+      rivalries:  "7-game win streak during his peak years. His matchup against Aaron — two guys who arrived in the same era with totally different approaches — has been one of the most interesting ongoing head-to-head series of the post-2020 era.",
+      legacy:    "One championship, two draft day titles, greatest single value pick in history, and a turnaround from last-place debut that has no parallel. One of the most complete modern-era legacies. If the trajectory holds, the conversation shifts to all-time ranking.",
     },
     "Vance Sipma": {
-      story:     "Vance Sipma has been in the No Fun League since 2016 and is, by every record-book metric, the most persistently unfortunate manager in the league. Fifty-nine wins, seventy-six losses, zero titles — and yet a genuine 2024 breakout (11-3, runner-up) suggests the foundation for contention is finally being built. His is a career of hard lessons and slow, stubborn improvement.",
-      style:     "Vance spends more on QB than anyone in the league — a habit that has produced one historic disaster and one recent breakthrough. The rest of his roster construction has quietly improved. His WR and RB identification has gotten sharper, and his 2024 class showed what he looks like when the QB gamble doesn't blow up.",
-      moments:   "The 2024 runner-up finish is the defining redemption moment — 11-3, a trip to the finals, the first real evidence he can build a championship-caliber roster. Marcus Mariota 2018 (-261 ROI, the worst single pick in league history) is the defining moment of the opposite kind. Jordan Love for $1 in 2023 (256 pts) is the best individual value pick of his career.",
-      rivalries:  "Vance's 8-game win streak — surprising given his overall record — shows he is capable of sustained competitive runs. His record against Eric Graef has been among the more competitive matchups in his career, a fellow long-tenured manager who represents the standard of consistent execution Vance has worked to meet.",
-      legacy:    "59-76, zero titles, the worst single pick in league history, and a 2024 runner-up that offers genuine hope. Vance Sipma's legacy is still being written. The early chapters are painful. The 2024 chapter suggests the ending doesn't have to be.",
+      story:     "In since 2016. By the record book he's the most persistently unfortunate manager in the league — 59-76, zero titles, worst career ROI of any active guy. But here's the thing: 2024 happened. 11-3, runner-up finish, genuine championship-caliber team. After eight years of hard lessons he put together something real and came within one game of a ring. The 2024 breakout isn't a fluke — it's the result of years of slow, stubborn improvement.",
+      style:     "Spends more on QB than anyone — $14.50 average, highest by a wide margin. That habit has produced his worst moment (Mariota at -261 ROI, worst pick in league history) and his best recent years. When the QB gamble hits, the ceiling shows up. Rest of his process has quietly gotten better — WR and RB identification has genuinely improved even if the QB spending keeps eating the gains in bad years.",
+      moments:   "2024 runner-up. 11-3. Trip to the finals. First time in his career he looked like a legitimate championship threat and he almost closed it. Mariota in 2018 at -261 ROI — six dollars for a QB who played 12 snaps before the season ended — is the worst single pick anyone's made in 11 years. Jordan Love for $1 in 2023 doing 256 points was the best individual steal of his career.",
+      rivalries:  "His 8-game win streak is surprising given the overall record — shows he can put together sustained competitive stretches. Had a competitive matchup with Eric over the years, two fellow long-tenured guys representing very different philosophies.",
+      legacy:    "59-76, zero titles, worst single pick in history, and a 2024 runner-up that changed the narrative. Early chapters are rough, no point pretending otherwise. But the 2024 chapter showed it doesn't have to end that way. Still writing.",
     },
   },
 
@@ -47838,6 +47838,7 @@ function LeagueHQTab() {
                 ["2019", "FLEX position added to starting lineup."],
                 ["2022", "Migrated to Sleeper platform. Keeper rule reduced to 1 per year."],
                 ["2023", "Keeper eligibility: dropped-and-re-added players ineligible."],
+                ["2026", "FLEX expanded to include TE (W/R/T). Flexible keeper swaps allowed before lock date."],
               ].map(([year, note]) => (
                 <div key={year} style={{ display:"flex", gap:10, alignItems:"flex-start" }}>
                   <span style={{ color:"#e9c46a", fontFamily:"'Cooper Black',Georgia,serif",
@@ -47865,7 +47866,7 @@ function LeagueHQTab() {
                 ["Format",            "12-team, head-to-head, auction draft"],
                 ["Roster size",       "15 players"],
                 ["Starters",          "QB · RB · RB · WR · WR · FLEX · TE · K · DEF"],
-                ["FLEX",              "RB or WR (2019–present)"],
+                ["FLEX",              "RB, WR, or TE (2026–present) · RB or WR (2019–2025)"],
                 ["Auction budget",    "$200 per manager"],
                 ["Season length",     "13 regular season weeks + playoffs"],
                 ["Playoff teams",     "Top 6 by record (Week 14–17)"],
@@ -54843,27 +54844,48 @@ function computeSlots(yearPicks, year) {
   }));
   const slots = {};
   const isFlexEra = year >= 2019;
+  const isTeFlexEra = year >= 2026; // TE eligible for FLEX starting 2026
   ["QB","TE","K","DEF"].forEach(pos => {
     const arr = byPos[pos] || [];
     slots[pos+"1"]      = arr[0] || null;
     slots[pos+"_bench"] = arr.slice(1);
   });
-  const rbs = byPos["RB"] || [], wrs = byPos["WR"] || [];
+  const rbs = byPos["RB"] || [], wrs = byPos["WR"] || [], tes = byPos["TE"] || [];
   slots["RB1"] = rbs[0] || null; slots["RB2"] = rbs[1] || null;
   slots["WR1"] = wrs[0] || null; slots["WR2"] = wrs[1] || null;
   if (isFlexEra) {
     const rb3 = rbs[2] || null, wr3 = wrs[2] || null;
-    let flexPick = null, flexLoser = null;
-    if (rb3 && wr3) {
-      if (rb3.isKeeper && !wr3.isKeeper)       { flexPick = rb3; flexLoser = wr3; }
-      else if (wr3.isKeeper && !rb3.isKeeper)  { flexPick = wr3; flexLoser = rb3; }
-      else { flexPick = rb3.price >= wr3.price ? rb3 : wr3; flexLoser = flexPick === rb3 ? wr3 : rb3; }
-    } else { flexPick = rb3 || wr3 || null; }
+    const te2 = isTeFlexEra ? (tes[1] || null) : null; // TE2 is flex candidate from 2026
+    // Gather all flex candidates
+    const flexCandidates = [rb3, wr3, te2].filter(Boolean);
+    let flexPick = null, flexLosers = [];
+    if (flexCandidates.length > 0) {
+      // Keepers get priority, then highest price wins
+      flexCandidates.sort((a, b) => {
+        if (a.isKeeper && !b.isKeeper) return -1;
+        if (!a.isKeeper && b.isKeeper) return 1;
+        return b.price - a.price;
+      });
+      flexPick = flexCandidates[0];
+      flexLosers = flexCandidates.slice(1);
+    }
     slots["FLEX"]     = flexPick;
     slots["WR3"]      = null;
     slots["WR3_FLEX"] = flexPick;
-    const rbBench = rbs.slice(3), wrBench = wrs.slice(3);
-    if (flexLoser) { (flexLoser === rb3 ? rbBench : wrBench).unshift(flexLoser); }
+    // If TE2 won the flex spot, update TE bench to start from index 2
+    if (isTeFlexEra && flexPick && normPos(flexPick.position) === "TE") {
+      slots["TE1"]      = tes[0] || null;
+      slots["TE_bench"] = tes.slice(2);
+    }
+    const rbBench = flexPick === rb3 ? rbs.slice(3) : rbs.slice(2);
+    const wrBench = flexPick === wr3 ? wrs.slice(3) : wrs.slice(2);
+    // Put flex losers back into their respective bench pools
+    flexLosers.forEach(loser => {
+      const lpos = normPos(loser.position);
+      if (lpos === "RB" && !rbBench.includes(loser)) rbBench.unshift(loser);
+      else if (lpos === "WR" && !wrBench.includes(loser)) wrBench.unshift(loser);
+      // TE losers already handled by TE_bench above
+    });
     slots["RB_bench"] = rbBench; slots["WR_bench"] = wrBench;
   } else {
     slots["WR3"]      = wrs[2] || null;
@@ -55040,31 +55062,43 @@ function DraftTendencies() {
     slots["WR2"] = wrs[1] || null;
 
     if (isFlexEra) {
-      // FLEX = best of RB3 vs WR3 (keeper beats non-keeper; then higher price)
+      // FLEX = best of RB3 vs WR3 (and TE2 from 2026+); keeper beats non-keeper; then higher price
       const rb3 = rbs[2] || null;
       const wr3 = wrs[2] || null;
-      let flexPick = null, flexLoser = null;
-      if (rb3 && wr3) {
-        const rbKeeper = rb3.isKeeper, wrKeeper = wr3.isKeeper;
-        if (rbKeeper && !wrKeeper)       { flexPick = rb3; flexLoser = wr3; }
-        else if (wrKeeper && !rbKeeper)  { flexPick = wr3; flexLoser = rb3; }
-        else                             { flexPick = rb3.price >= wr3.price ? rb3 : wr3;
-                                           flexLoser = flexPick === rb3 ? wr3 : rb3; }
-      } else {
-        flexPick = rb3 || wr3 || null;
+      const tes = byPos["TE"] || [];
+      const isTeFlexEra = year >= 2026;
+      const te2 = isTeFlexEra ? (tes[1] || null) : null;
+      // Gather all flex candidates
+      const flexCandidates = [rb3, wr3, te2].filter(Boolean);
+      let flexPick = null, flexLosers = [];
+      if (flexCandidates.length > 0) {
+        flexCandidates.sort((a, b) => {
+          if (a.isKeeper && !b.isKeeper) return -1;
+          if (!a.isKeeper && b.isKeeper) return 1;
+          return b.price - a.price;
+        });
+        flexPick = flexCandidates[0];
+        flexLosers = flexCandidates.slice(1);
       }
       slots["FLEX"]     = flexPick;
       slots["WR3"]      = null;  // no WR3 starter in flex era
       // WR3/FLEX career slot: same as FLEX
       slots["WR3_FLEX"] = flexPick;
 
-      // Bench: RB4+, WR4+, flex loser
-      const rbBench = rbs.slice(3);
-      const wrBench = wrs.slice(3);
-      if (flexLoser) {
-        if (flexLoser === rb3) rbBench.unshift(flexLoser);
-        else                   wrBench.unshift(flexLoser);
+      // If TE2 won the flex spot, update TE bench to start from index 2
+      if (isTeFlexEra && flexPick && normPos(flexPick.position) === "TE") {
+        slots["TE1"]      = tes[0] || null;
+        slots["TE_bench"] = tes.slice(2);
       }
+
+      // Bench: flex losers go back to their position pools
+      const rbBench = flexPick === rb3 ? rbs.slice(3) : rbs.slice(2);
+      const wrBench = flexPick === wr3 ? wrs.slice(3) : wrs.slice(2);
+      flexLosers.forEach(loser => {
+        const lpos = normPos(loser.position);
+        if (lpos === "RB" && !rbBench.includes(loser)) rbBench.unshift(loser);
+        else if (lpos === "WR" && !wrBench.includes(loser)) wrBench.unshift(loser);
+      });
       slots["RB_bench"] = rbBench;
       slots["WR_bench"] = wrBench;
     } else {
@@ -59085,7 +59119,21 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "$500 buy-in?? I have a toddler and a mortgage. I can barely afford the 805 in my hand right now."
-  }
+  },
+  {"trigger": "overpay", "text": "dude no way"},
+  {"trigger": "overpay", "text": "that price is criminal"},
+  {"trigger": "overpay", "text": "💀💀"},
+  {"trigger": "steal", "text": "wait WHAT"},
+  {"trigger": "steal", "text": "ok thats nasty"},
+  {"trigger": "general", "text": "whos grabbing food after this"},
+  {"trigger": "general", "text": "im on my third 805 already"},
+  {"trigger": "outbid", "text": "nah im out"},
+  {"trigger": "outbid", "text": "go ahead take him"},
+  {"trigger": "self_pick", "text": "THATS MY GUY"},
+  {"trigger": "late_draft", "text": "idk who this is but sure"},
+  {"trigger": "late_draft", "text": "vibes only at this point"},
+  {"trigger": "reply_to_mention", "text": "lol ok tough guy"},
+  {"trigger": "reply_to_mention", "text": "say that to my face next time"}
  ],
  "Jared Stuit": [
   {
@@ -59578,7 +59626,21 @@ const CANNED_MESSAGES = {
   {
    "trigger": "reply_to_mention",
    "text": "I've walked almond orchards in 108 degree heat. Your roast doesn't even register."
-  }
+  },
+  {"trigger": "overpay", "text": "thats a lot"},
+  {"trigger": "overpay", "text": "my sheet says no"},
+  {"trigger": "overpay", "text": "yikes"},
+  {"trigger": "steal", "text": "ok solid value there"},
+  {"trigger": "steal", "text": "hm. noted."},
+  {"trigger": "general", "text": "just checking my rankings rq"},
+  {"trigger": "general", "text": "sorry i was looking at something"},
+  {"trigger": "outbid", "text": "not worth it for me"},
+  {"trigger": "outbid", "text": "ill pass"},
+  {"trigger": "self_pick", "text": "nice. had him ranked high"},
+  {"trigger": "late_draft", "text": "filling spots at this point"},
+  {"trigger": "late_draft", "text": "sure why not"},
+  {"trigger": "reply_to_mention", "text": "lol fair"},
+  {"trigger": "reply_to_mention", "text": "i mean... the data supports me"}
  ],
  "Greg Cady": [
   {
@@ -60005,7 +60067,22 @@ const CANNED_MESSAGES = {
   {
    "trigger": "reply_to_mention",
    "text": "Josh, was that you bidding up my kicker AGAIN? I know it was."
-  }
+  },
+  {"trigger": "overpay", "text": "LMAO that price"},
+  {"trigger": "overpay", "text": "dude. no."},
+  {"trigger": "overpay", "text": "three rings and i still wouldn't pay that"},
+  {"trigger": "steal", "text": "sheeeesh"},
+  {"trigger": "steal", "text": "ok that was clean"},
+  {"trigger": "general", "text": "spreadsheet is LOCKED in tonight"},
+  {"trigger": "general", "text": "where are the chips"},
+  {"trigger": "outbid", "text": "whatever man"},
+  {"trigger": "outbid", "text": "not chasing that price"},
+  {"trigger": "self_pick", "text": "THREE RINGS BABY. four incoming."},
+  {"trigger": "self_pick", "text": "mine. don't even look at me."},
+  {"trigger": "late_draft", "text": "just grabbing warm bodies now"},
+  {"trigger": "late_draft", "text": "its 11pm idc anymore"},
+  {"trigger": "reply_to_mention", "text": "bro i have three championships sit down"},
+  {"trigger": "reply_to_mention", "text": "lol ok. scoreboard."}
  ],
  "Greg Mulder": [
   {
@@ -60400,7 +60477,22 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "Every year I bring up the DRC ruling. Every year I am right. The trade was fair."
-  }
+  },
+  {"trigger": "overpay", "text": "hm. aggressive."},
+  {"trigger": "overpay", "text": "interesting allocation"},
+  {"trigger": "overpay", "text": "wouldn't be my approach but ok"},
+  {"trigger": "steal", "text": "well played"},
+  {"trigger": "steal", "text": "that's solid value"},
+  {"trigger": "general", "text": "just sitting here observing"},
+  {"trigger": "general", "text": "carry on"},
+  {"trigger": "outbid", "text": "im fine with that outcome"},
+  {"trigger": "outbid", "text": "wasn't meant to be"},
+  {"trigger": "self_pick", "text": "calculated."},
+  {"trigger": "self_pick", "text": "right where i wanted him"},
+  {"trigger": "late_draft", "text": "sure. adequate."},
+  {"trigger": "late_draft", "text": "depth piece. moving on."},
+  {"trigger": "reply_to_mention", "text": "noted."},
+  {"trigger": "reply_to_mention", "text": "cool. anyway."}
  ],
  "James Lazette": [
   {
@@ -60839,7 +60931,22 @@ const CANNED_MESSAGES = {
    "trigger": "general",
    "text": "$500 league dues means $500 less for the party barn. And the party barn is SACRED. Hard no, Commissioner.",
    "isHotTake": true
-  }
+  },
+  {"trigger": "overpay", "text": "BRO 😂"},
+  {"trigger": "overpay", "text": "that aint it chief"},
+  {"trigger": "overpay", "text": "rip budget"},
+  {"trigger": "steal", "text": "oh NICE grab"},
+  {"trigger": "steal", "text": "dang ok respect"},
+  {"trigger": "general", "text": "yall want me to fire up the grill"},
+  {"trigger": "general", "text": "someone get me a beer im hosting"},
+  {"trigger": "general", "text": "this is why we do this every year"},
+  {"trigger": "outbid", "text": "all good got other targets"},
+  {"trigger": "outbid", "text": "too rich for my blood rn"},
+  {"trigger": "self_pick", "text": "LETS GOOOO 🔥"},
+  {"trigger": "self_pick", "text": "had him circled all week"},
+  {"trigger": "late_draft", "text": "give me whoever man its late"},
+  {"trigger": "reply_to_mention", "text": "oh were doing this now huh"},
+  {"trigger": "reply_to_mention", "text": "lmao love you too bro"}
  ],
  "Joshua Van Groningen": [
   {
@@ -61270,7 +61377,23 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "Ross raised dues AGAIN? This is taxation without representation. I'm staging a Boston Tea Party in the chat."
-  }
+  },
+  {"trigger": "overpay", "text": "lmaooo WHAT"},
+  {"trigger": "overpay", "text": "thats insane money for that dude"},
+  {"trigger": "overpay", "text": "😂😂😂 bro"},
+  {"trigger": "steal", "text": "WAIT how did nobody bid"},
+  {"trigger": "steal", "text": "W W W"},
+  {"trigger": "general", "text": "back to back champ just observing rn"},
+  {"trigger": "general", "text": "yo Matt you seeing this"},
+  {"trigger": "outbid", "text": "fine ill bid someone else up later"},
+  {"trigger": "outbid", "text": "nah keep him"},
+  {"trigger": "outbid", "text": "im good. saving for kickers 😈"},
+  {"trigger": "self_pick", "text": "MINE. championship roster keeps growing"},
+  {"trigger": "self_pick", "text": "lets gooo got my guy"},
+  {"trigger": "late_draft", "text": "whatever bro just need a body"},
+  {"trigger": "late_draft", "text": "idc at this point im winning anyway"},
+  {"trigger": "reply_to_mention", "text": "two rings. sit down."},
+  {"trigger": "reply_to_mention", "text": "scoreboard baby. SCOREBOARD."}
  ],
  "Matthew Van Groningen": [
   {
@@ -61742,7 +61865,22 @@ const CANNED_MESSAGES = {
    "trigger": "general",
    "text": "My smoothie sour from Terraza Market is better than whatever you are drinking. It is an acquired taste.",
    "isHotTake": true
-  }
+  },
+  {"trigger": "overpay", "text": "thats above tier value"},
+  {"trigger": "overpay", "text": "hmm. lot of capital for one slot"},
+  {"trigger": "overpay", "text": "interesting. wouldn't be my move."},
+  {"trigger": "steal", "text": "oh. nice."},
+  {"trigger": "steal", "text": "that checks out with my tiers"},
+  {"trigger": "general", "text": "headphones going back in after this round"},
+  {"trigger": "general", "text": "cat just threw up again. one sec."},
+  {"trigger": "outbid", "text": "fine. wasn't in my range."},
+  {"trigger": "outbid", "text": "tier system says move on"},
+  {"trigger": "self_pick", "text": "exactly where i had him. perfect."},
+  {"trigger": "self_pick", "text": "tier 2 value at a tier 3 price. love it."},
+  {"trigger": "late_draft", "text": "depth. doesn't need to be exciting."},
+  {"trigger": "late_draft", "text": "filling the roster. its fine."},
+  {"trigger": "reply_to_mention", "text": "cool. noted."},
+  {"trigger": "reply_to_mention", "text": "sure. anyway."}
  ],
  "Ross Van Groningen": [
   {
@@ -62275,7 +62413,23 @@ const CANNED_MESSAGES = {
    "trigger": "general",
    "text": "What if we made it $5,000 buy-in? Guys with bad teams would actually TRY in November.",
    "isHotTake": true
-  }
+  },
+  {"trigger": "overpay", "text": "lol thats a choice"},
+  {"trigger": "overpay", "text": "the dashboard is gonna roast you for that"},
+  {"trigger": "overpay", "text": "big oof"},
+  {"trigger": "steal", "text": "ok thats good value"},
+  {"trigger": "steal", "text": "respect. clean pickup."},
+  {"trigger": "general", "text": "someone nominate someone i have opinions"},
+  {"trigger": "general", "text": "checking the dashboard real quick"},
+  {"trigger": "general", "text": "commissioner stuff can wait its draft night"},
+  {"trigger": "outbid", "text": "whatever. plenty of fish"},
+  {"trigger": "outbid", "text": "the spreadsheet says let him go"},
+  {"trigger": "self_pick", "text": "THIS is the one. this year."},
+  {"trigger": "self_pick", "text": "finally getting a ring. watch."},
+  {"trigger": "late_draft", "text": "alright just need a warm body here"},
+  {"trigger": "late_draft", "text": "whoever. doesnt matter"},
+  {"trigger": "reply_to_mention", "text": "i run this league bro"},
+  {"trigger": "reply_to_mention", "text": "0 rings but the commish power is real"}
  ],
  "Steve Vander Molen": [
   {
@@ -62760,7 +62914,22 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "If Ross raises dues one more dollar I'm staging a coup. Who's with me?"
-  }
+  },
+  {"trigger": "overpay", "text": "lmaooo ChatGPT said that's a bust"},
+  {"trigger": "overpay", "text": "nah thats crazy money"},
+  {"trigger": "overpay", "text": "💀 rip"},
+  {"trigger": "steal", "text": "oh thats criminal"},
+  {"trigger": "steal", "text": "nice snag honestly"},
+  {"trigger": "general", "text": "14-0 energy tonight boys"},
+  {"trigger": "general", "text": "gym tomorrow whos in"},
+  {"trigger": "outbid", "text": "fine. AI says i didnt need him anyway"},
+  {"trigger": "outbid", "text": "not chasing. next."},
+  {"trigger": "self_pick", "text": "ChatGPT approved. lets ride."},
+  {"trigger": "self_pick", "text": "perfectly priced. love it."},
+  {"trigger": "late_draft", "text": "whatever dude. depth chart fodder."},
+  {"trigger": "late_draft", "text": "autopilot mode engaged"},
+  {"trigger": "reply_to_mention", "text": "14-0. say it back."},
+  {"trigger": "reply_to_mention", "text": "lol keep my name out ya mouth"}
  ],
  "Trey Hugen": [
   {
@@ -63217,7 +63386,22 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "$2,000 buy-in? I'd rather spend that on 2,000 Jack in the Box tacos. At least I'd be full."
-  }
+  },
+  {"trigger": "overpay", "text": "oh BROTHER"},
+  {"trigger": "overpay", "text": "bruh thats insane"},
+  {"trigger": "overpay", "text": "in what world is that worth it"},
+  {"trigger": "steal", "text": "sheesh ok"},
+  {"trigger": "steal", "text": "dang. well done."},
+  {"trigger": "general", "text": "managing 15 leagues and still winning this one"},
+  {"trigger": "general", "text": "just checked my other draft. im killing it there too"},
+  {"trigger": "outbid", "text": "meh. didnt want him that bad"},
+  {"trigger": "outbid", "text": "on to the next one"},
+  {"trigger": "self_pick", "text": "W. thats a W."},
+  {"trigger": "self_pick", "text": "had him in 3 other leagues. give me that."},
+  {"trigger": "late_draft", "text": "dude who even is this lol"},
+  {"trigger": "late_draft", "text": "throwing a dart. prayers up."},
+  {"trigger": "reply_to_mention", "text": "lol ok mr one-league"},
+  {"trigger": "reply_to_mention", "text": "bro im literally a principal relax"}
  ],
  "Tyler Goslinga": [
   {
@@ -63691,7 +63875,22 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "$500 league dues?! I can't even budget $200 in this fake auction. How would I handle real money?"
-  }
+  },
+  {"trigger": "overpay", "text": "bro WHAT 😂"},
+  {"trigger": "overpay", "text": "nah nah nah thats too much"},
+  {"trigger": "overpay", "text": "im too broke to even watch that"},
+  {"trigger": "steal", "text": "oh wowww"},
+  {"trigger": "steal", "text": "ok that was sick ngl"},
+  {"trigger": "general", "text": "anyone else catch a shiny today or just me"},
+  {"trigger": "general", "text": "6'8 and still getting disrespected in this league smh"},
+  {"trigger": "outbid", "text": "cant afford that rn"},
+  {"trigger": "outbid", "text": "student budget says no"},
+  {"trigger": "self_pick", "text": "YESSS thats my dude"},
+  {"trigger": "self_pick", "text": "LETS GOOO cheap too"},
+  {"trigger": "late_draft", "text": "idk him but sure lol"},
+  {"trigger": "late_draft", "text": "just give me literally anyone"},
+  {"trigger": "reply_to_mention", "text": "im 6'8 i dont have to take this"},
+  {"trigger": "reply_to_mention", "text": "lmaooo ok bro"}
  ],
  "Vance Sipma": [
   {
@@ -64150,7 +64349,23 @@ const CANNED_MESSAGES = {
   {
    "trigger": "general",
    "text": "$500 buy-in is more than my monthly diesel bill. And my truck drinks diesel like Tyler drinks IPAs."
-  }
+  },
+  {"trigger": "overpay", "text": "lol no chance"},
+  {"trigger": "overpay", "text": "that price is wilder than harvest season"},
+  {"trigger": "overpay", "text": "💀 bro why"},
+  {"trigger": "steal", "text": "ok NICE"},
+  {"trigger": "steal", "text": "dang. clean work."},
+  {"trigger": "general", "text": "Pat McAfee would love this chaos"},
+  {"trigger": "general", "text": "checking in from the tractor rn"},
+  {"trigger": "general", "text": "this draft goes harder than almond harvest"},
+  {"trigger": "outbid", "text": "all good. next man up"},
+  {"trigger": "outbid", "text": "nah im saving powder"},
+  {"trigger": "self_pick", "text": "THATS the one. locked in."},
+  {"trigger": "self_pick", "text": "mobile QB secured. love it."},
+  {"trigger": "late_draft", "text": "sure why not. just need a body"},
+  {"trigger": "late_draft", "text": "at this point im just vibing"},
+  {"trigger": "reply_to_mention", "text": "lol try farming almonds then talk to me"},
+  {"trigger": "reply_to_mention", "text": "bro chill im just a farmer"}
  ],
  "shared_replies": [
   {
@@ -65452,6 +65667,7 @@ const MOCK_DRAFT_KEEPERS_2026 = [
   { manager:"Vance Sipma",            name:"Emeka Egbuka",        pos:"WR", team:"TB",  price:19 },
   { manager:"Trey Hugen",             name:"Ja'Marr Chase",       pos:"WR", team:"CIN", price:37 },
   { manager:"Jared Stuit",            name:"Chris Olave",         pos:"WR", team:"NO",  price:13 },
+  { manager:"Greg Cady",              name:"Puka Nacua",          pos:"WR", team:"LAR", price:45 },
 ];
 
 // Bot profile builder — computes tendencies from real draft history
@@ -65501,6 +65717,46 @@ function buildBotProfiles(draftPicks) {
       .filter(([pos]) => pos !== "K" && pos !== "DEF")
       .sort((a,b) => b[1] - a[1])
       .map(([pos]) => pos);
+    // ── HISTORICAL SLOT BUDGETS ──
+    // Compute average spend per starting slot (QB1, RB1, RB2, WR1, WR2, TE1, FLEX, K, DEF, bench)
+    // Assigns most expensive players to starter slots per year (same logic as real rosters)
+    const slotBudgets = { QB1:0, RB1:0, RB2:0, WR1:0, WR2:0, TE1:0, FLEX:0, K1:0, DEF1:0, bench:0 };
+    let slotYears = 0;
+    years.forEach(yr => {
+      const yrPicks = picks.filter(p => p.year === yr).sort((a,b) => b.price - a.price);
+      if (yrPicks.length < 5) return; // skip incomplete years
+      slotYears++;
+      const slots = { QB1:null, RB1:null, RB2:null, WR1:null, WR2:null, TE1:null, FLEX:null, K1:null, DEF1:null };
+      const bench = [];
+      for (const pk of yrPicks) {
+        const pos = pk.position;
+        if (pos === "QB" && !slots.QB1) slots.QB1 = pk;
+        else if (pos === "RB" && !slots.RB1) slots.RB1 = pk;
+        else if (pos === "RB" && !slots.RB2) slots.RB2 = pk;
+        else if (pos === "WR" && !slots.WR1) slots.WR1 = pk;
+        else if (pos === "WR" && !slots.WR2) slots.WR2 = pk;
+        else if (pos === "TE" && !slots.TE1) slots.TE1 = pk;
+        else if (pos === "K" && !slots.K1) slots.K1 = pk;
+        else if (pos === "DEF" && !slots.DEF1) slots.DEF1 = pk;
+        else if (!slots.FLEX && (pos === "RB" || pos === "WR" || pos === "TE")) slots.FLEX = pk;
+        else bench.push(pk);
+      }
+      slotBudgets.QB1 += slots.QB1 ? slots.QB1.price : 0;
+      slotBudgets.RB1 += slots.RB1 ? slots.RB1.price : 0;
+      slotBudgets.RB2 += slots.RB2 ? slots.RB2.price : 0;
+      slotBudgets.WR1 += slots.WR1 ? slots.WR1.price : 0;
+      slotBudgets.WR2 += slots.WR2 ? slots.WR2.price : 0;
+      slotBudgets.TE1 += slots.TE1 ? slots.TE1.price : 0;
+      slotBudgets.FLEX += slots.FLEX ? slots.FLEX.price : 0;
+      slotBudgets.K1 += slots.K1 ? slots.K1.price : 0;
+      slotBudgets.DEF1 += slots.DEF1 ? slots.DEF1.price : 0;
+      slotBudgets.bench += bench.reduce((s, p) => s + p.price, 0);
+    });
+    // Average per year
+    if (slotYears > 0) {
+      Object.keys(slotBudgets).forEach(k => { slotBudgets[k] = Math.round(slotBudgets[k] / slotYears); });
+    }
+
     profiles[mgr] = {
       name: mgr,
       posAlloc,
@@ -65512,6 +65768,7 @@ function buildBotProfiles(draftPicks) {
       posPriority,
       seasonsPlayed: years.length,
       avgPrice,
+      slotBudgets,
       // Behavioral traits derived from data
       aggression: Math.min(1, topHeavyPct / 0.55), // 0-1 scale, 0.55 = very top-heavy
       patience: Math.max(0, 1 - (avgFirstPick / 65)), // high first-pick = impatient
@@ -66417,6 +66674,41 @@ function botDecision(bot, player, currentBid, rosterSoFar, budgetLeft, poolRemai
   if (traits.erratic > 0) {
     const swing = 1 + (Math.random() - 0.5) * traits.erratic * 2;
     perceivedValue *= swing;
+  }
+
+  // ── HISTORICAL SLOT BUDGET TENDENCY ──
+  // Nudge bots toward their historical spending per slot.
+  // If a bot historically spends $50 on RB1 and the bid is approaching $60, enthusiasm drops.
+  // If they historically spend $20 on QB1 and the bid is only $10, they're more willing to compete.
+  if (bot.slotBudgets) {
+    const STARTER_NEEDS_HIST = { QB:1, RB:2, WR:2, TE:1, K:1, DEF:1 };
+    const filledHist = rosterSoFar.filter(p => p.pos === pos).length;
+    const neededHist = STARTER_NEEDS_HIST[pos] || 0;
+    let targetSlotBudget = 0;
+    if (pos === "QB" && filledHist < 1) targetSlotBudget = bot.slotBudgets.QB1;
+    else if (pos === "RB" && filledHist === 0) targetSlotBudget = bot.slotBudgets.RB1;
+    else if (pos === "RB" && filledHist === 1) targetSlotBudget = bot.slotBudgets.RB2;
+    else if (pos === "WR" && filledHist === 0) targetSlotBudget = bot.slotBudgets.WR1;
+    else if (pos === "WR" && filledHist === 1) targetSlotBudget = bot.slotBudgets.WR2;
+    else if (pos === "TE" && filledHist < 1) targetSlotBudget = bot.slotBudgets.TE1;
+    else if ((pos === "RB" || pos === "WR" || pos === "TE") && filledHist >= neededHist) {
+      // FLEX or bench territory
+      const flexFull = rosterSoFar.filter(p => p.pos === "RB" || p.pos === "WR" || p.pos === "TE").length >= 5;
+      targetSlotBudget = flexFull ? Math.round(bot.slotBudgets.bench / 6) : bot.slotBudgets.FLEX;
+    }
+    if (targetSlotBudget > 0 && currentBid > 0) {
+      const ratio = currentBid / targetSlotBudget;
+      if (ratio > 1.3) {
+        // Bid is 30%+ above historical norm — enthusiasm drops significantly
+        perceivedValue *= 0.75;
+      } else if (ratio > 1.1) {
+        // Bid is 10-30% above norm — mild hesitation
+        perceivedValue *= 0.88;
+      } else if (ratio < 0.6) {
+        // Bid is well below norm — this is a bargain for this manager, compete harder
+        perceivedValue *= 1.12;
+      }
+    }
   }
 
   // ── NEED-BASED LOGIC ──
@@ -76648,27 +76940,27 @@ const DD_LINEUP_EFFICIENCY = {
 const DD_MANAGER_PROFILES = {
   "Trey Hugen": {
     headline: `One Ring, One Historic Night, One Long Hangover`,
-    narrative: `Let's start with the good stuff: Trey Hugen posted 151.48 points in the 2023 semifinal — the highest single-game score in Duck Dynasty playoff history — and followed it up with a 146.36 championship win over Aaron Fay. Dominant. Convincing. Franchise-defining. And then... nothing. No finals appearances since. That's the Trey Hugen mystery in a nutshell. The talent is undeniable — he carries the highest scoring average in the entire league — but he's leaving 17.47 points per week on his bench, which is the worst lineup efficiency number in DD history. Seventeen points. That's a flex starter just sitting there every Sunday while Trey's clicking submit and moving on. When he's setting an optimized lineup, he's probably the most dangerous roster in the pond. That \`probably\` is doing a lot of work. The Kansas City Chiefs pre-Mahomes comparison is earned: electric ceiling, one ring, hasn't figured out how to make it a dynasty yet. In 2026, the question isn't whether the talent is there. It's whether he'll finally stop leaving a starting tight end on the bench in week nine.`,
+    narrative: `The good stuff first: Trey put up 151.48 in the 2023 semifinal — highest single-game score in DD playoff history — then followed with a 146.36 championship win over Aaron. Dominant. And then... nothing. No finals since. He carries the highest scoring average in the entire league but he's leaving 17.47 points per week on his bench. Seventeen. That's a flex starter just sitting there every Sunday. When he sets an optimized lineup he's probably the most dangerous roster in the pond. The word "probably" is doing a lot of work there. In 2026, the question isn't whether the talent is there. It's whether he'll stop leaving a starting tight end on the bench in week nine.`,
   },
 
   "Aaron Fay": {
     headline: `The Best Regular Season in DD History. Still No Ring.`,
-    narrative: `Thirteen and one. Let that sit for a second. Aaron Fay went 13-1 in the 2023 Duck Dynasty regular season — the best record this league has ever seen — and then lost the championship to Trey Hugen by 43 points. That's the Aaron Fay experience in one sentence. He also holds the longest winning streak in DD history at ten games, which somehow makes the championship loss sting even more. The guy is genuinely excellent at fantasy football for fourteen weeks a year. Playoffs, though? Different story. 2024 was another strong regular season that ended in a Round 1 exit — he lost to Vance Sipma in the first round and finished 5th after winning the consolation game. 2025 he missed the playoffs entirely, which has to be alarming after back-to-back dominant regular seasons. His lineup efficiency sits at 93.9% — solid, not exceptional — and he's leaving a flex-worthy player on his bench most weeks. The ceiling is obviously there. A 13-1 season doesn't happen by accident. But in dynasty, rings are the only currency that matters, and Aaron's wallet is empty. The Atlanta Falcons were up 28-3 in Super Bowl LI and blew it. Aaron went 13-1 and lost the championship. Same energy, different sport. 2026 is the year the narrative either shifts or calcifies permanently into \`great regular season manager, couldn't close.\``,
+    narrative: `Thirteen and one. Aaron went 13-1 in the 2023 DD regular season — best record this league has ever seen — and then lost the championship to Trey by 43 points. That's the Aaron Fay experience in one sentence. Also holds the longest win streak in DD history at ten games, which makes the championship loss hurt even more. Genuinely excellent at fantasy football for fourteen weeks a year. Playoffs though? 2024 was another strong regular season that ended in a Round 1 exit against Vance. 2025 he missed the playoffs entirely, which is alarming after back-to-back dominant regular seasons. Lineup efficiency at 93.9% — solid, not exceptional — and he's leaving a flex-worthy player on his bench most weeks. The ceiling is obviously there. 13-1 doesn't happen by accident. But rings are the only currency that matters in dynasty, and Aaron doesn't have one yet. 2026 either shifts the narrative or it hardens permanently.`,
   },
 
   "Greg Mulder": {
     headline: `98.7% Efficient, One Championship, and One Baffling Disappearing Act`,
-    narrative: `Greg Mulder is the most disciplined lineup manager in Duck Dynasty history — 98.7% efficiency, leaving less than a point per week on his bench — and he has a championship ring to prove that attention to detail pays off. The 2024 title run was methodical: top seed, cleared the bracket, won the championship over Vance Sipma by 3.54 points in the closest title game this league has ever played. Classic Mulder. Tight, efficient, no wasted reps. And then 2025 happened. He went from top seed to not even making the playoffs, lost a first-round toilet bowl game to Aaron Fay, and essentially vanished from the conversation. The single biggest cliff drop in DD history in terms of regular season performance. Is it a roster aging issue? Injury luck? Whatever it is, it's the only question mark on an otherwise bulletproof dynasty profile. The Philadelphia Eagles comparison earns its keep: disciplined build, won it methodically in 2024, and then fell off a cliff the next year — just like Philly teams tend to do between runs. The question is whether 2025 was a reset or a warning sign. If the 2025 collapse was a blip, Mulder is a title contender in 2026. If it's a trend, the rebuild starts now.`,
+    narrative: `Greg is the most disciplined lineup manager in DD history — 98.7% efficiency, less than a point per week left on the bench — and has a ring to prove that attention to detail pays off. The 2024 title run was methodical: top seed, cleared the bracket, won the championship over Vance by 3.54 points in the closest title game this league has ever played. Then 2025 happened. Top seed to missing the playoffs entirely. Lost a toilet bowl game to Aaron. Essentially vanished from the conversation. Biggest cliff drop in DD history. Roster aging? Injury luck? Whatever it is, it's the only question mark on an otherwise bulletproof profile. If 2025 was a blip, Greg is a title contender in 2026. If it's a trend, the rebuild conversation starts now.`,
   },
 
   "Jake Beukelman": {
     headline: `From the Toilet Bowl to the Trophy Case in One Season`,
-    narrative: `Okay, let's talk about the arc. In 2024, Jake Beukelman was deep in the toilet bowl bracket, posting big scores like 134.86 and 134.68 in rounds that literally didn't matter. Talented roster, wrong bracket. The 2025 version of Jake was a completely different story — top seed, dominant semifinal performance of 158.58 against Steve Vander Molen (his personal best), and a championship win over Jared Stuit 136.52 to 106.94. From the toilet bowl to the podium in twelve months. That kind of turnaround doesn't happen without serious roster work in the offseason, and Jake clearly put in the time. He's active on the waiver wire, builds depth, and doesn't panic. The lineup efficiency is solid without being elite, and the scheduling gods have been reasonably kind to him. The Los Angeles Rams comparison is apt: aggressive roster moves, a dramatic championship run that nobody fully saw coming, and now the real test of whether the assets are there to sustain it. The real test for 2026 is whether he can defend — or whether the champion's target on his back, combined with the rookie draft picks everyone's chasing, makes a repeat feel unlikely. First-time champions defending the title is the hardest thing to do in dynasty.`,
+    narrative: `The arc here is wild. In 2024 Jake was deep in the toilet bowl bracket, posting 134.86 and 134.68 in rounds that didn't matter. Good roster, wrong bracket. The 2025 version was a completely different team — top seed, dominant semifinal (158.58 against Steve, his personal best), championship win over Jared 136.52 to 106.94. Toilet bowl to the podium in twelve months. That turnaround doesn't happen without serious offseason roster work, and Jake clearly put in the time. Active on waivers, builds depth, doesn't panic. Lineup efficiency is solid without being elite and scheduling has been reasonably kind. Real test for 2026: can he defend? First-time champs defending the title is the hardest thing in dynasty.`,
   },
 
   "Jared Stuit": {
     headline: `The Greatest Turnaround in Duck Dynasty History. By a Mile.`,
-    narrative: `Nobody in this league has a story like Jared Stuit, and it's not particularly close. The man holds the longest losing streak in DD history at fifteen consecutive losses spanning 2023 and 2024. He went 1-13 in the 2024 regular season — the worst record ever in this league — and won the 2023 toilet bowl outright. Then 2024 arrived — 1-13, lost the toilet bowl final to Tyler Goslinga, finished 11th. Absolute rock bottom. And then 2025 happened. Eleven and three. Semifinals win over Trey Hugen. Runner-up finish after losing the championship to Jake Beukelman 106.94 to 136.52. The most dramatic single-season turnaround in Duck Dynasty history, and it's not even debatable. What changed? Everything. The roster got younger, the waiver wire activity picked up, and suddenly the team that was historically bad was one of the most dangerous in the bracket. Here's the honest question heading into 2026: was that a genuine rebuild completing, or was it a one-year fluke propped up by favorable scheduling? The performance was real. The question is sustainability. If Jared is a genuine contender now, this league just got a lot more interesting. If 2025 was an outlier, he's got some explaining to do. The Jacksonville Jaguars went from the worst team in the league to the AFC Championship game in one year — and then faded back into mediocrity. The parallel is uncomfortable and very much on the table.`,
+    narrative: `Nobody in this league has a story like Jared and it's not close. Holds the longest losing streak in DD history at fifteen straight losses spanning 2023 and 2024. Went 1-13 in 2024 — worst record ever — and won the 2023 toilet bowl outright. Rock bottom. Then 2025 arrived. Eleven and three. Semifinal win over Trey. Runner-up after losing the championship to Jake 106.94 to 136.52. Most dramatic single-season turnaround in DD history. What changed? Everything. Roster got younger, waiver activity picked up, and suddenly the team that was historically bad was one of the most dangerous in the bracket. Honest question heading into 2026: was that a genuine rebuild completing or a one-year fluke from favorable scheduling? The performance was real. Sustainability is the question. If Jared is a genuine contender now, this league just got a lot more interesting.`,
   },
 
   "Christian Manes": {
