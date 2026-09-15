@@ -781,6 +781,7 @@ const DATA = {
     "Greg Cady": {"firstYear": 2015, "lastYear": 2025, "seasons": 11, "titles": 3, "active": true, "totalW": 76, "totalL": 72, "allTimeWPct": 0.5135, "avgScore": 105.37, "stdScore": 22.11, "bestSeason": {"year": 2015, "W": 10, "L": 3, "WPct": 0.7692, "PF": 1316.14, "Finish": 2}, "worstSeason": {"year": 2020, "W": 3, "L": 10, "WPct": 0.2308, "PF": 1260.48, "Finish": 14}, "longestWinStreak": 8, "longestLossStreak": 7, "biggestWin": {"opp": "Steve Vander Molen", "margin": 50.56, "winPts": 159.6, "losPts": 109.04, "year": 2015, "week": 3}, "worstLoss": {"opp": "Greg Mulder", "margin": 58.16, "winPts": 164.54, "losPts": 106.38, "year": 2023, "week": 14}},
     "Greg Mulder": {"firstYear": 2015, "lastYear": 2025, "seasons": 11, "titles": 2, "active": true, "totalW": 79, "totalL": 69, "allTimeWPct": 0.5338, "avgScore": 109.11, "stdScore": 22.47, "bestSeason": {"year": 2021, "W": 10, "L": 4, "WPct": 0.7143, "PF": 1622.18, "Finish": 2}, "worstSeason": {"year": 2016, "W": 4, "L": 9, "WPct": 0.3077, "PF": 1203.94, "Finish": 11}, "longestWinStreak": 5, "longestLossStreak": 5, "biggestWin": {"opp": "Greg Cady", "margin": 58.16, "winPts": 164.54, "losPts": 106.38, "year": 2023, "week": 14}, "worstLoss": {"opp": "Tyler Goslinga", "margin": 60.8, "winPts": 175.32, "losPts": 114.52, "year": 2022, "week": 2}},
     "James Lazette": {"firstYear": 2016, "lastYear": 2025, "seasons": 10, "titles": 1, "active": true, "totalW": 76, "totalL": 59, "allTimeWPct": 0.563, "avgScore": 109.81, "stdScore": 23.48, "bestSeason": {"year": 2020, "W": 10, "L": 3, "WPct": 0.7692, "PF": 1607.9, "Finish": 1}, "worstSeason": {"year": 2019, "W": 5, "L": 8, "WPct": 0.3846, "PF": 1372.98, "Finish": 10}, "longestWinStreak": 6, "longestLossStreak": 5, "biggestWin": {"opp": "Ross Van Groningen", "margin": 61.22, "winPts": 144.5, "losPts": 83.28, "year": 2021, "week": 2}, "worstLoss": {"opp": "Vance Sipma", "margin": 72.64, "winPts": 108.12, "losPts": 35.48, "year": 2025, "week": 8}},
+    "Jared Stuit": {"firstYear": 2026, "lastYear": 2026, "seasons": 0, "titles": 0, "active": true, "totalW": 0, "totalL": 0, "allTimeWPct": 0.0, "avgScore": 0.0, "stdScore": 0.0, "bestSeason": null, "worstSeason": null, "longestWinStreak": 0, "longestLossStreak": 0, "biggestWin": null, "worstLoss": null},
     "Jon Vander Molen": {"firstYear": 2017, "lastYear": 2017, "seasons": 1, "titles": 0, "active": false, "totalW": 4, "totalL": 9, "allTimeWPct": 0.3077, "avgScore": 103.01, "stdScore": 12.92, "bestSeason": {"year": 2017, "W": 4, "L": 9, "WPct": 0.3077, "PF": 1339.18, "Finish": 12}, "worstSeason": {"year": 2017, "W": 4, "L": 9, "WPct": 0.3077, "PF": 1339.18, "Finish": 12}, "longestWinStreak": 2, "longestLossStreak": 4, "biggestWin": {"opp": "Ross Van Groningen", "margin": 26.24, "winPts": 123.76, "losPts": 97.52, "year": 2017, "week": 9}, "worstLoss": {"opp": "Trey Hugen", "margin": 51.94, "winPts": 144.26, "losPts": 92.32, "year": 2017, "week": 1}},
     "Jonathon Israel": {"firstYear": 2015, "lastYear": 2016, "seasons": 2, "titles": 0, "active": false, "totalW": 11, "totalL": 15, "allTimeWPct": 0.4231, "avgScore": 85.7, "stdScore": 24.25, "bestSeason": {"year": 2015, "W": 6, "L": 7, "WPct": 0.4615, "PF": 1232.18, "Finish": 6}, "worstSeason": {"year": 2016, "W": 5, "L": 8, "WPct": 0.3846, "PF": 996.08, "Finish": 9}, "longestWinStreak": 4, "longestLossStreak": 5, "biggestWin": {"opp": "Casey Rhoda", "margin": 48.08, "winPts": 146.44, "losPts": 98.36, "year": 2015, "week": 5}, "worstLoss": {"opp": "Eric Graef", "margin": 53.1, "winPts": 118.5, "losPts": 65.4, "year": 2015, "week": 7}},
     "Joshua Van Groningen": {"firstYear": 2020, "lastYear": 2025, "seasons": 6, "titles": 2, "active": true, "totalW": 42, "totalL": 41, "allTimeWPct": 0.506, "avgScore": 108.94, "stdScore": 19.84, "bestSeason": {"year": 2021, "W": 9, "L": 5, "WPct": 0.6429, "PF": 1594.3, "Finish": 1}, "worstSeason": {"year": 2020, "W": 4, "L": 9, "WPct": 0.3077, "PF": 1353.38, "Finish": 11}, "longestWinStreak": 7, "longestLossStreak": 5, "biggestWin": {"opp": "Vance Sipma", "margin": 48.5, "winPts": 128.64, "losPts": 80.14, "year": 2020, "week": 7}, "worstLoss": {"opp": "Greg Mulder", "margin": 57.42, "winPts": 165.06, "losPts": 107.64, "year": 2025, "week": 12}},
@@ -1008,6 +1009,7 @@ const DATA = {
 {"trigger":"general","text":"Katie's cooking is better than any of this but I'll never tell her I said that here."},
 {"trigger":"general","text":"Has anyone tried the Hard Mountain Dew? No? Just me? Again?"}
 ],
+    "Jared Stuit": [],
     "Ben de Ruiter": [{year:2016,team:"Friendship",W:6,L:7,PF:1225.5,PA:1259.0,RSRank:7,PlayoffFinish:8,playoffs:false},{year:2017,team:"Friendship",W:7,L:6,PF:1347.4,PA:1329.8,RSRank:4,PlayoffFinish:2,playoffs:true},{year:2018,team:"Friendship",W:5,L:8,PF:1398.1,PA:1486.36,RSRank:9,PlayoffFinish:11,playoffs:false},{year:2019,team:"James White Claws",W:2,L:11,PF:1158.4,PA:1481.26,RSRank:12,PlayoffFinish:9,playoffs:false},{year:2020,team:"James White Claws",W:6,L:7,PF:1340.9,PA:1400.22,RSRank:8,PlayoffFinish:8,playoffs:false},{year:2021,team:"James White Claws",W:1,L:13,PF:1113.9,PA:1566.4,RSRank:14,PlayoffFinish:14,playoffs:false}],
     "Casey Rhoda": [{year:2015,team:"Casey's Team",W:6,L:7,PF:1220.7,PA:1203.36,RSRank:7,PlayoffFinish:8,playoffs:false}],
     "Eric Graef": [{year:2015,team:"Me and Julio",W:6,L:7,PF:1260.7,PA:1131.28,RSRank:5,PlayoffFinish:1,playoffs:true},{year:2016,team:"Hingle McCringleberry",W:8,L:5,PF:1279.4,PA:1290.0,RSRank:5,PlayoffFinish:2,playoffs:true},{year:2017,team:"Ravenous D",W:7,L:6,PF:1303.6,PA:1342.12,RSRank:5,PlayoffFinish:5,playoffs:true},{year:2018,team:"Chirhomantics",W:6,L:7,PF:1508.4,PA:1463.14,RSRank:6,PlayoffFinish:5,playoffs:true},{year:2019,team:"Chirhomantics",W:9,L:4,PF:1410.6,PA:1324.66,RSRank:2,PlayoffFinish:4,playoffs:true},{year:2020,team:"Here in Allentown",W:8,L:5,PF:1568.6,PA:1377.04,RSRank:4,PlayoffFinish:2,playoffs:true},{year:2021,team:"Cooper Troopers",W:11,L:3,PF:1593.5,PA:1339.92,RSRank:1,PlayoffFinish:5,playoffs:true},{year:2022,team:"The Real Commish",W:8,L:6,PF:1600.0,PA:1573.38,RSRank:4,PlayoffFinish:6,playoffs:true},{year:2023,team:"Oooolave oh-oh",W:8,L:6,PF:1511.6,PA:1502.14,RSRank:4,PlayoffFinish:4,playoffs:true},{year:2024,team:"White Privilege",W:9,L:5,PF:1623.3,PA:1547.6,RSRank:2,PlayoffFinish:4,playoffs:true},{year:2025,team:"K + S = (barf)",W:5,L:9,PF:1350.6,PA:1547.9,RSRank:11,PlayoffFinish:9,playoffs:false},
@@ -1183,6 +1185,7 @@ const DATA = {
     "Matthew Van Groningen": "Chicago Bears",
     "Vance Sipma": "Los Angeles Chargers",
     "Aaron Fay": "Tennessee Titans",
+    "Jared Stuit": "Houston Texans",
     "Zac Dewey": "Carolina Panthers",
     "Ben de Ruiter": "New York Jets",
     "Spencer Hower": "Los Angeles Rams",
@@ -1205,6 +1208,7 @@ const DATA = {
     "Matthew Van Groningen": "A losing record across ten seasons (.467) despite a +3.2 career luck score — the schedule has been kinder than deserved and the results still aren't good. His one undeniable season was 2020: 11-2 as the #1 seed. He finished third. Then 4-10 in 2022, 2-12 in 2024, 4-10 in 2025. The Bears' 1985 championship is their lone shining moment surrounded by decades of mediocrity; Matthew's 2020 is his 1985 — a season where the talent was obvious and the title still didn't come. Below-average career scoring. Volatile arc. Chicago fits.",
     "Vance Sipma": "Seven of ten seasons at or below .500. Career luck of -2.47. Then 2024: 11-3 regular season as the #1 seed, made the championship game, finished second. The Chargers have never won a Super Bowl despite consistently putting talented rosters on the field. Vance finally assembled everything in 2024 and still came up short in the finals. Then back to 5-9 in 2025. Losing record all-time despite above-average scoring in his better seasons. This is what Charger football looks like translated to fantasy.",
     "Aaron Fay": "A 10-4 regular season in 2021 remains the one season that suggested a ceiling — he finished third that year with a legitimate shot at the title. Since then: 6-8, 3-11, 6-8, 7-7. The Titans with Derrick Henry were exactly this: 9-10 wins per season in the regular season, early playoff exits, a peak that showed the potential without delivering the ring. Aaron's 2021 was his Titans-in-the-Henry-era season. Below-.500 career overall (.446), consistent effort, that one near-miss that is now starting to look like the ceiling.",
+    "Jared Stuit": "The only twin in this list assigned on zero No Fun League evidence — and that is the point. Jared arrives in 2026 taking over Eric Graef's spot with no games, no record, no PF, and no draft history in this league. There is nothing to characterize yet. The Houston Texans are the youngest franchise in the NFL, an expansion team with no long shadow behind it — a clean slate whose story is still entirely ahead of it. That is exactly what Jared is here: the newest name on the board, unproven in this room, ceiling and floor both undefined. This is a placeholder grounded in one honest fact — he is brand new — and it will be rewritten the moment he has an actual No Fun League season to judge. Everything else is TBD.",
     "Zac Dewey": "Four seasons. Three losing. The one near-miss was 2019: 7-6 regular season and a runner-up finish — Zac's version of the Panthers going 15-1 in 2015 and losing the Super Bowl. Career luck of -2.54 means even those results understated the bad breaks. Then two more losing seasons before the geographic eligibility rule ended his run. Short window, one meaningful performance, mostly a losing record. The Panthers comparison is accurate in every meaningful dimension.",
     "Ben de Ruiter": "A 13-game losing streak in his final season (2021: 1-13) is the defining number. The New York Jets' longest losing streak is 13 consecutive games, set in 1996. The symmetry is not coincidental. His one competitive season was 2017 (7-6 regular season, finals appearance), followed by 2-11 the next year, then gradual collapse. Career luck of -3.04. .342 all-time W%. Below-average scorer at 96.0 per week. Ben de Ruiter is the Jets. Specifically.",
     "Spencer Hower": "The best two-season W% in league history at .654 — dominant in both 2016 and 2017, made the playoffs both years, never won a championship. The Rams under McVay went 11-5 in 2017 and 13-3 in 2018, made the Super Bowl in 2018 and lost. Spencer's two seasons have the same shape: dominant regular season performance, playoff ceiling not reached, ended before the story could finish. His volatility (stdev 26.1) matches the Rams' boom-or-bust offensive profile. Short tenure, high floor, no ring.",
@@ -42854,6 +42858,7 @@ const MANAGER_COLORS = {
   "Matthew Van Groningen":  "#C83803", // Chicago Bears        — Bears orange
   "Vance Sipma":            "#69C3FF", // Los Angeles Chargers — Powder blue
   "Aaron Fay":              "#4B92DB", // Tennessee Titans     — Titans blue
+  "Jared Stuit":            "#A71930", // Houston Texans       — Battle red
   "Zac Dewey":              "#A8DADC", // Carolina Panthers    — Panthers silver-blue
   "Ben de Ruiter":          "#4DAA6F", // New York Jets        — Jets green
   "Spencer Hower":          "#FFA300", // Los Angeles Rams     — Rams gold
@@ -42878,6 +42883,7 @@ const MANAGER_NFL_TEAM = {
   "Matthew Van Groningen": "Chicago Bears",
   "Vance Sipma":           "Los Angeles Chargers",
   "Aaron Fay":             "Tennessee Titans",
+  "Jared Stuit":           "Houston Texans",
   "Zac Dewey":             "Carolina Panthers",
   "Ben de Ruiter":         "New York Jets",
   "Spencer Hower":         "Los Angeles Rams",
@@ -46078,6 +46084,7 @@ function useSleeperLive(leagueId = SLEEPER_2026_LEAGUE_ID, nameMap = SLEEPER_NAM
     transactions:      [],     // [{ type, adds, drops, ts, rosterIdToName }]
     // ── Project Banana: current season player data ──────────────────────────
     currentPlayerData: null,   // { draftPicks: [], weeklyScores: [] } | null when complete
+    finalized2026:     null,   // finalized regular-season aggregates for all-time report blending
     seasonComplete:    false,  // true when status === "complete" → show commissioner banner
     lastFetched:       null,
   });
@@ -46127,6 +46134,14 @@ function useSleeperLive(leagueId = SLEEPER_2026_LEAGUE_ID, nameMap = SLEEPER_NAM
 
       const status = league.status;
       const week   = league.settings?.leg || 1;
+      // lastScoredLeg = the most recent week Sleeper has finalized into season totals (fpts).
+      // If the current week (leg) is already scored, its points are ALREADY baked into
+      // seasonPF, so we must NOT fold the live matchup points in again (would double-count).
+      const lastScoredLeg   = league.settings?.last_scored_leg ?? 0;
+      // playoffWeekStart = first playoff week; regular season is everything before it.
+      // All-time records only blend REGULAR-SEASON finalized weeks (matches historical data).
+      const playoffWeekStart = league.settings?.playoff_week_start ?? 15;
+      const lastRegSeasonScored = Math.min(lastScoredLeg, playoffWeekStart - 1);
 
       // Build rosterId → canonical name map
       const uidToDisplay = {};
@@ -46147,19 +46162,23 @@ function useSleeperLive(leagueId = SLEEPER_2026_LEAGUE_ID, nameMap = SLEEPER_NAM
         const streakType = r.metadata?.streak_type;
         const streakLen  = parseInt(r.metadata?.streak || "0", 10);
         const streak = streakType === "W" ? streakLen : streakType === "L" ? -streakLen : 0;
-        return { rosterId: r.roster_id, name: rosterIdToName[r.roster_id], wins, losses, ties, pf, pa, streak };
-      }).sort((a, b) => b.wins - a.wins || b.pf - a.pf);
+        // seasonPF = finalized season total from Sleeper (0 mid-week until a week settles)
+        // livePF   = filled in below from the current week's live matchup feed
+        // pf       = seasonPF + current week's live points (so scoring views work mid-week)
+        return { rosterId: r.roster_id, name: rosterIdToName[r.roster_id], wins, losses, ties, seasonPF: pf, pf, livePF: 0, pa, streak };
+      });
 
       let matchups     = [];
       let transactions = [];
 
       // ── Season is complete → stop live-fetching, show commissioner banner ──
       if (status === "complete") {
+        managers.sort((a, b) => b.wins - a.wins || b.pf - a.pf);
         setState({
           loading: false, error: null,
           leagueStatus: status, currentWeek: week,
           managers, matchups: [], transactions: [],
-          currentPlayerData: null, seasonComplete: true,
+          currentPlayerData: null, finalized2026: null, seasonComplete: true,
           lastFetched: new Date(),
         });
         return;
@@ -46181,6 +46200,27 @@ function useSleeperLive(leagueId = SLEEPER_2026_LEAGUE_ID, nameMap = SLEEPER_NAM
           teamA: { name: rosterIdToName[a.roster_id], points: a.points || 0 },
           teamB: { name: rosterIdToName[b.roster_id], points: b.points || 0 },
         }));
+
+        // ── Fold live current-week points into each manager's PF ────────────────
+        // Sleeper's season fpts total (seasonPF) doesn't include the current week
+        // until that week finalizes. So mid-week, scoring views (Snapshot, Power
+        // Rankings, Luck Index) would show 0. We add this week's live matchup
+        // points on top of the finalized season total so those views stay live.
+        //
+        // BUT: once the current week is finalized (lastScoredLeg >= week), those
+        // points are ALREADY in seasonPF. Adding them again double-counts PF (e.g.
+        // a 172.66 week showing as 345.32). So only fold in live points when the
+        // current week is still in progress and not yet scored into the season total.
+        const weekAlreadyScored = lastScoredLeg >= week;
+        const liveByRoster = {};
+        mData.forEach(entry => { liveByRoster[entry.roster_id] = entry.points || 0; });
+        managers.forEach(m => {
+          const live = liveByRoster[m.rosterId] || 0;
+          m.livePF = parseFloat(live.toFixed(2));
+          m.pf     = weekAlreadyScored
+            ? m.seasonPF
+            : parseFloat((m.seasonPF + live).toFixed(2));
+        });
 
         // Recent transactions (last 3 weeks)
         const txWeeks  = [week, week - 1, week - 2].filter(w => w >= 1);
@@ -46227,10 +46267,14 @@ function useSleeperLive(leagueId = SLEEPER_2026_LEAGUE_ID, nameMap = SLEEPER_NAM
 
         // ── Project Banana: weekly player scores for all completed weeks ─────
         // Fetch all weeks 1..week in parallel — each matchup entry has players_points
+        // allMatchupWeeks is hoisted to this scope so the finalized-2026 aggregation
+        // block below can reuse it (declaring it inside the try left it out of scope
+        // there, which silently nulled finalized2026 via a caught ReferenceError).
         let currentWeeklyScores = [];
+        let allMatchupWeeks = [];
         try {
           const weeksToFetch = Array.from({ length: week }, (_, i) => i + 1);
-          const allMatchupWeeks = await Promise.all(
+          allMatchupWeeks = await Promise.all(
             weeksToFetch.map(w =>
               fetch(`${SLEEPER_BASE}/league/${LID}/matchups/${w}`)
                 .then(r => r.json())
@@ -46259,6 +46303,94 @@ function useSleeperLive(leagueId = SLEEPER_2026_LEAGUE_ID, nameMap = SLEEPER_NAM
           console.warn("Banana: weekly scores fetch failed", e);
         }
 
+        // ── Finalized 2026 aggregates for all-time reports ───────────────────
+        // Only REGULAR-SEASON weeks that Sleeper has fully scored (<= lastRegSeasonScored)
+        // flow into the all-time reports. The in-progress week is excluded until it
+        // finalizes — this is the "week counts the instant it's official" rule, keyed
+        // off Sleeper's last_scored_leg. No mid-week flicker, no calendar guessing.
+        //
+        // Team weekly score = the matchup entry's `points` (official team total), NOT a
+        // re-sum of player points — this matches how historical records were kept.
+        let finalized2026 = null;
+        try {
+          if (lastRegSeasonScored >= 1) {
+            // Per-manager running totals across finalized regular-season weeks
+            const agg = {}; // name -> { wins, losses, ties, pf, pa, games }
+            // Per-week team score entries (for all-time high/low single-week tables)
+            const weekScores = []; // { manager, points, week }
+            const ensure = (name) => {
+              if (!agg[name]) agg[name] = { wins: 0, losses: 0, ties: 0, pf: 0, pa: 0, games: 0 };
+              return agg[name];
+            };
+
+            allMatchupWeeks
+              .filter(({ week: w }) => w >= 1 && w <= lastRegSeasonScored)
+              .forEach(({ week: w, data }) => {
+                // Pair up matchups to award W/L, tally PF/PA, and stamp each team's
+                // weekly score with its result (needed for Unlucky Losses / Lucky Wins).
+                const byMatch = {};
+                data.forEach(entry => {
+                  if (entry.matchup_id == null) return;
+                  (byMatch[entry.matchup_id] ||= []).push(entry);
+                });
+                // resultByRoster: roster_id -> "W" | "L" | "T" for this week
+                const resultByRoster = {};
+                const oppByRoster    = {};
+                Object.values(byMatch).forEach(pair => {
+                  if (pair.length !== 2) return;
+                  const [a, b] = pair;
+                  const an = rosterIdToName[a.roster_id] || `Team ${a.roster_id}`;
+                  const bn = rosterIdToName[b.roster_id] || `Team ${b.roster_id}`;
+                  const ap = a.points || 0;
+                  const bp = b.points || 0;
+                  const A = ensure(an);
+                  const B = ensure(bn);
+                  A.pf += ap; A.pa += bp; A.games += 1;
+                  B.pf += bp; B.pa += ap; B.games += 1;
+                  oppByRoster[a.roster_id] = bn;
+                  oppByRoster[b.roster_id] = an;
+                  if (ap > bp)      { A.wins++;   B.losses++; resultByRoster[a.roster_id] = "W"; resultByRoster[b.roster_id] = "L"; }
+                  else if (bp > ap) { B.wins++;   A.losses++; resultByRoster[b.roster_id] = "W"; resultByRoster[a.roster_id] = "L"; }
+                  else              { A.ties++;   B.ties++;   resultByRoster[a.roster_id] = "T"; resultByRoster[b.roster_id] = "T"; }
+                });
+                // Record each team's weekly score WITH its result + opponent
+                data.forEach(entry => {
+                  const name = rosterIdToName[entry.roster_id] || `Team ${entry.roster_id}`;
+                  const pts  = parseFloat((entry.points || 0).toFixed(2));
+                  weekScores.push({
+                    manager:  name,
+                    points:   pts,
+                    week:     w,
+                    result:   resultByRoster[entry.roster_id] || null,
+                    opponent: oppByRoster[entry.roster_id]    || null,
+                  });
+                });
+              });
+
+            // Round PF/PA
+            Object.values(agg).forEach(m => {
+              m.pf = parseFloat(m.pf.toFixed(2));
+              m.pa = parseFloat(m.pa.toFixed(2));
+            });
+
+            finalized2026 = {
+              year:               2026,
+              weeksIncluded:      lastRegSeasonScored,
+              // segment tags so the high/low tables slot 2026 into the right bucket
+              ppr:                (league.scoring_settings?.rec ?? 0),
+              teams:              league.settings?.num_teams ?? managers.length,
+              managerTotals:      agg,        // name -> { wins, losses, ties, pf, pa, games }
+              weeklyTeamScores:   weekScores, // [{ manager, points, week }]
+            };
+          }
+        } catch (e) {
+          console.warn("Finalized 2026 aggregation failed", e);
+          finalized2026 = null;
+        }
+
+        // Sort standings: wins first, then PF (now includes live current-week points)
+        managers.sort((a, b) => b.wins - a.wins || b.pf - a.pf);
+
         setState({
           loading: false, error: null,
           leagueStatus: status, currentWeek: week,
@@ -46267,6 +46399,7 @@ function useSleeperLive(leagueId = SLEEPER_2026_LEAGUE_ID, nameMap = SLEEPER_NAM
             draftPicks:   currentDraftPicks,
             weeklyScores: currentWeeklyScores,
           },
+          finalized2026,
           seasonComplete: false,
           lastFetched: new Date(),
         });
@@ -46274,11 +46407,12 @@ function useSleeperLive(leagueId = SLEEPER_2026_LEAGUE_ID, nameMap = SLEEPER_NAM
       }
 
       // ── Pre-draft / offseason state ──────────────────────────────────────────
+      managers.sort((a, b) => b.wins - a.wins || b.pf - a.pf);
       setState({
         loading: false, error: null,
         leagueStatus: status, currentWeek: week,
         managers, matchups: [], transactions: [],
-        currentPlayerData: null, seasonComplete: false,
+        currentPlayerData: null, finalized2026: null, seasonComplete: false,
         lastFetched: new Date(),
       });
 
@@ -46288,6 +46422,103 @@ function useSleeperLive(leagueId = SLEEPER_2026_LEAGUE_ID, nameMap = SLEEPER_NAM
   }, []);
 
   return { ...state, refresh: fetch$ };
+}
+
+// ── All-time report blending: fold finalized 2026 regular-season weeks in ─────
+// These helpers take the static historical structures and return NEW arrays with
+// the finalized 2026 aggregates merged in, in the exact same shapes the reports
+// already consume. They are pure (no mutation of DATA) and no-op safely when
+// there's no finalized 2026 data (offseason, week 1 in progress, Sleeper down).
+
+// Blend finalized 2026 career totals into the DATA.wPct all-time standings rows.
+// wPct row shape: { Manager, Wins, Losses, "W%", "Avg Finish", "Avg Weekly Pts",
+//                   Active, PlayoffApps, Seasons }
+// We update Wins/Losses/W%/Avg Weekly Pts. We do NOT touch Avg Finish, PlayoffApps,
+// or Seasons — those only resolve when a season actually completes, so bumping them
+// mid-season would be misleading.
+function blendWPctWith2026(wPct, finalized2026) {
+  if (!finalized2026 || !finalized2026.managerTotals) return wPct;
+  const totals = finalized2026.managerTotals;
+  return wPct.map(row => {
+    const add = totals[row.Manager];
+    if (!add || add.games < 1) return row;
+    const newWins   = row.Wins   + add.wins;
+    const newLosses = row.Losses + add.losses;
+    const decided   = newWins + newLosses;
+    // Reconstruct career points from the stored average, then add 2026 finalized PF.
+    const priorGames = row.Wins + row.Losses;
+    const priorPts   = (row["Avg Weekly Pts"] || 0) * priorGames;
+    const newGames   = priorGames + add.games;
+    const newAvgPts  = newGames > 0 ? (priorPts + add.pf) / newGames : 0;
+    return {
+      ...row,
+      Wins:              newWins,
+      Losses:            newLosses,
+      "W%":              decided > 0 ? newWins / decided : 0,
+      "Avg Weekly Pts":  parseFloat(newAvgPts.toFixed(2)),
+    };
+  });
+}
+
+// Blend finalized 2026 weekly team scores into a score-segment array (top or worst).
+// Segment entry shape: { Points, Year, Week, Manager, "Team Name", "Reached Playoffs",
+//                        PPR, Teams, Active }
+// 2026 entries are tagged with the live PPR/team segment so they sort into the right
+// bucket. "Reached Playoffs" is "In Progress" (season isn't decided yet). Active=true.
+// isActiveName tells us whether the manager is a current active manager (for the
+// Active flag, so alumni filters behave correctly).
+function blend2026IntoScoreSegment(segmentArr, finalized2026, isActiveName) {
+  if (!finalized2026 || !finalized2026.weeklyTeamScores) return segmentArr;
+  const teamNameFor = (mgr) => `${mgr.split(" ")[0]}'s 2026 Team`;
+  const liveEntries = finalized2026.weeklyTeamScores
+    .filter(s => s.points > 0)
+    .map(s => ({
+      Points:             parseFloat(s.points.toFixed(2)),
+      Year:               finalized2026.year,
+      Week:               s.week,
+      Manager:            s.manager,
+      "Team Name":        teamNameFor(s.manager),
+      "Reached Playoffs": "In Progress",
+      PPR:                finalized2026.ppr,
+      Teams:              finalized2026.teams,
+      Active:             isActiveName ? !!isActiveName(s.manager) : true,
+    }));
+  return [...segmentArr, ...liveEntries];
+}
+
+// Blend finalized 2026 weekly team scores into an OUTCOME-based segment (unlucky/lucky).
+// resultWanted = "L" for Unlucky Losses (high scores that lost),
+//                "W" for Lucky Wins (low scores that won).
+// Same entry shape as the score segments so the existing table renders them identically.
+function blend2026IntoOutcomeSegment(segmentArr, finalized2026, resultWanted, isActiveName) {
+  if (!finalized2026 || !finalized2026.weeklyTeamScores) return segmentArr;
+  const teamNameFor = (mgr) => `${mgr.split(" ")[0]}'s 2026 Team`;
+  const liveEntries = finalized2026.weeklyTeamScores
+    .filter(s => s.points > 0 && s.result === resultWanted)
+    .map(s => ({
+      Points:             parseFloat(s.points.toFixed(2)),
+      Year:               finalized2026.year,
+      Week:               s.week,
+      Manager:            s.manager,
+      "Team Name":        teamNameFor(s.manager),
+      "Reached Playoffs": "In Progress",
+      PPR:                finalized2026.ppr,
+      Teams:              finalized2026.teams,
+      Active:             isActiveName ? !!isActiveName(s.manager) : true,
+    }));
+  return [...segmentArr, ...liveEntries];
+}
+
+// ── LIVE badge: marks all-time-report rows sourced from the current live season ──
+function LiveBadge() {
+  return (
+    <span style={{
+      fontSize: 9, fontWeight: 800, letterSpacing: 0.5, color: "#2a9d8f",
+      background: "rgba(46,204,113,0.15)", border: "1px solid rgba(46,204,113,0.35)",
+      borderRadius: 4, padding: "1px 5px", whiteSpace: "nowrap", verticalAlign: "middle",
+      textTransform: "uppercase",
+    }}>● Live 2026</span>
+  );
 }
 
 // ── Commissioner banner: shown when season is complete and not yet archived ───
@@ -47051,15 +47282,15 @@ function CSScoringSnapshot({ managers, currentWeek }) {
     <div style={{ color:"#555", fontSize:14, padding:"32px 0", textAlign:"center" }}>No data available yet.</div>
   );
 
-  // Get current week scores from matchups via managers (pf is season total — use it for sorting)
-  // We rank by pf this week — managers sorted by pf descending
+  // pf now includes the current week's live points (folded in by useSleeperLive).
+  // Rank by pf descending.
   const sorted = [...managers].sort((a, b) => b.pf - a.pf);
   const maxScore = sorted[0]?.pf || 1;
 
   return (
     <div style={{ display:"flex", flexDirection:"column", gap:0 }}>
       <div style={{ fontSize:11, color:"#555", background:"#111", borderRadius:6, padding:"6px 12px", marginBottom:12, lineHeight:1.5 }}>
-        Season PF vs all-time scoring average · bar = season PF · line = career avg
+        Season PF vs all-time scoring average · bar = season PF · line = career avg · includes this week's live points
       </div>
       <div style={{ display:"flex", alignItems:"center", gap:8, padding:"0 4px 6px", fontSize:11, color:"#555", borderBottom:"1px solid #222", marginBottom:6 }}>
         <span style={{ width:mobile?70:90, flexShrink:0 }}>Manager</span>
@@ -47607,7 +47838,7 @@ function CurrentSeasonTab({ onMockDraft }) {
       )}
 
       {/* ── SECTION VIEWS ── */}
-      {section === "standings"    && <CSStandings managers={managers} ddLogos={true} />}
+      {section === "standings"    && <CSStandings managers={managers} ddLogos={false} />}
       {section === "matchups"     && matchups.length > 0 && <CSMatchupCards matchups={matchups} week={currentWeek} />}
       {section === "matchups"     && matchups.length === 0 && !loading && (
         <div style={{ color: "#555", fontSize: 14, padding: "32px 0", textAlign: "center" }}>
@@ -48998,6 +49229,15 @@ function LeaderboardTab() {
   const { open: openTeamName } = useTeamName();
   const { open: openMatchup } = useMatchup();
 
+  // ── Live blend: fold finalized 2026 regular-season weeks into all-time totals ──
+  const { finalized2026, refresh: refreshLive } = useSleeperLive();
+  React.useEffect(() => { refreshLive(); }, [refreshLive]);
+  // wPctBlended = DATA.wPct with finalized 2026 W/L/PF folded in (no-op if none yet).
+  const wPctBlended = React.useMemo(
+    () => blendWPctWith2026(DATA.wPct, finalized2026),
+    [finalized2026]
+  );
+
   // ── Section nav ──
   const [section, setSection] = useState("home");
 
@@ -49042,7 +49282,7 @@ function LeaderboardTab() {
     else { setSortKey(key); setSortDir(key === "Avg Finish" ? "asc" : "desc"); }
   };
   const arrow = (key, active, dir) => (active||sortKey) === key ? ((dir||sortDir) === "asc" ? " ↑" : " ↓") : "";
-  const baseData = showInactive ? DATA.wPct : DATA.wPct.filter(m => m.Active);
+  const baseData = showInactive ? wPctBlended : wPctBlended.filter(m => m.Active);
   const sorted = [...baseData].sort((a, b) => {
     let result = 0;
     if (sortKey === "Manager")         result = a.Manager.localeCompare(b.Manager);
@@ -49368,6 +49608,11 @@ const SeasonRecordsTable = ({ pool, sortK, sortD, onSort, titleText, onMatchup, 
           </div>
           <Card>
             <SectionTitle>All-Time Standings</SectionTitle>
+            {finalized2026 && finalized2026.weeksIncluded >= 1 && (
+              <div style={{ fontSize: mobile ? 12 : 11, color: "#2a9d8f", marginTop: -8, marginBottom: 12 }}>
+                ✓ Includes finalized 2026 through Week {finalized2026.weeksIncluded}
+              </div>
+            )}
             {mobile ? (
               <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
                 {sorted.map((m,i) => (
@@ -51051,7 +51296,19 @@ function EraProfilesSection({ pendingManager }) {
         </div>
 
         {/* ── OVERVIEW ── */}
-        {eraView === "overview" && (
+        {eraView === "overview" && seasons.length === 0 && (
+          <div style={{ background:"#0a0a0a", border:"1px dashed #222222", borderRadius:8,
+            padding:mobile?"16px 18px":"20px 24px", textAlign:"center" }}>
+            <div style={{ fontSize:mobile?28:34, marginBottom:8 }}>🆕</div>
+            <div style={{ color:"#e9e9f0", fontFamily:"'Cooper Black',Georgia,serif", fontSize:mobile?15:18, letterSpacing:1, marginBottom:6 }}>
+              First No Fun League Season
+            </div>
+            <div style={{ color:"#888", fontSize:mobile?12:13, lineHeight:1.6, maxWidth:460, margin:"0 auto" }}>
+              {firstName(eraMgr)} joined for {p.firstYear} and hasn't finished a season yet — no career record, playoff history, or scoring stats to show. Live standings track the current season, and this profile fills in once the year wraps.
+            </div>
+          </div>
+        )}
+        {eraView === "overview" && seasons.length > 0 && (
           <div style={{ display:"flex", flexDirection:"column", gap:12 }}>
             <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
               <StatBlock label="Avg Score/Wk"    value={p.avgScore}            sub={`±${p.stdScore} std dev`}          color="#e9c46a" />
@@ -51060,16 +51317,20 @@ function EraProfilesSection({ pendingManager }) {
               <StatBlock label="Avg RS Seed"      value={`#${avgRSRank}`}       sub={`${seasons.length} seasons`}       color="#f4a261" />
             </div>
             <div style={{ display:"grid", gridTemplateColumns:mobile?"1fr":"1fr 1fr", gap:12 }}>
+              {p.bestSeason && (
               <div style={{ background:"#0a1a0a", border:"1px solid #1a3a1a", borderRadius:8, padding:"12px 16px" }}>
                 <div style={{ fontSize:11, color:"#2a9d8f", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1.5, marginBottom:6 }}>🏆 BEST SEASON — {p.bestSeason.year}</div>
                 <div style={{ color:"#fff", fontSize:mobile?13:14, fontWeight:600 }}>{p.bestSeason.W}–{p.bestSeason.L} · {(p.bestSeason.WPct*100).toFixed(1)}% · {p.bestSeason.PF.toFixed(1)} PF</div>
                 <div style={{ color:"#555", fontSize:11, marginTop:3 }}>{finishLabel(p.bestSeason.Finish)}</div>
               </div>
+              )}
+              {p.worstSeason && (
               <div style={{ background:"#1a0a0a", border:"1px solid #3a1a1a", borderRadius:8, padding:"12px 16px" }}>
                 <div style={{ fontSize:11, color:"#2176d2", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1.5, marginBottom:6 }}>💀 WORST SEASON — {p.worstSeason.year}</div>
                 <div style={{ color:"#fff", fontSize:mobile?13:14, fontWeight:600 }}>{p.worstSeason.W}–{p.worstSeason.L} · {(p.worstSeason.WPct*100).toFixed(1)}% · {p.worstSeason.PF.toFixed(1)} PF</div>
                 <div style={{ color:"#555", fontSize:11, marginTop:3 }}>{finishLabel(p.worstSeason.Finish)}</div>
               </div>
+              )}
               {p.biggestWin && (
                 <div style={{ background:"#000000", border:"1px solid #1e2040", borderRadius:8, padding:"12px 16px" }}>
                   <div style={{ fontSize:11, color:"#81b29a", fontFamily:"'Cooper Black',Georgia,serif", letterSpacing:1.5, marginBottom:6 }}>💪 BIGGEST WIN</div>
@@ -52666,9 +52927,14 @@ function VaultTab() {
   const { open: openTeamName } = useTeamName();
   const { open: openSeason } = useSeason();
   const { open: openRivalry } = useRivalry();
-  // ── Live 2026 data for Top/Low Weeks enhancement ──
-  const { currentPlayerData, managers: liveMgrs, currentWeek, refresh: refreshLive } = useSleeperLive();
+  // ── Live 2026 data for Top/Low Weeks enhancement + all-time score blending ──
+  const { currentPlayerData, managers: liveMgrs, currentWeek, finalized2026, refresh: refreshLive } = useSleeperLive();
   React.useEffect(() => { refreshLive(); }, [refreshLive]);
+  // isActive helper for tagging blended 2026 entries (active managers = current wPct actives)
+  const activeNameSet = React.useMemo(
+    () => new Set(DATA.wPct.filter(m => m.Active).map(m => m.Manager)),
+    []
+  );
   // ── Section nav ──
   const [section, setSection] = useState("home");
 
@@ -52751,7 +53017,32 @@ function VaultTab() {
   const mergedPool = activeSegments.flatMap(([ppr, teams]) =>
     (segViewMap[view]?.[`${ppr}_${teams}`] || []).filter(s => showAlumni || s.Active)
   );
-  const poolSorted = [...mergedPool].sort((a, b) => isWorst ? a.Points - b.Points : b.Points - a.Points);
+  // ── Blend finalized 2026 weekly scores into the all-time tables ──
+  // top    = highest single-week scores (all results)
+  // worst  = lowest single-week scores (all results)
+  // unlucky= highest scores that LOST   (result "L")
+  // lucky  = lowest scores that WON      (result "W")
+  // 2026 entries carry PPR/Teams = 0.5/12, so we only add them when that segment is
+  // currently shown, and we respect the alumni toggle via the Active flag.
+  let blendedPool = mergedPool;
+  if (finalized2026) {
+    const segActive = activeSegments.some(([ppr, teams]) =>
+      ppr === finalized2026.ppr && teams === finalized2026.teams
+    );
+    if (segActive) {
+      let live2026 = [];
+      if (view === "top" || view === "worst") {
+        live2026 = blend2026IntoScoreSegment([], finalized2026, (n) => activeNameSet.has(n));
+      } else if (view === "unlucky") {
+        live2026 = blend2026IntoOutcomeSegment([], finalized2026, "L", (n) => activeNameSet.has(n));
+      } else if (view === "lucky") {
+        live2026 = blend2026IntoOutcomeSegment([], finalized2026, "W", (n) => activeNameSet.has(n));
+      }
+      live2026 = live2026.filter(s => showAlumni || s.Active);
+      blendedPool = [...mergedPool, ...live2026];
+    }
+  }
+  const poolSorted = [...blendedPool].sort((a, b) => isWorst ? a.Points - b.Points : b.Points - a.Points);
   const top20pool = poolSorted.length <= 20 ? poolSorted : (() => {
     const cutoff = poolSorted[19].Points;
     return poolSorted.filter((s, i) => i < 20 || s.Points === cutoff);
@@ -52859,10 +53150,19 @@ function VaultTab() {
     { key: "Low Avg",         label: "🔄 Per Season" },
   ];
   const pointColor = view === "worst" ? "#2176d2" : view === "unlucky" ? "#f4a261" : view === "lucky" ? "#2a9d8f" : "#e9c46a";
-  const allTimeHigh  = DATA.topScoresBySegment["0.5_12"][0];
-  const allTimeLow   = DATA.worstScoresBySegment["0.5_12"][0];
-  const unluckiest   = DATA.unluckyBySegment["0.5_12"][0];
-  const luckiestWin  = DATA.luckyBySegment["0_10"][0];
+  // Headline all-time high/low reflect the current (0.5 PPR / 12-team) era WITH
+  // finalized 2026 blended in, so a record-setting 2026 week surfaces here too.
+  const seg0512High = blend2026IntoScoreSegment(DATA.topScoresBySegment["0.5_12"], finalized2026, (n) => activeNameSet.has(n));
+  const seg0512Low  = blend2026IntoScoreSegment(DATA.worstScoresBySegment["0.5_12"], finalized2026, (n) => activeNameSet.has(n));
+  const allTimeHigh  = [...seg0512High].sort((a, b) => b.Points - a.Points)[0];
+  const allTimeLow   = [...seg0512Low].sort((a, b) => a.Points - b.Points)[0];
+  // Unluckiest loss (highest score that lost) / luckiest win (lowest score that won).
+  // Headline reflects the all-time extreme across every era, blended with finalized 2026
+  // so a record current-season outcome surfaces here too.
+  const allUnlucky = blend2026IntoOutcomeSegment(Object.values(DATA.unluckyBySegment).flat(), finalized2026, "L", (n) => activeNameSet.has(n));
+  const allLucky   = blend2026IntoOutcomeSegment(Object.values(DATA.luckyBySegment).flat(),   finalized2026, "W", (n) => activeNameSet.has(n));
+  const unluckiest   = [...allUnlucky].sort((a, b) => b.Points - a.Points)[0];
+  const luckiestWin  = [...allLucky].sort((a, b) => a.Points - b.Points)[0];
 
   // ── Matchups logic ──
   const matchupPool = matchupView === "closest" ? DATA.closestMatchups : DATA.biggestBlowouts;
@@ -53032,6 +53332,11 @@ function VaultTab() {
 
           <Card>
             <SectionTitle>{VIEWS.find(v => v.key === view)?.label} — All-Time</SectionTitle>
+            {finalized2026 && finalized2026.weeksIncluded >= 1 && (
+              <div style={{ fontSize: mobile ? 12 : 11, color: "#2a9d8f", marginTop: -8, marginBottom: 10 }}>
+                ✓ Includes finalized 2026 through Week {finalized2026.weeksIncluded}
+              </div>
+            )}
             {mobile ? (
               <div style={{ display:"flex", flexDirection:"column", gap:4 }}>
                 {currentData.map((s,i) => (
@@ -53039,7 +53344,10 @@ function VaultTab() {
                     <span style={{ fontFamily:"'Cooper Black',Georgia,serif", fontSize:16, color: i<3 ? pointColor : "#555", minWidth:22, textAlign:"center" }}>{rank(i)}</span>
                     <div style={{ flex:1, minWidth:0 }}>
                       <MgrSpan name={s.Manager} style={{ fontSize:13, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", display:"block" }}>{s.Manager}</MgrSpan>
-                      <div style={{ color:"#555", fontSize:11 }}>{s.Year} · Wk {s.Week}</div>
+                      <div style={{ color:"#555", fontSize:11, display:"flex", alignItems:"center", gap:5 }}>
+                        <span>{s.Year} · Wk {s.Week}</span>
+                        {s["Reached Playoffs"] === "In Progress" && <LiveBadge />}
+                      </div>
                     </div>
                     <span onClick={e => { e.stopPropagation(); openScore(s, { x: e.clientX, y: e.clientY }); }} style={{ color:pointColor, fontFamily:"'Cooper Black',Georgia,serif", fontSize:20, flexShrink:0, cursor:"pointer", textDecoration:"underline", textDecorationStyle:"dotted", textDecorationColor:pointColor+"66", textUnderlineOffset:3 }}>{s.Points}</span>
                   </div>
@@ -53061,7 +53369,10 @@ function VaultTab() {
                         <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a" }}><span onClick={e => { e.stopPropagation(); openScore(s, { x: e.clientX, y: e.clientY }); }} style={{ color:pointColor, fontFamily:"'Cooper Black',Georgia,serif", fontSize:17, cursor:"pointer", textDecoration:"underline", textDecorationStyle:"dotted", textDecorationColor:pointColor+"66", textUnderlineOffset:3 }}>{s.Points}</span></td>
                         <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a" }}><span style={{ display:"inline-flex", alignItems:"center", gap:5 }}><MgrName name={s.Manager} /></span></td>
                         <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a" }}><em onClick={e => { e.stopPropagation(); openTeamName(s["Team Name"], s.Manager, s.Year, { x: e.clientX, y: e.clientY }); }} style={{ color:"#aaa", cursor:"pointer", textDecoration:"underline", textDecorationStyle:"dotted", textDecorationColor:"#aaa66", textUnderlineOffset:3 }}>{s["Team Name"]}</em></td>
-                        <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a" }}><span onClick={e => { e.stopPropagation(); openSeason(s.Year, { x: e.clientX, y: e.clientY }); }} style={{ color:"#aaa", cursor:"pointer", textDecoration:"underline", textDecorationStyle:"dotted", textDecorationColor:"#aaa66", textUnderlineOffset:3 }}>{s.Year}</span></td>
+                        <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a", whiteSpace:"nowrap" }}>
+                          <span onClick={e => { e.stopPropagation(); openSeason(s.Year, { x: e.clientX, y: e.clientY }); }} style={{ color:"#aaa", cursor:"pointer", textDecoration:"underline", textDecorationStyle:"dotted", textDecorationColor:"#aaa66", textUnderlineOffset:3 }}>{s.Year}</span>
+                          {s["Reached Playoffs"] === "In Progress" && <LiveBadge />}
+                        </td>
                         <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a", color:"#aaa" }}>{s.Week}</td>
                         <td style={{ padding:mobile ? "6px 8px" : "9px 12px", borderBottom:"1px solid #1a1a1a" }}>{playoffBadge(s["Reached Playoffs"])}</td>
                       </tr>
